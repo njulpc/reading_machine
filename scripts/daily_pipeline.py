@@ -273,7 +273,10 @@ class PDFDownloader:
         
         downloaded = []
         for paper in papers:
-            paper_dir = self.base_dir / "papers" / paper.submitted / paper.arxiv_id
+            # Normalize path: month-based directory, strip version suffix
+            arxiv_id_clean = paper.arxiv_id.split('v')[0]
+            month_dir = paper.submitted[:7]
+            paper_dir = self.base_dir / "papers" / month_dir / arxiv_id_clean
             paper_dir.mkdir(parents=True, exist_ok=True)
             
             pdf_path = paper_dir / "paper.pdf"
@@ -331,8 +334,10 @@ class AnalysisGenerator:
     
     def generate(self, paper: Paper) -> str:
         """Generate deep analysis for a paper using AI or template fallback."""
-        # Extract text from PDF
-        paper_dir = self.base_dir / "papers" / paper.submitted / paper.arxiv_id
+        # Extract text from PDF (using normalized path)
+        arxiv_id_clean = paper.arxiv_id.split('v')[0]
+        month_dir = paper.submitted[:7]
+        paper_dir = self.base_dir / "papers" / month_dir / arxiv_id_clean
         text_path = paper_dir / "paper.txt"
         paper_text = ""
         if text_path.exists():
@@ -443,7 +448,11 @@ class AnalysisGenerator:
     
     def save(self, paper: Paper, analysis: str):
         """Save analysis to file."""
-        paper_dir = self.base_dir / "papers" / paper.submitted / paper.arxiv_id
+        # Normalize arxiv_id: strip version suffix (e.g., 2607.25870v1 -> 2607.25870)
+        arxiv_id_clean = paper.arxiv_id.split('v')[0]
+        # Use month-based directory (YYYY-MM) for consistency
+        month_dir = paper.submitted[:7]
+        paper_dir = self.base_dir / "papers" / month_dir / arxiv_id_clean
         paper_dir.mkdir(parents=True, exist_ok=True)
         
         analysis_path = paper_dir / "tech_analysis.md"
@@ -569,7 +578,9 @@ if __name__ == "__main__":
     
     def save(self, paper: Paper, code: str):
         """Save code to file."""
-        code_dir = self.base_dir / "scripts" / "quantization" / paper.arxiv_id
+        # Normalize arxiv_id: strip version suffix
+        arxiv_id_clean = paper.arxiv_id.split('v')[0]
+        code_dir = self.base_dir / "scripts" / "quantization" / arxiv_id_clean
         code_dir.mkdir(parents=True, exist_ok=True)
         
         code_path = code_dir / "demo.py"
@@ -579,7 +590,7 @@ if __name__ == "__main__":
         # Create README
         readme_path = code_dir / "README.md"
         with open(readme_path, 'w') as f:
-            f.write(f"# {paper.arxiv_id}\n\nSee `demo.py` for standalone implementation.\n")
+            f.write(f"# {arxiv_id_clean}\n\nSee `demo.py` for standalone implementation.\n")
         
         return code_path
 
