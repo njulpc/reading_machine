@@ -51,10 +51,14 @@ class KimiQueueManager:
         for d in [self.pending_dir, self.processing_dir, self.completed_dir]:
             d.mkdir(parents=True, exist_ok=True)
     
-    def submit_task(self, paper: Dict) -> str:
+    def submit_task(self, paper: Dict, task_type: str = "deep_analysis") -> str:
         """
-        Submit an analysis task to the queue.
+        Submit a task to the queue.
         Called by daily_pipeline.py.
+        
+        Args:
+            paper: Paper metadata
+            task_type: "deep_analysis" or "code_generation"
         
         Returns:
             task_id: UUID for tracking
@@ -63,14 +67,14 @@ class KimiQueueManager:
         
         task = {
             "task_id": task_id,
-            "type": "deep_analysis",
+            "type": task_type,
             "status": "pending",
             "created_at": datetime.now().isoformat(),
             "paper": paper,
             "priority": paper.get("relevance_score", 0.5)
         }
         
-        task_file = self.pending_dir / f"{task_id}.json"
+        task_file = self.pending_dir / f"{task_id}_{task_type}.json"
         with open(task_file, 'w', encoding='utf-8') as f:
             json.dump(task, f, ensure_ascii=False, indent=2)
         
@@ -104,10 +108,13 @@ class KimiQueueManager:
         Mark task as completed with result.
         Called by Kimi after analysis.
         """
-        # Find in processing
-        processing_file = self.processing_dir / f"{task_id}.json"
+        # Find in processing (filename may have _task_type suffix)
+        processing_file = None
+        for f in self.processing_dir.glob(f"{task_id}*.json"):
+            processing_file = f
+            break
         
-        if not processing_file.exists():
+        if not processing_file or not processing_file.exists():
             return False
         
         # Read original task
@@ -120,7 +127,7 @@ class KimiQueueManager:
         task["result"] = result
         
         # Save to completed
-        completed_file = self.completed_dir / f"{task_id}.json"
+        completed_file = self.completed_dir / processing_file.name
         with open(completed_file, 'w', encoding='utf-8') as f:
             json.dump(task, f, ensure_ascii=False, indent=2)
         
@@ -135,11 +142,12 @@ class KimiQueueManager:
         Called by daily_pipeline.py after submitting.
         """
         start = time.time()
-        completed_file = self.completed_dir / f"{task_id}.json"
         
         while time.time() - start < timeout:
-            if completed_file.exists():
-                with open(completed_file) as f:
+            # Find completed file (may have _task_type suffix)
+            completed_files = list(self.completed_dir.glob(f"{task_id}*.json"))
+            if completed_files:
+                with open(completed_files[0]) as f:
                     task = json.load(f)
                 return task.get("result")
             time.sleep(10)
@@ -198,7 +206,7 @@ class KimiAnalyzer:
         Queue-based analysis for pipeline mode.
         Submit task and wait for Kimi to process.
         """
-        task_id = self.queue.submit_task(paper)
+        task_id = self.queue.submit_task(paper, task_type="deep_analysis")
         print(f"[KimiQueue] Submitted analysis task {task_id} for {paper.get('arxiv_id')}")
         
         # Wait for result (with timeout)
@@ -259,11 +267,20 @@ arXiv ID: {paper.get('arxiv_id', '')}
 要求：基于实际内容，具体深入，包含数字对比，3000-5000字。"""
     
     def _queued_code(self, paper: Dict) -> Optional[str]:
-        """Queue-based code generation."""
-        # For code, we can use template fallback since code is more deterministic
-        from ai_analyzer import AIAnalyzer
-        template_analyzer = AIAnalyzer(method="template")
-        return template_analyzer.generate_code(paper)
+        """Queue-based code generation - submits to Kimi queue."""
+        task_id = self.queue.submit_task(paper, task_type="code_generation")
+        print(f"[KimiQueue] Submitted code generation task {task_id} for {paper.get('arxiv_id')}")
+        
+        # Wait for result (with shorter timeout for code)
+        result = self.queue.wait_for_result(task_id, timeout=300)
+        
+        if result and "code" in result:
+            return result["code"]
+        else:
+            # Timeout - use template fallback
+            from ai_analyzer import AIAnalyzer
+            template_analyzer = AIAnalyzer(method="template")
+            return template_analyzer.generate_code(paper)
 
 
 def process_pending_tasks():
