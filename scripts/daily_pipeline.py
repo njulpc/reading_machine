@@ -608,75 +608,93 @@ class GitManager:
         self.branch_prefix = config["git"]["branch_prefix"]
     
     def create_branch(self, date: str) -> str:
-        """Create or checkout daily branch."""
+        """Create clean daily branch based on main, containing only today's papers."""
         branch_name = f"{self.branch_prefix}{date}"
         
-        # Check if branch exists locally
-        result = subprocess.run(
-            ["git", "branch", "--list", branch_name],
+        # Step 1: Stash any local changes on current branch
+        subprocess.run(
+            ["git", "stash", "push", "-u", "-m", f"auto-stash before {branch_name}"],
             cwd=self.base_dir,
-            capture_output=True,
-            text=True
+            capture_output=True
         )
         
-        if result.stdout.strip():
-            # Branch exists locally, checkout it
-            subprocess.run(
-                ["git", "checkout", branch_name],
-                cwd=self.base_dir,
-                check=True,
-                capture_output=True
-            )
-            logging.info(f"Checked out existing branch: {branch_name}")
-        else:
-            # Check if branch exists on remote
-            result = subprocess.run(
-                ["git", "ls-remote", "--heads", "origin", branch_name],
-                cwd=self.base_dir,
-                capture_output=True,
-                text=True
-            )
-            
-            if result.stdout.strip():
-                # Branch exists on remote, fetch and checkout
-                subprocess.run(
-                    ["git", "fetch", "origin", branch_name],
-                    cwd=self.base_dir,
-                    check=True,
-                    capture_output=True
-                )
-                subprocess.run(
-                    ["git", "checkout", "-b", branch_name, f"origin/{branch_name}"],
-                    cwd=self.base_dir,
-                    check=True,
-                    capture_output=True
-                )
-                logging.info(f"Checked out remote branch: {branch_name}")
-            else:
-                # Create new branch
-                subprocess.run(
-                    ["git", "checkout", "-b", branch_name],
-                    cwd=self.base_dir,
-                    check=True,
-                    capture_output=True
-                )
-                logging.info(f"Created new branch: {branch_name}")
-        
-        return branch_name
-    
-    def commit_and_push(self, date: str, num_papers: int, num_code: int) -> str:
-        """Commit all changes and push to remote."""
-        branch_name = f"{self.branch_prefix}{date}"
-        
-        # Add all changes
+        # Step 2: Fetch latest main from remote
         subprocess.run(
-            ["git", "add", "-A"],
+            ["git", "fetch", "origin", "main"],
+            cwd=self.base_dir,
+            capture_output=True
+        )
+        
+        # Step 3: Create fresh branch from origin/main (clean slate)
+        # Delete local branch if it exists (we want a clean start)
+        subprocess.run(
+            ["git", "branch", "-D", branch_name],
+            cwd=self.base_dir,
+            capture_output=True
+        )
+        
+        # Create new branch from origin/main
+        subprocess.run(
+            ["git", "checkout", "-b", branch_name, "origin/main"],
             cwd=self.base_dir,
             check=True,
             capture_output=True
         )
         
-        # Create commit message
+        logging.info(f"Created clean branch {branch_name} from origin/main")
+        return branch_name
+    
+    def commit_and_push(self, date: str, num_papers: int, num_code: int) -> str:
+        """Commit only today's changes and push to remote (force)."""
+        branch_name = f"{self.branch_prefix}{date}"
+        
+        # Step 1: Remove any historical files that might have been carried over
+        # Keep only: today's papers/, today's metadata, today's scripts/quantization
+        self._clean_non_today_files(date)
+        
+        # Step 2: Add only today's relevant files
+        # Use explicit paths instead of 'git add -A' to avoid including history
+        month_dir = date[:7]  # e.g., 2026-07
+        
+        # Add today's papers (under papers/YYYY-MM/)
+        papers_dir = self.base_dir / "papers" / month_dir
+        if papers_dir.exists():
+            for item in papers_dir.iterdir():
+                subprocess.run(
+                    ["git", "add", str(item)],
+                    cwd=self.base_dir,
+                    capture_output=True
+                )
+        
+        # Add today's metadata
+        meta_dir = self.base_dir / "metadata" / month_dir
+        if meta_dir.exists():
+            for item in meta_dir.iterdir():
+                subprocess.run(
+                    ["git", "add", str(item)],
+                    cwd=self.base_dir,
+                    capture_output=True
+                )
+        
+        # Add generated code (only today's arxiv IDs)
+        # This is handled by explicitly adding each code dir during generation
+        # We use git add -A on scripts/quantization/ but it's ok since we start from clean main
+        quant_dir = self.base_dir / "scripts" / "quantization"
+        if quant_dir.exists():
+            subprocess.run(
+                ["git", "add", str(quant_dir)],
+                cwd=self.base_dir,
+                capture_output=True
+            )
+        
+        # Add pipeline script changes if any
+        subprocess.run(
+            ["git", "add", str(self.base_dir / "scripts" / "daily_pipeline.py")],
+            cwd=self.base_dir,
+            capture_output=True
+        )
+        
+        # Step 3: Create commit message
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
         message = self.config["git"]["commit_message_template"].format(
             date=date,
@@ -685,7 +703,7 @@ class GitManager:
             timestamp=timestamp
         )
         
-        # Commit
+        # Step 4: Commit
         result = subprocess.run(
             ["git", "commit", "-m", message],
             cwd=self.base_dir,
@@ -697,17 +715,17 @@ class GitManager:
             logging.warning(f"Commit issue: {result.stderr}")
             return ""
         
-        # Push
+        # Step 5: Force push (since we recreate the branch each day)
         if self.config["git"]["auto_push"]:
             subprocess.run(
-                ["git", "push", "-u", "origin", branch_name],
+                ["git", "push", "-f", "-u", "origin", branch_name],
                 cwd=self.base_dir,
                 check=True,
                 capture_output=True
             )
-            logging.info(f"Pushed to origin/{branch_name}")
+            logging.info(f"Force-pushed to origin/{branch_name}")
         
-        # Get commit hash
+        # Step 6: Get commit hash
         result = subprocess.run(
             ["git", "rev-parse", "HEAD"],
             cwd=self.base_dir,
@@ -718,6 +736,36 @@ class GitManager:
         commit_hash = result.stdout.strip()[:8]
         
         return commit_hash
+    
+    def _clean_non_today_files(self, date: str):
+        """Remove files from other dates to keep branch clean."""
+        month_dir = date[:7]  # e.g., 2026-07
+        
+        # Clean papers: keep only current month
+        papers_root = self.base_dir / "papers"
+        if papers_root.exists():
+            for item in papers_root.iterdir():
+                if item.is_dir() and item.name != month_dir and item.name != ".gitkeep":
+                    logging.info(f"Removing non-today papers dir: {item.name}")
+                    subprocess.run(
+                        ["git", "rm", "-rf", str(item)],
+                        cwd=self.base_dir,
+                        capture_output=True
+                    )
+        
+        # Clean metadata: keep only current month
+        meta_root = self.base_dir / "metadata"
+        if meta_root.exists():
+            for item in meta_root.iterdir():
+                if item.is_dir() and item.name != month_dir and item.name != ".gitkeep":
+                    logging.info(f"Removing non-today metadata dir: {item.name}")
+                    subprocess.run(
+                        ["git", "rm", "-rf", str(item)],
+                        cwd=self.base_dir,
+                        capture_output=True
+                    )
+        
+        # Note: scripts/quantization/ is kept but we'll only add today's code dirs
 
 
 # =============================================================================
