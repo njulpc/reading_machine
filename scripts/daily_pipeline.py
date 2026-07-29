@@ -597,18 +597,60 @@ class GitManager:
         self.branch_prefix = config["git"]["branch_prefix"]
     
     def create_branch(self, date: str) -> str:
-        """Create daily branch."""
+        """Create or checkout daily branch."""
         branch_name = f"{self.branch_prefix}{date}"
         
-        # Create and checkout branch
-        subprocess.run(
-            ["git", "checkout", "-b", branch_name],
+        # Check if branch exists locally
+        result = subprocess.run(
+            ["git", "branch", "--list", branch_name],
             cwd=self.base_dir,
-            check=True,
-            capture_output=True
+            capture_output=True,
+            text=True
         )
         
-        logging.info(f"Created branch: {branch_name}")
+        if result.stdout.strip():
+            # Branch exists locally, checkout it
+            subprocess.run(
+                ["git", "checkout", branch_name],
+                cwd=self.base_dir,
+                check=True,
+                capture_output=True
+            )
+            logging.info(f"Checked out existing branch: {branch_name}")
+        else:
+            # Check if branch exists on remote
+            result = subprocess.run(
+                ["git", "ls-remote", "--heads", "origin", branch_name],
+                cwd=self.base_dir,
+                capture_output=True,
+                text=True
+            )
+            
+            if result.stdout.strip():
+                # Branch exists on remote, fetch and checkout
+                subprocess.run(
+                    ["git", "fetch", "origin", branch_name],
+                    cwd=self.base_dir,
+                    check=True,
+                    capture_output=True
+                )
+                subprocess.run(
+                    ["git", "checkout", "-b", branch_name, f"origin/{branch_name}"],
+                    cwd=self.base_dir,
+                    check=True,
+                    capture_output=True
+                )
+                logging.info(f"Checked out remote branch: {branch_name}")
+            else:
+                # Create new branch
+                subprocess.run(
+                    ["git", "checkout", "-b", branch_name],
+                    cwd=self.base_dir,
+                    check=True,
+                    capture_output=True
+                )
+                logging.info(f"Created new branch: {branch_name}")
+        
         return branch_name
     
     def commit_and_push(self, date: str, num_papers: int, num_code: int) -> str:
@@ -783,8 +825,8 @@ class DailyPipeline:
         # Add new papers
         for paper in papers:
             paper_dict = paper.to_dict()
-            # Avoid duplicates
-            if not any(p["arxiv_id"] == paper.arxiv_id for p in data["papers"]):
+            # Avoid duplicates - check both arxiv_id and id for compatibility
+            if not any(p.get("arxiv_id", p.get("id")) == paper.arxiv_id for p in data["papers"]):
                 data["papers"].append(paper_dict)
         
         with open(index_path, 'w') as f:

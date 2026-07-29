@@ -1,0 +1,21 @@
+2026-07-29 19:59:50,771 [INFO] Log file: /Users/lipengcheng/.kimi_openclaw/workspace/reading_machine/logs/daily_20260729_195950.log
+2026-07-29 19:59:50,775 [INFO] Using template-based analysis (set OPENAI_API_KEY for AI)
+2026-07-29 19:59:50,775 [INFO] ============================================================
+2026-07-29 19:59:50,775 [INFO] Starting daily pipeline for 2026-07-28
+2026-07-29 19:59:50,775 [INFO] ============================================================
+2026-07-29 19:59:50,775 [INFO] Collecting papers for 2026-07-28...
+2026-07-29 19:59:50,842 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10080
+2026-07-29 19:59:52,663 [DEBUG] http://127.0.0.1:10080 "GET http://export.arxiv.org/api/query?search_query=%28%22quantization%22+OR+%22model+compression%22+OR+%22pruning%22+OR+%22knowledge+distillation%22+OR+%22efficient+inference%22+OR+%22low-bit%22+OR+%22INT8%22+OR+%22INT4%22+OR+%22FP4%22+OR+%22sparsity%22+OR+%22KV+cache%22+OR+%22edge+deployment%22%29+AND+%28cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Acs.IR+OR+cat%3Acs.AR%29&start=0&max_results=90&sortBy=submittedDate&sortOrder=descending HTTP/1.1" 301 0
+2026-07-29 19:59:52,666 [DEBUG] Starting new HTTPS connection (1): export.arxiv.org:443
+2026-07-29 19:59:55,704 [DEBUG] https://export.arxiv.org:443 "GET /api/query?search_query=%28%22quantization%22+OR+%22model+compression%22+OR+%22pruning%22+OR+%22knowledge+distillation%22+OR+%22efficient+inference%22+OR+%22low-bit%22+OR+%22INT8%22+OR+%22INT4%22+OR+%22FP4%22+OR+%22sparsity%22+OR+%22KV+cache%22+OR+%22edge+deployment%22%29+AND+%28cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Acs.IR+OR+cat%3Acs.AR%29&start=0&max_results=90&sortBy=submittedDate&sortOrder=descending HTTP/1.1" 200 229045
+2026-07-29 19:59:57,563 [INFO] Collected 22 papers for 2026-07-28
+2026-07-29 19:59:57,563 [INFO] Filtered 2 relevant papers
+2026-07-29 19:59:57,587 [DEBUG] Starting new HTTPS connection (1): arxiv.org:443
+2026-07-29 20:00:02,105 [DEBUG] https://arxiv.org:443 "GET /pdf/2607.25870v1.pdf HTTP/1.1" 301 221
+2026-07-29 20:00:02,755 [DEBUG] https://arxiv.org:443 "GET /pdf/2607.25870v1 HTTP/1.1" 200 285264
+2026-07-29 20:00:06,140 [INFO] [OK] 2607.25870v1 downloaded (285264 bytes)
+2026-07-29 20:00:06,142 [DEBUG] Starting new HTTPS connection (1): arxiv.org:443
+2026-07-29 20:00:10,023 [DEBUG] https://arxiv.org:443 "GET /pdf/2607.25583v1.pdf HTTP/1.1" 301 221
+2026-07-29 20:00:10,381 [DEBUG] https://arxiv.org:443 "GET /pdf/2607.25583v1 HTTP/1.1" 200 377820
+2026-07-29 20:00:13,732 [INFO] [OK] 2607.25583v1 downloaded (377820 bytes)
+2026-07-29 20:00:13,733 [ERROR] Pipeline failed: 'arxiv_id'

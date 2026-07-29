@@ -1,0 +1,16 @@
+2026-07-29 20:04:21,341 [INFO] Log file: /Users/lipengcheng/.kimi_openclaw/workspace/reading_machine/logs/daily_20260729_200421.log
+2026-07-29 20:04:21,344 [INFO] Using template-based analysis (set OPENAI_API_KEY for AI)
+2026-07-29 20:04:21,344 [INFO] ============================================================
+2026-07-29 20:04:21,344 [INFO] Starting daily pipeline for 2026-07-28
+2026-07-29 20:04:21,344 [INFO] ============================================================
+2026-07-29 20:04:21,344 [INFO] Collecting papers for 2026-07-28...
+2026-07-29 20:04:21,407 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10080
+2026-07-29 20:04:23,090 [DEBUG] http://127.0.0.1:10080 "GET http://export.arxiv.org/api/query?search_query=%28%22quantization%22+OR+%22model+compression%22+OR+%22pruning%22+OR+%22knowledge+distillation%22+OR+%22efficient+inference%22+OR+%22low-bit%22+OR+%22INT8%22+OR+%22INT4%22+OR+%22FP4%22+OR+%22sparsity%22+OR+%22KV+cache%22+OR+%22edge+deployment%22%29+AND+%28cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Acs.IR+OR+cat%3Acs.AR%29&start=0&max_results=90&sortBy=submittedDate&sortOrder=descending HTTP/1.1" 301 0
+2026-07-29 20:04:23,102 [DEBUG] Starting new HTTPS connection (1): export.arxiv.org:443
+2026-07-29 20:04:25,237 [DEBUG] https://export.arxiv.org:443 "GET /api/query?search_query=%28%22quantization%22+OR+%22model+compression%22+OR+%22pruning%22+OR+%22knowledge+distillation%22+OR+%22efficient+inference%22+OR+%22low-bit%22+OR+%22INT8%22+OR+%22INT4%22+OR+%22FP4%22+OR+%22sparsity%22+OR+%22KV+cache%22+OR+%22edge+deployment%22%29+AND+%28cat%3Acs.LG+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Acs.IR+OR+cat%3Acs.AR%29&start=0&max_results=90&sortBy=submittedDate&sortOrder=descending HTTP/1.1" 200 229045
+2026-07-29 20:04:27,097 [INFO] Collected 22 papers for 2026-07-28
+2026-07-29 20:04:27,098 [INFO] Filtered 2 relevant papers
+2026-07-29 20:04:27,098 [INFO] [SKIP] 2607.25870v1 already downloaded
+2026-07-29 20:04:27,098 [INFO] [SKIP] 2607.25583v1 already downloaded
+2026-07-29 20:04:27,100 [INFO] Updated metadata: /Users/lipengcheng/.kimi_openclaw/workspace/reading_machine/metadata/2026-07/papers_index.json
+2026-07-29 20:04:27,126 [INFO] Checked out existing branch: daily/2026-07-28

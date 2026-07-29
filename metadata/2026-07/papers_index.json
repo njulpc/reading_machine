@@ -1,249 +1,600 @@
 {
   "collection_date": "2026-07-29",
   "date_range": "2026-07-27 ~ 2026-07-28",
-  "query_keywords": ["quantization", "model compression", "pruning", "distillation", "efficient inference"],
+  "query_keywords": [
+    "quantization",
+    "model compression",
+    "pruning",
+    "distillation",
+    "efficient inference"
+  ],
   "source": "arxiv.org",
   "total_papers": 20,
   "papers": [
     {
-      "id": "2607.25870",
       "title": "VAD to the Bone: Ultra-Tiny Speech Activity Detection for Edge Deployment",
-      "authors": ["Stephen Bauer", "Sheila Seidel", "Shanza Iftikhar", "Scott Veidenheimer", "Gorkem Ulkar"],
+      "authors": [
+        "Stephen Bauer",
+        "Sheila Seidel",
+        "Shanza Iftikhar",
+        "Scott Veidenheimer",
+        "Gorkem Ulkar"
+      ],
       "submitted": "2026-07-28",
-      "categories": ["eess.AS", "cs.LG"],
+      "categories": [
+        "eess.AS",
+        "cs.LG"
+      ],
       "url": "https://arxiv.org/abs/2607.25870",
-      "keywords": ["QAT", "pruning", "self-distillation", "edge deployment", "speech"],
-      "techniques": ["quantization", "pruning", "distillation"],
+      "keywords": [
+        "QAT",
+        "pruning",
+        "self-distillation",
+        "edge deployment",
+        "speech"
+      ],
+      "techniques": [
+        "quantization",
+        "pruning",
+        "distillation"
+      ],
       "target_model": "Speech CNN",
-      "highlight": "超小边缘部署，per-layer结构化剪枝+QAT，仅2.1k参数，0.850 AUC"
+      "highlight": "超小边缘部署，per-layer结构化剪枝+QAT，仅2.1k参数，0.850 AUC",
+      "arxiv_id": "2607.25870"
     },
     {
-      "id": "2607.25583",
       "title": "How Small Can You Go? A Controlled Study of LoRA Rank, Target Modules, and Quantization Trade-offs for Text-to-SQL on a 60M-Parameter Model",
-      "authors": ["Mahendra Singh Rathor", "Anagheem Azzam"],
+      "authors": [
+        "Mahendra Singh Rathor",
+        "Anagheem Azzam"
+      ],
       "submitted": "2026-07-28",
-      "categories": ["cs.AI"],
+      "categories": [
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.25583",
-      "keywords": ["quantization", "LoRA", "PEFT", "low-bit", "text-to-SQL"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "quantization",
+        "LoRA",
+        "PEFT",
+        "low-bit",
+        "text-to-SQL"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "60M Encoder-Decoder",
-      "highlight": "首次在小模型上系统研究LoRA+量化联合影响"
+      "highlight": "首次在小模型上系统研究LoRA+量化联合影响",
+      "arxiv_id": "2607.25583"
     },
     {
-      "id": "2607.25529",
       "title": "Are the High-weight Neurons the Important Ones in Image Classification Neural Networks?",
-      "authors": ["Qitao Chen", "Dongfu Yin", "F. Richard Yu"],
+      "authors": [
+        "Qitao Chen",
+        "Dongfu Yin",
+        "F. Richard Yu"
+      ],
       "submitted": "2026-07-28",
-      "categories": ["cs.AI"],
+      "categories": [
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.25529",
-      "keywords": ["pruning", "neuron importance", "image classification"],
-      "techniques": ["pruning"],
+      "keywords": [
+        "pruning",
+        "neuron importance",
+        "image classification"
+      ],
+      "techniques": [
+        "pruning"
+      ],
       "target_model": "CNN",
-      "highlight": "质疑大权重=重要神经元的假设"
+      "highlight": "质疑大权重=重要神经元的假设",
+      "arxiv_id": "2607.25529"
     },
     {
-      "id": "2607.25527",
       "title": "Argus-Unified: Towards A Compact and Economical Unified Model for Image Understanding and Generation",
-      "authors": ["Weiming Zhuang", "Jiabo Huang", "Jingtao Li", "Zhizhong Li", "Chen Chen", "Sina Sajadmanesh", "Lingjuan Lyu"],
+      "authors": [
+        "Weiming Zhuang",
+        "Jiabo Huang",
+        "Jingtao Li",
+        "Zhizhong Li",
+        "Chen Chen",
+        "Sina Sajadmanesh",
+        "Lingjuan Lyu"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.CV", "cs.AI"],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.25527",
-      "keywords": ["quantizer", "VLM", "unified model", "multimodal"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "quantizer",
+        "VLM",
+        "unified model",
+        "multimodal"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Unified VLM",
-      "highlight": "frozen encoder + 可训练 quantizer，最小训练开销的统一多模态模型"
+      "highlight": "frozen encoder + 可训练 quantizer，最小训练开销的统一多模态模型",
+      "arxiv_id": "2607.25527"
     },
     {
-      "id": "2607.25451",
       "title": "Bits and Memories: Measuring Verbatim Extraction Across LLM Quantization",
-      "authors": ["Akshay Sasi"],
+      "authors": [
+        "Akshay Sasi"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.LG", "cs.CR"],
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
       "url": "https://arxiv.org/abs/2607.25451",
-      "keywords": ["LLM quantization", "privacy", "memorization", "verbatim extraction"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "LLM quantization",
+        "privacy",
+        "memorization",
+        "verbatim extraction"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "LLMs",
-      "highlight": "量化对逐字记忆提取的影响评估，发现低比特量化可能改变记忆行为"
+      "highlight": "量化对逐字记忆提取的影响评估，发现低比特量化可能改变记忆行为",
+      "arxiv_id": "2607.25451"
     },
     {
-      "id": "2607.25209",
       "title": "VaLiDRec: Variable-Length LLM-Aligned Semantic IDs for Generative Recommendation",
-      "authors": ["Shutong Qiao", "Wei Yuan", "Tong Chen", "Hao Wang", "Quoc Viet Hung Nguyen", "Hongzhi Yin"],
+      "authors": [
+        "Shutong Qiao",
+        "Wei Yuan",
+        "Tong Chen",
+        "Hao Wang",
+        "Quoc Viet Hung Nguyen",
+        "Hongzhi Yin"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.IR", "cs.AI"],
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.25209",
-      "keywords": ["quantization", "semantic IDs", "generative recommendation", "LLM"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "quantization",
+        "semantic IDs",
+        "generative recommendation",
+        "LLM"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Recommendation System",
-      "highlight": "变长LLM对齐语义ID，避免固定长度导致的过度压缩"
+      "highlight": "变长LLM对齐语义ID，避免固定长度导致的过度压缩",
+      "arxiv_id": "2607.25209"
     },
     {
-      "id": "2607.25180",
       "title": "Bekko Embedding: Parameter-Efficient Multilingual Retrieval with Ultra-Compact Encoders",
-      "authors": ["Yuichi Tateno"],
+      "authors": [
+        "Yuichi Tateno"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.IR"],
+      "categories": [
+        "cs.IR"
+      ],
       "url": "https://arxiv.org/abs/2607.25180",
-      "keywords": ["INT8 quantization", "embedding", "ONNX", "multilingual", "CPU"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "INT8 quantization",
+        "embedding",
+        "ONNX",
+        "multilingual",
+        "CPU"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Multilingual Retriever",
-      "highlight": "124MiB超紧凑编码器，row-wise int8，CPU实时"
+      "highlight": "124MiB超紧凑编码器，row-wise int8，CPU实时",
+      "arxiv_id": "2607.25180"
     },
     {
-      "id": "2607.24981",
       "title": "Enabling Fully Integer-Only Inference for Lightweight Detection Transformers",
-      "authors": ["Thanh Cong Le", "Michal Szczepanski", "Martyna Poreba"],
+      "authors": [
+        "Thanh Cong Le",
+        "Michal Szczepanski",
+        "Martyna Poreba"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.CV"],
+      "categories": [
+        "cs.CV"
+      ],
       "url": "https://arxiv.org/abs/2607.24981",
-      "keywords": ["integer-only", "detection transformer", "quantization", "lightweight"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "integer-only",
+        "detection transformer",
+        "quantization",
+        "lightweight"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "DETR-like Detection Transformer",
-      "highlight": "端到端纯INT8轻量检测Transformer，涵盖可变形注意力、GELU、LayerNorm"
+      "highlight": "端到端纯INT8轻量检测Transformer，涵盖可变形注意力、GELU、LayerNorm",
+      "arxiv_id": "2607.24981"
     },
     {
-      "id": "2607.24953",
       "title": "Stable FP4 Training via Transposition-Invariant Block Quantization",
-      "authors": ["Mehdi Rahimifar", "Amin Darabi", "Mehran Taghian Jazi", "Xing Huang", "Yao Wang", "Zhijun Tu", "Yufei Cui", "Yunke Peng", "Hongliang Li"],
+      "authors": [
+        "Mehdi Rahimifar",
+        "Amin Darabi",
+        "Mehran Taghian Jazi",
+        "Xing Huang",
+        "Yao Wang",
+        "Zhijun Tu",
+        "Yufei Cui",
+        "Yunke Peng",
+        "Hongliang Li"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.LG", "cs.AI"],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.24953",
-      "keywords": ["FP4", "block quantization", "training stability", "microscaling"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "FP4",
+        "block quantization",
+        "training stability",
+        "microscaling"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "通用",
-      "highlight": "发现转置导致的尺度不一致问题，提出转置不变块量化，首次实现稳定FP4训练"
+      "highlight": "发现转置导致的尺度不一致问题，提出转置不变块量化，首次实现稳定FP4训练",
+      "arxiv_id": "2607.24953"
     },
     {
-      "id": "2607.24868",
       "title": "Research Report on Noise-Shaped One-Bit Coefficients in Discrete Polynomial Fourier Extension",
-      "authors": ["Shengquan Wang"],
+      "authors": [
+        "Shengquan Wang"
+      ],
       "submitted": "2026-07-26",
-      "categories": ["cs.CL"],
+      "categories": [
+        "cs.CL"
+      ],
       "url": "https://arxiv.org/abs/2607.24868",
-      "keywords": ["one-bit quantization", "sigma-delta", "Fourier extension"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "one-bit quantization",
+        "sigma-delta",
+        "Fourier extension"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "数学分析",
-      "highlight": "噪声整形一比特系数的O(N^-1)近似率"
+      "highlight": "噪声整形一比特系数的O(N^-1)近似率",
+      "arxiv_id": "2607.24868"
     },
     {
-      "id": "2607.24865",
       "title": "Tokens are All You Need: Dual-purpose Semantic IDs for Achieving LLM-Level I/O Efficiency in Recommendation Systems",
-      "authors": ["Baolei Li", "Yiping Yuan", "Yilin Zheng", "Likang Yin", "Ling Liu", "Fabio Soldo", "Romer Rosales", "Xinyang Yi", "Lichan Hong"],
+      "authors": [
+        "Baolei Li",
+        "Yiping Yuan",
+        "Yilin Zheng",
+        "Likang Yin",
+        "Ling Liu",
+        "Fabio Soldo",
+        "Romer Rosales",
+        "Xinyang Yi",
+        "Lichan Hong"
+      ],
       "submitted": "2026-07-26",
-      "categories": ["cs.IR", "cs.AI", "cs.LG"],
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.LG"
+      ],
       "url": "https://arxiv.org/abs/2607.24865",
-      "keywords": ["hierarchical quantization", "semantic IDs", "recommendation", "LLM"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "hierarchical quantization",
+        "semantic IDs",
+        "recommendation",
+        "LLM"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Recommendation System",
-      "highlight": "层次量化实现双重语义ID角色，LLM级I/O效率"
+      "highlight": "层次量化实现双重语义ID角色，LLM级I/O效率",
+      "arxiv_id": "2607.24865"
     },
     {
-      "id": "2607.24568",
       "title": "Bit-Accurate FPGA Evaluation of Learned Feature Gating in a Fixed-Point Fourier-Feature Automatic Modulation Classifier",
-      "authors": ["Gawthaman Senthilvelan", "Luthira Abeykoon"],
+      "authors": [
+        "Gawthaman Senthilvelan",
+        "Luthira Abeykoon"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.LG"],
+      "categories": [
+        "cs.LG"
+      ],
       "url": "https://arxiv.org/abs/2607.24568",
-      "keywords": ["PTQ", "QAT", "FPGA", "fixed-point", "feature gating"],
-      "techniques": ["quantization", "pruning"],
+      "keywords": [
+        "PTQ",
+        "QAT",
+        "FPGA",
+        "fixed-point",
+        "feature gating"
+      ],
+      "techniques": [
+        "quantization",
+        "pruning"
+      ],
       "target_model": "MLP Classifier",
-      "highlight": "比特精确FPGA评估学习特征门控，PTQ与QAT对比"
+      "highlight": "比特精确FPGA评估学习特征门控，PTQ与QAT对比",
+      "arxiv_id": "2607.24568"
     },
     {
-      "id": "2607.24562",
       "title": "Hierarchical Group-Conditional Conformal Risk Control for Selective Prediction in Language Models",
-      "authors": ["Murilo Salem", "Luísa Böhm", "Daniel Pontes", "Anderson Ferrugem"],
+      "authors": [
+        "Murilo Salem",
+        "Luísa Böhm",
+        "Daniel Pontes",
+        "Anderson Ferrugem"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.AI"],
+      "categories": [
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.24562",
-      "keywords": ["quantization", "selective prediction", "conformal risk control", "language models"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "quantization",
+        "selective prediction",
+        "conformal risk control",
+        "language models"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "LLMs (Qwen3-4B, Llama-3.1-8B)",
-      "highlight": "量化模型上的分层组条件共形风险控制，500次bootstrap零违规率"
+      "highlight": "量化模型上的分层组条件共形风险控制，500次bootstrap零违规率",
+      "arxiv_id": "2607.24562"
     },
     {
-      "id": "2607.24440",
       "title": "Bigger or Cheaper? Scale and Quantization Effects on Uncertainty Signals in Vision-Language Models Under Image Degradation",
-      "authors": ["M M Asif Ferdous"],
+      "authors": [
+        "M M Asif Ferdous"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.CV", "cs.CL", "cs.LG"],
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
       "url": "https://arxiv.org/abs/2607.24440",
-      "keywords": ["VLM", "quantization", "uncertainty", "calibration", "image degradation"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "VLM",
+        "quantization",
+        "uncertainty",
+        "calibration",
+        "image degradation"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Vision-Language Models",
-      "highlight": "固定内存预算下小模型全精度 vs 大模型量化的不确定性信号比较"
+      "highlight": "固定内存预算下小模型全精度 vs 大模型量化的不确定性信号比较",
+      "arxiv_id": "2607.24440"
     },
     {
-      "id": "2607.24377",
       "title": "MXAttention: Data-Free Optimal Scaling and Pre-Normalization Quantization for MXFP4 Attention",
-      "authors": ["Jianlin Yu", "Jing Lin", "Linghui Kong", "Aiyue Chen", "Weiyi Sun", "Chenyu Zeng", "Wangli Lan", "Jinxi Li", "Zhuo Zheng", "Ziyang Yue", "Danning Ke", "Fei Yi", "Tianchi Hu", "Yuan Ding", "Yiwu Yao", "Junsong Wang"],
+      "authors": [
+        "Jianlin Yu",
+        "Jing Lin",
+        "Linghui Kong",
+        "Aiyue Chen",
+        "Weiyi Sun",
+        "Chenyu Zeng",
+        "Wangli Lan",
+        "Jinxi Li",
+        "Zhuo Zheng",
+        "Ziyang Yue",
+        "Danning Ke",
+        "Fei Yi",
+        "Tianchi Hu",
+        "Yuan Ding",
+        "Yiwu Yao",
+        "Junsong Wang"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.LG", "cs.AI", "cs.CV"],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
       "url": "https://arxiv.org/abs/2607.24377",
-      "keywords": ["MXFP4", "attention quantization", "data-free", "diffusion", "video generation"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "MXFP4",
+        "attention quantization",
+        "data-free",
+        "diffusion",
+        "video generation"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Diffusion Video Generation",
-      "highlight": "无需校准数据的MXFP4 Attention量化，解决裁剪-下溢权衡"
+      "highlight": "无需校准数据的MXFP4 Attention量化，解决裁剪-下溢权衡",
+      "arxiv_id": "2607.24377"
     },
     {
-      "id": "2607.24192",
       "title": "LLM-based Source Code Compression via Thresholded Symbol Ranking",
-      "authors": ["Angelo Nardone", "Paolo Ferragina"],
+      "authors": [
+        "Angelo Nardone",
+        "Paolo Ferragina"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.IT", "cs.CL", "cs.LG"],
+      "categories": [
+        "cs.IT",
+        "cs.CL",
+        "cs.LG"
+      ],
       "url": "https://arxiv.org/abs/2607.24192",
-      "keywords": ["quantized models", "source code compression", "symbol ranking"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "quantized models",
+        "source code compression",
+        "symbol ranking"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Code LLMs",
-      "highlight": "30个LLM上的大规模代码压缩评估，量化模型参与，37%压缩率提升"
+      "highlight": "30个LLM上的大规模代码压缩评估，量化模型参与，37%压缩率提升",
+      "arxiv_id": "2607.24192"
     },
     {
-      "id": "2607.24148",
       "title": "A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference",
-      "authors": ["Zhuoran Song", "Haozhe Jiang", "Chunyu Qi", "Minnan Pei", "Gang Li", "Xiaoyao Liang", "Haibing Guan"],
+      "authors": [
+        "Zhuoran Song",
+        "Haozhe Jiang",
+        "Chunyu Qi",
+        "Minnan Pei",
+        "Gang Li",
+        "Xiaoyao Liang",
+        "Haibing Guan"
+      ],
       "submitted": "2026-07-27",
-      "categories": ["cs.AI"],
+      "categories": [
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.24148",
-      "keywords": ["vector quantization", "VLA", "motion-aware", "centroid reuse"],
-      "techniques": ["quantization"],
+      "keywords": [
+        "vector quantization",
+        "VLA",
+        "motion-aware",
+        "centroid reuse"
+      ],
+      "techniques": [
+        "quantization"
+      ],
       "target_model": "Vision-Language-Action Model",
-      "highlight": "运动感知向量量化，动态调整精度，质心重用减少内存访问"
+      "highlight": "运动感知向量量化，动态调整精度，质心重用减少内存访问",
+      "arxiv_id": "2607.24148"
     },
     {
-      "id": "2607.22790",
       "title": "The Sparsity Tax: Weight Sparsity Trade-offs in Event-Driven SIMD and SIMT Neuromorphic Cores",
-      "authors": ["Mattias Westerink", "Sameed Sohail", "Berend-Jan van der Zwaag", "Sabih Gerez", "Amirreza Yousefzadeh"],
+      "authors": [
+        "Mattias Westerink",
+        "Sameed Sohail",
+        "Berend-Jan van der Zwaag",
+        "Sabih Gerez",
+        "Amirreza Yousefzadeh"
+      ],
       "submitted": "2026-07-24",
-      "categories": ["cs.AR"],
+      "categories": [
+        "cs.AR"
+      ],
       "url": "https://arxiv.org/abs/2607.22790",
-      "keywords": ["pruning", "sparsity", "neuromorphic", "FPGA", "event-driven"],
-      "techniques": ["pruning"],
+      "keywords": [
+        "pruning",
+        "sparsity",
+        "neuromorphic",
+        "FPGA",
+        "event-driven"
+      ],
+      "techniques": [
+        "pruning"
+      ],
       "target_model": "SNN (Neuromorphic)",
-      "highlight": "神经形态核心中权重稀疏性的面积-能效权衡分析"
+      "highlight": "神经形态核心中权重稀疏性的面积-能效权衡分析",
+      "arxiv_id": "2607.22790"
     },
     {
-      "id": "2607.22564",
       "title": "Loss-Aware Feature-Map Pruning in Convolutional Neural Networks Using Multi-Armed Bandits",
-      "authors": ["Salem Ameen", "Sunil Vadera"],
+      "authors": [
+        "Salem Ameen",
+        "Sunil Vadera"
+      ],
       "submitted": "2026-05-29",
-      "categories": ["cs.AI"],
+      "categories": [
+        "cs.AI"
+      ],
       "url": "https://arxiv.org/abs/2607.22564",
-      "keywords": ["pruning", "feature-map", "multi-armed bandits", "loss-aware"],
-      "techniques": ["pruning"],
+      "keywords": [
+        "pruning",
+        "feature-map",
+        "multi-armed bandits",
+        "loss-aware"
+      ],
+      "techniques": [
+        "pruning"
+      ],
       "target_model": "CNN",
-      "highlight": "多臂老虎机优化特征图剪枝，损失感知策略"
+      "highlight": "多臂老虎机优化特征图剪枝，损失感知策略",
+      "arxiv_id": "2607.22564"
     },
     {
-      "id": "2607.19248",
       "title": "A Flexible Sparsity-Aware FPGA Accelerator with Column-Wise Compression for Efficient CNN Inference",
-      "authors": ["Amirhossein Zarei", "Shervin Vakili"],
+      "authors": [
+        "Amirhossein Zarei",
+        "Shervin Vakili"
+      ],
       "submitted": "2026-07-21",
-      "categories": ["cs.AR"],
+      "categories": [
+        "cs.AR"
+      ],
       "url": "https://arxiv.org/abs/2607.19248",
-      "keywords": ["pruning", "sparsity", "FPGA", "CNN", "column-wise compression"],
-      "techniques": ["pruning"],
+      "keywords": [
+        "pruning",
+        "sparsity",
+        "FPGA",
+        "CNN",
+        "column-wise compression"
+      ],
+      "techniques": [
+        "pruning"
+      ],
       "target_model": "CNN",
-      "highlight": "面向FPGA的列压缩稀疏加速器，灵活稀疏感知"
+      "highlight": "面向FPGA的列压缩稀疏加速器，灵活稀疏感知",
+      "arxiv_id": "2607.19248"
+    },
+    {
+      "arxiv_id": "2607.25870v1",
+      "title": "VAD to the Bone: Ultra-Tiny Speech Activity Detection for Edge Deployment",
+      "authors": [
+        "Stephen Bauer",
+        "Sheila Seidel",
+        "Shanza Iftikhar",
+        "Scott Veidenheimer",
+        "Gorkem Ulkar"
+      ],
+      "abstract": "Voice activity detection (VAD) triggers downstream speech processing in always-on systems under strict memory, latency, and compute constraints. Recent compact models report strong accuracy but rely on components that are not widely supported: learnable filterbanks, recurrent layers, or non-causal post-processing. We propose kiloVAD, designed for embedded inference using standard Mel features, CNN-only layers, and tunable context/spectral parameters. We introduce per-layer structured pruning with self-distillation and angle-based quantization-aware training (QAT) that outperforms standard QAT by 1-4%. Evaluated per-frame under causal conditions, kiloVAD achieves 0.850 AUC on AVA-Speech with 2.1 k parameters and 200 ms context, establishing a new state of the art for causal, deployment-ready VAD.",
+      "url": "https://arxiv.org/abs/2607.25870v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.25870v1.pdf",
+      "submitted": "2026-07-28",
+      "categories": [
+        "eess.AS",
+        "cs.LG"
+      ],
+      "relevance_score": 0.35714285714285715
+    },
+    {
+      "arxiv_id": "2607.25583v1",
+      "title": "How Small Can You Go? A Controlled Study of LoRA Rank, Target Modules, and Quantization Trade-offs for Text-to-SQL on a 60M-Parameter Model",
+      "authors": [
+        "Mahendra Singh Rathor",
+        "Anagheem Azzam"
+      ],
+      "abstract": "Parameter-efficient fine-tuning (PEFT) and low-bit quantization are now standard tools for adapting language models under tight compute budgets, yet their interaction is most often studied on billion-parameter models where the design space is expensive to explore. We ask a complementary question: on a specific, fully reproducible 60M-parameter encoder-decoder model (T5-small) and a single-table text-to-SQL benchmark (WikiSQL), how much task accuracy does each efficiency knob actually cost? We run a controlled, single-variable study over (i) LoRA rank r in {2, 4, 8, 16, 32}, (ii) the set of adapted modules, and (iii) numerical precision. We report task accuracy alongside system-level metrics including trainable parameters, peak training memory, inference latency, and throughput, and frame adaptation as a constrained trade-off rather than an accuracy-only objective. Our results show that LoRA with r=16 recovers within 11.6 percentage points of full fine-tuning accuracy (59.6% vs. 71.2% exact-match) while training fewer than 1% of parameters and consuming 31% less peak GPU memory. Within this setting, rank beyond r=16 yields no measurable accuracy gain. QLoRA with INT8 and NF4 quantization achieves comparable accuracy (52.8% and 53.2%) at dramatically lower memory cost (0.60 GB each), demonstrating a compelling trade-off for memory-constrained deployments. All code, configurations, and logs are released for full reproducibility.",
+      "url": "https://arxiv.org/abs/2607.25583v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.25583v1.pdf",
+      "submitted": "2026-07-28",
+      "categories": [
+        "cs.AI"
+      ],
+      "relevance_score": 0.35714285714285715
     }
   ]
 }
