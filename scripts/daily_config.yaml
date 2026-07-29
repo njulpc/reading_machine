@@ -46,6 +46,13 @@ analysis:
   language: "zh"             # Chinese output
   min_words: 3000
   max_words: 5000
+  ai_backend: "kimi"         # Options: kimi, openai, ollama, template
+  
+# Kimi settings (when ai_backend = "kimi")
+kimi:
+  queue_dir: ".kimi_queue"
+  timeout_seconds: 600       # Wait up to 10 minutes for Kimi to process
+  priority_threshold: 0.5    # Only send high-relevance papers to Kimi
   
 # Code generation settings
 code:
