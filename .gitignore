@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+*.pdf
+*.zip
+*.tar.gz
+
+# IDE
+.vscode/
+.idea/
