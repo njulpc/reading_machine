@@ -310,23 +310,55 @@ class PDFDownloader:
 class AnalysisGenerator:
     """Generate deep technical analysis using AI."""
     
-    def __init__(self, config: Dict):
+    def __init__(self, base_dir: Path, config: Dict):
+        self.base_dir = base_dir
         self.config = config
+        # Try to use AI analyzer
+        try:
+            import sys
+            sys.path.insert(0, str(base_dir / "scripts"))
+            from ai_analyzer import AIAnalyzer
+            import os
+            if os.environ.get("OPENAI_API_KEY"):
+                self.analyzer = AIAnalyzer(method="openai", model="gpt-4")
+                logging.info("Using OpenAI for analysis")
+            else:
+                self.analyzer = AIAnalyzer(method="template")
+                logging.info("Using template-based analysis (set OPENAI_API_KEY for AI)")
+        except ImportError as e:
+            logging.warning(f"ai_analyzer not available: {e}, using basic template")
+            self.analyzer = None
     
     def generate(self, paper: Paper) -> str:
-        """
-        Generate deep analysis for a paper.
+        """Generate deep analysis for a paper using AI or template fallback."""
+        # Extract text from PDF
+        paper_dir = self.base_dir / "papers" / paper.submitted / paper.arxiv_id
+        text_path = paper_dir / "paper.txt"
+        paper_text = ""
+        if text_path.exists():
+            with open(text_path, 'r', encoding='utf-8', errors='ignore') as f:
+                paper_text = f.read()[:15000]
         
-        This is a placeholder - in production, this would call an AI model
-        or use the OpenClaw session spawn mechanism.
-        """
-        # In a real implementation, this would:
-        # 1. Extract PDF text
-        # 2. Send to AI model with the analysis template
-        # 3. Receive and format the analysis
+        # Use AI analyzer if available
+        if hasattr(self, 'analyzer') and self.analyzer:
+            paper_dict = {
+                "title": paper.title,
+                "authors": ", ".join(paper.authors),
+                "arxiv_id": paper.arxiv_id,
+                "abstract": paper.abstract,
+                "text": paper_text
+            }
+            try:
+                return self.analyzer.analyze(paper_dict)
+            except Exception as e:
+                logging.error(f"AI analysis failed: {e}, using template fallback")
         
-        # For now, create a structured placeholder
-        analysis = f"""# 技术深度分析：{paper.title} (arXiv:{paper.arxiv_id})
+        # Fallback template
+        return self._template_analysis(paper, paper_text)
+    
+    def _template_analysis(self, paper: Paper, text: str) -> str:
+        """Basic template when AI is unavailable."""
+        return f"""# 技术深度分析：{paper.title} (arXiv:{paper.arxiv_id})
 
 > **论文**: {paper.title}
 > **作者**: {', '.join(paper.authors[:5])}
@@ -428,8 +460,17 @@ class AnalysisGenerator:
 class CodeGenerator:
     """Generate standalone PyTorch code for quantization papers."""
     
-    def __init__(self, config: Dict):
+    def __init__(self, base_dir: Path, config: Dict):
+        self.base_dir = base_dir
         self.config = config
+        # Try to use AI for code generation
+        try:
+            import sys
+            sys.path.insert(0, str(base_dir / "scripts"))
+            from ai_analyzer import AIAnalyzer
+            self.analyzer = AIAnalyzer(method="template")
+        except ImportError:
+            self.analyzer = None
     
     def should_generate_code(self, paper: Paper) -> bool:
         """Check if paper is about <=4bit weight or <=8bit activation quantization."""
@@ -602,8 +643,8 @@ class DailyPipeline:
         self.collector = ArXivCollector(config)
         self.filter = RelevanceFilter(config)
         self.downloader = PDFDownloader(base_dir)
-        self.analyzer = AnalysisGenerator(config)
-        self.code_gen = CodeGenerator(config)
+        self.analyzer = AnalysisGenerator(base_dir, config)
+        self.code_gen = CodeGenerator(base_dir, config)
         self.git = GitManager(base_dir, config)
     
     def run(self, date: str) -> PipelineResult:
