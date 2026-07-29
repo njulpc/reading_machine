@@ -461,9 +461,10 @@ class IntegerSoftmax(nn.Module):
         x_shifted = x - x_max
         
         # exp(x) ≈ 2^(x / scale)
-        # 使用位移: 1 << (x // scale)
-        exp_shift = x_shifted // self.scale
-        exp_approx = torch.clamp(1 << exp_shift.clamp(0, self.num_bits-1), 1, 2**self.num_bits - 1)
+        # Use torch.pow for float-compatible computation
+        exp_shift = x_shifted.long() // self.scale
+        exp_shift = exp_shift.clamp(0, self.num_bits - 1)
+        exp_approx = torch.clamp(torch.pow(torch.tensor(2.0, device=x.device), exp_shift.float()), 1, 2**self.num_bits - 1)
         
         # 归一化
         sum_exp = exp_approx.sum(dim=self.dim, keepdim=True)
