@@ -1,0 +1,69 @@
+# Daily ArXiv Quantization Paper Analysis Pipeline
+# 
+# Run daily at 18:00 to collect and analyze previous day's arXiv papers.
+#
+# Usage:
+#   python3 daily_pipeline.py --date 2026-07-29
+#   python3 daily_pipeline.py  # auto-detect yesterday
+#
+# Environment Variables:
+#   GITHUB_TOKEN - GitHub personal access token for pushing
+#   OPENCLAW_API_KEY - For AI analysis (optional)
+
+name: "arxiv-daily-quantization"
+description: "Daily automated arXiv paper collection and analysis"
+
+# Collection settings
+collection:
+  keywords:
+    - "quantization"
+    - "model compression"
+    - "pruning"
+    - "knowledge distillation"
+    - "efficient inference"
+    - "low-bit"
+    - "INT8"
+    - "INT4"
+    - "FP4"
+    - "sparsity"
+    - "KV cache"
+    - "edge deployment"
+  
+  categories:
+    - "cs.LG"
+    - "cs.CL"
+    - "cs.CV"
+    - "cs.AI"
+    - "cs.IR"
+    - "cs.AR"
+  
+  max_papers: 30
+  min_relevance_score: 0.3
+
+# Analysis settings
+analysis:
+  template: "deep_academic"  # deep analysis template
+  language: "zh"             # Chinese output
+  min_words: 3000
+  max_words: 5000
+  
+# Code generation settings
+code:
+  generate_for: "<=4bit_weight OR <=8bit_activation"
+  framework: "pytorch"
+  verify_syntax: true
+  standalone: true  # each paper gets independent demo.py
+
+# Git settings
+git:
+  remote: "origin"
+  branch_prefix: "daily/"
+  auto_push: true
+  commit_message_template: "daily: {date} arxiv quantization analysis\n\n- {num_papers} papers analyzed\n- {num_code} code demos generated\n- Auto-generated at {timestamp}"
+
+# Storage paths
+paths:
+  base: "papers"
+  metadata: "metadata"
+  reports: "reports"
+  scripts: "scripts/quantization"

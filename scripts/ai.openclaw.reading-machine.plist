@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>ai.openclaw.reading-machine</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/lipengcheng/.kimi_openclaw/workspace/reading_machine/scripts/daily_run.sh</string>
+    </array>
+    
+    <!-- Run daily at 18:00 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>18</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    
+    <!-- Environment -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>WORKSPACE</key>
+        <string>/Users/lipengcheng/.kimi_openclaw/workspace/reading_machine</string>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+    
+    <!-- Logging -->
+    <key>StandardOutPath</key>
+    <string>/Users/lipengcheng/.kimi_openclaw/workspace/reading_machine/logs/launchd.stdout.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Users/lipengcheng/.kimi_openclaw/workspace/reading_machine/logs/launchd.stderr.log</string>
+    
+    <!-- Run immediately on load -->
+    <key>RunAtLoad</key>
+    <false/>
+    
+    <!-- Keep alive if crashes -->
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>
