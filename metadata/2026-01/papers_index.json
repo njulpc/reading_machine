@@ -1,0 +1,6359 @@
+{
+  "collection_date": "2026-02",
+  "date_range": "2026-01-01 to 2026-01-31",
+  "query_keywords": [
+    "quantization",
+    "pruning",
+    "sparsity",
+    "knowledge distillation",
+    "KV cache",
+    "mixed precision",
+    "GPTQ",
+    "AWQ",
+    "model compression",
+    "distillation LLM",
+    "binarized"
+  ],
+  "total_papers": 246,
+  "papers": [
+    {
+      "id": "2601.00202",
+      "title": "Knowledge Distillation for Temporal Knowledge Graph Reasoning with Large Language Models",
+      "authors": [
+        "Wang Xing",
+        "Wei Song",
+        "Siyu Lin",
+        "Chen Wu",
+        "Zhesi Li",
+        "Man Wang"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.00202",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM时序知识图推理的知识蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.00222",
+      "title": "LooC: Effective Low-Dimensional Codebook for Compositional Vector Quantization",
+      "authors": [
+        "Jie Li",
+        "Kwan-Yee K. Wong",
+        "Kai Han"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.00222",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "组合向量量化的低维码本LooC",
+      "highlight": false
+    },
+    {
+      "id": "2601.00282",
+      "title": "Can Large Language Models Still Explain Themselves? Investigating the Impact of Quantization on Self-Explanations",
+      "authors": [
+        "Qianli Wang",
+        "Nils Feldhus",
+        "Pepa Atanasova",
+        "Fedor Splitt",
+        "Simon Ostermann",
+        "Sebastian Möller",
+        "Vera Schmitt"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.00282",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "量化对LLM自我解释能力影响的实证研究",
+      "highlight": false
+    },
+    {
+      "id": "2601.00359",
+      "title": "Efficient Prediction of Dense Visual Embeddings via Distillation and RGB-D Transformers",
+      "authors": [
+        "Söhnke Benedikt Fischedick",
+        "Daniel Seichter",
+        "Benedict Stephan",
+        "Robin Schmidt",
+        "Horst-Michael Gross"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2601.00359",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "蒸馏+RGB-D Transformer高效预测稠密视觉嵌入",
+      "highlight": false
+    },
+    {
+      "id": "2601.00426",
+      "title": "RMAAT: Astrocyte-Inspired Memory Compression and Replay for Efficient Long-Context Transformers",
+      "authors": [
+        "Md Zesun Ahmed Mia",
+        "Malyaban Bal",
+        "Abhronil Sengupta"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "cs.NE",
+        "cs.AI",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.00426",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "RMAAT:星形胶质细胞启发的记忆压缩与重放",
+      "highlight": false
+    },
+    {
+      "id": "2601.00434",
+      "title": "Time--to--Digital Converter (TDC)--Based Resonant Compute--in--Memory for INT8 CNNs with Layer--Optimized SRAM Mapping",
+      "authors": [
+        "Dhandeep Challagundla",
+        "Ignatius Bezzam",
+        "Riadul Islam"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "eess.SP"
+      ],
+      "url": "https://arxiv.org/abs/2601.00434",
+      "keywords": [
+        "quantization",
+        "hardware"
+      ],
+      "techniques": [
+        "quantization",
+        "hardware"
+      ],
+      "target_model": "TDC谐振存算一体INT8 CNN加速器",
+      "highlight": false
+    },
+    {
+      "id": "2601.00679",
+      "title": "QSLM: A Performance- and Memory-aware Quantization Framework with Tiered Search Strategy for Spike-driven Language Models",
+      "authors": [
+        "Rachmad Vidya Wicaksana Putra",
+        "Pasindu Wickramasinghe",
+        "Muhammad Shafique"
+      ],
+      "submitted": "2026-01-02",
+      "categories": [
+        "cs.NE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.00679",
+      "keywords": [
+        "quantization",
+        "hardware"
+      ],
+      "techniques": [
+        "quantization",
+        "hardware"
+      ],
+      "target_model": "脉冲驱动语言模型的性能/内存感知量化框架QSLM",
+      "highlight": false
+    },
+    {
+      "id": "2601.00714",
+      "title": "KDPhys: An Attention Guided 3D to 2D Knowledge Distillation for Real-time Video-Based Physiological Measurement",
+      "authors": [
+        "Nicky Nirlipta Sahoo",
+        "VS Sachidanand",
+        "Matcha Naga Gayathri",
+        "Balamurali Murugesan",
+        "Keerthi Ram",
+        "Jayaraj Joseph",
+        "Mohanasankar Sivaprakasam"
+      ],
+      "submitted": "2026-01-02",
+      "categories": [
+        "eess.IV"
+      ],
+      "url": "https://arxiv.org/abs/2601.00714",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "KDPhys:注意力引导3D到2D蒸馏的实时生理测量",
+      "highlight": false
+    },
+    {
+      "id": "2601.00913",
+      "title": "Clean-GS: Semantic Mask-Guided Pruning for 3D Gaussian Splatting",
+      "authors": [
+        "Subhankar Mishra"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.00913",
+      "keywords": [
+        "compression",
+        "pruning"
+      ],
+      "techniques": [
+        "compression",
+        "pruning"
+      ],
+      "target_model": "Clean-GS:语义掩码引导的3DGS剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.00926",
+      "title": "MACA: A Framework for Distilling Trustworthy LLMs into Efficient Retrievers",
+      "authors": [
+        "Satya Swaroop Gudipudi",
+        "Sahil Girhepuje",
+        "Ponnurangam Kumaraguru",
+        "Kristine Ma"
+      ],
+      "submitted": "2026-01-01",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.00926",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "MACA:将可信LLM蒸馏为高效检索器框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.00942",
+      "title": "Reliability Under Randomness: An Empirical Analysis of Sparse and Dense Language Models Across Decoding Temperatures",
+      "authors": [
+        "Kabir Grover"
+      ],
+      "submitted": "2026-01-02",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.00942",
+      "keywords": [
+        "sparsity",
+        "analysis"
+      ],
+      "techniques": [
+        "sparsity",
+        "analysis"
+      ],
+      "target_model": "稀疏MoE与稠密LM跨解码温度的可靠性实证",
+      "highlight": false
+    },
+    {
+      "id": "2601.01204",
+      "title": "XStreamVGGT: Extremely Memory-Efficient Streaming Vision Geometry Grounded Transformer with KV Cache Compression",
+      "authors": [
+        "Zunhai Su",
+        "Weihao Ye",
+        "Hansen Feng",
+        "Keyu Fan",
+        "Jing Zhang",
+        "Dahai Yu",
+        "Zhengwu Liu",
+        "Ngai Wong"
+      ],
+      "submitted": "2026-01-03",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.01204",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "XStreamVGGT:KV Cache压缩的极致内存高效流式VGGT",
+      "highlight": false
+    },
+    {
+      "id": "2601.01296",
+      "title": "Aggressive Compression Enables LLM Weight Theft",
+      "authors": [
+        "Davis Brown",
+        "Juan-Pablo Rivera",
+        "Dan Hendrycks",
+        "Mantas Mazeika"
+      ],
+      "submitted": "2026-01-03",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.01296",
+      "keywords": [
+        "compression",
+        "analysis"
+      ],
+      "techniques": [
+        "compression",
+        "analysis"
+      ],
+      "target_model": "激进压缩使LLM权重窃取成为可能",
+      "highlight": false
+    },
+    {
+      "id": "2601.01608",
+      "title": "Guiding Token-Sparse Diffusion Models",
+      "authors": [
+        "Felix Krause",
+        "Stefan Andreas Baumann",
+        "Johannes Schusterbauer",
+        "Olga Grebenkova",
+        "Ming Gui",
+        "Vincent Tao Hu",
+        "Björn Ommer"
+      ],
+      "submitted": "2026-01-04",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.01608",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "引导token稀疏扩散模型",
+      "highlight": false
+    },
+    {
+      "id": "2601.02213",
+      "title": "Quantized SO(3)-Equivariant Graph Neural Networks for Efficient Molecular Property Prediction",
+      "authors": [
+        "Haoyu Zhou",
+        "Ping Xue",
+        "Hao Zhang",
+        "Tianfan Fu"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.02213",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "SO(3)等变图神经网络量化用于分子性质预测",
+      "highlight": false
+    },
+    {
+      "id": "2601.02298",
+      "title": "Power-of-Two Quantization-Aware-Training (PoT-QAT) in Large Language Models (LLMs)",
+      "authors": [
+        "Mahmoud Elgenedy"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.CL",
+        "eess.SP"
+      ],
+      "url": "https://arxiv.org/abs/2601.02298",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "2的幂次量化感知训练(PoT-QAT)用于LLM",
+      "highlight": false
+    },
+    {
+      "id": "2601.02353",
+      "title": "Meta-Learning Guided Pruning for Few-Shot Plant Pathology on Edge Devices",
+      "authors": [
+        "Mohammed Mudassir Uddin",
+        "Shahnawaz Alam",
+        "Mohammed Kaif Pasha",
+        "Dr Tasneem Bano Rehman",
+        "Dr Fahmina Taranum",
+        "Afroze Begum"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.02353",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "元学习引导剪枝用于边缘少样本植物病理",
+      "highlight": false
+    },
+    {
+      "id": "2601.02437",
+      "title": "TAP-ViTs: Task-Adaptive Pruning for On-Device Deployment of Vision Transformers",
+      "authors": [
+        "Zhibo Wang",
+        "Zuoyuan Zhang",
+        "Xiaoyi Pang",
+        "Qile Zhang",
+        "Xuanyi Hao",
+        "Shuguo Zhuo",
+        "Peng Sun"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.02437",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "TAP-ViTs:ViT端侧部署的任务自适应剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.02455",
+      "title": "Diagnostic-Driven Layer-Wise Compensation for Post-Training Quantization of Encoder-Decoder ASR Models",
+      "authors": [
+        "Xinyu Wang",
+        "Ziyu Zhao",
+        "Yajie Luo",
+        "Yihong Wu",
+        "Liheng Ma",
+        "Jingrui Tian",
+        "Lei Ding",
+        "Xiao-Wen Chang",
+        "Peng Lu"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "url": "https://arxiv.org/abs/2601.02455",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "编码器-解码器ASR模型PTQ的诊断驱动逐层补偿",
+      "highlight": false
+    },
+    {
+      "id": "2601.02563",
+      "title": "Compressed code: the hidden effects of quantization and distillation on programming tokens",
+      "authors": [
+        "Viacheslav Siniaev",
+        "Iaroslav Chelombitko",
+        "Aleksey Komissarov"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.SE",
+        "cs.CL",
+        "cs.LG",
+        "cs.PL"
+      ],
+      "url": "https://arxiv.org/abs/2601.02563",
+      "keywords": [
+        "quantization",
+        "distillation",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "distillation",
+        "analysis"
+      ],
+      "target_model": "量化与蒸馏对编程token的隐性影响",
+      "highlight": false
+    },
+    {
+      "id": "2601.02613",
+      "title": "Sparsity-Aware Streaming SNN Accelerator with Output-Channel Dataflow for Automatic Modulation Classification",
+      "authors": [
+        "Kuilian Yang",
+        "Li Zhang",
+        "Ahmed M. Eltawil",
+        "Khaled Nabil Salama"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.AR"
+      ],
+      "url": "https://arxiv.org/abs/2601.02613",
+      "keywords": [
+        "sparsity",
+        "hardware"
+      ],
+      "techniques": [
+        "sparsity",
+        "hardware"
+      ],
+      "target_model": "稀疏感知流式SNN加速器(自动调制分类)",
+      "highlight": false
+    },
+    {
+      "id": "2601.02674",
+      "title": "Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration",
+      "authors": [
+        "Guangxin Wu",
+        "Hao Zhang",
+        "Zhang Zhibin",
+        "Jiafeng Guo",
+        "Xueqi Cheng"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.02674",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "多域校准的LLM迭代结构化剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.02680",
+      "title": "Adversarial Contrastive Learning for LLM Quantization Attacks",
+      "authors": [
+        "Dinghong Song",
+        "Zhiwei Xu",
+        "Hai Wan",
+        "Xibin Zhao",
+        "Pengfei Su",
+        "Dong Li"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.02680",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "针对LLM量化的对抗攻击(量化安全)",
+      "highlight": false
+    },
+    {
+      "id": "2601.02819",
+      "title": "Punctuation-aware Hybrid Trainable Sparse Attention for Large Language Models",
+      "authors": [
+        "Junxiang Qiu",
+        "Shuo Wang",
+        "Zhengsu Chen",
+        "Hengheng Zhang",
+        "Jinda Lu",
+        "Changcheng Li",
+        "Qi Tian"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.02819",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "标点感知混合可训练稀疏注意力用于LLM",
+      "highlight": false
+    },
+    {
+      "id": "2601.02888",
+      "title": "RPIQ: Residual-Projected Multi-Collaboration Closed-Loop and Single Instance Quantization for Visually Impaired Assistance",
+      "authors": [
+        "Xuanyu Wang",
+        "Haisen Su",
+        "Jingtao Zhang",
+        "Xiangxiang Wang",
+        "Yongbin Yu",
+        "Manping Fan",
+        "Jialing Xiao",
+        "Bo Gong",
+        "Siqi Chen",
+        "Mingsheng Cao",
+        "Liyong Ren",
+        "Zhenglin Yang"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.02888",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "残差投影多协作闭环单实例量化RPIQ(视障辅助)",
+      "highlight": false
+    },
+    {
+      "id": "2601.03043",
+      "title": "Lil: Less is Less When Applying Post-Training Sparse-Attention Algorithms in Long-Decode Stage",
+      "authors": [
+        "Junhao Hu",
+        "Fangze Li",
+        "Mingtao Xu",
+        "Feifan Meng",
+        "Shiju Zhao",
+        "Tiancheng Hu",
+        "Ting Peng",
+        "Anmin Liu",
+        "Wenrui Huang",
+        "Chenxu Liu",
+        "Ziyue Hua",
+        "Tao Xie"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.03043",
+      "keywords": [
+        "sparsity",
+        "analysis"
+      ],
+      "techniques": [
+        "sparsity",
+        "analysis"
+      ],
+      "target_model": "后训练稀疏注意力算法在长解码阶段的失效分析",
+      "highlight": false
+    },
+    {
+      "id": "2601.03067",
+      "title": "Joint Encoding of KV-Cache Blocks for Scalable LLM Serving",
+      "authors": [
+        "Joseph Kampeas",
+        "Emir Haleva"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.03067",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "KV-Cache块联合编码实现可扩展LLM服务",
+      "highlight": false
+    },
+    {
+      "id": "2601.03195",
+      "title": "Sparse Knowledge Distillation: A Mathematical Framework for Probability-Domain Temperature Scaling and Multi-Stage Compression",
+      "authors": [
+        "Aaron R. Flouro",
+        "Shawn P. Chadwick"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.03195",
+      "keywords": [
+        "distillation",
+        "sparsity"
+      ],
+      "techniques": [
+        "distillation",
+        "sparsity"
+      ],
+      "target_model": "稀疏知识蒸馏:概率域温度缩放与多阶段压缩数学框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.03332",
+      "title": "LUT-KAN: Segment-wise LUT Quantization for Fast KAN Inference",
+      "authors": [
+        "Oleksandr Kuznetsov"
+      ],
+      "submitted": "2026-01-06",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.03332",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "KAN的分段LUT量化加速推理",
+      "highlight": false
+    },
+    {
+      "id": "2601.03484",
+      "title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs",
+      "authors": [
+        "Kaiyuan Deng",
+        "Hangyu Zheng",
+        "Minghai Qing",
+        "Kunxiong Zhu",
+        "Gen Li",
+        "Yang Xiao",
+        "Lan Emily Zhang",
+        "Linke Guo",
+        "Bo Hui",
+        "Yanzhi Wang",
+        "Geng Yuan",
+        "Gagan Agrawal",
+        "Wei Niu",
+        "Xiaolong Ma"
+      ],
+      "submitted": "2026-01-07",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.03484",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "LLM驱动的硬件感知量化智能体From Bits to Chips",
+      "highlight": false
+    },
+    {
+      "id": "2601.04264",
+      "title": "MemKD: Memory-Discrepancy Knowledge Distillation for Efficient Time Series Classification",
+      "authors": [
+        "Nilushika Udayangani",
+        "Kishor Nandakishor",
+        "Marimuthu Palaniswami"
+      ],
+      "submitted": "2026-01-07",
+      "categories": [
+        "cs.LG",
+        "cs.CE"
+      ],
+      "url": "https://arxiv.org/abs/2601.04264",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "MemKD:记忆差异蒸馏的高效时间序列分类",
+      "highlight": false
+    },
+    {
+      "id": "2601.04348",
+      "title": "SCAR-GS: Spatial Context Attention for Residuals in Progressive Gaussian Splatting",
+      "authors": [
+        "Diego Revilla",
+        "Pooja Suresh",
+        "Anand Bhojan",
+        "Ooi Wei Tsang"
+      ],
+      "submitted": "2026-01-07",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "url": "https://arxiv.org/abs/2601.04348",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "SCAR-GS:渐进高斯泼溅残差的空间上下文注意力",
+      "highlight": false
+    },
+    {
+      "id": "2601.04359",
+      "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
+      "authors": [
+        "Kunyang Li",
+        "Mubarak Shah",
+        "Yuzhang Shang"
+      ],
+      "submitted": "2026-01-07",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.04359",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "PackCache:紧凑KV-Cache免训练加速统一自回归视频生成",
+      "highlight": false
+    },
+    {
+      "id": "2601.04519",
+      "title": "TokenSeg: Efficient 3D Medical Image Segmentation via Hierarchical Visual Token Compression",
+      "authors": [
+        "Sen Zeng",
+        "Hong Zhou",
+        "Zheng Zhu",
+        "Yang Liu"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.04519",
+      "keywords": [
+        "token_compression"
+      ],
+      "techniques": [
+        "token_compression"
+      ],
+      "target_model": "TokenSeg:层次视觉token压缩实现3D医学分割",
+      "highlight": false
+    },
+    {
+      "id": "2601.04719",
+      "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models",
+      "authors": [
+        "Maanas Taneja",
+        "Purab Shingvi"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "cs.LG",
+        "cs.PF"
+      ],
+      "url": "https://arxiv.org/abs/2601.04719",
+      "keywords": [
+        "quantization",
+        "kv_cache",
+        "hardware"
+      ],
+      "techniques": [
+        "quantization",
+        "kv_cache",
+        "hardware"
+      ],
+      "target_model": "GPU加速INT8 KV Cache量化压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.05379",
+      "title": "EdgeLDR: Quaternion Low-Displacement Rank Neural Networks for Edge-Efficient Deep Learning",
+      "authors": [
+        "Vladimir Frants",
+        "Sos Agaian",
+        "Karen Panetta"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.05379",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "EdgeLDR:四元数低位移秩神经网络边缘高效深度学习",
+      "highlight": false
+    },
+    {
+      "id": "2601.05388",
+      "title": "Knowledge Distillation of a Protein Language Model Yields a Foundational Implicit Solvent Model",
+      "authors": [
+        "Justin Airas",
+        "Bin Zhang"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "physics.bio-ph",
+        "physics.chem-ph",
+        "physics.comp-ph"
+      ],
+      "url": "https://arxiv.org/abs/2601.05388",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "蛋白质语言模型蒸馏产生基础隐式溶剂模型",
+      "highlight": false
+    },
+    {
+      "id": "2601.05394",
+      "title": "Sketch&Patch++: Efficient Structure-Aware 3D Gaussian Representation",
+      "authors": [
+        "Yuang Shi",
+        "Géraldine Morin",
+        "Simone Gasparini",
+        "Wei Tsang Ooi"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.MM",
+        "eess.IV"
+      ],
+      "url": "https://arxiv.org/abs/2601.05394",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "Sketch&Patch++:高效结构感知3D高斯表示",
+      "highlight": false
+    },
+    {
+      "id": "2601.05639",
+      "title": "Efficient training for compact compression models via sequential distillation",
+      "authors": [
+        "Caroline Mazini Rodrigues",
+        "Nicolas Keriven",
+        "Thomas Maugey"
+      ],
+      "submitted": "2026-01-09",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.05639",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "序贯蒸馏高效训练紧凑压缩模型",
+      "highlight": false
+    },
+    {
+      "id": "2601.05684",
+      "title": "FLRQ: Faster LLM Quantization with Flexible Low-Rank Matrix Sketching",
+      "authors": [
+        "Hongyaoxing Gul",
+        "Lijuan Hu",
+        "Shuzi Niu",
+        "Fangfang Liu"
+      ],
+      "submitted": "2026-01-09",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.05684",
+      "keywords": [
+        "quantization",
+        "low_rank"
+      ],
+      "techniques": [
+        "quantization",
+        "low_rank"
+      ],
+      "target_model": "柔性低秩矩阵速写加速LLM量化FLRQ",
+      "highlight": false
+    },
+    {
+      "id": "2601.05913",
+      "title": "Distilling Lightweight Domain Experts from Large ML Models by Identifying Relevant Subspaces",
+      "authors": [
+        "Pattarawat Chormai",
+        "Ali Hashemi",
+        "Klaus-Robert Müller",
+        "Grégoire Montavon"
+      ],
+      "submitted": "2026-01-09",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.05913",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "识别相关子空间蒸馏轻量领域专家",
+      "highlight": false
+    },
+    {
+      "id": "2601.06227",
+      "title": "When Smaller Wins: Dual-Stage Distillation and Pareto-Guided Compression of Liquid Neural Networks for Edge Battery Prognostics",
+      "authors": [
+        "Dhivya Dharshini Kannan",
+        "Wei Li",
+        "Wei Zhang",
+        "Jianbiao Wang",
+        "Zhi Wei Seh",
+        "Man-Fai Ng"
+      ],
+      "submitted": "2026-01-09",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.06227",
+      "keywords": [
+        "distillation",
+        "compression"
+      ],
+      "techniques": [
+        "distillation",
+        "compression"
+      ],
+      "target_model": "双阶段蒸馏+Pareto压缩液态神经网络(边缘电池预测)",
+      "highlight": false
+    },
+    {
+      "id": "2601.06702",
+      "title": "GRASP LoRA: GRPO Guided Adapter Sparsity Policy for Cross Lingual Transfer",
+      "authors": [
+        "Besher Hassan",
+        "Xiuying Chen"
+      ],
+      "submitted": "2026-01-10",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.06702",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "GRASP LoRA:GRPO引导的适配器稀疏策略",
+      "highlight": false
+    },
+    {
+      "id": "2601.06787",
+      "title": "Garbage Attention in Large Language Models: BOS Sink Heads and Sink-aware Pruning",
+      "authors": [
+        "Jaewon Sok",
+        "Jewon Yeom",
+        "Seonghyeon Park",
+        "Jeongjae Park",
+        "Taesup Kim"
+      ],
+      "submitted": "2026-01-11",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.06787",
+      "keywords": [
+        "pruning",
+        "analysis"
+      ],
+      "techniques": [
+        "pruning",
+        "analysis"
+      ],
+      "target_model": "LLM垃圾注意力:BOS沉没头与沉没感知剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.06959",
+      "title": "HAS-VQ: Hessian-Adaptive Sparse Vector Quantization for High-Fidelity LLM Compression",
+      "authors": [
+        "Vladimer Khasia"
+      ],
+      "submitted": "2026-01-11",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.06959",
+      "keywords": [
+        "quantization",
+        "sparsity"
+      ],
+      "techniques": [
+        "quantization",
+        "sparsity"
+      ],
+      "target_model": "Hessian自适应稀疏向量量化HAS-VQ",
+      "highlight": false
+    },
+    {
+      "id": "2601.07048",
+      "title": "GPU-Accelerated ANNS: Quantized for Speed, Built for Change",
+      "authors": [
+        "Hunter McCoy",
+        "Zikun Wang",
+        "Prashant Pandey"
+      ],
+      "submitted": "2026-01-11",
+      "categories": [
+        "cs.DB",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.07048",
+      "keywords": [
+        "quantization",
+        "hardware"
+      ],
+      "techniques": [
+        "quantization",
+        "hardware"
+      ],
+      "target_model": "GPU加速量化近似最近邻搜索系统",
+      "highlight": false
+    },
+    {
+      "id": "2601.07197",
+      "title": "Beyond Variance: Knowledge-Aware LLM Compression via Fisher-Aligned Subspace Diagnostics",
+      "authors": [
+        "Ibne Farabi Shihab",
+        "Sanjeda Akter",
+        "Anuj Sharma"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.07197",
+      "keywords": [
+        "compression",
+        "analysis"
+      ],
+      "techniques": [
+        "compression",
+        "analysis"
+      ],
+      "target_model": "超越方差:Fisher对齐子空间诊断的知识感知LLM压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.07212",
+      "title": "MI-PRUN: Optimize Large Language Model Pruning via Mutual Information",
+      "authors": [
+        "Hao Zhang",
+        "Zhibin Zhang",
+        "Guangxin Wu",
+        "He Chen",
+        "Jiafeng Guo",
+        "Xueqi Cheng"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.07212",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "互信息优化LLM剪枝MI-PRUN",
+      "highlight": false
+    },
+    {
+      "id": "2601.07372",
+      "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+      "authors": [
+        "Xin Cheng",
+        "Rui Tian",
+        "Wangding Zeng",
+        "Damai Dai",
+        "Qinyu Chen",
+        "Bingxuan Wang",
+        "Zhenda Xie",
+        "Kezhao Huang",
+        "Xingkai Yu",
+        "Chengqi Deng",
+        "Shangyan Zhou",
+        "Chenggang Zhao",
+        "Zhewen Hao",
+        "Yukun Li",
+        "Han Zhang",
+        "Zhengyan Zhang",
+        "Yixu Wei",
+        "M. Y Xu",
+        "Huishuai Zhang",
+        "Dongyan Zhao",
+        "Wenfeng Liang"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.07372",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "可扩展查找的条件记忆:LLM稀疏性新维度",
+      "highlight": false
+    },
+    {
+      "id": "2601.07396",
+      "title": "Forecast the Principal, Stabilize the Residual: Subspace-Aware Feature Caching for Efficient Diffusion Transformers",
+      "authors": [
+        "Guantao Chen",
+        "Shikang Zheng",
+        "Yuqi Lin",
+        "Linfeng Zhang"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.07396",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "子空间感知特征缓存实现高效扩散Transformer",
+      "highlight": false
+    },
+    {
+      "id": "2601.07475",
+      "title": "ARCQuant: Boosting NVFP4 Quantization with Augmented Residual Channels for LLMs",
+      "authors": [
+        "Haoqian Meng",
+        "Yilun Luo",
+        "Yafei Zhao",
+        "Wenyuan Liu",
+        "Peng Zhang",
+        "Xindian Ma"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.07475",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "增广残差通道提升NVFP4量化ARCQuant",
+      "highlight": false
+    },
+    {
+      "id": "2601.07568",
+      "title": "d3LLM: Ultra-Fast Diffusion LLM using Pseudo-Trajectory Distillation",
+      "authors": [
+        "Yu-Yang Qian",
+        "Junda Su",
+        "Lanxiang Hu",
+        "Peiyuan Zhang",
+        "Zhijie Deng",
+        "Peng Zhao",
+        "Hao Zhang"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.07568",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "d3LLM:伪轨迹蒸馏实现超快扩散LLM",
+      "highlight": false
+    },
+    {
+      "id": "2601.07667",
+      "title": "Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference",
+      "authors": [
+        "Rei Taniguchi",
+        "Yuyang Dong",
+        "Makoto Onizuka",
+        "Chuan Xiao"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.07667",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "LLM推理逐层token剪枝的自适应层选择",
+      "highlight": false
+    },
+    {
+      "id": "2601.07878",
+      "title": "Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models",
+      "authors": [
+        "Deyu Cao",
+        "Yixin Yin",
+        "Samin Aref"
+      ],
+      "submitted": "2026-01-11",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.07878",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "切片Wasserstein分布对齐损失改进超低比特LLM量化",
+      "highlight": false
+    },
+    {
+      "id": "2601.07891",
+      "title": "KVzap: Fast, Adaptive, and Faithful KV Cache Pruning",
+      "authors": [
+        "Simon Jegou",
+        "Maximilian Jeblick"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.07891",
+      "keywords": [
+        "kv_cache",
+        "pruning"
+      ],
+      "techniques": [
+        "kv_cache",
+        "pruning"
+      ],
+      "target_model": "KVzap:快速自适应忠实的KV Cache剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.07892",
+      "title": "Sherry: Hardware-Efficient 1.25-Bit Ternary Quantization via Fine-grained Sparsification",
+      "authors": [
+        "Hong Huang",
+        "Decheng Wu",
+        "Qiangqiang Hu",
+        "Guanghua Yu",
+        "Jinhai Yang",
+        "Jianchen Zhu",
+        "Xue Liu",
+        "Dapeng Wu"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.07892",
+      "keywords": [
+        "quantization",
+        "sparsity"
+      ],
+      "techniques": [
+        "quantization",
+        "sparsity"
+      ],
+      "target_model": "1.25比特三元量化Sherry(细粒度稀疏化)",
+      "highlight": false
+    },
+    {
+      "id": "2601.08033",
+      "title": "InfGraND: An Influence-Guided GNN-to-MLP Knowledge Distillation",
+      "authors": [
+        "Amir Eskandari",
+        "Aman Anand",
+        "Elyas Rashno",
+        "Farhana Zulkernine"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.08033",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "InfGraND:影响引导的GNN到MLP知识蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.08089",
+      "title": "Q-realign: Piggybacking Realignment on Quantization for Safe and Efficient LLM Deployment",
+      "authors": [
+        "Qitao Tan",
+        "Xiaoying Song",
+        "Ningxi Cheng",
+        "Ninghao Liu",
+        "Xiaoming Zhai",
+        "Lingzi Hong",
+        "Yanzhi Wang",
+        "Zhen Xiang",
+        "Geng Yuan"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.08089",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "量化之上捎带安全重对齐Q-realign",
+      "highlight": false
+    },
+    {
+      "id": "2601.08169",
+      "title": "Relational Knowledge Distillation Using Fine-tuned Function Vectors",
+      "authors": [
+        "Andrea Kang",
+        "Yingnian Wu",
+        "Hongjing Lu"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.08169",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "基于微调功能向量的关系知识蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.08301",
+      "title": "ReCo-KD: Region- and Context-Aware Knowledge Distillation for Efficient 3D Medical Image Segmentation",
+      "authors": [
+        "Qizhen Lan",
+        "Yu-Chun Hsu",
+        "Nida Saddaf Khan",
+        "Xiaoqian Jiang"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.08301",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "ReCo-KD:区域与上下文感知蒸馏的高效3D医学分割",
+      "highlight": false
+    },
+    {
+      "id": "2601.08343",
+      "title": "When KV Cache Reuse Fails in Multi-Agent Systems: Cross-Candidate Interaction is Crucial for LLM Judges",
+      "authors": [
+        "Sichu Liang",
+        "Zhenglin Wang",
+        "Jiajia Chu",
+        "Pengfei Xia",
+        "Hui Zang",
+        "Deyu Zhou"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.MA",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.08343",
+      "keywords": [
+        "kv_cache",
+        "analysis"
+      ],
+      "techniques": [
+        "kv_cache",
+        "analysis"
+      ],
+      "target_model": "多智能体系统中KV Cache复用何时失效",
+      "highlight": false
+    },
+    {
+      "id": "2601.08412",
+      "title": "Hybrid Distillation with CoT Guidance for Edge-Drone Control Code Generation",
+      "authors": [
+        "Yizhan Feng",
+        "Hichem Snoussi",
+        "Yuhang Wang",
+        "Jing Teng",
+        "Abel Cherouat",
+        "Tian Wang"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.08412",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "CoT引导混合蒸馏用于边缘无人机控制代码生成",
+      "highlight": false
+    },
+    {
+      "id": "2601.08743",
+      "title": "TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL",
+      "authors": [
+        "Jinbo Su",
+        "Yuxuan Hu",
+        "Cuiping Li",
+        "Hong Chen",
+        "Jia Li",
+        "Lintao Ma",
+        "Jing Zhang"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.08743",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "TableCache:主外键引导KV Cache预计算加速Text-to-SQL",
+      "highlight": false
+    },
+    {
+      "id": "2601.08764",
+      "title": "FusID: Modality-Fused Semantic IDs for Generative Music Recommendation",
+      "authors": [
+        "Haven Kim",
+        "Yupeng Hou",
+        "Julian McAuley"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.IR",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "url": "https://arxiv.org/abs/2601.08764",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "模态融合语义ID生成式音乐推荐FusID",
+      "highlight": false
+    },
+    {
+      "id": "2601.08882",
+      "title": "Compressing Vision Transformers in Geospatial Transfer Learning with Manifold-Constrained Optimization",
+      "authors": [
+        "Thomas Snyder",
+        "H. Lexie Yang",
+        "Stefan Schnake",
+        "Steffen Schotthöfer"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.08882",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "流形约束优化压缩地理空间迁移学习中的ViT",
+      "highlight": false
+    },
+    {
+      "id": "2601.09059",
+      "title": "Efficient Multilingual Dialogue Processing via Translation Pipelines and Distilled Language Models",
+      "authors": [
+        "Santiago Martínez Novoa",
+        "Nicolás Rozo Fajardo",
+        "Diego Alejandro González Vargas",
+        "Nicolás Bedoya Figueroa"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.09059",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "翻译流水线+蒸馏语言模型实现高效多语言对话",
+      "highlight": false
+    },
+    {
+      "id": "2601.09165",
+      "title": "Multi-Teacher Ensemble Distillation: A Mathematical Framework for Probability-Domain Knowledge Aggregation",
+      "authors": [
+        "Aaron R. Flouro",
+        "Shawn P. Chadwick"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.09165",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "多教师集成蒸馏:概率域知识聚合数学框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.09176",
+      "title": "$D^2Prune$: Sparsifying Large Language Models via Dual Taylor Expansion and Attention Distribution Awareness",
+      "authors": [
+        "Lang Xiong",
+        "Ning Liu",
+        "Ao Ren",
+        "Yuheng Bai",
+        "Haining Fang",
+        "BinYan Zhang",
+        "Zhe Jiang",
+        "Yujuan Tan",
+        "Duo Liu"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.09176",
+      "keywords": [
+        "pruning",
+        "sparsity"
+      ],
+      "techniques": [
+        "pruning",
+        "sparsity"
+      ],
+      "target_model": "双Taylor展开+注意力分布感知稀疏化LLM(D²Prune)",
+      "highlight": false
+    },
+    {
+      "id": "2601.09191",
+      "title": "From Performance to Practice: Knowledge-Distilled Segmentator for On-Premises Clinical Workflows",
+      "authors": [
+        "Qizhen Lan",
+        "Aaron Choi",
+        "Jun Ma",
+        "Bo Wang",
+        "Zhaogming Zhao",
+        "Xiaoqian Jiang",
+        "Yu-Chun Hsu"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.09191",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "知识蒸馏分割器用于本地化临床工作流",
+      "highlight": false
+    },
+    {
+      "id": "2601.09306",
+      "title": "On-Device Large Language Models for Sequential Recommendation",
+      "authors": [
+        "Xin Xia",
+        "Hongzhi Yin",
+        "Shane Culpepper"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.09306",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "OD-LLM:序列推荐端侧LLM任务自适应压缩框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.09352",
+      "title": "Spectral Complex Autoencoder Pruning: A Fidelity-Guided Criterion for Extreme Structured Channel Compression",
+      "authors": [
+        "Wei Liu",
+        "Xing Deng",
+        "Haijian Shao",
+        "Yingtao Jiang"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.09352",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "谱复自编码器剪枝:保真度引导的极端结构化通道压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.09451",
+      "title": "Late Breaking Results: Quamba-SE: Soft-edge Quantizer for Activations in State Space Models",
+      "authors": [
+        "Yizhi Chen",
+        "Ahmed Hemani"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.AR"
+      ],
+      "url": "https://arxiv.org/abs/2601.09451",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "状态空间模型激活软边量化器Quamba-SE",
+      "highlight": false
+    },
+    {
+      "id": "2601.09555",
+      "title": "Benchmarking Post-Training Quantization of Large Language Models under Microscaling Floating Point Formats",
+      "authors": [
+        "Manyi Zhang",
+        "Ji-Fu Li",
+        "Zhongao Sun",
+        "Haoli Bai",
+        "Hui-Ling Zhen",
+        "Zhenhua Dong",
+        "Xianzhi Yu"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.09555",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "微缩放浮点格式下LLM PTQ基准评测",
+      "highlight": false
+    },
+    {
+      "id": "2601.09694",
+      "title": "LLMs can Compress LLMs: Adaptive Pruning by Agents",
+      "authors": [
+        "Sai Varun Kodathala",
+        "Rakesh Vunnam"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.09694",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "LLM压缩LLM:智能体自适应剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.09773",
+      "title": "Enhancing LUT-based Deep Neural Networks Inference through Architecture and Connectivity Optimization",
+      "authors": [
+        "Binglei Lou",
+        "Ruilin Wu",
+        "Philip Leong"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.09773",
+      "keywords": [
+        "quantization",
+        "hardware"
+      ],
+      "techniques": [
+        "quantization",
+        "hardware"
+      ],
+      "target_model": "LUT基DNN推理的架构与连接优化",
+      "highlight": false
+    },
+    {
+      "id": "2601.09865",
+      "title": "Advancing Model Refinement: Muon-Optimized Distillation and Quantization for LLM Deployment",
+      "authors": [
+        "Jacob Sander",
+        "Brian Jalaian",
+        "Venkat R. Dasari"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.09865",
+      "keywords": [
+        "quantization",
+        "distillation"
+      ],
+      "techniques": [
+        "quantization",
+        "distillation"
+      ],
+      "target_model": "Muon优化的蒸馏+量化用于LLM部署",
+      "highlight": false
+    },
+    {
+      "id": "2601.09881",
+      "title": "Transition Matching Distillation for Fast Video Generation",
+      "authors": [
+        "Weili Nie",
+        "Julius Berner",
+        "Nanye Ma",
+        "Chao Liu",
+        "Saining Xie",
+        "Arash Vahdat"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.09881",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "转移匹配蒸馏实现快速视频生成",
+      "highlight": false
+    },
+    {
+      "id": "2601.09985",
+      "title": "FaTRQ: Tiered Residual Quantization for LLM Vector Search in Far-Memory-Aware ANNS Systems",
+      "authors": [
+        "Tianqi Zhang",
+        "Flavio Ponzina",
+        "Tajana Rosing"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.LG",
+        "cs.AR",
+        "cs.IR"
+      ],
+      "url": "https://arxiv.org/abs/2601.09985",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "分层残差量化FaTRQ用于LLM向量检索",
+      "highlight": false
+    },
+    {
+      "id": "2601.10015",
+      "title": "CAFEDistill: Learning Personalized and Dynamic Models through Federated Early-Exit Network Distillation",
+      "authors": [
+        "Boyi Liu",
+        "Zimu Zhou",
+        "Yongxin Tong"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.10015",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "CAFEDistill:联邦早退网络蒸馏学习个性化动态模型",
+      "highlight": false
+    },
+    {
+      "id": "2601.10114",
+      "title": "Following the Teacher's Footsteps: Scheduled Checkpoint Distillation for Domain-Specific LLMs",
+      "authors": [
+        "Cheng Feng",
+        "Chaoliang Zhong",
+        "Jun Sun",
+        "Yusuke Oishi"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.10114",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "跟随教师脚步:领域LLM的调度检查点蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.10155",
+      "title": "LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers",
+      "authors": [
+        "Aryan Karmore"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.10155",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "LOOKAT:内存高效Transformer的查找优化键注意力",
+      "highlight": false
+    },
+    {
+      "id": "2601.10321",
+      "title": "An Efficient Long-Context Ranking Architecture With Calibrated LLM Distillation: Application to Person-Job Fit",
+      "authors": [
+        "Warren Jouanneau",
+        "Emma Jouffroy",
+        "Marc Palyart"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.CL",
+        "cs.IR",
+        "cs.LG",
+        "cs.SI"
+      ],
+      "url": "https://arxiv.org/abs/2601.10321",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "校准LLM蒸馏的高效长上下文排序架构(人岗匹配)",
+      "highlight": false
+    },
+    {
+      "id": "2601.10729",
+      "title": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+      "authors": [
+        "Xinyue Ma",
+        "Heelim Hong",
+        "Taegeon Um",
+        "Jongseop Lee",
+        "Seoyeong Choy",
+        "Woo-Yeon Lee",
+        "Myeongjae Jeon"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.PF"
+      ],
+      "url": "https://arxiv.org/abs/2601.10729",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "OrbitFlow:SLO感知长上下文服务的细粒度KV Cache重配置",
+      "highlight": false
+    },
+    {
+      "id": "2601.10765",
+      "title": "Pruning as Evolution: Emergent Sparsity Through Selection Dynamics in Neural Networks",
+      "authors": [
+        "Zubair Shah",
+        "Noaman Khan"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.NE"
+      ],
+      "url": "https://arxiv.org/abs/2601.10765",
+      "keywords": [
+        "pruning",
+        "sparsity"
+      ],
+      "techniques": [
+        "pruning",
+        "sparsity"
+      ],
+      "target_model": "剪枝即进化:通过选择动力学涌现稀疏性",
+      "highlight": false
+    },
+    {
+      "id": "2601.10801",
+      "title": "Towards Tensor Network Models for Low-Latency Jet Tagging on FPGAs",
+      "authors": [
+        "Alberto Coppi",
+        "Ema Puljak",
+        "Lorenzo Borella",
+        "Daniel Jaschke",
+        "Enrique Rico",
+        "Maurizio Pierini",
+        "Jacopo Pazzini",
+        "Andrea Triossi",
+        "Simone Montangero"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.LG",
+        "hep-ex",
+        "physics.ins-det",
+        "quant-ph"
+      ],
+      "url": "https://arxiv.org/abs/2601.10801",
+      "keywords": [
+        "compression",
+        "low_rank"
+      ],
+      "techniques": [
+        "compression",
+        "low_rank"
+      ],
+      "target_model": "张量网络模型实现FPGA低延迟喷注标记",
+      "highlight": false
+    },
+    {
+      "id": "2601.10953",
+      "title": "SwiftKV: An Edge-Oriented Attention Algorithm and Multi-Head Accelerator for Fast, Efficient LLM Decoding",
+      "authors": [
+        "Junming Zhang",
+        "Qinyan Zhang",
+        "Huajun Sun",
+        "Feiyang Gao",
+        "Sheng Hu",
+        "Rui Nie",
+        "Xiangshui Miao"
+      ],
+      "submitted": "2026-01-16",
+      "categories": [
+        "cs.AR"
+      ],
+      "url": "https://arxiv.org/abs/2601.10953",
+      "keywords": [
+        "kv_cache",
+        "hardware"
+      ],
+      "techniques": [
+        "kv_cache",
+        "hardware"
+      ],
+      "target_model": "SwiftKV:面向边缘的注意力算法与多头加速器",
+      "highlight": false
+    },
+    {
+      "id": "2601.10987",
+      "title": "Reasoning Distillation for Lightweight Automated Program Repair",
+      "authors": [
+        "Aanand Balasubramanian",
+        "Sashank Silwal"
+      ],
+      "submitted": "2026-01-16",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.10987",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "轻量自动程序修复的推理蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.11200",
+      "title": "FAQ: Mitigating Quantization Error via Regenerating Calibration Data with Family-Aware Quantization",
+      "authors": [
+        "Haiyang Xiao",
+        "Weiqing Li",
+        "Jinyue Guo",
+        "Guochao Jiang",
+        "Guohua Liu",
+        "Yuewei Zhang"
+      ],
+      "submitted": "2026-01-16",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.11200",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "家族感知量化FAQ:再生成校准数据缓解量化误差",
+      "highlight": false
+    },
+    {
+      "id": "2601.11269",
+      "title": "X-Distill: Cross-Architecture Vision Distillation for Visuomotor Learning",
+      "authors": [
+        "Maanping Shao",
+        "Feihong Zhang",
+        "Gu Zhang",
+        "Baiye Cheng",
+        "Zhengrong Xue",
+        "Huazhe Xu"
+      ],
+      "submitted": "2026-01-16",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.11269",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "X-Distill:视觉运动学习的跨架构视觉蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.11471",
+      "title": "Low-Rank Key Value Attention",
+      "authors": [
+        "James O'Neill",
+        "Robert Clancy",
+        "Mariia Matskevichus",
+        "Fergal Reid"
+      ],
+      "submitted": "2026-01-16",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.11471",
+      "keywords": [
+        "kv_cache",
+        "low_rank"
+      ],
+      "techniques": [
+        "kv_cache",
+        "low_rank"
+      ],
+      "target_model": "低秩键值注意力",
+      "highlight": false
+    },
+    {
+      "id": "2601.11630",
+      "title": "A one-step generation model with a Single-Layer Transformer: Layer number re-distillation of FreeFlow",
+      "authors": [
+        "Haonan Wei",
+        "Linyuan Wang",
+        "Nuolin Sun",
+        "Zhizhong Zheng",
+        "Lei Li",
+        "Bin Yan"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.11630",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "FreeFlow层数再蒸馏:单层Transformer一步生成",
+      "highlight": false
+    },
+    {
+      "id": "2601.11641",
+      "title": "Mixture of Distributions Matters: Dynamic Sparse Attention for Efficient Video Diffusion Transformers",
+      "authors": [
+        "Yuxi Liu",
+        "Yipeng Hu",
+        "Zekun Zhang",
+        "Kunze Jiang",
+        "Kun Yuan"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.11641",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "分布混合很重要:视频DiT动态稀疏注意力",
+      "highlight": false
+    },
+    {
+      "id": "2601.11660",
+      "title": "Zeros can be Informative: Masked Binary U-Net for Image Segmentation on Tensor Cores",
+      "authors": [
+        "Chunshu Wu",
+        "Ruibing Song",
+        "Sushant Kondguli",
+        "Tong Geng",
+        "Ang Li"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.11660",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "掩码二值U-Net在Tensor Core上的分割",
+      "highlight": true
+    },
+    {
+      "id": "2601.11663",
+      "title": "Activation Sensitivity as a Unifying Principle for Post-Training Quantization",
+      "authors": [
+        "Bruce Changlong Xu"
+      ],
+      "submitted": "2026-01-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.11663",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "激活敏感度作为PTQ统一原理",
+      "highlight": false
+    },
+    {
+      "id": "2601.11667",
+      "title": "Distill-then-Replace: Efficient Task-Specific Hybrid Attention Model Construction",
+      "authors": [
+        "Xiaojie Xia",
+        "Huigang Zhang",
+        "Chaoliang Zhong",
+        "Jun Sun",
+        "Yusuke Oishi"
+      ],
+      "submitted": "2026-01-16",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.11667",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "Distill-then-Replace:高效任务特定混合注意力模型构建",
+      "highlight": false
+    },
+    {
+      "id": "2601.11865",
+      "title": "CTPD: Cross Tokenizer Preference Distillation",
+      "authors": [
+        "Truong Nguyen",
+        "Phi Van Dat",
+        "Ngan Nguyen",
+        "Linh Ngo Van",
+        "Trung Le",
+        "Thanh Hong Nguyen"
+      ],
+      "submitted": "2026-01-17",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.11865",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "CTPD:跨tokenizer偏好蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.12033",
+      "title": "Preserving Fairness and Safety in Quantized LLMs Through Critical Weight Protection",
+      "authors": [
+        "Muhammad Alif Al Hakim",
+        "Alfan Farizki Wicaksono",
+        "Fajri Koto"
+      ],
+      "submitted": "2026-01-17",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.12033",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "关键权重保护保持量化LLM公平性与安全性",
+      "highlight": true
+    },
+    {
+      "id": "2601.12042",
+      "title": "Less Is More -- Until It Breaks: Security Pitfalls of Vision Token Compression in Large Vision-Language Models",
+      "authors": [
+        "Xiaomei Zhang",
+        "Zhaoxi Zhang",
+        "Leo Yu Zhang",
+        "Yanjun Zhang",
+        "Guanhong Tao",
+        "Shirui Pan"
+      ],
+      "submitted": "2026-01-17",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.12042",
+      "keywords": [
+        "token_compression",
+        "analysis"
+      ],
+      "techniques": [
+        "token_compression",
+        "analysis"
+      ],
+      "target_model": "视觉token压缩的安全隐患:越少越脆弱",
+      "highlight": false
+    },
+    {
+      "id": "2601.12272",
+      "title": "AgenticPruner: MAC-Constrained Neural Network Compression via LLM-Driven Strategy Search",
+      "authors": [
+        "Shahrzad Esmat",
+        "Mahdi Banisharif",
+        "Ali Jannesari"
+      ],
+      "submitted": "2026-01-18",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.12272",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "AgenticPruner:LLM驱动策略搜索的MAC约束网络压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.12638",
+      "title": "Mixed Precision PointPillars for Efficient 3D Object Detection with TensorRT",
+      "authors": [
+        "Ninnart Fuengfusin",
+        "Keisuke Yoneda",
+        "Naoki Suganuma"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.12638",
+      "keywords": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "techniques": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "target_model": "TensorRT混合精度PointPillars 3D检测",
+      "highlight": false
+    },
+    {
+      "id": "2601.12785",
+      "title": "Distilling Time Series Foundation Models for Efficient Forecasting",
+      "authors": [
+        "Yuqi Li",
+        "Kuiye Ding",
+        "Chuanguang Yang",
+        "Szu-Yu Chen",
+        "Yingli Tian"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.12785",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "蒸馏时间序列基础模型实现高效预测",
+      "highlight": false
+    },
+    {
+      "id": "2601.12814",
+      "title": "CSGaussian: Progressive Rate-Distortion Compression and Segmentation for 3D Gaussian Splatting",
+      "authors": [
+        "Yu-Jen Tseng",
+        "Chia-Hao Kao",
+        "Jing-Zhong Chen",
+        "Alessandro Gnutti",
+        "Shao-Yuan Lo",
+        "Yen-Yu Lin",
+        "Wen-Hsiao Peng"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.12814",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "CSGaussian:3DGS渐进率失真压缩与分割",
+      "highlight": false
+    },
+    {
+      "id": "2601.12894",
+      "title": "Sparse ActionGen: Accelerating Diffusion Policy with Real-time Pruning",
+      "authors": [
+        "Kangye Ji",
+        "Jianbo Zhou",
+        "Yuan Meng",
+        "Ye Li",
+        "Hanyun Cui",
+        "Zhi Wang"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.12894",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "实时剪枝加速扩散策略Sparse ActionGen",
+      "highlight": false
+    },
+    {
+      "id": "2601.12904",
+      "title": "From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation",
+      "authors": [
+        "Jiahao Wang",
+        "Weiyu Xie",
+        "Mingxing Zhang",
+        "Boxing Zhang",
+        "Jianwei Dong",
+        "Yuening Zhu",
+        "Chen Lin",
+        "Jinqi Tang",
+        "Yaochen Han",
+        "Zhiyuan Ai",
+        "Xianglin Chen",
+        "Yongwei Wu",
+        "Congfeng Jiang"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.12904",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "从前缀缓存到融合RAG缓存:加速RAG推理",
+      "highlight": false
+    },
+    {
+      "id": "2601.13100",
+      "title": "Recursive Meta-Distillation: An Axiomatic Framework for Iterative Knowledge Refinement",
+      "authors": [
+        "Aaron R. Flouro",
+        "Shawn P. Chadwick"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.13100",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "递归元蒸馏:迭代知识精炼公理化框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.13143",
+      "title": "FastAV: Efficient Token Pruning for Audio-Visual Large Language Model Inference",
+      "authors": [
+        "Chaeyoung Jung",
+        "Youngjoon Jang",
+        "Seungwoo Lee",
+        "Joon Son Chung"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.13143",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "音视频LLM推理的高效token剪枝FastAV",
+      "highlight": false
+    },
+    {
+      "id": "2601.13155",
+      "title": "Probe and Skip: Self-Predictive Token Skipping for Efficient Long-Context LLM Inference",
+      "authors": [
+        "Zimeng Wu",
+        "Donghao Wang",
+        "Chaozhe Jin",
+        "Jiaxin Chen",
+        "Yunhong Wang"
+      ],
+      "submitted": "2026-01-19",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.13155",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "自预测token跳过实现长上下文LLM高效推理",
+      "highlight": false
+    },
+    {
+      "id": "2601.13563",
+      "title": "ButterflyMoE: Compression-Scalable Ternary Experts via Structured Butterfly Orbits",
+      "authors": [
+        "Aryan Karmore"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.13563",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "可压缩扩展的三元专家ButterflyMoE",
+      "highlight": true
+    },
+    {
+      "id": "2601.13631",
+      "title": "ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management",
+      "authors": [
+        "Jing Zou",
+        "Shangyu Wu",
+        "Hancong Duan",
+        "Qiao Li",
+        "Chun Jason Xue"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.OS",
+        "cs.DC"
+      ],
+      "url": "https://arxiv.org/abs/2601.13631",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "ContiguousKV:粒度对齐KV Cache管理加速LLM预填充",
+      "highlight": false
+    },
+    {
+      "id": "2601.13684",
+      "title": "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
+      "authors": [
+        "Zhiyuan Shi",
+        "Qibo Qiu",
+        "Feng Xue",
+        "Zhonglin Jiang",
+        "Li Yu",
+        "Jian Jiang",
+        "Xiaofei He",
+        "Wenxiao Wang"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.13684",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "HeteroCache:长上下文推理异构KV Cache压缩动态检索",
+      "highlight": false
+    },
+    {
+      "id": "2601.13992",
+      "title": "\"The Whole Is Greater Than the Sum of Its Parts\": A Compatibility-Aware Multi-Teacher CoT Distillation Framework",
+      "authors": [
+        "Jin Cui",
+        "Jiaqi Guo",
+        "Ruixuan Yang",
+        "Jiayi Lu",
+        "Jiepeng Zhou",
+        "Jiajun Xu",
+        "Jiangcheng Song",
+        "Boran Zhao",
+        "Pengju Ren"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.13992",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "兼容感知多教师CoT蒸馏框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.14032",
+      "title": "RM-Distiller: Exploiting Generative LLM for Reward Model Distillation",
+      "authors": [
+        "Hongli Zhou",
+        "Hui Huang",
+        "Wei Liu",
+        "Chenglong Wang",
+        "Xingyuan Bu",
+        "Lvyuan Han",
+        "Fuhai Song",
+        "Muyun Yang",
+        "Wenhao Jiang",
+        "Hailong Cao",
+        "Tiejun Zhao"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.14032",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "RM-Distiller:利用生成式LLM进行奖励模型蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.14051",
+      "title": "Kakugo: Distillation of Low-Resource Languages into Small Language Models",
+      "authors": [
+        "Peter Devine",
+        "Mardhiyah Sanni",
+        "Farid Adilazuarda",
+        "Julieta Gil Loizaga",
+        "Barry Haddow"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.14051",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "Kakugo:低资源语言蒸馏进小语言模型",
+      "highlight": false
+    },
+    {
+      "id": "2601.14243",
+      "title": "Jet-RL: Enabling On-Policy FP8 Reinforcement Learning with Unified Training and Rollout Precision Flow",
+      "authors": [
+        "Haocheng Xi",
+        "Charlie Ruan",
+        "Peiyuan Liao",
+        "Yujun Lin",
+        "Han Cai",
+        "Yilong Zhao",
+        "Shuo Yang",
+        "Kurt Keutzer",
+        "Song Han",
+        "Ligeng Zhu"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.14243",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "统一训练/ rollout精度的在线FP8强化学习Jet-RL",
+      "highlight": true
+    },
+    {
+      "id": "2601.14277",
+      "title": "Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct",
+      "authors": [
+        "Uygar Kurt"
+      ],
+      "submitted": "2026-01-11",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.14277",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "llama.cpp量化在Llama-3.1-8B上的统一评测",
+      "highlight": false
+    },
+    {
+      "id": "2601.14279",
+      "title": "On the Limits of Learned Importance Scoring for KV Cache Compression",
+      "authors": [
+        "Brady Steele"
+      ],
+      "submitted": "2026-01-13",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.14279",
+      "keywords": [
+        "kv_cache",
+        "analysis"
+      ],
+      "techniques": [
+        "kv_cache",
+        "analysis"
+      ],
+      "target_model": "KV Cache压缩中学习型重要性打分的极限",
+      "highlight": false
+    },
+    {
+      "id": "2601.14290",
+      "title": "Project Aletheia: Verifier-Guided Distillation of Backtracking for Small Language Models",
+      "authors": [
+        "Aradhya Dixit",
+        "Tianxi Liang",
+        "Jai Telang"
+      ],
+      "submitted": "2026-01-14",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.14290",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "Project Aletheia:验证器引导的小语言模型回溯蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.14549",
+      "title": "QMC: Efficient SLM Edge Inference via Outlier-Aware Quantization and Emergent Memories Co-Design",
+      "authors": [
+        "Nilesh Prasad Pandey",
+        "Jangseon Park",
+        "Onat Gungor",
+        "Flavio Ponzina",
+        "Tajana Rosing"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.14549",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "异常值感知量化+涌现内存协同设计QMC(边缘SLM)",
+      "highlight": false
+    },
+    {
+      "id": "2601.14699",
+      "title": "Triage knowledge distillation for speaker verification",
+      "authors": [
+        "Ju-ho Kim",
+        "Youngmoon Jung",
+        "Joon-Young Yang",
+        "Jaeyoung Roh",
+        "Chang Woo Han",
+        "Hoon-Young Cho"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "eess.AS"
+      ],
+      "url": "https://arxiv.org/abs/2601.14699",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "说话人验证的分诊知识蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.14724",
+      "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+      "authors": [
+        "Haowei Zhang",
+        "Shudong Yang",
+        "Jinlan Fu",
+        "See-Kiong Ng",
+        "Xipeng Qiu"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.14724",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "HERMES:KV Cache作为层次内存实现流式视频理解",
+      "highlight": false
+    },
+    {
+      "id": "2601.14821",
+      "title": "POTR: Post-Training 3DGS Compression",
+      "authors": [
+        "Bert Ramlot",
+        "Martijn Courteaux",
+        "Peter Lambert",
+        "Glenn Van Wallendael"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.14821",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "POTR:后训练3D高斯泼溅压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.14888",
+      "title": "What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study",
+      "authors": [
+        "Keyu Lv",
+        "Manyi Zhang",
+        "Xiaobo Xia",
+        "Jingchen Ni",
+        "Shannan Yan",
+        "Xianzhi Yu",
+        "Lu Hou",
+        "Chun Yuan",
+        "Haoli Bai"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.14888",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "低比特QAT对推理LLM为何有效的系统研究",
+      "highlight": false
+    },
+    {
+      "id": "2601.15079",
+      "title": "LoRAP: Low-Rank Aggregation Prompting for Quantized Graph Neural Networks Training",
+      "authors": [
+        "Chenyu Liu",
+        "Haige Li",
+        "Luca Rossi"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.LG",
+        "cs.SI"
+      ],
+      "url": "https://arxiv.org/abs/2601.15079",
+      "keywords": [
+        "quantization",
+        "low_rank"
+      ],
+      "techniques": [
+        "quantization",
+        "low_rank"
+      ],
+      "target_model": "量化图神经网络训练的低秩聚合提示LoRAP",
+      "highlight": false
+    },
+    {
+      "id": "2601.15287",
+      "title": "Towards Understanding Best Practices for Quantization of Vision-Language Models",
+      "authors": [
+        "Gautom Das",
+        "Vincent La",
+        "Ethan Lau",
+        "Abhinav Shrivastava",
+        "Matthew Gwilliam"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.15287",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "视觉语言模型量化最佳实践研究",
+      "highlight": false
+    },
+    {
+      "id": "2601.15305",
+      "title": "Gated Sparse Attention: Combining Computational Efficiency with Training Stability for Long-Context Language Models",
+      "authors": [
+        "Alfred Shen",
+        "Aaron Shen"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.15305",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "门控稀疏注意力兼顾长上下文效率与训练稳定",
+      "highlight": false
+    },
+    {
+      "id": "2601.15370",
+      "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
+      "authors": [
+        "Maciej Kilian",
+        "Oleg Mkrtchyan",
+        "Luke Zettlemoyer",
+        "Akshat Shrivastava",
+        "Armen Aghajanyan"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.15370",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "权重与数据稀疏组合提升MoE计算效率",
+      "highlight": false
+    },
+    {
+      "id": "2601.15394",
+      "title": "Memorization Dynamics in Knowledge Distillation for Language Models",
+      "authors": [
+        "Jaydeep Borkar",
+        "Karan Chadha",
+        "Niloofar Mireshghallah",
+        "Yuchen Zhang",
+        "Irina-Elena Veliche",
+        "Archi Mitra",
+        "David A. Smith",
+        "Zheng Xu",
+        "Diego Garcia-Olano"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.15394",
+      "keywords": [
+        "distillation",
+        "analysis"
+      ],
+      "techniques": [
+        "distillation",
+        "analysis"
+      ],
+      "target_model": "语言模型知识蒸馏中的记忆动力学",
+      "highlight": false
+    },
+    {
+      "id": "2601.15538",
+      "title": "QUAIL: Quantization Aware Unlearning for Mitigating Misinformation in LLMs",
+      "authors": [
+        "Himanshu Mishra",
+        "Kanwal Mehreen"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.15538",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "量化感知遗忘QUAIL缓解LLM错误信息",
+      "highlight": true
+    },
+    {
+      "id": "2601.15598",
+      "title": "Ternary Spiking Neural Networks Enhanced by Complemented Neurons and Membrane Potential Aggregation",
+      "authors": [
+        "Boxuan Zhang",
+        "Jiaxin Wang",
+        "Zhen Xu",
+        "Kuan Tao"
+      ],
+      "submitted": "2026-01-22",
+      "categories": [
+        "cs.NE"
+      ],
+      "url": "https://arxiv.org/abs/2601.15598",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "互补神经元增强的三元脉冲神经网络",
+      "highlight": false
+    },
+    {
+      "id": "2601.15657",
+      "title": "Integrating Knowledge Distillation Methods: A Sequential Multi-Stage Framework",
+      "authors": [
+        "Yinxi Tian",
+        "Changwu Huang",
+        "Ke Tang",
+        "Xin Yao"
+      ],
+      "submitted": "2026-01-22",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.15657",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "整合知识蒸馏方法:序贯多阶段框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.16073",
+      "title": "DSFedMed: Dual-Scale Federated Medical Image Segmentation via Mutual Distillation Between Foundation and Lightweight Models",
+      "authors": [
+        "Hanwen Zhang",
+        "Qiaojin Shen",
+        "Yuxi Liu",
+        "Yuesheng Zhu",
+        "Guibo Luo"
+      ],
+      "submitted": "2026-01-22",
+      "categories": [
+        "cs.CV",
+        "cs.DC"
+      ],
+      "url": "https://arxiv.org/abs/2601.16073",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "DSFedMed:基础与轻量模型互蒸馏的联邦医学分割",
+      "highlight": false
+    },
+    {
+      "id": "2601.16093",
+      "title": "SAMTok: Representing Any Mask with Two Words",
+      "authors": [
+        "Yikang Zhou",
+        "Tao Zhang",
+        "Dengxian Gong",
+        "Yuanzheng Wu",
+        "Ye Tian",
+        "Haochen Wang",
+        "Haobo Yuan",
+        "Jiacong Wang",
+        "Lu Qi",
+        "Hao Fei",
+        "Anran Wang",
+        "Zhuochen Wang",
+        "Yujing Wang",
+        "Cheng Chen",
+        "Shunping Ji",
+        "Xiangtai Li"
+      ],
+      "submitted": "2026-01-22",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.16093",
+      "keywords": [
+        "token_compression"
+      ],
+      "techniques": [
+        "token_compression"
+      ],
+      "target_model": "SAMTok:两个词表示任意掩码",
+      "highlight": false
+    },
+    {
+      "id": "2601.16210",
+      "title": "PyraTok: Language-Aligned Pyramidal Tokenizer for Video Understanding and Generation",
+      "authors": [
+        "Onkar Susladkar",
+        "Tushar Prakash",
+        "Adheesh Juvekar",
+        "Kiet A. Nguyen",
+        "Dong-Hwan Jang",
+        "Inderjit S Dhillon",
+        "Ismini Lourentzou"
+      ],
+      "submitted": "2026-01-22",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.16210",
+      "keywords": [
+        "token_compression"
+      ],
+      "techniques": [
+        "token_compression"
+      ],
+      "target_model": "PyraTok:语言对齐金字塔视频tokenizer",
+      "highlight": false
+    },
+    {
+      "id": "2601.16219",
+      "title": "Domain Specific Specialization in Low-Resource Settings: The Efficacy of Offline Response-Based Knowledge Distillation in Large Language Models",
+      "authors": [
+        "Erdem Aslan",
+        "Pakize Erdoğmuş"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.16219",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "低资源领域离线响应式知识蒸馏的效能研究",
+      "highlight": false
+    },
+    {
+      "id": "2601.16235",
+      "title": "Contrastive Knowledge Distillation for Embedding Refinement in Personalized Speech Enhancement",
+      "authors": [
+        "Thomas Serre",
+        "Mathieu Fontaine",
+        "Éric Benhaim",
+        "Slim Essid"
+      ],
+      "submitted": "2026-01-21",
+      "categories": [
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "url": "https://arxiv.org/abs/2601.16235",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "个性化语音增强嵌入精炼的对比知识蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.16366",
+      "title": "Post-Training Neural Network Pruning using Graph Curvature",
+      "authors": [
+        "Shuhang Tan",
+        "Jayson Sia",
+        "Paul Bogdan",
+        "Radoslav Ivanov"
+      ],
+      "submitted": "2026-01-22",
+      "categories": [
+        "cs.LG",
+        "cs.SC"
+      ],
+      "url": "https://arxiv.org/abs/2601.16366",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "图曲率驱动的后训练神经网络剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.16515",
+      "title": "SALAD: Achieve High-Sparsity Attention via Efficient Linear Attention Tuning for Video Diffusion Transformer",
+      "authors": [
+        "Tongcheng Fang",
+        "Hanling Zhang",
+        "Ruiqi Xie",
+        "Zhuo Han",
+        "Xin Tao",
+        "Tianchen Zhao",
+        "Pengfei Wan",
+        "Wenbo Ding",
+        "Wanli Ouyang",
+        "Xuefei Ning",
+        "Yu Wang"
+      ],
+      "submitted": "2026-01-23",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.16515",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "SALAD:高效线性注意力微调实现视频DiT高稀疏注意力",
+      "highlight": false
+    },
+    {
+      "id": "2601.16536",
+      "title": "W4A16 Mixed-Precision Matrix Multiplication on Decoupled Architecture: Kernel Design and Memory Bottleneck Analysis for Ascend NPUs",
+      "authors": [
+        "Yuanhong He",
+        "Peiyu Niu",
+        "Jun Chen",
+        "Chenchen Zhang",
+        "Chao Yang"
+      ],
+      "submitted": "2026-01-23",
+      "categories": [
+        "cs.DC"
+      ],
+      "url": "https://arxiv.org/abs/2601.16536",
+      "keywords": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "techniques": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "target_model": "W4A16混合精度矩阵乘法在昇腾NPU的核设计",
+      "highlight": false
+    },
+    {
+      "id": "2601.16547",
+      "title": "CORD: Bridging the Audio-Text Reasoning Gap via Weighted On-policy Cross-modal Distillation",
+      "authors": [
+        "Jing Hu",
+        "Danxiang Zhu",
+        "Xianlong Luo",
+        "Dan Zhang",
+        "Shuwei He",
+        "Yishu Lei",
+        "Haitao Zheng",
+        "Shikun Feng",
+        "Jingzhou He",
+        "Yu Sun",
+        "Hua Wu",
+        "Haifeng Wang"
+      ],
+      "submitted": "2026-01-23",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "eess.AS"
+      ],
+      "url": "https://arxiv.org/abs/2601.16547",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "CORD:加权在策略跨模态蒸馏弥合音频-文本推理差距",
+      "highlight": false
+    },
+    {
+      "id": "2601.16986",
+      "title": "Crystal-KV: Efficient KV Cache Management for Chain-of-Thought LLMs via Answer-First Principle",
+      "authors": [
+        "Zihan Wang",
+        "Cheng Tang",
+        "Lei Gong",
+        "Cheng Li",
+        "Chao Wang",
+        "teng wang",
+        "Wenqi Lou",
+        "Xuehai Zhou"
+      ],
+      "submitted": "2026-01-05",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.16986",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "Crystal-KV:答案优先原则的CoT LLM KV Cache管理",
+      "highlight": false
+    },
+    {
+      "id": "2601.16991",
+      "title": "Sparsity-Aware Low-Rank Representation for Efficient Fine-Tuning of Large Language Models",
+      "authors": [
+        "Longteng Zhang",
+        "Sen Wu",
+        "Shuai Hou",
+        "Zhengyu Qing",
+        "Zhuo Zheng",
+        "Danning Ke",
+        "Qihong Lin",
+        "Qiang Wang",
+        "Shaohuai Shi",
+        "Xiaowen Chu"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.16991",
+      "keywords": [
+        "sparsity",
+        "low_rank"
+      ],
+      "techniques": [
+        "sparsity",
+        "low_rank"
+      ],
+      "target_model": "LLM高效微调的稀疏感知低秩表示",
+      "highlight": false
+    },
+    {
+      "id": "2601.17042",
+      "title": "Interpretable and Sparse Linear Attention with Decoupled Membership-Subspace Modeling via MCR2 Objective",
+      "authors": [
+        "Tianyuan Liu",
+        "Libin Hou",
+        "Linyuan Wang",
+        "Bin Yan"
+      ],
+      "submitted": "2026-01-20",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.17042",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "解耦成员-子空间建模的可解释稀疏线性注意力",
+      "highlight": false
+    },
+    {
+      "id": "2601.17112",
+      "title": "Low-Rank Tensor Approximation of Weights in Large Language Models via Cosine Lanczos Bidiagonalization",
+      "authors": [
+        "A. El Ichi",
+        "K. Jbilou"
+      ],
+      "submitted": "2026-01-23",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.17112",
+      "keywords": [
+        "compression",
+        "low_rank"
+      ],
+      "techniques": [
+        "compression",
+        "low_rank"
+      ],
+      "target_model": "余弦Lanczos双对角化实现LLM权重低秩张量近似",
+      "highlight": false
+    },
+    {
+      "id": "2601.17187",
+      "title": "High-Rate Quantized Matrix Multiplication I",
+      "authors": [
+        "Or Ordentlich",
+        "Yury Polyanskiy"
+      ],
+      "submitted": "2026-01-23",
+      "categories": [
+        "cs.IT",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.17187",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "高速率量化矩阵乘法的理论分析",
+      "highlight": true
+    },
+    {
+      "id": "2601.17279",
+      "title": "SPADE: A SIMD Posit-enabled compute engine for Accelerating DNN Efficiency",
+      "authors": [
+        "Sonu Kumar",
+        "Lavanya Vinnakota",
+        "Mukul Lokhande",
+        "Santosh Kumar Vishvakarma",
+        "Adam Teman"
+      ],
+      "submitted": "2026-01-24",
+      "categories": [
+        "cs.AR",
+        "cs.CV",
+        "eess.IV"
+      ],
+      "url": "https://arxiv.org/abs/2601.17279",
+      "keywords": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "techniques": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "target_model": "SIMD Posit计算引擎SPADE加速DNN",
+      "highlight": false
+    },
+    {
+      "id": "2601.17357",
+      "title": "Spectral Geometry for Deep Learning: Compression and Hallucination Detection via Random Matrix Theory",
+      "authors": [
+        "Davide Ettori"
+      ],
+      "submitted": "2026-01-24",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.17357",
+      "keywords": [
+        "compression",
+        "distillation"
+      ],
+      "techniques": [
+        "compression",
+        "distillation"
+      ],
+      "target_model": "谱几何深度学习:RMT-KD压缩与幻觉检测",
+      "highlight": false
+    },
+    {
+      "id": "2601.17367",
+      "title": "Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers",
+      "authors": [
+        "Zecheng Tang",
+        "Quantong Qiu",
+        "Yi Yang",
+        "Zhiyi Hong",
+        "Haiya Xiang",
+        "Kebin Liu",
+        "Qingqing Dang",
+        "Juntao Li",
+        "Min Zhang"
+      ],
+      "submitted": "2026-01-24",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.17367",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "弹性注意力:测试时自适应稀疏率",
+      "highlight": false
+    },
+    {
+      "id": "2601.17438",
+      "title": "UniGRec: Unified Generative Recommendation with Soft Identifiers for End-to-End Optimization",
+      "authors": [
+        "Jialei Li",
+        "Yang Zhang",
+        "Yimeng Bai",
+        "Shuai Zhu",
+        "Ziqi Xue",
+        "Xiaoyan Zhao",
+        "Dingxian Wang",
+        "Frank Yang",
+        "Andrew Rabinovich",
+        "Xiangnan He"
+      ],
+      "submitted": "2026-01-24",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.17438",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "软标识符统一生成式推荐UniGRec",
+      "highlight": false
+    },
+    {
+      "id": "2601.17443",
+      "title": "Clustering-driven Memory Compression for On-device Large Language Models",
+      "authors": [
+        "Ondrej Bohdal",
+        "Pramit Saha",
+        "Umberto Michieli",
+        "Mete Ozay",
+        "Taha Ceritli"
+      ],
+      "submitted": "2026-01-24",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.17443",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "聚类驱动的端侧LLM内存压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.17668",
+      "title": "Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction",
+      "authors": [
+        "Jang-Hyun Kim",
+        "Dongyoon Han",
+        "Sangdoo Yun"
+      ],
+      "submitted": "2026-01-25",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.17668",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "Fast KVzip:门控KV驱逐实现高效准确LLM推理",
+      "highlight": false
+    },
+    {
+      "id": "2601.17818",
+      "title": "ViTCoP: Accelerating Large Vision-Language Models via Visual and Textual Semantic Collaborative Pruning",
+      "authors": [
+        "Wen Luo",
+        "Peng Chen",
+        "Xiaotao Huang",
+        "LiQun Huang"
+      ],
+      "submitted": "2026-01-25",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.17818",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "视觉-文本语义协同剪枝加速大型VLM(ViTCoP)",
+      "highlight": false
+    },
+    {
+      "id": "2601.17836",
+      "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction",
+      "authors": [
+        "Weijiang Lai",
+        "Beihong Jin",
+        "Di Zhang",
+        "Siru Chen",
+        "Jiongyan Zhang",
+        "Yuhang Gou",
+        "Jian Dong",
+        "Xingxing Wang"
+      ],
+      "submitted": "2026-01-25",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "https://arxiv.org/abs/2601.17836",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "释放稀疏注意力在CTR长期行为建模的潜力",
+      "highlight": false
+    },
+    {
+      "id": "2601.17910",
+      "title": "Adaptive Weighting in Knowledge Distillation: An Axiomatic Framework for Multi-Scale Teacher Ensemble Optimization",
+      "authors": [
+        "Aaron R. Flouro",
+        "Shawn P. Chadwick"
+      ],
+      "submitted": "2026-01-25",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.17910",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "多尺度教师集成优化的自适应加权蒸馏公理化框架",
+      "highlight": false
+    },
+    {
+      "id": "2601.17917",
+      "title": "Streaming-dLLM: Accelerating Diffusion LLMs via Suffix Pruning and Dynamic Decoding",
+      "authors": [
+        "Zhongyu Xiao",
+        "Zhiwei Hao",
+        "Jianyuan Guo",
+        "Yong Luo",
+        "Jia Liu",
+        "Jie Xu",
+        "Han Hu"
+      ],
+      "submitted": "2026-01-25",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.17917",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "后缀剪枝+动态解码加速扩散LLM(Streaming-dLLM)",
+      "highlight": false
+    },
+    {
+      "id": "2601.17987",
+      "title": "Systematic Characterization of Minimal Deep Learning Architectures: A Unified Analysis of Convergence, Pruning, and Quantization",
+      "authors": [
+        "Ziwei Zheng",
+        "Huizhi Liang",
+        "Vaclav Snasel",
+        "Vito Latora",
+        "Panos Pardalos",
+        "Giuseppe Nicosia",
+        "Varun Ojha"
+      ],
+      "submitted": "2026-01-25",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.17987",
+      "keywords": [
+        "pruning",
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "pruning",
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "最小深度学习架构的统一分析:收敛/剪枝/量化",
+      "highlight": false
+    },
+    {
+      "id": "2601.18091",
+      "title": "From LLMs to LRMs: Rethinking Pruning for Reasoning-Centric Models",
+      "authors": [
+        "Longwei Ding",
+        "Anhao Zhao",
+        "Fanghua Ye",
+        "Ziyang Chen",
+        "Xiaoyu Shen"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.18091",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "面向推理中心模型重新思考剪枝(LLM到LRM)",
+      "highlight": false
+    },
+    {
+      "id": "2601.18150",
+      "title": "FP8-RL: A Practical and Stable Low-Precision Stack for LLM Reinforcement Learning",
+      "authors": [
+        "Zhaopeng Qiu",
+        "Shuang Yu",
+        "Jingqi Zhang",
+        "Shuai Zhang",
+        "Xue Huang",
+        "Jingyi Yang",
+        "Junjie Lai"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.18150",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "FP8-RL:实用稳定的低精度强化学习栈",
+      "highlight": false
+    },
+    {
+      "id": "2601.18306",
+      "title": "Calibrating Beyond English: Language Diversity for Better Quantized Multilingual LLM",
+      "authors": [
+        "Everlyn Asiko Chimoto",
+        "Mostafa Elhoushi",
+        "Bruce A. Bassett"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.18306",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "多语言校准数据提升量化多语言LLM",
+      "highlight": true
+    },
+    {
+      "id": "2601.18527",
+      "title": "Exploring Fine-Tuning for In-Context Retrieval and Efficient KV-Caching in Long-Context Language Models",
+      "authors": [
+        "Francesco Maria Molfese",
+        "Momchil Hardalov",
+        "Rexhina Blloshmi",
+        "Bill Byrne",
+        "Adrià de Gispert"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.18527",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "面向上下文内检索与高效KV缓存的长上下文LM微调",
+      "highlight": false
+    },
+    {
+      "id": "2601.18570",
+      "title": "Feature-Indexed Federated Recommendation with Residual-Quantized Codebooks",
+      "authors": [
+        "Mingzhe Han",
+        "Jiahao Liu",
+        "Dongsheng Li",
+        "Hansu Gu",
+        "Peng Zhang",
+        "Ning Gu",
+        "Tun Lu"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "https://arxiv.org/abs/2601.18570",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "残差量化码本的特征索引联邦推荐",
+      "highlight": false
+    },
+    {
+      "id": "2601.18909",
+      "title": "How Is Uncertainty Propagated in Knowledge Distillation?",
+      "authors": [
+        "Ziyao Cui",
+        "Jian Pei"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.18909",
+      "keywords": [
+        "distillation",
+        "analysis"
+      ],
+      "techniques": [
+        "distillation",
+        "analysis"
+      ],
+      "target_model": "知识蒸馏中不确定性如何传播",
+      "highlight": false
+    },
+    {
+      "id": "2601.18999",
+      "title": "Randomization Boosts KV Caching, Learning Balances Query Load: A Joint Perspective",
+      "authors": [
+        "Fangzhou Wu",
+        "Sandeep Silwal",
+        " Qiuyi",
+        " Zhang"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.18999",
+      "keywords": [
+        "kv_cache",
+        "analysis"
+      ],
+      "techniques": [
+        "kv_cache",
+        "analysis"
+      ],
+      "target_model": "随机化提升KV缓存与学习平衡查询负载的联合视角",
+      "highlight": false
+    },
+    {
+      "id": "2601.19026",
+      "title": "Is Finer Better? The Limits of Microscaling Formats in Large Language Models",
+      "authors": [
+        "Andrea Fasoli",
+        "Monodeep Kar",
+        "Chi-Chun Liu",
+        "Swagath Venkataramani",
+        "Viji Srinivasan",
+        "Leland Chang",
+        "Naigang Wang"
+      ],
+      "submitted": "2026-01-26",
+      "categories": [
+        "cs.LG",
+        "cs.AR",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.19026",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "微缩放格式在LLM中的极限研究",
+      "highlight": true
+    },
+    {
+      "id": "2601.19178",
+      "title": "CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation",
+      "authors": [
+        "Jingyu Li",
+        "Zhaocheng Du",
+        "Qianhui Zhu",
+        "kaiyuan Li",
+        "Zhicheng Zhang",
+        "Song-Li Wu",
+        "Chaolang Li",
+        "Pengwen Dai"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.19178",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "CollectiveKV:序列推荐中协作信息的解耦与共享",
+      "highlight": false
+    },
+    {
+      "id": "2601.19213",
+      "title": "M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization",
+      "authors": [
+        "Weiming Hu",
+        "Zihan Zhang",
+        "Haoyan Zhang",
+        "Chen Zhang",
+        "Cong Guo",
+        "Yu Feng",
+        "Tianchi Hu",
+        "Guanglin Li",
+        "Guipeng Hu",
+        "Junsong Wang",
+        "Jingwen Leng"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.AR"
+      ],
+      "url": "https://arxiv.org/abs/2601.19213",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "元数据增强微缩放数据格式M2XFP",
+      "highlight": true
+    },
+    {
+      "id": "2601.19320",
+      "title": "StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths",
+      "authors": [
+        "Tianyi Chen",
+        "Sihan Chen",
+        "Xiaoyi Qu",
+        "Dan Zhao",
+        "Ruomei Yan",
+        "Jongwoo Ko",
+        "Luming Liang",
+        "Pashmina Cameron"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.19320",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "超低比特位宽稳定量化感知训练StableQAT",
+      "highlight": true
+    },
+    {
+      "id": "2601.19503",
+      "title": "GradPruner: Gradient-Guided Layer Pruning Enabling Efficient Fine-Tuning and Inference for LLMs",
+      "authors": [
+        "Wei Huang",
+        "Anda Cheng",
+        "Yinggui Wang"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.19503",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "梯度引导层剪枝GradPruner(LLM高效微调与推理)",
+      "highlight": false
+    },
+    {
+      "id": "2601.19675",
+      "title": "LoPRo: Enhancing Low-Rank Quantization via Permuted Block-Wise Rotation",
+      "authors": [
+        "Hongyaoxing Gu",
+        "Lijuan Hu",
+        "Liye Yu",
+        "Haowei Li",
+        "Fangfang Liu"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.19675",
+      "keywords": [
+        "quantization",
+        "low_rank"
+      ],
+      "techniques": [
+        "quantization",
+        "low_rank"
+      ],
+      "target_model": "置换块级旋转增强低秩量化LoPRo",
+      "highlight": false
+    },
+    {
+      "id": "2601.19794",
+      "title": "Component-Aware Pruning Framework for Neural Network Controllers via Gradient-Based Importance Estimation",
+      "authors": [
+        "Ganesh Sundaram",
+        "Jonas Ulmen",
+        "Daniel Görges"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2601.19794",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "梯度重要性估计的神经网控制器组件感知剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.19919",
+      "title": "ASKD-Whisper: Adaptive Self-knowledge Distillation for Efficient and Low-Latency Automatic Speech Recognition",
+      "authors": [
+        "Junseok Lee",
+        "Nahun Kim",
+        "Sangyong Lee",
+        "Chang-Jae Chun"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "url": "https://arxiv.org/abs/2601.19919",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "ASKD-Whisper:自适应自蒸馏实现高效低延迟ASR",
+      "highlight": false
+    },
+    {
+      "id": "2601.19920",
+      "title": "PiC-BNN: A 128-kbit 65 nm Processing-in-CAM-Based End-to-End Binary Neural Network Accelerator",
+      "authors": [
+        "Yuval Harary",
+        "Almog Sharoni",
+        "Esteban Garzón",
+        "Marco Lanuzza",
+        "Adam Teman",
+        "Leonid Yavits"
+      ],
+      "submitted": "2026-01-08",
+      "categories": [
+        "cs.AR",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.19920",
+      "keywords": [
+        "quantization",
+        "hardware"
+      ],
+      "techniques": [
+        "quantization",
+        "hardware"
+      ],
+      "target_model": "128kbit处理-in-CAM端到端二值神经网络加速器PiC-BNN",
+      "highlight": false
+    },
+    {
+      "id": "2601.20088",
+      "title": "Quantization-Aware Distillation for NVFP4 Inference Accuracy Recovery",
+      "authors": [
+        "Meng Xin",
+        "Sweta Priyadarshi",
+        "Jingyu Xin",
+        "Bilal Kartal",
+        "Aditya Vavre",
+        "Asma Kuriparambil Thekkumpate",
+        "Zijia Chen",
+        "Ameya Sunil Mahabaleshwarkar",
+        "Ido Shahaf",
+        "Akhiad Bercovich",
+        "Kinjal Patel",
+        "Suguna Varshini Velury",
+        "Chenjie Luo",
+        "Zhiyu Cheng",
+        "Jenny Chen",
+        "Chen-Han Yu",
+        "Wei Ping",
+        "Oleg Rybakov",
+        "Nima Tajbakhsh",
+        "Oluwatobi Olabiyi",
+        "Dusan Stosic",
+        "Di Wu",
+        "Song Han",
+        "Eric Chung",
+        "Sharath Turuvekere Sreenivas",
+        "Bryan Catanzaro",
+        "Yoshi Suhara",
+        "Tijmen Blankevoort",
+        "Huizi Mao"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.20088",
+      "keywords": [
+        "quantization",
+        "distillation"
+      ],
+      "techniques": [
+        "quantization",
+        "distillation"
+      ],
+      "target_model": "量化感知蒸馏恢复NVFP4推理精度",
+      "highlight": true
+    },
+    {
+      "id": "2601.20107",
+      "title": "Structural Anchor Pruning: Training-Free Multi-Vector Compression for Visual Document Retrieval",
+      "authors": [
+        "Zhuchenyang Liu",
+        "Ziyu Hu",
+        "Yao Zhang",
+        "Yu Xiao"
+      ],
+      "submitted": "2026-01-27",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "url": "https://arxiv.org/abs/2601.20107",
+      "keywords": [
+        "pruning",
+        "compression"
+      ],
+      "techniques": [
+        "pruning",
+        "compression"
+      ],
+      "target_model": "结构锚剪枝:视觉文档检索的免训练多向量压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.20168",
+      "title": "Efficient Token Pruning for LLaDA-V",
+      "authors": [
+        "Zhewen Wan",
+        "Tianchen Song",
+        "Chen Lin",
+        "Zhiyong Zhao",
+        "Xianpeng Lang"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.20168",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "LLaDA-V的高效token剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2601.20262",
+      "title": "Shallow-π: Knowledge Distillation for Flow-based VLAs",
+      "authors": [
+        "Boseong Jeon",
+        "Yunho Choi",
+        "Taehan Kim"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2601.20262",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "Shallow-π:流基VLA的知识蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.20267",
+      "title": "SATA: Sparsity-Aware Scheduling for Selective Token Attention",
+      "authors": [
+        "Zhenkun Fan",
+        "Zishen Wan",
+        "Che-Kai Liu",
+        "Ashwin Sanjay Lele",
+        "Win-San Khwa",
+        "Bo Zhang",
+        "Meng-Fan Chang",
+        "Arijit Raychowdhury"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.AR"
+      ],
+      "url": "https://arxiv.org/abs/2601.20267",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "SATA:选择性token注意力的稀疏感知调度",
+      "highlight": false
+    },
+    {
+      "id": "2601.20301",
+      "title": "Towards Compact and Robust DNNs via Compression-aware Sharpness Minimization",
+      "authors": [
+        "Jialuo He",
+        "Huangxun Chen"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.20301",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "压缩感知锐度最小化实现紧凑鲁棒DNN",
+      "highlight": false
+    },
+    {
+      "id": "2601.20317",
+      "title": "VersaQ-3D: Architecture Support for Visual Geometry Grounded Transformers via Versatile Quantization",
+      "authors": [
+        "Yipu Zhang",
+        "Jintao Cheng",
+        "Xingyu Liu",
+        "Zeyu Li",
+        "Carol Jingyi Li",
+        "Jin Wu",
+        "Lin Jiang",
+        "Ceyu Xu",
+        "Yuan Xie",
+        "Jiang Xu",
+        "Wei Zhang"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.AR"
+      ],
+      "url": "https://arxiv.org/abs/2601.20317",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "视觉几何接地Transformer的通用量化VersaQ-3D",
+      "highlight": false
+    },
+    {
+      "id": "2601.20326",
+      "title": "Beyond Speedup -- Utilizing KV Cache for Sampling and Reasoning",
+      "authors": [
+        "Zeyu Xing",
+        "Xing Li",
+        "Hui-Ling Zhen",
+        "Mingxuan Yuan",
+        "Sinno Jialin Pan"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.20326",
+      "keywords": [
+        "kv_cache",
+        "analysis"
+      ],
+      "techniques": [
+        "kv_cache",
+        "analysis"
+      ],
+      "target_model": "超越加速:利用KV Cache进行采样与推理",
+      "highlight": false
+    },
+    {
+      "id": "2601.20499",
+      "title": "Efficient Autoregressive Video Diffusion with Dummy Head",
+      "authors": [
+        "Hang Guo",
+        "Zhaoyang Jia",
+        "Jiahao Li",
+        "Bin Li",
+        "Yuanhao Cai",
+        "Jiangshan Wang",
+        "Yawei Li",
+        "Yan Lu"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.20499",
+      "keywords": [
+        "kv_cache",
+        "pruning"
+      ],
+      "techniques": [
+        "kv_cache",
+        "pruning"
+      ],
+      "target_model": "Dummy Forcing:自回归视频扩散的异构头内存分配",
+      "highlight": false
+    },
+    {
+      "id": "2601.20745",
+      "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+      "authors": [
+        "Guoan Wang",
+        "Feiyu Wang",
+        "Zongwei Lv",
+        "Yikun Zong",
+        "Tong Yang"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.20745",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "Hessian引导可微QAT框架HESTIA(极低比特LLM)",
+      "highlight": false
+    },
+    {
+      "id": "2601.21069",
+      "title": "CompSRT: Quantization and Pruning for Image Super Resolution Transformers",
+      "authors": [
+        "Dorsa Zeinali",
+        "Hailing Wang",
+        "Yitian Zhang",
+        "Yun Fu"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "eess.IV"
+      ],
+      "url": "https://arxiv.org/abs/2601.21069",
+      "keywords": [
+        "quantization",
+        "pruning"
+      ],
+      "techniques": [
+        "quantization",
+        "pruning"
+      ],
+      "target_model": "图像超分Transformer的量化+剪枝CompSRT",
+      "highlight": false
+    },
+    {
+      "id": "2601.21193",
+      "title": "Generative Recall, Dense Reranking: Learning Multi-View Semantic IDs for Efficient Text-to-Video Retrieval",
+      "authors": [
+        "Zecheng Zhao",
+        "Zhi Chen",
+        "Zi Huang",
+        "Shazia Sadiq",
+        "Tong Chen"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.21193",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "多视角语义ID用于文生视频检索",
+      "highlight": false
+    },
+    {
+      "id": "2601.21198",
+      "title": "ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling",
+      "authors": [
+        "Yuchen Yang",
+        "Yaru Zhao",
+        "Pu Yang",
+        "Shaowei Wang",
+        "Zhi-Hua Zhou"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.21198",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "ZipMoE:无损压缩+缓存亲和调度的端侧MoE服务",
+      "highlight": false
+    },
+    {
+      "id": "2601.21219",
+      "title": "Soft Quantization: Model Compression Via Weight Coupling",
+      "authors": [
+        "Daniel T. Bernstein",
+        "Luca Di Carlo",
+        "David Schwab"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG",
+        "cond-mat.dis-nn"
+      ],
+      "url": "https://arxiv.org/abs/2601.21219",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "软量化:通过权重耦合的模型压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.21238",
+      "title": "PTQ4ARVG: Post-Training Quantization for AutoRegressive Visual Generation Models",
+      "authors": [
+        "Xuewen Liu",
+        "Zhikai Li",
+        "Jing Zhang",
+        "Mengjuan Chen",
+        "Qingyi Gu"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.21238",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "自回归视觉生成模型后训练量化PTQ4ARVG",
+      "highlight": false
+    },
+    {
+      "id": "2601.21279",
+      "title": "NEXUS: Bit-Exact ANN-to-SNN Equivalence via Neuromorphic Gate Circuits with Surrogate-Free Training",
+      "authors": [
+        "Zhengzheng Tang"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.NE",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.21279",
+      "keywords": [
+        "quantization",
+        "sparsity"
+      ],
+      "techniques": [
+        "quantization",
+        "sparsity"
+      ],
+      "target_model": "NEXUS:无代理训练实现ANN到SNN比特精确等价",
+      "highlight": true
+    },
+    {
+      "id": "2601.21288",
+      "title": "Drive-KD: Multi-Teacher Distillation for VLMs in Autonomous Driving",
+      "authors": [
+        "Weitong Lian",
+        "Zecong Tang",
+        "Haoran Li",
+        "Tianjian Gao",
+        "Yifei Wang",
+        "Zixu Wang",
+        "Lingyi Meng",
+        "Tengju Ru",
+        "Zhejun Cui",
+        "Yichen Zhu",
+        "Hangshuo Cao",
+        "Qi Kang",
+        "Tianxing Chen",
+        "Kaixuan Wang",
+        "Yu Zhang"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.21288",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "Drive-KD:自动驾驶VLM多教师蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.21345",
+      "title": "Semantic-Guided Dynamic Sparsification for Pre-Trained Model-based Class-Incremental Learning",
+      "authors": [
+        "Ruiqi Liu",
+        "Boyu Diao",
+        "Zijia An",
+        "Runjie Shao",
+        "Zhulin An",
+        "Fei Wang",
+        "Yongjun Xu"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.21345",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "预训练模型类增量学习的语义引导动态稀疏化",
+      "highlight": false
+    },
+    {
+      "id": "2601.21420",
+      "title": "ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation",
+      "authors": [
+        "Zihao Huang",
+        "Jundong Zhou",
+        "Xingwei Qu",
+        "Qiyang Min",
+        "Ge Zhang"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.21420",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "ConceptMoE:自适应token到概念压缩的隐式算力分配",
+      "highlight": false
+    },
+    {
+      "id": "2601.21531",
+      "title": "On the Adversarial Robustness of Large Vision-Language Models under Visual Token Compression",
+      "authors": [
+        "Xinwei Zhang",
+        "Hangcheng Liu",
+        "Li Bai",
+        "Hao Wang",
+        "Qingqing Ye",
+        "Tianwei Zhang",
+        "Haibo Hu"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.21531",
+      "keywords": [
+        "token_compression",
+        "analysis"
+      ],
+      "techniques": [
+        "token_compression",
+        "analysis"
+      ],
+      "target_model": "视觉token压缩下大型VLM的对抗鲁棒性",
+      "highlight": false
+    },
+    {
+      "id": "2601.21611",
+      "title": "Thinking Broad, Acting Fast: Latent Reasoning Distillation from Multi-Perspective Chain-of-Thought for E-Commerce Relevance",
+      "authors": [
+        "Baopu Qiu",
+        "Hao Chen",
+        "Yuanrong Wu",
+        "Changtong Zan",
+        "Chao Wei",
+        "Weiru Zhang",
+        "Xiaoyi Zeng"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.21611",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "多视角CoT潜在推理蒸馏(电商相关性)",
+      "highlight": false
+    },
+    {
+      "id": "2601.21623",
+      "title": "LAMP: Look-Ahead Mixed-Precision Inference of Large Language Models",
+      "authors": [
+        "Stanislav Budzinskiy",
+        "Marian Gloser",
+        "Tolunay Yilmaz",
+        "Ying Hong Tham",
+        "Yuanyi Lin",
+        "Wenyi Fang",
+        "Fan Wu",
+        "Philipp Petersen"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ],
+      "url": "https://arxiv.org/abs/2601.21623",
+      "keywords": [
+        "mixed_precision"
+      ],
+      "techniques": [
+        "mixed_precision"
+      ],
+      "target_model": "LAMP:LLM前瞻混合精度推理",
+      "highlight": false
+    },
+    {
+      "id": "2601.21626",
+      "title": "HeRo-Q: A General Framework for Stable Low Bit Quantization via Hessian Conditioning",
+      "authors": [
+        "Jinhao Zhang",
+        "Yunquan Zhang",
+        "Zicheng yan",
+        "Boyang Zhang",
+        "Jun Sun",
+        "Daning Cheng"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.21626",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "Hessian条件化稳定低比特量化框架HeRo-Q",
+      "highlight": false
+    },
+    {
+      "id": "2601.21686",
+      "title": "Don't be so Stief! Learning KV Cache low-rank approximation over the Stiefel manifold",
+      "authors": [
+        "Luca Benfenati",
+        "Matteo Risso",
+        "Andrea Vannozzi",
+        "Ahmet Caner Yüzügüler",
+        "Lukas Cavigelli",
+        "Enrico Macii",
+        "Daniele Jahier Pagliari",
+        "Alessio Burrello"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.21686",
+      "keywords": [
+        "kv_cache",
+        "low_rank"
+      ],
+      "techniques": [
+        "kv_cache",
+        "low_rank"
+      ],
+      "target_model": "Stiefel流形上学习KV Cache低秩近似",
+      "highlight": false
+    },
+    {
+      "id": "2601.21737",
+      "title": "Mixed-Precision Training and Compilation for RRAM-based Computing-in-Memory Accelerators",
+      "authors": [
+        "Rebecca Pelke",
+        "Joel Klein",
+        "Jose Cubero-Cascante",
+        "Nils Bosbach",
+        "Jan Moritz Joseph",
+        "Rainer Leupers"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG",
+        "cs.ET"
+      ],
+      "url": "https://arxiv.org/abs/2601.21737",
+      "keywords": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "techniques": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "target_model": "RRAM存算一体加速器的混合精度训练与编译",
+      "highlight": false
+    },
+    {
+      "id": "2601.21896",
+      "title": "Past- and Future-Informed KV Cache Policy with Salience Estimation in Autoregressive Video Diffusion",
+      "authors": [
+        "Hanmo Chen",
+        "Chenghao Xu",
+        "Xu Yang",
+        "Xuan Chen",
+        "Cheng Deng"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.21896",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "自回归视频扩散中过去-未来信息KV Cache策略",
+      "highlight": false
+    },
+    {
+      "id": "2601.21927",
+      "title": "SONIC: Segmented Optimized Nexus for Information Compression in Key-Value Caching",
+      "authors": [
+        "Hong Chen",
+        "Xiang Liu",
+        "Bo Wang",
+        "Yuxuan Fan",
+        "Yuanlin Chu",
+        "Zongluo Li",
+        "Xiaowen Chu",
+        "Xuming Hu"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.21927",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "SONIC:KV缓存信息压缩的分段优化联结",
+      "highlight": false
+    },
+    {
+      "id": "2601.21968",
+      "title": "OVD: On-policy Verbal Distillation",
+      "authors": [
+        "Jing Xiong",
+        "Hui Shen",
+        "Shansan Gong",
+        "Yuxin Cheng",
+        "Jianghan Shen",
+        "Chaofan Tao",
+        "Haochen Tan",
+        "Haoli Bai",
+        "Lifeng Shang",
+        "Ngai Wong"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.21968",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "OVD:在策略口头蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.22069",
+      "title": "VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning",
+      "authors": [
+        "Yibo Wang",
+        "Yongcheng Jing",
+        "Shunyu Liu",
+        "Hao Guan",
+        "Rong-cheng Tu",
+        "Chengyu Wang",
+        "Jun Huang",
+        "Dacheng Tao"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.22069",
+      "keywords": [
+        "token_compression"
+      ],
+      "techniques": [
+        "token_compression"
+      ],
+      "target_model": "VTC-R1:长上下文推理的视觉-文本压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.22101",
+      "title": "ECO: Quantized Training without Full-Precision Master Weights",
+      "authors": [
+        "Mahdi Nikdan",
+        "Amir Zandieh",
+        "Dan Alistarh",
+        "Vahab Mirrokni"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22101",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "无全精度主权重的量化训练ECO",
+      "highlight": false
+    },
+    {
+      "id": "2601.22141",
+      "title": "Routing the Lottery: Adaptive Subnetworks for Heterogeneous Data",
+      "authors": [
+        "Grzegorz Stefanski",
+        "Alberto Presta",
+        "Michal Byra"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22141",
+      "keywords": [
+        "sparsity",
+        "pruning"
+      ],
+      "techniques": [
+        "sparsity",
+        "pruning"
+      ],
+      "target_model": "路由彩票:异构数据的自适应子网络",
+      "highlight": false
+    },
+    {
+      "id": "2601.22244",
+      "title": "Is Hierarchical Quantization Essential for Optimal Reconstruction?",
+      "authors": [
+        "Shirin Reyhanian",
+        "Laurenz Wiskott"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22244",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "层次量化对最优重建是否必要(VQ-VAE)",
+      "highlight": false
+    },
+    {
+      "id": "2601.22275",
+      "title": "VMonarch: Efficient Video Diffusion Transformers with Structured Attention",
+      "authors": [
+        "Cheng Liang",
+        "Haoxian Chen",
+        "Liang Hou",
+        "Qi Fan",
+        "Gangshan Wu",
+        "Xin Tao",
+        "Limin Wang"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.22275",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "VMonarch:结构化注意力的高效视频DiT",
+      "highlight": false
+    },
+    {
+      "id": "2601.22347",
+      "title": "Pushing the Limits of Block Rotations in Post-Training Quantization",
+      "authors": [
+        "Sai Sanjeet",
+        "Ian Colbert",
+        "Pablo Monteagudo-Lago",
+        "Giuseppe Franco",
+        "Yaman Umuroglu",
+        "Nicholas J. Fraser"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.22347",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "后训练量化中块旋转的极限探索",
+      "highlight": false
+    },
+    {
+      "id": "2601.22362",
+      "title": "Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use",
+      "authors": [
+        "Julien Delavande",
+        "Regis Pierrard",
+        "Sasha Luccioni"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22362",
+      "keywords": [
+        "quantization",
+        "analysis"
+      ],
+      "techniques": [
+        "quantization",
+        "analysis"
+      ],
+      "target_model": "量化/批处理/服务策略对LLM能耗的影响",
+      "highlight": false
+    },
+    {
+      "id": "2601.22379",
+      "title": "SPLA: Block Sparse Plus Linear Attention for Long Context Modeling",
+      "authors": [
+        "Bailin Wang",
+        "Dan Friedman",
+        "Tao Lei",
+        "Chong Wang"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.22379",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "SPLA:长上下文建模的块稀疏+线性注意力",
+      "highlight": false
+    },
+    {
+      "id": "2601.22475",
+      "title": "Continual Policy Distillation from Distributed Reinforcement Learning Teachers",
+      "authors": [
+        "Yuxuan Li",
+        "Qijun He",
+        "Mingqi Yuan",
+        "Wen-Tse Chen",
+        "Jeff Schneider",
+        "Jiayu Chen"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22475",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "分布式强化学习教师的持续策略蒸馏",
+      "highlight": false
+    },
+    {
+      "id": "2601.22488",
+      "title": "Elastic Spectral State Space Models for Budgeted Inference",
+      "authors": [
+        "Dachuan Song",
+        "Xuan Wang"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22488",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "弹性谱状态空间模型实现预算化推理",
+      "highlight": false
+    },
+    {
+      "id": "2601.22531",
+      "title": "Learn from A Rationalist: Distilling Intermediate Interpretable Rationales",
+      "authors": [
+        "Jiayi Dai",
+        "Randy Goebel"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.22531",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "向理性主义者学习:蒸馏中间可解释理由",
+      "highlight": false
+    },
+    {
+      "id": "2601.22594",
+      "title": "Language Model Circuits Are Sparse in the Neuron Basis",
+      "authors": [
+        "Aryaman Arora",
+        "Zhengxuan Wu",
+        "Jacob Steinhardt",
+        "Sarah Schwettmann"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.22594",
+      "keywords": [
+        "sparsity",
+        "analysis"
+      ],
+      "techniques": [
+        "sparsity",
+        "analysis"
+      ],
+      "target_model": "语言模型回路在神经元基下是稀疏的",
+      "highlight": false
+    },
+    {
+      "id": "2601.22632",
+      "title": "DART-ing Through the Drift: Dynamic Tracing of Knowledge Neurons for Adaptive Inference-Time Pruning",
+      "authors": [
+        "Abhishek Tyagi",
+        "Yunuo Cen",
+        "Shrey Dhorajiya",
+        "Bharadwaj Veeravalli",
+        "Xuanyao Fong"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22632",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "知识神经元动态追踪实现自适应推理时剪枝DART",
+      "highlight": false
+    },
+    {
+      "id": "2601.22660",
+      "title": "Layerwise Progressive Freezing Enables STE-Free Training of Deep Binary Neural Networks",
+      "authors": [
+        "Evan Gibson Smith",
+        "Bashima Islam"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22660",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "逐层渐进冻结实现无STE深度二值网络训练",
+      "highlight": false
+    },
+    {
+      "id": "2601.22674",
+      "title": "VisionTrim: Unified Vision Token Compression for Training-Free MLLM Acceleration",
+      "authors": [
+        "Hanxun Yu",
+        "Wentong Li",
+        "Xuan Qu",
+        "Song Wang",
+        "Junbo Chen",
+        "Jianke Zhu"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.22674",
+      "keywords": [
+        "token_compression"
+      ],
+      "techniques": [
+        "token_compression"
+      ],
+      "target_model": "VisionTrim:免训练MLLM加速的统一视觉token压缩",
+      "highlight": false
+    },
+    {
+      "id": "2601.22709",
+      "title": "Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs",
+      "authors": [
+        "Yanlong Chen",
+        "Amirhossein Habibian",
+        "Luca Benini",
+        "Yawei Li"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.22709",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "置信度蒸馏门控关系对齐实现高效VLM",
+      "highlight": false
+    },
+    {
+      "id": "2601.22716",
+      "title": "Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation",
+      "authors": [
+        "Pingzhi Tang",
+        "Ruijie Zhou",
+        "Fanxu Meng",
+        "Wenjie Pei",
+        "Muhan Zhang"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2601.22716",
+      "keywords": [
+        "quantization",
+        "low_rank"
+      ],
+      "techniques": [
+        "quantization",
+        "low_rank"
+      ],
+      "target_model": "连续低秩分解缩放统一LLM量化与适配",
+      "highlight": false
+    },
+    {
+      "id": "2601.22766",
+      "title": "Sparse Attention as Compact Kernel Regression",
+      "authors": [
+        "Saul Santos",
+        "Nuno Gonçalves",
+        "Daniel C. McNamee",
+        "Marcos Treviso",
+        "André F. T Martins"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22766",
+      "keywords": [
+        "sparsity",
+        "analysis"
+      ],
+      "techniques": [
+        "sparsity",
+        "analysis"
+      ],
+      "target_model": "稀疏注意力作为紧凑核回归",
+      "highlight": false
+    },
+    {
+      "id": "2601.22787",
+      "title": "Float8@2bits: Entropy Coding Enables Data-Free Model Compression",
+      "authors": [
+        "Patrick Putzky",
+        "Martin Genzel",
+        "Mattes Mollenhauer",
+        "Sebastian Schulze",
+        "Thomas Wollmann",
+        "Stefan Dietzel"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22787",
+      "keywords": [
+        "quantization",
+        "compression"
+      ],
+      "techniques": [
+        "quantization",
+        "compression"
+      ],
+      "target_model": "熵编码实现无数据模型压缩Float8@2bits",
+      "highlight": false
+    },
+    {
+      "id": "2601.22795",
+      "title": "Sparse or Dense? A Mechanistic Estimation of Computation Density in Transformer-based LLMs",
+      "authors": [
+        "Corentin Kervadec",
+        "Iuliia Lysova",
+        "Marco Baroni",
+        "Gemma Boleda"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.22795",
+      "keywords": [
+        "sparsity",
+        "analysis"
+      ],
+      "techniques": [
+        "sparsity",
+        "analysis"
+      ],
+      "target_model": "稀疏还是稠密:Transformer LLM计算密度的机理估计",
+      "highlight": false
+    },
+    {
+      "id": "2601.22813",
+      "title": "Quartet II: Accurate LLM Pre-Training in NVFP4 by Improved Unbiased Gradient Estimation",
+      "authors": [
+        "Andrei Panferov",
+        "Erik Schultheis",
+        "Soroush Tabesh",
+        "Dan Alistarh"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22813",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "Quartet II:改进无偏梯度估计的NVFP4 LLM预训练",
+      "highlight": false
+    },
+    {
+      "id": "2601.22841",
+      "title": "How Much of a Model Do We Need? Redundancy and Slimmability in Remote Sensing Foundation Models",
+      "authors": [
+        "Leonard Hackel",
+        "Tom Burgert",
+        "Begüm Demir"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2601.22841",
+      "keywords": [
+        "pruning",
+        "analysis"
+      ],
+      "techniques": [
+        "pruning",
+        "analysis"
+      ],
+      "target_model": "遥感基础模型的冗余与可瘦身性研究",
+      "highlight": false
+    },
+    {
+      "id": "2601.22876",
+      "title": "Matterhorn: Efficient Analog Sparse Spiking Transformer Architecture with Masked Time-To-First-Spike Encoding",
+      "authors": [
+        "Zhanglu Yan",
+        "Kaiwen Tang",
+        "Zixuan Zhu",
+        "Zhenyu Bai",
+        "Qianhui Liu",
+        "Weng-Fai Wong"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.22876",
+      "keywords": [
+        "sparsity",
+        "hardware"
+      ],
+      "techniques": [
+        "sparsity",
+        "hardware"
+      ],
+      "target_model": "Matterhorn:掩码TTFS编码的模拟稀疏脉冲Transformer",
+      "highlight": false
+    },
+    {
+      "id": "2601.22980",
+      "title": "Learnable Permutation for Structured Sparsity on Transformer Models",
+      "authors": [
+        "Zekai Li",
+        "Ji Liu",
+        "Guanchen Li",
+        "Yixing Xu",
+        "Ziqiong Liu",
+        "Xuanwu Yin",
+        "Dong Li",
+        "Emad Barsoum"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2601.22980",
+      "keywords": [
+        "sparsity",
+        "pruning"
+      ],
+      "techniques": [
+        "sparsity",
+        "pruning"
+      ],
+      "target_model": "Transformer结构化稀疏的可学习置换",
+      "highlight": false
+    },
+    {
+      "id": "2601.22996",
+      "title": "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+      "authors": [
+        "Yiding Feng",
+        "Zonghan Yang",
+        "Yuhao Zhang"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.DS"
+      ],
+      "url": "https://arxiv.org/abs/2601.22996",
+      "keywords": [
+        "kv_cache",
+        "analysis"
+      ],
+      "techniques": [
+        "kv_cache",
+        "analysis"
+      ],
+      "target_model": "LLM推理的竞争性非预知KV-Cache调度",
+      "highlight": false
+    },
+    {
+      "id": "2601.23148",
+      "title": "Compressed BC-LISTA via Low-Rank Convolutional Decomposition",
+      "authors": [
+        "Han Wang",
+        "Yhonatan Kvich",
+        "Eduardo Pérez",
+        "Florian Römer",
+        "Yonina C. Eldar"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "eess.IV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2601.23148",
+      "keywords": [
+        "compression",
+        "low_rank"
+      ],
+      "techniques": [
+        "compression",
+        "low_rank"
+      ],
+      "target_model": "低秩卷积分解压缩BC-LISTA",
+      "highlight": false
+    },
+    {
+      "id": "2602.00165",
+      "title": "Benford's Law as a Distributional Prior for Post-Training Quantization of Large Language Models",
+      "authors": [
+        "Arthur Negrão",
+        "Pedro Silva",
+        "Vander L. S. Freitas",
+        "Gladston Moreira",
+        "Eduardo Luz"
+      ],
+      "submitted": "2026-01-29",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2602.00165",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "Benford定律作为LLM后训练量化的分布先验",
+      "highlight": false
+    },
+    {
+      "id": "2602.00247",
+      "title": "CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models",
+      "authors": [
+        "Samyak Jha",
+        "Junho Kim"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2602.00247",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "CAPA:大型VLM的贡献感知剪枝与FFN近似",
+      "highlight": false
+    },
+    {
+      "id": "2602.00268",
+      "title": "TokenTrim: Inference-Time Token Pruning for Autoregressive Long Video Generation",
+      "authors": [
+        "Ariel Shaulov",
+        "Eitan Shaar",
+        "Amit Edenzon",
+        "Lior Wolf"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.00268",
+      "keywords": [
+        "token_compression"
+      ],
+      "techniques": [
+        "token_compression"
+      ],
+      "target_model": "TokenTrim:自回归长视频生成的推理时token剪枝",
+      "highlight": false
+    },
+    {
+      "id": "2602.00372",
+      "title": "Post-Training Probability Manifold Correction via Structured SVD Pruning and Self-Referential Distillation",
+      "authors": [
+        "Aaron R. Flouro",
+        "Shawn P. Chadwick"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2602.00372",
+      "keywords": [
+        "pruning",
+        "distillation",
+        "low_rank"
+      ],
+      "techniques": [
+        "pruning",
+        "distillation",
+        "low_rank"
+      ],
+      "target_model": "结构化SVD剪枝+自指蒸馏的后训练概率流形校正",
+      "highlight": false
+    },
+    {
+      "id": "2602.00397",
+      "title": "Fast Forward: Accelerating LLM Prefill with Predictive FFN Sparsity",
+      "authors": [
+        "Aayush Gautam",
+        "Mukul Gagrani",
+        "Junyoung Park",
+        "Mingu Lee",
+        "Chiris Lott",
+        "Narasimha Reddy"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.00397",
+      "keywords": [
+        "sparsity"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "预测性FFN稀疏加速LLM预填充Fast Forward",
+      "highlight": false
+    },
+    {
+      "id": "2602.00450",
+      "title": "Model Optimization for Multi-Camera 3D Detection and Tracking",
+      "authors": [
+        "Ethan Anderson",
+        "Justin Silva",
+        "Kyle Zheng",
+        "Sameer Pusegaonkar",
+        "Yizhou Wang",
+        "Zheng Tang",
+        "Sujit Biswas"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2602.00450",
+      "keywords": [
+        "quantization",
+        "mixed_precision"
+      ],
+      "techniques": [
+        "quantization",
+        "mixed_precision"
+      ],
+      "target_model": "多相机3D检测跟踪的INT8/FP8量化与混合精度评估",
+      "highlight": false
+    },
+    {
+      "id": "2602.00534",
+      "title": "AIRE-Prune: Asymptotic Impulse-Response Energy for State Pruning in State Space Models",
+      "authors": [
+        "Apurba Prasad Padhy",
+        "Fernando Camacho",
+        "Saibal Mukhopadhyay"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2602.00534",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "状态空间模型状态剪枝的渐近脉冲响应能量AIRE-Prune",
+      "highlight": false
+    },
+    {
+      "id": "2602.00686",
+      "title": "Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching",
+      "authors": [
+        "Yujie Wei",
+        "Jiahan Fan",
+        "Jiyu Guo",
+        "Ruichen Zhen",
+        "Rui Shao",
+        "Xiu Su",
+        "Zeke Xie",
+        "Shuo Yang"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2602.00686",
+      "keywords": [
+        "token_compression"
+      ],
+      "techniques": [
+        "token_compression"
+      ],
+      "target_model": "自适应视觉token缓存加速VLA模型",
+      "highlight": false
+    },
+    {
+      "id": "2602.00777",
+      "title": "HyLRA: Hybrid Layer Reuse Attention for Efficient Long-Context Inference",
+      "authors": [
+        "Xuan Ai",
+        "Qingqing Yang",
+        "Peng Wang",
+        "Lei Deng",
+        "Lin Zhang",
+        "Renhai Chen",
+        "Gong Zhang"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2602.00777",
+      "keywords": [
+        "compression"
+      ],
+      "techniques": [
+        "compression"
+      ],
+      "target_model": "HyLRA:混合层复用注意力实现长上下文高效推理",
+      "highlight": false
+    },
+    {
+      "id": "2602.00780",
+      "title": "Environment-Aware Adaptive Pruning with Interleaved Inference Orchestration for Vision-Language-Action Models",
+      "authors": [
+        "Yuting Huang",
+        "Leilei Ding",
+        "Zhipeng Tang",
+        "Zenghuan Zhu",
+        "Jiajun Deng",
+        "Xinrui Lin",
+        "Shuo Liu",
+        "Haojie Ren",
+        "Jianmin Ji",
+        "Yanyong Zhang"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.00780",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "VLA模型的环境感知自适应剪枝与交错推理编排",
+      "highlight": false
+    },
+    {
+      "id": "2602.00838",
+      "title": "Exploration of Unary Arithmetic-Based Matrix Multiply Units for Low Precision DL Accelerators",
+      "authors": [
+        "Prabhu Vellaisamy",
+        "Harideep Nair",
+        "Di Wu",
+        "Shawn Blanton",
+        "John Paul Shen"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.00838",
+      "keywords": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "techniques": [
+        "mixed_precision",
+        "hardware"
+      ],
+      "target_model": "低精度DL加速器的一元算术矩阵乘单元",
+      "highlight": false
+    },
+    {
+      "id": "2602.00852",
+      "title": "Investigating the Robustness of Subtask Distillation under Spurious Correlation",
+      "authors": [
+        "Pattarawat Chormai",
+        "Klaus-Robert Müller",
+        "Grégoire Montavon"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2602.00852",
+      "keywords": [
+        "distillation",
+        "analysis"
+      ],
+      "techniques": [
+        "distillation",
+        "analysis"
+      ],
+      "target_model": "虚假相关下子任务蒸馏的鲁棒性研究",
+      "highlight": false
+    },
+    {
+      "id": "2602.00879",
+      "title": "Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs",
+      "authors": [
+        "Hao Mark Chen",
+        "Zhiwen Mo",
+        "Royson Lee",
+        "Qianzhou Wang",
+        "Da Li",
+        "Shell Xu Hu",
+        "Wayne Luk",
+        "Timothy Hospedales",
+        "Hongxiang Fan"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2602.00879",
+      "keywords": [
+        "compression",
+        "sparsity"
+      ],
+      "techniques": [
+        "compression",
+        "sparsity"
+      ],
+      "target_model": "MoE扩散LLM的动态专家共享:解耦内存与并行",
+      "highlight": false
+    },
+    {
+      "id": "2602.02538",
+      "title": "Enhancing Post-Training Quantization via Future Activation Awareness",
+      "authors": [
+        "Zheqi Lv",
+        "Zhenxuan Fan",
+        "Qi Tian",
+        "Wenqiao Zhang",
+        "Yueting Zhuang"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2602.02538",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "未来激活感知增强后训练量化",
+      "highlight": false
+    },
+    {
+      "id": "2602.02579",
+      "title": "ProphetKV: User-Query-Driven Selective Recomputation for Efficient KV Cache Reuse in Retrieval-Augmented Generation",
+      "authors": [
+        "Shihao Wang",
+        "Jiahao Chen",
+        "Yanqi Pan",
+        "Hao Huang",
+        "Yichen Hao",
+        "Xiangyu Zou",
+        "Wen Xia",
+        "Wentao Zhang",
+        "Chongyang Qiu",
+        "Pengfei Wang"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.OS",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.02579",
+      "keywords": [
+        "kv_cache"
+      ],
+      "techniques": [
+        "kv_cache"
+      ],
+      "target_model": "ProphetKV:RAG中用户查询驱动的选择性重计算KV复用",
+      "highlight": false
+    },
+    {
+      "id": "2602.02581",
+      "title": "QuantLRM: Quantization of Large Reasoning Models via Fine-Tuning Signals",
+      "authors": [
+        "Nan Zhang",
+        "Eugene Kwek",
+        "Yusen Zhang",
+        "Muyu Pan",
+        "Suhang Wang",
+        "Prasenjit Mitra",
+        "Rui Zhang"
+      ],
+      "submitted": "2026-01-31",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.02581",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "微调信号驱动的大型推理模型量化QuantLRM",
+      "highlight": false
+    },
+    {
+      "id": "2602.11184",
+      "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
+      "authors": [
+        "Zukang Xu",
+        "Zhixiong Zhao",
+        "Xing Hu",
+        "Zhixuan Chen",
+        "Dawei Yang"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.11184",
+      "keywords": [
+        "quantization",
+        "low_rank"
+      ],
+      "techniques": [
+        "quantization",
+        "low_rank"
+      ],
+      "target_model": "KLT引导SVD+偏差校正向量量化压缩MoE LLM",
+      "highlight": false
+    },
+    {
+      "id": "2602.15836",
+      "title": "EdgeNav-QE: QLoRA Quantization and Dynamic Early Exit for LAM-based Navigation on Edge Devices",
+      "authors": [
+        "Mengyun Liu",
+        "Shanshan Huang",
+        "Jianan Jiang"
+      ],
+      "submitted": "2026-01-12",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2602.15836",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "EdgeNav-QE:QLoRA量化+动态早退的边缘导航",
+      "highlight": false
+    },
+    {
+      "id": "2602.15845",
+      "title": "KD4MT: A Survey of Knowledge Distillation for Machine Translation",
+      "authors": [
+        "Ona de Gibert",
+        "Joseph Attieh",
+        "Timothee Mickus",
+        "Yves Scherrer",
+        "Jörg Tiedemann"
+      ],
+      "submitted": "2026-01-22",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2602.15845",
+      "keywords": [
+        "distillation",
+        "survey"
+      ],
+      "techniques": [
+        "distillation",
+        "survey"
+      ],
+      "target_model": "KD4MT:机器翻译知识蒸馏综述",
+      "highlight": false
+    },
+    {
+      "id": "2602.20164",
+      "title": "Benchmarking Distilled Language Models: Performance and Efficiency in Resource-Constrained Settings",
+      "authors": [
+        "Sachin Gopal Wani",
+        "Eric Page",
+        "Ajay Dholakia",
+        "David Ellison"
+      ],
+      "submitted": "2026-01-28",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2602.20164",
+      "keywords": [
+        "distillation",
+        "analysis"
+      ],
+      "techniques": [
+        "distillation",
+        "analysis"
+      ],
+      "target_model": "资源受限环境蒸馏语言模型基准:性能与效率",
+      "highlight": false
+    },
+    {
+      "id": "2603.08713",
+      "title": "Unveiling the Potential of Quantization with MXFP4: Strategies for Quantization Error Reduction",
+      "authors": [
+        "Jatin Chhugani",
+        "Geonhwa Jeong",
+        "Bor-Yiing Su",
+        "Yunjie Pan",
+        "Hanmei Yang",
+        "Aayush Ankit",
+        "Jiecao Yu",
+        "Summer Deng",
+        "Yunqing Chen",
+        "Nadathur Satish",
+        "Changkyu Kim"
+      ],
+      "submitted": "2026-01-30",
+      "categories": [
+        "cs.AR",
+        "cs.AI",
+        "cs.LG",
+        "cs.PF"
+      ],
+      "url": "https://arxiv.org/abs/2603.08713",
+      "keywords": [
+        "quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "MXFP4量化误差降低策略研究",
+      "highlight": false
+    }
+  ]
+}
