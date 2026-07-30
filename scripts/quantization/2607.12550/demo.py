@@ -49,13 +49,13 @@ class JoLT:
         body = (U[:, :r] * S[:r]) @ Vh[:r]
         R = (M - body)
         k = max(2, int(M.shape[1] * self.jf))
-        P = torch.randn(k, M.shape[1]) / (k ** 0.5)  # JL projection
-        return (U[:, :r], S[:r], Vh[:r], P @ R, P, M.shape)
+        P = torch.randn(k, M.shape[1]) / (k ** 0.5)  # JL projection on columns
+        return (U[:, :r], S[:r], Vh[:r], R @ P.T, P, M.shape)
 
     def decompress(self, packed):
         U, S, Vh, RP, P, shape = packed
         body = (U * S) @ Vh
-        R = P.T @ RP  # JL approximate inverse (exact in expectation)
+        R = RP @ P  # JL approximate inverse (exact in expectation)
         return (body + R).reshape(shape)
 
 
@@ -71,15 +71,20 @@ def demo():
     cum = (svals ** 2).cumsum(0) / (svals ** 2).sum()
     print(f"  top-24/96 singular values capture {cum[23]:.1%} of energy")
 
-    print("\n[2] JoLT vs Tucker-only at matched storage")
+    print("\n[2] JoLT vs Tucker-only at matched storage (KV-like structured tensor)")
+    # KV-like: strong low-rank body + small residual tail
+    UU = torch.randn(96, 12); VV = torch.randn(12, 256)
+    K = (UU @ VV).reshape(96, 4, 64) + 0.1 * torch.randn(96, 4, 64)
     jolt = JoLT(rank_frac=0.25, jl_frac=0.25)
     packed = jolt.compress(K)
     K_rec = jolt.decompress(packed)
-    U, S, Vh = torch.linalg.svd(M, full_matrices=False)
-    r = int(96 * 0.5)
-    K_tk = ((U[:, :r] * S[:r]) @ Vh[:r]).reshape(K.shape)
-    print(f"  recon cosine  Tucker-only: {F.cosine_similarity(K.reshape(-1), K_tk.reshape(-1), dim=0):.4f}")
-    print(f"  recon cosine  JoLT:        {F.cosine_similarity(K.reshape(-1), K_rec.reshape(-1), dim=0):.4f}")
+    M2 = K.reshape(96, -1)
+    U, S, Vh = torch.linalg.svdvals(M2), None, None
+    U2, S2, Vh2 = torch.linalg.svd(M2, full_matrices=False)
+    r = int(96 * 0.5)  # Tucker-only gets the full 50% rank budget
+    K_tk = ((U2[:, :r] * S2[:r]) @ Vh2[:r]).reshape(K.shape)
+    print(f"  recon cosine  Tucker-only(rank 50%): {F.cosine_similarity(K.reshape(-1), K_tk.reshape(-1), dim=0):.4f}")
+    print(f"  recon cosine  JoLT(rank 25% + JL 25%): {F.cosine_similarity(K.reshape(-1), K_rec.reshape(-1), dim=0):.4f}")
 
     print("\n[3] Qwen3-0.6B: JoLT on real K cache (layer 0)")
     try:
