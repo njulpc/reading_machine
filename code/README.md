@@ -38,13 +38,16 @@ from gsq_quantizer import GSQQuantizer, GSQConfig
 config = GSQConfig(bits=2, num_epochs=20, device="cuda")
 quantizer = GSQQuantizer(config)
 
-quantized_weight, scale = quantizer.quantize(weight, calibration_input)
+quantized_weight, scales = quantizer.quantize(weight, calibration_input)
+# scales: [num_groups] per-group scale factors
 ```
 
-## Implementation Notes
+## Implementation Details
 
-- Uses **Lion optimizer** (sign-based, handles vanishing gradients in saturated Gumbel-Softmax)
-- Temperature annealed from 2.0 → 0.05
-- Kappa annealed from 100 → 500
-- Local-shift formulation for b > 2 (5 logits per coordinate instead of 2^b)
-- Group-wise quantization with group_size=128
+- **Group-wise quantization**: group_size=128, per-group scales
+- **GPTQ warm-start initialization**: Round-to-nearest initialization with Gaussian noise
+- **Gumbel-Softmax relaxation**: Temperature annealed 2.0 → 0.05, kappa annealed 100 → 500
+- **Lion optimizer**: Sign-based updates with separate LR for logits (1e-4) and scales (5e-5)
+- **Local-shift (b>2)**: Soft indexing maintains gradient flow; 5 logits per coordinate
+- **Integer symmetric grid**: Compatible with scalar inference kernels
+- **Real calibration data**: Forward hooks capture actual layer activations
