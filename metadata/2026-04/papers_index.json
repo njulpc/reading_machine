@@ -43,7 +43,8 @@
         "novelty": 7,
         "reproducibility": 9
       },
-      "highlight": "LinearARD 通过对齐冻结原生 RoPE 教师与 RoPE 缩放学生的稠密 Q/Q、K/K、V/V 自关系矩阵行分布来监督注意力动态，并借助线性内存 kernel 精确计算 KL 散度，仅用 4.25M 训练 token 即在 LLaMA2-7B（4K→32K）上恢复 98.3% 的短文本性能。"
+      "highlight": "LinearARD 通过对齐冻结原生 RoPE 教师与 RoPE 缩放学生的稠密 Q/Q、K/K、V/V 自关系矩阵行分布来监督注意力动态，并借助线性内存 kernel 精确计算 KL 散度，仅用 4.25M 训练 token 即在 LLaMA2-7B（4K→32K）上恢复 98.3% 的短文本性能。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.00223",
@@ -71,7 +72,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "作者将 RKL 梯度分解为目标/非目标分量，发现非目标梯度即使在学生已匹配教师时仍持续推高目标 logit 导致过度自信与多样性下降，据此提出 Diversity-aware RKL（DRKL），在多个数据集与模型族上稳定优于 FKL、RKL 及其他 SOTA 蒸馏目标。"
+      "highlight": "作者将 RKL 梯度分解为目标/非目标分量，发现非目标梯度即使在学生已匹配教师时仍持续推高目标 logit 导致过度自信与多样性下降，据此提出 Diversity-aware RKL（DRKL），在多个数据集与模型族上稳定优于 FKL、RKL 及其他 SOTA 蒸馏目标。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.00529",
@@ -99,7 +101,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "MF-QAT 让一个模型在多格式 QAT 下对每个目标精度都达到单格式 QAT 的水平，配合 Slice-and-Scale 转换程序，只需保存一份 MXINT8/MXFP8 锚点 checkpoint，即可在运行时无重训练地切换到任意更低 MXINT/MXFP 格式而几乎不损失精度。"
+      "highlight": "MF-QAT 让一个模型在多格式 QAT 下对每个目标精度都达到单格式 QAT 的水平，配合 Slice-and-Scale 转换程序，只需保存一份 MXINT8/MXFP8 锚点 checkpoint，即可在运行时无重训练地切换到任意更低 MXINT/MXFP 格式而几乎不损失精度。",
+      "domain": "quantization"
     },
     {
       "id": "2604.00586",
@@ -126,7 +129,8 @@
         "novelty": 5,
         "reproducibility": 8
       },
-      "highlight": "在有限人工标注数据上微调 4-bit 量化的 1.7B SLM，配合多维评分 rubric 与简单正则化，标注一致性（Krippendorff α）比最强专有 LLM 高 0.23 点，证明量化小模型可作为标注场景的确定性、可复现、隐私友好的开源替代。"
+      "highlight": "在有限人工标注数据上微调 4-bit 量化的 1.7B SLM，配合多维评分 rubric 与简单正则化，标注一致性（Krippendorff α）比最强专有 LLM 高 0.23 点，证明量化小模型可作为标注场景的确定性、可复现、隐私友好的开源替代。",
+      "domain": "quantization"
     },
     {
       "id": "2604.00626",
@@ -154,7 +158,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "本综述将 OPD 形式化为学生采样轨迹上的 f-散度最小化，沿“优化什么、信号来源、如何稳定训练”三条设计轴梳理文献，指出 OPD 可将暴露偏差的复合误差从约平方级降为线性，并总结成功条件、典型失效模式及与 KL 约束 RL 的联系。"
+      "highlight": "本综述将 OPD 形式化为学生采样轨迹上的 f-散度最小化，沿“优化什么、信号来源、如何稳定训练”三条设计轴梳理文献，指出 OPD 可将暴露偏差的复合误差从约平方级降为线性，并总结成功条件、典型失效模式及与 KL 约束 RL 的联系。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.00757",
@@ -183,7 +188,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "IWP 将注意力重写为权重矩阵等于各 token 键值外积之和的隐式线性层，token 剪枝由此等价于选择最优 rank-1 更新子集来近似对偶权重矩阵，并推导出同时量化信息量与信息冗余的剪枝度量，配合渐进分块 MMR 选择取得更优性能-效率折中。"
+      "highlight": "IWP 将注意力重写为权重矩阵等于各 token 键值外积之和的隐式线性层，token 剪枝由此等价于选择最优 rank-1 更新子集来近似对偶权重矩阵，并推导出同时量化信息量与信息冗余的剪枝度量，配合渐进分块 MMR 选择取得更优性能-效率折中。",
+      "domain": "pruning"
     },
     {
       "id": "2604.00821",
@@ -212,7 +218,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "OBD-LLM 通过 Hessian 的 Kronecker 分解证明低秩分解必须同时考虑层的输入与输出信息，提出对权重矩阵做双向白化的闭式 loss-aware 分解方案，比此前 SOTA 的 SVD-LLM 改进约 20–40%。"
+      "highlight": "OBD-LLM 通过 Hessian 的 Kronecker 分解证明低秩分解必须同时考虑层的输入与输出信息，提出对权重矩阵做双向白化的闭式 loss-aware 分解方案，比此前 SOTA 的 SVD-LLM 改进约 20–40%。",
+      "domain": "others"
     },
     {
       "id": "2604.00827",
@@ -240,7 +247,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "VPP 用来自深层特征的时序前景选择性指导早期 ViT 层的可微 patch 选择，在稠密预测任务上实现最高 60% 的 patch 削减（远超图像方法约 30% 的水平），YouTube-VIS 2021 上 patch 用量降至 55% 以下时性能最大仅降 0.6%。"
+      "highlight": "VPP 用来自深层特征的时序前景选择性指导早期 ViT 层的可微 patch 选择，在稠密预测任务上实现最高 60% 的 patch 削减（远超图像方法约 30% 的水平），YouTube-VIS 2021 上 patch 用量降至 55% 以下时性能最大仅降 0.6%。",
+      "domain": "pruning"
     },
     {
       "id": "2604.01042",
@@ -266,7 +274,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "将硬件导向 SNN 建模为有界整数格点上的确定性映射，提出整数值状态 + 移位泄漏的轻量更新规则，通过 N=30–130、连接密度 0.1–0.9、位宽 4/8/16、T=1000 步的探索性仿真，表明数值精度本身是一个动力学设计变量。"
+      "highlight": "将硬件导向 SNN 建模为有界整数格点上的确定性映射，提出整数值状态 + 移位泄漏的轻量更新规则，通过 N=30–130、连接密度 0.1–0.9、位宽 4/8/16、T=1000 步的探索性仿真，表明数值精度本身是一个动力学设计变量。",
+      "domain": "quantization"
     },
     {
       "id": "2604.01076",
@@ -292,7 +301,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "先用连续进化搜索粗探权重级剪枝阈值收缩搜索空间，再在存活权重上做重要性感知采样的细粒度二进制进化优化，ResNet-56/110 在 CIFAR-10/100 上实现最高 51.9%/38.9% 参数削减且几乎无精度损失。"
+      "highlight": "先用连续进化搜索粗探权重级剪枝阈值收缩搜索空间，再在存活权重上做重要性感知采样的细粒度二进制进化优化，ResNet-56/110 在 CIFAR-10/100 上实现最高 51.9%/38.9% 参数削减且几乎无精度损失。",
+      "domain": "pruning"
     },
     {
       "id": "2604.01167",
@@ -327,7 +337,8 @@
         "novelty": 6,
         "reproducibility": 8
       },
-      "highlight": "AdaLoRA-QAT 将自适应秩分配的 LoRA 编码器适配与选择性混合精度 INT8 QAT 结合，在大规模 CXR 数据集上达到 95.6% Dice（持平全精度 SAM 解码器微调），可训练参数减少 16.6 倍、模型压缩 2.24 倍，Wilcoxon 检验确认量化不显著降低分割精度。"
+      "highlight": "AdaLoRA-QAT 将自适应秩分配的 LoRA 编码器适配与选择性混合精度 INT8 QAT 结合，在大规模 CXR 数据集上达到 95.6% Dice（持平全精度 SAM 解码器微调），可训练参数减少 16.6 倍、模型压缩 2.24 倍，Wilcoxon 检验确认量化不显著降低分割精度。",
+      "domain": "quantization"
     },
     {
       "id": "2604.01193",
@@ -358,7 +369,8 @@
         "novelty": 4,
         "reproducibility": 9
       },
-      "highlight": "仅从模型自身采样（特定温度与截断配置）再做标准 SFT，SSD 将 Qwen3-30B-Instruct 在 LiveCodeBench v6 的 pass@1 从 42.4% 提升到 55.3%，在 Qwen/Llama 4B–30B  instruct 与 thinking 变体上均泛化，并将增益机理归结为精度-探索冲突的上下文相关重塑。"
+      "highlight": "仅从模型自身采样（特定温度与截断配置）再做标准 SFT，SSD 将 Qwen3-30B-Instruct 在 LiveCodeBench v6 的 pass@1 从 42.4% 提升到 55.3%，在 Qwen/Llama 4B–30B  instruct 与 thinking 变体上均泛化，并将增益机理归结为精度-探索冲突的上下文相关重塑。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.01608",
@@ -386,7 +398,8 @@
         "novelty": 9,
         "reproducibility": 4
       },
-      "highlight": "作者发现技能蒸馏的收益由评估指标而非任务本身决定，提出先验预测器 Metric Freedom（F，用 Mantel 检验量化指标打分景观的拓扑刚性，与技能效用 r=-0.85, p<0.0001），并据此设计两阶段自适应蒸馏框架 AdaSkill，在匹配或超越原 MAS 的同时成本最高降 8 倍、延迟最高降 15 倍。"
+      "highlight": "作者发现技能蒸馏的收益由评估指标而非任务本身决定，提出先验预测器 Metric Freedom（F，用 Mantel 检验量化指标打分景观的拓扑刚性，与技能效用 r=-0.85, p<0.0001），并据此设计两阶段自适应蒸馏框架 AdaSkill，在匹配或超越原 MAS 的同时成本最高降 8 倍、延迟最高降 15 倍。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.01609",
@@ -417,7 +430,8 @@
         "novelty": 10,
         "reproducibility": 8
       },
-      "highlight": "Swift-SVD 对一批输入增量聚合输出激活协方差并只做一次特征分解，得到免训练、闭式、数值稳定的逐层最优低秩近似；配合基于有效秩与端到端层重要性的动态秩分配，在 6 个 LLM、8 个数据集上精度优于 SOTA，端到端压缩时间加速 3–70 倍。"
+      "highlight": "Swift-SVD 对一批输入增量聚合输出激活协方差并只做一次特征分解，得到免训练、闭式、数值稳定的逐层最优低秩近似；配合基于有效秩与端到端层重要性的动态秩分配，在 6 个 LLM、8 个数据集上精度优于 SOTA，端到端压缩时间加速 3–70 倍。",
+      "domain": "others"
     },
     {
       "id": "2604.01766",
@@ -445,7 +459,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "FSKD 以融合 RGBI 影像与 LiDAR 平面/垂直剖面度量的多模态教师（交叉注意力融合）指导 RGBI-only SegFormer 学生，在 384 km² 萨克森森林（20cm GSD）上训练，零样本 CHM 估计达 SOTA（MedAE 4.17m、R²=0.51、IoU 0.87），MAE 较 HRCHM/DAC 基线改善 29–46%。"
+      "highlight": "FSKD 以融合 RGBI 影像与 LiDAR 平面/垂直剖面度量的多模态教师（交叉注意力融合）指导 RGBI-only SegFormer 学生，在 384 km² 萨克森森林（20cm GSD）上训练，零样本 CHM 估计达 SOTA（MedAE 4.17m、R²=0.51、IoU 0.87），MAE 较 HRCHM/DAC 基线改善 29–46%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.02061",
@@ -475,7 +490,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "Diff-KD 将基于扩散的生成式修复融入师生蒸馏：渐进知识蒸馏（PKD）把局部特征恢复建模为条件扩散过程以从损坏观测中复原全局语义，自适应门控融合（AGF）按自车可靠性动态加权邻居，在 OPV2V 与 DAIR-V2X 的 7 类损坏下取得检测精度与校准鲁棒性 SOTA。"
+      "highlight": "Diff-KD 将基于扩散的生成式修复融入师生蒸馏：渐进知识蒸馏（PKD）把局部特征恢复建模为条件扩散过程以从损坏观测中复原全局语义，自适应门控融合（AGF）按自车可靠性动态加权邻居，在 OPV2V 与 DAIR-V2X 的 7 类损坏下取得检测精度与校准鲁棒性 SOTA。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.02119",
@@ -502,7 +518,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "AA-SVD 在压缩每层时既锚定原始输出又显式建模上游压缩带来的输入分布漂移，并对每个 Transformer 块做端到端精炼让各压缩层联合补偿累积误差，在各压缩率下一致超越 SVD 基线，且在激进压缩预算下优势愈发显著（竞品退化甚至崩溃）。"
+      "highlight": "AA-SVD 在压缩每层时既锚定原始输出又显式建模上游压缩带来的输入分布漂移，并对每个 Transformer 块做端到端精炼让各压缩层联合补偿累积误差，在各压缩率下一致超越 SVD 基线，且在激进压缩预算下优势愈发显著（竞品退化甚至崩溃）。",
+      "domain": "others"
     },
     {
       "id": "2604.02288",
@@ -535,7 +552,8 @@
         "novelty": 9,
         "reproducibility": 5
       },
-      "highlight": "SRPO 将正确样本路由给 GRPO 的奖励对齐强化、失败样本路由给 SDPO 的 logit 级定向修正，并用熵感知动态加权抑制高熵不可靠蒸馏目标，在 5 个基准、2 个模型规模上兼具 SDPO 的早期快速提升与 GRPO 的长程稳定，Qwen3-8B 五基准均值较 GRPO +3.4%、较 SDPO +6.3%，单步算力最高省 17.2%。"
+      "highlight": "SRPO 将正确样本路由给 GRPO 的奖励对齐强化、失败样本路由给 SDPO 的 logit 级定向修正，并用熵感知动态加权抑制高熵不可靠蒸馏目标，在 5 个基准、2 个模型规模上兼具 SDPO 的早期快速提升与 GRPO 的长程稳定，Qwen3-8B 五基准均值较 GRPO +3.4%、较 SDPO +6.3%，单步算力最高省 17.2%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.02509",
@@ -565,7 +583,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "DistillGaze 先用合成标注 + 无标注真实数据将 VFM 适配为领域专家教师，再经教师指导与自训练训练出仅 256K 参数的端侧学生，在 2000+ 参与者的众包数据集上中位注视误差较纯合成基线降低 58.6%。"
+      "highlight": "DistillGaze 先用合成标注 + 无标注真实数据将 VFM 适配为领域专家教师，再经教师指导与自训练训练出仅 256K 参数的端侧学生，在 2000+ 参与者的众包数据集上中位注视误差较纯合成基线降低 58.6%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.02556",
@@ -595,7 +614,8 @@
         "novelty": 4,
         "reproducibility": 9
       },
-      "highlight": "通过仅 64 字节/线程块的共享内存优化与简化索引逻辑，利用共享内存相对全局内存 12–15 倍的延迟优势，NF4 反量化 kernel 在 Gemma 27B、Qwen3 32B、Llama3.3 70B 上较 BitsAndBytes 提速 2.0–2.2 倍，端到端最高提速 1.54 倍。"
+      "highlight": "通过仅 64 字节/线程块的共享内存优化与简化索引逻辑，利用共享内存相对全局内存 12–15 倍的延迟优势，NF4 反量化 kernel 在 Gemma 27B、Qwen3 32B、Llama3.3 70B 上较 BitsAndBytes 提速 2.0–2.2 倍，端到端最高提速 1.54 倍。",
+      "domain": "quantization"
     },
     {
       "id": "2604.02570",
@@ -626,7 +646,8 @@
         "novelty": 5,
         "reproducibility": 8
       },
-      "highlight": "WSVD 引入更细粒度的 SVD 计算模式以真正实现延迟下降，并在分解过程中按权重元素相对重要性自适应加权，再结合权重与激活量化，在 VLM 上取得超过 1.8 倍解码加速且保持精度。"
+      "highlight": "WSVD 引入更细粒度的 SVD 计算模式以真正实现延迟下降，并在分解过程中按权重元素相对重要性自适应加权，再结合权重与激活量化，在 VLM 上取得超过 1.8 倍解码加速且保持精度。",
+      "domain": "quantization"
     },
     {
       "id": "2604.02621",
@@ -654,7 +675,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "以单 token 输出的 LLM 评判为奖励，在大量无标注数据上做 RL 微调实现免标签蒸馏；与可验证奖励结合时在数学推理基准上取得显著增益。"
+      "highlight": "以单 token 输出的 LLM 评判为奖励，在大量无标注数据上做 RL 微调实现免标签蒸馏；与可验证奖励结合时在数学推理基准上取得显著增益。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.02638",
@@ -681,7 +703,8 @@
         "novelty": 6,
         "reproducibility": 9
       },
-      "highlight": "AXELRAM 利用设计时固定码本（正交变换使坐标分布集中到 N(0,1/d)，最优量化器只依赖维度 d 与位宽 b）与“写入变换、读时查表”的非对称路径，使每查询乘法减少 102.4 倍；并发现符号模式敏感会在部分模型（Qwen2.5-3B）上造成灾难性 PPL 尖峰（Δ>50），用免梯度符号模式选择（200 候选、8 校准样本）零硬件成本消除。"
+      "highlight": "AXELRAM 利用设计时固定码本（正交变换使坐标分布集中到 N(0,1/d)，最优量化器只依赖维度 d 与位宽 b）与“写入变换、读时查表”的非对称路径，使每查询乘法减少 102.4 倍；并发现符号模式敏感会在部分模型（Qwen2.5-3B）上造成灾难性 PPL 尖峰（Δ>50），用免梯度符号模式选择（200 候选、8 校准样本）零硬件成本消除。",
+      "domain": "quantization"
     },
     {
       "id": "2604.02659",
@@ -709,7 +732,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "作者建立低秩近似谱误差与 softmax 预测偏差的控制关系，指出 RSVD 在奇异值谱缓衰减（现代预训练模型常见）时近似质量差，提出引入多次幂迭代的 RSI 改善谱分离，在 CNN 与 Transformer 上激进压缩下精度显著优于 RSVD、接近最优近似。"
+      "highlight": "作者建立低秩近似谱误差与 softmax 预测偏差的控制关系，指出 RSVD 在奇异值谱缓衰减（现代预训练模型常见）时近似质量差，提出引入多次幂迭代的 RSI 改善谱分离，在 CNN 与 Transformer 上激进压缩下精度显著优于 RSVD、接近最优近似。",
+      "domain": "others"
     },
     {
       "id": "2604.02697",
@@ -738,7 +762,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "LieTrunc-QNN 将参数化量子电路建模为 u(2^n) 的李子代数，建立“几何容量-高原原理”（有效维度增大导致梯度指数抑制），通过限制到结构化李子代数收缩可达流形，证明可训练性下界与多项式可训练区间，n=2–6 实验显示其保持稳定梯度与高有效维度（n=6 时满秩 rank=16）。"
+      "highlight": "LieTrunc-QNN 将参数化量子电路建模为 u(2^n) 的李子代数，建立“几何容量-高原原理”（有效维度增大导致梯度指数抑制），通过限制到结构化李子代数收缩可达流形，证明可训练性下界与多项式可训练区间，n=2–6 实验显示其保持稳定梯度与高有效维度（n=6 时满秩 rank=16）。",
+      "domain": "pruning"
     },
     {
       "id": "2604.02816",
@@ -771,7 +796,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "作者发现语义驱动的 token 剪枝会丢弃对量化数值稳定性至关重要的激活离群 token、在 W4A4 等低比特下加剧量化误差，提出结合组级量化模拟误差与离群强度的混合敏感度度量，仅保留 12.5% 视觉 token 时精度反超基线 2.24% 并优于不剪枝的纯量化方案。"
+      "highlight": "作者发现语义驱动的 token 剪枝会丢弃对量化数值稳定性至关重要的激活离群 token、在 W4A4 等低比特下加剧量化误差，提出结合组级量化模拟误差与离群强度的混合敏感度度量，仅保留 12.5% 视觉 token 时精度反超基线 2.24% 并优于不剪枝的纯量化方案。",
+      "domain": "quantization"
     },
     {
       "id": "2604.02819",
@@ -801,7 +827,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "Gen-SSD 让学生在教师采样过程中实时评估候选续写，只扩展可学习的推理路径并及早剪除无益分支，数学推理基准上较标准 KD 提升约 5.9 分、较其他基线最高提升 4.7 分，且产生更稳定可学的推理轨迹。"
+      "highlight": "Gen-SSD 让学生在教师采样过程中实时评估候选续写，只扩展可学习的推理路径并及早剪除无益分支，数学推理基准上较标准 KD 提升约 5.9 分、较其他基线最高提升 4.7 分，且产生更稳定可学的推理轨迹。",
+      "domain": "pruning"
     },
     {
       "id": "2604.02956",
@@ -830,7 +857,8 @@
         "novelty": 9,
         "reproducibility": 8
       },
-      "highlight": "CoMP 设计协同重要性度量（CIM）建模参数与 token 的相互干扰，并用多模式剪枝策略（MPS）按剪枝成本自适应切换剪枝模式、融合历史成本与随机探索，在高剪枝率下显著优于 SOTA。"
+      "highlight": "CoMP 设计协同重要性度量（CIM）建模参数与 token 的相互干扰，并用多模式剪枝策略（MPS）按剪枝成本自适应切换剪枝模式、融合历史成本与随机探索，在高剪枝率下显著优于 SOTA。",
+      "domain": "pruning"
     },
     {
       "id": "2604.03072",
@@ -858,7 +886,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "MI-Pruner 不依赖注意力分数，直接在视觉与文本特征交互前计算二者的互信息以度量跨模态依赖，方法简单、高效、非侵入（无需访问注意力图或修改架构），以极小延迟开销超越注意力型剪枝方法。"
+      "highlight": "MI-Pruner 不依赖注意力分数，直接在视觉与文本特征交互前计算二者的互信息以度量跨模态依赖，方法简单、高效、非侵入（无需访问注意力图或修改架构），以极小延迟开销超越注意力型剪枝方法。",
+      "domain": "pruning"
     },
     {
       "id": "2604.03110",
@@ -888,7 +917,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "MaKD 从更深层次模仿自注意力与前馈模块，捕捉不同方面的细粒度语言知识，在同存储参数预算下优于多个强基线，并对自回归架构模型同样有效。"
+      "highlight": "MaKD 从更深层次模仿自注意力与前馈模块，捕捉不同方面的细粒度语言知识，在同存储参数预算下优于多个强基线，并对自回归架构模型同样有效。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.03128",
@@ -920,7 +950,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "作者发现仅依赖特权教师（带参考答案的自教师）的学习信号会造成严重信息泄露与长训不稳，提出 RLSD：用自蒸馏提供 token 级策略差异以决定细粒度更新幅度，用 RLVR 环境反馈决定可靠更新方向，兼得两者优势，收敛上限更高、训练更稳定。"
+      "highlight": "作者发现仅依赖特权教师（带参考答案的自教师）的学习信号会造成严重信息泄露与长训不稳，提出 RLSD：用自蒸馏提供 token 级策略差异以决定细粒度更新幅度，用 RLVR 环境反馈决定可靠更新方向，兼得两者优势，收敛上限更高、训练更稳定。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.03154",
@@ -950,7 +981,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "DSBD 通过合成连续概率原型图构建可微结构基，在源域监督下保持语义判别性，并以置换不变拓扑矩匹配（几何一致）+ Dirichlet 能量校准（谱一致）双重对齐目标域，再训练新 GNN 于蒸馏结构基上解耦推理，一致超越 SOTA。"
+      "highlight": "DSBD 通过合成连续概率原型图构建可微结构基，在源域监督下保持语义判别性，并以置换不变拓扑矩匹配（几何一致）+ Dirichlet 能量校准（谱一致）双重对齐目标域，再训练新 GNN 于蒸馏结构基上解耦推理，一致超越 SOTA。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.03192",
@@ -981,7 +1013,8 @@
         "novelty": 4,
         "reproducibility": 5
       },
-      "highlight": "提出 token 级机制 EWAD（按教师间一致性在蒸馏监督与金标监督间路由）与几何约束 CPDP（容量比例的散度保持），在 2 个孟加拉语数据集、13 个 BanglaT5 消融与 8 个 Qwen2.5 实验上发现 logit 级 KD 最可靠；跨 10 语言伪标签 KD 在 3.2 倍压缩下保留 71–122% 教师 ROUGE-L。"
+      "highlight": "提出 token 级机制 EWAD（按教师间一致性在蒸馏监督与金标监督间路由）与几何约束 CPDP（容量比例的散度保持），在 2 个孟加拉语数据集、13 个 BanglaT5 消融与 8 个 Qwen2.5 实验上发现 logit 级 KD 最可靠；跨 10 语言伪标签 KD 在 3.2 倍压缩下保留 71–122% 教师 ROUGE-L。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.03258",
@@ -1010,7 +1043,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "SoLA 基于对现代 LLM FFN 激活模式的分析，识别并保留对推理贡献显著的少数成分、对其余多数做低秩分解，配自适应按成分秩分配；LLaMA-2-70B 30% 压缩率下困惑度从 SOTA 方法的 6.95 降至 4.44，下游精度提升 10%，全程免后训练。"
+      "highlight": "SoLA 基于对现代 LLM FFN 激活模式的分析，识别并保留对推理贡献显著的少数成分、对其余多数做低秩分解，配自适应按成分秩分配；LLaMA-2-70B 30% 压缩率下困惑度从 SOTA 方法的 6.95 降至 4.44，下游精度提升 10%，全程免后训练。",
+      "domain": "pruning"
     },
     {
       "id": "2604.03270",
@@ -1035,7 +1069,8 @@
         "novelty": 8,
         "reproducibility": 5
       },
-      "highlight": "利用因果掩码下“文本 F 单独前向的 KV cache 与 F+q 联合前向完全一致”的恒等性，Knowledge Packs 以零 token 成本注入知识；正确格式化下 Qwen3-8B 与 Llama-3.1-8B 700 问零发散、最高省 95% token，并发现缓存 value 上的对比 delta 可实现 RAG 做不到的行为引导（α≤0.7 双通道无干扰）。"
+      "highlight": "利用因果掩码下“文本 F 单独前向的 KV cache 与 F+q 联合前向完全一致”的恒等性，Knowledge Packs 以零 token 成本注入知识；正确格式化下 Qwen3-8B 与 Llama-3.1-8B 700 问零发散、最高省 95% token，并发现缓存 value 上的对比 delta 可实现 RAG 做不到的行为引导（α≤0.7 双通道无干扰）。",
+      "domain": "others"
     },
     {
       "id": "2604.03336",
@@ -1062,7 +1097,8 @@
         "novelty": 4,
         "reproducibility": 4
       },
-      "highlight": "针对 BitNet b1.58 类 {-1,0,+1} 三值 LLM 缺乏原生二进制 wire format 的问题，NativeTernary 以自分隔编码 + 一元游程层级标记实现精确 2.000 bit/权重——比 GGUF Q2_K 小 1.31 倍、比 int8 小 4.0 倍，边界/帧开销降低 460 倍（91B vs ~42KB），解码器仅 10 行无状态状态机。"
+      "highlight": "针对 BitNet b1.58 类 {-1,0,+1} 三值 LLM 缺乏原生二进制 wire format 的问题，NativeTernary 以自分隔编码 + 一元游程层级标记实现精确 2.000 bit/权重——比 GGUF Q2_K 小 1.31 倍、比 int8 小 4.0 倍，边界/帧开销降低 460 倍（91B vs ~42KB），解码器仅 10 行无状态状态机。",
+      "domain": "quantization"
     },
     {
       "id": "2604.03420",
@@ -1094,7 +1130,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "PTQ 鲁棒性可用“量化向量”刻画——从供体任务经简单权重空间算术提取后修补受体模型，3-bit 设置下无受体侧 QAT 即提升 post-PTQ Top-1 最多 60 个百分点；跨 4 个 ViT 规模、22 个分类任务验证，并严格证明量化向量良定义、不受重参数化对称性影响。"
+      "highlight": "PTQ 鲁棒性可用“量化向量”刻画——从供体任务经简单权重空间算术提取后修补受体模型，3-bit 设置下无受体侧 QAT 即提升 post-PTQ Top-1 最多 60 个百分点；跨 4 个 ViT 规模、22 个分类任务验证，并严格证明量化向量良定义、不受重参数化对称性影响。",
+      "domain": "quantization"
     },
     {
       "id": "2604.03803",
@@ -1121,7 +1158,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "低熵 patch（注意力集中）保留、高熵 patch（注意力弥散）剪除；将 Shannon 熵推广到 Rényi 熵以强调尖锐注意力峰并支持按任务/算力调节剪枝策略，在细粒度图像识别上降算力保精度，Rényi 调节进一步改善精度-计算折中。"
+      "highlight": "低熵 patch（注意力集中）保留、高熵 patch（注意力弥散）剪除；将 Shannon 熵推广到 Rényi 熵以强调尖锐注意力峰并支持按任务/算力调节剪枝策略，在细粒度图像识别上降算力保精度，Rényi 调节进一步改善精度-计算折中。",
+      "domain": "pruning"
     },
     {
       "id": "2604.03841",
@@ -1150,7 +1188,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "SSKD 三阶段框架（对比校准自训练域适配 → 统一多目标知识迁移 → 学生精炼去伪标签偏差），核心为实例感知逐像素对比损失；约 11 倍小的学生在 Cityscapes/ADE20K 上分别超零样本教师 +11.9/+8.6 AP、超适配教师 +3.4/+1.5 AP。"
+      "highlight": "SSKD 三阶段框架（对比校准自训练域适配 → 统一多目标知识迁移 → 学生精炼去伪标签偏差），核心为实例感知逐像素对比损失；约 11 倍小的学生在 Cityscapes/ADE20K 上分别超零样本教师 +11.9/+8.6 AP、超适配教师 +3.4/+1.5 AP。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.03873",
@@ -1182,7 +1221,8 @@
         "novelty": 8,
         "reproducibility": 5
       },
-      "highlight": "利用紧凑学生零样本回答几乎必然劣于教师目标这一能力差，SODA 用一次性静态学生输出快照与教师最优回答构造对比信号，无需动态 rollout 与对抗训练，16 项基准中 15 项匹配或超越 SOTA，训练快 10 倍、峰值显存省 27%。"
+      "highlight": "利用紧凑学生零样本回答几乎必然劣于教师目标这一能力差，SODA 用一次性静态学生输出快照与教师最优回答构造对比信号，无需动态 rollout 与对抗训练，16 项基准中 15 项匹配或超越 SOTA，训练快 10 倍、峰值显存省 27%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.03950",
@@ -1212,7 +1252,8 @@
         "novelty": 4,
         "reproducibility": 8
       },
-      "highlight": "DMA 在 tiling 级别组合两种低比特计算，用 Triton 实现精细融合 kernel，利用下一代 GPU（B200）的硬件并行与显存效率，在生成质量几乎无损的同时取得显著 kernel 融合加速。"
+      "highlight": "DMA 在 tiling 级别组合两种低比特计算，用 Triton 实现精细融合 kernel，利用下一代 GPU（B200）的硬件并行与显存效率，在生成质量几乎无损的同时取得显著 kernel 融合加速。",
+      "domain": "quantization"
     },
     {
       "id": "2604.03957",
@@ -1242,7 +1283,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "分析二值化零点失真并提出“微小值投影到零”的 BWTA 方案，配合平滑多阶段量化训练（层级退化策略 + 幅度对齐投影因子）与指令级并行位打包 CUDA kernel，BERT 上 GLUE 平均仅降 3.5%（5 任务 <2%），kernel 级较 FP16 提速 16–24 倍，LLM 端到端 prefill 216–330 tokens/s。"
+      "highlight": "分析二值化零点失真并提出“微小值投影到零”的 BWTA 方案，配合平滑多阶段量化训练（层级退化策略 + 幅度对齐投影因子）与指令级并行位打包 CUDA kernel，BERT 上 GLUE 平均仅降 3.5%（5 任务 <2%），kernel 级较 FP16 提速 16–24 倍，LLM 端到端 prefill 216–330 tokens/s。",
+      "domain": "quantization"
     },
     {
       "id": "2604.04013",
@@ -1273,7 +1315,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "作者指出激活在量化区间内非均匀分布使 Lloyd-Max 最优量化点偏离区间中点，提出 RUQuant：先用 Householder 反射与 Givens 旋转构造复合正交矩阵将分块激活映射到均匀采样目标向量，再用全局 Householder 反射微调最小化量化误差；13B LLM 约 1 分钟内达 W6A6 99.8%、W4A4 97% 全精度精度。"
+      "highlight": "作者指出激活在量化区间内非均匀分布使 Lloyd-Max 最优量化点偏离区间中点，提出 RUQuant：先用 Householder 反射与 Givens 旋转构造复合正交矩阵将分块激活映射到均匀采样目标向量，再用全局 Householder 反射微调最小化量化误差；13B LLM 约 1 分钟内达 W6A6 99.8%、W4A4 97% 全精度精度。",
+      "domain": "quantization"
     },
     {
       "id": "2604.04018",
@@ -1303,7 +1346,8 @@
         "novelty": 9,
         "reproducibility": 4
       },
-      "highlight": "1.x-Distill 分析 DMD 中被忽视的教师 CFG 角色并抑制模式坍塌，提出两阶段 Stagewise Focused Distillation（多样性保持分布匹配学粗结构 + 推理一致对抗蒸馏修细节）与 Distill-Cache 共训练轻量补偿模块，SD3-Medium/SD3.5-Large 上有效 NFE 1.67/1.74，较原始 28×2 NFE 采样最高提速 33 倍。"
+      "highlight": "1.x-Distill 分析 DMD 中被忽视的教师 CFG 角色并抑制模式坍塌，提出两阶段 Stagewise Focused Distillation（多样性保持分布匹配学粗结构 + 推理一致对抗蒸馏修细节）与 Distill-Cache 共训练轻量补偿模块，SD3-Medium/SD3.5-Large 上有效 NFE 1.67/1.74，较原始 28×2 NFE 采样最高提速 33 倍。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.04170",
@@ -1332,7 +1376,8 @@
         "novelty": 5,
         "reproducibility": 8
       },
-      "highlight": "通过多视图共享码本与跨视图重构学习离散一致表示（自然对齐视图、降低冗余），按各视图保持标签相关结构的能力加权融合，再以融合教师自蒸馏将全局知识回灌单视图分支，五个基准上超越先进方法。"
+      "highlight": "通过多视图共享码本与跨视图重构学习离散一致表示（自然对齐视图、降低冗余），按各视图保持标签相关结构的能力加权融合，再以融合教师自蒸馏将全局知识回灌单视图分支，五个基准上超越先进方法。",
+      "domain": "quantization"
     },
     {
       "id": "2604.04356",
@@ -1367,7 +1412,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "REAM 按路由器权重与激活对专家分组并合并权重（而非 REAP 式直接删除），在多个 MoE LLM 的选择题与生成基准上常优于基线、多数情况下与原模型相当，并揭示 MC/GEN 性能权衡取决于校准数据混合（通用/数学/代码）。"
+      "highlight": "REAM 按路由器权重与激活对专家分组并合并权重（而非 REAP 式直接删除），在多个 MoE LLM 的选择题与生成基准上常优于基线、多数情况下与原模型相当，并揭示 MC/GEN 性能权衡取决于校准数据混合（通用/数学/代码）。",
+      "domain": "quantization"
     },
     {
       "id": "2604.04461",
@@ -1398,7 +1444,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "DP-OPD 仅对学生施加 DP-SGD，冻结教师在学生生成轨迹上提供稠密 token 级目标（私有广义知识蒸馏），严格预算 ε=2.0 下困惑度优于 DP 微调与离策略 DP 蒸馏（Yelp 44.15→41.68；BigPatent 32.43→30.63），并把隐私压缩坍缩为单一 DP 学生训练循环。"
+      "highlight": "DP-OPD 仅对学生施加 DP-SGD，冻结教师在学生生成轨迹上提供稠密 token 级目标（私有广义知识蒸馏），严格预算 ε=2.0 下困惑度优于 DP 微调与离策略 DP 蒸馏（Yelp 44.15→41.68；BigPatent 32.43→30.63），并把隐私压缩坍缩为单一 DP 学生训练循环。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.04701",
@@ -1429,7 +1476,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "MUXQ 检测输入激活离群通道并引入小型辅助矩阵将离群幅度跨通道重分配，使激活离群也能以低精度 INT 量化且保持硬件友好计算结构；GPT-2 0.1B/0.3B/0.7B 上 perplexity 一致优于朴素量化，per-tensor INT8 权重+激活量化接近 FP16 精度。"
+      "highlight": "MUXQ 检测输入激活离群通道并引入小型辅助矩阵将离群幅度跨通道重分配，使激活离群也能以低精度 INT 量化且保持硬件友好计算结构；GPT-2 0.1B/0.3B/0.7B 上 perplexity 一致优于朴素量化，per-tensor INT8 权重+激活量化接近 FP16 精度。",
+      "domain": "quantization"
     },
     {
       "id": "2604.04722",
@@ -1461,7 +1509,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "用 token 频率、质量分数、注意力方差、熵不确定性等轻量特征训练紧凑控制器，在解码时从 {2/4/8-bit, FP16} 中按 token 重要性动态选择 KV 精度；SmolLM-360M HellaSwag 上较静态 KV 量化解码延迟降 17.75%、精度 +7.60 点，且距 FP16 仅 0.30 点。"
+      "highlight": "用 token 频率、质量分数、注意力方差、熵不确定性等轻量特征训练紧凑控制器，在解码时从 {2/4/8-bit, FP16} 中按 token 重要性动态选择 KV 精度；SmolLM-360M HellaSwag 上较静态 KV 量化解码延迟降 17.75%、精度 +7.60 点，且距 FP16 仅 0.30 点。",
+      "domain": "quantization"
     },
     {
       "id": "2604.04972",
@@ -1492,7 +1541,8 @@
         "novelty": 10,
         "reproducibility": 3
       },
-      "highlight": "RCP 用 LLM 内在注意力为基线的交叉注意力剪枝器预测累积掩码以保证跨层一致单调削减，再用延迟修复适配器（DRA）缓存被剪 token 精华并对答案生成 token 做 FiLM 调制，配一二阶统计匹配的修复损失；最高剪除 88.9% 视觉 token、降 85.7% FLOPs，平均精度仅小幅下降。"
+      "highlight": "RCP 用 LLM 内在注意力为基线的交叉注意力剪枝器预测累积掩码以保证跨层一致单调削减，再用延迟修复适配器（DRA）缓存被剪 token 精华并对答案生成 token 做 FiLM 调制，配一二阶统计匹配的修复损失；最高剪除 88.9% 视觉 token、降 85.7% FLOPs，平均精度仅小幅下降。",
+      "domain": "pruning"
     },
     {
       "id": "2604.04988",
@@ -1522,7 +1572,8 @@
         "novelty": 5,
         "reproducibility": 4
       },
-      "highlight": "在 CIFAR-10/100 + ResNet-18/WRN-28-10/VGG-16-BN 上系统比较发现：INT8 QAT 贡献主要运行时收益，剪枝主要作为容量预处理器提升后续低比特优化鲁棒性，KD 殿后恢复精度；有序流水线达 0.99–1.42ms CPU 延迟，顺序消融证实阶段次序显著影响效果。"
+      "highlight": "在 CIFAR-10/100 + ResNet-18/WRN-28-10/VGG-16-BN 上系统比较发现：INT8 QAT 贡献主要运行时收益，剪枝主要作为容量预处理器提升后续低比特优化鲁棒性，KD 殿后恢复精度；有序流水线达 0.99–1.42ms CPU 延迟，顺序消融证实阶段次序显著影响效果。",
+      "domain": "quantization"
     },
     {
       "id": "2604.05012",
@@ -1551,7 +1602,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "在不同请求速率、模型规模与稀疏水平下系统评估三种框架（张量卸载、token 驱逐启发式、投机调度）的延迟/吞吐/显存表现，给出各框架最优的条件画像与选型配置建议。"
+      "highlight": "在不同请求速率、模型规模与稀疏水平下系统评估三种框架（张量卸载、token 驱逐启发式、投机调度）的延迟/吞吐/显存表现，给出各框架最优的条件画像与选型配置建议。",
+      "domain": "others"
     },
     {
       "id": "2604.05171",
@@ -1581,7 +1633,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "NeuroQuant 用分解式多轴注意力学习跨模态共享潜在表示，双流 3D 编码器显式分离模态不变解剖结构与模态依赖外观，解剖编码经共享码本离散化并以 FiLM 与外观特征融合解码，联合 2D/3D 训练策略在两个多模态脑 MRI 数据集上取得超越现有 VAE 的重建保真度。"
+      "highlight": "NeuroQuant 用分解式多轴注意力学习跨模态共享潜在表示，双流 3D 编码器显式分离模态不变解剖结构与模态依赖外观，解剖编码经共享码本离散化并以 FiLM 与外观特征融合解码，联合 2D/3D 训练策略在两个多模态脑 MRI 数据集上取得超越现有 VAE 的重建保真度。",
+      "domain": "quantization"
     },
     {
       "id": "2604.05303",
@@ -1612,7 +1665,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "Jeffreys Flow 以对称 Jeffreys 散度蒸馏 Parallel Tempering 轨迹的经验采样数据，平衡局部目标寻找精度与全局模式覆盖，抑制 reverse-KL 导致的灾难性模式坍塌，并在高维非凸基准上展示可扩展性（修正 RE-SGLD 梯度偏差、加速路径积分蒙特卡洛精确重要性采样）。"
+      "highlight": "Jeffreys Flow 以对称 Jeffreys 散度蒸馏 Parallel Tempering 轨迹的经验采样数据，平衡局部目标寻找精度与全局模式覆盖，抑制 reverse-KL 导致的灾难性模式坍塌，并在高维非凸基准上展示可扩展性（修正 RE-SGLD 梯度偏差、加速路径积分蒙特卡洛精确重要性采样）。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.05366",
@@ -1640,7 +1694,8 @@
         "novelty": 5,
         "reproducibility": 8
       },
-      "highlight": "作者发现 3DGS 的 45 维球谐与 DUSt3R 的 1024 维 KV 向量所在维度范围内单次随机旋转即可把任意输入变为已知 Beta 分布坐标，使预计算数据无关 Lloyd-Max 量化达信息论下界 2.7 倍内近最优；3DGS 压缩 3.5 倍仅损 0.02dB PSNR，DUSt3R KV cache 压缩 7.9 倍保持 39.7dB pointmap 保真，全程秒级、免训练免码本免校准。"
+      "highlight": "作者发现 3DGS 的 45 维球谐与 DUSt3R 的 1024 维 KV 向量所在维度范围内单次随机旋转即可把任意输入变为已知 Beta 分布坐标，使预计算数据无关 Lloyd-Max 量化达信息论下界 2.7 倍内近最优；3DGS 压缩 3.5 倍仅损 0.02dB PSNR，DUSt3R KV cache 压缩 7.9 倍保持 39.7dB pointmap 保真，全程秒级、免训练免码本免校准。",
+      "domain": "quantization"
     },
     {
       "id": "2604.05524",
@@ -1667,7 +1722,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "作者将跨分辨率质量退化归因于分辨率依赖的参数行为（默认分辨率下良好的权重在空间尺度变化时有害），CR-Diff 先做块级剪枝消除有害权重，再放大剪枝后输出净化预测，在多种扩散骨干与未见分辨率上提升感知保真与语义连贯，同时基本保持默认分辨率性能，并支持按提示细化。"
+      "highlight": "作者将跨分辨率质量退化归因于分辨率依赖的参数行为（默认分辨率下良好的权重在空间尺度变化时有害），CR-Diff 先做块级剪枝消除有害权重，再放大剪枝后输出净化预测，在多种扩散骨干与未见分辨率上提升感知保真与语义连贯，同时基本保持默认分辨率性能，并支持按提示细化。",
+      "domain": "pruning"
     },
     {
       "id": "2604.05584",
@@ -1695,7 +1751,8 @@
         "novelty": 10,
         "reproducibility": 3
       },
-      "highlight": "PTA 先用元学习加权机制动态下调低质量模态的影响以净化知识源，再用扩散式蒸馏让净化共识形成的干净教师精炼各学生模态特征，最终得到蕴含跨模态知识的强单模态编码器；MM-Fi 与 XRF55 上达 SOTA 并显著提升缺失模态场景鲁棒性。"
+      "highlight": "PTA 先用元学习加权机制动态下调低质量模态的影响以净化知识源，再用扩散式蒸馏让净化共识形成的干净教师精炼各学生模态特征，最终得到蕴含跨模态知识的强单模态编码器；MM-Fi 与 XRF55 上达 SOTA 并显著提升缺失模态场景鲁棒性。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.05643",
@@ -1726,7 +1783,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "将线性 CoT 转为带显式依赖边的 DAG，区分无差别反思与重复反思两类病灶，分支级剪枝去弱贡献反思分支、深度级剪枝去后期重复验证，再经 SFT→DPO→GRPO（带长度惩罚）三阶段蒸馏，平均推理 token 减少 42% 且精度保持或提升。"
+      "highlight": "将线性 CoT 转为带显式依赖边的 DAG，区分无差别反思与重复反思两类病灶，分支级剪枝去弱贡献反思分支、深度级剪枝去后期重复验证，再经 SFT→DPO→GRPO（带长度惩罚）三阶段蒸馏，平均推理 token 减少 42% 且精度保持或提升。",
+      "domain": "pruning"
     },
     {
       "id": "2604.05656",
@@ -1759,7 +1817,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "SnapFlow 混合标准流匹配样本与一致性样本（目标为由模型自身边际速度预测计算的两步 Euler 捷径速度，避免条件速度导致的轨迹漂移），零初始化目标时间嵌入实现单架构双模式；π0.5(3B) 上 400 episodes 平均成功率 98.75%（教师 10 步为 97.75%），去噪加速 9.6 倍、端到端 274→83ms，单 GPU 训练约 12 小时。"
+      "highlight": "SnapFlow 混合标准流匹配样本与一致性样本（目标为由模型自身边际速度预测计算的两步 Euler 捷径速度，避免条件速度导致的轨迹漂移），零初始化目标时间嵌入实现单架构双模式；π0.5(3B) 上 400 episodes 平均成功率 98.75%（教师 10 步为 97.75%），去噪加速 9.6 倍、端到端 274→83ms，单 GPU 训练约 12 小时。",
+      "domain": "pruning"
     },
     {
       "id": "2604.05887",
@@ -1792,7 +1851,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "HybridKV 先用文本中心注意力把头分为静态/动态两类，再自顶向下层级分配 KV 预算，静态头用文本先验剪枝、动态头用分块检索；Qwen2.5-VL-7B 在 11 个多模态基准上 KV 显存最高降 7.9 倍、解码加速 1.52 倍，性能几乎不降甚至更高。"
+      "highlight": "HybridKV 先用文本中心注意力把头分为静态/动态两类，再自顶向下层级分配 KV 预算，静态头用文本先验剪枝、动态头用分块检索；Qwen2.5-VL-7B 在 11 个多模态基准上 KV 显存最高降 7.9 倍、解码加速 1.52 倍，性能几乎不降甚至更高。",
+      "domain": "pruning"
     },
     {
       "id": "2604.06390",
@@ -1823,7 +1883,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "MorphDistill 第一阶段用维度无关的多教师关系蒸馏 + 监督对比正则从 10 个基础模型保留样本间关系，第二阶段注意力 MIL 聚合 patch 特征预测 5 年生存；Alliance/CALGB 89803（n=424）AUC 0.68（较最强基线 +8% 相对提升），C-index 0.661、HR 2.52，外部 TCGA 队列（n=562）C-index 0.628。"
+      "highlight": "MorphDistill 第一阶段用维度无关的多教师关系蒸馏 + 监督对比正则从 10 个基础模型保留样本间关系，第二阶段注意力 MIL 聚合 patch 特征预测 5 年生存；Alliance/CALGB 89803（n=424）AUC 0.68（较最强基线 +8% 相对提升），C-index 0.661、HR 2.52，外部 TCGA 队列（n=562）C-index 0.628。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.06421",
@@ -1854,7 +1915,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "四阶段 CoT 蒸馏方案将阿拉伯语语言验证与地区伦理规范融入 372M token、80/20 阿英污染可控混合训练，Arabic-DeepSeek-R1 在 OALL 七基准平均分居首，多数基准超越 GPT-5.1——阿拉伯语 LLM 首次系统超越专有前沿。"
+      "highlight": "四阶段 CoT 蒸馏方案将阿拉伯语语言验证与地区伦理规范融入 372M token、80/20 阿英污染可控混合训练，Arabic-DeepSeek-R1 在 OALL 七基准平均分居首，多数基准超越 GPT-5.1——阿拉伯语 LLM 首次系统超越专有前沿。",
+      "domain": "pruning"
     },
     {
       "id": "2604.06515",
@@ -1887,7 +1949,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "以训练中路由器 l2 范数变化量为主信号分配专家位宽——变化小的专家捕捉低频但关键特征、其量化对性能更敏感需高精度；同时对神经元内方差大的专家也分配高精度避免注入大量化噪声；Switch Transformer 与 Mixtral 上精度优于现有方法且位宽分配开销可忽略。"
+      "highlight": "以训练中路由器 l2 范数变化量为主信号分配专家位宽——变化小的专家捕捉低频但关键特征、其量化对性能更敏感需高精度；同时对神经元内方差大的专家也分配高精度避免注入大量化噪声；Switch Transformer 与 Mixtral 上精度优于现有方法且位宽分配开销可忽略。",
+      "domain": "quantization"
     },
     {
       "id": "2604.06542",
@@ -1916,7 +1979,8 @@
         "novelty": 6,
         "reproducibility": 5
       },
-      "highlight": "GRAPE 打破逐层均匀分配预算的惯例，按跨层冗余动态分配专家剪枝预算，在 Mixtral-8x7B/8x22B、DeepSeek-MoE、Qwen-MoE、GPT-OSS 上同预算一致最优，较最强局部基线平均 +1.40%（最高 +2.45%）。"
+      "highlight": "GRAPE 打破逐层均匀分配预算的惯例，按跨层冗余动态分配专家剪枝预算，在 Mixtral-8x7B/8x22B、DeepSeek-MoE、Qwen-MoE、GPT-OSS 上同预算一致最优，较最强局部基线平均 +1.40%（最高 +2.45%）。",
+      "domain": "pruning"
     },
     {
       "id": "2604.06650",
@@ -1945,7 +2009,8 @@
         "novelty": 5,
         "reproducibility": 5
       },
-      "highlight": "从 21 个临床源任务蒸馏出单一共享元提示，以 <0.05% 可训练参数适配未见目标任务；10 个留出数据集 × 3 个骨干（LLaMA3.1-8B、Meditron3-8B、gpt-oss-20B）上较 LoRA 高 1.5–1.7%（参数量低数个数量级），较单任务提示调高 6.1–6.6%。"
+      "highlight": "从 21 个临床源任务蒸馏出单一共享元提示，以 <0.05% 可训练参数适配未见目标任务；10 个留出数据集 × 3 个骨干（LLaMA3.1-8B、Meditron3-8B、gpt-oss-20B）上较 LoRA 高 1.5–1.7%（参数量低数个数量级），较单任务提示调高 6.1–6.6%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.06691",
@@ -1975,7 +2040,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "KD-MARL 两阶段框架在无 critic 条件下依靠蒸馏优势信号与结构化策略监督，将动作级行为与协调结构同时迁移到异构学生（各 agent 容量按观测复杂度匹配），SMAC 与 MPE 上保留 >90% 专家性能且 FLOPs 最高降 28.6 倍。"
+      "highlight": "KD-MARL 两阶段框架在无 critic 条件下依靠蒸馏优势信号与结构化策略监督，将动作级行为与协调结构同时迁移到异构学生（各 agent 容量按观测复杂度匹配），SMAC 与 MPE 上保留 >90% 专家性能且 FLOPs 最高降 28.6 倍。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.06732",
@@ -2001,7 +2067,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "面向光子集成电路等只能做线性运算的硬件，提出 KD + Koopman 理论框架把预训练分类网络蒸馏为“简单非线性预处理 + 纯线性运算”的模型，MNIST/Fashion-MNIST 上精度与数值稳定性均优于传统最小二乘 Koopman 近似。"
+      "highlight": "面向光子集成电路等只能做线性运算的硬件，提出 KD + Koopman 理论框架把预训练分类网络蒸馏为“简单非线性预处理 + 纯线性运算”的模型，MNIST/Fashion-MNIST 上精度与数值稳定性均优于传统最小二乘 Koopman 近似。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.06798",
@@ -2033,7 +2100,8 @@
         "novelty": 9,
         "reproducibility": 9
       },
-      "highlight": "MoBiE 以联合 SVD 分解消除跨专家冗余、将全局损失梯度融入局部 Hessian 权重重要性估计、用输入零空间引导的误差约束缓解路由失真，且不引入额外存储；Qwen3-30B-A3B 上困惑度降 52.2%、平均零样本性能升 43.4%、推理加速超 2 倍且量化耗时更短。"
+      "highlight": "MoBiE 以联合 SVD 分解消除跨专家冗余、将全局损失梯度融入局部 Hessian 权重重要性估计、用输入零空间引导的误差约束缓解路由失真，且不引入额外存储；Qwen3-30B-A3B 上困惑度降 52.2%、平均零样本性能升 43.4%、推理加速超 2 倍且量化耗时更短。",
+      "domain": "quantization"
     },
     {
       "id": "2604.06836",
@@ -2063,7 +2131,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "STQuant 跨层、跨状态变量、跨训练步动态分配优化器状态精度，以可证近最优因子选择策略定位最有影响的精度适配因子，动态转移决策算法把搜索从指数降到线性；GPT-2 与 ViT 上优化器状态显存降 84.4%、平均位宽低至 5.1 bit，仅 O(N/K) 计算开销与 O(1) 额外空间。"
+      "highlight": "STQuant 跨层、跨状态变量、跨训练步动态分配优化器状态精度，以可证近最优因子选择策略定位最有影响的精度适配因子，动态转移决策算法把搜索从指数降到线性；GPT-2 与 ViT 上优化器状态显存降 84.4%、平均位宽低至 5.1 bit，仅 O(N/K) 计算开销与 O(1) 额外空间。",
+      "domain": "quantization"
     },
     {
       "id": "2604.06916",
@@ -2095,7 +2164,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "第一阶段用高吞吐 NVFP4 rollout 生成海量候选池并提取高对比度子集，第二阶段以 BF16 重新生成选中样本并仅在其上优化策略；在 SANA、FLUX.1、SD3.5-L 上保持 BF16 训练完整性的同时训练收敛最高加速 4.64 倍。"
+      "highlight": "第一阶段用高吞吐 NVFP4 rollout 生成海量候选池并提取高对比度子集，第二阶段以 BF16 重新生成选中样本并仅在其上优化策略；在 SANA、FLUX.1、SD3.5-L 上保持 BF16 训练完整性的同时训练收敛最高加速 4.64 倍。",
+      "domain": "quantization"
     },
     {
       "id": "2604.07329",
@@ -2126,7 +2196,8 @@
         "novelty": 9,
         "reproducibility": 8
       },
-      "highlight": "SUMI 显式建模真实采集退化（经放射科医生验证临床真实性），把 PCCT 变换为可信低质对应物并学习逆过程；在 1,046 例 PCCT 上训练潜在扩散模型（自编码器另用 405,379 例 EICT 预训练），外部数据上 SSIM 超 SOTA 15%、PSNR 超 20%，病灶检出敏感度最高 +15%、F1 最高 +10%。"
+      "highlight": "SUMI 显式建模真实采集退化（经放射科医生验证临床真实性），把 PCCT 变换为可信低质对应物并学习逆过程；在 1,046 例 PCCT 上训练潜在扩散模型（自编码器另用 405,379 例 EICT 预训练），外部数据上 SSIM 超 SOTA 15%、PSNR 超 20%，病灶检出敏感度最高 +15%、F1 最高 +10%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.07466",
@@ -2155,7 +2226,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "将教师输出分布转换为字节级概率、给学生挂载轻量字节级解码头，经共享字节接口蒸馏；在 1B–8B 模型的多种蒸馏任务上与显著更复杂的 CTD 方法相当甚至超越，同时指出全任务一致改进仍难实现、CTD 仍是开放问题。"
+      "highlight": "将教师输出分布转换为字节级概率、给学生挂载轻量字节级解码头，经共享字节接口蒸馏；在 1B–8B 模型的多种蒸馏任务上与显著更复杂的 CTD 方法相当甚至超越，同时指出全任务一致改进仍难实现、CTD 仍是开放问题。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.07674",
@@ -2186,7 +2258,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "Permutation-COMQ 仅用点积与舍入操作（无反向传播、无超参调优）完成 PTQ，并以权重感知重排在层内重组织权重以缓解通道级缩放引起的精度退化，在 2/4/8-bit 量化上均取得最佳结果。"
+      "highlight": "Permutation-COMQ 仅用点积与舍入操作（无反向传播、无超参调优）完成 PTQ，并以权重感知重排在层内重组织权重以缓解通道级缩放引起的精度退化，在 2/4/8-bit 量化上均取得最佳结果。",
+      "domain": "quantization"
     },
     {
       "id": "2604.07716",
@@ -2211,7 +2284,8 @@
         "novelty": 9,
         "reproducibility": 9
       },
-      "highlight": "FDM 将序列处理分为波组件（保相 Givens 旋转递归扫描，把长程模式压缩进定长复隐状态）与粒子组件（W+K=272 槽联想寻址缓存），实现严格 O(1) 解码显存（128–8192 提示长均 867MB，N=8192 时较 Transformer 省 4.9 倍）；Freeze-Scan 两阶段训练 WikiText-103 PPL 64.9（vs 全微调 487），MQAR 0.966 vs Transformer 0.606。"
+      "highlight": "FDM 将序列处理分为波组件（保相 Givens 旋转递归扫描，把长程模式压缩进定长复隐状态）与粒子组件（W+K=272 槽联想寻址缓存），实现严格 O(1) 解码显存（128–8192 提示长均 867MB，N=8192 时较 Transformer 省 4.9 倍）；Freeze-Scan 两阶段训练 WikiText-103 PPL 64.9（vs 全微调 487），MQAR 0.966 vs Transformer 0.606。",
+      "domain": "others"
     },
     {
       "id": "2604.07776",
@@ -2237,7 +2311,8 @@
         "novelty": 5,
         "reproducibility": 8
       },
-      "highlight": "Agent-as-Annotators 用模块化 LLM 组件替代 Task Designer/Annotator/Supervisor 角色，以 Gemini 3 Pro 为教师生成 3,000 条轨迹（六 web 环境）、2,322 条过质量筛选后纯 SFT 训练 9B 学生；WebArena 41.5% 超 Claude 3.5 Sonnet（36.0%）与 GPT-4o（31.5%），近乎翻倍此前最佳开源（21.7%），未见环境 WorkArena L1 +18.2 点。"
+      "highlight": "Agent-as-Annotators 用模块化 LLM 组件替代 Task Designer/Annotator/Supervisor 角色，以 Gemini 3 Pro 为教师生成 3,000 条轨迹（六 web 环境）、2,322 条过质量筛选后纯 SFT 训练 9B 学生；WebArena 41.5% 超 Claude 3.5 Sonnet（36.0%）与 GPT-4o（31.5%），近乎翻倍此前最佳开源（21.7%），未见环境 WorkArena L1 +18.2 点。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.07812",
@@ -2269,7 +2344,8 @@
         "novelty": 8,
         "reproducibility": 9
       },
-      "highlight": "揭示不同注意力头捕捉不同视觉语义、在视觉处理中角色不同，HAWK 以头重要性权重 + 文本引导注意力评估 token 显著性，免训练应用于多种 MLLM；Qwen2.5-VL 剪除 80.2% 视觉 token 后保留 96.0% 原精度，端到端延迟降至 74.4% 且显存下降。"
+      "highlight": "揭示不同注意力头捕捉不同视觉语义、在视觉处理中角色不同，HAWK 以头重要性权重 + 文本引导注意力评估 token 显著性，免训练应用于多种 MLLM；Qwen2.5-VL 剪除 80.2% 视觉 token 后保留 96.0% 原精度，端到端延迟降至 74.4% 且显存下降。",
+      "domain": "pruning"
     },
     {
       "id": "2604.07815",
@@ -2300,7 +2376,8 @@
         "novelty": 6,
         "reproducibility": 5
       },
-      "highlight": "AsyncTLS 以块级粗筛 + token 级精选平衡精度与效率，异步卸载引擎利用时间局部性将 KV 传输与计算重叠；Qwen3 与 GLM-4.7-Flash（GQA/MLA 架构）48k–96k 上下文上精度可比全注意力，算子加速 1.2–10.0 倍、端到端吞吐提升 1.3–4.7 倍。"
+      "highlight": "AsyncTLS 以块级粗筛 + token 级精选平衡精度与效率，异步卸载引擎利用时间局部性将 KV 传输与计算重叠；Qwen3 与 GLM-4.7-Flash（GQA/MLA 架构）48k–96k 上下文上精度可比全注意力，算子加速 1.2–10.0 倍、端到端吞吐提升 1.3–4.7 倍。",
+      "domain": "pruning"
     },
     {
       "id": "2604.07853",
@@ -2331,7 +2408,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "QaRL 让训练侧前向与量化 rollout 对齐以消除失配；并发现量化 rollout 在长回复中产生重复乱码 error token 的失效模式，提出 TBPO（信任带策略优化，负样本双裁剪序列级目标）约束更新于信任域；Qwen3-30B-A3B 数学任务上较量化 rollout 训练 +5.5 且更稳定，保留低比特吞吐收益。"
+      "highlight": "QaRL 让训练侧前向与量化 rollout 对齐以消除失配；并发现量化 rollout 在长回复中产生重复乱码 error token 的失效模式，提出 TBPO（信任带策略优化，负样本双裁剪序列级目标）约束更新于信任域；Qwen3-30B-A3B 数学任务上较量化 rollout 训练 +5.5 且更稳定，保留低比特吞吐收益。",
+      "domain": "quantization"
     },
     {
       "id": "2604.07894",
@@ -2358,7 +2436,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "TSUBASA 双管齐下：动态记忆进化改善记忆写入，上下文蒸馏目标的自学习改善记忆读取并内化用户经验；Qwen-3 4B–32B 长程基准上超越 Mem0 与 Memory-R1，打破质量-效率权衡实现 Pareto 改进（更少 token 预算下高保真个性化）。"
+      "highlight": "TSUBASA 双管齐下：动态记忆进化改善记忆写入，上下文蒸馏目标的自学习改善记忆读取并内化用户经验；Qwen-3 4B–32B 长程基准上超越 Mem0 与 Memory-R1，打破质量-效率权衡实现 Pareto 改进（更少 token 预算下高保真个性化）。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.07944",
@@ -2390,7 +2469,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "基于 GPT-Driver 框架比较两种学生训练范式：在线策略广义知识蒸馏（学生自生成输出 + 教师稠密 token 反馈）与教师 log-prob 作 per-token 奖励的策略梯度 RL 基线；nuScenes 上 GKD 显著优于 RL 基线，5 倍模型缩减下接近教师水平。"
+      "highlight": "基于 GPT-Driver 框架比较两种学生训练范式：在线策略广义知识蒸馏（学生自生成输出 + 教师稠密 token 反馈）与教师 log-prob 作 per-token 奖励的策略梯度 RL 基线；nuScenes 上 GKD 显著优于 RL 基线，5 倍模型缩减下接近教师水平。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.07953",
@@ -2421,7 +2501,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "对 Hydra 与 Quant 等领先混合分类器应用理论有界剪枝并提出可剪枝组合 Hydrant；4000+ 实验配置（20 MONSTER 数据集、13 方法、3 计算平台）表明剪枝可降能耗最高 80%，精度损失通常 <5%。"
+      "highlight": "对 Hydra 与 Quant 等领先混合分类器应用理论有界剪枝并提出可剪枝组合 Hydrant；4000+ 实验配置（20 MONSTER 数据集、13 方法、3 计算平台）表明剪枝可降能耗最高 80%，精度损失通常 <5%。",
+      "domain": "pruning"
     },
     {
       "id": "2604.07955",
@@ -2451,7 +2532,8 @@
         "novelty": 4,
         "reproducibility": 8
       },
-      "highlight": "指出现有方法层内校准时对齐的是“补偿权重输出”而非“原始全精度输出”这一次优目标，并揭示残差误差除来自前层输出差异外还来自本层补偿权重与原始权重之差（compensation-aware error）；继承 GPTAQ 神经元分解将其高效纳入权重更新，无缝增强 GPTQ 与 GPTAQ 并显著提升多模型多位宽表现。"
+      "highlight": "指出现有方法层内校准时对齐的是“补偿权重输出”而非“原始全精度输出”这一次优目标，并揭示残差误差除来自前层输出差异外还来自本层补偿权重与原始权重之差（compensation-aware error）；继承 GPTAQ 神经元分解将其高效纳入权重更新，无缝增强 GPTQ 与 GPTAQ 并显著提升多模型多位宽表现。",
+      "domain": "quantization"
     },
     {
       "id": "2604.08266",
@@ -2480,7 +2562,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "潜在特征蒸馏 + 真值轨迹监督使纯视觉学生 Orion-Lite 在严格闭环 Bench2Drive 上以 Driving Score 80.6 刷新 SOTA，甚至超越其海量 VLA 教师 ORION——证明纯视觉架构在高性能反应式规划上仍有未挖掘潜力。"
+      "highlight": "潜在特征蒸馏 + 真值轨迹监督使纯视觉学生 Orion-Lite 在严格闭环 Bench2Drive 上以 Driving Score 80.6 刷新 SOTA，甚至超越其海量 VLA 教师 ORION——证明纯视觉架构在高性能反应式规划上仍有未挖掘潜力。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.08426",
@@ -2512,7 +2595,8 @@
         "novelty": 5,
         "reproducibility": 4
       },
-      "highlight": "构建并发布高上下文密集的 Text2JSON 基准，发现现代 KV 卸载方案在 Llama 3 与 Qwen 3 上显著退化，归因于 key 的低秩投影与不可靠 landmark 两大因素，并提出更简单的替代策略在多模型多基准上显著提升精度。"
+      "highlight": "构建并发布高上下文密集的 Text2JSON 基准，发现现代 KV 卸载方案在 Llama 3 与 Qwen 3 上显著退化，归因于 key 的低秩投影与不可靠 landmark 两大因素，并提出更简单的替代策略在多模型多基准上显著提升精度。",
+      "domain": "others"
     },
     {
       "id": "2604.08532",
@@ -2543,7 +2627,8 @@
         "novelty": 6,
         "reproducibility": 8
       },
-      "highlight": "SelfEvo 以时空上下文不对称构造自蒸馏信号，无需外部标注即可持续改进预训练多视图重建模型；8 个基准上一致提升并跨基座（VGGT、π³）泛化，视频深度估计最高相对提升 36.5%、相机估计 20.1%，动态场景增益显著。"
+      "highlight": "SelfEvo 以时空上下文不对称构造自蒸馏信号，无需外部标注即可持续改进预训练多视图重建模型；8 个基准上一致提升并跨基座（VGGT、π³）泛化，视频深度估计最高相对提升 36.5%、相机估计 20.1%，动态场景增益显著。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.08558",
@@ -2573,7 +2658,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "WAND 将注意力拆为对条件 token 的持久全局注意力 + 对生成 token 的局部滑窗注意力，用课程学习渐进收紧窗口并以全注意力教师蒸馏恢复质量；三个现代 AR-TTS 模型上保持原质量，KV cache 显存最高降 66.2%，每步延迟近常数（长度不变）。"
+      "highlight": "WAND 将注意力拆为对条件 token 的持久全局注意力 + 对生成 token 的局部滑窗注意力，用课程学习渐进收紧窗口并以全注意力教师蒸馏恢复质量；三个现代 AR-TTS 模型上保持原质量，KV cache 显存最高降 66.2%，每步延迟近常数（长度不变）。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.08574",
@@ -2601,7 +2687,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "将 SOTA 基因组基础模型的 mRNA 表示蒸馏进小 200 倍的专用模型；嵌入级蒸馏优于 logit 方法（后者不稳定），mRNA-bench 上达同规模 SOTA 并与大模型竞争。"
+      "highlight": "将 SOTA 基因组基础模型的 mRNA 表示蒸馏进小 200 倍的专用模型；嵌入级蒸馏优于 logit 方法（后者不稳定），mRNA-bench 上达同规模 SOTA 并与大模型竞争。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.08847",
@@ -2630,7 +2717,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "针对深伪检测依赖极易被量化破坏的细粒度伪造痕迹这一特性，DeFakeQ 提出自适应双向压缩策略同时利用特征相关性并消除冗余，在 5 个基准数据集、11 个 SOTA 骨干检测器上一致超越量化与压缩基线，并完成移动设备真实场景实时部署。"
+      "highlight": "针对深伪检测依赖极易被量化破坏的细粒度伪造痕迹这一特性，DeFakeQ 提出自适应双向压缩策略同时利用特征相关性并消除冗余，在 5 个基准数据集、11 个 SOTA 骨干检测器上一致超越量化与压缩基线，并完成移动设备真实场景实时部署。",
+      "domain": "quantization"
     },
     {
       "id": "2604.08851",
@@ -2660,7 +2748,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "以英语人格数据集为主源，LLM 翻译增广 + PIGA 生成多语言训练数据，再用跨语言注意力蒸馏（CLAD）训练跨语言人格识别模型；Essays 平均 BA 0.6332（+0.0573）、Kaggle 0.7448（+0.0968），显著优于标准 BCE。"
+      "highlight": "以英语人格数据集为主源，LLM 翻译增广 + PIGA 生成多语言训练数据，再用跨语言注意力蒸馏（CLAD）训练跨语言人格识别模型；Essays 平均 BA 0.6332（+0.0573）、Kaggle 0.7448（+0.0968），显著优于标准 BCE。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.08880",
@@ -2689,7 +2778,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "发现 CoT 蒸馏常使性能低于学生蒸馏前基线（此前仅报告蒸馏后对比掩盖了该问题）；更现实的评估协议下，容量差距效应并不总在各任务/设置中主导，尤其在候选教师性能差异大时；给出师生配对的实用选择指南。"
+      "highlight": "发现 CoT 蒸馏常使性能低于学生蒸馏前基线（此前仅报告蒸馏后对比掩盖了该问题）；更现实的评估协议下，容量差距效应并不总在各任务/设置中主导，尤其在候选教师性能差异大时；给出师生配对的实用选择指南。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.08971",
@@ -2720,7 +2810,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "SentryGate 训练时经一阶显著性监督学习模态条件化重要性分数，部署时免微调剪注意力头与 FFN 通道；SentryAttend 以稀疏 GQA 替代稠密自注意力净降 15% GFLOPs；三应用三骨干上较最强剪枝基线平均 +12.7% 精度（模态缺失下最高 +18%），显存 -28.2%、延迟最高降 1.63 倍。"
+      "highlight": "SentryGate 训练时经一阶显著性监督学习模态条件化重要性分数，部署时免微调剪注意力头与 FFN 通道；SentryAttend 以稀疏 GQA 替代稠密自注意力净降 15% GFLOPs；三应用三骨干上较最强剪枝基线平均 +12.7% 精度（模态缺失下最高 +18%），显存 -28.2%、延迟最高降 1.63 倍。",
+      "domain": "pruning"
     },
     {
       "id": "2604.09076",
@@ -2748,7 +2839,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "利用配对空间转录组与 H&E 数据，将转录组衍生的组织龛结构蒸馏进仅组织学模型；蒸馏模型与转录组龛结构的一致性显著高于同图像特征训练的无监督形态学基线，并恢复有生物学意义的邻域组成（细胞类型分析确认）。"
+      "highlight": "利用配对空间转录组与 H&E 数据，将转录组衍生的组织龛结构蒸馏进仅组织学模型；蒸馏模型与转录组龛结构的一致性显著高于同图像特征训练的无监督形态学基线，并恢复有生物学意义的邻域组成（细胞类型分析确认）。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.09088",
@@ -2778,7 +2870,8 @@
         "novelty": 7,
         "reproducibility": 8
       },
-      "highlight": "MDPD 在微调时让冻结骨干与可学习侧网络互蒸馏增强性能，推理时丢弃侧网络不损精度；配合多层编码器的特征蒸馏设计，推理加速至少 25.2%，参数/显存与 METL 相当且精度优于 SOTA。"
+      "highlight": "MDPD 在微调时让冻结骨干与可学习侧网络互蒸馏增强性能，推理时丢弃侧网络不损精度；配合多层编码器的特征蒸馏设计，推理加速至少 25.2%，参数/显存与 METL 相当且精度优于 SOTA。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.09220",
@@ -2806,7 +2899,8 @@
         "novelty": 4,
         "reproducibility": 8
       },
-      "highlight": "提出 NeRV-T/NeRV-T+ 两种轻量配置，系统分析激进容量削减对重建质量、计算复杂度与解码吞吐的影响；以频率感知焦点监督的蒸馏提升低保真网络，并考察 PTQ 与 QAT 下微小模型的鲁棒性，显著降低参数量、计算与内存。"
+      "highlight": "提出 NeRV-T/NeRV-T+ 两种轻量配置，系统分析激进容量削减对重建质量、计算复杂度与解码吞吐的影响；以频率感知焦点监督的蒸馏提升低保真网络，并考察 PTQ 与 QAT 下微小模型的鲁棒性，显著降低参数量、计算与内存。",
+      "domain": "quantization"
     },
     {
       "id": "2604.09244",
@@ -2839,7 +2933,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "按 MVLA 数据应用流程做三阶段分析捕捉 2D/3D 模态显著性的差异与动态，对应设计三阶段 token 剪枝框架，实现最优 2D/3D token 选择；推理最高加速 2.55 倍、精度损失极小，开销仅 5.8%。"
+      "highlight": "按 MVLA 数据应用流程做三阶段分析捕捉 2D/3D 模态显著性的差异与动态，对应设计三阶段 token 剪枝框架，实现最优 2D/3D token 选择；推理最高加速 2.55 倍、精度损失极小，开销仅 5.8%。",
+      "domain": "pruning"
     },
     {
       "id": "2604.09629",
@@ -2865,7 +2960,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "以幽默心理学理论为基础，用六个认知人格（如荒诞主义者、愤世嫉俗者）的 Mixture-of-Thought 合成多样幽默数据微调 7B 学生；DPO 与 O-GRPO 对齐均未超越 SFT，但 HumorGen 显著优于更大指令模型并接近前沿专有系统——认知驱动数据策展比对齐算法或模型规模更关键。"
+      "highlight": "以幽默心理学理论为基础，用六个认知人格（如荒诞主义者、愤世嫉俗者）的 Mixture-of-Thought 合成多样幽默数据微调 7B 学生；DPO 与 O-GRPO 对齐均未超越 SFT，但 HumorGen 显著优于更大指令模型并接近前沿专有系统——认知驱动数据策展比对齐算法或模型规模更关键。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.09850",
@@ -2893,7 +2989,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "动态空间引导以时间步依赖的软门控调制前景/背景注意力实现空间均衡生成；多路径剪枝用内部注意力统计与外部语义对齐信号动态过滤候选轨迹，保留更符合物体-背景约束的路径；多扩散骨干上背景连贯性与组合对齐一致提升。"
+      "highlight": "动态空间引导以时间步依赖的软门控调制前景/背景注意力实现空间均衡生成；多路径剪枝用内部注意力统计与外部语义对齐信号动态过滤候选轨迹，保留更符合物体-背景约束的路径；多扩散骨干上背景连贯性与组合对齐一致提升。",
+      "domain": "pruning"
     },
     {
       "id": "2604.10091",
@@ -2923,7 +3020,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "SEPTQ 先全局静态计算权重元素重要性分数并确定量化位置，再依据重要位置掩码逐列量化并更新关联权重，将 PTQ 流程简化为两步；从百万到十亿参数模型、多位宽设置上显著超越强基线，低比特场景优势尤其明显。"
+      "highlight": "SEPTQ 先全局静态计算权重元素重要性分数并确定量化位置，再依据重要位置掩码逐列量化并更新关联权重，将 PTQ 流程简化为两步；从百万到十亿参数模型、多位宽设置上显著超越强基线，低比特场景优势尤其明显。",
+      "domain": "quantization"
     },
     {
       "id": "2604.10103",
@@ -2957,7 +3055,8 @@
         "novelty": 10,
         "reproducibility": 8
       },
-      "highlight": "轻量线性时间注意力以紧凑 KV 状态增量吸收滑窗驱逐的 token 保持长程依赖，块稀疏注意力削减局部冗余计算，配合“先稠密注意力少步蒸馏、再激活混合注意力蒸馏”的解耦策略；单张 H100 上实时无界 832×480 视频生成 29.5 FPS（未用量化/压缩），长短视频基准 SOTA。"
+      "highlight": "轻量线性时间注意力以紧凑 KV 状态增量吸收滑窗驱逐的 token 保持长程依赖，块稀疏注意力削减局部冗余计算，配合“先稠密注意力少步蒸馏、再激活混合注意力蒸馏”的解耦策略；单张 H100 上实时无界 832×480 视频生成 29.5 FPS（未用量化/压缩），长短视频基准 SOTA。",
+      "domain": "quantization"
     },
     {
       "id": "2604.10235",
@@ -2986,7 +3085,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "注意力-only 的 KV 压缩会系统性丢弃调用点、分支条件、赋值等代码理解关键结构 token；CodeComp 用 Joern 提取的 Code Property Graph 先验注入重要性估计，同等显存预算下一致优于注意力-only 基线，激进压缩下恢复大部分全上下文精度，补丁生成质量与未压缩持平，无缝接入 SGLang 管线。"
+      "highlight": "注意力-only 的 KV 压缩会系统性丢弃调用点、分支条件、赋值等代码理解关键结构 token；CodeComp 用 Joern 提取的 Code Property Graph 先验注入重要性估计，同等显存预算下一致优于注意力-only 基线，激进压缩下恢复大部分全上下文精度，补丁生成质量与未压缩持平，无缝接入 SGLang 管线。",
+      "domain": "others"
     },
     {
       "id": "2604.10496",
@@ -3018,7 +3118,8 @@
         "novelty": 6,
         "reproducibility": 8
       },
-      "highlight": "CodeQuant 用可学习旋转平滑激活离群、将权重离群吸收进微调聚类质心（极值拟合进质心降低量化误差且保持表达能力），配 GPU/CPU 专用 kernel 实现最高 4.15 倍加速，多样 MoE 模型上精度显著优于 SOTA 量化方法。"
+      "highlight": "CodeQuant 用可学习旋转平滑激活离群、将权重离群吸收进微调聚类质心（极值拟合进质心降低量化误差且保持表达能力），配 GPU/CPU 专用 kernel 实现最高 4.15 倍加速，多样 MoE 模型上精度显著优于 SOTA 量化方法。",
+      "domain": "quantization"
     },
     {
       "id": "2604.10539",
@@ -3047,7 +3148,8 @@
         "novelty": 6,
         "reproducibility": 9
       },
-      "highlight": "IceCache 将语义相关 token 组织进连续内存区域并以层级动态可更新数据结构管理，使 CPU-GPU 传输更高效、token 选择更准；LongBench 上 256-token 预算保持全 cache 99% 精度，且仅用 25% token 预算即达到其他卸载方法相当或更优的延迟与精度。"
+      "highlight": "IceCache 将语义相关 token 组织进连续内存区域并以层级动态可更新数据结构管理，使 CPU-GPU 传输更高效、token 选择更准；LongBench 上 256-token 预算保持全 cache 99% 精度，且仅用 25% token 预算即达到其他卸载方法相当或更优的延迟与精度。",
+      "domain": "others"
     },
     {
       "id": "2604.10674",
@@ -3080,7 +3182,8 @@
         "novelty": 7,
         "reproducibility": 8
       },
-      "highlight": "Skill-SD 将完成的轨迹总结为紧凑自然语言技能（成功行为/错误/工作流）作为仅条件化教师的动态特权信息，学生始终以普通任务提示行动并内化指导；重要性加权 reverse-KL 提供梯度正确的 token 级蒸馏，教师随学生动态同步；AppWorld/Sokoban 上较 vanilla GRPO +14.0%/+10.9%、较 vanilla OPD +42.1%/+40.6%。"
+      "highlight": "Skill-SD 将完成的轨迹总结为紧凑自然语言技能（成功行为/错误/工作流）作为仅条件化教师的动态特权信息，学生始终以普通任务提示行动并内化指导；重要性加权 reverse-KL 提供梯度正确的 token 级蒸馏，教师随学生动态同步；AppWorld/Sokoban 上较 vanilla GRPO +14.0%/+10.9%、较 vanilla OPD +42.1%/+40.6%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.10675",
@@ -3109,7 +3212,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "全自动管线用扩散 inpainting 在高质量真实背景上评估稠密摆放，构建 27M 摆放标注、27k 场景的 HiddenObjects 数据集；所学空间先验在下游编辑任务上超越稀疏人工标注（VLM-Judge 3.90 vs 2.68）与零样本 VLM，并蒸馏进轻量模型实现 23 万倍推理加速。"
+      "highlight": "全自动管线用扩散 inpainting 在高质量真实背景上评估稠密摆放，构建 27M 摆放标注、27k 场景的 HiddenObjects 数据集；所学空间先验在下游编辑任务上超越稀疏人工标注（VLM-Judge 3.90 vs 2.68）与零样本 VLM，并蒸馏进轻量模型实现 23 万倍推理加速。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.10677",
@@ -3140,7 +3244,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "2D 视觉域用双阶段传递蒸馏在共享潜空间对齐人与机器人表示，3D 几何域用具身无关对齐策略显式解耦具身与交互几何；人类数据可替代最高 80% 昂贵机器人演示，并成功迁移未见模式实现 OOD 泛化。"
+      "highlight": "2D 视觉域用双阶段传递蒸馏在共享潜空间对齐人与机器人表示，3D 几何域用具身无关对齐策略显式解耦具身与交互几何；人类数据可替代最高 80% 昂贵机器人演示，并成功迁移未见模式实现 OOD 泛化。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.10688",
@@ -3173,7 +3278,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "SCOPE 按正确性路由 rollout：错误轨迹用教师困惑度加权 KL 蒸馏（教师真有纠错能力处加权、不可靠指导降权），正确轨迹用学生困惑度加权 MLE（聚焦能力边界的低置信样本而非重复强化已掌握内容），组级归一化自适应校准；6 个推理基准 Avg@32 平均相对提升 11.42%、Pass@32 7.30%。"
+      "highlight": "SCOPE 按正确性路由 rollout：错误轨迹用教师困惑度加权 KL 蒸馏（教师真有纠错能力处加权、不可靠指导降权），正确轨迹用学生困惑度加权 MLE（聚焦能力边界的低置信样本而非重复强化已掌握内容），组级归一化自适应校准；6 个推理基准 Avg@32 平均相对提升 11.42%、Pass@32 7.30%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.10882",
@@ -3203,7 +3309,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "DIB-OD 将表示显式分解为正交的不变子空间与冗余子空间，用信息瓶颈师生蒸馏与 HSIC 隔离跨域稳定的不变核，并以自适应语义正则（按预测置信度门控标签影响）防止目标域适应污染该核；化学/生物/社交网络跨域显著优于 SOTA，抗遗忘强。"
+      "highlight": "DIB-OD 将表示显式分解为正交的不变子空间与冗余子空间，用信息瓶颈师生蒸馏与 HSIC 隔离跨域稳定的不变核，并以自适应语义正则（按预测置信度门控标签影响）防止目标域适应污染该核；化学/生物/社交网络跨域显著优于 SOTA，抗遗忘强。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.10912",
@@ -3233,7 +3340,8 @@
         "novelty": 7,
         "reproducibility": 8
       },
-      "highlight": "TAMISeg 结合临床语言提示与语义蒸馏作为辅助语义线索降低对像素级细标注的依赖：强扰动预训练的一致性编码器、冻结 DINOv3 教师监督的语义编码器蒸馏、跨尺度自适应解码器；Kvasir-SEG、MosMedData+、QaTa-COV19 上定性与定量均优于单模态与多模态方法。"
+      "highlight": "TAMISeg 结合临床语言提示与语义蒸馏作为辅助语义线索降低对像素级细标注的依赖：强扰动预训练的一致性编码器、冻结 DINOv3 教师监督的语义编码器蒸馏、跨尺度自适应解码器；Kvasir-SEG、MosMedData+、QaTa-COV19 上定性与定量均优于单模态与多模态方法。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.10923",
@@ -3264,7 +3372,8 @@
         "novelty": 6,
         "reproducibility": 8
       },
-      "highlight": "Mem²Evolve 以经验记忆指导资产（工具/专家 agent）动态创建、资产扩张又反哺新经验，实现共进化；6 类任务 8 基准上较标准 LLM +18.53%、较仅经验进化 +11.80%、较仅资产创建 +6.46%。"
+      "highlight": "Mem²Evolve 以经验记忆指导资产（工具/专家 agent）动态创建、资产扩张又反哺新经验，实现共进化；6 类任务 8 基准上较标准 LLM +18.53%、较仅经验进化 +11.80%、较仅资产创建 +6.46%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.10950",
@@ -3292,7 +3401,8 @@
         "novelty": 8,
         "reproducibility": 5
       },
-      "highlight": "DiTTA 在单次前向的短暂初始化阶段把 SAM2 的时序分割知识蒸馏进 ISS 模型，配轻量时序融合模块；仅用视频前 10% 片段自适应即可稳健泛化，VSPW 与 Cityscapes 上达到与全监督 VSS 相当甚至更优的性能，且推理时无需反复调用 SAM2。"
+      "highlight": "DiTTA 在单次前向的短暂初始化阶段把 SAM2 的时序分割知识蒸馏进 ISS 模型，配轻量时序融合模块；仅用视频前 10% 片段自适应即可稳健泛化，VSPW 与 Cityscapes 上达到与全监督 VSS 相当甚至更优的性能，且推理时无需反复调用 SAM2。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.11080",
@@ -3324,7 +3434,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "全局旋转可融合进权重但表达力受限（所有层共享一个旋转矩阵），逐层变换精度高但无法融合需在线计算；ReSpinQuant 以高效残差子空间旋转近似实现离线激活旋转融合与基匹配，W4A4/W3A3 上达 SOTA——超越全局旋转、逼近昂贵逐层方法且开销可忽略。"
+      "highlight": "全局旋转可融合进权重但表达力受限（所有层共享一个旋转矩阵），逐层变换精度高但无法融合需在线计算；ReSpinQuant 以高效残差子空间旋转近似实现离线激活旋转融合与基匹配，W4A4/W3A3 上达 SOTA——超越全局旋转、逼近昂贵逐层方法且开销可忽略。",
+      "domain": "quantization"
     },
     {
       "id": "2604.11112",
@@ -3354,7 +3465,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "QKD 用量子门控任务调制机制建模任务嵌入间关系依赖，动态捕捉样本-任务相关性，并按任务嵌入级相关权重从旧适配器向新适配器做任务交互蒸馏，桥接独立任务子空间表示差距，有效缓解遗忘并达 SOTA。"
+      "highlight": "QKD 用量子门控任务调制机制建模任务嵌入间关系依赖，动态捕捉样本-任务相关性，并按任务嵌入级相关权重从旧适配器向新适配器做任务交互蒸馏，桥接独立任务子空间表示差距，有效缓解遗忘并达 SOTA。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.11240",
@@ -3385,7 +3497,8 @@
         "novelty": 8,
         "reproducibility": 5
       },
-      "highlight": "DeSAP 引入解耦相似度捕捉视觉特征与文本 token 的细粒度跨模态相关性（显式任务引导），与视觉注意力显著性信号融合指导剪枝；LLaVA-1.5-7B 仅保留 11.1% 视觉 token 实现 10 倍 FLOPs 削减与 2.3 倍 prefill 加速，保留 98.1% 原性能。"
+      "highlight": "DeSAP 引入解耦相似度捕捉视觉特征与文本 token 的细粒度跨模态相关性（显式任务引导），与视觉注意力显著性信号融合指导剪枝；LLaVA-1.5-7B 仅保留 11.1% 视觉 token 实现 10 倍 FLOPs 削减与 2.3 倍 prefill 加速，保留 98.1% 原性能。",
+      "domain": "pruning"
     },
     {
       "id": "2604.11501",
@@ -3413,7 +3526,8 @@
         "novelty": 6,
         "reproducibility": 5
       },
-      "highlight": "5 个模型（124M–14B，MHA/GQA）等存储预算下量化一致优于降秩 4–364 PPL；LAMBADA 上 INT4 匹配 FP16（Mistral 7B +0.23 PPL）而同存储 rank-32 崩溃至 0.4% 准确率；理论分析表明投影损伤在 softmax Fisher 度量下超出量化损伤 3×2^(2b)/方向；K+V INT4 以 +0.18 PPL 实现 75% KV 削减。"
+      "highlight": "5 个模型（124M–14B，MHA/GQA）等存储预算下量化一致优于降秩 4–364 PPL；LAMBADA 上 INT4 匹配 FP16（Mistral 7B +0.23 PPL）而同存储 rank-32 崩溃至 0.4% 准确率；理论分析表明投影损伤在 softmax Fisher 度量下超出量化损伤 3×2^(2b)/方向；K+V INT4 以 +0.18 PPL 实现 75% KV 削减。",
+      "domain": "quantization"
     },
     {
       "id": "2604.11530",
@@ -3444,7 +3558,8 @@
         "novelty": 10,
         "reproducibility": 3
       },
-      "highlight": "注意力分数与 token 范数等局部启发式存在位置偏置与信息弥散；SVD-Prune 分解视觉 token 特征矩阵，用统计杠杆分数选出对全局主导方差贡献最大的 top-k token，在仅 32 甚至 16 个视觉 token 的极端预算下仍保持强性能。"
+      "highlight": "注意力分数与 token 范数等局部启发式存在位置偏置与信息弥散；SVD-Prune 分解视觉 token 特征矩阵，用统计杠杆分数选出对全局主导方差贡献最大的 top-k token，在仅 32 甚至 16 个视觉 token 的极端预算下仍保持强性能。",
+      "domain": "pruning"
     },
     {
       "id": "2604.11867",
@@ -3470,7 +3585,8 @@
         "novelty": 4,
         "reproducibility": 5
       },
-      "highlight": "作者先自我证伪内部草案的 +33.9 MCAS/+15.3 HumanEval 虚报增益（截断伪影与评分不一致所致），随后沿三条路径（SFT/DPO LoRA、推理期注意力头干预、免训练置信门控 sidecar）在 5 个小模型（0.6B–2.3B）上一致发现：无操作子能在不损害内容或不退化为风格模仿的前提下改变评判测得的行为倾向；分布内 AUC 0.683 的探针在新提示上坍缩到随机（0.516）。"
+      "highlight": "作者先自我证伪内部草案的 +33.9 MCAS/+15.3 HumanEval 虚报增益（截断伪影与评分不一致所致），随后沿三条路径（SFT/DPO LoRA、推理期注意力头干预、免训练置信门控 sidecar）在 5 个小模型（0.6B–2.3B）上一致发现：无操作子能在不损害内容或不退化为风格模仿的前提下改变评判测得的行为倾向；分布内 AUC 0.683 的探针在新提示上坍缩到随机（0.516）。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.12002",
@@ -3501,7 +3617,8 @@
         "novelty": 7,
         "reproducibility": 9
       },
-      "highlight": "SD-Zero 让同一模型先生成、再以生成结果与二元奖励为条件修订，然后将修订器的 token 分布 on-policy 蒸馏回生成器；Qwen3-4B 与 Olmo-3-7B 上较基座至少 +10%，同问题集同样本预算下优于 RFT、GRPO、SDFT，并展现 token 级自定位与迭代自进化两个新特性。"
+      "highlight": "SD-Zero 让同一模型先生成、再以生成结果与二元奖励为条件修订，然后将修订器的 token 分布 on-policy 蒸馏回生成器；Qwen3-4B 与 Olmo-3-7B 上较基座至少 +10%，同问题集同样本预算下优于 RFT、GRPO、SDFT，并展现 token 级自定位与迭代自进化两个新特性。",
+      "domain": "quantization"
     },
     {
       "id": "2604.12035",
@@ -3533,7 +3650,8 @@
         "novelty": 4,
         "reproducibility": 4
       },
-      "highlight": "选择规则比 token 预算更影响校准：POPE/LLaVA-1.5 上覆盖型剪枝（576→128 token）将 ECE 从 0.041 降至 0.016 且精度无统计显著损失，而注意力型选择保置信但精度恶化、激进预算下比随机剪枝更不准；保留集覆盖率与精度强相关（ρ=+0.89）、与过自信强负相关（ρ=-0.92）。"
+      "highlight": "选择规则比 token 预算更影响校准：POPE/LLaVA-1.5 上覆盖型剪枝（576→128 token）将 ECE 从 0.041 降至 0.016 且精度无统计显著损失，而注意力型选择保置信但精度恶化、激进预算下比随机剪枝更不准；保留集覆盖率与精度强相关（ρ=+0.89）、与过自信强负相关（ρ=-0.92）。",
+      "domain": "pruning"
     },
     {
       "id": "2604.12044",
@@ -3560,7 +3678,8 @@
         "novelty": 5,
         "reproducibility": 4
       },
-      "highlight": "VISTA 用验证信息 Marginal Coverage 分数识别“专家锚点”（早期在特定数据区域保持专长的模型状态），在线集成这些锚点的覆盖加权集成以正则化损失景观、保留已掌握知识；多基准上鲁棒性与泛化优于标准训练与先前自蒸馏，轻量实现降 90% 存储开销。"
+      "highlight": "VISTA 用验证信息 Marginal Coverage 分数识别“专家锚点”（早期在特定数据区域保持专长的模型状态），在线集成这些锚点的覆盖加权集成以正则化损失景观、保留已掌握知识；多基准上鲁棒性与泛化优于标准训练与先前自蒸馏，轻量实现降 90% 存储开销。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.12145",
@@ -3592,7 +3711,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "系统研究发现：融合位置对重建质量至关重要；对比学习不适合离散分词器；沿时间轴（以区别性特征概念引导）融合显著优于特征维融合；据此提出首个将视觉信息融入音频分词器且保持重建保真的方案，下游理解任务优于纯音频分词器与多模态融合基线。"
+      "highlight": "系统研究发现：融合位置对重建质量至关重要；对比学习不适合离散分词器；沿时间轴（以区别性特征概念引导）融合显著优于特征维融合；据此提出首个将视觉信息融入音频分词器且保持重建保真的方案，下游理解任务优于纯音频分词器与多模态融合基线。",
+      "domain": "quantization"
     },
     {
       "id": "2604.12163",
@@ -3622,7 +3742,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "17B 总参数、64 路由专家/层、Expert-Choice Routing，每前向仅激活约 2B 参数即在 GenEval/DPG-Bench/OneIG-Bench 上匹配或超越领先模型；解耦路由设计分离时间步感知分配与时间步条件计算，无任何后训练（无 RL/DPO/人类偏好调优），首个该质量级全开源 MoE 扩散模型。"
+      "highlight": "17B 总参数、64 路由专家/层、Expert-Choice Routing，每前向仅激活约 2B 参数即在 GenEval/DPG-Bench/OneIG-Bench 上匹配或超越领先模型；解耦路由设计分离时间步感知分配与时间步条件计算，无任何后训练（无 RL/DPO/人类偏好调优），首个该质量级全开源 MoE 扩散模型。",
+      "domain": "pruning"
     },
     {
       "id": "2604.12219",
@@ -3655,7 +3776,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "曲率感知动态预算按生成轨迹加速度弹性分配精确计算到关键语义转折；硬件对齐分组近似捕捉细粒度局部变化；随机选择偏置软化路由边界、消除选择振荡与局部计算饥饿——在领先视频扩散模型上大幅加速且时序流畅稳定。"
+      "highlight": "曲率感知动态预算按生成轨迹加速度弹性分配精确计算到关键语义转折；硬件对齐分组近似捕捉细粒度局部变化；随机选择偏置软化路由边界、消除选择振荡与局部计算饥饿——在领先视频扩散模型上大幅加速且时序流畅稳定。",
+      "domain": "pruning"
     },
     {
       "id": "2604.12358",
@@ -3686,7 +3808,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "系统分析发现相关视觉信息随解码进程漂移（RVIS）是剪枝在复杂视觉推理失效的主因；DSTP 作为免训练插件让现有剪枝方法在解码阶段对齐漂移的推理需求，显著缓解复杂推理退化并在各视觉理解基准一致增益。"
+      "highlight": "系统分析发现相关视觉信息随解码进程漂移（RVIS）是剪枝在复杂视觉推理失效的主因；DSTP 作为免训练插件让现有剪枝方法在解码阶段对齐漂移的推理需求，显著缓解复杂推理退化并在各视觉理解基准一致增益。",
+      "domain": "pruning"
     },
     {
       "id": "2604.12574",
@@ -3716,7 +3839,8 @@
         "novelty": 4,
         "reproducibility": 8
       },
-      "highlight": "BiomedCLIP 教师经跨模态注意力与 Centiloid 感知在线负采样三元对比学习 PET-MRI 对齐，MRI-only 学生做特征级 + logit 级蒸馏；4 种 MRI 对比度、2 个独立数据集上最佳 AUC 0.74（OASIS-3）/0.68（ADNI），推理免 PET 免临床变量且显著性分析聚焦解剖相关皮层区。"
+      "highlight": "BiomedCLIP 教师经跨模态注意力与 Centiloid 感知在线负采样三元对比学习 PET-MRI 对齐，MRI-only 学生做特征级 + logit 级蒸馏；4 种 MRI 对比度、2 个独立数据集上最佳 AUC 0.74（OASIS-3）/0.68（ADNI），推理免 PET 免临床变量且显著性分析聚焦解剖相关皮层区。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.12767",
@@ -3749,7 +3873,8 @@
         "novelty": 9,
         "reproducibility": 8
       },
-      "highlight": "CLASP 多层视觉特征融合构建类别特异表示，双阶段剪枝将预算分配给注意力显著的 pivot token（相关性）与冗余感知的补全 token（覆盖度），实现提示条件化的特征融合与预算分配；在广泛基准、剪枝率与架构上一致优于现有方法。"
+      "highlight": "CLASP 多层视觉特征融合构建类别特异表示，双阶段剪枝将预算分配给注意力显著的 pivot token（相关性）与冗余感知的补全 token（覆盖度），实现提示条件化的特征融合与预算分配；在广泛基准、剪枝率与架构上一致优于现有方法。",
+      "domain": "pruning"
     },
     {
       "id": "2604.12782",
@@ -3782,7 +3907,8 @@
         "novelty": 7,
         "reproducibility": 5
       },
-      "highlight": "发现激活离群在固定通道跨 token 持续聚集（token-persistent 结构聚类），OSC 离线组级识别离群通道、在线结构化子张量抽取将其聚合为紧凑稠密张量走 16-bit 分支 GEMM，其余走 4-bit GEMM；Qwen3-8B/30B 平均精度仅降 2.19/1.12 点，现代 AI 加速器上较 W8A8 GEMM 基线峰值加速 1.78 倍。"
+      "highlight": "发现激活离群在固定通道跨 token 持续聚集（token-persistent 结构聚类），OSC 离线组级识别离群通道、在线结构化子张量抽取将其聚合为紧凑稠密张量走 16-bit 分支 GEMM，其余走 4-bit GEMM；Qwen3-8B/30B 平均精度仅降 2.19/1.12 点，现代 AI 加速器上较 W8A8 GEMM 基线峰值加速 1.78 倍。",
+      "domain": "quantization"
     },
     {
       "id": "2604.13010",
@@ -3811,7 +3937,8 @@
         "novelty": 8,
         "reproducibility": 9
       },
-      "highlight": "发现朴素离线 OPD 失效的根因是被忽视的“教师一致性”条件（SFT 与 OPD 须用同一教师），违反会引入梯度偏差；Lightning OPD 在满足该条件下与标准 OPD 同最优（梯度偏差有界且带隐式正则），训练效率 4.0 倍；Qwen3-8B-Base 仅 30 GPU 小时达 AIME 2024 69.9%，单 8×H100 节点训 Qwen3-30B-A3B 至 71.0%。"
+      "highlight": "发现朴素离线 OPD 失效的根因是被忽视的“教师一致性”条件（SFT 与 OPD 须用同一教师），违反会引入梯度偏差；Lightning OPD 在满足该条件下与标准 OPD 同最优（梯度偏差有界且带隐式正则），训练效率 4.0 倍；Qwen3-8B-Base 仅 30 GPU 小时达 AIME 2024 69.9%，单 8×H100 节点训 Qwen3-30B-A3B 至 71.0%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.13016",
@@ -3844,7 +3971,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "OPD 成败由两条件支配：师生思维模式兼容；教师须提供学生训练中未见的真正新能力（弱到强反向蒸馏显示同族 1.5B 与 7B 教师在学生视角分布不可区分）；token 级机理为成功 OPD 在学生访问状态的高概率 token（集中 97–99% 概率质量的小共享集）上渐进对齐；提出 off-policy 冷启动与教师对齐提示选择两种修复策略，并指出稠密 token 奖励的“免费午餐”暗藏成本。"
+      "highlight": "OPD 成败由两条件支配：师生思维模式兼容；教师须提供学生训练中未见的真正新能力（弱到强反向蒸馏显示同族 1.5B 与 7B 教师在学生视角分布不可区分）；token 级机理为成功 OPD 在学生访问状态的高概率 token（集中 97–99% 概率质量的小共享集）上渐进对齐；提出 off-policy 冷启动与教师对齐提示选择两种修复策略，并指出稠密 token 奖励的“免费午餐”暗藏成本。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.13287",
@@ -3873,7 +4001,8 @@
         "novelty": 9,
         "reproducibility": 5
       },
-      "highlight": "指出单一目标（重构损失或二阶近似）在跨架构与稀疏度下均不稳定最优，MOONSHOT 作为包装器将任意单目标剪枝方法扩展为多目标联合优化，配高效逆 Hessian 计算保持十亿参数可扩展；Llama-3.2/2 上 2:4 稀疏 C4 困惑度最高降 32.6%、7 个零样本分类均值最高 +4.9 点，ViT 70% 稀疏 ImageNet +5 点、ResNet-50 90% 稀疏 +4 点。"
+      "highlight": "指出单一目标（重构损失或二阶近似）在跨架构与稀疏度下均不稳定最优，MOONSHOT 作为包装器将任意单目标剪枝方法扩展为多目标联合优化，配高效逆 Hessian 计算保持十亿参数可扩展；Llama-3.2/2 上 2:4 稀疏 C4 困惑度最高降 32.6%、7 个零样本分类均值最高 +4.9 点，ViT 70% 稀疏 ImageNet +5 点、ResNet-50 90% 稀疏 +4 点。",
+      "domain": "pruning"
     },
     {
       "id": "2604.13332",
@@ -3901,7 +4030,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "TabDistill 先用表格基础模型拟合数据，再以后验交互归因提取显著特征交互作为 GAM 项；跨任务一致提升 GAM 预测性能，桥接高容量模型与可解释加性框架。"
+      "highlight": "TabDistill 先用表格基础模型拟合数据，再以后验交互归因提取显著特征交互作为 GAM 项；跨任务一致提升 GAM 预测性能，桥接高容量模型与可解释加性框架。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.13440",
@@ -3932,7 +4062,8 @@
         "novelty": 7,
         "reproducibility": 8
       },
-      "highlight": "面向 SSM-Transformer 混合架构，用仅前向代理指标识别量化敏感组件；形式分析表明 KL 散度比 MSE/SQNR 更好刻画语言模型量化敏感度；Intel Lunar Lake 真机验证 KL 引导混合精度达近 FP16 困惑度且体积/吞吐与均匀 INT4 相当（CPU/GPU 双模式）。"
+      "highlight": "面向 SSM-Transformer 混合架构，用仅前向代理指标识别量化敏感组件；形式分析表明 KL 散度比 MSE/SQNR 更好刻画语言模型量化敏感度；Intel Lunar Lake 真机验证 KL 引导混合精度达近 FP16 困惑度且体积/吞吐与均匀 INT4 相当（CPU/GPU 双模式）。",
+      "domain": "quantization"
     },
     {
       "id": "2604.13806",
@@ -3960,7 +4091,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "Hessian 类 PTQ 在低比特下因小校准集曲率估计噪声而退化；DASH-Q 丢弃噪声敏感的跨通道依赖，仅保留对角曲率并迭代加权最小二乘，过滤采样噪声同时优先保留显著特征能量；5 个 LLM 上零样本精度平均 +7.01%、较最强基线最高 +14.01%，且极小校准数据下稳健。"
+      "highlight": "Hessian 类 PTQ 在低比特下因小校准集曲率估计噪声而退化；DASH-Q 丢弃噪声敏感的跨通道依赖，仅保留对角曲率并迭代加权最小二乘，过滤采样噪声同时优先保留显著特征能量；5 个 LLM 上零样本精度平均 +7.01%、较最强基线最高 +14.01%，且极小校准数据下稳健。",
+      "domain": "quantization"
     },
     {
       "id": "2604.13847",
@@ -3991,7 +4123,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "SparseBalance 通过负载感知的双向动态稀疏度调节与稀疏度感知批处理策略，协同解决长上下文训练中序列长度与稀疏敏感度双重异构导致的负载失衡与精度损失，实现 1.33× 端到端加速的同时在 LongBench 上还提升 0.46%。"
+      "highlight": "SparseBalance 通过负载感知的双向动态稀疏度调节与稀疏度感知批处理策略，协同解决长上下文训练中序列长度与稀疏敏感度双重异构导致的负载失衡与精度损失，实现 1.33× 端到端加速的同时在 LongBench 上还提升 0.46%。",
+      "domain": "pruning"
     },
     {
       "id": "2604.14054",
@@ -4022,7 +4155,8 @@
         "novelty": 9,
         "reproducibility": 8
       },
-      "highlight": "π-Play 发现自博弈出题过程天然产出的\"问题构造路径（QCP）\"是高质量的特权信息，让考官生成任务与 QCP、教师以 QCP 为特权上下文对学生做稠密自蒸馏，把稀疏奖励自博弈变成稠密反馈协同进化，数据零依赖下超越全监督搜索智能体，进化效率提升 2-3×。"
+      "highlight": "π-Play 发现自博弈出题过程天然产出的\"问题构造路径（QCP）\"是高质量的特权信息，让考官生成任务与 QCP、教师以 QCP 为特权上下文对学生做稠密自蒸馏，把稀疏奖励自博弈变成稠密反馈协同进化，数据零依赖下超越全监督搜索智能体，进化效率提升 2-3×。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.14084",
@@ -4053,7 +4187,8 @@
         "novelty": 9,
         "reproducibility": 9
       },
-      "highlight": "TIP 提出以学生熵与师生分歧为两轴的 token 重要性分类法，发现高熵 token 与\"低熵但高分歧\"的过度自信错误 token 承载主要学习信号——仅在 <20% 的 token 上训练即可匹配甚至超越全 token 蒸馏，峰值显存最多降低 47%。"
+      "highlight": "TIP 提出以学生熵与师生分歧为两轴的 token 重要性分类法，发现高熵 token 与\"低熵但高分歧\"的过度自信错误 token 承载主要学习信号——仅在 <20% 的 token 上训练即可匹配甚至超越全 token 蒸馏，峰值显存最多降低 47%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.14186",
@@ -4082,7 +4217,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "HArnESS 从零训练阿拉伯语-英语双语大型 SSL 教师模型，通过迭代自蒸馏逐步压缩出轻量学生，并对教师监督信号做 PCA 降维以适配浅而窄的学生容量，在 ASR、方言识别、语音情感识别上持续优于 HuBERT 与 XLS-R，大幅结构缩减后仍保持竞争力。"
+      "highlight": "HArnESS 从零训练阿拉伯语-英语双语大型 SSL 教师模型，通过迭代自蒸馏逐步压缩出轻量学生，并对教师监督信号做 PCA 降维以适配浅而窄的学生容量，在 ASR、方言识别、语音情感识别上持续优于 HuBERT 与 XLS-R，大幅结构缩减后仍保持竞争力。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.14339",
@@ -4113,7 +4249,8 @@
         "novelty": 6,
         "reproducibility": 5
       },
-      "highlight": "对同一训练序列扰动 RoPE 索引构造多个\"视图\"（相当于把上下文片段搬移到不同位置），用自蒸馏迫使模型跨视图输出一致预测，从而摆脱脆弱的位置依赖；Llama-3-8B 在 RULER-64K 提升最高 12.04%，Qwen-3-4B 在 RULER-256K 提升 2.71%，并改善训练窗口外的长度外推。"
+      "highlight": "对同一训练序列扰动 RoPE 索引构造多个\"视图\"（相当于把上下文片段搬移到不同位置），用自蒸馏迫使模型跨视图输出一致预测，从而摆脱脆弱的位置依赖；Llama-3-8B 在 RULER-64K 提升最高 12.04%，Qwen-3-4B 在 RULER-256K 提升 2.71%，并改善训练窗口外的长度外推。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.14487",
@@ -4140,7 +4277,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "作者证明在同等准确率下，不同量化方法、裁剪范围与位宽会产生迥异的发放分布（影响实际稀疏度、状态存储与事件处理负载），并提出用 Earth Mover's Distance（EMD）作为发放分布偏移的诊断指标；均匀量化即使保精度也会引起分布漂移，而 LQ-Net 式学习型量化能保持接近全精度基线的发放行为。"
+      "highlight": "作者证明在同等准确率下，不同量化方法、裁剪范围与位宽会产生迥异的发放分布（影响实际稀疏度、状态存储与事件处理负载），并提出用 Earth Mover's Distance（EMD）作为发放分布偏移的诊断指标；均匀量化即使保精度也会引起分布漂移，而 LQ-Net 式学习型量化能保持接近全精度基线的发放行为。",
+      "domain": "quantization"
     },
     {
       "id": "2604.14506",
@@ -4167,7 +4305,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "DAGMaN 为缺乏全局 [CLS] token 的 Swin Transformer 设计注意力引导掩码机制，在共蒸馏框架中选择性遮盖语义共现且有判别力的 patch 以减少信息泄漏、提高预训练难度，并首次引入噪声教师保持注意力头多样性，在肺结节分类、免疫治疗预后、肿瘤分割、器官无监督聚类上验证有效。"
+      "highlight": "DAGMaN 为缺乏全局 [CLS] token 的 Swin Transformer 设计注意力引导掩码机制，在共蒸馏框架中选择性遮盖语义共现且有判别力的 patch 以减少信息泄漏、提高预训练难度，并首次引入噪声教师保持注意力头多样性，在肺结节分类、免疫治疗预后、肿瘤分割、器官无监督聚类上验证有效。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.14572",
@@ -4197,7 +4336,8 @@
         "novelty": 4,
         "reproducibility": 8
       },
-      "highlight": "Corpus2Skill 把企业语料库离线蒸馏成层级技能目录，服务时让 LLM 智能体从鸟瞰视图逐层下钻到文档、走不通就回溯，在企业客服基准上答案质量与溯源性均优于单次稠密/混合/层级检索及 agentic RAG 基线；十子集泛化研究同时界定了其适用边界。"
+      "highlight": "Corpus2Skill 把企业语料库离线蒸馏成层级技能目录，服务时让 LLM 智能体从鸟瞰视图逐层下钻到文档、走不通就回溯，在企业客服基准上答案质量与溯源性均优于单次稠密/混合/层级检索及 agentic RAG 基线；十子集泛化研究同时界定了其适用边界。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.14580",
@@ -4231,7 +4371,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "TurboTalk 采用两阶段渐进蒸馏——先用分布匹配蒸馏（DMD）得到稳定的 4 步学生，再通过对抗蒸馏逐步压缩到 1 步，辅以渐进时间步采样与\"自我对比\"对抗目标稳定极端步数缩减，实现单步生成、推理提速 120 倍且保持高生成质量。"
+      "highlight": "TurboTalk 采用两阶段渐进蒸馏——先用分布匹配蒸馏（DMD）得到稳定的 4 步学生，再通过对抗蒸馏逐步压缩到 1 步，辅以渐进时间步采样与\"自我对比\"对抗目标稳定极端步数缩减，实现单步生成、推理提速 120 倍且保持高生成质量。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.14629",
@@ -4261,7 +4402,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "Switch-KD 将学生的视觉输出\"切换\"进教师的语言通路，在共享文本概率空间统一视觉-语言知识迁移，配合动态双向 logits 差异（DBiLD）损失自适应对齐信息区域；0.5B TinyLLaVA 从 3B 教师蒸馏后在 10 个多模态基准上平均提升 3.6 分，无需任何架构修改。"
+      "highlight": "Switch-KD 将学生的视觉输出\"切换\"进教师的语言通路，在共享文本概率空间统一视觉-语言知识迁移，配合动态双向 logits 差异（DBiLD）损失自适应对齐信息区域；0.5B TinyLLaVA 从 3B 教师蒸馏后在 10 个多模态基准上平均提升 3.6 分，无需任何架构修改。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.15016",
@@ -4291,7 +4433,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "DLink 用轻量路由器按输入动态聚合教师各层知识（频谱引导的层间路由），并对齐幅度谱与相位谱缓解压缩导致的频谱失真，学生以\"先投影后压缩\"方式内化路由后的教师知识；在四个 EEG 基准上显著提升紧凑学生，大幅削减参数、FLOPs 与纯 CPU 推理时延。"
+      "highlight": "DLink 用轻量路由器按输入动态聚合教师各层知识（频谱引导的层间路由），并对齐幅度谱与相位谱缓解压缩导致的频谱失真，学生以\"先投影后压缩\"方式内化路由后的教师知识；在四个 EEG 基准上显著提升紧凑学生，大幅削减参数、FLOPs 与纯 CPU 推理时延。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.15167",
@@ -4316,7 +4459,8 @@
         "novelty": 4,
         "reproducibility": 9
       },
-      "highlight": "对全部 154 个公开 Pythia-160m 训练检查点做免校准分组 INT4 探测，发现量化鲁棒性呈三相结构：共同改进期→约 7 万步亚稳平台期→爆炸性发散期（INT4 差距从 11% 飙升至 517% 而 FP32 困惑度几乎不动）；发散起点恰在 FP32 收敛时刻，INT8 全程免疫，所提 Oscillatory Lock-In 学习率调度可将 INT4 差距平均缩小 2.2 个百分点。"
+      "highlight": "对全部 154 个公开 Pythia-160m 训练检查点做免校准分组 INT4 探测，发现量化鲁棒性呈三相结构：共同改进期→约 7 万步亚稳平台期→爆炸性发散期（INT4 差距从 11% 飙升至 517% 而 FP32 困惑度几乎不动）；发散起点恰在 FP32 收敛时刻，INT8 全程免疫，所提 Oscillatory Lock-In 学习率调度可将 INT4 差距平均缩小 2.2 个百分点。",
+      "domain": "quantization"
     },
     {
       "id": "2604.15180",
@@ -4347,7 +4491,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "AdaSplash-2 通过在片上 SRAM 在线构建注意力分数直方图来初始化归一化常数 τ 的求解，把迭代次数降到通常 1–2 次，并结合跳过零块的稀疏感知 GPU 实现，使 α-entmax 注意力在中高稀疏度（>60%）下每步训练时间追平甚至超过 FlashAttention-2，长上下文任务上显著超越 softmax 基线。"
+      "highlight": "AdaSplash-2 通过在片上 SRAM 在线构建注意力分数直方图来初始化归一化常数 τ 的求解，把迭代次数降到通常 1–2 次，并结合跳过零块的稀疏感知 GPU 实现，使 α-entmax 注意力在中高稀疏度（>60%）下每步训练时间追平甚至超过 FlashAttention-2，长上下文任务上显著超越 softmax 基线。",
+      "domain": "pruning"
     },
     {
       "id": "2604.15188",
@@ -4380,7 +4525,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "VisPCO 将视觉 token 剪枝的层间配置（每层剪多少）建模为预算约束下的 Pareto 前沿学习问题，用连续松弛 + 直通估计器做梯度搜索、增广拉格朗日法求解，在 8 个视觉基准上逼近网格搜索得到的经验 Pareto 前沿，并揭示\"多步渐进剪枝\"匹配 VLM 层级压缩结构、优于单层剪枝。"
+      "highlight": "VisPCO 将视觉 token 剪枝的层间配置（每层剪多少）建模为预算约束下的 Pareto 前沿学习问题，用连续松弛 + 直通估计器做梯度搜索、增广拉格朗日法求解，在 8 个视觉基准上逼近网格搜索得到的经验 Pareto 前沿，并揭示\"多步渐进剪枝\"匹配 VLM 层级压缩结构、优于单层剪枝。",
+      "domain": "pruning"
     },
     {
       "id": "2604.15196",
@@ -4410,7 +4556,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "提出两级向量量化框架——底层将骨架帧关联到细粒度子动作、高层聚合子动作为动作级表征，并扩展为同时重建骨架与时间戳的时空方案，在 HuGaDB、LARa、BABEL 上刷新无监督骨架动作分割 SOTA 并降低段长偏置。"
+      "highlight": "提出两级向量量化框架——底层将骨架帧关联到细粒度子动作、高层聚合子动作为动作级表征，并扩展为同时重建骨架与时间戳的时空方案，在 HuGaDB、LARa、BABEL 上刷新无监督骨架动作分割 SOTA 并降低段长偏置。",
+      "domain": "quantization"
     },
     {
       "id": "2604.15356",
@@ -4439,7 +4586,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "指出 KV cache 中的 token 不是任意浮点数据而是模型所学语言的样本，提出两层序列压缩架构——概率前缀去重（基于概率语言 trie 的距离度量 d_T）与预测增量编码（只存 KV 向量相对模型自身预测的残差），理论上界达每 token 位置 3.3–4.3 bit，相对 TurboQuant 的理论压缩比约 91.4 万倍；即使在熵底之上 1000 倍的悲观开销下仍保持约 914 倍优势。"
+      "highlight": "指出 KV cache 中的 token 不是任意浮点数据而是模型所学语言的样本，提出两层序列压缩架构——概率前缀去重（基于概率语言 trie 的距离度量 d_T）与预测增量编码（只存 KV 向量相对模型自身预测的残差），理论上界达每 token 位置 3.3–4.3 bit，相对 TurboQuant 的理论压缩比约 91.4 万倍；即使在熵底之上 1000 倍的悲观开销下仍保持约 914 倍优势。",
+      "domain": "quantization"
     },
     {
       "id": "2604.15408",
@@ -4466,7 +4614,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "作者识别出短序列（≤197 token）下 host 侧 kernel 分发开销（约 50μs）超过实际 GPU 计算时间这一\"分发瓶颈\"，设计分发底价仅约 24μs 的轻量双向 Triton 注意力 kernel，配合完整 pack-attend-unpack 流水线，在 RTX 4000 Ada 上实现 1.88×（224² 输入）至 2.51×（384²）端到端吞吐提升，80% 剪枝率下 kernel 延迟比 FlashAttention-2 varlen 低 2.17×。"
+      "highlight": "作者识别出短序列（≤197 token）下 host 侧 kernel 分发开销（约 50μs）超过实际 GPU 计算时间这一\"分发瓶颈\"，设计分发底价仅约 24μs 的轻量双向 Triton 注意力 kernel，配合完整 pack-attend-unpack 流水线，在 RTX 4000 Ada 上实现 1.88×（224² 输入）至 2.51×（384²）端到端吞吐提升，80% 剪枝率下 kernel 延迟比 FlashAttention-2 varlen 低 2.17×。",
+      "domain": "pruning"
     },
     {
       "id": "2604.15409",
@@ -4493,7 +4642,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "KV cache 因 FP16 非结合性（累加顺序不同）产生确定性解码分歧：在 LLaMA-2-7B、Mistral-7B-v0.3、Gemma-2-2B 上 GSM8K 全采样策略（含贪心解码）出现 100% token 分歧率，且 8/9 条件下 cache-ON 精度更高说明分歧方向是系统性而非随机；FP32 对照将分歧降低八个数量级、翻转率归零，确认 FP16 非结合性为唯一因果驱动。"
+      "highlight": "KV cache 因 FP16 非结合性（累加顺序不同）产生确定性解码分歧：在 LLaMA-2-7B、Mistral-7B-v0.3、Gemma-2-2B 上 GSM8K 全采样策略（含贪心解码）出现 100% token 分歧率，且 8/9 条件下 cache-ON 精度更高说明分歧方向是系统性而非随机；FP32 对照将分歧降低八个数量级、翻转率归零，确认 FP16 非结合性为唯一因果驱动。",
+      "domain": "others"
     },
     {
       "id": "2604.15451",
@@ -4520,7 +4670,8 @@
         "novelty": 7,
         "reproducibility": 5
       },
-      "highlight": "冻结一个弱教师、仅在训练早期蒸馏、学生追平教师后立即关闭蒸馏，这一即插即用配方在 ImageNet/CIFAR 分类上按 epoch 计最高提速 4.8×，COCO 检测提速 1.7×，CIFAR-10 扩散生成按步数计提前 2.5× 达到目标 FID。"
+      "highlight": "冻结一个弱教师、仅在训练早期蒸馏、学生追平教师后立即关闭蒸馏，这一即插即用配方在 ImageNet/CIFAR 分类上按 epoch 计最高提速 4.8×，COCO 检测提速 1.7×，CIFAR-10 扩散生成按步数计提前 2.5× 达到目标 FID。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.15482",
@@ -4549,7 +4700,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "通过统一数据表示标准化训练语料缩小域差距，并引入双向 logit 蒸馏——同时从上下文引导的教师诱发期望行为、抑制学生的不良行为——将看似冲突的遗忘目标转化为合作优化，在多遗忘基准上达到 SOTA 的均衡表现。"
+      "highlight": "通过统一数据表示标准化训练语料缩小域差距，并引入双向 logit 蒸馏——同时从上下文引导的教师诱发期望行为、抑制学生的不良行为——将看似冲突的遗忘目标转化为合作优化，在多遗忘基准上达到 SOTA 的均衡表现。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.15780",
@@ -4579,7 +4731,8 @@
         "novelty": 4,
         "reproducibility": 4
       },
-      "highlight": "提出免梯度归因的剪枝框架，直接识别并移除与不安全行为关联的参数，同时保持模型效用；在 Mistral、LLaVA 等模型上大幅降低不安全生成并增强抗越狱鲁棒性，效用损失极小，且方法泛化到量化变体——从彩票假设视角提出\"不安全彩票/安全彩票\"概念。"
+      "highlight": "提出免梯度归因的剪枝框架，直接识别并移除与不安全行为关联的参数，同时保持模型效用；在 Mistral、LLaVA 等模型上大幅降低不安全生成并增强抗越狱鲁棒性，效用损失极小，且方法泛化到量化变体——从彩票假设视角提出\"不安全彩票/安全彩票\"概念。",
+      "domain": "quantization"
     },
     {
       "id": "2604.15794",
@@ -4613,7 +4766,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "提出以自蒸馏微调恢复受损模型能力的框架，并用 Centered Kernel Alignment（CKA）量化师生激活轨迹的对齐度，实验证明性能恢复与高维流形对齐强相关，支持\"自蒸馏通过将学生的高维流形对齐到教师所代表的最优结构来恢复能力\"的几何解释。"
+      "highlight": "提出以自蒸馏微调恢复受损模型能力的框架，并用 Centered Kernel Alignment（CKA）量化师生激活轨迹的对齐度，实验证明性能恢复与高维流形对齐强相关，支持\"自蒸馏通过将学生的高维流形对齐到教师所代表的最优结构来恢复能力\"的几何解释。",
+      "domain": "quantization"
     },
     {
       "id": "2604.15871",
@@ -4644,7 +4798,8 @@
         "novelty": 5,
         "reproducibility": 9
       },
-      "highlight": "UniEditBench 以统一协议覆盖重建式与指令式编辑方法，定义 9 类图像操作与 8 类视频操作的结构化分类（含计数、空间重排等组合难题），并将 235B 级 MLLM 评判器（Qwen3-VL-235B-A22B Instruct）蒸馏为 4B/8B 轻量评估器，在保持与人类判断高度一致的同时大幅降低评测成本。"
+      "highlight": "UniEditBench 以统一协议覆盖重建式与指令式编辑方法，定义 9 类图像操作与 8 类视频操作的结构化分类（含计数、空间重排等组合难题），并将 235B 级 MLLM 评判器（Qwen3-VL-235B-A22B Instruct）蒸馏为 4B/8B 轻量评估器，在保持与人类判断高度一致的同时大幅降低评测成本。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.16502",
@@ -4676,7 +4831,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "将逐层隐状态表示为点云、用单纯复形建模其沿深度的演化，借助 zigzag 持久同调量化层间拓扑一致性，自适应地保留表征转换关键层；在多种稀疏率下持续优于现有层剪枝方法。"
+      "highlight": "将逐层隐状态表示为点云、用单纯复形建模其沿深度的演化，借助 zigzag 持久同调量化层间拓扑一致性，自适应地保留表征转换关键层；在多种稀疏率下持续优于现有层剪枝方法。",
+      "domain": "pruning"
     },
     {
       "id": "2604.16806",
@@ -4701,7 +4857,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "提出通道注意力引导的跨模态蒸馏方法，将教师学到的视觉-语言高阶细粒度关联及通道间语义成分关联迁移给学生，相比传统像素级关系蒸馏既迁移知识又保留学生的独立学习能力、缓解学习偏置传递，推理零额外参数且学生性能显著提升。"
+      "highlight": "提出通道注意力引导的跨模态蒸馏方法，将教师学到的视觉-语言高阶细粒度关联及通道间语义成分关联迁移给学生，相比传统像素级关系蒸馏既迁移知识又保留学生的独立学习能力、缓解学习偏置传递，推理零额外参数且学生性能显著提升。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.16830",
@@ -4733,7 +4890,8 @@
         "novelty": 7,
         "reproducibility": 8
       },
-      "highlight": "发现 OPD 提升任务准确率的同时系统性地把模型推向严重过度自信；根源是教师监督在训练期的特权上下文下形成，与部署期信息不匹配；所提 CaOPD 用学生 rollout 估计经验置信度替代自报置信度作为蒸馏目标，在多模型多领域上取得 Pareto 最优校准且能力不降，并在 OOD 与持续学习下稳健。"
+      "highlight": "发现 OPD 提升任务准确率的同时系统性地把模型推向严重过度自信；根源是教师监督在训练期的特权上下文下形成，与部署期信息不匹配；所提 CaOPD 用学生 rollout 估计经验置信度替代自报置信度作为蒸馏目标，在多模型多领域上取得 Pareto 最优校准且能力不降，并在 OOD 与持续学习下稳健。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.16854",
@@ -4763,7 +4921,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "CATP 层级化识别并丢弃易区分的背景与目标内部 token，把计算聚焦于关键边界 token，并以双路径特征补偿机制把被剪 token 的上下文知识聚合回特征，显著降低计算复杂度的同时保持高检测精度。"
+      "highlight": "CATP 层级化识别并丢弃易区分的背景与目标内部 token，把计算聚焦于关键边界 token，并以双路径特征补偿机制把被剪 token 的上下文知识聚合回特征，显著降低计算复杂度的同时保持高检测精度。",
+      "domain": "pruning"
     },
     {
       "id": "2604.16855",
@@ -4794,7 +4953,8 @@
         "novelty": 6,
         "reproducibility": 8
       },
-      "highlight": "发现 COD 的任务特异性量化悬崖：重尾背景 token 主导共享激活范围、撑大量化步长，把微弱但有结构的边界线索压进零仓；COD-TDQ 用直接求和 token 组（DSTG）抑制跨 token 范围主导、用双约束范围投影（DCRP）约束步长-离散度比与零仓质量，免重训在四个 COD 基准、两个基线上 Sα 分数超出 SOTA 量化方法 0.12 以上。"
+      "highlight": "发现 COD 的任务特异性量化悬崖：重尾背景 token 主导共享激活范围、撑大量化步长，把微弱但有结构的边界线索压进零仓；COD-TDQ 用直接求和 token 组（DSTG）抑制跨 token 范围主导、用双约束范围投影（DCRP）约束步长-离散度比与零仓质量，免重训在四个 COD 基准、两个基线上 Sα 分数超出 SOTA 量化方法 0.12 以上。",
+      "domain": "quantization"
     },
     {
       "id": "2604.16878",
@@ -4823,7 +4983,8 @@
         "novelty": 10,
         "reproducibility": 3
       },
-      "highlight": "第一阶段利用 ICD 疾病层级量化患者相似度做本体感知对比预训练，第二阶段用跨模态蒸馏把临床文本笔记的互补信息迁入生理信号编码器，在 MIMIC 多个 ICU 预测任务上取得更高标签效率与\"仅生命体征推理\"方法中的 SOTA。"
+      "highlight": "第一阶段利用 ICD 疾病层级量化患者相似度做本体感知对比预训练，第二阶段用跨模态蒸馏把临床文本笔记的互补信息迁入生理信号编码器，在 MIMIC 多个 ICU 预测任务上取得更高标签效率与\"仅生命体征推理\"方法中的 SOTA。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.16940",
@@ -4857,7 +5018,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "发现大规模 SFT 数据会放大 delta 参数的幅值、奇异值与熵，加剧压缩误差；D-QRELO 先用粗粒度一比特量化捕获 delta 主导结构，再用补偿性残差低秩逼近恢复细粒度细节，在含 MoE 在内的多种 LLM、多领域大规模 SFT 场景下超越现有 delta 压缩方法，并总结出可指导生产的压缩设计原则。"
+      "highlight": "发现大规模 SFT 数据会放大 delta 参数的幅值、奇异值与熵，加剧压缩误差；D-QRELO 先用粗粒度一比特量化捕获 delta 主导结构，再用补偿性残差低秩逼近恢复细粒度细节，在含 MoE 在内的多种 LLM、多领域大规模 SFT 场景下超越现有 delta 压缩方法，并总结出可指导生产的压缩设计原则。",
+      "domain": "quantization"
     },
     {
       "id": "2604.17224",
@@ -4885,7 +5047,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "发现 Tiny Recursive Models 递归展开时激活占据近似线性的低维子空间，其主方向可用廉价幂迭代动态追踪；LASER 通过无矩阵子空间追踪 + 保真度触发重置维护演化低秩基，实现约 60% 激活显存节省且无统计显著的精度下降。"
+      "highlight": "发现 Tiny Recursive Models 递归展开时激活占据近似线性的低维子空间，其主方向可用廉价幂迭代动态追踪；LASER 通过无矩阵子空间追踪 + 保真度触发重置维护演化低秩基，实现约 60% 激活显存节省且无统计显著的精度下降。",
+      "domain": "others"
     },
     {
       "id": "2604.17320",
@@ -4918,7 +5081,8 @@
         "novelty": 5,
         "reproducibility": 8
       },
-      "highlight": "QUOTA（量化统一离线 token 分配器）把低比特校准信号转化为逐层 token 分配方案并物化为剪枝配方，token 重要性在部署态 W4A4 算子与量化 KV cache 下结合激活幅值、注意力线索与显式低比特风险信号评估；同等低比特设定下平均性能保持 95.65%（仅留 30% 视觉 token），优于分阶段组合的约 94.3%。"
+      "highlight": "QUOTA（量化统一离线 token 分配器）把低比特校准信号转化为逐层 token 分配方案并物化为剪枝配方，token 重要性在部署态 W4A4 算子与量化 KV cache 下结合激活幅值、注意力线索与显式低比特风险信号评估；同等低比特设定下平均性能保持 95.65%（仅留 30% 视觉 token），优于分阶段组合的约 94.3%。",
+      "domain": "quantization"
     },
     {
       "id": "2604.17695",
@@ -4950,7 +5114,8 @@
         "novelty": 7,
         "reproducibility": 5
       },
-      "highlight": "指出现有方法对所有层套用同一压缩配方的同质性浪费了精度——不同层对各压缩操作的敏感度差异巨大；MoE-nD 用混合专家框架在全局显存预算下为每层路由专属（驱逐率、K 比特、V 比特）元组，离线校准贪心求解；LongBench 4 任务（16k 输入）上 14× 压缩（1.9GB→136MB）追平未压缩基线，而同等或更小显存的其他压缩基线得分均低于 8/100。"
+      "highlight": "指出现有方法对所有层套用同一压缩配方的同质性浪费了精度——不同层对各压缩操作的敏感度差异巨大；MoE-nD 用混合专家框架在全局显存预算下为每层路由专属（驱逐率、K 比特、V 比特）元组，离线校准贪心求解；LongBench 4 任务（16k 输入）上 14× 压缩（1.9GB→136MB）追平未压缩基线，而同等或更小显存的其他压缩基线得分均低于 8/100。",
+      "domain": "quantization"
     },
     {
       "id": "2604.17753",
@@ -4983,7 +5148,8 @@
         "novelty": 7,
         "reproducibility": 8
       },
-      "highlight": "发现 LoRA 合并的关键瓶颈——存在合并后固有损害全局性能的\"负模块\"（特定 LoRA 层）；ENMP 用进化搜索在离散不可微的模块选择空间定位并排除这些模块，即插即用地提升现有合并算法性能，在语言与视觉领域均刷新 SOTA。"
+      "highlight": "发现 LoRA 合并的关键瓶颈——存在合并后固有损害全局性能的\"负模块\"（特定 LoRA 层）；ENMP 用进化搜索在离散不可微的模块选择空间定位并排除这些模块，即插即用地提升现有合并算法性能，在语言与视觉领域均刷新 SOTA。",
+      "domain": "pruning"
     },
     {
       "id": "2604.17789",
@@ -5016,7 +5182,8 @@
         "novelty": 7,
         "reproducibility": 9
       },
-      "highlight": "MXFP4 格式（32 元素共享 E8M0 尺度）下单个激活离群值会撑大整块共享尺度、压缩其余元素动态范围；DuQuant++ 将 DuQuant 的离群值感知细粒度旋转与微缩放组大小（B=32）对齐，由于每组有独立尺度，原 DuQuant 所需的双旋转与 zigzag 置换变得多余，单一旋转即可——在线旋转成本减半，LLaMA-3 家族 MXFP4 W4A4 下持续 SOTA。"
+      "highlight": "MXFP4 格式（32 元素共享 E8M0 尺度）下单个激活离群值会撑大整块共享尺度、压缩其余元素动态范围；DuQuant++ 将 DuQuant 的离群值感知细粒度旋转与微缩放组大小（B=32）对齐，由于每组有独立尺度，原 DuQuant 所需的双旋转与 zigzag 置换变得多余，单一旋转即可——在线旋转成本减半，LLaMA-3 家族 MXFP4 W4A4 下持续 SOTA。",
+      "domain": "quantization"
     },
     {
       "id": "2604.17865",
@@ -5043,7 +5210,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "LiteBounD 将多个视觉基础模型（SAM、OneFormer、Mask2Former、DINOv2）的互补语义与结构先验蒸馏进紧凑分割骨干：双路径蒸馏解耦语义与边界表征、频率感知对齐分别监督低频全局语义与高频边界细节、边界感知解码器融合多尺度特征；在可见（Kvasir-SEG、CVC-ClinicDB）与未见（ColonDB、CVC-300、ETIS）数据集上显著超越轻量基线、媲美 SOTA 且保持实时临床效率。"
+      "highlight": "LiteBounD 将多个视觉基础模型（SAM、OneFormer、Mask2Former、DINOv2）的互补语义与结构先验蒸馏进紧凑分割骨干：双路径蒸馏解耦语义与边界表征、频率感知对齐分别监督低频全局语义与高频边界细节、边界感知解码器融合多尺度特征；在可见（Kvasir-SEG、CVC-ClinicDB）与未见（ColonDB、CVC-300、ETIS）数据集上显著超越轻量基线、媲美 SOTA 且保持实时临床效率。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.18117",
@@ -5075,7 +5243,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "LoRaQ 挑战现有低秩补偿方法\"分支必须保持 W16A16 高精度\"与\"依赖重校准数据\"两条假设，提出简单免数据的量化误差补偿优化，使低秩分支本身也可量化，实现首个全 sub-16 比特流水线；同等显存开销下在 Pixart-Σ 与 SANA 上超越 SOTA 的原生实现，W4 主层 + W8A8/W6A6/W4A8 低秩分支的混合精度配置效果更优且与现代混合精度硬件兼容。"
+      "highlight": "LoRaQ 挑战现有低秩补偿方法\"分支必须保持 W16A16 高精度\"与\"依赖重校准数据\"两条假设，提出简单免数据的量化误差补偿优化，使低秩分支本身也可量化，实现首个全 sub-16 比特流水线；同等显存开销下在 Pixart-Σ 与 SANA 上超越 SOTA 的原生实现，W4 主层 + W8A8/W6A6/W4A8 低秩分支的混合精度配置效果更优且与现代混合精度硬件兼容。",
+      "domain": "quantization"
     },
     {
       "id": "2604.18260",
@@ -5107,7 +5276,8 @@
         "novelty": 10,
         "reproducibility": 4
       },
-      "highlight": "Geo3DPruner 先用几何感知全局注意力建模跨帧相关性，再两阶段剪枝——体素内阶段在每个体素内选代表性多视图特征、体素间阶段保持空间多样性选取全局分布的体素子集；剪掉 90% 视觉 token 仍保持 90% 以上原性能，显著优于文本引导与视觉引导的现有剪枝。"
+      "highlight": "Geo3DPruner 先用几何感知全局注意力建模跨帧相关性，再两阶段剪枝——体素内阶段在每个体素内选代表性多视图特征、体素间阶段保持空间多样性选取全局分布的体素子集；剪掉 90% 视觉 token 仍保持 90% 以上原性能，显著优于文本引导与视觉引导的现有剪枝。",
+      "domain": "pruning"
     },
     {
       "id": "2604.18348",
@@ -5140,7 +5310,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "AdaCluster 对 query 用保角度相似聚类实现高压缩、对 key 用保欧氏相似聚类并配合簇数分配、阈值自适应聚类与高效关键簇选择，在 CogVideoX-2B、HunyuanVideo、Wan-2.1 上免训练实现 1.67–4.31× 加速且质量损失可忽略。"
+      "highlight": "AdaCluster 对 query 用保角度相似聚类实现高压缩、对 key 用保欧氏相似聚类并配合簇数分配、阈值自适应聚类与高效关键簇选择，在 CogVideoX-2B、HunyuanVideo、Wan-2.1 上免训练实现 1.67–4.31× 加速且质量损失可忽略。",
+      "domain": "pruning"
     },
     {
       "id": "2604.18476",
@@ -5172,7 +5343,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "SemLT3D 用语言引导的 MoE 模块按语义亲和度把 3D query 路由到专精专家以解耦混淆类、专精尾部分布，并用语义投影蒸馏把 3D query 对齐到 CLIP 加持的 2D 语义，丰富欠表征类别的表示空间，同时改善类间模糊与类内多样性下的鲁棒性。"
+      "highlight": "SemLT3D 用语言引导的 MoE 模块按语义亲和度把 3D query 路由到专精专家以解耦混淆类、专精尾部分布，并用语义投影蒸馏把 3D query 对齐到 CLIP 加持的 2D 语义，丰富欠表征类别的表示空间，同时改善类间模糊与类内多样性下的鲁棒性。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.18831",
@@ -5202,7 +5374,8 @@
         "novelty": 4,
         "reproducibility": 4
       },
-      "highlight": "将每帧激光扫描与经视觉基础模型分割的相机图像配对，把 VFM 的 2D 分割知识蒸馏进 3D 点云分割模型；伪标签评测下达 56% mIoU、真实标签验证集约 36% mIoU，证明室内场景免人工标注跨模态蒸馏的可行性，并贡献一个小型手工标注室内 lidar 数据集。"
+      "highlight": "将每帧激光扫描与经视觉基础模型分割的相机图像配对，把 VFM 的 2D 分割知识蒸馏进 3D 点云分割模型；伪标签评测下达 56% mIoU、真实标签验证集约 36% mIoU，证明室内场景免人工标注跨模态蒸馏的可行性，并贡献一个小型手工标注室内 lidar 数据集。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.18963",
@@ -5231,7 +5404,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "揭示蒸馏三大陷阱（尾部噪声、离策略不稳定、师生差距）及其表现（过度自信幻觉、自我纠错崩溃、局部解码退化）；首次提出通过强化微调（RFT）事后校准教师的可蒸馏性——目标结合任务效用、KL 锚与跨 tokenizer 校准奖励；可蒸馏教师的学生超越 SFT/KD 基线，而不可蒸馏教师自身性能不变但使学生蒸馏后崩溃。"
+      "highlight": "揭示蒸馏三大陷阱（尾部噪声、离策略不稳定、师生差距）及其表现（过度自信幻觉、自我纠错崩溃、局部解码退化）；首次提出通过强化微调（RFT）事后校准教师的可蒸馏性——目标结合任务效用、KL 锚与跨 tokenizer 校准奖励；可蒸馏教师的学生超越 SFT/KD 基线，而不可蒸馏教师自身性能不变但使学生蒸馏后崩溃。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.19009",
@@ -5262,7 +5436,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "朴素融合 RL 与 DMD 依赖对原始生成样本打分，与蒸馏轨迹冲突且早期样本噪声大导致奖励不可靠；GDMD 把 DMD 梯度重新解释为隐式目标张量，让奖励模型直接评估蒸馏更新的质量，梯度级引导充当自适应加权使 RL 策略与蒸馏目标同步；4 步模型质量超越多步教师，GenEval 与人类偏好指标大幅超前 DMDR。"
+      "highlight": "朴素融合 RL 与 DMD 依赖对原始生成样本打分，与蒸馏轨迹冲突且早期样本噪声大导致奖励不可靠；GDMD 把 DMD 梯度重新解释为隐式目标张量，让奖励模型直接评估蒸馏更新的质量，梯度级引导充当自适应加权使 RL 策略与蒸馏目标同步；4 步模型质量超越多步教师，GenEval 与人类偏好指标大幅超前 DMDR。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.19145",
@@ -5296,7 +5471,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "ST-Prune 含运动感知时间剪枝（MTP，把运动剧烈度与时间新近性编码为多样性选择的软约束，优先动态轨迹与当前帧）与环视空间剪枝（RSP，利用环视相机几何惩罚双侧跨视图相似度、消除重复投影），90% token 削减下接近无损且部分指标反超全模型基线，推理速度与现有剪枝方法相当。"
+      "highlight": "ST-Prune 含运动感知时间剪枝（MTP，把运动剧烈度与时间新近性编码为多样性选择的软约束，优先动态轨迹与当前帧）与环视空间剪枝（RSP，利用环视相机几何惩罚双侧跨视图相似度、消除重复投影），90% token 削减下接近无损且部分指标反超全模型基线，推理速度与现有剪枝方法相当。",
+      "domain": "pruning"
     },
     {
       "id": "2604.19157",
@@ -5328,7 +5504,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "在分页显存布局、规则访存、融合注意力执行三大真实服务约束下甄别可行的 4 比特 KV 量化方案，核心发现：简单的\"token 级 INT4 + 块对角 Hadamard 旋转\"设计一致取得最佳精度-效率权衡，恢复朴素 INT4 损失的几乎全部精度，而向量量化、Hessian 感知量化等复杂方法在服务兼容性约束下仅带来边际收益；融合旋转-量化 kernel 零可测端到端开销，吞吐持平朴素 INT4。"
+      "highlight": "在分页显存布局、规则访存、融合注意力执行三大真实服务约束下甄别可行的 4 比特 KV 量化方案，核心发现：简单的\"token 级 INT4 + 块对角 Hadamard 旋转\"设计一致取得最佳精度-效率权衡，恢复朴素 INT4 损失的几乎全部精度，而向量量化、Hessian 感知量化等复杂方法在服务兼容性约束下仅带来边际收益；融合旋转-量化 kernel 零可测端到端开销，吞吐持平朴素 INT4。",
+      "domain": "quantization"
     },
     {
       "id": "2604.19167",
@@ -5362,7 +5539,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "LBLLM 三阶段推进——PTQ 初始化高质量量化模型；逐层蒸馏中同时量化二值权重、组级位图与量化参数（激活保持全精度）；最后训练可学习激活量化因子动态压至 4 比特——解耦权重与激活量化的训练干扰；仅用 0.016B token 单卡训练即在 W2A4 设定下超越 SOTA 二值化方法，且不引入额外高精度通道或旋转矩阵。"
+      "highlight": "LBLLM 三阶段推进——PTQ 初始化高质量量化模型；逐层蒸馏中同时量化二值权重、组级位图与量化参数（激活保持全精度）；最后训练可学习激活量化因子动态压至 4 比特——解耦权重与激活量化的训练干扰；仅用 0.016B token 单卡训练即在 W2A4 设定下超越 SOTA 二值化方法，且不引入额外高精度通道或旋转矩阵。",
+      "domain": "quantization"
     },
     {
       "id": "2604.19398",
@@ -5393,7 +5571,8 @@
         "novelty": 5,
         "reproducibility": 5
       },
-      "highlight": "GRASPrune 用投影直通估计器学习轻量门控分数，每步都强制满足全局预算的硬掩码（骨干权重冻结），联合剪 FFN 通道与 KV 头组；掩码固定后校准保留单元缩放因子并折叠进剪枝权重，得到零额外参数的稠密小模型；LLaMA-2-7B 剪 50% 参数 WikiText-2 困惑度 12.18，仅用 512 条无标注校准序列、4 epoch、单卡 A100、无全模型微调。"
+      "highlight": "GRASPrune 用投影直通估计器学习轻量门控分数，每步都强制满足全局预算的硬掩码（骨干权重冻结），联合剪 FFN 通道与 KV 头组；掩码固定后校准保留单元缩放因子并折叠进剪枝权重，得到零额外参数的稠密小模型；LLaMA-2-7B 剪 50% 参数 WikiText-2 困惑度 12.18，仅用 512 条无标注校准序列、4 epoch、单卡 A100、无全模型微调。",
+      "domain": "pruning"
     },
     {
       "id": "2604.20079",
@@ -5424,7 +5603,8 @@
         "novelty": 4,
         "reproducibility": 4
       },
-      "highlight": "在扩散式代码 LLM（CoDA）上应用 GPTQ 与改进的 Hessian 感知量化（HAWQ），标准化评测下 CoDA 在 2–4 比特低比特档的量化鲁棒性显著优于同规格自回归对照 Qwen3-1.7B，HumanEval 与 MBPP 精度退化更小；HAWQ 衍生的混合精度配置提供平滑的精度-时延-显存权衡。"
+      "highlight": "在扩散式代码 LLM（CoDA）上应用 GPTQ 与改进的 Hessian 感知量化（HAWQ），标准化评测下 CoDA 在 2–4 比特低比特档的量化鲁棒性显著优于同规格自回归对照 Qwen3-1.7B，HumanEval 与 MBPP 精度退化更小；HAWQ 衍生的混合精度配置提供平滑的精度-时延-显存权衡。",
+      "domain": "quantization"
     },
     {
       "id": "2604.20213",
@@ -5454,7 +5634,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "提出加权知识蒸馏损失抑制师生预测结构差异导致的不可靠蒸馏信号，配合基于非配对图像翻译的 SinusCycle-GAN 精修教师伪标签以提升边界精度；在 2511 例临床全景片上 Dice 达 96.35%、边界误差降低，超越 SOTA 分割模型。"
+      "highlight": "提出加权知识蒸馏损失抑制师生预测结构差异导致的不可靠蒸馏信号，配合基于非配对图像翻译的 SinusCycle-GAN 精修教师伪标签以提升边界精度；在 2511 例临床全景片上 Dice 达 96.35%、边界误差降低，超越 SOTA 分割模型。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.20333",
@@ -5480,7 +5661,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "通过量化与剪枝压缩实验发现明显不对称性——KLR Hopfield 网络对低精度量化鲁棒、对剪枝高度敏感；用\"稀疏函数、稠密表示\"原理解释：稀疏输入映射通过稠密双峰参数化实现，并给出基于自发对称破缺与 Walsh 分析的几何诠释，为硬件高效核联想记忆指明路线。"
+      "highlight": "通过量化与剪枝压缩实验发现明显不对称性——KLR Hopfield 网络对低精度量化鲁棒、对剪枝高度敏感；用\"稀疏函数、稠密表示\"原理解释：稀疏输入映射通过稠密双峰参数化实现，并给出基于自发对称破缺与 Walsh 分析的几何诠释，为硬件高效核联想记忆指明路线。",
+      "domain": "quantization"
     },
     {
       "id": "2604.20470",
@@ -5510,7 +5692,8 @@
         "novelty": 9,
         "reproducibility": 8
       },
-      "highlight": "DynamicRad 在径向局部性先验内做自适应选择，双模式（静态比率求速度 / 动态阈值求质量），并用离线贝叶斯优化在物理代理任务上优化注意力重建误差、配合轻量语义运动路由器把 prompt 嵌入映射到最优稀疏档位；HunyuanVideo 与 Wan2.1-14B 上 1.7–2.5× 推理加速、有效稀疏度超 80%，部分长序列设定动态模式追平甚至超过稠密基线，mask 感知 LoRA 进一步改善长程一致性。"
+      "highlight": "DynamicRad 在径向局部性先验内做自适应选择，双模式（静态比率求速度 / 动态阈值求质量），并用离线贝叶斯优化在物理代理任务上优化注意力重建误差、配合轻量语义运动路由器把 prompt 嵌入映射到最优稀疏档位；HunyuanVideo 与 Wan2.1-14B 上 1.7–2.5× 推理加速、有效稀疏度超 80%，部分长序列设定动态模式追平甚至超过稠密基线，mask 感知 LoRA 进一步改善长程一致性。",
+      "domain": "pruning"
     },
     {
       "id": "2604.20913",
@@ -5540,7 +5723,8 @@
         "novelty": 5,
         "reproducibility": 5
       },
-      "highlight": "FairyFuse 把每个 widely-linear 层的 8 个实值子 GEMV 融合为单条 AVX-512 循环，用掩码加减替代全部浮点乘法；roofline 分析表明 16× 权重压缩把显存带宽受限的 GEMV 推向计算区间，kernel 加速 29.6×；单颗 Intel Xeon 8558P 端到端 32.4 tok/s，超 llama.cpp Q4_K_M 1.24×，质量近无损（WikiText-2 PPL 5.52 vs FP16 5.47，下游精度 66.0%）。"
+      "highlight": "FairyFuse 把每个 widely-linear 层的 8 个实值子 GEMV 融合为单条 AVX-512 循环，用掩码加减替代全部浮点乘法；roofline 分析表明 16× 权重压缩把显存带宽受限的 GEMV 推向计算区间，kernel 加速 29.6×；单颗 Intel Xeon 8558P 端到端 32.4 tok/s，超 llama.cpp Q4_K_M 1.24×，质量近无损（WikiText-2 PPL 5.52 vs FP16 5.47，下游精度 66.0%）。",
+      "domain": "quantization"
     },
     {
       "id": "2604.20920",
@@ -5568,7 +5752,8 @@
         "novelty": 9,
         "reproducibility": 9
       },
-      "highlight": "持续预训练时在序列中插入 gist token 并用注意力掩码限制其可见上下文，教模型把每块重要信息压进 gist token；推理时只对 gist token 打分选 top-k 块\"展开\"回原始 token，避免对全 KV cache 打分的带宽成本；LongBench 上同压缩比一致优于压缩与推理时稀疏注意力基线，RAG 场景反超全注意力 5.7 分以上；层级化 H-SSA 达对数线性解码复杂度，32× 高压缩比下精度保持甚至提升。"
+      "highlight": "持续预训练时在序列中插入 gist token 并用注意力掩码限制其可见上下文，教模型把每块重要信息压进 gist token；推理时只对 gist token 打分选 top-k 块\"展开\"回原始 token，避免对全 KV cache 打分的带宽成本；LongBench 上同压缩比一致优于压缩与推理时稀疏注意力基线，RAG 场景反超全注意力 5.7 分以上；层级化 H-SSA 达对数线性解码复杂度，32× 高压缩比下精度保持甚至提升。",
+      "domain": "pruning"
     },
     {
       "id": "2604.20937",
@@ -5600,7 +5785,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "揭示现有免训练视觉 token 剪枝在 MCQA 上表现好但在幻觉评估等细粒度任务上性能崩塌，系统分析发现 sink token（语义无信息却吸引过量注意力的 token）是元凶——剪枝存活的 sink token 扭曲视觉证据；SToP 用 sink 分数量化各 token 的 sink 倾向并叠加到现有空间/时间剪枝方法上抑制之，在 VisionZip、FastVid、Holitom 上即插即用，剪至 90% 仍显著提升细粒度表现。"
+      "highlight": "揭示现有免训练视觉 token 剪枝在 MCQA 上表现好但在幻觉评估等细粒度任务上性能崩塌，系统分析发现 sink token（语义无信息却吸引过量注意力的 token）是元凶——剪枝存活的 sink token 扭曲视觉证据；SToP 用 sink 分数量化各 token 的 sink 倾向并叠加到现有空间/时间剪枝方法上抑制之，在 VisionZip、FastVid、Holitom 上即插即用，剪至 90% 仍显著提升细粒度表现。",
+      "domain": "pruning"
     },
     {
       "id": "2604.21231",
@@ -5631,7 +5817,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "SparKV 对每个 KV chunk 建模成本并决策\"云端流式传输还是本地重算\"，两路径重叠执行降时延；运行时根据无线连接与边缘资源波动在线修正离线调度；跨数据集、模型与边缘设备实测 TTFT 降低 1.3–5.1×、每请求能耗降低 1.5–3.3×，响应质量损失可忽略。"
+      "highlight": "SparKV 对每个 KV chunk 建模成本并决策\"云端流式传输还是本地重算\"，两路径重叠执行降时延；运行时根据无线连接与边缘资源波动在线修正离线调度；跨数据集、模型与边缘设备实测 TTFT 降低 1.3–5.1×、每请求能耗降低 1.5–3.3×，响应质量损失可忽略。",
+      "domain": "others"
     },
     {
       "id": "2604.21335",
@@ -5659,7 +5846,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "在 token 级削减之后，把每个保留 token 的 value 向量分组、只保留选定组（query/key 不动），为 KV 压缩增加 token 内部的细粒度控制轴；匹配 KV 预算下与 Quest（LLaMA-2-7B、Qwen2.5-7B）及 FastV/VisionZip（LLaVA、Qwen-VL）组合均提升性能，预算越小增益越大。"
+      "highlight": "在 token 级削减之后，把每个保留 token 的 value 向量分组、只保留选定组（query/key 不动），为 KV 压缩增加 token 内部的细粒度控制轴；匹配 KV 预算下与 Quest（LLaMA-2-7B、Qwen2.5-7B）及 FastV/VisionZip（LLaVA、Qwen-VL）组合均提升性能，预算越小增益越大。",
+      "domain": "quantization"
     },
     {
       "id": "2604.21536",
@@ -5691,7 +5879,8 @@
         "novelty": 6,
         "reproducibility": 3
       },
-      "highlight": "利用预训练 LLM 生成的文本用户画像，通过知识蒸馏将其语义注入序列推荐器，保持传统序列模型的推理效率，无需架构修改也无需 LLM 微调。"
+      "highlight": "利用预训练 LLM 生成的文本用户画像，通过知识蒸馏将其语义注入序列推荐器，保持传统序列模型的推理效率，无需架构修改也无需 LLM 微调。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.21649",
@@ -5722,7 +5911,8 @@
         "novelty": 8,
         "reproducibility": 8
       },
-      "highlight": "GS-Quant 为 KG 实体生成语义连贯、结构分层的离散码：粒度语义增强模块向码本注入层级知识使靠前的码捕获全局语义类别、靠后的码精修具体属性；生成式结构重建模块对码序列施加因果依赖，把独立离散单元变成结构化语义描述符；扩展 LLM 词表后模型可像生成自然语言一样同构地推理图结构，显著超越文本式与嵌入式基线。"
+      "highlight": "GS-Quant 为 KG 实体生成语义连贯、结构分层的离散码：粒度语义增强模块向码本注入层级知识使靠前的码捕获全局语义类别、靠后的码精修具体属性；生成式结构重建模块对码序列施加因果依赖，把独立离散单元变成结构化语义描述符；扩展 LLM 词表后模型可像生成自然语言一样同构地推理图结构，显著超越文本式与嵌入式基线。",
+      "domain": "quantization"
     },
     {
       "id": "2604.21743",
@@ -5752,7 +5942,8 @@
         "novelty": 6,
         "reproducibility": 8
       },
-      "highlight": "层级架构（门控编码块 + 多尺度精修）保持细粒度视觉特征，训练中用 QAT 模拟低精度表示，使网络提前适应量化、避免标准 PTQ 的质量骤降，在标准移动设备上兼顾高保真输出与低计算开销。"
+      "highlight": "层级架构（门控编码块 + 多尺度精修）保持细粒度视觉特征，训练中用 QAT 模拟低精度表示，使网络提前适应量化、避免标准 PTQ 的质量骤降，在标准移动设备上兼顾高保真输出与低计算开销。",
+      "domain": "quantization"
     },
     {
       "id": "2604.22281",
@@ -5784,7 +5975,8 @@
         "novelty": 7,
         "reproducibility": 4
       },
-      "highlight": "DocPrune 针对文档图像\"大背景、稀疏证据\"的结构特性，剪除背景与问题无关 token 只留关键证据 token，并按模型理解程度自动选择剪枝起始层；M3DocRAG 上编码器吞吐 3.0×、解码器吞吐 3.3×，F1 反升 1.0，免训练同时提升精度与效率。"
+      "highlight": "DocPrune 针对文档图像\"大背景、稀疏证据\"的结构特性，剪除背景与问题无关 token 只留关键证据 token，并按模型理解程度自动选择剪枝起始层；M3DocRAG 上编码器吞吐 3.0×、解码器吞吐 3.3×，F1 反升 1.0，免训练同时提升精度与效率。",
+      "domain": "pruning"
     },
     {
       "id": "2604.22379",
@@ -5813,7 +6005,8 @@
         "novelty": 8,
         "reproducibility": 5
       },
-      "highlight": "提出 Embedding Loss（EL）——用一组随机初始化网络的特征嵌入计算生成样本与原始数据的 MMD，作为扩散蒸馏的辅助损失；CIFAR-10 无条件 FID 1.475、条件 FID 1.380 达 SOTA，跨 DMD/DI/CM 框架与 ImageNet/AFHQ-v2/FFHQ 一致改进，训练迭代最多减少 80%。"
+      "highlight": "提出 Embedding Loss（EL）——用一组随机初始化网络的特征嵌入计算生成样本与原始数据的 MMD，作为扩散蒸馏的辅助损失；CIFAR-10 无条件 FID 1.475、条件 FID 1.380 达 SOTA，跨 DMD/DI/CM 框架与 ImageNet/AFHQ-v2/FFHQ 一致改进，训练迭代最多减少 80%。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.22529",
@@ -5840,7 +6033,8 @@
         "novelty": 7,
         "reproducibility": 3
       },
-      "highlight": "师生同初始化于同一预训练 ViT，教师看干净图像、学生看失真版本，多层级对齐全局嵌入、patch 特征与注意力图，使学生在从未接触干净数据的情况下逼近干净图像表征；多数据集多失真类型下，同等人工监督量一致优于现有方案。"
+      "highlight": "师生同初始化于同一预训练 ViT，教师看干净图像、学生看失真版本，多层级对齐全局嵌入、patch 特征与注意力图，使学生在从未接触干净数据的情况下逼近干净图像表征；多数据集多失真类型下，同等人工监督量一致优于现有方案。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.22839",
@@ -5867,7 +6061,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "研究两种互补蒸馏策略——预测级的自适应加权蒸馏（AWD，自适应加权教师对无标注数据的监督）与表征级的退火多模态蒸馏（AMD-FED，经退火伪标签把鲁棒骨架知识迁入视觉模态）；在网球（F3Set-Tennis）与花滑数据集 k-clip 少样本设定下一致超越单模态基线，表征级蒸馏更强。"
+      "highlight": "研究两种互补蒸馏策略——预测级的自适应加权蒸馏（AWD，自适应加权教师对无标注数据的监督）与表征级的退火多模态蒸馏（AMD-FED，经退火伪标签把鲁棒骨架知识迁入视觉模态）；在网球（F3Set-Tennis）与花滑数据集 k-clip 少样本设定下一致超越单模态基线，表征级蒸馏更强。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.23106",
@@ -5895,7 +6090,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "MOSAIC 用师生知识蒸馏框架替代执行反馈——通过领域示例与结构化问题分解\"锚定\"生成过程，并以 Consolidated Context Window（CCW）维护跨智能体推理一致性，在 SciCode 基准上以轻量模型提升准确率、可执行性与数值精度。"
+      "highlight": "MOSAIC 用师生知识蒸馏框架替代执行反馈——通过领域示例与结构化问题分解\"锚定\"生成过程，并以 Consolidated Context Window（CCW）维护跨智能体推理一致性，在 SciCode 基准上以轻量模型提升准确率、可执行性与数值精度。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.23238",
@@ -5925,7 +6121,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "把反蒸馏建模为 Stackelberg 博弈并在约束集显式编码可检测性，发现稀疏扰动优于全轨迹投毒；借助机制可解释性识别\"思维锚点\"（对输出有超常反事实影响的句子）作为原则性稀疏目标，TraceGuard 免训练黑盒定位锚点并投毒，在保持轨迹连贯的同时使学生蒸馏退化。"
+      "highlight": "把反蒸馏建模为 Stackelberg 博弈并在约束集显式编码可检测性，发现稀疏扰动优于全轨迹投毒；借助机制可解释性识别\"思维锚点\"（对输出有超常反事实影响的句子）作为原则性稀疏目标，TraceGuard 免训练黑盒定位锚点并投毒，在保持轨迹连贯的同时使学生蒸馏退化。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.23314",
@@ -5955,7 +6152,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "SPD 先用轻量显著性头学习数据驱动的解剖先验获得可靠定位图，再做上下文提示蒸馏——用解剖相邻切片的线索校验并丰富噪声提示、生成模拟专家推理的共识提示集，Pairwise Slice Consistency 目标进一步约束局部解剖连贯性；四个 MRI/CT 基准上持续超越 SAM 适配方法与监督基线，区域与边界指标大幅提升。"
+      "highlight": "SPD 先用轻量显著性头学习数据驱动的解剖先验获得可靠定位图，再做上下文提示蒸馏——用解剖相邻切片的线索校验并丰富噪声提示、生成模拟专家推理的共识提示集，Pairwise Slice Consistency 目标进一步约束局部解剖连贯性；四个 MRI/CT 基准上持续超越 SAM 适配方法与监督基线，区域与边界指标大幅提升。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.23632",
@@ -5989,7 +6187,8 @@
         "novelty": 9,
         "reproducibility": 4
       },
-      "highlight": "Hallo-Live 结合异步双流扩散与人类偏好引导蒸馏：Future-Expanding Attention 让每个视频块看到同步音频及短窗口未来语音线索降低发音滞后；HP-DMD 用视觉保真、语音自然度、音视同步三类奖励重加权训练样本缓解少步蒸馏质量损失；双 H200 上 20.38 FPS、0.94 秒时延，吞吐较教师 Ovi 高 16.0×、时延低 99.3×，VideoAlign 与 Sync Confidence 分数与教师相当。"
+      "highlight": "Hallo-Live 结合异步双流扩散与人类偏好引导蒸馏：Future-Expanding Attention 让每个视频块看到同步音频及短窗口未来语音线索降低发音滞后；HP-DMD 用视觉保真、语音自然度、音视同步三类奖励重加权训练样本缓解少步蒸馏质量损失；双 H200 上 20.38 FPS、0.94 秒时延，吞吐较教师 Ovi 高 16.0×、时延低 99.3×，VideoAlign 与 Sync Confidence 分数与教师相当。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.23717",
@@ -6021,7 +6220,8 @@
         "novelty": 8,
         "reproducibility": 5
       },
-      "highlight": "发现注意力头在不同音频任务上行为迥异——只有稀疏头子集真正响应音频，且语义与声学任务激活的头完全不同；HeadRouter 免训练地按任务感知各头重要性、以头加权计算 token 重要性，在 AudioMarathon 与 MMAU-Pro 上达 SOTA 压缩性能，保留 70% token 即在 Qwen2.5-Omni-3B/7B 上达原模型 101.8%/103.0% 平均性能。"
+      "highlight": "发现注意力头在不同音频任务上行为迥异——只有稀疏头子集真正响应音频，且语义与声学任务激活的头完全不同；HeadRouter 免训练地按任务感知各头重要性、以头加权计算 token 重要性，在 AudioMarathon 与 MMAU-Pro 上达 SOTA 压缩性能，保留 70% token 即在 Qwen2.5-Omni-3B/7B 上达原模型 101.8%/103.0% 平均性能。",
+      "domain": "pruning"
     },
     {
       "id": "2604.23950",
@@ -6053,7 +6253,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "分析发现视觉编码器存在 attention sink（前景聚焦差），而 LLM 的文本-视觉注意力在中层对位置偏置有抗性、可提供有效剪枝指导；LearnPruner 第一阶段在视觉编码器后用可学习剪枝模块去冗余，第二阶段在 LLM 中层只留任务相关 token；仅用 5.5% 视觉 token 保持约 95% 原性能，推理加速 3.2×。"
+      "highlight": "分析发现视觉编码器存在 attention sink（前景聚焦差），而 LLM 的文本-视觉注意力在中层对位置偏置有抗性、可提供有效剪枝指导；LearnPruner 第一阶段在视觉编码器后用可学习剪枝模块去冗余，第二阶段在 LLM 中层只留任务相关 token；仅用 5.5% 视觉 token 保持约 95% 原性能，推理加速 3.2×。",
+      "domain": "pruning"
     },
     {
       "id": "2604.25530",
@@ -6084,7 +6285,8 @@
         "novelty": 5,
         "reproducibility": 5
       },
-      "highlight": "指出近期分割蒸馏方法在固定迭代数下比较不公平——复杂手工目标大幅增加每迭代成本，等迭代数≠等算力；墙钟对齐后，经典 logit/特征蒸馏反超分割专用方法；延长训练下特征蒸馏使 ResNet-18 学生在 Cityscapes/ADE20K 达 SOTA，PSPNet R18 学生以 1/4 参数达教师 R101 mIoU 的 99%（Cityscapes 79.0 vs 79.8）。"
+      "highlight": "指出近期分割蒸馏方法在固定迭代数下比较不公平——复杂手工目标大幅增加每迭代成本，等迭代数≠等算力；墙钟对齐后，经典 logit/特征蒸馏反超分割专用方法；延长训练下特征蒸馏使 ResNet-18 学生在 Cityscapes/ADE20K 达 SOTA，PSPNet R18 学生以 1/4 参数达教师 R101 mIoU 的 99%（Cityscapes 79.0 vs 79.8）。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.25570",
@@ -6115,7 +6317,8 @@
         "novelty": 9,
         "reproducibility": 5
       },
-      "highlight": "Vision SmolMamba 把脉冲驱动动力学与线性时间选择性递归结合，核心为 Spike-Guided 时空 token 剪枝器（SST-TP，以脉冲激活强度与首发脉冲延迟估计 token 重要性、渐进移除冗余 token），SmolMamba 块将脉冲事件直接嵌入双向状态空间递归；ImageNet-1K、CIFAR10/100、CIFAR10-DVS、DVS128 Gesture 上能耗至少降低 1.5× 且精度持平或提升。"
+      "highlight": "Vision SmolMamba 把脉冲驱动动力学与线性时间选择性递归结合，核心为 Spike-Guided 时空 token 剪枝器（SST-TP，以脉冲激活强度与首发脉冲延迟估计 token 重要性、渐进移除冗余 token），SmolMamba 块将脉冲事件直接嵌入双向状态空间递归；ImageNet-1K、CIFAR10/100、CIFAR10-DVS、DVS128 Gesture 上能耗至少降低 1.5× 且精度持平或提升。",
+      "domain": "pruning"
     },
     {
       "id": "2604.25688",
@@ -6147,7 +6350,8 @@
         "novelty": 8,
         "reproducibility": 4
       },
-      "highlight": "QB-LIF 把 burst 发放重构为膜电位的饱和均匀量化且尺度可学习——每层自适应调整发放分辨率；可吸收尺度策略推理时把学到的尺度折叠进突触权重、保持纯累加（AC）执行；ReLSG-ET 替代梯度（线性修正 + 指数尾）维持离散多级空间的梯度流；静态（CIFAR-10/100、ImageNet）与事件（CIFAR10-DVS、DVS128-Gesture）基准上一致超越二值与固定 burst SNN，超低时延下精度更高且保持神经形态兼容性。"
+      "highlight": "QB-LIF 把 burst 发放重构为膜电位的饱和均匀量化且尺度可学习——每层自适应调整发放分辨率；可吸收尺度策略推理时把学到的尺度折叠进突触权重、保持纯累加（AC）执行；ReLSG-ET 替代梯度（线性修正 + 指数尾）维持离散多级空间的梯度流；静态（CIFAR-10/100、ImageNet）与事件（CIFAR10-DVS、DVS128-Gesture）基准上一致超越二值与固定 burst SNN，超低时延下精度更高且保持神经形态兼容性。",
+      "domain": "quantization"
     },
     {
       "id": "2604.26255",
@@ -6177,7 +6381,8 @@
         "novelty": 7,
         "reproducibility": 8
       },
-      "highlight": "GaitKD 针对部位结构化步态模型，将知识迁移解耦为决策级蒸馏（部位校准 logit 蒸馏迁移类间决策关系）与边界级蒸馏（激活边界目标保持教师诱导的嵌入空间划分，替代直接特征回归），支持异构师生配置、推理零额外成本；边界保持蒸馏比直接特征回归更稳定。"
+      "highlight": "GaitKD 针对部位结构化步态模型，将知识迁移解耦为决策级蒸馏（部位校准 logit 蒸馏迁移类间决策关系）与边界级蒸馏（激活边界目标保持教师诱导的嵌入空间划分，替代直接特征回归），支持异构师生配置、推理零额外成本；边界保持蒸馏比直接特征回归更稳定。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.26340",
@@ -6204,7 +6409,8 @@
         "novelty": 9,
         "reproducibility": 3
       },
-      "highlight": "DMEP 在训练中跟踪专家利用率、按模块物理删除低效用专家（不同模块获得不同专家容量），剪枝后解除负载均衡约束让剩余专家自由专精；多推理基准上可训练参数减少 35–43%、训练吞吐提升约 10%，下游推理精度持平或超越均匀 LoRA-MoE 基线。"
+      "highlight": "DMEP 在训练中跟踪专家利用率、按模块物理删除低效用专家（不同模块获得不同专家容量），剪枝后解除负载均衡约束让剩余专家自由专精；多推理基准上可训练参数减少 35–43%、训练吞吐提升约 10%，下游推理精度持平或超越均匀 LoRA-MoE 基线。",
+      "domain": "pruning"
     },
     {
       "id": "2604.26378",
@@ -6232,7 +6438,8 @@
         "novelty": 10,
         "reproducibility": 9
       },
-      "highlight": "现有混合精度方法仅靠激活统计选择高精度保留的子空间，忽视输出扰动由激活与权重量化噪声联合驱动的本质；CoQuant 理论建模期望输出误差，导出闭式加权 PCA 解平衡激活与权重协方差以选最优高精度子空间；Llama-3.2 与 Qwen2.5 上 WikiText 困惑度与零样本常识推理一致超越强 PTQ 基线。"
+      "highlight": "现有混合精度方法仅靠激活统计选择高精度保留的子空间，忽视输出扰动由激活与权重量化噪声联合驱动的本质；CoQuant 理论建模期望输出误差，导出闭式加权 PCA 解平衡激活与权重协方差以选最优高精度子空间；Llama-3.2 与 Qwen2.5 上 WikiText 困惑度与零样本常识推理一致超越强 PTQ 基线。",
+      "domain": "quantization"
     },
     {
       "id": "2604.26573",
@@ -6260,7 +6467,8 @@
         "novelty": 6,
         "reproducibility": 4
       },
-      "highlight": "PAINT 从\"上下文重评分\"视角重审特权自蒸馏：关键不仅是是否有特权上下文，而是揭示多少、在哪塑造学生分布——按 rollout 与参考解的重叠度自适应掩码已验证解答，并仅在熵不匹配的稀疏 token 位置做小幅度能量空间插值；三个 Qwen3 规模上一致超越强在策略自蒸馏基线，Qwen3-8B macro Avg@12 较前者 +2.1、较 GRPO +2.9。"
+      "highlight": "PAINT 从\"上下文重评分\"视角重审特权自蒸馏：关键不仅是是否有特权上下文，而是揭示多少、在哪塑造学生分布——按 rollout 与参考解的重叠度自适应掩码已验证解答，并仅在熵不匹配的稀疏 token 位置做小幅度能量空间插值；三个 Qwen3 规模上一致超越强在策略自蒸馏基线，Qwen3-8B macro Avg@12 较前者 +2.1、较 GRPO +2.9。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.26587",
@@ -6287,7 +6495,8 @@
         "novelty": 4,
         "reproducibility": 3
       },
-      "highlight": "专用稀疏加速器 PE 中复杂的非零索引匹配电路导致面积/功耗开销大，稀疏 PE 远大于稠密 PE；本文回答\"给定面积，用更多稠密 PE 是否优于稀疏 PE\"——答案是肯定的，并提出在稠密矩阵乘加速器上高效跑稀疏网络的 Sparse-on-Dense 方法。"
+      "highlight": "专用稀疏加速器 PE 中复杂的非零索引匹配电路导致面积/功耗开销大，稀疏 PE 远大于稠密 PE；本文回答\"给定面积，用更多稠密 PE 是否优于稀疏 PE\"——答案是肯定的，并提出在稠密矩阵乘加速器上高效跑稀疏网络的 Sparse-on-Dense 方法。",
+      "domain": "pruning"
     },
     {
       "id": "2604.26837",
@@ -6318,7 +6527,8 @@
         "novelty": 5,
         "reproducibility": 4
       },
-      "highlight": "SPIN 三项技术：统一分区抽象把不同稀疏粒度映射到共享页式 KV 基底；局部性感知 KV 管理器动态调整每请求 HBM 预算并用 GPU 友好桶式 LRU 减少 PCIe 往返；两级层级元数据按活跃工作集而非最坏地址空间定容；基于 vLLM 集成三种代表性稀疏注意力算法，端到端吞吐 1.66–5.66×、TTFT 降 7–9×、TPOT 较原生稀疏实现最多降 58%。"
+      "highlight": "SPIN 三项技术：统一分区抽象把不同稀疏粒度映射到共享页式 KV 基底；局部性感知 KV 管理器动态调整每请求 HBM 预算并用 GPU 友好桶式 LRU 减少 PCIe 往返；两级层级元数据按活跃工作集而非最坏地址空间定容；基于 vLLM 集成三种代表性稀疏注意力算法，端到端吞吐 1.66–5.66×、TTFT 降 7–9×、TPOT 较原生稀疏实现最多降 58%。",
+      "domain": "pruning"
     },
     {
       "id": "2604.26934",
@@ -6348,7 +6558,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "给定初始观测与参数化相机轨迹，用视图一致的世界模型合成几何对齐的未来视图，为前向（动作→结果）与逆向（结果→动作）空间推理构造结构化监督，两阶段后训练 VLM；SAT-Real、SAT-Synthesized、VSI-Bench、MindCube 上一致提升，且超越推理时耦合世界模型的方法而无需昂贵的推理时生成。"
+      "highlight": "给定初始观测与参数化相机轨迹，用视图一致的世界模型合成几何对齐的未来视图，为前向（动作→结果）与逆向（结果→动作）空间推理构造结构化监督，两阶段后训练 VLM；SAT-Real、SAT-Synthesized、VSI-Bench、MindCube 上一致提升，且超越推理时耦合世界模型的方法而无需昂贵的推理时生成。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.27083",
@@ -6378,7 +6589,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "统一分析指出混合 RLVR 受能力间发散成本之苦，而\"先训专家再 OPD\"管线因师生行为模式差距大吸收不全；CoPD 在各专家 RLVR 训练进行中（而非完成后）引入 OPD，专家互为人师双向蒸馏、协同进化，行为模式更一致且互补知识充足；实现文本、图像、视频推理能力 all-in-one 整合，显著超混合 RLVR 与 MOPD，甚至超越领域专属专家。"
+      "highlight": "统一分析指出混合 RLVR 受能力间发散成本之苦，而\"先训专家再 OPD\"管线因师生行为模式差距大吸收不全；CoPD 在各专家 RLVR 训练进行中（而非完成后）引入 OPD，专家互为人师双向蒸馏、协同进化，行为模式更一致且互补知识充足；实现文本、图像、视频推理能力 all-in-one 整合，显著超混合 RLVR 与 MOPD，甚至超越领域专属专家。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.27128",
@@ -6407,7 +6619,8 @@
         "novelty": 5,
         "reproducibility": 4
       },
-      "highlight": "将 SAM 3 的 446M 参数感知编码器（PE-ViT-L+）经 TinyViT-21M FPN 学生 + 四项\"方向-尺度\"蒸馏损失 + 骨干替换推理与滑窗会话剪枝，蒸馏为 40.66M 学生；Edinburgh Pig 数据集上 MOTA 92.29%、IDF1 96.15%（相对教师仅损失 1.68/0.84 个百分点），系统参数减 7.77×、峰值显存减 3.01×（19.52GB→6.49GB），塞进 Jetson Orin NX 16GB 还余 4.9GB。"
+      "highlight": "将 SAM 3 的 446M 参数感知编码器（PE-ViT-L+）经 TinyViT-21M FPN 学生 + 四项\"方向-尺度\"蒸馏损失 + 骨干替换推理与滑窗会话剪枝，蒸馏为 40.66M 学生；Edinburgh Pig 数据集上 MOTA 92.29%、IDF1 96.15%（相对教师仅损失 1.68/0.84 个百分点），系统参数减 7.77×、峰值显存减 3.01×（19.52GB→6.49GB），塞进 Jetson Orin NX 16GB 还余 4.9GB。",
+      "domain": "pruning"
     },
     {
       "id": "2604.27178",
@@ -6437,7 +6650,8 @@
         "novelty": 5,
         "reproducibility": 3
       },
-      "highlight": "在 Pl@ntNet300K-v2 与 Deep-Plant-Disease 两个基准上，对四种架构（两个 ConvNeXt、两个 ViT）× 多训练制度（从头/预训练初始化 × 有无蒸馏）共训练 70 个模型，实证蒸馏一致提升性能，蒸馏模型以显著更低计算成本匹配大模型表现。"
+      "highlight": "在 Pl@ntNet300K-v2 与 Deep-Plant-Disease 两个基准上，对四种架构（两个 ConvNeXt、两个 ViT）× 多训练制度（从头/预训练初始化 × 有无蒸馏）共训练 70 个模型，实证蒸馏一致提升性能，蒸馏模型以显著更低计算成本匹配大模型表现。",
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2604.27396",
@@ -6467,7 +6681,8 @@
         "novelty": 8,
         "reproducibility": 3
       },
-      "highlight": "异构双核计算策略（TINT-Cores 处理大规模三值投影 + BoothFlex-Core 统一混合精度注意力），Leading One Prediction（LOP）剪除冗余 KV cache 取数，依赖感知调度隐藏非线性操作延迟；TSMC 16nm 实现，0.223 mm² 面积、65.97 mW 功耗下解码 70.70 tok/s，FOM 17.4 TOPS/mm²/W 显著超 SOTA 加速器。"
+      "highlight": "异构双核计算策略（TINT-Cores 处理大规模三值投影 + BoothFlex-Core 统一混合精度注意力），Leading One Prediction（LOP）剪除冗余 KV cache 取数，依赖感知调度隐藏非线性操作延迟；TSMC 16nm 实现，0.223 mm² 面积、65.97 mW 功耗下解码 70.70 tok/s，FOM 17.4 TOPS/mm²/W 显著超 SOTA 加速器。",
+      "domain": "quantization"
     },
     {
       "id": "2604.28123",
@@ -6500,7 +6715,8 @@
         "novelty": 4,
         "reproducibility": 9
       },
-      "highlight": "在 SFT 与 RLVR 之间插入显式分布对齐阶段：基于 OPD 原理把对齐建模为策略与 MoE 判别器（感知、推理专家分立）间的黑盒响应级对抗博弈，无需访问教师 logits 即获得解耦的纠正信号；配合 113K Gemini 3 Flash 高保真示范（最难未解问题上的稠密视觉定位与逐步推理），Qwen3-VL 上 4B/8B 分别较 SFT-to-RLVR 基线 +4.4/+6.0 平均准确率。"
+      "highlight": "在 SFT 与 RLVR 之间插入显式分布对齐阶段：基于 OPD 原理把对齐建模为策略与 MoE 判别器（感知、推理专家分立）间的黑盒响应级对抗博弈，无需访问教师 logits 即获得解耦的纠正信号；配合 113K Gemini 3 Flash 高保真示范（最难未解问题上的稠密视觉定位与逐步推理），Qwen3-VL 上 4B/8B 分别较 SFT-to-RLVR 基线 +4.4/+6.0 平均准确率。",
+      "domain": "knowledge_distillation"
     }
   ]
 }
