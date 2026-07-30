@@ -331,23 +331,6 @@ def demo():
             
             x_dq = x_q.reshape_as(blocks) * scale
             return x_dq.reshape(-1)[:n].reshape(orig_shape)
-            orig_shape = x.shape
-            x_flat = x.reshape(-1)
-            n = x_flat.numel()
-            pad = (self.block_size - n % self.block_size) % self.block_size
-            x_p = F.pad(x_flat, (0, pad))
-            blocks = x_p.reshape(-1, self.block_size)
-            block_max = blocks.abs().max(dim=1, keepdim=True)[0].clamp_min(1e-8)
-            scale = block_max / 6.0
-            x_s = blocks / scale
-            
-            x_exp = x_s.abs().unsqueeze(1)
-            grid = self.fp4_grid.unsqueeze(0)
-            idx = (x_exp - grid).abs().argmin(dim=1)
-            x_q = grid[0][idx] * x_s.sign()
-            
-            x_dq = x_q * scale
-            return x_dq.reshape(-1)[:n].reshape(orig_shape)
     
     naive = NaiveFP4()
     X_naive = naive.quantize(X)
