@@ -1,0 +1,69 @@
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=quantization start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=quantize start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=low-bit start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=model compression start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=pruning start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=sparsity start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=knowledge distillation start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=KV cache compression start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=mixed precision start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=GPTQ start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=AWQ start=0
+/bin/bash: timeout: command not found
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=quantization start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=quantize start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=low-bit start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+FAILED kw=model compression start=0
+  fetch error (HTTP Error 429: Unknown Error), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>), retry 1
+  fetch error (HTTP Error 429: Unknown Error), retry 2
+  fetch error (HTTP Error 429: Unknown Error), retry 3
+  fetch error (HTTP Error 429: Unknown Error), retry 4
+  fetch error (HTTP Error 429: Unknown Error), retry 5
+FAILED kw=quantization start=100

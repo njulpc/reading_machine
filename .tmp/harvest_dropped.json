@@ -1,0 +1,100 @@
+{
+ "2606.09964": {
+  "id": "2606.09964",
+  "version": "2606.09964v2",
+  "title": "JGRA: Jacobian Geometry Robustness Assessment in NISQ Noise-Aware Quantum Neural Networks",
+  "summary": "The NISQ era places stringent constraints on quantum computation, where noise and decoherence fundamentally limit performance. In classical deep learning, model robustness and resilience to perturbations are well studied: deep neural networks (DNNs) maintain high performance despite pruning, noise injection, and structural perturbations due to inherent redundancy in their representations. A central challenge in quantum machine learning is to transfer this notion of robustness to quantum neural networks (QNNs) under realistic NISQ noise. While classical deep learning exhibits robustness through structural redundancy, analogous principles for QNNs remain underdeveloped. We propose JGRA: a framework for assessing robustness in noise-aware QNNs via Jacobian geometry, capturing model sensitivity to parameter perturbations induced by noise. Our method includes entropy-matched noise calibration, noise-aware training, and noise-conditioned Jacobian extraction, yielding geometric descriptors that link clean-regime structure to noisy inference behaviour. We also empirically demonstrate that these descriptors encode predictive information about robustness under unseen noise.",
+  "published": "2026-06-08T15:40:05Z",
+  "updated": "2026-06-10T10:46:03Z",
+  "categories": [
+   "quant-ph",
+   "cs.LG"
+  ],
+  "primary_category": "quant-ph",
+  "authors": [
+   "Gianluca Scanu",
+   "Luca Barletta",
+   "Stefano Rini"
+  ],
+  "comment": "Accepted at IEEE qCCL 2026. Author accepted manuscript. 6 pages; cleaned source files, no changes to manuscript content"
+ },
+ "2606.11814": {
+  "id": "2606.11814",
+  "version": "2606.11814v1",
+  "title": "Sparsified Kolmogorov-Arnold Networks for Interpretable Quantum State Tomography",
+  "summary": "Machine-learning approaches to quantum state tomography can achieve high reconstruction fidelity, but the physical structure used by the trained model often remains implicit. Here we ask whether a sparsified Kolmogorov-Arnold Network (KAN) can be used not only as a regressor, but also as an inspectable reconstruction rule whose internal organization can be checked against known Pauli structure. We study a controlled three-qubit GHZ-family benchmark in which all 63 non-identity Pauli expectation values are used to reconstruct three GHZ-subspace variables: the population imbalance $z$, the real off-diagonal component $c$, and the imaginary off-diagonal component $s$. Under finite-shot sampling and depolarizing noise, external ablation identifies the extended 12-channel GHZ-relevant Pauli set from the 63 measurements, with exact top-12 recovery across the tested shot counts and depolarizing-noise strengths. These support patterns remain stable across multi-seed random-initialization and noise-level analyses, and collapse under random-label controls. The dominant pruned input-hidden-output pathways organize Z-type population observables and X/Y off-diagonal observables in a pattern consistent with the analytic GHZ Pauli grouping, and sparse formula recovery recovers the canonical signed Pauli relations. The contribution of the KAN is therefore pathway-level structural interpretability within a neural reconstruction model, rather than superior sparse regression. Together with negative controls, these probes provide a consistency chain for auditing learned reconstruction rules against known physical structure.",
+  "published": "2026-06-10T08:48:13Z",
+  "updated": "2026-06-10T08:48:13Z",
+  "categories": [
+   "quant-ph",
+   "cs.AI",
+   "cs.LG"
+  ],
+  "primary_category": "quant-ph",
+  "authors": [
+   "Xinge Wu",
+   "Huaxin Wang",
+   "Jiajun Liu",
+   "Ruiqing He",
+   "Jiandong Shang",
+   "Hengliang Guo",
+   "Qiang Chen"
+  ],
+  "comment": null
+ },
+ "2606.30520": {
+  "id": "2606.30520",
+  "version": "2606.30520v1",
+  "title": "Staged Hybridisation for Visual Quantum Reinforcement Learning via Knowledge Distillation",
+  "summary": "Visual environments are a demanding setting for quantum reinforcement learning (QRL): high-dimensional observations, unstable RL optimisation, and constrained variational quantum circuits (VQCs) are difficult to train jointly. This paper studies knowledge distillation (KD) as a staged hybridisation strategy for visual QRL. Instead of training a hybrid visual agent end-to-end from pixels, we first train a classical visual teacher, freeze its encoder as a feature interface, and distil the teacher's policy behaviour into compact downstream heads. These heads can be classical or VQC-based, enabling small quantum-compatible students to be evaluated under the same frozen representation as compact classical controls. We evaluate the pipeline on CartPole Pixels and Acrobot Pixels. The results show that staged KD enables shallow VQC heads to acquire non-trivial visual-control behaviour in settings where direct pixel-based training would be substantially more difficult. Angle-encoded VQC heads retain near-teacher performance, while amplitude-encoded heads push compactness to an extreme regime, at the cost of greater fragility, stronger budget sensitivity, and higher simulation time. Overall, staged KD reframes visual QRL as a compact-head learning problem, opening a practical route for training small quantum-compatible policies outside the standard end-to-end RL loop.",
+  "published": "2026-06-29T16:28:57Z",
+  "updated": "2026-06-29T16:28:57Z",
+  "categories": [
+   "quant-ph",
+   "cs.LG"
+  ],
+  "primary_category": "quant-ph",
+  "authors": [
+   "Javier Lazaro",
+   "Juan-Ignacio Vazquez",
+   "Pablo Garcia-Bringas"
+  ],
+  "comment": null
+ },
+ "2606.22283": {
+  "id": "2606.22283",
+  "version": "2606.22283v1",
+  "title": "Apple Neural Engine: Architecture, Programming, and Performance",
+  "summary": "The Apple Neural Engine (ANE) is the fixed-function matrix accelerator that has shipped in Apple systems-on-chip since the A11-class iPhone and iPad chips and the M1-class Mac chips, exposed to applications only through the Core ML model framework. This guide reports a reverse-engineered account of the engine, based on direct measurement on Apple silicon and static analysis of the private runtime, compiler, kernel driver, and firmware. It documents the datapath and the roofline that bound the engine's throughput and energy, the dispatch route that reaches it below Core ML, the compiler and on-disk program format, the weight-compression scheme, and the kernel driver, firmware, and command protocol beneath them. The account covers the A11 through A18 and M1 through M5 families, with per-chip target tables and an operation-by-device matrix; the direct measurements are on the M1 and M5. Claims are labeled as measured, decompile-derived, or predicted, and the methodology and open questions are recorded. The direct route is callable from ordinary user space but remains undocumented, unsupported, and version-fragile; it is intended for measurement, research, and on-device work, not for shipping software, where Core ML remains the supported path.",
+  "published": "2026-06-21T00:17:34Z",
+  "updated": "2026-06-21T00:17:34Z",
+  "categories": [
+   "cs.AR",
+   "cs.OS",
+   "cs.PF"
+  ],
+  "primary_category": "cs.AR",
+  "authors": [
+   "Spencer H. Bryngelson"
+  ],
+  "comment": "302 pages, 12 figures. A reference for the Apple Neural Engine"
+ },
+ "2606.08985": {
+  "id": "2606.08985",
+  "version": "2606.08985v1",
+  "title": "Beyond Neural Collapse: Task-Intrinsic Geometry Governs Neural Representations in Modular Arithmetic",
+  "summary": "While neural collapse (NC) predicts that a $K$-class-balanced classifier should organize terminal representations as a $(K-1)$-dimensional simplex equiangular tight frame (ETF), modular addition consistently enters a different regime: networks compress to a two-dimensional cyclic geometry in which both classifier weights and token embeddings lie on circles. We refine the explanation of this phenomenon in three directions. First, we formalize a layerwise non-uniform training mechanism: downstream classifier weights are driven by dense cross-entropy gradients into a rank-2 equiangular configuration before upstream embeddings fully reorganize, and once this classifier plane forms, backpropagated feature gradients constrain embedding motion to the same plane while weight decay suppresses orthogonal components. Second, after this subspace locking, the induced in-plane dynamics admit an entropy-regularized transport interpretation on $S^1$; combined with modular-addition labels, this reduces embedding formation to phase alignment, whose minimizers are single-frequency characters of $\\mathbb{Z}/P\\mathbb{Z}$ and hence equal-angle points on a circle. Third, we quantify why this solution prevails over NC: a simplex ETF gains only an $O(1)$ advantage in cross-entropy, whereas the cyclic rank-2 solution enjoys a $Θ(K)$ advantage under Schatten or weight-decay surrogates, yielding a critical threshold $λ_{\\mathrm{crit}} = Θ(1/K)$. Our results explain both why classifier weights move first and why embeddings subsequently align with them, showing that grokking on modular arithmetic is governed not by maximal separation alone but by a task-structured trade-off between separation, symmetry, and complexity.",
+  "published": "2026-06-08T03:30:56Z",
+  "updated": "2026-06-08T03:30:56Z",
+  "categories": [
+   "cs.LG"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Hu Tan",
+   "Kuo Gai",
+   "Shihua Zhang"
+  ],
+  "comment": null
+ }
+}

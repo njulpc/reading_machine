@@ -1,0 +1,6244 @@
+[
+ {
+  "score": 18,
+  "id": "2606.07819",
+  "title": "Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-prune",
+   "a-prune",
+   "a-lowbit",
+   "t-mixprec",
+   "t-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 16.5,
+  "id": "2606.14030",
+  "title": "Efficiency-Performance Trade-offs in Neural Speaker Diarization via Structured Pruning and Low-Bit Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-prune",
+   "a-prune",
+   "t-lowbit",
+   "a-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 15.5,
+  "id": "2606.04238",
+  "title": "Recover-LoRA for Aggressive Quantization: Reclaiming Accuracy in 2-Bit Language Models via Low-Rank Adaptation with Knowledge Distillation on Synthetic Data",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-distill",
+   "a-distill",
+   "t-lowbit",
+   "a-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 15,
+  "id": "2607.16248",
+  "title": "High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "t-kv",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 15,
+  "id": "2606.31519",
+  "title": "RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "t-kv",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 15,
+  "id": "2606.12280",
+  "title": "Holding the FP8 Quality Ceiling at 8-Bit Weights and Activations: INT8 and GGUF Post-Training Quantization of Ideogram 4.0 for Consumer GPUs",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "t-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 14.5,
+  "id": "2606.26587",
+  "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-sparse",
+   "a-lowbit",
+   "a-compress",
+   "t-fmt",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 14.5,
+  "id": "2606.22935",
+  "title": "Hybrid Compression: Integrating Pruning and Quantization for Optimized Neural Networks",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-prune",
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 13,
+  "id": "2606.12876",
+  "title": "Multi-Bitwidth Quantization for LLMs Using Additive Codebooks",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 13,
+  "id": "2606.10531",
+  "title": "LC-QAT: Data-Efficient 2-Bit QAT for LLMs via Linear-Constrained Vector Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 13,
+  "id": "2606.10520",
+  "title": "UniSVQ: 2-bit Unified Scalar-Vector Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 13,
+  "id": "2606.06527",
+  "title": "Characterizing the Impact of NVFP4 Quantization for Low-Power Edge AI Deployment",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-fmt",
+   "a-fmt",
+   "t-deploy",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 12.5,
+  "id": "2606.26002",
+  "title": "Hierarchical Reinforcement Learning for Neural Network Compression (HiReLC): Pruning and Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-prune",
+   "a-prune",
+   "a-lowbit",
+   "t-compress",
+   "a-compress",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": 12.5,
+  "id": "2606.01850",
+  "title": "Does Compression Preserve Uncertainty? A Unified Benchmark for Quantized and Sparse LLMs via Conformal Prediction",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-prune",
+   "t-sparse",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 12,
+  "id": "2606.29337",
+  "title": "W4A4 Quantization for Inference on Wan2.2-I2V-A14B",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-fmt",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 12,
+  "id": "2606.25519",
+  "title": "Quantization Inflates Reasoning: Token Inflation as a Hidden Cost of Low-Bit Reasoning Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 12,
+  "id": "2606.05682",
+  "title": "Beyond Output Matching: Preserving Internal Geometry in NVFP4 LLM Distillation",
+  "hits": [
+   "a-quant",
+   "t-distill",
+   "a-distill",
+   "a-lowbit",
+   "t-fmt",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11.5,
+  "id": "2606.24033",
+  "title": "RoPE-Aware Bit Allocation for KV-Cache Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-distill",
+   "a-lowbit",
+   "t-kv",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 11.5,
+  "id": "2606.23210",
+  "title": "Efficient Network Inference via Hardware-Aware Architecture Search, Model Pruning & Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11.5,
+  "id": "2606.18304",
+  "title": "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
+  "hits": [
+   "a-quant",
+   "t-prune",
+   "a-prune",
+   "a-lowbit",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11.5,
+  "id": "2606.18114",
+  "title": "Ternary Mamba: Grouped Quantization-Aware Training of W1.58A16 State Space Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-distill",
+   "t-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11.5,
+  "id": "2606.13054",
+  "title": "TWLA: Achieving Ternary Weights and Low-Bit Activations for LLMs via Post-Training Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2607.08779",
+  "title": "Signed Symmetric Quantization for Few-Bit Integers",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2606.15652",
+  "title": "MosaicQuant: Inlier-Outlier Disaggregation for Unified 4-Bit LLM Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2606.11357",
+  "title": "TileFuse: A Fused Mixed-Precision Kernel Library for Efficient Quantized LLM Inference on AMD NPUs",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-mixprec",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2606.11244",
+  "title": "SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2606.09864",
+  "title": "Alignment Collapse Under KV Cache Quantization: Diagnosis and Mitigation",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-kv",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2606.08635",
+  "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "t-kv",
+   "t-mixprec",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2606.05429",
+  "title": "Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 11,
+  "id": "2606.03458",
+  "title": "KVarN: Variance-Normalized KV-Cache Quantization Mitigates Error Accumulation in Reasoning Tasks",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-kv",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 10.5,
+  "id": "2607.02562",
+  "title": "Entropy-Coded MS-VQ-VAE with Learned Priors for Ultra-Low Bitrate Video Compression",
+  "hits": [
+   "a-quant",
+   "t-lowbit",
+   "t-compress",
+   "a-compress",
+   "t-vq"
+  ]
+ },
+ {
+  "score": 10.5,
+  "id": "2606.26650",
+  "title": "CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 10.5,
+  "id": "2606.17118",
+  "title": "MODE: Modality-Decomposed Expert-Level Mixed-Precision Quantization for MoE Multimodal LLMs",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-mixprec",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 10.5,
+  "id": "2606.08382",
+  "title": "STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 10.5,
+  "id": "2606.04063",
+  "title": "LLM Compression with Jointly Optimizing Architectural and Quantization choices",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 10,
+  "id": "2606.19565",
+  "title": "Mix-QVLA: Task-Evidence-Aware Mixed-Precision Quantization of Vision-Language-Action Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-mixprec",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 10,
+  "id": "2606.15682",
+  "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-fmt"
+  ]
+ },
+ {
+  "score": 10,
+  "id": "2606.08078",
+  "title": "On Low-Bit Quantization Errors in Speaker Verification: Diagnostic and Mitigation",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit"
+  ]
+ },
+ {
+  "score": 9.5,
+  "id": "2606.15523",
+  "title": "AQ4SViT: An Automated Quantization Framework with Search Gating Policy for Compressing Spiking Vision Transformers",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 9.5,
+  "id": "2606.04620",
+  "title": "QuBLAST: A Framework for Quantizing Large Language Models with Block-Level Compression Approach and Activation Scaling Strategy",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 9.5,
+  "id": "2606.03428",
+  "title": "PrimeSVT: An Automated Memory-aware Pruning Framework with Prioritized Compression Policy for Spiking Vision Transformers",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 9,
+  "id": "2606.25488",
+  "title": "Distill on a Diet: Efficient Knowledge Distillation via Learnable Data Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 9,
+  "id": "2606.21448",
+  "title": "Fast-TurboQuant: A Multiplier-Free Online Vector Quantization Approach",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.26875",
+  "title": "Information-Aware KV Cache Compression for Long Reasoning",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.24467",
+  "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.23406",
+  "title": "HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "a-compress",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.21704",
+  "title": "When Compression Helps and When It Hurts: Condition-Aware Analysis of Chain-of-Thought Distillation",
+  "hits": [
+   "a-prune",
+   "t-distill",
+   "a-distill",
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.21257",
+  "title": "An Empirical Study of OpenPangu Quantization on Ascend NPUs",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "a-compress",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.20675",
+  "title": "VQ4SNN: Vector Quantization for Memory-Efficient FPGA Spiking Neural Networks",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-compress",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.17872",
+  "title": "AnchorKV: Safety-Aware KV Cache Compression via Soft Penalty with a Refusal Anchor",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.15157",
+  "title": "PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.14782",
+  "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.10369",
+  "title": "PADD: Path-Aligned Decompression Distillation for Non-Router Teacher to Guide MoE Student Learning",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.06302",
+  "title": "Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.05988",
+  "title": "Compress-Distill: Reasoning Trace Compression for Efficient Knowledge Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.05568",
+  "title": "ColBERTSaR: Sparsified ColBERT Index via Product Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.03328",
+  "title": "Calibration Data Trade-offs Across Capability Dimensions: Why Multi-Source Mixing Matters for High-Sparsity LLM Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.03026",
+  "title": "Spike-Aware C++ INT8 Inference for Sparse Spiking Language Models on Commodity CPUs",
+  "hits": [
+   "a-quant",
+   "t-sparse",
+   "a-compress",
+   "t-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.03002",
+  "title": "Perplexity Can Miss SAE Feature Damage Under Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-prune",
+   "a-compress",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8.5,
+  "id": "2606.01790",
+  "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8,
+  "id": "2606.29581",
+  "title": "The Joint Effect of Quantization and Sampling Temperature on LLM Safety Alignment: A Factorial Analysis",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8,
+  "id": "2606.20381",
+  "title": "Rethinking Shrinkage Bias in LLM FP4 Pretraining: Geometric Origin, Systemic Impact, and UFP4 Recipe",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "t-fmt",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8,
+  "id": "2606.12278",
+  "title": "Finding Sparse Subnetworks in One Training Cycle via Progressive Magnitude-Based Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8,
+  "id": "2606.11363",
+  "title": "NSVQ: Mitigating Codebook Collapse by Stabilizing Encoder Drift in Vector Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8,
+  "id": "2606.10445",
+  "title": "SpenseGPT: Practical One-shot Pruning Enabling Sparse and Dense GEMMs for LLM Inference",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 8,
+  "id": "2606.09886",
+  "title": "SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2607.18280",
+  "title": "Beyond Single-Dimensional Compression: The Compound Sparsity Frontier of Large Language Models",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2607.09683",
+  "title": "Ablation, Statistical Inference, and Validation for KV-Cache Compression",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2606.27089",
+  "title": "TMP: Tree-structured Mixed-policy Pruning for Large-scale Image Generation and Editing",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2606.26861",
+  "title": "Cascaded Multi-Granularity Pruning for On-Device LLM Inference in Industrial IoT",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "t-deploy",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2606.26488",
+  "title": "What Survives When You Compress a Recursive Reasoner for the Edge?",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "a-distill",
+   "t-compress",
+   "a-compress",
+   "a-fmt"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2606.25285",
+  "title": "EPTS: Elastic Post-Training Sparsity for Efficient Large Language Model Compression",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2606.10890",
+  "title": "Optimal Post-Training Quantization Scales and Where to Find Them",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7.5,
+  "id": "2606.05698",
+  "title": "Rethinking LoRA Memory Through the Lens of KV Cache Compression",
+  "hits": [
+   "t-kv",
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2607.16237",
+  "title": "Quantizing Recursive Reasoning Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "a-fmt"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.28962",
+  "title": "FlipGuard: Defending Large Language Models Against Quantization-Conditioned Backdoor Attacks",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.23419",
+  "title": "GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.13657",
+  "title": "Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.13233",
+  "title": "ReSET: Accurate Latency-Critical NVFP4 Reasoning via Step-Aware Temperature Scaling",
+  "hits": [
+   "a-quant",
+   "t-fmt",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.12487",
+  "title": "DynamicPTQ: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.10154",
+  "title": "Quality Is Not a Safety Proxy Under Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.09916",
+  "title": "IntentKV: Cross-Turn Intent-Aware KV Cache Pruning for Agent Inference",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "t-kv",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.09012",
+  "title": "Understanding Quantization-Aware Training: Gradients at Quantized Weights Bias to the Low-Loss Basin",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.08761",
+  "title": "APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing",
+  "hits": [
+   "a-quant",
+   "t-fmt",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.07116",
+  "title": "OffQ: Taming Structured Outliers in LLM Quantization by Offsetting",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.04945",
+  "title": "STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.04920",
+  "title": "Toward Multi-Domain and Long-Tailed Quantization via Feature Alignment and Scaling",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.04349",
+  "title": "MorphoQuant: Modality-Aware Quantization for Omni-modal Large Language Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.02823",
+  "title": "Qift: Shift-Friendly No-Zero W2 Post-Training Quantization for Rotated W2A4/KV4 LLM Inference",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 7,
+  "id": "2606.02288",
+  "title": "Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.31982",
+  "title": "ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.27866",
+  "title": "FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.27729",
+  "title": "Learning 1-Bit LiDAR-based Localization with Auxiliary Objective",
+  "hits": [
+   "t-lowbit",
+   "a-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.26398",
+  "title": "DinoLink: A Token-Centric Representation Compression Framework for Bandwidth-Constrained Collaborative V2X Perception",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.24970",
+  "title": "Don't Go Breaking My LLM: The Impact of Pruning Attention Layers on Explanation Faithfulness and Confidence Calibration",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.24747",
+  "title": "Scaling Laws for Task-Specific LLM Distillation",
+  "hits": [
+   "a-prune",
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.23086",
+  "title": "PeLAP-A: Adaptive Latent Pruning for Lightweight Latent Diffusion Models",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.22249",
+  "title": "On the Expressive Power of Weight Quantization in Large Language Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.21947",
+  "title": "ScalePredictor: Instance-aware Scale Learning for Accurate Quantization of Vision Transformers",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.20414",
+  "title": "ExSpike: A General Full-Event Neuromorphic Architecture for Exploiting Irregular Sparsity with Event Compression",
+  "hits": [
+   "t-sparse",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.19150",
+  "title": "Complementary Attention Head Pruning for Efficient Transformers",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.17609",
+  "title": "The Benchmark Illusion: Pruned LLMs Can Pass Multiple Choice but Fail to Answer",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.17249",
+  "title": "From Compression to Deployment: Real-Time and Energy-Efficient FastGRNN on Ultra-Constrained Microcontrollers",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "t-compress",
+   "a-compress",
+   "t-deploy"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.15789",
+  "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
+  "hits": [
+   "a-lowbit",
+   "t-compress",
+   "a-compress",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.14346",
+  "title": "Squeeze-Release: Iterative Pruning with Exact Structural Minimization",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.13957",
+  "title": "High-Fidelity Video Compression based on Invertible Neural Transform and Implicit Conditioning",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.11106",
+  "title": "FADA: Accessible fetal ultrasound interpretation and annotation with a selectively distilled unified vision-language model",
+  "hits": [
+   "a-quant",
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.10450",
+  "title": "Few-step Generative Models as Lossy Compression",
+  "hits": [
+   "a-distill",
+   "a-lowbit",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.09885",
+  "title": "TENP: Trapezoidal Expert Neuron Pruning For Mixture-of-Experts",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.08156",
+  "title": "RAPID: Layer-Wise Redundancy-Aware Pruning and Importance-Driven Token Merging for Efficient ViT",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.04980",
+  "title": "AlphaQ: Calibration-Free Bit Allocation for Mixture-of-Experts Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6.5,
+  "id": "2606.03257",
+  "title": "PSViT: A Methodology for Structurally Pruning Spiking Vision Transformers",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2607.22587",
+  "title": "TriSP: Tri-Signal Structured Pruning for Large Language Models",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2607.22583",
+  "title": "Multi-Objective Structured Pruning of LLMs for Latency and Model Size Optimization",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.31456",
+  "title": "Zero-Shot Quantization for Object Detectors using Off-the-Shelf Generative Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.31148",
+  "title": "PruneGround: Plug-and-play Spatial Pruning for 3D Visual Grounding",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.30875",
+  "title": "The Label Imitation Game: Turing Test Network for Zero-Shot Pseudo-Label Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.30676",
+  "title": "Criticality-Constrained Iterative Pruning for Energy-Efficient Spiking Neural Networks via Combined Importance Scoring",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.30382",
+  "title": "RQP: Resource-Oriented Quantiser Pruning for Neural Networks on FPGAs",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.28432",
+  "title": "Spectral Perturbation of the Empirical Fisher Information Matrix under Weight Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-lowbit"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.27660",
+  "title": "MVPruner: Dynamic Token Pruning for Accelerating Multi-view Vision-Language Models in Autonomous Driving",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.27313",
+  "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.27161",
+  "title": "TOPS: First-Principles Visual Token Pruning via Constructing Token Optimal Preservation Sets for Efficient MLLM Inference",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.25087",
+  "title": "Neural Network Quantization by Learning Low-Loss Subspaces",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.24165",
+  "title": "Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.22874",
+  "title": "SpotAttention: Plug-In Block-Sparse Routing for Pretrained Long-Context Transformers",
+  "hits": [
+   "a-quant",
+   "a-distill",
+   "t-sparse",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.21916",
+  "title": "Data Pruning: Redundant, Problematic, and Interdependent Samples",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.19558",
+  "title": "Displacement Is Not Direction: Evaluating Fidelity Metrics for Quantized LLM Deployment",
+  "hits": [
+   "t-quant",
+   "t-deploy",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.19526",
+  "title": "SPINE: A Fault Injection Profiler for Quantized Neural Networks under Accumulated Faults",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.18681",
+  "title": "Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.17107",
+  "title": "Models Take Notes at Prefill: KV Cache Can Be Editable and Composable",
+  "hits": [
+   "a-quant",
+   "t-kv",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.16131",
+  "title": "Shift-and-Sum Quantization for Visual Autoregressive Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.15716",
+  "title": "How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.15346",
+  "title": "DYNA-PRUNER: Input-Adaptive Data-Model Co-Pruning for Efficient and Scalable Spatio-Temporal Media Prediction",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.14695",
+  "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.14598",
+  "title": "Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0",
+  "hits": [
+   "a-quant",
+   "t-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.14150",
+  "title": "Small LLMs: Pruning vs. Training from Scratch",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.13328",
+  "title": "Non-Parametric Dual-Manifold Mapping via 8-Bit Bounded Transformation Matrices: Challenging FP-centric Hardware Paradigms in Low-Energy AI",
+  "hits": [
+   "t-lowbit",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.13300",
+  "title": "Quantizing Time-Series Models As Dynamical Systems: Trajectory-Based Quantization Sensitivity Score",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.11339",
+  "title": "Quantized Stochastic Primal-Dual Methods for Distributed Optimization under Relaxed Global Geometry",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.10533",
+  "title": "Audio-Visual Exchange-Aware Token Pruning for Efficient Audio-Visual Captioning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.09080",
+  "title": "Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.07684",
+  "title": "Semantic Cache Distillation: Efficient State Transfer via Reuse and Selective Patching",
+  "hits": [
+   "a-quant",
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.06547",
+  "title": "FAIR-Calib: Frontier-Aware Instability-Reweighted Calibration for Post-Training Quantization of Diffusion Large Language Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.06528",
+  "title": "Quantized AI Inference on Constrained Embedded Platforms for Small-Satellite Settings",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.05688",
+  "title": "Value-and-Structure Alignment for Routing-Consistent Quantization of Mixture-of-Experts Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.04493",
+  "title": "SFMambaNet: Spectral-Frequency Enhanced Selective State Space Model for Correspondence Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.04373",
+  "title": "Selective Coupling of Decoupled Informative Regions: Masked Attention Alignment for Data-Free Quantization of Vision Transformers",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.04115",
+  "title": "dMX: Differentiable Mixed-Precision Assignment for Low-Precision Floating-Point Formats",
+  "hits": [
+   "a-quant",
+   "t-mixprec",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.03569",
+  "title": "When Attention Collapses: Stage-Aware Visual Token Pruning from Structure to Semantics",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.02011",
+  "title": "Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery",
+  "hits": [
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit"
+  ]
+ },
+ {
+  "score": 6,
+  "id": "2606.01544",
+  "title": "CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.31145",
+  "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference",
+  "hits": [
+   "t-kv",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.26822",
+  "title": "Quantization in Federated Learning: Methods, Challenges and Future Directions",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.25927",
+  "title": "Knowledge Cascade: Reverse Knowledge Distillation on Nonparametric Multivariate Functional Estimation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.25324",
+  "title": "Efficient Remote Sensing Instance Segmentation with Linear-Time State Space Distilled Visual Foundation Models",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.23568",
+  "title": "SVD-Surgeon: Optimal Singular-Value Surgery for Large Language Model Compression",
+  "hits": [
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.23124",
+  "title": "PRIDE: Privileged Information-enhanced Distillation for Empathetic Dialogue Generation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.21847",
+  "title": "UniRank: Unified Rank Allocation for Low-Rank LLM Compression",
+  "hits": [
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.21655",
+  "title": "PaaF: Raising the perceived quality of INR-Based Image Compression",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.20474",
+  "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
+  "hits": [
+   "a-quant",
+   "t-lowbit",
+   "a-lowbit",
+   "a-compress",
+   "a-fmt",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.20005",
+  "title": "StreamKL: Fast and Memory-Efficient KL Divergence for Boosting Attention Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.16185",
+  "title": "Learned JPEG Compression for DNN Vision",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.15355",
+  "title": "Sustainable Face Recognition on Low-Power Devices with VQ-VAE Embeddings",
+  "hits": [
+   "a-quant",
+   "a-distill",
+   "a-compress",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.14886",
+  "title": "Improved Knowledge Distillation for Land-Use Image Classification",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.14354",
+  "title": "MUFFLe: Efficient Model Update Compression via Generalized Deduplication for Federated Learning",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.14353",
+  "title": "Can Deep Neural Networks Improve Compression of Very Large Scientific Data?",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.11836",
+  "title": "Towards Data-free and Training-free Compression for Speech Foundation Models Using Parameter Clustering",
+  "hits": [
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.10309",
+  "title": "Dissect and Prune: Enhancing Robustness in AI-Generated Image Detection",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.09922",
+  "title": "The Bioelectrical Information Theory: Investigating the theoretical compression limit of bioelectrical signals under artificial intelligence",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.05484",
+  "title": "Learned Subspace Compression for Communication-Efficient Pipeline Parallelism",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.05389",
+  "title": "Residual Modeling for High-Fidelity Learned Compression of Scientific Data",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5.5,
+  "id": "2606.02346",
+  "title": "VEDAL: Variational Error-Driven Asynchronous Learning for 3D Gaussian Splatting Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2607.22629",
+  "title": "Masked Distillation: Internalizing the Chain-of-Thought in Language Models",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2607.16246",
+  "title": "Let the Data Decide: Supervision Analysis, Capability Trade-offs, and Adaptive Objective Routing in Continued Pre-Training via Off-Policy Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.31349",
+  "title": "PGUDA: Pressure-Guided Unsupervised Domain Adaptation with Cross-Modal Knowledge Distillation for sEMG-Based Gesture Recognition",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.31198",
+  "title": "Distilling Temporal Coherence into 2D Networks for Transrectal Ultrasound Prostate Video Segmentation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.29563",
+  "title": "Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM",
+  "hits": [
+   "t-kv",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.29130",
+  "title": "DistilledGemma: Balanced Efficiency-Accuracy for Person-Place Relation Extraction from Multilingual Historical Articles",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.27884",
+  "title": "SEADA: An efficient methodology for optimizing mixed-precision DNNs on multi-precision spatial architectures",
+  "hits": [
+   "a-quant",
+   "t-mixprec",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.27759",
+  "title": "Layerwise Progressive Freezing: A Training Scaffold for Depth-Scalable Binary Networks",
+  "hits": [
+   "t-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.27708",
+  "title": "ZooClaw-FashionSigLIP2: Distilled Fine-tuning for Robust Fashion Retrieval",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.27678",
+  "title": "Two-Stage Cross-Domain Cervical Abnormality Screening with Cytopathological Image Synthesis and Knowledge Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.25278",
+  "title": "Heterogeneous and Adept Snapshot Distillation for 3D Semantic Segmentation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.24796",
+  "title": "Pocket-SLAM: Rendering-Area-Aware Pruning for Memory-Efficient 3DGS-SLAM",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.24557",
+  "title": "Heterogeneous Knowledge Distillation via Geometry Decoupling and Momentum-Aware Gradient Regulation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.23898",
+  "title": "ARIA: Adaptive Region-Based Importance Allocation for Conditional Diffusion Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.22942",
+  "title": "Understanding Knowledge Distillation in Post-Training: When It Helps and When It Fails",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.22856",
+  "title": "G-MASt3R-SfM: Graph-based View Pruning and Multi-stage Optimization for Robust SfM",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.22285",
+  "title": "Efficient Document Tampering Localization with Multi-Level Discrepancy Features and Unified DCT-Quantization Embedding",
+  "hits": [
+   "t-quant",
+   "a-quant"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.21956",
+  "title": "Denoising-Enhanced Coarse-to-Fine Infrared Small Target Detection with Attention Prior-Guided Knowledge Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.20189",
+  "title": "HilDA: Hierarchical Distillation with Diffusion for Advancing Self-Supervised LiDAR Pre-training",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.19483",
+  "title": "LEAP: Layer-skipping Efficiency via Adaptive Progression for Vision Transformer Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.18096",
+  "title": "S4oP: Operator-level Pruning of Structured State Space Models for Resource-Constrained Devices",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.17462",
+  "title": "ResAware: Cross-Environment Website Fingerprinting via Resource-Privileged Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.16633",
+  "title": "DCP-Prune: Ultra-Low Token Pruning with Distribution Consistency Preservation",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.16414",
+  "title": "Instance-Aware Knowledge Distillation for Semi-Supervised Learning of an On-Board Multi-Task Dense Prediction Model for Collision Avoidance System",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.15920",
+  "title": "OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.14821",
+  "title": "Co-Scraper: query-aware DOM Pruning and Reusable Scraper Synthesis for Lightweight Web Data Extraction",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.14684",
+  "title": "HumP-KD: A Hybrid Uncertainty-Aware Multi-Stage Progressive Knowledge Distillation Framework for Efficient Fire Classification",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.14631",
+  "title": "SED:Lightweight Saliency prediction for Event-based data via Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.14010",
+  "title": "RT-VLA: Real-Time Vision-Language-Action Models via Knowledge Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.11780",
+  "title": "What Limits Does Quantization Place on Dense Top-$k$ Retrieval? A Theoretical Study",
+  "hits": [
+   "t-quant",
+   "a-quant"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.11605",
+  "title": "Physics-Distilled Neural Network enabled by Large Language Models for Manufacturing Process-Property Predictive Modeling",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.11572",
+  "title": "FreqKD: Frequency-Decoupled Cross-Modal Knowledge Distillation for Infrared Object Detection",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.10458",
+  "title": "Minimum Distortion Quantization with Specified Output Distribution",
+  "hits": [
+   "t-quant",
+   "a-quant"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.09074",
+  "title": "REFINE: Super-efficient 3D Gaussian Splatting Pruning via Rendering-Free Primitive Importance",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.08978",
+  "title": "Heterophily-Aware Adaptive Knowledge Distillation for Hypergraph Neural Networks",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.08574",
+  "title": "OrderDP: A Theoretically Guaranteed Lossless Dynamic Data Pruning Framework",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.07474",
+  "title": "Unsupervised Continual Clustering via Forward-Backward Knowledge Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.06521",
+  "title": "P-Cast Precision in FP8 Attention: Sink-Induced Collapse and the Optimality of S=2^8",
+  "hits": [
+   "a-quant",
+   "t-fmt"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.06255",
+  "title": "RadiusFPS: Efficient Farthest Point Sampling on CPUs and GPUs via Spherical Voxel Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.06034",
+  "title": "When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet",
+  "hits": [
+   "t-quant",
+   "a-lowbit"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.05627",
+  "title": "FQA: A Full-Space Quantization-Driven Architecture for Hardware-Efficient Piecewise Approximation of Nonlinear Activation Functions",
+  "hits": [
+   "t-quant",
+   "a-quant"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.05025",
+  "title": "Invariant Gradient Alignment for Robust Reasoning Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.04922",
+  "title": "Geometry-Aware Distillation for Prompt Tuning Biomedical Vision-Language Models",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.04801",
+  "title": "Fast Cubical Persistent Homology on 2D and 3D Images via Union-Find, Pruning, and Lookup Tables",
+  "hits": [
+   "t-prune",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.03128",
+  "title": "Decoupled Smart Contract Audits: Lightweight LLM Framework via Distillation and Aggregation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 5,
+  "id": "2606.02877",
+  "title": "Pathway-Structured Privileged Distillation for Deployable Computational Pathology",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "t-deploy"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2607.18284",
+  "title": "Compressing What Matters: Neuron Importance Meets Data-Aware Low Rank Approximation for Language Model Compression",
+  "hits": [
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2607.08786",
+  "title": "Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2607.01272",
+  "title": "Benchmarking Federated Learning and Knowledge Distillation for Point Cloud Classification",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.23767",
+  "title": "One Ruler: A Same-Hands Re-Evaluation of Bivariate Causal Direction on Tuebingen, with a Parameter-Free Compression Baseline",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.21851",
+  "title": "TALAS: Teacher-Anchored Layer Alignment with Adaptive Sharpness-Aware Minimization for Embedding Distillation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.21080",
+  "title": "Bayesian Model Averaging under Predictor Redundancy via Density-Ratio Posterior Compression",
+  "hits": [
+   "a-prune",
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.15161",
+  "title": "Beyond Layer Importance in Layer-wise Sparsity: An Inter-Layer Perturbation-Absorption Perspective",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.13589",
+  "title": "Simplex-Constrained Sparse Bagging: Transitioning from Uniform Priors to Sparse Posteriors in Ensemble Learning",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.08641",
+  "title": "Learnable Token Sparsification for Efficient Gigapixel Whole Slide Image Reasoning",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.06078",
+  "title": "Knowledge Distillation for Visual Autoregressive Models",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.03928",
+  "title": "Value-Aware Stochastic KV Cache Eviction for Reasoning Models",
+  "hits": [
+   "t-kv",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 4.5,
+  "id": "2606.02559",
+  "title": "From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression",
+  "hits": [
+   "t-compress",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2607.16228",
+  "title": "Operator-Aware Mixed-Precision Tolerance Calibration for Tensor Kernels",
+  "hits": [
+   "t-mixprec",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.31048",
+  "title": "Knowledge Distillation from Large Reasoning Models to Compact Student Models: A Case Study on the John O Bryan Mathematics Competition",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.27797",
+  "title": "Optimizing Teacher-Student Partitioning for Scalable Knowledge Distillation on HPC Systems",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.27743",
+  "title": "End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.27644",
+  "title": "CascadeOcc: Rethinking 3D Occupancy World Models with Cascaded VQ Representations",
+  "hits": [
+   "a-quant",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.27147",
+  "title": "Safe Autoregressive Image Generation with Iterative Self-Improving Codebooks",
+  "hits": [
+   "a-quant",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.25674",
+  "title": "BitNet Text Embeddings",
+  "hits": [
+   "a-quant",
+   "a-distill",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.25432",
+  "title": "Brevity is the Soul of Inference Efficiency: Inducing Concision in VLMs via Data Curation",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.24248",
+  "title": "M^2C-EvDet: Multi-Domain Multi-Order Cross-Modal Knowledge Distillation for Event-based Object Detection",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.23019",
+  "title": "ScalingAttention: Discovering Intrinsic Sparse Attention Topology for Video Diffusion Transformers",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.18687",
+  "title": "Spatially Stratified Distillation for Heterogeneous Radar Place Recognition",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.16996",
+  "title": "ActiveSAM: Image-Conditional Class Pruning for Fast and Accurate Open-Vocabulary Segmentation",
+  "hits": [
+   "t-prune"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.15243",
+  "title": "SPARK: Spatial Policy-driven Adaptive Reinforcement learning for Knowledge distillation",
+  "hits": [
+   "a-quant",
+   "t-distill",
+   "a-distill",
+   "a-lowbit",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.12171",
+  "title": "Beyond Dark Knowledge: Mixup-Based Distillation for Reliable Predictions",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.10504",
+  "title": "Cross-Modal Knowledge Distillation without Paired Data: Theoretical Foundation and Algorithm",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.10493",
+  "title": "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
+  "hits": [
+   "a-quant",
+   "a-distill",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.07404",
+  "title": "Reversible Foundations: Training a 120B Sparse MoE through State-Preserving Scaling",
+  "hits": [
+   "a-quant",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.06864",
+  "title": "LRMIL: Efficient Low-Resolution Multiple Instance Learning via High-Resolution Knowledge Distillation for Whole Slide Image Classification",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.04374",
+  "title": "DSIRM: Learning Query-Bridged Discrete Semantic Identifiers for E-commerce Relevance Modeling",
+  "hits": [
+   "a-quant",
+   "t-vq",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.04317",
+  "title": "Toward a Generalized Defense Across Sparse, Continuous, and Structured Parameter Attacks",
+  "hits": [
+   "a-quant",
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.02303",
+  "title": "Cross-Domain Dead Tree Detection via Knowledge Distillation in Aerial Imagery",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 4,
+  "id": "2606.01607",
+  "title": "FedMTFI: Feature Importance Based Optimized Multi Teacher Knowledge Distillation in Heterogeneous Federated Learning Environment",
+  "hits": [
+   "t-distill",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.31676",
+  "title": "REDI: Corpus Aware Patch Ranking for DINOv3 Token Reduction",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.22296",
+  "title": "SCENIC: Semantic-Conditioned Edge-Aware Neural Framework for Structured IoT Command Generation",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.18538",
+  "title": "Effects of sparsity and superposition on loss in simple autoencoders",
+  "hits": [
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.17343",
+  "title": "Trustworthy MRI Reconstruction via Bayesian Uncertainty Quantification with Sparsity Prior Models",
+  "hits": [
+   "t-sparse",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.09659",
+  "title": "End-to-End Context Compression at Scale",
+  "hits": [
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.08302",
+  "title": "HACK++: Towards More Effective Head-Aware Key-Value Compression for Efficient Visual Autoregressive Modeling",
+  "hits": [
+   "t-compress",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.05861",
+  "title": "LLMCodec: Adapting Video Codecs for Efficient Weight Compression of Large Language Models",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "t-compress",
+   "a-compress",
+   "nn-ctx",
+   "x-codec"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.04050",
+  "title": "LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.03909",
+  "title": "SparseStreet: Sparse Gaussian Splatting for Real-Time Street Scene Simulation",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 3.5,
+  "id": "2606.02436",
+  "title": "Geometry-Aware Implicit Memory for Video World Models",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2607.09708",
+  "title": "GES-TSP: Graph Edge Sparsification for TSP",
+  "hits": [
+   "a-prune",
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2607.08782",
+  "title": "Director: Accelerating Distributed MoE Serving via Online Proactive Expert Placement",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2607.00275",
+  "title": "Entropy-Regularized Probabilistic Gates for Sparse Model Discovery in Scarce-Data Federated Learning",
+  "hits": [
+   "a-prune",
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.31303",
+  "title": "Minimizing Quantized Semantic Age of Information (QSAoI) in Foundation Model-Based Semantic Communications",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx",
+   "x-semcom"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.30159",
+  "title": "A Dual-domain Refinement Network with FBP-based Jacobian Learning for Sparse-view Dual-Energy CT Material Decomposition",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.27772",
+  "title": "An Embedded Real-Time License Plate Recognition System for Complex Traffic Scenes",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.27294",
+  "title": "Generative Models on Analog Hardware with Dynamics",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.27071",
+  "title": "PanoImager: Geometry-Guided Novel View Synthesis and Reconstruction from Sparse Panoramic Views",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.26662",
+  "title": "Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.25234",
+  "title": "Structuring Sparsity: Block-Sparse Featurizers Capture Visual Concept Manifolds",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.25097",
+  "title": "Speculative Decoding at Temperature Zero: A Scoped Safety-Invariance Screen with a 48,072-Sample Expansion",
+  "hits": [
+   "a-lowbit",
+   "a-fmt",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.25092",
+  "title": "How Modular Is a Frontier Mixture-of-Experts? A Pre-registered Causal Test in Which Apparent Expert Modularity Mostly Dissolves",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.25040",
+  "title": "Chorus II: Cross-Request Sparsity Reuse for Efficient Image-to-Video Generation",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.25010",
+  "title": "Emergent Capabilities Arise Randomly from Learning Sparse Attention Patterns",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.22352",
+  "title": "On the Sparsity-Storage-Accuracy Tradeoff in Parsimoniously Activated Dictionary Learning",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.22153",
+  "title": "$π$-RAG: Oblivious Retrieval via Semantic Quantization and Transcendental Addressing for Large Language Models",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.21427",
+  "title": "Dual-Attention Convolution Experts for Sparse Tensor Completion",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.19741",
+  "title": "Interpreting Neural Combinatorial Optimization via Evolving Programmatic Bottlenecks",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.19632",
+  "title": "Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation",
+  "hits": [
+   "a-quant",
+   "t-distill",
+   "a-distill",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.18463",
+  "title": "Mixed-Precision Communication-Avoiding SGD for Generalized Linear Models on GPUs",
+  "hits": [
+   "t-mixprec"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.18383",
+  "title": "From Sparse Features to Trustworthy Proxies: Certifying SAE-Based Interpretability",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.18122",
+  "title": "Embedded Machine Learning for Microcontroller-Class Edge Devices: Data, Feature, Evaluation, and Deployment Pipelines",
+  "hits": [
+   "a-quant",
+   "t-deploy",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.18056",
+  "title": "ConSA: Controllable Sparsity in Hybrid Attention via Learnable Allocation",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.17123",
+  "title": "LineageMark: Multi-user White-box Watermarking for Contribution Tracing in Model Derivation Chains",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.16819",
+  "title": "From the NYU Ultracomputer to Modern Exascale: A Historical and Architectural Survey of In-Network Computing and Scalable Synchronization",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.16317",
+  "title": "Training-free sparse attention based on cumulative energy filtering",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.15004",
+  "title": "CREST: Deployment-Realistic Hardware-in-the-Loop NAS for Embedded Sensing Systems",
+  "hits": [
+   "a-quant",
+   "t-deploy",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.14957",
+  "title": "Learning Sparse Latent Predictive Foundation Model for Multimodal Neuroimaging",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.13392",
+  "title": "MiniMax Sparse Attention",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.13016",
+  "title": "Otters++: A Time-to-first-spike Based Energy Efficient Optical Spiking Transformer",
+  "hits": [
+   "a-quant",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.12940",
+  "title": "Self-Guidance: Enhancing Neural Codecs via Decoder Manifold Alignment",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.11065",
+  "title": "Arithmetic Packing on Wide Integer Datapaths in DSP Primitives of Modern FPGA Devices",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.10722",
+  "title": "Continual LLM Upcycling: A Predictor-Gated Bank-Wise Sparsity Training Recipe for Dense-to-Sparse LLMs",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.10532",
+  "title": "ActiveMem: Distributed Active Memory for Long-Horizon LLM Reasoning",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.10327",
+  "title": "The Order Matters: Sequential Fine-Tuning of LLaMA for Coherent Automated Essay Scoring",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.09927",
+  "title": "Trainable Smooth-Rotation Transforms with Learned Channel Scales for LLM Quantization",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "nn-ctx",
+   "x-semcom"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.07414",
+  "title": "Sparsely gated tiny linear experts",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.07007",
+  "title": "A Geometric View for Understanding Concept Learning and Neuron Interpretation in Sparse Autoencoders",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.06333",
+  "title": "Subspace-Aware Sparse Autoencoders for Effective Mechanistic Interpretability",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.05843",
+  "title": "Mechanistic Insights into Functional Sparsity in Multimodal LLMs via CoRe Heads",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 3,
+  "id": "2606.03180",
+  "title": "GLINT: Sparsely Gated Vision-Language Alignment for Fine-Grained Radiology Representations",
+  "hits": [
+   "t-sparse",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2607.05419",
+  "title": "Contrastive Predictive Coding with Compression for Enhanced Channel State Feedback in Wireless Networks",
+  "hits": [
+   "a-quant",
+   "t-compress",
+   "a-compress",
+   "nn-ctx",
+   "x-semcom"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.30017",
+  "title": "Monte Carlo Energy Aggregation for Mobile 3D Gaussian Splatting",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.29869",
+  "title": "ARKD: Adaptive Reinforcement Learning-Guided Bidirectional KL Divergence Distillation for Text Generation",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.28600",
+  "title": "Neuromorphic Energy-Aware Learning for Adaptive Deep Brain Stimulation",
+  "hits": [
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.27892",
+  "title": "Co-Optimization of Analog Kolmogorov-Arnold Networks for Low-Power Function Approximation in Flexible Electronics",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.25589",
+  "title": "Leaking Circuit Secrets: Gradient Leakage Attacks on Graph Neural Networks",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.21372",
+  "title": "NAC: Neural Action Codec for Vision-Language-Action Models",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.19849",
+  "title": "ViCoStream: Streaming VideoLLMs Can Run Beyond 100 FPS with Stage-Wise Coordinated Inference",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.18209",
+  "title": "Rethinking Dataset Distillation for Classification: Do Distilled Sets Outperform Coresets?",
+  "hits": [
+   "a-prune",
+   "t-distill",
+   "a-distill",
+   "a-compress",
+   "x-data"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.16067",
+  "title": "Stepwise Token Selection for Efficient Multimodal Large Language Models",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.15142",
+  "title": "MotionVLA: Vision-Language-Action Model for Humanoid Motion",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.14277",
+  "title": "One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.11853",
+  "title": "Task-Aware Structured Memory for Dynamic Multi-modal In-Context Learning",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.10135",
+  "title": "BiWM: Advancing Open-Source Interactive Video World Models with Bidirectional Autoregression",
+  "hits": [
+   "a-distill",
+   "a-lowbit",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.09936",
+  "title": "One Lens, Many Worlds : A Capability-Typed Interface for World-Model Interpretability",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.09924",
+  "title": "Sigma-Branch: Hierarchical Single-Path Network Reconstruction for Dynamic Inference with Reduced Active Parameters",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.09888",
+  "title": "SinkRec: Mitigating Semantic State Sink in Long Sequence Recommendation with Memory-Conditioned Gated Delta Networks",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.09605",
+  "title": "Next-Token Prediction Learns Generalisable Representations of Sleep Physiology",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.05868",
+  "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition",
+  "hits": [
+   "a-distill",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.03940",
+  "title": "SEAOTTER: Sensor Embedded Autoencoding with One-Time Transcode for Efficient Reconstruction",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2.5,
+  "id": "2606.03052",
+  "title": "What Do Students Learn? A Feature-Level Analysis of Dark Knowledge",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2607.22662",
+  "title": "CuraWeb: Joint Optimization of Quality, Redundancy, and Diversity for Web-Scale Pretraining Data",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2607.22602",
+  "title": "DeepLook: Deeper Thinking with Lookahead",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2607.09686",
+  "title": "MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.32039",
+  "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.32036",
+  "title": "PointSplat: Compact Gaussian Splatting via Human-Centric Prediction",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.32033",
+  "title": "SpheRoPE: Zero-Shot Optimization-Free 360 Panorama Generation with Spherical RoPE",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.31781",
+  "title": "SpikeLogBERT: Energy-Efficient Log Parsing Using Spiking Transformer Networks",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.31664",
+  "title": "Sparsity-Inducing Divergence Losses for Biometric Verification",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.31484",
+  "title": "Fork-Think with Confidence",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.30577",
+  "title": "APRIL-MedSeg: A Modular Medical Image Segmentation Toolbox Embracing Modern Paradigms",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.30319",
+  "title": "BrainJanus: A Unified Model for Understanding and Generation across Brain, Vision, and Language",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.29986",
+  "title": "HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.29863",
+  "title": "KbSD: Knowledge Boundary aware Self-Distillation for Behavioral Calibration in Agentic Search",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.29718",
+  "title": "Diagnosing and Mitigating Context Rot in Long-horizon Search",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.29532",
+  "title": "SemJoin: Semantic Join Optimization",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.29301",
+  "title": "Pointer-CAD v2: Plan-Then-Construct CAD Generation with Dimension-Aware Parametric Precision",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.29238",
+  "title": "On the Policy Gradient Foundations of Group Relative Policy Optimization: Credit Assignment, Gradient Sparsity, and Rank Collapse",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.29148",
+  "title": "GPC: Large-Scale Generative Pretraining for Transferable Motor Control",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.28823",
+  "title": "Labeling Training Data for Entity Matching Using Large Language Models",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.28798",
+  "title": "Primary ICD Category Prediction using LLM-based Probing",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.28529",
+  "title": "The Speedup Paradox: Rethinking Inference Speed-Quality Trade-off in Embodied Tasks",
+  "hits": [
+   "a-quant",
+   "a-prune"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.28453",
+  "title": "DeVAR: Low-Dose CT Denoising via Visual Autoregressive Modeling",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.27802",
+  "title": "Accelerating Hierarchical Sparse Predictive Coding with Hybrid Amortized Inference",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.27784",
+  "title": "Improving Adversarial Robustness via Activation Amplification and Attenuation",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.27527",
+  "title": "Large Language Model Teaches Visual Students: Cross-Modality Transfer of Fine-Grained Conceptual Knowledge",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.27321",
+  "title": "Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.26787",
+  "title": "AIGP: An LLM-Based Framework for Long-Term Value Alignment in E-Commerce Pricing",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.26620",
+  "title": "Discovering Millions of Interpretable Features with Sparse Autoencoders",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.26595",
+  "title": "LLM-based Models for Detecting Emerging Topics in Service Feedback",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.26538",
+  "title": "CascadeFormer: Depth-Tapered Transformers Motivated by Gradient Fan-in Asymmetry",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.26453",
+  "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.26399",
+  "title": "Geometry-Aware MCTS for Extremal Problems in Combinatorial Geometry",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.25200",
+  "title": "A Hybrid CNN-LSTM Intrusion Detection Framework for Cybersecurity in Smart Renewable Energy Grids",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.25160",
+  "title": "Toward Low-Latency Vision-Language Models with Doubly-Correct Predictions in Egocentric Visual Understanding",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.24745",
+  "title": "Beyond U-Net: A Latent-Representation-Aligned Skip-Free Backbone for Flow-Matching Speech Enhancement",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.24421",
+  "title": "Can Aggregate Invariants Accelerate Continuous Subgraph Matching? Limits, Laws, and a Dynamic Spectral Index",
+  "hits": [
+   "a-prune",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.24259",
+  "title": "SURGELLM: Rethinking Multi-Task Evaluation through Task-Aware Feature Gating with Class-Balanced Normalization",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.24169",
+  "title": "Data Scale, Not Latency, Shapes Cross-Lingual Encoder Transfer in Streaming ASR",
+  "hits": [
+   "a-quant",
+   "a-lowbit"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.24156",
+  "title": "Accelerating Multimodal Large Language Models with Prior-Corrected Token Reduction",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.23856",
+  "title": "Sesame: Structure-Aware Molecular Generation via Spatial Density-Map Conditioning",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.23208",
+  "title": "Leveraging AutoML for Sustainable Deep Learning: A Multi-Objective HPO Approach on Deep Shift Neural Networks",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.23108",
+  "title": "TTFT-Aware Graph Chain-of-Thought:Distance-Indexed Neural A* for Low-Hallucination Multi-Hop Medical Reasoning",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.22765",
+  "title": "Evolutionary Optimization Reveals Structural Constraints on Reservoir Architecture for Spatiotemporal Chaos",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.22621",
+  "title": "Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.21970",
+  "title": "Integrating Facial Generation into Full-Duplex Spoken Dialogue Systems",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.21951",
+  "title": "On the Curse of Dimensionality in Private Sparse Covariance Estimation and PCA",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.21891",
+  "title": "Learning the ARTS of Search for Automated Discovery",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.21767",
+  "title": "Row-Based Layout Synthesis for Analog Circuits Using Height-Quantized Primitives",
+  "hits": [
+   "t-quant",
+   "a-quant",
+   "x-eda"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.21023",
+  "title": "Demystifying Numerical Instability in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.21022",
+  "title": "Structure-Aware Graph Multi-Task Learning for Dynamic Sparse OD Demand Prediction",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.20727",
+  "title": "FPGA-Accelerated Neuromorphic Vision System for Real-Time Orbital Object Detection",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.20689",
+  "title": "NeoJaundice-AI: Smartphone-Based Neonatal Jaundice Detection Using Dual-Input Deep Learning and Synthetic Augmentation",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.20431",
+  "title": "Sparsity, Superposition, and Forgetting: A Mechanistic Study of Representation Retention in Continual Learning",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.20356",
+  "title": "Robust $Q$-learning for mean-field control under Wasserstein uncertainty in common noise",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.19941",
+  "title": "Compositionality Emerges in a Narrow Depth-Connectivity Regime: Architecture Constraints and Solution Manifolds",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.19528",
+  "title": "Techniques for Peak Memory Reduction for LoRA Fine-tuning of LLMs on Edge Devices",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.19369",
+  "title": "Zero-Inflated Gaussian Distributions Enable Parameter-Space Sparsity in Estimation-of-Distribution Algorithms",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.19279",
+  "title": "NeSyCat Torch: A Differentiable Tensor Implementation of Categorical Semantics for Neurosymbolic Learning",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.18898",
+  "title": "Anomaly Detection for Sparse and Irregular Multivariate Time Series with Latent SDEs",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.18691",
+  "title": "Robust and Interpretable Adaptation of Equivariant Materials Foundation Models via Sparsity-promoting Fine-tuning",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.18521",
+  "title": "Sparsity Curse: Understanding RLVR Model Parameter Space from Model Merging",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.18496",
+  "title": "Neural Phase Correlation",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.18312",
+  "title": "TIGER: Inverting Transformer Gradients via Embedding-Subspace Distance Optimization",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.18216",
+  "title": "Zone of Proximal Policy Optimization: Teacher in Prompts, Not Gradients",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.18008",
+  "title": "PhaseWin: An Efficient Search Algorithm for Faithful Visual Attribution",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.17821",
+  "title": "DecoSearch: Complexity-Aware Routing and Plan-Level Repair for Text-to-SQL",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.17500",
+  "title": "Reconfigurable Computing Challenge: Transformer for Jet Tagging on Versal AI Engines",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.17409",
+  "title": "Discrete Autoregressive Transformer for Generative Mechanism Synthesis",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.16993",
+  "title": "DreamX-World 1.0: A General-Purpose Interactive World Model",
+  "hits": [
+   "a-prune",
+   "a-distill"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.16212",
+  "title": "LUCID: Learned Undersampling-Adaptive Consistency-Guided Inference with Deterministic Flow Matching for Sparse-View CT Reconstruction",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.16163",
+  "title": "Dehaze-GaussianImage: Zero-Shot Dehazing via Efficient 2D Gaussian Splatting Representation",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.16100",
+  "title": "Your \"Pro\" LLM Subscription May Actually Be \"Free\": Exposing Fingerprint Spoofing Risks in LLM Inference Services",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.15621",
+  "title": "Re-feeding Is Not Replaying: Measuring Replay Noise in Counterfactual Token-Credit Estimation",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.14990",
+  "title": "Rational Sparse Autoencoder",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.14786",
+  "title": "MatchLM2Lite: A Scalable MLLM-to-Lite Framework for Reproduced Content Identification",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.14770",
+  "title": "An Empirical Analysis of Optimization Dynamics and Sparsity Boundaries in Large-Scale Pedestrian Attribute Recognition",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.14040",
+  "title": "Decompose Sparsely Where You Should, Absorb Densely Where You Should No",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.13894",
+  "title": "Gefen: Optimized Stochastic Optimizer",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.13767",
+  "title": "Beyond LoRA: Is Sparsity-Induced Adaptation Better?",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.13626",
+  "title": "Generative Modeling of Bach-Style Symbolic Music: A Comparative Study of Autoregressive, Latent-Variable, and Adversarial Approaches",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.13295",
+  "title": "Simultaneous Latent Budget Trees for Stratified Classification",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.12913",
+  "title": "Selecting Samples on Graphs: A Unified Dataset Pruning Framework for Lossless Training Acceleration",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "x-data"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.12742",
+  "title": "Reducing the Complexity of Deep Learning Models for EEG Analysis on Wearable Devices",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.12473",
+  "title": "Stereo Vision-Based Fall Prediction and Detection using Human Pose Estimation on the AMD Kria K26 SOM",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.12412",
+  "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.12235",
+  "title": "BenDi: An Energy-Efficient Quasi-Stochastic Systolic Architecture for Edge Bioelectronics",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.12018",
+  "title": "MODF-SIR: A Multi-agent Omni-modal Distilled Framework for Social Intelligence Reasoning",
+  "hits": [
+   "t-distill",
+   "a-distill",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.11913",
+  "title": "From Content to Knowledge: Lightning Fast Long-Video Understanding with Neural Knowledge Representations",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.11761",
+  "title": "RCAP: Robust, Class-Aware, Probabilistic Dynamic Dataset Pruning",
+  "hits": [
+   "t-prune",
+   "a-prune",
+   "x-data"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.11640",
+  "title": "TAROT: Task-Adaptive Refinement of LLM-prior Graphs for Few-shot Tabular Learning",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.11576",
+  "title": "AVIS: Adaptive Test-Time Scaling for Vision-Language Models",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.11556",
+  "title": "Privacy-Preserving Federated Autoencoder for ECG Anomaly Detection on Edge Devices",
+  "hits": [
+   "a-quant",
+   "a-lowbit"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.10706",
+  "title": "Unifying Data, Memory, and Compute Efficiency in LLM training: A Survey",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.10703",
+  "title": "From Observation to Intervention: A Causal Audit of Expert Importance in Mixture-of-Experts Models",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.10621",
+  "title": "STORM: Stepwise Token Optimization with Reward-Guided Beam Search",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.09634",
+  "title": "ATN3D: Density-Aware LiDAR-Radar Early 3D Object Detection Under Extreme Sparsity",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.09514",
+  "title": "BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.09273",
+  "title": "EditSSC: Toward Editable Semantic Occupancy Scenes with Unconditional Diffusion Models",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.09213",
+  "title": "SNN-MLIR: An MLIR Dialect for Compiling Neuromorphic SNNs from NIR to Bare-Metal C",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.09038",
+  "title": "Personalization Meets Safety:Mechanisms,Risks,and Mitigations in Personalized LLMs",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.08891",
+  "title": "PALUTE: Processing-In-Memory Acceleration via Lookup Table for Edge LLM Inference",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.08831",
+  "title": "Inference-Time Conformal Reasoning with Valid Factuality Control for Large Language Models",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.08755",
+  "title": "Co-Evolving Skill Generation and Policy Optimization",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.07720",
+  "title": "Why Limit the Residual Stream to Layers and Not Tokens? Persistent Memory for Continuous Latent Reasoning",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.07690",
+  "title": "HARP: Efficient Data Selection for Finetuning Large Language Models",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.06877",
+  "title": "Neuro-Symbolic Learning for Long-Horizon Task Planning Under Complex Logical Constraints",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.06872",
+  "title": "EgoPressDiff: Multimodal Video Diffusion for Egocentric UV-Domain Hand-Pressure Estimation",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.06850",
+  "title": "CFRNet: Cycle-Consistent Fixed-Point Training for Real-Time Blind Face Restoration on Consumer Embedded NPUs",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.06837",
+  "title": "SEAM: Shortcut-Aware Real-Time Detection of Scripted vs. Spontaneous Speech for Interview Guardrails",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.06002",
+  "title": "Global-Local Monte Carlo Tree Search in Vision-Language Models for Text-to-3D Indoor Scene Generation",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.05916",
+  "title": "Unveiling the Unknown: Open Vocabulary Object Detection with Scene Graphs",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.05733",
+  "title": "Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture for Evolving Attention Graphs",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.04621",
+  "title": "MeshFlow: Efficient Artistic Mesh Generation via MeshVAE and Flow-based Diffusion Transformer",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.04310",
+  "title": "Latent Anchor-Driven Test Generation for Deep Neural Networks",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.03946",
+  "title": "MLSkip: Data Skipping for ML Filters via Lightweight Metadata",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.03712",
+  "title": "When Graph Tokens Sink: A Mechanistic Analysis of Graph Language Models",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.03553",
+  "title": "A Robust Optimization Approach to Sparse Principal Component Analysis",
+  "hits": [
+   "t-sparse"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.03493",
+  "title": "Low-Frequency Shortcuts in Texture-Driven Visual Learning",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.03330",
+  "title": "FLIPS: Instance-Fingerprinting for LLMs via Pseudo-random Sequences",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.02857",
+  "title": "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.02518",
+  "title": "ToolFG: Towards Well-Grounded Fine-Grained Image Classification",
+  "hits": [
+   "a-distill",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.02488",
+  "title": "RASER: Recoverability-Aware Selective Escalation Router for Multi-Hop Question Answering",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.02487",
+  "title": "Towards Multidisciplinary Summarization of Hospital Stays: Efficient Sentence-Level Clinical Provenance Categorization",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.02256",
+  "title": "ArrythML: An Autoencoder-Based TinyML Approach for On-Device Arrhythmia Detection on Resource-Constrained Embedded Systems",
+  "hits": [
+   "a-quant",
+   "t-deploy"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.01892",
+  "title": "Adversarial Attacks on Robot Localization Systems via Deep Feature Perturbation",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.01765",
+  "title": "An Algebraic View of the Expressivity of Recurrent Language Models",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.01666",
+  "title": "DOT-MoE: Differentiable Optimal Transport for MoEfication",
+  "hits": [
+   "a-prune",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 2,
+  "id": "2606.01543",
+  "title": "PathAR: Structure-First Autoregressive Synthesis of Multimodal Pathology Images",
+  "hits": [
+   "a-quant",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.29521",
+  "title": "Not All Objectives Are Born Equal: Priority-Constrained Descent for Hierarchical Multi-Objective Optimization",
+  "hits": [
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.28398",
+  "title": "Semantic-Aware Generative Image Transmission for Resource-Constrained Visual IoT Systems",
+  "hits": [
+   "a-quant",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.27019",
+  "title": "MinGram: A Minimalist Unigram Tokenizer with High Compression and Competitive Morphological Alignment",
+  "hits": [
+   "a-prune",
+   "t-compress",
+   "a-compress",
+   "x-tokenizer"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.26157",
+  "title": "Reducing Redundancy in Whole-Slide Image Patching for Scalable Indexing and Retrieval",
+  "hits": [
+   "a-prune",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.21244",
+  "title": "ACE-GS: Acing the Trade-off with Accurate, Compact and Efficient 3D Gaussian Splatting",
+  "hits": [
+   "a-prune",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.19932",
+  "title": "Spatial-Aware Reduction Framework: Towards Efficient and Faithful Visual State Space Models",
+  "hits": [
+   "a-prune",
+   "a-compress"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.09508",
+  "title": "From Rigid to Dynamic: Entropy-Guided Adaptive Inference for Long-Context LLMs",
+  "hits": [
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.08565",
+  "title": "EinSort: Sorting is All We Need for Tensorizing LLM",
+  "hits": [
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.07205",
+  "title": "Towards Tight Bounds for Streaming Attention",
+  "hits": [
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.06491",
+  "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+  "hits": [
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1.5,
+  "id": "2606.06256",
+  "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
+  "hits": [
+   "a-compress",
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2607.22665",
+  "title": "Obliviate: Efficient Unlearning in Recommender Systems",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2607.09696",
+  "title": "Mitigating Early Training Collapse in CTR Models",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.31808",
+  "title": "Large Databases Need Small, Open-Weight Language Models",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.31603",
+  "title": "Preserve the Hard, Regenerate the Rest: Uncertainty-Guided Synthetic Training Data Augmentation with Diffusion Models",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.31599",
+  "title": "Token-Sparse Medical Multimodal Reasoning via Dual-Stream Reinforcement Learning",
+  "hits": [
+   "a-prune",
+   "t-sparse",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.31275",
+  "title": "CLIMB: Centroid-Based Hierarchical Memory for Online Continual Self-Supervised Learning",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.30709",
+  "title": "Hierarchical Global Attention (HGA)",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.30648",
+  "title": "MediEncoder: Nonlinear Representation Learning for High-Dimensional Causal Mediation Analysis",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.30450",
+  "title": "Minimal MMAO: A Resource-Closed-Loop Framework for Adaptive Metaheuristic Search",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.30436",
+  "title": "Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.30039",
+  "title": "Mega: A 22 nm Convolutional Spiking Neural Network Accelerator Achieving 0.375 pJ/SOP for Efficient Edge Vision",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.29814",
+  "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.28620",
+  "title": "Reproducing FACTER: Fairness via Conformal Thresholding and Prompt Repair",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.28516",
+  "title": "CLEAR-MoE: Shared-Basis Expert Extraction from Frozen Vision Transformers via Calibration-Driven Layer Selection",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.28228",
+  "title": "Disentangling Continuous-Time Latent Dynamics: Identifiability of Latent SDEs via Diffusion Shifts",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.27862",
+  "title": "ScaLe-INR: Scale and Learn Implicit Neural Representations",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.27280",
+  "title": "Exact and Deterministic Patch Descriptor Retrieval via Hierarchical Normalization",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.26749",
+  "title": "Structure Before Collapse: Transient semantic geometry in next-token prediction",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.26571",
+  "title": "Zero-shot Tweet-Level Stance Detection Enhanced by External Knowledge and Reflective Chain-of-Thought Reasoning",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.26424",
+  "title": "Rethinking Training & Inference for Forecasting: Linking Winner-Take-All back to GMMs",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.26287",
+  "title": "GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.25410",
+  "title": "DFMU: Data-Frugal Machine Unlearning",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.25354",
+  "title": "Efficient and Trainable Language Model Test-Time Scaling via Local Branch Routing",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.25232",
+  "title": "Semantic Allocation in Ordered Bottlenecks: Predictive Residual Inference for Visual Representation Learning",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.24910",
+  "title": "End-to-End Voice Intent Recognition for Spontaneous Human-Drone Interaction with Naive Users",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.24672",
+  "title": "Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.24457",
+  "title": "Lite Any Stereo V2: Faster and Stronger Efficient Zero-Shot Stereo Matching",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.24237",
+  "title": "Towards Federated Long-Tailed Graph Learning: An Energy-Guided Dual Decoupling Approach",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.23880",
+  "title": "GRACE: Gated Refinement for Accurate Causal Edge Discovery in High-Dimensional Time Series",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.23665",
+  "title": "PHAST-Net: Attention-Guided, Physics-Informed Network for Unified Estimation of Ideal Time-Frequency Representations",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.23000",
+  "title": "MotionMAR: Multi-scale Auto-Regressive Human Motion Reconstruction from Sparse Observations",
+  "hits": [
+   "a-quant",
+   "t-sparse",
+   "nn-ctx",
+   "x-num"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.22702",
+  "title": "Modular Diffusion Models for Structured Visual Recognition",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.21915",
+  "title": "GTA-Net: Cooperative Game Theory for Vision-Language Alignment in Chest X-Ray Report Generation",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.21868",
+  "title": "WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.21527",
+  "title": "LOGOS: LiDAR-Only Gaussian Elevation Splatting for Unified Tiny Obstacle Segmentation",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.20743",
+  "title": "Massive Activations Are Architecturally Robust: A Controlled Scratch/Commitment Residual Stream Test",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.20644",
+  "title": "Bridging Multi-Valued Heuristics and Dimensionality Reduction in Multi-Objective Search",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.20347",
+  "title": "Critical Percolation as a Synthetic Data Model for Interpretability",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.20156",
+  "title": "Modularity-Free Conflict-Averse Training for Generalized PINNs",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.19700",
+  "title": "TerraMARS: A Domain-Adapted Small-Language-Model Pipeline for Mars Terraforming Literature",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.19549",
+  "title": "Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.18972",
+  "title": "FOSC-X: An Extended Framework for Optimal Local Cuts and Non-Horizontal Cluster Selection from Clustering Hierarchies",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.18729",
+  "title": "TimeLAVA: Learning-Agnostic Valuation for Time Series Data",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.18672",
+  "title": "scGTN: Deep Siamese Graph Transformer Network for Single-cell RNA Sequencing Clustering",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.18379",
+  "title": "RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.17856",
+  "title": "FlowRAG: Synergizing Explicit Reasoning via Frequency-Aware Multi-Granularity Graph Flow",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.16920",
+  "title": "Demystifying Variance in Circuit Discovery of LLMs",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.16219",
+  "title": "Graphical conditional generative modeling for digital twin modeling",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.16152",
+  "title": "The Quality-Utility Paradox: Why High-Reward Data Impairs Small Model Mathematical Reasoning",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.16112",
+  "title": "Scaling Adaptive Depth with Norm-Agnostic Residual Networks",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.15998",
+  "title": "Entity Labels Are Not Entity Signals: A Framework for Observable Relevance in Document Re-Ranking",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.15796",
+  "title": "DifFRACT: Diffusion Feature Reconstruction and Attribution for Circuit Tracing",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.15331",
+  "title": "HoloRec: Holistic Encoding and Interleaved Reasoning for Generative Recommendation",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.15219",
+  "title": "Can Neural Networks Achieve Optimal Computational-statistical Tradeoff? An Analysis on Single-Index Model",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.15188",
+  "title": "Adaptive Inference-Time Scaling via Early-Step Latent Verification for Image Editing",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.15007",
+  "title": "Nemotron 3 Ultra: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
+  "hits": [
+   "a-quant",
+   "a-distill",
+   "a-fmt",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.14735",
+  "title": "UtVAA: Ultra-tiny Vision Transformer with Affix Attention for Mobile Image Classification",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.14647",
+  "title": "Listening with Attention: Entropy-Guided Explainability for Transformer-Based Audio Models",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.14565",
+  "title": "CANN-EUCLID: unsupervised constitutive artificial neural network model discovery from full-field data",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.14292",
+  "title": "A Robust Point Cloud Analysis Framework Inspired By Primary Visual Cortex",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.13732",
+  "title": "When Sample Selection Bias Precipitates Model Collapse",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.13302",
+  "title": "Physics-Guided Spatiotemporal Learning for Coastal Wave Peak Period Estimation from Video",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.13236",
+  "title": "Decoding Insect Song: A Multitask Semisupervised Orthoptera Bioacoustic Classifier",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.11662",
+  "title": "TreeSeeker: Tree-Structured Trial, Error, and Return in Deep Search",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.11096",
+  "title": "IDEAL: In-DEpth ALignment Makes A Discrete Representation AutoEncoder",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.10916",
+  "title": "Range Penalization: Theoretical Insights with Applications in Federated Learning",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.10896",
+  "title": "Flash-GMM: A Memory-Efficient Kernel for Scalable Soft Clustering",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.10537",
+  "title": "Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.10219",
+  "title": "Fast Exact Nearest-Neighbor Learning for High-Frequency Financial Time Series",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.10130",
+  "title": "Effective Training Principles of Physical Reservoirs",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.09941",
+  "title": "Stochastic weather generators for high-frequency wind vector time series",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.09787",
+  "title": "Zero Touch Predictive Orchestration: Automating Time-Series Models for the Cloud-Edge Continuum",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.08947",
+  "title": "NeuDW-CIM: a 65-nm 0.8-pJ/Sop Reconfigurable Neuromorphic Compute-in-Memory Macro with Nonlinear Dendrites and K-Winners",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.08744",
+  "title": "MB-Loc: Multi-planar Bird's-eye-view Localization in outdoor LiDAR scenes",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.08511",
+  "title": "Look Less, Reason More: Block-wise Attention Skipping for Efficient Multimodal LLMs",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.08446",
+  "title": "Sparrow: Sparse Rollout for Stable and Efficient Long-context RL of Large Language Models",
+  "hits": [
+   "a-distill",
+   "t-sparse",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.07725",
+  "title": "GNSS-FM: A Self-Supervised Foundation Model for Daily GNSS Displacement Time Series",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.07383",
+  "title": "RhinoVLA Technical Report",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.06565",
+  "title": "AI Level of Detail: Distance-Aware ML Model Precision Selection for Real-Time Human Motion Prediction in Games",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.05362",
+  "title": "MOSAIC: A Workload-Driven Simulation and Design-Space Exploration Framework for Heterogeneous NPUs",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.05266",
+  "title": "Sharp Low-Degree Thresholds for Planted-vs-Planted Testing",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.05232",
+  "title": "Differentiable Efficient Operator Search",
+  "hits": [
+   "a-prune"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.04438",
+  "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.04251",
+  "title": "SBP-Net: Learning Thin Structure Reconstruction with Sliding-Box Projections",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.04154",
+  "title": "EpiFormer: Learning Antigen-Antibody Interactions for Epitope Prediction via Geometric Deep Learning",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.03212",
+  "title": "Bayesian Tensor Decomposition with Diffusion Model Prior",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.03069",
+  "title": "ROBUST-WT: Robust Uncertainty-aware Segmentation Transform via Whitening and Training Enhancements",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.02963",
+  "title": "KForge: LLM-Driven Cross-Platform Kernel Generation for AI Accelerators",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.02841",
+  "title": "Learning Coherent Representations: A Topological Approach to Interpretability",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.02333",
+  "title": "O-POPE: High-Frequency Pipelined Outer Product based GEMM acceleration with minimal buffering overhead",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.01987",
+  "title": "Graph Edit Distance Formulation for the Vehicle Routing Problem: Theory and Analysis",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.01948",
+  "title": "Rank-Constrained Deep Matrix Completion for Group Recommendation",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.01914",
+  "title": "Mechanistic Diagnostics of Spatial Lexical Bias in Multimodal Large Language Model Spatial Reasoning",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.01884",
+  "title": "EVA-Net: Subject-Independent EEG Motor Decoding with Video-Derived Motor Priors",
+  "hits": [
+   "a-distill"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.01689",
+  "title": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.01671",
+  "title": "When Meaning Travels: A Granular Lens on Hybrid-MoE's Role in Idiomatic Understanding for Language Models",
+  "hits": [
+   "nn-ctx"
+  ]
+ },
+ {
+  "score": 1,
+  "id": "2606.01602",
+  "title": "Estimating Mutual Information between Time Series and Temporal Event Sequences Across Diverse Analysis Tasks",
+  "hits": [
+   "a-quant"
+  ]
+ },
+ {
+  "score": 0.5,
+  "id": "2606.28027",
+  "title": "MLVC: Multi-platform Learned Video Codec for Real-World Deployment",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "t-deploy",
+   "nn-ctx",
+   "x-codec"
+  ]
+ },
+ {
+  "score": 0.5,
+  "id": "2606.10944",
+  "title": "Express Language Modeling",
+  "hits": [
+   "a-compress"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.31688",
+  "title": "Semantic Occupancy Prediction with Dual Range-Voxel Representation",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.31609",
+  "title": "Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.31230",
+  "title": "Learning Gaussian Graphical Models from a Glauber Trajectory Without Mixing",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.30937",
+  "title": "No Adaptation Without Observation: Observability-Constrained Test-Time Prompt Tuning for LiDAR Semantic Segmentation",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.29657",
+  "title": "Safety from Honesty in a Disinterested AI Predictor",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.29261",
+  "title": "Nonlinear mixture model motivated subspace clustering",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.28971",
+  "title": "Self-Evolving Agentic Image Restoration via Deliberate Planning and Intuitive Execution",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.28459",
+  "title": "scKDGM: KAN-guided Dynamic Graph Masked Learning for Single-Cell RNA-seq Clustering",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.28372",
+  "title": "Constraint-aware Optimization in Auto-Tuning",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.26881",
+  "title": "Accelerated sampling using SamAdams variable timesteps and position-adaptive Langevin dynamics",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.24173",
+  "title": "Lightweight Transformer Models for On-Device Fault Detection: A Benchmark Study on Resource-Constrained Deployment",
+  "hits": [
+   "a-quant",
+   "t-deploy",
+   "nn-ctx",
+   "x-data"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.23743",
+  "title": "Sol Video Inference Engine: Agent-Native Full-Stack Acceleration Framework for Efficient Video Generation",
+  "hits": [
+   "a-quant",
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.23486",
+  "title": "From Reconstruction to Decision: A Post-Encoder Plug-in Adapter for Curvilinear Segmentation",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.22922",
+  "title": "Hierarchical Reinforcement Learning for Sparse-Reward Search in Commutative Algebra",
+  "hits": [
+   "t-sparse",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.22252",
+  "title": "Evolving Spatial Weights for Cartographic Synthesis",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.21096",
+  "title": "SLeDGe: Semi-Supervised Learning on Data Streams with Graph Structure Learning",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.18502",
+  "title": "Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications",
+  "hits": [
+   "a-quant",
+   "t-deploy",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.17491",
+  "title": "A Bayesian Boolean Matrix Factorization with Application to Copy Number Analysis in Cancer",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.16978",
+  "title": "Task-Error Residual Learning for Real-Robot Five-Ball Juggling",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.12840",
+  "title": "CLARITree: Cholesky and Lookahead Accelerations for Regression with Interpretable Piecewise Linear Trees",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.11792",
+  "title": "MultiToP: Learning to Patch Visual Tokens to Mitigate Hallucinations in Video Large Multimodal Models",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.10285",
+  "title": "OpenRTLSet: A Fully Open-Source Dataset for Large Language Model-based Verilog Module Design",
+  "hits": [
+   "a-quant",
+   "a-fmt",
+   "nn-ctx",
+   "x-data"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.10085",
+  "title": "Structured Adaptive Tensor Prediction for Streaming Data",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.09926",
+  "title": "Sample Where You Struggle: Sharpening Base Model Reasoning via Entropy-Guided Power Sampling",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.08896",
+  "title": "FAME: Forecastability-Aware Mixture of Experts for Heterogeneous Time Series Forecasting",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.08702",
+  "title": "ConMem: Structured Memory-Guided Adaptation in Training-Free Multi-Agent Systems",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.08041",
+  "title": "Wispy to Voluminous: Prior-free Multi-view Capture of Strand-level Facial Hair",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.07924",
+  "title": "Decoupling Semantics and Logic: A Training-Free Coarse-to-Fine Pipeline for Video Retrieval-Augmented Generation",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": 0,
+  "id": "2606.06369",
+  "title": "Visual Commonsense Driven Knowledge Refinements for Scene Graph Generation",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.03581",
+  "title": "UnsOcc: 3D Semantic Occupancy Prediction in Unstructured Scene via Rendering Fusion",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.01825",
+  "title": "ROGLE: Robust Global-Local Alignment with Automated Region Supervision for Text-Based Person Search",
+  "hits": []
+ },
+ {
+  "score": 0,
+  "id": "2606.01636",
+  "title": "Pave-GRPO: Beyond Instantaneous Guidance through Principled Average Velocity Decomposition",
+  "hits": []
+ },
+ {
+  "score": -0.5,
+  "id": "2606.31650",
+  "title": "ECHO: Prune To Act, Trace To Learn With Selective Turn Memory In Agentic RL",
+  "hits": [
+   "t-prune",
+   "a-compress",
+   "nn-ctx",
+   "x-rag",
+   "x-rl"
+  ]
+ },
+ {
+  "score": -0.5,
+  "id": "2606.20954",
+  "title": "Learning What Not to Forget: Long-Horizon Agent Memory from a Few Kilobytes of Learning",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -0.5,
+  "id": "2606.15906",
+  "title": "MAGE-RAG: Multigranular Adaptive Graph Evidence for Agentic Multimodal RAG in Long-Document QA",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -0.5,
+  "id": "2606.14783",
+  "title": "The Vision Encoder as a Privacy Boundary: Visual-Token Side Channels in Encoder-Free Vision-Language Models",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx",
+   "x-semcom"
+  ]
+ },
+ {
+  "score": -0.5,
+  "id": "2606.14752",
+  "title": "X-Tokenizer: A Multimodal Action Tokenizer for Vision-Language-Action Pretraining",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "nn-ctx",
+   "x-tokenizer"
+  ]
+ },
+ {
+  "score": -0.5,
+  "id": "2606.08696",
+  "title": "Agentic Search for Counterfactual Recourse under Fixed LLM Budgets",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -0.5,
+  "id": "2606.03463",
+  "title": "DMF: A Deterministic Memory Framework for Conversational AI Agents",
+  "hits": [
+   "a-prune",
+   "a-compress",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.31648",
+  "title": "Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.24561",
+  "title": "Quantum CT via Dynamic Interval Encoding and Prior-Balanced QUBO Reconstruction",
+  "hits": [
+   "a-quant",
+   "a-lowbit",
+   "x-sci"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.24245",
+  "title": "AutoSpec: Safety Rule Evolution for LLM Agents via Inductive Logic Programming",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.22826",
+  "title": "MINCE: Shrinking LLM Evaluation Datasets via Few-Model Monte Carlo Calibration",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-data"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.22482",
+  "title": "NeutronSparse: Coordinating Heterogeneous Engines for Sparse Matrix Multiplication on NPUs",
+  "hits": [
+   "t-sparse",
+   "x-num"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.20031",
+  "title": "A Neuromorphic Reinforcement Learning Framework for Efficient Pathfinding in Robotic Mobile Fulfillment Systems",
+  "hits": [
+   "a-distill",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.19382",
+  "title": "DynAMO:Dynamic Asset Management Orchestration via Topological Multi-Agent Scheduling",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.18967",
+  "title": "EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.18810",
+  "title": "Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards",
+  "hits": [
+   "a-distill",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.18249",
+  "title": "Unified Multimodal Autoregressive Modeling with Shared Context-Visual Tokenizer is Key to Unification",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-tokenizer"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.17850",
+  "title": "CUTh-Solver: GPU-Accelerated Sparse Matrix Solver for High-Resolution Thermal Simulation of 3D ICs",
+  "hits": [
+   "t-sparse",
+   "x-num"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.17016",
+  "title": "TokenPilot: Cache-Efficient Context Management for LLM Agents",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.14470",
+  "title": "GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.13949",
+  "title": "Minim: Privacy-Aware Minimal View for Agents via Trusted Local Sanitization",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.12674",
+  "title": "Evoflux: Inference-Time Evolution of Executable Tool Workflows for Compact Agents",
+  "hits": [
+   "a-prune",
+   "a-distill",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.10209",
+  "title": "Less Context, Better Agents: Efficient Context Engineering for Long-Horizon Tool-Using LLM Agents",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.07929",
+  "title": "Stress-testing medical large language models reveals latent safety pathology beyond benchmark accuracy",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-data"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.06787",
+  "title": "AdMem: Advanced Memory for Task-solving Agents",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.06176",
+  "title": "RQUL-UIE: Revitalizing Quality-Unstable Labels for Underwater Image Enhancement via In-Dataset Self-Supervision",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-data"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.06036",
+  "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.05855",
+  "title": "EEGDancer: Dynamic Emotion Latent Space Masked Modeling with Reinforcement Learning for EEG Continuous Emotion Prediction",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-rl"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.05836",
+  "title": "ProSPy: A Profiling-Driven SQL-Python Agentic Framework for Enterprise Text-to-SQL",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.02951",
+  "title": "SCOPE: Real-Time Natural Language Camera Agent at the Edge",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.02739",
+  "title": "EntangleCodec: A Unified Discrete Audio Tokenizer via Semantic-Acoustic Entanglement",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-tokenizer"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.02304",
+  "title": "Unified Context Evolution for LLM Agents",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1,
+  "id": "2606.01935",
+  "title": "Unified Driving Tokens: Representation- and Geometry-Guided Discrete Tokenizer for Driving World Models and Planning",
+  "hits": [
+   "a-quant",
+   "nn-ctx",
+   "x-tokenizer"
+  ]
+ },
+ {
+  "score": -1.5,
+  "id": "2606.24937",
+  "title": "The Hitchhiker's Guide to Agentic AI: From Foundations to Systems",
+  "hits": [
+   "a-compress",
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -1.5,
+  "id": "2606.12806",
+  "title": "Quantum Reservoir Computing for Short-Term Power Load Forecasting in Resource-Constrained Energy Systems",
+  "hits": [
+   "a-quant",
+   "a-compress",
+   "x-sci"
+  ]
+ },
+ {
+  "score": -2,
+  "id": "2606.28365",
+  "title": "CAMI: Cost-Aware Agent-Guided Multi-Indexing for Semantic Retrieval",
+  "hits": [
+   "a-prune",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -2,
+  "id": "2606.28109",
+  "title": "MMAO: A Metabolic Multi-Agent Optimizer with Endogenous Resource Allocation for Continuous and Discrete Optimization",
+  "hits": [
+   "a-prune",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -2,
+  "id": "2606.22778",
+  "title": "HAKARI-Bench: A Lightweight Benchmark for Comparing Retrieval Architectures and Efficiency Settings under Unified Conditions",
+  "hits": [
+   "a-quant",
+   "x-data"
+  ]
+ },
+ {
+  "score": -2,
+  "id": "2606.21832",
+  "title": "AgentCAT: Simulating Computerized Adaptive Testing via Multi-Agent Large Language Models",
+  "hits": [
+   "nn-ctx",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -2,
+  "id": "2606.15980",
+  "title": "Do Activation Monitors Survive Model Updates? Benchmarking, Predicting, and Repairing Activation-Monitor Staleness",
+  "hits": [
+   "a-quant",
+   "x-data"
+  ]
+ },
+ {
+  "score": -2,
+  "id": "2606.11249",
+  "title": "MASK: Multi-Agent Semantic K-Scheduling for Risk-Sensitive 6G Robotics",
+  "hits": [
+   "a-quant",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -2,
+  "id": "2606.09641",
+  "title": "MAVIS: Multi-Agent Video Retrieval via Structured Video Understanding",
+  "hits": [
+   "a-prune",
+   "x-rag"
+  ]
+ },
+ {
+  "score": -3,
+  "id": "2607.18270",
+  "title": "Trajectory-Aware Clinical Risk Prediction via Severity-Grounded Knowledge Graphs and Retrieval-Augmented Generation",
+  "hits": [
+   "x-rag"
+  ]
+ },
+ {
+  "score": -3,
+  "id": "2606.31895",
+  "title": "RESOLVE: A Multi-Resolution and Multi-Modal Dataset for Roadside Cooperative Perception",
+  "hits": [
+   "x-data"
+  ]
+ },
+ {
+  "score": -3,
+  "id": "2606.08735",
+  "title": "Structure-Conditioned Actor-Critic Branches for Quality-Diversity Reinforcement Learning",
+  "hits": [
+   "x-rl"
+  ]
+ },
+ {
+  "score": -3,
+  "id": "2606.07492",
+  "title": "Bradley-Terry Rankings for Recommender Systems Across Dataset Taxonomies",
+  "hits": [
+   "x-data"
+  ]
+ },
+ {
+  "score": -4,
+  "id": "2606.01619",
+  "title": "ReSkill: Reconciling Skill Creation with Policy Optimization in Agentic RL",
+  "hits": [
+   "a-prune",
+   "nn-ctx",
+   "x-rag",
+   "x-rl"
+  ]
+ },
+ {
+  "score": -5,
+  "id": "2606.22995",
+  "title": "Group-Graph Policy Optimization for Long-Horizon Agentic Reinforcement Learning",
+  "hits": [
+   "nn-ctx",
+   "x-rag",
+   "x-rl"
+  ]
+ },
+ {
+  "score": -6,
+  "id": "2606.28652",
+  "title": "Adaptive Iterative Hard Thresholding for Online High-dimensional Quantile Regression",
+  "hits": [
+   "x-sci",
+   "x-num"
+  ]
+ },
+ {
+  "score": -6,
+  "id": "2606.04492",
+  "title": "Episodic Memory Temporal Consistency for Cooperative Multi-Agent Reinforcement Learning",
+  "hits": [
+   "x-rag",
+   "x-rl"
+  ]
+ }
+]
