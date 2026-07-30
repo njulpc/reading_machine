@@ -1,21 +1,48 @@
-# macOS
-.DS_Store
-
-# Python
 __pycache__/
-*.pyc
-*.pyo
-.env
-venv/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyTorch
+*.pth
+*.pt
+*.bin
+*.safetensors
 
 # Jupyter
-.ipynb_checkpoints/
-
-# Data
-*.pdf
-*.zip
-*.tar.gz
+.ipynb_checkpoints
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model outputs
+pruned_*/
+outputs/
+checkpoints/
+
+# Logs
+*.log
+wandb/
