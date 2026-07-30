@@ -55,8 +55,9 @@
 
 ### 3.2 分点创新
 
-1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"demonstrate the effectiveness of E-DiT, achieving up to $\sim$2$\times$ speedup with negligible loss in generation quality"*
 
 ---
 
@@ -68,19 +69,13 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Extensive experiments across 2D image (Qwen-Image and FLUX) and 3D asset (Hunyuan3D-3.0) demonstrate the effectiveness of E-DiT, achieving up to $\sim$2$\times$ speedup with negligible loss in generation quality."*
-
-**摘要中出现的关键数值**（去重后）：2, 3, 3.0
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"To address this limitation, we propose \textbf{Elastic Diffusion Transformer (E-DiT)}, an adaptive acceleration framework for DiT that effectively improves efficiency while maintaining generation quality."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 剪枝方法的常见局限包括：(1) 重要性评估准则存在近似误差，高稀疏度下精度下降明显；(2) 非结构化稀疏难以转化为实际加速，结构化剪枝又损失更多精度；(3) 多数方法需要额外的微调或重训练成本。
 

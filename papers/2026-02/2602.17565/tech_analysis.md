@@ -55,19 +55,14 @@
 ### 3.2 分点创新
 
 1. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Conditioned on the training data and without any distributional assumptions, we prove that for any squared prediction risk (including out-of-distribution), the optimally mixed student strictly improves upon the ridge teacher for every regularization level $\lambda > 0$ at which the teacher ridge risk $R(\lambda)$ is nonstationary (ie, $R'(\lambda) \neq 0$)."*
-
-**摘要中出现的关键数值**（去重后）：0
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

@@ -55,7 +55,6 @@
 ### 3.2 分点创新
 
 1. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -67,11 +66,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Experiments with Llama-3.1-8B demonstrate that Latent Context Compilation preserves fine-grained details and reasoning capabilities where prior methods falter, effectively decoupling memory density from model parameters even at a 16x compression ratio."*
-
-**摘要中出现的关键数值**（去重后）：16x, 3.1, 8
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**知识蒸馏（Knowledge Distillation）**方向的研究，提出了名为 **Online** 的方法，在 GSM8K 等基准上进行了验证。
+本文属于**知识蒸馏（Knowledge Distillation）**方向的研究，在 GSM8K 等基准上进行了验证。
 
 > 论文摘要首句：*"Quantifying uncertainty in Large Language Models (LLMs) is essential for mitigating hallucinations and enabling risk-aware deployment in safety-critical tasks."*
 
 ### 1.2 一句话总结
 
-本文提出 Online：We propose a framework that leverages the small draft models to efficiently estimate token-level EU, bypassing the need for full-scale ensembling.（摘要原文）
+本文We propose a framework that leverages the small draft models to efficiently estimate token-level EU, bypassing the need for full-scale ensembling.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"We propose a framework that leverages the small draft models to efficiently estimate token-level EU, bypassing the need for full-scale ensembling."*
 - *"Theoretically grounded in a Bias-Variance Decomposition, our approach approximates EU via Jensen-Shannon divergence among drafts (variance proxy) and KL divergence between the draft mixture and the target (bias proxy)."*
 
-从上述表述可见，作者关注的核心矛盾是在小模型上尽可能复现大模型的能力。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -57,9 +55,8 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Online**，属于知识蒸馏（Knowledge Distillation）方向的新方案；
-2. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -97,7 +94,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（Online）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

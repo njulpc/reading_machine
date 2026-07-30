@@ -57,19 +57,14 @@
 
 1. 提出了可命名的新方法/框架 **LoRDO**，属于低秩分解/低秩适应（Low-Rank）方向的新方案；
 2. 在秩分配、分解方式或低秩适配机制方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"To restore subspace exploration, we introduce a full-rank quasi-hyperbolic update. $\texttt{LoRDO}$ achieves near-parity with low-rank $\texttt{DDP}$ in language modeling and downstream tasks at model scales of $125$M--$720$M, while reducing communication by $\approx 10 \times$."*
-
-**摘要中出现的关键数值**（去重后）：10, 125, 720
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -90,7 +85,7 @@
 1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
 2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
 
-3. 本文（LoRDO）表明低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 LoRDO 在低秩分解/低秩适应（Low-Rank）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

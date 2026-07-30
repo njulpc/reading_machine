@@ -54,15 +54,17 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **STIR**，属于知识蒸馏（Knowledge Distillation）方向的新方案；
-2. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"differential intrinsic action induction harvests latent reasoning successes to crystallize steering primitives; ("*
+2. *"sparse control basis construction curates a compact, geometrically diverse tool library; and ("*
+3. *"value-modulated trajectory intervention dynamically injects context-specific impulses via anchor-based gating"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
@@ -74,9 +76,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"To address this limitation, we propose STIR (Self-Distilled Tools for Internal Reasoning), a framework that reformulates reasoning enhancement as a dynamic latent trajectory control problem."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 知识蒸馏的常见局限包括：(1) 学生与教师之间的能力差距限制了蒸馏上限；(2) 蒸馏过程通常需要额外训练数据与算力；(3) 蒸馏后模型在分布外数据上的鲁棒性可能弱于教师。
 
@@ -92,7 +92,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（STIR）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 STIR 在知识蒸馏（Knowledge Distillation）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

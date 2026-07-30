@@ -60,13 +60,11 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We demonstrate that the neural tangent space spanned by the input data can be induced by dataset distillation, yielding a 20-100$\times$ reduction in required Jacobian calculations."*
-
-**摘要中出现的关键数值**（去重后）：100
+- *"Building on these insights, we propose the distilled neural tangent kernel (DNTK), which combines NTK-tuned dataset distillation with state-of-the-art projection methods to reduce up NTK computational complexity by up to five orders of magnitude while preserving kernel structure and predictive performance."*
 
 ---
 

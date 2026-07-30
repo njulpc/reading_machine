@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）、向量量化（Vector Quantization）**方向的研究，提出了名为 **KBVQ-MoE** 的方法，目标模型/架构涉及 Qwen1.5-MoE-A2.7B。
+本文属于**量化（Quantization）、向量量化（Vector Quantization）**方向的研究，提出了名为 **KBVQ-** 的方法，目标模型/架构涉及 Qwen1.5-MoE-A2.7B。
 
 > 论文摘要首句：*"Mixture of Experts (MoE) models have achieved great success by significantly improving performance while maintaining computational efficiency through sparse expert activation."*
 
 ### 1.2 一句话总结
 
-本文提出 KBVQ-MoE：To address these issues, we propose KBVQ-MoE, a novel VQ framework to enhance extremely low-bit quantization for MoE-based LLMs.（摘要原文）
+本文提出 KBVQ-：To address these issues, we propose KBVQ-MoE, a novel VQ framework to enhance extremely low-bit quantization for MoE-based LLMs.（摘要原文）
 
 ---
 
@@ -54,9 +54,12 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **KBVQ-MoE**，属于量化（Quantization）、向量量化（Vector Quantization）方向的新方案；
-2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"redundant representations among experts cause VQ to repeatedly quantize similar representations for each expert, resulting in inefficient use of limited codebook capacity; and ("*
+2. *"cumulative output bias is amplified by expert aggregation in MoE layers, leading to distributional shifts in the quantized outputs"*
+3. *"input-driven redundancy elimination, where a Karhunen-Loeve Transform (KLT) guided singular value decomposition (SVD) extracts dominant weight components and shares them across experts; and ("*
+4. *"bias-corrected output stabilization, where vector quantization is applied only to expert-specific (non-redundant) representations and the quantized outputs are corrected via channel-wise affine compensation"*
 
 ---
 
@@ -68,13 +71,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Yet, directly applying VQ to MoEs often leads to substantial performance degradation due to two critical obstacles: (1) redundant representations among experts cause VQ to repeatedly quantize similar representations for each expert, resulting in inefficient use of limited codebook capacity; and (2) cumulative output bias is amplified by expert aggregation in MoE layers, leading to distributional shifts in the quantized outputs."*
-- *"KBVQ-MoE integrates two techniques: (1) input-driven redundancy elimination, where a Karhunen-Loeve Transform (KLT) guided singular value decomposition (SVD) extracts dominant weight components and shares them across experts; and (2) bias-corrected output stabilization, where vector quantization is applied only to expert-specific (non-redundant) representations and the quantized outputs are corrected via channel-wise affine compensation."*
-- *"For example, 3-bit quantization of Qwen1.5-MoE-A2.7B achieves an average accuracy of 67.99, nearly identical to the FP16 baseline of 68.07, underscoring KBVQ-MoE's potential for efficient deployment on edge devices and other resource-constrained platforms."*
-
-**摘要中出现的关键数值**（去重后）：1, 1.5, 16, 2, 2.7, 3, 67.99, 68.07
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -96,7 +93,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（KBVQ-MoE）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 KBVQ- 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

@@ -58,14 +58,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"Experiments on three public datasets show that CrossAdapt achieves 0.27-0.43% AUC improvements while reducing training time by 43-71%."*
-- *"Large-scale deployment on Tencent WeChat Channels (~10M daily samples) further demonstrates its effectiveness, significantly mitigating AUC degradation, LogLoss increase, and prediction bias compared to standard distillation baselines."*
 
-**摘要中出现的关键数值**（去重后）：0.27, 0.43%, 10, 43, 71%
+**摘要中出现的关键数值**（去重后）：0.27, 0.43%, 43, 71%
 
 ---
 

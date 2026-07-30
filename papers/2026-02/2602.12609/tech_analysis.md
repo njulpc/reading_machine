@@ -15,13 +15,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）、低秩分解/低秩适应（Low-Rank）、高效架构设计**方向的研究，提出了名为 **Multi-Bit** 的方法。
+本文属于**量化（Quantization）、低秩分解/低秩适应（Low-Rank）、高效架构设计**方向的研究，提出了名为 **QuEPT** 的方法。
 
 > 论文摘要首句：*"Elastic precision quantization enables multi-bit deployment via a single optimization pass, fitting diverse quantization scenarios.Yet, the high storage and optimization costs associated with the Transformer architecture, research on elastic quantization remains limited, particularly for large language models.This paper proposes QuEPT, an efficient post-training scheme that reconstructs block-wise multi-bit errors with one-shot calibration on a small data slice."*
 
 ### 1.2 一句话总结
 
-本文提出 Multi-Bit：Elastic precision quantization enables multi-bit deployment via a single optimization pass, fitting diverse quantization scenarios.Yet, the high storage and optimization costs associated with the Transformer architecture, research on elastic quantization remains limited, particularly for large language models.This paper proposes QuEPT, an efficient post-training scheme that reconstructs block-wise multi-bit errors with one-shot calibration on a small data slice.（摘要原文）
+本文提出 QuEPT：Elastic precision quantization enables multi-bit deployment via a single optimization pass, fitting diverse quantization scenarios.Yet, the high storage and optimization costs associated with the Transformer architecture, research on elastic quantization remains limited, particularly for large language models.This paper proposes QuEPT, an efficient post-training scheme that reconstructs block-wise multi-bit errors with one-shot calibration on a small data slice.（摘要原文）
 
 ---
 
@@ -56,7 +56,7 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Multi-Bit**，属于量化（Quantization）、低秩分解/低秩适应（Low-Rank）、高效架构设计方向的新方案；
+1. 提出了可命名的新方法/框架 **QuEPT**，属于量化（Quantization）、低秩分解/低秩适应（Low-Rank）、高效架构设计方向的新方案；
 2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
 3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
@@ -64,7 +64,7 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
@@ -76,9 +76,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Elastic precision quantization enables multi-bit deployment via a single optimization pass, fitting diverse quantization scenarios.Yet, the high storage and optimization costs associated with the Transformer architecture, research on elastic quantization remains limited, particularly for large language models.This paper proposes QuEPT, an efficient post-training scheme that reconstructs block-wise multi-bit errors with one-shot calibration on a small data slice."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 
@@ -94,7 +92,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（Multi-Bit）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 QuEPT 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

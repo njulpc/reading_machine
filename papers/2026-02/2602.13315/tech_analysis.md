@@ -73,9 +73,7 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Notably, on Qwen2.5-VL-7B-Instruct, IDPruner retains 95.18\% of baseline performance when pruning 75\% of the tokens, and still maintains 86.40\% even under an extreme 90\% pruning ratio."*
-
-**摘要中出现的关键数值**（去重后）：2.5, 7, 75, 86.40, 90, 95.18
+- *"We conduct extensive experiments across various model architectures and multimodal benchmarks, demonstrating that IDPruner achieves state-of-the-art performance and superior generalization across diverse architectures and tasks."*
 
 ---
 
@@ -97,7 +95,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（IDPruner）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 IDPruner 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

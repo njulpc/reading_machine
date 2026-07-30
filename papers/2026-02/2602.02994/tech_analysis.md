@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**知识蒸馏（Knowledge Distillation）、高效架构设计**方向的研究，提出了名为 **Teacher-Validated** 的方法。
+本文属于**知识蒸馏（Knowledge Distillation）、高效架构设计**方向的研究，提出了名为 **Video-OPD** 的方法。
 
 > 论文摘要首句：*"Reinforcement learning has emerged as a principled post-training paradigm for Temporal Video Grounding (TVG) due to its on-policy optimization, yet existing GRPO-based methods remain fundamentally constrained by sparse reward signals and substantial computational overhead."*
 
 ### 1.2 一句话总结
 
-本文提出 Teacher-Validated：We propose Video-OPD, an efficient post-training framework for TVG inspired by recent advances in on-policy distillation.（摘要原文）
+本文提出 Video-OPD：We propose Video-OPD, an efficient post-training framework for TVG inspired by recent advances in on-policy distillation.（摘要原文）
 
 ---
 
@@ -54,16 +54,19 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Teacher-Validated**，属于知识蒸馏（Knowledge Distillation）、高效架构设计方向的新方案；
+1. 提出了可命名的新方法/框架 **Video-OPD**，属于知识蒸馏（Knowledge Distillation）、高效架构设计方向的新方案；
 2. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
+3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"Empirical results demonstrate that Video-OPD consistently outperforms GRPO while achieving substantially faster convergence and lower computational cost, establishing on-policy distillation as an effective alternative to conventional reinforcement learning for TVG."*
 
 ---
 
@@ -85,7 +88,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（Teacher-Validated）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 Video-OPD 在知识蒸馏（Knowledge Distillation）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

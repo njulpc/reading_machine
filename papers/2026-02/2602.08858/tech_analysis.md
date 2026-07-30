@@ -71,18 +71,15 @@
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"It outperforms existing pruning methods in both zero-shot accuracies and WikiText-2 perplexity across various model types and parameter sizes."*
-- *"On LLaMA-2/3 and Qwen-1.5 models, FlattenGPT retains 90-96\% of zero-shot performance with a compression ratio of 20\%."*
+- *"It also outperforms other pruning methods in accelerating LLM inference, making it promising for enhancing the efficiency of transformers."*
 
-**摘要中出现的关键数值**（去重后）：1.5, 2, 3, 90, 96
+**摘要中出现的关键数值**（去重后）：2
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"As another line of model compression, channel pruning can better preserve performance, while it cannot reduce model depth and is challenged by inconsistent pruning ratios for individual layers."*
-- *"FlattenGPT allows to preserve the knowledge learned in all blocks, and remains consistent with the original transformer architecture."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 剪枝方法的常见局限包括：(1) 重要性评估准则存在近似误差，高稀疏度下精度下降明显；(2) 非结构化稀疏难以转化为实际加速，结构化剪枝又损失更多精度；(3) 多数方法需要额外的微调或重训练成本。
 
@@ -98,7 +95,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（FlattenGPT）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 FlattenGPT 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

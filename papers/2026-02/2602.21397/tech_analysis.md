@@ -72,7 +72,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"While extending prompts to both vision and text encoders across multiple transformer layers significantly boosts performance, it dramatically increases the number of trainable parameters, with state-of-the-art methods requiring millions of parameters and abandoning the parameter efficiency that makes prompt tuning attractive."*
 - *"In this work, we propose MMLoP (Multi-Modal Low-Rank Prompting), a framework that achieves deep multi-modal prompting with only 11.5K trainable parameters, comparable to early text-only methods like CoOp."*
+- *"To further close the accuracy gap with state-of-the-art methods, we introduce three complementary components: a self-regulating consistency loss that anchors prompted representations to frozen zero-shot CLIP features at both the feature and logit levels, a uniform drift correction that removes the global embedding shift induced by prompt tuning to preserve class-discriminative structure, and a shared up-projection that couples vision and text prompts through a common low-rank factor to enforce cross-modal alignment."*
 - *"Extensive experiments across three benchmarks and 11 diverse datasets demonstrate that MMLoP achieves a highly favorable accuracy-efficiency tradeoff, outperforming the majority of existing methods including those with orders of magnitude more parameters, while achieving a harmonic mean of 79.70\% on base-to-novel generalization."*
 
 **摘要中出现的关键数值**（去重后）：11, 11.5, 79.70
@@ -96,7 +98,7 @@
 1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
 2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
 
-3. 本文（MMLoP）表明低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 MMLoP 在低秩分解/低秩适应（Low-Rank）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

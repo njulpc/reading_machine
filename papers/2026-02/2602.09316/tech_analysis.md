@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**模型压缩相关**方向的研究，提出了名为 **RFID-MoE** 的方法，目标模型/架构涉及 DeepSeekMoE、Qwen3、Qwen3-30B，在 HellaSwag、PTB 等基准上进行了验证。
+本文属于**模型压缩相关**方向的研究，提出了名为 **RFID-** 的方法，目标模型/架构涉及 DeepSeekMoE、Qwen3、Qwen3-30B，在 HellaSwag、PTB 等基准上进行了验证。
 
 > 论文摘要首句：*"Mixture-of-Experts (MoE) based Large Language Models (LLMs) have achieved superior performance, yet the massive memory overhead caused by storing multiple expert networks severely hinders their practical deployment."*
 
 ### 1.2 一句话总结
 
-本文提出 RFID-MoE：In this work, we propose RFID-MoE, an effective framework for MoE compression by exploiting heterogeneous Routing Frequency and Information Density.（摘要原文）
+本文提出 RFID-：In this work, we propose RFID-MoE, an effective framework for MoE compression by exploiting heterogeneous Routing Frequency and Information Density.（摘要原文）
 
 ---
 
@@ -53,7 +53,7 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **RFID-MoE**，属于模型压缩相关方向的新方案；
+1. 提出了可命名的新方法/框架 **RFID-**，属于模型压缩相关方向的新方案；
 2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
@@ -92,7 +92,7 @@
 
 1. 理论分析与实证验证的结合能为压缩方法的设计提供更可靠的指导；
 
-2. 本文（RFID-MoE）表明该论文涉及模型压缩相关的理论或应用问题——其具体设计（见第 3 节）可作为后续工作的直接参考。
+2. 本文提出的 RFID- 在模型压缩相关方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

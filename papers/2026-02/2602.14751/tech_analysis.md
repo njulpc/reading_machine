@@ -53,6 +53,7 @@
 
 ### 3.2 分点创新
 
+1. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -64,7 +65,9 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"CAPA is model-agnostic, compatible with any ViT-based FM, and achieves state-of-the-art results across diverse condition patterns on both indoor and outdoor datasets."*
 
 ---
 

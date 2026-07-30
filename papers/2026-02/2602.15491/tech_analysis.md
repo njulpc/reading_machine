@@ -58,7 +58,7 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
@@ -66,9 +66,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"To address these limitations, we propose to introduce shape-gain decomposition, widely used in classical speech and audio coding, into the NAC framework."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 

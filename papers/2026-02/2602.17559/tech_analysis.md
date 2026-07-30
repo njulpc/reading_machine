@@ -56,7 +56,7 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
@@ -64,9 +64,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"These results indicate that, even under low-rank parameterizations, weight regularization remains an effective mechanism for mitigating task interference."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 低秩方法的常见局限包括：(1) 秩的选择缺乏理论最优准则，多依赖经验搜索；(2) 对本质满秩的权重矩阵，低秩近似会引入不可忽略的误差；(3) 与其他压缩手段（如量化）叠加时的误差耦合尚需研究。
 

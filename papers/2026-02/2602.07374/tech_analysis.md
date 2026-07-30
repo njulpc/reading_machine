@@ -55,24 +55,24 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **TernaryLM**，属于量化（Quantization）、稀疏化（Sparsity）方向的新方案；
-2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"validation perplexity of 58.42 on TinyStories with a cross-seed standard deviation of +/- 0.17 PPL, confirming stable optimization; ("*
+2. *"strong downstream transfer with 82.47% F1 on MRPC, surpassing DistilBERT despite using 55x less pretraining data; (3) 2.4x memory reduction (498 MB vs 1,197 MB for an FP32 model of identical architecture) with latency parity; and ("*
+3. *"an implicit regularization effect whereby the ternary constraint yields a train/val ratio of 1.05x versus 3.51x for the FP32 baseline, demonstrating that discrete weights prevent overfitting on small corpora"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We present TernaryLM, a 132M-parameter transformer trained natively with ternary quantization {-1, 0, +1} (log2(3) ~ 1.58-bit effective precision), achieving significant memory reduction without sacrificing language modeling capability."*
 - *"Our experiments demonstrate: (1) validation perplexity of 58.42 on TinyStories with a cross-seed standard deviation of +/- 0.17 PPL, confirming stable optimization; (2) strong downstream transfer with 82.47% F1 on MRPC, surpassing DistilBERT despite using 55x less pretraining data; (3) 2.4x memory reduction (498 MB vs 1,197 MB for an FP32 model of identical architecture) with latency parity; and (4) an implicit regularization effect whereby the ternary constraint yields a train/val ratio of 1.05x versus 3.51x for the FP32 baseline, demonstrating that discrete weights prevent overfitting on small corpora."*
 - *"We provide layer-wise sparsity analysis revealing that middle transformer layers (L5-L9) achieve 60-62% quantization sparsity versus 45-55% for boundary layers, establishing an actionable design principle for non-uniform precision allocation."*
-- *"Our implementation and trained models are publicly available at https://github.com/1nisharg/TernaryLM-Memory-Efficient-Language-Modeling."*
 
-**摘要中出现的关键数值**（去重后）：0, 0.17, 1, 1.05x, 1.58, 132, 197 MB, 2, 2.4x, 3, 3.51x, 32, 4, 45, 498 MB, 5, 55%, 55x, 58.42, 60
+**摘要中出现的关键数值**（去重后）：0.17, 1, 1.05x, 197 MB, 2, 2.4x, 3, 3.51x, 32, 4, 45, 498 MB, 5, 55%, 55x, 58.42, 60, 62%, 82.47%, 9
 
 ---
 
@@ -94,7 +94,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（TernaryLM）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 TernaryLM 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

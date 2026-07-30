@@ -70,10 +70,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Across a full rank $\times$ learning rate sweep, CeRA at rank 64 achieves the highest MATH pass@1 of any configuration in the grid (23.6\%), matching or exceeding both a rank-512 LoRA (22.4\%) and DoRA (19.8\%) while using only 1/8 of the parameter budget."*
 - *"With the rank and learning rate fixed, CeRA equals or outperforms LoRA in 10 of 12 matched settings."*
 
-**摘要中出现的关键数值**（去重后）：1, 10, 12, 19.8, 22.4, 23.6, 512, 64, 8
+**摘要中出现的关键数值**（去重后）：10, 12
 
 ---
 
@@ -94,7 +93,7 @@
 1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
 2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
 
-3. 本文（CeRA）表明低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 CeRA 在低秩分解/低秩适应（Low-Rank）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

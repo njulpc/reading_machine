@@ -70,10 +70,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Notably, for Qwen2.5-Omni-7B, OmniSIFT introduces only 4.85M parameters while maintaining lower latency than training-free baselines such as OmniZip."*
 - *"With merely 25% of the original token context, OmniSIFT consistently outperforms all compression baselines and even surpasses the performance of the full-token model on several tasks."*
 
-**摘要中出现的关键数值**（去重后）：2.5, 25%, 4.85, 7
+**摘要中出现的关键数值**（去重后）：25%
 
 ---
 
@@ -95,7 +94,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（OmniSIFT）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 OmniSIFT 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

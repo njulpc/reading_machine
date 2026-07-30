@@ -56,7 +56,8 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"CLIP-style text encoders limit semantic expressiveness and weaken fine-grained alignment"*
+1. *"multi-spectral inputs are informative but difficult to exploit consistently due to band redundancy and misalignment; and ("*
+2. *"CLIP-style text encoders limit semantic expressiveness and weaken fine-grained alignment"*
 
 ---
 
@@ -70,18 +71,15 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"While operational satellite systems often lack full multi-spectral coverage, making RGB-only inference highly desirable for scalable deployment, the adoption of VLFMs for satellite imagery remains hindered by two factors: (1) multi-spectral inputs are informative but difficult to exploit consistently due to band redundancy and misalignment; and (2) CLIP-style text encoders limit semantic expressiveness and weaken fine-grained alignment."*
 - *"Across EuroSAT, BigEarthNet, and ForestNet, SATtxt improves zero-shot classification on average by 4.2%, retrieval by 5.9%, and linear probing by 2.7% over baselines, showing an efficient path toward spectrum-aware vision-language learning for Earth observation."*
 
-**摘要中出现的关键数值**（去重后）：1, 2, 2.7%, 4.2%, 5.9%
+**摘要中出现的关键数值**（去重后）：2.7%, 4.2%, 5.9%
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"While operational satellite systems often lack full multi-spectral coverage, making RGB-only inference highly desirable for scalable deployment, the adoption of VLFMs for satellite imagery remains hindered by two factors: (1) multi-spectral inputs are informative but difficult to exploit consistently due to band redundancy and misalignment; and (2) CLIP-style text encoders limit semantic expressiveness and weaken fine-grained alignment."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 知识蒸馏的常见局限包括：(1) 学生与教师之间的能力差距限制了蒸馏上限；(2) 蒸馏过程通常需要额外训练数据与算力；(3) 蒸馏后模型在分布外数据上的鲁棒性可能弱于教师。
 

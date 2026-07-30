@@ -58,8 +58,8 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"To overcome the data-scale bottleneck in 3D datasets, we develop a progressive coarse-to-fine calibration construction strategy that constructs a highly compact subset to achieve both statistical purity and geometric representativeness"*
-2. *"We reformulate the quantization interval search as an optimization problem and introduce a ternary-search-based solver, reducing the computational complexity from $\mathcal{O}(N)$ to $\mathcal{O}(\log N)$ for accelerated deployment"*
+1. *"To overcome the data-scale bottleneck in 3D datasets, we develop a progressive coarse-to-fine calibration construction strategy that constructs a highly compact subset to achieve both statistical purity and geometric representativeness. ("*
+2. *"We reformulate the quantization interval search as an optimization problem and introduce a ternary-search-based solver, reducing the computational complexity from $\mathcal{O}(N)$ to $\mathcal{O}(\log N)$ for accelerated deployment. ("*
 3. *"To mitigate quantization error accumulation, we propose TRE-Guided Module-wise Compensation, which utilizes a Tail Relative Error (TRE) metric to adaptively identify and rectify distortions in modules sensitive to long-tailed activation outliers"*
 
 ---
@@ -74,12 +74,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"While Post-Training Quantization (PTQ) enables efficient inference without retraining, conventional methods, primarily optimized for 2D Vision Transformers, fail to transfer effectively to 3D models due to intricate feature distributions and prohibitive calibration overhead."*
-- *"Our contribution is threefold: (1) To overcome the data-scale bottleneck in 3D datasets, we develop a progressive coarse-to-fine calibration construction strategy that constructs a highly compact subset to achieve both statistical purity and geometric representativeness."*
-- *"(2) We reformulate the quantization interval search as an optimization problem and introduce a ternary-search-based solver, reducing the computational complexity from $\mathcal{O}(N)$ to $\mathcal{O}(\log N)$ for accelerated deployment."*
 - *"Extensive experiments on the VGGT and Pi3 benchmarks demonstrate that TAPTQ consistently outperforms state-of-the-art PTQ methods in accuracy while significantly reducing calibration time."*
 
-**摘要中出现的关键数值**（去重后）：1, 2, 3
+**摘要中出现的关键数值**（去重后）：3
 
 ---
 
@@ -101,7 +98,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（TAPTQ）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 TAPTQ 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

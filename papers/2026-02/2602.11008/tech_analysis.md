@@ -70,11 +70,11 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"We present ROCKET, a training-free model compression method that achieves state-of-the-art performance in comparison with factorization, structured-sparsification and dynamic compression baselines."*
 - *"ROCKET consistently outperforms existing compression approaches across different model architectures at 20-50\% compression rates."*
-- *"Notably, it retains over 90\% of the original model's performance at 30\% compression without any fine-tuning."*
 - *"Moreover, when applying a light fine-tuning phase, recovery is substantially enhanced: for instance, compressing Qwen3-14B to an 8B-parameter model and healing it with just 30 million tokens yields performance nearly on par with the original Qwen3-8B."*
 
-**摘要中出现的关键数值**（去重后）：14, 3, 30, 50, 8, 90
+**摘要中出现的关键数值**（去重后）：14, 3, 30, 50, 8
 
 ---
 
@@ -95,7 +95,7 @@
 1. 动态稀疏（运行时决定稀疏模式）比静态稀疏更灵活，但系统开销需要仔细评估；
 2. 稀疏训练与稠密训练后剪枝的两条路线各有适用场景，应结合训练预算选择；
 
-3. 本文（ROCKET）表明稀疏化利用权重或激活中的冗余结构，在训练或推理阶段引入稀疏性以降低计算与存储开销——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 ROCKET 在稀疏化（Sparsity）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

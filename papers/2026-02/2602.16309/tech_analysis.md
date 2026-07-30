@@ -54,8 +54,9 @@
 
 ### 3.2 分点创新
 
-1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"after a single fault injection, integer representations offer better resistance overall"*
 
 ---
 
@@ -69,13 +70,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We chose two common floating-point representations (32-bit, and 16-bit), and two integer representations (8-bit, and 4-bit)."*
-- *"We deployed four common image classifiers, ResNet-18, ResNet-34, ResNet-50, and VGG-11, on an embedded memory chip, and utilized a low-cost EMFI platform to trigger faults."*
-- *"Beyond accuracy evaluation, we characterize the injected fault pattern by analyzing the bit error rate, the spatial distribution of corrupted bytes, and the prevalence of 0xFE/0xFF byte values across formats, identifying the mechanisms responsible for the observed differences in resilience."*
-- *"Our results show that while floating-point representations exhibit almost a complete degradation in accuracy (Top-1 and Top-5) after a single fault injection, integer representations offer better resistance overall."*
 - *"In particular, the 8-bit representation on a relatively large network (VGG-11) retains Top-1 accuracy of around 70% and Top-5 at around 90%."*
 
-**摘要中出现的关键数值**（去重后）：0, 1, 11, 16, 18, 32, 34, 4, 5, 50, 70%, 8, 90%
+**摘要中出现的关键数值**（去重后）：1, 11, 5, 70%, 8, 90%
 
 ---
 

@@ -54,22 +54,24 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **FlashSchNet**，属于量化（Quantization）方向的新方案；
-2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"flash radial basis, which fuses pairwise distance computation, Gaussian basis expansion, and cosine envelope into a single tiled pass, computing each distance once and reusing it across all basis functions; ("*
+2. *"flash message passing, which fuses cutoff, neighbor gather, filter multiplication, and reduction to avoid materializing edge tensors in HBM; ("*
+3. *"flash aggregation, which reformulates scatter-add via CSR segment reduce, reducing atomic writes by a factor of feature dimension and enabling contention-free accumulation in both forward and backward passes; ("*
+4. *"channel-wise 16-bit quantization that exploits the low per-channel dynamic range in SchNet MLP weights to further improve throughput with negligible accuracy loss"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We present FlashSchNet, an efficient and accurate IO-aware SchNet-style GNN-MD framework built on four techniques: (1) flash radial basis, which fuses pairwise distance computation, Gaussian basis expansion, and cosine envelope into a single tiled pass, computing each distance once and reusing it across all basis functions; (2) flash message passing, which fuses cutoff, neighbor gather, filter multiplication, and reduction to avoid materializing edge tensors in HBM; (3) flash aggregation, which reformulates scatter-add via CSR segment reduce, reducing atomic writes by a factor of feature dimension and enabling contention-free accumulation in both forward and backward passes; (4) channel-wise 16-bit quantization that exploits the low per-channel dynamic range in SchNet MLP weights to further improve throughput with negligible accuracy loss."*
 - *"On a single NVIDIA RTX PRO 6000, FlashSchNet achieves 1000 ns/day aggregate simulation throughput over 64 parallel replicas on coarse-grained (CG) protein containing 269 beads (6.5x faster than CGSchNet baseline with 80% reduction of peak memory), surpassing classical force fields (eg MARTINI) while retaining SchNet-level accuracy and transferability."*
 
-**摘要中出现的关键数值**（去重后）：1, 1000, 16, 2, 269, 3, 4, 6.5x, 6000, 64, 80%
+**摘要中出现的关键数值**（去重后）：1000, 269, 6.5x, 6000, 64, 80%
 
 ---
 
@@ -91,7 +93,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（FlashSchNet）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 FlashSchNet 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

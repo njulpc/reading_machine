@@ -57,26 +57,23 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"Improper delimiter selection misaligns semantics with the KVCache, resulting in 28"*
-2. *"Variable-length blocks after splitting introduce over 73"*
-3. *"A uniform mapping strategy that transforms variable-length semantic blocks into a fixed-length format, reducing inference overhead by 4"*
+1. *"Improper delimiter selection misaligns semantics with the KVCache, resulting in 28.6% accuracy loss. ("*
+2. *"Variable-length blocks after splitting introduce over 73.1% additional inference overhead"*
+3. *"a dynamic importance-aware delimiter selection strategy, improving accuracy by 49.9%. ("*
+4. *"A uniform mapping strategy that transforms variable-length semantic blocks into a fixed-length format, reducing inference overhead by 4.9x"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"We observe that rigid splitting suffers from significant accuracy degradation (ranging from 5.5% to 55.1%) across different scenarios, owing to the scenario-dependent nature of the semantic boundaries."*
-- *"(1) Improper delimiter selection misaligns semantics with the KVCache, resulting in 28.6% accuracy loss."*
-- *"(2) Variable-length blocks after splitting introduce over 73.1% additional inference overhead."*
 - *"We propose: (1) a dynamic importance-aware delimiter selection strategy, improving accuracy by 49.9%."*
-- *"(2) A uniform mapping strategy that transforms variable-length semantic blocks into a fixed-length format, reducing inference overhead by 4.9x."*
-- *"Experiments show that DynSplit-KV achieves the highest accuracy, 2.2x speedup compared with FlashAttention and 2.6x peak memory reduction in long-context scenarios."*
 
-**摘要中出现的关键数值**（去重后）：1, 2, 2.2x, 2.6x, 28.6%, 4.9x, 49.9%, 5.5%, 55.1%, 73.1%
+**摘要中出现的关键数值**（去重后）：1, 49.9%, 5.5%, 55.1%
 
 ---
 
@@ -98,7 +95,7 @@ KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务�
 2. 注意力模式的可预测性（如重要 token 的分布规律）是设计驱逐/保留策略的核心先验；
 3. 长上下文评测基准（如 RULER、LongBench）应成为 KV Cache 方法的标配验证；
 
-4. 本文（DynSplit-KV）表明长上下文与长推理链场景下，KV Cache 的显存占用随序列长度线性增长，已成为大模型推理部署的主要瓶颈之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 DynSplit-KV 在KV Cache 压缩方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

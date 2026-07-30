@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）、硬件加速/软硬件协同**方向的研究，提出了名为 **Prefill-Only** 的方法，目标模型/架构涉及 Gemma-3、Llama-3.1、Qwen3-VL。
+本文属于**剪枝（Pruning）、硬件加速/软硬件协同**方向的研究，提出了名为 **POP** 的方法，目标模型/架构涉及 Gemma-3、Llama-3.1、Qwen3-VL。
 
 > 论文摘要首句：*"Large Language Models (LLMs) and Vision-Language Models (VLMs) have demonstrated remarkable capabilities."*
 
 ### 1.2 一句话总结
 
-本文提出 Prefill-Only：Leveraging this insight, we propose Prefill-Only Pruning (POP), a stage-aware inference strategy that safely omits deep layers during the computationally intensive prefill stage while retaining the full model for the sensitive decode stage.（摘要原文）
+本文提出 POP：Leveraging this insight, we propose Prefill-Only Pruning (POP), a stage-aware inference strategy that safely omits deep layers during the computationally intensive prefill stage while retaining the full model for the sensitive decode stage.（摘要原文）
 
 ---
 
@@ -55,9 +55,8 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Prefill-Only**，属于剪枝（Pruning）、硬件加速/软硬件协同方向的新方案；
+1. 提出了可命名的新方法/框架 **POP**，属于剪枝（Pruning）、硬件加速/软硬件协同方向的新方案；
 2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -69,19 +68,13 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Extensive experiments on Llama-3.1, Qwen3-VL, and Gemma-3 across diverse modalities demonstrate that POP achieves up to 1.37$\times$ speedup in prefill latency with minimal performance loss, effectively overcoming the accuracy-efficiency trade-off limitations of existing structured pruning methods."*
-
-**摘要中出现的关键数值**（去重后）：1.37, 3, 3.1
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Extensive experiments on Llama-3.1, Qwen3-VL, and Gemma-3 across diverse modalities demonstrate that POP achieves up to 1.37$\times$ speedup in prefill latency with minimal performance loss, effectively overcoming the accuracy-efficiency trade-off limitations of existing structured pruning methods."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 剪枝方法的常见局限包括：(1) 重要性评估准则存在近似误差，高稀疏度下精度下降明显；(2) 非结构化稀疏难以转化为实际加速，结构化剪枝又损失更多精度；(3) 多数方法需要额外的微调或重训练成本。
 
@@ -97,7 +90,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（Prefill-Only）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 POP 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

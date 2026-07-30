@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**知识蒸馏（Knowledge Distillation）、高效架构设计**方向的研究，提出了名为 **Pareto** 的方法。
+本文属于**知识蒸馏（Knowledge Distillation）、高效架构设计**方向的研究。
 
 > 论文摘要首句：*"Recent advances in game AI have demonstrated the feasibility of training agents that surpass top-tier human professionals in complex environments such as Honor of Kings (HoK), a leading mobile multiplayer online battle arena (MOBA) game."*
 
 ### 1.2 一句话总结
 
-本文提出 Pareto：In this work, we propose a Pareto optimality guided pipeline and design a high-efficiency student architecture search space tailored for mobile execution, enabling systematic exploration of the trade-off between performance and efficiency.（摘要原文）
+本文In this work, we propose a Pareto optimality guided pipeline and design a high-efficiency student architecture search space tailored for mobile execution, enabling systematic exploration of the trade-off between performance and efficiency.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"On one hand, the intricate multi-modal state representation and hierarchical action space of HoK demand large, sophisticated policy networks that are inherently difficult to compress into lightweight forms."*
 - *"On the other hand, production deployment requires high-frequency inference under strict energy and latency constraints on mobile platform."*
 
-从上述表述可见，作者关注的核心矛盾是在小模型上尽可能复现大模型的能力。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -53,18 +51,18 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Pareto**，属于知识蒸馏（Knowledge Distillation）、高效架构设计方向的新方案；
-2. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"Recent advances in game AI have demonstrated the feasibility of training agents that surpass top-tier human professionals in complex environments such as Honor of Kings (HoK), a leading mobile multiplayer online battle arena (MOBA) game."*
 - *"Experimental results demonstrate that the distilled model achieves remarkable efficiency, including an $12.4\times$ faster inference speed (under 0.5ms per frame) and a $15.6\times$ improvement in energy efficiency (under 0.5mAh per game), while retaining a 40.32% win rate against the original teacher model."*
 
 **摘要中出现的关键数值**（去重后）：0.5, 12.4, 15.6, 40.32%
@@ -73,9 +71,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"However, deploying such powerful agents on mobile devices remains a major challenge."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 知识蒸馏的常见局限包括：(1) 学生与教师之间的能力差距限制了蒸馏上限；(2) 蒸馏过程通常需要额外训练数据与算力；(3) 蒸馏后模型在分布外数据上的鲁棒性可能弱于教师。
 
@@ -91,7 +87,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（Pareto）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

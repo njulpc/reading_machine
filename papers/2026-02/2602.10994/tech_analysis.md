@@ -69,9 +69,7 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Experimental evaluations on four widely used benchmarks -- CIFAR-10, FashionMNIST, CIFAR-100, and ImageNet-100 -- demonstrate that SVDA consistently yields more interpretable attention patterns without sacrificing classification accuracy."*
-
-**摘要中出现的关键数值**（去重后）：10, 100
+- *"Vision Transformers (ViTs) have achieved state-of-the-art performance in image classification, yet their attention mechanisms often remain opaque and exhibit dense, non-structured behaviors."*
 
 ---
 

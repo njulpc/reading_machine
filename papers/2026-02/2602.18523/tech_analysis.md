@@ -52,25 +52,19 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"Staggered grokking order: multiplication generalizes first, followed by squaring, then addition, with consistent delays across seeds"*
-2. *"Universal integrability: optimization trajectories remain confined to an empirically invariant low-dimensional execution manifold; commutator defects orthogonal to this manifold reliably precede generalization"*
-3. *"Weight decay phase structure: grokking timescale, curvature depth, reconstruction threshold, and defect lead covary systematically with weight decay, revealing distinct dynamical regimes and a sharp no-decay failure mode"*
-4. *"Holographic incompressibility: final solutions occupy only 4--8 principal trajectory directions yet are distributed across full-rank weights and destroyed by minimal perturbations; SVD truncation, magnitude pruning, and uniform scaling all fail to preserve performance"*
+1. *"Staggered grokking order: multiplication generalizes first, followed by squaring, then addition, with consistent delays across seeds. ("*
+2. *"Universal integrability: optimization trajectories remain confined to an empirically invariant low-dimensional execution manifold; commutator defects orthogonal to this manifold reliably precede generalization. ("*
+3. *"Weight decay phase structure: grokking timescale, curvature depth, reconstruction threshold, and defect lead covary systematically with weight decay, revealing distinct dynamical regimes and a sharp no-decay failure mode. ("*
+4. *"Holographic incompressibility: final solutions occupy only 4--8 principal trajectory directions yet are distributed across full-rank weights and destroyed by minimal perturbations"*
 5. *"Transverse fragility and redundancy: removing less than 10% of orthogonal gradient components eliminates grokking, yet dual-task models exhibit partial recovery under extreme deletion, suggesting redundant center manifolds enabled by overparameterization"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"(2) Universal integrability: optimization trajectories remain confined to an empirically invariant low-dimensional execution manifold; commutator defects orthogonal to this manifold reliably precede generalization."*
-- *"(3) Weight decay phase structure: grokking timescale, curvature depth, reconstruction threshold, and defect lead covary systematically with weight decay, revealing distinct dynamical regimes and a sharp no-decay failure mode."*
-- *"(5) Transverse fragility and redundancy: removing less than 10% of orthogonal gradient components eliminates grokking, yet dual-task models exhibit partial recovery under extreme deletion, suggesting redundant center manifolds enabled by overparameterization."*
-
-**摘要中出现的关键数值**（去重后）：10%, 2, 3, 5
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

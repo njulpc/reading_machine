@@ -62,16 +62,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Classic multi-threshold activation hardware requires 2^n thresholds for $n$-bit outputs, causing a rapid increase in hardware cost as precision increases."*
-- *"Our design requires only basic comparators and 1-bit right shifters, supporting mixed-precision quantization and nonlinear functions such as SiLU."*
 - *"Compared with multi-threshold activators, GRAU reduces LUT consumption by over 90%, achieving higher hardware efficiency, flexibility, and scalability."*
-- *"The best trade-off is usually achieved with 6-8 segments, while complex nonlinearities under aggressive low-cost settings may suffer larger accuracy degradation."*
 
-**摘要中出现的关键数值**（去重后）：1, 2, 6, 8, 90%
+**摘要中出现的关键数值**（去重后）：90%
 
 ---
 
@@ -93,7 +90,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（GRAU）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 GRAU 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

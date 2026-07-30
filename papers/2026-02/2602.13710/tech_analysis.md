@@ -64,15 +64,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"While reducing weights to 1-bit precision through binarization can greatly improve efficiency, existing methods fail to narrow the distribution gap between binarized and full-precision weights, causing quantization errors to accumulate under long-horizon closed-loop execution and severely degrade actions."*
-- *"Finally, we quantize both salient and non-salient weights in the Harr domain with group-wise 1-bit quantization."*
 - *"We have evaluated our approach on different VLAs: on LIBERO, quantized OpenVLA-OFT retains 92.2% of full-precision performance; on SimplerEnv, quantized CogAct retains 93.6%, significantly outperforming state-of-the-art binarization methods."*
 
-**摘要中出现的关键数值**（去重后）：1, 92.2%, 93.6%
+**摘要中出现的关键数值**（去重后）：92.2%, 93.6%
 
 ---
 
@@ -94,7 +92,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（HBVLA）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 HBVLA 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

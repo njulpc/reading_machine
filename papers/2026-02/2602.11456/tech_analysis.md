@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）**方向的研究，提出了名为 **SparrowRL** 的方法，目标模型/架构涉及 Qwen3、Qwen3-8B。
+本文属于**量化（Quantization）**方向的研究，目标模型/架构涉及 Qwen3、Qwen3-8B。
 
 > 论文摘要首句：*"LLM post-training with reinforcement learning (RL) requires frequent synchronization of large model parameters between the trainer and distributed rollout actors."*
 
 ### 1.2 一句话总结
 
-本文提出 SparrowRL：Atop this insight, we present SparrowRL, a novel high-performance RL training system that preserves bit-exact updates without dropping or quantizing information, designed for commodity-networked, loosely-coupled GPU resources.（摘要原文）
+本文Atop this insight, we present SparrowRL, a novel high-performance RL training system that preserves bit-exact updates without dropping or quantizing information, designed for commodity-networked, loosely-coupled GPU resources.（摘要原文）
 
 ---
 
@@ -54,9 +54,7 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **SparrowRL**，属于量化（Quantization）方向的新方案；
-2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
 
 ---
 
@@ -68,22 +66,13 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Toward making RL practical in this regime, we observe that RL fine-tuning yields highly sparse per-step updates, with only around 1\% of parameter elements changing."*
-- *"On Qwen3 models from 4B to 14B deployed across up to four geographic regions, SparrowRL reduces per-step transfer payload by 79$\times$ for Qwen3-8B and improves throughput by 2.4--9.5$\times$ over full-weight broadcast across WAN, narrowing the throughput gap relative to an ideal RDMA single-datacenter baseline to within 8.91\%."*
-- *"By leveraging on-demand, cross-cloud GPUs over commodity links, SparrowRL delivers 1.21--1.59$\times$ higher tokens per dollar than reserved RDMA clusters at comparable throughput."*
-
-**摘要中出现的关键数值**（去重后）：1, 1.21, 1.59, 14, 2.4, 3, 4, 79, 8, 8.91, 9.5
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"High-throughput RL post-training therefore relies on dedicated RDMA HPC clusters, an infrastructure cost most organizations cannot absorb."*
-- *"A natural alternative is to aggregate loosely-coupled GPUs over standard Ethernet and WAN links, but this commodity connectivity cannot sustain full-weight broadcasts: synchronizing an 8B model can take over 100~seconds on bandwidth-limited links, while rollout generation typically takes tens of seconds."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 
@@ -99,7 +88,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（SparrowRL）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

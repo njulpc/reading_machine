@@ -15,13 +15,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）**方向的研究，提出了名为 **Bit-Plane** 的方法，目标模型/架构涉及 Qwen2.5-72B，在 GSM8K 等基准上进行了验证。
+本文属于**量化（Quantization）**方向的研究，提出了名为 **BPDQ** 的方法，目标模型/架构涉及 Qwen2.5-72B，在 GSM8K 等基准上进行了验证。
 
 > 论文摘要首句：*"Large language model inference is often bounded by memory footprint and bandwidth in resource-constrained deployments, making quantization fundamental to efficient serving."*
 
 ### 1.2 一句话总结
 
-本文提出 Bit-Plane：To address this, we propose Bit-Plane Decomposition Quantization (BPDQ), which constructs a variable quantization grid via bit-planes and scalar coefficients, and iteratively refines them using second-order information while progressively compensating for quantization errors to minimize output discrepancy.（摘要原文）
+本文提出 BPDQ：To address this, we propose Bit-Plane Decomposition Quantization (BPDQ), which constructs a variable quantization grid via bit-planes and scalar coefficients, and iteratively refines them using second-order information while progressively compensating for quantization errors to minimize output discrepancy.（摘要原文）
 
 ---
 
@@ -54,7 +54,7 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Bit-Plane**，属于量化（Quantization）方向的新方案；
+1. 提出了可命名的新方法/框架 **BPDQ**，属于量化（Quantization）方向的新方案；
 2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
 3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
@@ -72,10 +72,8 @@
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"While post-training quantization (PTQ) maintains high fidelity at 4-bit, it deteriorates at 2-3 bits."*
-- *"In the 2-bit regime, BPDQ enables serving Qwen2.5-72B on a single RTX 3090 with 83.85\% GSM8K accuracy (vs."*
-- *"90.83\% at 16-bit)."*
 
-**摘要中出现的关键数值**（去重后）：16, 2, 2.5, 3 bit, 3090, 4, 72, 8, 83.85, 90.83
+**摘要中出现的关键数值**（去重后）：2, 3 bit, 4
 
 ---
 
@@ -97,7 +95,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（Bit-Plane）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 BPDQ 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**模型压缩相关**方向的研究，提出了名为 **Prompt-Tuned** 的方法。
+本文属于**模型压缩相关**方向的研究，提出了名为 **PTS-SNN** 的方法。
 
 > 论文摘要首句：*"Speech Emotion Recognition (SER) is widely deployed in Human-Computer Interaction, yet the high computational cost of conventional models hinders their implementation on resource-constrained edge devices."*
 
 ### 1.2 一句话总结
 
-本文提出 Prompt-Tuned：To resolve this, we propose Prompt-Tuned Spiking Neural Networks (PTS-SNN), a parameter-efficient neuromorphic adaptation framework that aligns frozen SSL backbones with spiking dynamics.（摘要原文）
+本文提出 PTS-SNN：To resolve this, we propose Prompt-Tuned Spiking Neural Networks (PTS-SNN), a parameter-efficient neuromorphic adaptation framework that aligns frozen SSL backbones with spiking dynamics.（摘要原文）
 
 ---
 
@@ -55,14 +55,14 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Prompt-Tuned**，属于模型压缩相关方向的新方案；
+1. 提出了可命名的新方法/框架 **PTS-SNN**，属于模型压缩相关方向的新方案；
 2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
@@ -88,7 +88,7 @@
 
 1. 理论分析与实证验证的结合能为压缩方法的设计提供更可靠的指导；
 
-2. 本文（Prompt-Tuned）表明该论文涉及模型压缩相关的理论或应用问题——其具体设计（见第 3 节）可作为后续工作的直接参考。
+2. 本文提出的 PTS-SNN 在模型压缩相关方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

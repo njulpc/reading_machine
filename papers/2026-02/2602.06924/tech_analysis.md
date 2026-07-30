@@ -53,13 +53,17 @@
 
 ### 3.2 分点创新
 
-1. 在秩分配、分解方式或低秩适配机制方面给出了新的设计选择；
+摘要中以编号形式列出的技术要点：
+
+1. *"truly no knowledge of subgroup relevance, ("*
+2. *"partial knowledge of subgroup relevance, and ("*
+3. *"full knowledge of subgroup relevance"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 

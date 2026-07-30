@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）、稀疏化（Sparsity）、高效架构设计**方向的研究，提出了名为 **EcoVLA** 的方法。
+本文属于**剪枝（Pruning）、稀疏化（Sparsity）、高效架构设计**方向的研究。
 
 > 论文摘要首句：*"While Vision-Language-Action (VLA) models hold promise in embodied intelligence, their large parameter counts lead to substantial inference latency that hinders real-time manipulation, motivating parameter sparsification."*
 
 ### 1.2 一句话总结
 
-本文提出 EcoVLA：To bridge this gap, we propose EcoVLA, a training-free, plug-and-play adaptive pruning framework that supports orthogonal combination with existing VLA acceleration methods.（摘要原文）
+本文To bridge this gap, we propose EcoVLA, a training-free, plug-and-play adaptive pruning framework that supports orthogonal combination with existing VLA acceleration methods.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"Static pruning lacks the adaptability required for environment dynamics, whereas fixed-interval dynamic layer pruning suffers from coarse granularity and high retraining overheads."*
 - *"To bridge this gap, we propose EcoVLA, a training-free, plug-and-play adaptive pruning framework that supports orthogonal combination with existing VLA acceleration methods."*
 
-从上述表述可见，作者关注的核心矛盾是在移除冗余结构的同时保持模型精度。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -53,30 +51,26 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **EcoVLA**，属于剪枝（Pruning）、稀疏化（Sparsity）、高效架构设计方向的新方案；
-2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"EAP is a lightweight adaptive channel pruning method that incorporates the temporal consistency of the physical environment to update sparsity patterns. $I^2O$ leverages the FLOPs bubbles inherent in VLA inference to schedule the pruning method in parallel, ensuring negligible impact on latency."*
 - *"Evaluated on diverse VLA models and benchmarks, EcoVLA delivers state-of-the-art performance, achieving up to 1.60$\times$ speedup with only a 0.4% drop in success rate, and further reaches 2.18$\times$ speedup with only a 0.5% degradation when combined with token pruning."*
 
-**摘要中出现的关键数值**（去重后）：0.4%, 0.5%, 1.60, 2, 2.18
+**摘要中出现的关键数值**（去重后）：0.4%, 0.5%, 1.60, 2.18
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"EcoVLA comprises two components: Environment-aware Adaptive Pruning (EAP) and Interleaved Inference Orchestration ($I^2O$)."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 剪枝方法的常见局限包括：(1) 重要性评估准则存在近似误差，高稀疏度下精度下降明显；(2) 非结构化稀疏难以转化为实际加速，结构化剪枝又损失更多精度；(3) 多数方法需要额外的微调或重训练成本。
 
@@ -92,7 +86,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（EcoVLA）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

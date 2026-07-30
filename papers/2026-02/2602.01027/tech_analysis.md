@@ -56,27 +56,26 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"Block-wise mixed-precision, enabling fine-grained precision within weight matrices while remaining hardware-friendly; 3)Row-column weight reordering, which aggregates salient weights via row and column reordering, incurring only a small activation reordering overhead during inference; 4)Unified GEMM"*
+1. *"Fractional bit-width, which extends integer bit-width for weight matrix to fractional value and transforms discrete precision allocation as a continuous problem"*
+2. *"Block-wise mixed-precision, enabling fine-grained precision within weight matrices while remaining hardware-friendly"*
+3. *"Row-column weight reordering, which aggregates salient weights via row and column reordering, incurring only a small activation reordering overhead during inference"*
+4. *"Unified GEMM kernel, which supports mixed-precision GEMM at arbitrary average bit-width"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"The framework is built upon four novel ideas: Fractional bit-width, which extends integer bit-width for weight matrix to fractional value and transforms discrete precision allocation as a continuous problem; 2)Block-wise mixed-precision, enabling fine-grained precision within weight matrices while remaining hardware-friendly; 3)Row-column weight reordering, which aggregates salient weights via row and column reordering, incurring only a small activation reordering overhead during inference; 4)Unified GEMM kernel, which supports mixed-precision GEMM at arbitrary average bit-width."*
-
-**摘要中出现的关键数值**（去重后）：2, 3, 4
+- *"Extensive experiments demonstrate that SFMP outperforms state-of-the-art layer-wise mixed-precision methods under the same memory constraints, while significantly reducing quantization cost and improving inference efficiency."*
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"However, existing mixed-precision methods typically suffer from one of two limitations: they either rely on expensive discrete optimization to determine precision allocation, or introduce hardware inefficiencies due to irregular memory layouts."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 
@@ -92,7 +91,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（SFMP）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 SFMP 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

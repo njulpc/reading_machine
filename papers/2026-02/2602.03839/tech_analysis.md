@@ -58,17 +58,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"We find that approximately 99% of per-step weight updates are invisible after the BF16 cast used by standard training and inference forward passes."*
-- *"We explain this sparsity by showing that, at typical RL post-training learning rates, Adam updates often fall below the local BF16 rounding threshold."*
-- *"PULSE (Precision-gated Updates for Low-precision Sparse Exchange) turns this principle into two communication algorithms: PULSESync sends lossless sparse BF16 weight patches from trainers to inference workers, and PULSELoCo sparsifies DiLoCo-style FP32 pseudo-gradient synchronization with error feedback."*
-- *"Over bandwidth-constrained commodity networks, PULSESync cuts weight-synchronization communication by over 100x while reconstructing trainer weights bit-identically."*
-- *"PULSELoCo matches DiLoCo across four models while reducing trainer-to-trainer communication by over 17x versus DiLoCo and over 100x versus DDP in the largest evaluated setting."*
 
-**摘要中出现的关键数值**（去重后）：100x, 16, 17x, 32, 99%
+**摘要中出现的关键数值**（去重后）：16, 99%
 
 ---
 

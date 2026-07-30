@@ -57,7 +57,6 @@
 
 1. 提出了可命名的新方法/框架 **Fine-Pruning**，属于剪枝（Pruning）、稀疏化（Sparsity）方向的新方案；
 2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -70,19 +69,13 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Our experiments successfully personalized multiple speech recognition and image classification models, including ResNet50 on ImageNet, resulting in increased sparsity of approximately 70\% while simultaneously improving model accuracy to around 90\%, all without the limitations of backpropagation."*
-
-**摘要中出现的关键数值**（去重后）：50, 70, 90
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Our experiments successfully personalized multiple speech recognition and image classification models, including ResNet50 on ImageNet, resulting in increased sparsity of approximately 70\% while simultaneously improving model accuracy to around 90\%, all without the limitations of backpropagation."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 剪枝方法的常见局限包括：(1) 重要性评估准则存在近似误差，高稀疏度下精度下降明显；(2) 非结构化稀疏难以转化为实际加速，结构化剪枝又损失更多精度；(3) 多数方法需要额外的微调或重训练成本。
 
@@ -98,7 +91,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（Fine-Pruning）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 Fine-Pruning 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

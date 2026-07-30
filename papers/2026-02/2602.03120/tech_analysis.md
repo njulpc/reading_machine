@@ -52,28 +52,26 @@
 
 ### 3.2 分点创新
 
-1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"it integrates accumulated error feedback to preserve high-precision weight updating signals, and ("*
+2. *"it utilizes a stateless seed replay to reduce memory usage to low-precision inference levels"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"QES is based on two innovations: (1) it integrates accumulated error feedback to preserve high-precision weight updating signals, and (2) it utilizes a stateless seed replay to reduce memory usage to low-precision inference levels."*
-
-**摘要中出现的关键数值**（去重后）：1, 2
+- *"QES significantly outperforms the state-of-the-art zeroth-order fine-tuning methods on a variety of tasks, making direct fine-tuning for quantized models possible."*
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Thus they cannot be used on quantized models, where the parameter space is discrete and non-differentiable."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 

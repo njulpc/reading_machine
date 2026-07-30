@@ -71,6 +71,7 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"PAND consistently outperforms state-of-the-art methods on four FGVC benchmarks."*
 - *"Notably, our ResNet-18 student achieves 76.09% accuracy on CUB-200, surpassing the strong baseline VL2Lite by 3.4%."*
 
 **摘要中出现的关键数值**（去重后）：18, 2, 3.4%, 76.09%
@@ -95,7 +96,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（PAND）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 PAND 在知识蒸馏（Knowledge Distillation）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

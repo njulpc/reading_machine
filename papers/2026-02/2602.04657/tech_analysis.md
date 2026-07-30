@@ -57,27 +57,20 @@
 
 1. 提出了可命名的新方法/框架 **TRIO**，属于KV Cache 压缩、高效架构设计方向的新方案；
 2. 在 KV Cache 的重要性评估、驱逐策略或低位编码方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"On LLaVA-Next-7B, TRIO retains just 11.1\% of visual tokens but maintains 97.2\% of the original performance, with a 2.75$\times$ prefill speedup, 2.14$\times$ inference speedup, 6.22$\times$ lower FLOPs, and 6.05$\times$ reduced KV Cache overhead.Our code is available at https://github.com/ocy1/TRIO."*
-
-**摘要中出现的关键数值**（去重后）：1, 11.1, 2.14, 2.75, 6.05, 6.22, 7, 97.2
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"However, most existing methods rely on heuristics constructed based on inter-visual-token similarity or cross-modal visual-text similarity, which gives rise to certain limitations in compression performance and practical deployment."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务上，激进压缩可能损害长程检索能力；(2) 驱逐策略通常与具体模型和任务分布耦合；(3) 显存节省与实际端到端延迟收益之间存在换算损耗。
 
@@ -93,7 +86,7 @@ KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务�
 2. 注意力模式的可预测性（如重要 token 的分布规律）是设计驱逐/保留策略的核心先验；
 3. 长上下文评测基准（如 RULER、LongBench）应成为 KV Cache 方法的标配验证；
 
-4. 本文（TRIO）表明长上下文与长推理链场景下，KV Cache 的显存占用随序列长度线性增长，已成为大模型推理部署的主要瓶颈之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 TRIO 在KV Cache 压缩方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

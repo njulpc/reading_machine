@@ -56,7 +56,6 @@
 
 1. 提出了可命名的新方法/框架 **DeltaKV**，属于KV Cache 压缩、硬件加速/软硬件协同方向的新方案；
 2. 在 KV Cache 的重要性评估、驱逐策略或低位编码方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -68,12 +67,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Experiments show that DeltaKV reduces KV cache memory to 29\% of the original while maintaining near-lossless accuracy on LongBench, SCBench, and AIME."*
-- *"When integrated with Sparse-vLLM, it achieves up to 2$\times$ throughput improvement over vLLM in long-context scenarios, demonstrating a practical path toward scalable long-context LLM deployment."*
-
-**摘要中出现的关键数值**（去重后）：2, 29
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -95,7 +89,7 @@ KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务�
 2. 注意力模式的可预测性（如重要 token 的分布规律）是设计驱逐/保留策略的核心先验；
 3. 长上下文评测基准（如 RULER、LongBench）应成为 KV Cache 方法的标配验证；
 
-4. 本文（DeltaKV）表明长上下文与长推理链场景下，KV Cache 的显存占用随序列长度线性增长，已成为大模型推理部署的主要瓶颈之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 DeltaKV 在KV Cache 压缩方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

@@ -62,26 +62,21 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"State of the art lightweight architectures such as TinierHAR (34K parameters) and TinyHAR (55K parameters) achieve strong accuracy, but exceed memory budgets of microcontrollers with limited SRAM once operating system overhead is considered."*
-- *"We present MicroBi-ConvLSTM, an ultra-lightweight convolutional recurrent architecture achieving 11.4K parameters on average through two stage convolutional feature extraction with 4x temporal pooling, and a single bidirectional LSTM layer."*
-- *"This represents 2.9x parameter reduction versus TinierHAR and 11.9x versus DeepConvLSTM while preserving linear O(N) complexity."*
 - *"Evaluation across eight diverse HAR benchmarks shows that MicroBi-ConvLSTM maintains competitive performance within the ultra-lightweight regime: 93.41% macro F1 on UCI-HAR, 94.46% on SKODA assembly gestures, and 88.98% on Daphnet gait freeze detection."*
 - *"Under INT8 quantization, MicroBi-ConvLSTM is the only architecture achieving full 8/8 dataset coverage on both platforms, with 72.8 ms average latency on Pico 2 and 97.9% PyTorch parity on ESP32."*
 - *"Under FP32 deployment, it achieves 100.0% parity on all successful configurations (8/8 Pico 2, 7/8 ESP32), confirming that all INT8 fidelity degradation is a quantization artifact rather than an architectural limitation."*
 
-**摘要中出现的关键数值**（去重后）：1, 100.0%, 11.4, 11.9x, 2, 2.9x, 32, 34, 4x, 55, 7, 72.8, 8, 88.98%, 93.41%, 94.46%, 97.9%
+**摘要中出现的关键数值**（去重后）：1, 100.0%, 2, 32, 7, 72.8, 8, 88.98%, 93.41%, 94.46%, 97.9%
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Under FP32 deployment, it achieves 100.0% parity on all successful configurations (8/8 Pico 2, 7/8 ESP32), confirming that all INT8 fidelity degradation is a quantization artifact rather than an architectural limitation."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 
@@ -97,7 +92,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（MicroBi-ConvLSTM）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 MicroBi-ConvLSTM 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

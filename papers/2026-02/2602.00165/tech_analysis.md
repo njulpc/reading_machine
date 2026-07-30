@@ -70,6 +70,7 @@
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"We provide both theoretical intuition and empirical evidence: (i) weights in transformer transformational layers adhere closely to Benford statistics, while normalization layers systematically deviate; (ii) on Small Language Models (SLMs), Benford-Quant consistently improves perplexity, reducing 4-bit perplexity on Gemma-270M by more than 10%; and (iii) on larger LLMs, it remains competitive, with differences explained by over-parameterization effects."*
+- *"Although it is not able to surpass the state of the art in tasks such as perplexity and LAMBADA, the Benford-Quant approach can be hybridized with other quantization methods-such as SmoothQuant and Activation-Aware Quantization-without major pipeline modification, potentially improving their performance."*
 
 **摘要中出现的关键数值**（去重后）：10%, 270, 4
 
@@ -77,9 +78,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"We provide both theoretical intuition and empirical evidence: (i) weights in transformer transformational layers adhere closely to Benford statistics, while normalization layers systematically deviate; (ii) on Small Language Models (SLMs), Benford-Quant consistently improves perplexity, reducing 4-bit perplexity on Gemma-270M by more than 10%; and (iii) on larger LLMs, it remains competitive, with differences explained by over-parameterization effects."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 

@@ -55,19 +55,14 @@
 
 1. 提出了可命名的新方法/框架 **TokenMixer-Large**，属于稀疏化（Sparsity）、硬件加速/软硬件协同方向的新方案；
 2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Currently deployed in multiple scenarios at ByteDance, TokenMixer-Large has achieved significant offline and online performance gains, delivering an increase of +1.66\% in orders and +2.98\% in per-capita preview payment GMV for e-commerce, improving ADSS by +2.0\% in advertising and achieving a +1.4\% revenue growth for live streaming."*
-
-**摘要中出现的关键数值**（去重后）：1.4, 1.66, 2.0, 2.98
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -88,7 +83,7 @@
 1. 动态稀疏（运行时决定稀疏模式）比静态稀疏更灵活，但系统开销需要仔细评估；
 2. 稀疏训练与稠密训练后剪枝的两条路线各有适用场景，应结合训练预算选择；
 
-3. 本文（TokenMixer-Large）表明稀疏化利用权重或激活中的冗余结构，在训练或推理阶段引入稀疏性以降低计算与存储开销——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 TokenMixer-Large 在稀疏化（Sparsity）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

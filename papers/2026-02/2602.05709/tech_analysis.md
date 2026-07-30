@@ -15,13 +15,13 @@
 
 ### 1.1 研究主题
 
-本文属于**低秩分解/低秩适应（Low-Rank）、高效架构设计**方向的研究，提出了名为 **Generative** 的方法。
+本文属于**低秩分解/低秩适应（Low-Rank）、高效架构设计**方向的研究。
 
 > 论文摘要首句：*"Low-rank adaptation (LoRA) approximates the update of a pretrained weight matrix using the product of two low-rank matrices."*
 
 ### 1.2 一句话总结
 
-本文提出 Generative：In this paper, we find that these basis vectors exhibit significant parameter redundancy and can be compactly represented by lightweight nonlinear functions.（摘要原文）
+本文In this paper, we find that these basis vectors exhibit significant parameter redundancy and can be compactly represented by lightweight nonlinear functions.（摘要原文）
 
 ---
 
@@ -40,8 +40,6 @@
 - *"In this paper, we find that these basis vectors exhibit significant parameter redundancy and can be compactly represented by lightweight nonlinear functions."*
 - *"Therefore, we propose Generative Low-Rank Adapter (GenLoRA), which replaces explicit basis vector storage with nonlinear basis vector generation."*
 
-从上述表述可见，作者关注的核心矛盾是利用低秩结构降低参数/计算开销。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -56,14 +54,13 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Generative**，属于低秩分解/低秩适应（Low-Rank）、高效架构设计方向的新方案；
-2. 在秩分配、分解方式或低秩适配机制方面给出了新的设计选择；
+1. 在秩分配、分解方式或低秩适配机制方面给出了新的设计选择；
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
@@ -86,7 +83,7 @@
 1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
 2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
 
-3. 本文（Generative）表明低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

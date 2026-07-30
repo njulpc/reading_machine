@@ -61,14 +61,15 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"Across datasets covering encrypted application classification, IoT device identification, and intrusion detection, PACC consistently outperforms feature-engineered and raw-bit baselines."*
 - *"On encrypted subsets, it achieves up to a 12.9% accuracy improvement over nPrint."*
-- *"At the same time, it improves end-to-end efficiency by up to 3.16x."*
+- *"PACC matches or surpasses strong foundation-model baselines."*
 
-**摘要中出现的关键数值**（去重后）：12.9%, 3.16x
+**摘要中出现的关键数值**（去重后）：12.9%
 
 ---
 
@@ -89,7 +90,7 @@
 1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
 2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
 
-3. 本文（PACC）表明低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 PACC 在低秩分解/低秩适应（Low-Rank）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

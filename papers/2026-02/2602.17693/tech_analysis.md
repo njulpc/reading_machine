@@ -56,7 +56,6 @@
 ### 3.2 分点创新
 
 1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -68,23 +67,13 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"This paper presents a case study of representative PTQ baselines applied to reasoning-oriented models such as DeepSeek-R1-Distill-Qwen series (1.5B/7B/14B) and QwQ-32B."*
-- *"While 4-bit weight-only quantization proves viable for larger models, aggressive 4-bit weight-activation schemes suffer from layer-wise calibration instability on the NPU, leading to logic collapse in long-context reasoning tasks."*
-- *"Conversely, standard 8-bit quantization remains numerically stable."*
-- *"Furthermore, a real-world INT8 deployment demonstrates that although optimized kernels reduce latency, dynamic quantization overheads currently limit end-to-end acceleration."*
-
-**摘要中出现的关键数值**（去重后）：1, 1.5, 14, 32, 4, 7, 8
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Post-Training Quantization (PTQ) is crucial for efficient model deployment, yet its effectiveness on Ascend NPU remains under-explored compared to GPU architectures."*
-- *"Conversely, standard 8-bit quantization remains numerically stable."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 

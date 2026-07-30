@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**稀疏化（Sparsity）、高效架构设计**方向的研究，提出了名为 **Token** 的方法。
+本文属于**稀疏化（Sparsity）、高效架构设计**方向的研究。
 
 > 论文摘要首句：*"The quadratic complexity of attention remains the central bottleneck in long-context inference for large language models."*
 
 ### 1.2 一句话总结
 
-本文提出 Token：In this paper, we propose Token Sparse Attention, a lightweight and dynamic token-level sparsification mechanism that compresses per-head $Q$, $K$, $V$ to a reduced token set during attention and then decompresses the output back to the original sequence, enabling token information to be reconsidered in subsequent layers.（摘要原文）
+本文In this paper, we propose Token Sparse Attention, a lightweight and dynamic token-level sparsification mechanism that compresses per-head $Q$, $K$, $V$ to a reduced token set during attention and then decompresses the output back to the original sequence, enabling token information to be reconsidered in subsequent layers.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"In this paper, we propose Token Sparse Attention, a lightweight and dynamic token-level sparsification mechanism that compresses per-head $Q$, $K$, $V$ to a reduced token set during attention and then decompresses the output back to the original sequence, enabling token information to be reconsidered in subsequent layers."*
 - *"Furthermore, Token Sparse Attention exposes a new design point at the intersection of token selection and sparse attention."*
 
-从上述表述可见，作者关注的核心矛盾是在移除冗余结构的同时保持模型精度。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -54,15 +52,14 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Token**，属于稀疏化（Sparsity）、高效架构设计方向的新方案；
-2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
@@ -74,10 +71,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"The quadratic complexity of attention remains the central bottleneck in long-context inference for large language models."*
-- *"These results demonstrate that dynamic and interleaved token-level sparsification is a complementary and effective strategy for scalable long-context inference."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 稀疏化方法的常见局限包括：(1) 稀疏收益依赖硬件与 kernel 支持；(2) 训练期稀疏化通常增加训练开销；(3) 稀疏度与精度的权衡曲线因任务而异，缺乏统一的选择准则。
 
@@ -92,7 +86,7 @@
 1. 动态稀疏（运行时决定稀疏模式）比静态稀疏更灵活，但系统开销需要仔细评估；
 2. 稀疏训练与稠密训练后剪枝的两条路线各有适用场景，应结合训练预算选择；
 
-3. 本文（Token）表明稀疏化利用权重或激活中的冗余结构，在训练或推理阶段引入稀疏性以降低计算与存储开销——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

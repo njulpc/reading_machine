@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**稀疏化（Sparsity）、硬件加速/软硬件协同、高效架构设计**方向的研究，提出了名为 **FastForward** 的方法，目标模型/架构涉及 LLaMA、Qwen，在 LongBench 等基准上进行了验证。
+本文属于**稀疏化（Sparsity）、硬件加速/软硬件协同、高效架构设计**方向的研究，目标模型/架构涉及 LLaMA、Qwen，在 LongBench 等基准上进行了验证。
 
 > 论文摘要首句：*"The prefill stage of large language model (LLM) inference is a key computational bottleneck for long-context workloads."*
 
 ### 1.2 一句话总结
 
-本文提出 FastForward：To address this, we introduce FastForward, a predictive sparsity framework that accelerates LLM prefill through block-wise, context-aware FFN sparsity.（摘要原文）
+本文To address this, we introduce FastForward, a predictive sparsity framework that accelerates LLM prefill through block-wise, context-aware FFN sparsity.（摘要原文）
 
 ---
 
@@ -53,9 +53,11 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **FastForward**，属于稀疏化（Sparsity）、硬件加速/软硬件协同、高效架构设计方向的新方案；
-2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"a lightweight expert predictor to select high-importance neurons per block, ("*
+2. *"an error compensation network to correct sparsity-induced errors, and ("*
+3. *"a layer-wise sparsity scheduler to allocate compute based on token-mixing importance"*
 
 ---
 
@@ -70,10 +72,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"FastForward combines (1) a lightweight expert predictor to select high-importance neurons per block, (2) an error compensation network to correct sparsity-induced errors, and (3) a layer-wise sparsity scheduler to allocate compute based on token-mixing importance."*
 - *"Across LLaMA and Qwen models up to 8B parameters, FastForward delivers up to 1.45$\times$ compute-bound speedup at 50% FFN sparsity with $<$ 6% accuracy loss compared to the dense baseline on LongBench, substantially reducing Time-to-First-Token (TTFT) for efficient, long-context LLM inference on constrained hardware."*
 
-**摘要中出现的关键数值**（去重后）：1, 1.45, 2, 3, 50%, 6%, 8
+**摘要中出现的关键数值**（去重后）：1.45, 50%, 6%, 8
 
 ---
 
@@ -94,7 +95,7 @@
 1. 动态稀疏（运行时决定稀疏模式）比静态稀疏更灵活，但系统开销需要仔细评估；
 2. 稀疏训练与稠密训练后剪枝的两条路线各有适用场景，应结合训练预算选择；
 
-3. 本文（FastForward）表明稀疏化利用权重或激活中的冗余结构，在训练或推理阶段引入稀疏性以降低计算与存储开销——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

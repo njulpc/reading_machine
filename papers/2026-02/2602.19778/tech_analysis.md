@@ -59,11 +59,12 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"In Stage 1, using only pseudo-labels, the BTC student achieves about 99% of the teacher's performance, while the 2E1D model achieves about 97% of the teacher's performance across seven standard mir_eval metrics."*
+- *"After continual training with labeled data in Stage 2, the resulting BTC student model consistently surpasses both the traditional supervised learning baseline and the original pre-trained teacher model across all metrics."*
 - *"The resulting 2E1D student model also outperforms the supervised baseline and approaches teacher-level performance, with both models demonstrating substantial gains on rare chord qualities."*
 
 **摘要中出现的关键数值**（去重后）：1, 2, 97%, 99%

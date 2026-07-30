@@ -51,21 +51,22 @@
 
 ### 3.2 分点创新
 
-1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"balancing trade-offs between encoding semantics for understanding and acoustics for reconstruction, and ("*
+2. *"achieving low bit rates and low token rates"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Speech tokenizers are foundational to speech language models, yet existing approaches face two major challenges: (1) balancing trade-offs between encoding semantics for understanding and acoustics for reconstruction, and (2) achieving low bit rates and low token rates."*
 - *"Experiments show that SiTok outperforms strong baselines on understanding, reconstruction and generation tasks, at an extremely low token rate of $12.5$ Hz and a bit-rate of 200 bits-per-second."*
 
-**摘要中出现的关键数值**（去重后）：1, 12.5, 2
+**摘要中出现的关键数值**（去重后）：12.5
 
 ---
 

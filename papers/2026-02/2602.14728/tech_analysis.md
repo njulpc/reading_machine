@@ -60,7 +60,7 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
@@ -68,8 +68,9 @@
 - *"Compared with LoRA, D2-LoRA improves average accuracy by 2.2 percentage points; at matched parameter counts (LoRA rank 2r versus D2-LoRA rank r), the improvement is 1.6 points, indicating gains from architectural design rather than increased parameterization."*
 - *"Beyond QA and reading comprehension, D2-LoRA improves generative tasks (plus 1.2 ROUGE-L and plus 1.1 percent win rate) and shows 36 percent lower training volatility."*
 - *"The merge preserves numerical fidelity (mean gap about 0.03 percentage points) and recovers about 1.91x evaluation throughput."*
+- *"Training overhead is 19 percent, comparable to DoRA, and decreases with longer input sequences."*
 
-**摘要中出现的关键数值**（去重后）：0.03, 1.1, 1.2, 1.6, 1.91x, 2, 2.2, 36, 5, 76.4
+**摘要中出现的关键数值**（去重后）：0.03, 1.1, 1.2, 1.6, 1.91x, 19, 2, 2.2, 36, 5, 76.4
 
 ---
 
@@ -90,7 +91,7 @@
 1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
 2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
 
-3. 本文（D2-LoRA）表明低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 D2-LoRA 在低秩分解/低秩适应（Low-Rank）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

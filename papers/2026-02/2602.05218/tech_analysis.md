@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**稀疏化（Sparsity）**方向的研究，提出了名为 **Conditional** 的方法，目标模型/架构涉及 SAM。
+本文属于**稀疏化（Sparsity）**方向的研究，目标模型/架构涉及 SAM。
 
 > 论文摘要首句：*"Motivated by the success of the Segment Anything Model (SAM) in promptable segmentation, recent studies leverage SAM to develop training-free solutions for few-shot segmentation, which aims to predict object masks in the target image based on a few reference exemplars."*
 
 ### 1.2 一句话总结
 
-本文提出 Conditional：To address this challenge, we propose Conditional Point Sparsification (CPS), a training-free approach that adaptively guides SAM interactions for cross-domain images based on reference exemplars.（摘要原文）
+本文To address this challenge, we propose Conditional Point Sparsification (CPS), a training-free approach that adaptively guides SAM interactions for cross-domain images based on reference exemplars.（摘要原文）
 
 ---
 
@@ -54,8 +54,8 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Conditional**，属于稀疏化（Sparsity）方向的新方案；
-2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -67,7 +67,9 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"Extensive experiments demonstrate that CPS outperforms existing training-free SAM-based methods across diverse CD-FSS datasets."*
 
 ---
 
@@ -88,7 +90,7 @@
 1. 动态稀疏（运行时决定稀疏模式）比静态稀疏更灵活，但系统开销需要仔细评估；
 2. 稀疏训练与稠密训练后剪枝的两条路线各有适用场景，应结合训练预算选择；
 
-3. 本文（Conditional）表明稀疏化利用权重或激活中的冗余结构，在训练或推理阶段引入稀疏性以降低计算与存储开销——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

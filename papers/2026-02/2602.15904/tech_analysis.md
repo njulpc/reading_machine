@@ -72,7 +72,9 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
+摘要中直接提及的局限性或开放问题：
+
+- *"We conclude by identifying open challenges and future research directions for advancing LiDAR super-resolution technology."*
 
 该类工作的普遍局限在于实验覆盖范围与真实部署环境之间存在差距，需要更多端到端验证。
 

@@ -69,18 +69,14 @@
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"On Qwen3-32B at an 8k-token context window, Minima reduces peak VRAM from 64 GiB to 40 GiB."*
-- *"For a single active request, throughput increases from 40 tokens per second (baseline) to 50 tokens per second (Minima) and 75 tokens per second (Minima with speculative decoding)."*
-- *"Under 50 parallel requests, throughput is 34, 44, and 53 tokens per second respectively, showing that Minima remains effective under high concurrency even when speculative decoding gains compress."*
 
-**摘要中出现的关键数值**（去重后）：3, 32, 34, 40, 44, 50, 53, 64, 75, 8
+**摘要中出现的关键数值**（去重后）：3, 32, 40, 64, 8
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Under 50 parallel requests, throughput is 34, 44, and 53 tokens per second respectively, showing that Minima remains effective under high concurrency even when speculative decoding gains compress."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 

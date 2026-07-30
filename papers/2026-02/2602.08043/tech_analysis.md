@@ -57,7 +57,6 @@
 
 1. 提出了可命名的新方法/框架 **V-ABFT**，属于量化（Quantization）方向的新方案；
 2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -69,13 +68,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"However, existing threshold determination methods face critical challenges: analytical bounds are overly conservative, while probabilistic approaches like A-ABFT yield thresholds $160$--$4200\times$ larger than actual rounding errors."*
-- *"By leveraging statistical variance estimation, V-ABFT reduces the threshold-to-actual-error ratio to approximately $7$--$20\times$ for FP32/FP64 and $48$--$158\times$ for BF16, representing a \textbf{6--48$\times$ improvement} over A-ABFT while maintaining zero false positive rate across BF16, FP16, FP32, and FP64 precisions."*
-- *"Furthermore, we demonstrate that for fused-kernel ABFT implementations that verify before output quantization, low-precision GEMM can use FP32-level thresholds ($e_{\max} \approx 10^{-6}$), enabling \textbf{$\sim$1000$\times$ finer detection granularity} compared to offline verification with low-precision output ($e_{\max} \approx 10^{-3}$)."*
-
-**摘要中出现的关键数值**（去重后）：10, 1000, 158, 16, 160, 3, 32, 4200, 48, 6, 64, 7
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -97,7 +90,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（V-ABFT）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 V-ABFT 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

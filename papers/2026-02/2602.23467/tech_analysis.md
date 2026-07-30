@@ -59,15 +59,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"Neural networks achieved strong in-distribution performance on quintic classification using raw coefficients alone (84.3% + or - 0.9% balanced accuracy), whereas decision trees perform substantially worse (59.9% + or - 0.9\%)."*
-- *"However, when provided with an explicit feature capturing sign changes at critical points, decision trees match neural performance (84.2% + or - 1.2%) and yield explicit classification rules."*
-- *"Knowledge distillation reveals that this single invariant accounts for 97.5% of the extracted decision structure."*
 
-**摘要中出现的关键数值**（去重后）：0.9, 0.9%, 1.2%, 59.9%, 84.2%, 84.3%, 97.5%
+**摘要中出现的关键数值**（去重后）：0.9, 0.9%, 59.9%, 84.3%
 
 ---
 

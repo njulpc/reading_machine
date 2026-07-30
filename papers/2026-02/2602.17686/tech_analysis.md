@@ -72,17 +72,14 @@
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"On GSM8K, BRIDGE enables Qwen2.5-3B to achieve 11.29% accuracy improvement and 27.4% token reduction over the original model, outperforming instruction-tuned variants and distillation baselines."*
-- *"Our code and model checkpoints are publicly available at https://github.com/Applied-Machine-Learning-Lab/SDM2026_BRIDGE and https://huggingface.co/bowen0815/BRIDGE."*
 
-**摘要中出现的关键数值**（去重后）：0815, 11.29%, 2.5, 27.4%, 3, 8
+**摘要中出现的关键数值**（去重后）：11.29%, 2.5, 27.4%, 3, 8
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Chain-of-Thought (CoT) reasoning has significantly improved LLMs' mathematical problem-solving capabilities, but distilling such capabilities into smaller models remains challenging due to the capacity mismatch between verbose teachers and compact students."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 剪枝方法的常见局限包括：(1) 重要性评估准则存在近似误差，高稀疏度下精度下降明显；(2) 非结构化稀疏难以转化为实际加速，结构化剪枝又损失更多精度；(3) 多数方法需要额外的微调或重训练成本。
 
@@ -98,7 +95,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（BRIDGE）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 BRIDGE 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

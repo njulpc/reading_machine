@@ -60,13 +60,11 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We propose a scheme for effective finetuning via sparsification using training stochastic gates, which requires minimal trainable parameters, reduces inference time, and removes 20--40\% of model parameters without significant accuracy loss."*
-
-**摘要中出现的关键数值**（去重后）：40
+- *"Empirical results show it outperforms recent finetuning baselines in efficiency and performance."*
 
 ---
 

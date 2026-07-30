@@ -60,16 +60,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We present the first large-scale study of 50 quantized models evaluated on PostTrainingBiasBench, a unified benchmark of 13 closed- and open-ended bias datasets."*
-- *"We identify a phenomenon we term quantization-induced masked bias flipping, in which up to 21% of responses flip between biased and unbiased states after quantization, despite showing no change in aggregate bias scores."*
-- *"Quantization strength amplifies this effect, with 4-bit quantized models exhibiting 4-6x more behavioral changes than 8-bit quantized models."*
 - *"Critically, these changes create asymmetric impacts across demographic groups, where bias can worsen by up to 18.6% for some groups while improving by 14.1% for others, yielding misleadingly neutral aggregate outcomes."*
 
-**摘要中出现的关键数值**（去重后）：13, 14.1%, 18.6%, 21%, 4, 50, 6x, 8
+**摘要中出现的关键数值**（去重后）：14.1%, 18.6%
 
 ---
 

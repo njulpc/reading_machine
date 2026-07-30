@@ -59,16 +59,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Its resource-efficient approach further enables up to 4x throughput improvement within the same hardware resources by leveraging vectorised, time-multiplexed execution and flexible precision scaling."*
-- *"With a time-multiplexed multi-AF block and a lightweight pooling and normalisation unit, the proposed vector engine supports flexible precision (4/8/16-bit) and high MAC density."*
 - *"The ASIC implementation results show that each MAC stage can save up to 33% of time and 21% of power, with a 256-PE configuration that achieves higher compute density (4.83 TOPS/mm2 ) and energy efficiency (11.67 TOPS/W) than previous state-of-the-art work."*
-- *"A detailed hardware-software co-design methodology for object detection and classification tasks on Pynq-Z2 is discussed to assess the proposed architecture, demonstrating a scalable, energy-efficient solution for edge AI applications."*
 
-**摘要中出现的关键数值**（去重后）：11.67, 16, 2, 21%, 256, 33%, 4, 4.83, 4x, 8
+**摘要中出现的关键数值**（去重后）：11.67, 2, 21%, 256, 33%, 4.83
 
 ---
 
@@ -90,7 +87,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（CORVET）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 CORVET 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

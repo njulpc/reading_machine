@@ -70,10 +70,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We evaluate on three representative SSM-based LLMs spanning pure-SSM and hybrid architectures - Mamba, Falcon-Mamba, and Zamba - on NVIDIA A6000 and A100 clusters."*
 - *"Our experiments show substantial throughput gains from tensor-parallel SSM inference, improving batch-request throughput by ~1.6-2.1x on 2 GPUs and ~2.6-4.0x on 4 GPUs for Mamba, with the largest benefits at long context lengths, and achieving a further ~10-18% throughput improvement from quantized all-reduce by lowering synchronization bandwidth overhead."*
 
-**摘要中出现的关键数值**（去重后）：1.6, 10, 100, 18%, 2, 2.1x, 2.6, 4, 4.0x, 6000
+**摘要中出现的关键数值**（去重后）：1.6, 10, 18%, 2, 2.1x, 2.6, 4, 4.0x
 
 ---
 

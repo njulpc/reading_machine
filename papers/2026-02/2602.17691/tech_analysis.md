@@ -53,8 +53,9 @@
 
 ### 3.2 分点创新
 
-1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"cause trajectory divergence and semantic incoherence"*
 
 ---
 
@@ -69,14 +70,10 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"When UTS indicates trajectory divergence, graduated steering vectors redirect activations toward structurally coherent regions while affecting only 0.2-2.5% of tokens."*
 - *"On 4-bit quantized Granite 4.0 H Small (32B/9B active, hybrid Mamba-Transformer): GSM8K maintains 88.84% accuracy at T = 3.0 (2.81pp degradation from T = 0.5); MMLU maintains 72.49% across 14,042 questions (1.24pp degradation)."*
-- *"Notably, steering the sparse Transformer attention layers (~10% of layers) is sufficient to correct drift in the Mamba-2 state-space formulation."*
 - *"At T > 2.0, steered outputs exhibit 5-20% idea duplication versus 70-80% at conservative settings."*
-- *"Cross-architecture validation (Qwen3-30B-A3B MOE) confirms this phenomenon is architecture-independent, with 46.7% higher unique concept generation."*
-- *"This enables Multi-Temperature Synthesis, generating 200% more unique concepts than single-temperature inference."*
 
-**摘要中出现的关键数值**（去重后）：0.2, 0.5, 042, 1.24, 10%, 14, 2, 2.0, 2.5%, 2.81, 3, 3.0, 30, 32, 4, 4.0, 46.7%, 5, 70, 72.49%
+**摘要中出现的关键数值**（去重后）：0.5, 042, 1.24, 14, 2.0, 2.81, 3.0, 32, 4, 4.0, 5, 70, 72.49%, 8, 80%, 88.84%, 9
 
 ---
 

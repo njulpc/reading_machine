@@ -59,21 +59,14 @@
 
 1. 提出了可命名的新方法/框架 **GND**，属于剪枝（Pruning）方向的新方案；
 2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"To efficiently tackle the S$^3$GND problem, we propose an effective learning-based approach, which constructs a keyword hypergraph from the data graph, and trains a \textit{hypergraph neural network} (HGNN) model to obtain high-quality keyword embedding representations."*
-- *"We design effective pruning strategies, \textit{keyword embedding MBR}, \textit{vertex-Level ND lower bound}, and \textit{graph-level GND lower bound pruning}, to rule out false alarms of candidate vertices/subgraphs, and devise a tree-based indexing mechanism to facilitate efficient S$^3$GND query answering."*
-- *"We develop an efficient S$^3$GND query-processing algorithm that traverses the index, applies pruning strategies, and returns actual S$^3$GND answers."*
-
-**摘要中出现的关键数值**（去重后）：3
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -95,7 +88,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（GND）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 GND 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

@@ -71,6 +71,7 @@
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"We achieve state-of-the-art W4A4 and W3A3 accuracies on ImageNet and, to the best of our knowledge, the first PTQ results that maintain strong accuracy on ViT, DeiT, and Swin-T models under extremely low-bit settings (W1.58A8), demonstrating the potential for efficient edge deployment."*
+- *"By encouraging diversity in both the learned prompt embeddings and the generated image features, our data-free approach achieves performance on par with real-data ImageNet calibration and surpasses simple text-prompt baselines such as "a photo of "."*
 
 **摘要中出现的关键数值**（去重后）：1.58, 3, 4, 8
 

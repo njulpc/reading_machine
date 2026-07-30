@@ -56,7 +56,8 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"Progressive Knowledge Distillation, which aligns byte-level representations with the embeddings of the token-trained teacher model; and (2) Byte-Level Supervised Fine-Tuning, which enables end-to-end generation entirely in the byte space"*
+1. *"Progressive Knowledge Distillation, which aligns byte-level representations with the embeddings of the token-trained teacher model; and ("*
+2. *"Byte-Level Supervised Fine-Tuning, which enables end-to-end generation entirely in the byte space"*
 
 ---
 
@@ -68,11 +69,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Our recipe follows a two-stage curriculum: (1) Progressive Knowledge Distillation, which aligns byte-level representations with the embeddings of the token-trained teacher model; and (2) Byte-Level Supervised Fine-Tuning, which enables end-to-end generation entirely in the byte space."*
-
-**摘要中出现的关键数值**（去重后）：1, 2
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

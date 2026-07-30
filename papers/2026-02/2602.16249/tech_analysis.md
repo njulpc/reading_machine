@@ -57,7 +57,6 @@
 
 1. 提出了可命名的新方法/框架 **AFFMAE**，属于量化（Quantization）、硬件加速/软硬件协同、高效架构设计方向的新方案；
 2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -69,12 +68,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"On high-resolution microscopy segmentation, AFFMAE matches MAE finetuning performance on foot process width estimation with ViT backbone at equal parameter counts while being 2x faster during pre-training and halving peak memory usage."*
-- *"Furthermore, AFFMAE achieves up to 5x throughput speedups fine-tuning at the 1024px resolution, providing high-resolution model training on desktop hardware."*
-
-**摘要中出现的关键数值**（去重后）：1024, 2x, 5x
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -96,7 +90,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（AFFMAE）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 AFFMAE 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

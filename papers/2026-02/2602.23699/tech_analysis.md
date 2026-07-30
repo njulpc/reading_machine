@@ -57,20 +57,21 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"Late Injection, which bypasses passive shallow layers to introduce visual tokens exactly where active fusion begins; and (2) Concave Pyramid Pruning with an Early Exit mechanism to dynamically adjust pruning rates across middle and deep layers"*
+1. *"Late Injection, which bypasses passive shallow layers to introduce visual tokens exactly where active fusion begins; and ("*
+2. *"Concave Pyramid Pruning with an Early Exit mechanism to dynamically adjust pruning rates across middle and deep layers"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"HiDrop features two key innovations: (1) Late Injection, which bypasses passive shallow layers to introduce visual tokens exactly where active fusion begins; and (2) Concave Pyramid Pruning with an Early Exit mechanism to dynamically adjust pruning rates across middle and deep layers."*
 - *"Extensive experiments show that HiDrop compresses about 90% visual tokens while matching the original performance and accelerating training by 1.72 times."*
+- *"Our work not only sets a new state-of-the-art for efficient MLLM training and inference but also provides valuable insights into the hierarchical nature of multimodal fusion."*
 
-**摘要中出现的关键数值**（去重后）：1, 1.72 times, 2, 90%
+**摘要中出现的关键数值**（去重后）：1.72 times, 90%
 
 ---
 
@@ -92,7 +93,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（HiDrop）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 HiDrop 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

@@ -53,7 +53,6 @@
 ### 3.2 分点创新
 
 1. 在 KV Cache 的重要性评估、驱逐策略或低位编码方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -65,12 +64,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"At 1.5B parameters trained on 100B tokens, RAT+ closely matches dense accuracy at D = 16, and drops by about 2-3 points at D = 64 on commonsense reasoning and LongBench tasks."*
-- *"We further scale to 2.6B and 7.6B parameters and observe even more promising performance (eg, a 1-point average accuracy loss with a 64x reduction in attention FLOPs and KV cache size)."*
-
-**摘要中出现的关键数值**（去重后）：1, 1.5, 100, 16, 2, 2.6, 3, 64, 64x, 7.6
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

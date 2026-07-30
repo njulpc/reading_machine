@@ -59,10 +59,11 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"Transformer-based single-object trackers achieve state-of-the-art accuracy but rely on fixed-depth inference, executing the full encoder--decoder stack for every frame regardless of visual complexity, thereby incurring unnecessary computational cost in long video sequences dominated by temporally coherent frames."*
 - *"Extensive experiments on GOT-10k and LaSOT demonstrate up to 12% GFLOPs reduction, 8.9% latency reduction, and 10.8% energy savings while maintaining tracking accuracy within 0.2% of the full-depth baseline across both short-term and long-term sequences."*
 
 **摘要中出现的关键数值**（去重后）：0.2%, 10, 10.8%, 12%, 8.9%

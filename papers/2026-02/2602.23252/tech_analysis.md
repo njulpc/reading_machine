@@ -54,21 +54,14 @@
 ### 3.2 分点创新
 
 1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"We derive a scaling law relating ADC bit depth to effective bandwidth for signals with $1/f^α$ power spectra."*
-- *"We show that each additional bit extends this cutoff by a factor of $2^{2/α}$, approximately doubling bandwidth per bit for $α= 2$."*
-- *"Validation on synthetic $1/f^α$ signals for $α\in \{1.5, 2.0, 2.5\}$ yields prediction errors below 3\% using the theoretical noise floor $Δ^2/(6f_s)$, and approximately 14\% when the noise floor is estimated empirically from the quantized signal's spectrum."*
-
-**摘要中出现的关键数值**（去重后）：1, 1.5, 14, 2, 2.0, 2.5, 3, 6
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

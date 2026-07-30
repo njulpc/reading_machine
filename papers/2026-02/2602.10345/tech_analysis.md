@@ -70,12 +70,10 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Our system uses a novel multi-stage pipeline: first, hybrid filtering (keywords, TF-IDF, cosine similarity, and a "nudge-term bonus") reduces the corpus to about 81,000 candidates."*
-- *"Second, we use OpenScholar (quantized LLaMA 3.1 8B) to classify papers and extract structured fields like nudge type and target behavior in a single pass, validated against a JSON schema."*
 - *"The best setup (Title/Abstract/Intro) achieved a 67.0% F1 score and 72.0% recall, ideal for discovery."*
 - *"A high-precision variant using self-consistency (7 randomized passes) achieved 100% precision with 12% recall, demonstrating a tunable trade-off for high-trust use cases."*
 
-**摘要中出现的关键数值**（去重后）：000, 1, 100%, 12%, 3.1, 67.0%, 7, 72.0%, 8, 81
+**摘要中出现的关键数值**（去重后）：1, 100%, 12%, 67.0%, 7, 72.0%
 
 ---
 

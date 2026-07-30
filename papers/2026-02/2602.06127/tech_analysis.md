@@ -68,11 +68,10 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"On LLaMA-2 and LLaMA-3, MoP advances the frontier of structured pruning, exceeding the accuracy of competing methods across a broad set of compression regimes."*
+- *"It also consistently outperforms depth-only and width-only pruning."*
 - *"Furthermore, MoP translates structural pruning into real speedup, reducing end-to-end latency by 39% at 40% compression."*
-- *"Finally, extending MoP to the vision-language model LLaVA-1.5, we notably improve computational efficiency and demonstrate that text-only recovery fine-tuning can restore performance even on visual tasks."*
 
-**摘要中出现的关键数值**（去重后）：1.5, 2, 3, 39%, 40%
+**摘要中出现的关键数值**（去重后）：39%, 40%
 
 ---
 

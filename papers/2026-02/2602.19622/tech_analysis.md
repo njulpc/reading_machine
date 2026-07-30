@@ -53,16 +53,20 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **VecFormer**，属于量化（Quantization）、向量量化（Vector Quantization）方向的新方案；
-2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
+摘要中以编号形式列出的技术要点：
+
+1. *"most models suffer from exponentially increasing computational complexity, making it difficult to scale to large graphs; ("*
+2. *"attention mechanisms based on node-level operations limit the flexibility of the model and result in poor generalization performance in out-of-distribution (OOD) scenarios"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"Extensive experiments on datasets of various sizes demonstrate that VecFormer outperforms the existing Graph Transformer in both performance and speed."*
 
 ---
 
@@ -84,7 +88,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（VecFormer）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 VecFormer 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

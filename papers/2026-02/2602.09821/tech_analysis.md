@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）、高效架构设计**方向的研究，提出了名为 **GloSA-sum** 的方法。
+本文属于**剪枝（Pruning）、高效架构设计**方向的研究。
 
 > 论文摘要首句：*"Text summarization is a fundamental task in natural language processing (NLP), and the information explosion has made long-document processing increasingly demanding, making summarization essential."*
 
 ### 1.2 一句话总结
 
-本文提出 GloSA-sum：To address these issues, we introduce GloSA-sum, the first summarization approach that achieves global structure awareness via topological data analysis (TDA).（摘要原文）
+本文To address these issues, we introduce GloSA-sum, the first summarization approach that achieves global structure awareness via topological data analysis (TDA).（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"Some studies employ large language models (LLMs), which achieve higher accuracy but incur substantial resource and time costs."*
 - *"To address these issues, we introduce GloSA-sum, the first summarization approach that achieves global structure awareness via topological data analysis (TDA)."*
 
-从上述表述可见，作者关注的核心矛盾是在移除冗余结构的同时保持模型精度。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -56,14 +54,13 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **GloSA-sum**，属于剪枝（Pruning）、高效架构设计方向的新方案；
-2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
@@ -87,7 +84,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（GloSA-sum）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

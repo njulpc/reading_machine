@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**知识蒸馏（Knowledge Distillation）**方向的研究，提出了名为 **Geospatial** 的方法。
+本文属于**知识蒸馏（Knowledge Distillation）**方向的研究。
 
 > 论文摘要首句：*"Open-vocabulary semantic segmentation has become an important direction in remote sensing, as it enables recognition beyond predefined land-cover categories."*
 
 ### 1.2 一句话总结
 
-本文提出 Geospatial：To address this issue, we propose a Geospatial Reasoning Chain-of-Thought (GR-CoT) framework for remote sensing open-vocabulary semantic segmentation.（摘要原文）
+本文To address this issue, we propose a Geospatial Reasoning Chain-of-Thought (GR-CoT) framework for remote sensing open-vocabulary semantic segmentation.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"To address this issue, we propose a Geospatial Reasoning Chain-of-Thought (GR-CoT) framework for remote sensing open-vocabulary semantic segmentation."*
 - *"GR-CoT consists of an offline knowledge distillation stream and an online instance reasoning stream."*
 
-从上述表述可见，作者关注的核心矛盾是在小模型上尽可能复现大模型的能力。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -53,21 +51,15 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Geospatial**，属于知识蒸馏（Knowledge Distillation）方向的新方案；
-2. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Experiments on the LoveDA and GID5 benchmarks indicate that the proposed framework improves overall segmentation performance and yields more semantically coherent predictions in complex scenes."*
-
-**摘要中出现的关键数值**（去重后）：5
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -89,7 +81,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（Geospatial）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

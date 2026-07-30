@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）、知识蒸馏（Knowledge Distillation）、硬件加速/软硬件协同**方向的研究，提出了名为 **Pseudo-Labels** 的方法，在 ImageNet-1K、ImageNet-21K 等基准上进行了验证。
+本文属于**剪枝（Pruning）、知识蒸馏（Knowledge Distillation）、硬件加速/软硬件协同**方向的研究，在 ImageNet-1K、ImageNet-21K 等基准上进行了验证。
 
 > 论文摘要首句：*"A dataset server must often distribute the same large payload to many clients, incurring massive communication costs."*
 
 ### 1.2 一句话总结
 
-本文提出 Pseudo-Labels：In this paper, we propose Pseudo-Labels as Data (PLADA), a method that completely eliminates pixel transmission.（摘要原文）
+本文In this paper, we propose Pseudo-Labels as Data (PLADA), a method that completely eliminates pixel transmission.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"While dataset distillation attempts to compress training signals, current methods struggle to scale to high-resolution data and rarely achieve sufficiently small files."*
 - *"In this paper, we propose Pseudo-Labels as Data (PLADA), a method that completely eliminates pixel transmission."*
 
-从上述表述可见，作者关注的核心矛盾是在移除冗余结构的同时保持模型精度。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -55,9 +53,8 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Pseudo-Labels**，属于剪枝（Pruning）、知识蒸馏（Knowledge Distillation）、硬件加速/软硬件协同方向的新方案；
-2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -95,7 +92,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（Pseudo-Labels）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

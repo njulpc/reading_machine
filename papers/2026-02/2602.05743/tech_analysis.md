@@ -53,8 +53,11 @@
 
 ### 3.2 分点创新
 
-1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"a dynamic shift-aware bitwidth prediction (DSBP) with on-the-fly input prediction that adaptively adjusts weight (2/4/6/8b) and input (2$\sim$12b) aligned-mantissa precision; ("*
+2. *"a FIFO-based input alignment unit (FIAU) replacing complex barrel shifters with pointer-based control; and ("*
+3. *"a precision-scalable INT MAC array achieving flexible weight precision with minimal overhead"*
 
 ---
 
@@ -67,15 +70,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"FP8 low-precision formats have gained significant adoption in Transformer inference and training."*
-- *"However, existing digital compute-in-memory (DCIM) architectures face challenges in supporting variable FP8 aligned-mantissa bitwidths, as unified alignment strategies and fixed-precision multiply-accumulate (MAC) units struggle to handle input data with diverse distributions."*
-- *"This work presents a flexible FP8 DCIM accelerator with three innovations: (1) a dynamic shift-aware bitwidth prediction (DSBP) with on-the-fly input prediction that adaptively adjusts weight (2/4/6/8b) and input (2$\sim$12b) aligned-mantissa precision; (2) a FIFO-based input alignment unit (FIAU) replacing complex barrel shifters with pointer-based control; and (3) a precision-scalable INT MAC array achieving flexible weight precision with minimal overhead."*
-- *"Implemented in 28nm CMOS with a 64$\times$96 CIM array, the design achieves 20.4 TFLOPS/W for fixed E5M7, demonstrating 2.8$\times$ higher FP8 efficiency than previous work while supporting all FP8 formats."*
-- *"Results on Llama-7b show that the DSBP achieves higher efficiency than fixed bitwidth mode at the same accuracy level on both BoolQ and Winogrande datasets, with configurable parameters enabling flexible accuracy-efficiency trade-offs."*
-
-**摘要中出现的关键数值**（去重后）：1, 12, 2, 2.8, 28, 3, 4, 5, 6, 64, 7, 8, 96
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

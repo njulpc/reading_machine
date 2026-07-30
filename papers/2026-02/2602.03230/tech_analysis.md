@@ -61,22 +61,19 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Experimental results show that EventFlash achieves a $12.4\times$ throughput improvement over the baseline (EventFlash-Zero) while maintaining comparable performance."*
 - *"It supports long-range event stream processing with up to 1,000 bins, significantly outperforming the 5-bin limit of EventGPT."*
 
-**摘要中出现的关键数值**（去重后）：000, 1, 12.4, 5
+**摘要中出现的关键数值**（去重后）：000, 1, 5
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"Event-based multimodal large language models (MLLMs) enable robust perception in high-speed and low-light scenarios, addressing key limitations of frame-based MLLMs."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 稀疏化方法的常见局限包括：(1) 稀疏收益依赖硬件与 kernel 支持；(2) 训练期稀疏化通常增加训练开销；(3) 稀疏度与精度的权衡曲线因任务而异，缺乏统一的选择准则。
 
@@ -91,7 +88,7 @@
 1. 动态稀疏（运行时决定稀疏模式）比静态稀疏更灵活，但系统开销需要仔细评估；
 2. 稀疏训练与稠密训练后剪枝的两条路线各有适用场景，应结合训练预算选择；
 
-3. 本文（EventFlash）表明稀疏化利用权重或激活中的冗余结构，在训练或推理阶段引入稀疏性以降低计算与存储开销——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文提出的 EventFlash 在稀疏化（Sparsity）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

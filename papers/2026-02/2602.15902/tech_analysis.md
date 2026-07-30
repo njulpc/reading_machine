@@ -61,23 +61,19 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Given an unseen prompt, D2L generates a LoRA adapter for a target LLM, enabling subsequent queries to be answered without re-consuming the original context, reducing latency and KV-cache memory consumption during inference of the target LLM."*
-- *"On a long-context needle-in-a-haystack task, D2L successfully learns to map contexts into adapters that store the needle information, achieving near-perfect zero-shot accuracy at sequence lengths exceeding the target LLM's native context window by more than 4x."*
 - *"On real-world QA datasets with limited compute, D2L outperforms standard CD while significantly reducing peak memory consumption and update latency."*
 
-**摘要中出现的关键数值**（去重后）：2, 4x
+**摘要中出现的关键数值**（去重后）：2
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"To address these limitations, we propose Doc-to-LoRA (D2L), a lightweight hypernetwork that meta-learns to perform approximate CD within a single forward pass."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务上，激进压缩可能损害长程检索能力；(2) 驱逐策略通常与具体模型和任务分布耦合；(3) 显存节省与实际端到端延迟收益之间存在换算损耗。
 
@@ -93,7 +89,7 @@ KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务�
 2. 注意力模式的可预测性（如重要 token 的分布规律）是设计驱逐/保留策略的核心先验；
 3. 长上下文评测基准（如 RULER、LongBench）应成为 KV Cache 方法的标配验证；
 
-4. 本文（Doc-to-LoRA）表明长上下文与长推理链场景下，KV Cache 的显存占用随序列长度线性增长，已成为大模型推理部署的主要瓶颈之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 Doc-to-LoRA 在KV Cache 压缩方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

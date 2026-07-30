@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**知识蒸馏（Knowledge Distillation）**方向的研究，提出了名为 **Agentic** 的方法，目标模型/架构涉及 DeepSeek、GPT、Qwen2.5-0.5B。
+本文属于**知识蒸馏（Knowledge Distillation）**方向的研究，目标模型/架构涉及 DeepSeek、GPT、Qwen2.5-0.5B。
 
 > 论文摘要首句：*"SMS-based phishing (smishing) attacks have surged, yet training effective on-device detectors requires labelled threat data that quickly becomes outdated."*
 
 ### 1.2 一句话总结
 
-本文提出 Agentic：To deal with this issue, we present Agentic Knowledge Distillation, which consists of a powerful LLM acts as an autonomous teacher that fine-tunes a smaller student SLM, deployable for security tasks without human intervention.（摘要原文）
+本文To deal with this issue, we present Agentic Knowledge Distillation, which consists of a powerful LLM acts as an autonomous teacher that fine-tunes a smaller student SLM, deployable for security tasks without human intervention.（摘要原文）
 
 ---
 
@@ -54,9 +54,9 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Agentic**，属于知识蒸馏（Knowledge Distillation）方向的新方案；
-2. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+摘要中以编号形式列出的技术要点：
+
+1. *"on SMS spam/smishing detection with two student SLMs (Qwen2.5-0.5B and SmolLM2-135M)"*
 
 ---
 
@@ -95,7 +95,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（Agentic）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

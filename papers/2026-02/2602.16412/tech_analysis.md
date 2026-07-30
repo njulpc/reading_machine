@@ -56,22 +56,23 @@
 ### 3.2 分点创新
 
 1. 提出了可命名的新方法/框架 **ReMoRa**，属于模型压缩相关方向的新方案；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"ReMoRa outperformed baseline methods on multiple challenging benchmarks, including LongVideoBench, NExT-QA, and MLVU."*
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"While multimodal large language models (MLLMs) have shown remarkable success across a wide range of tasks, long-form video understanding remains a significant challenge."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 该类工作的普遍局限在于实验覆盖范围与真实部署环境之间存在差距，需要更多端到端验证。
 
@@ -85,7 +86,7 @@
 
 1. 理论分析与实证验证的结合能为压缩方法的设计提供更可靠的指导；
 
-2. 本文（ReMoRa）表明该论文涉及模型压缩相关的理论或应用问题——其具体设计（见第 3 节）可作为后续工作的直接参考。
+2. 本文提出的 ReMoRa 在模型压缩相关方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

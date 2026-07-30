@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）、高效架构设计**方向的研究，提出了名为 **GUIPruner** 的方法，目标模型/架构涉及 Qwen2-VL-2B。
+本文属于**剪枝（Pruning）、高效架构设计**方向的研究，目标模型/架构涉及 Qwen2-VL-2B。
 
 > 论文摘要首句：*"Pure-vision GUI agents provide universal interaction capabilities but suffer from severe efficiency bottlenecks due to the massive spatiotemporal redundancy inherent in high-resolution screenshots and historical trajectories."*
 
 ### 1.2 一句话总结
 
-本文提出 GUIPruner：We identify two critical misalignments in existing compression paradigms: the temporal mismatch, where uniform history encoding diverges from the agent's "fading memory" attention pattern, and the spatial topology conflict, where unstructured pruning compromises the grid integrity required for precise coordinate grounding, inducing spatial hallucinations.（摘要原文）
+本文We identify two critical misalignments in existing compression paradigms: the temporal mismatch, where uniform history encoding diverges from the agent's "fading memory" attention pattern, and the spatial topology conflict, where unstructured pruning compromises the grid integrity required for precise coordinate grounding, inducing spatial hallucinations.（摘要原文）
 
 ---
 
@@ -55,9 +55,8 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **GUIPruner**，属于剪枝（Pruning）、高效架构设计方向的新方案；
-2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -71,6 +70,7 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"Extensive evaluations across diverse benchmarks demonstrate that GUIPruner consistently achieves state-of-the-art performance, effectively preventing the collapse observed in large-scale models under high compression."*
 - *"Notably, on Qwen2-VL-2B, our method delivers a 3.4x reduction in FLOPs and a 3.3x speedup in vision encoding latency while retaining over 94% of the original performance, enabling real-time, high-precision navigation with minimal resource consumption."*
 
 **摘要中出现的关键数值**（去重后）：2, 3.3x, 3.4x, 94%
@@ -95,7 +95,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（GUIPruner）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

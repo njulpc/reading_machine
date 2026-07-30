@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）**方向的研究，提出了名为 **Selective** 的方法，目标模型/架构涉及 CLIP，在 ImageNet 等基准上进行了验证。
+本文属于**量化（Quantization）**方向的研究，提出了名为 **S2D** 的方法，目标模型/架构涉及 CLIP，在 ImageNet 等基准上进行了验证。
 
 > 论文摘要首句：*"Activation outliers in large-scale transformer models pose a fundamental challenge to model quantization, creating excessively large ranges that cause severe accuracy drops during quantization."*
 
 ### 1.2 一句话总结
 
-本文提出 Selective：Through theoretical analysis as well as empirical correlation studies, we establish the direct link between these activation outliers and dominant singular values of the weights.（摘要原文）
+本文提出 S2D：Through theoretical analysis as well as empirical correlation studies, we establish the direct link between these activation outliers and dominant singular values of the weights.（摘要原文）
 
 ---
 
@@ -55,7 +55,7 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Selective**，属于量化（Quantization）方向的新方案；
+1. 提出了可命名的新方法/框架 **S2D**，属于量化（Quantization）方向的新方案；
 2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
 3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
@@ -72,7 +72,6 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Through extensive experiments, we demonstrate that $S^2D$ significantly reduces activation outliers and produces well-conditioned representations that are inherently quantization-friendly."*
 - *"Models trained with $S^2D$ achieve up to 7% improved PTQ accuracy on ImageNet under W4A4 quantization and 4% gains when combined with QAT."*
 
 **摘要中出现的关键数值**（去重后）：2, 4, 4%, 7%
@@ -97,7 +96,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（Selective）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 S2D 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

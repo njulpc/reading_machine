@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**低秩分解/低秩适应（Low-Rank）**方向的研究，提出了名为 **LoRA-Pre** 的方法，目标模型/架构涉及 Llama、Llama-2-7B、Llama-3.1-8B。
+本文属于**低秩分解/低秩适应（Low-Rank）**方向的研究，目标模型/架构涉及 Llama、Llama-2-7B、Llama-3.1-8B。
 
 > 论文摘要首句：*"Modern optimizers like Adam and Muon are central to training large language models, but their reliance on first- and second-order momenta introduces significant memory overhead, which constrains scalability and computational efficiency."*
 
 ### 1.2 一句话总结
 
-本文提出 LoRA-Pre：Building on this equivalence, we introduce LoRA-Pre, a novel low-rank optimizer designed for efficient pre-training.（摘要原文）
+本文Building on this equivalence, we introduce LoRA-Pre, a novel low-rank optimizer designed for efficient pre-training.（摘要原文）
 
 ---
 
@@ -56,9 +56,8 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **LoRA-Pre**，属于低秩分解/低秩适应（Low-Rank）方向的新方案；
-2. 在秩分配、分解方式或低秩适配机制方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在秩分配、分解方式或低秩适配机制方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -72,10 +71,7 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Notably, LoRA-Pre demonstrates remarkable rank efficiency, achieving comparable or superior results using only 1/8 the rank of baseline methods."*
-- *"Specifically, compared to standard LoRA, LoRA-Pre achieves substantial improvements of 3.14 points on Llama-3.1-8B and 6.17 points on Llama-2-7B, validating our approach's effectiveness across both pre-training and fine-tuning paradigms."*
-
-**摘要中出现的关键数值**（去重后）：1, 2, 3.1, 3.14, 6.17, 7, 8
+- *"With the same rank, LoRA-Pre consistently outperforms all efficient fine-tuning baselines."*
 
 ---
 
@@ -96,7 +92,7 @@
 1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
 2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
 
-3. 本文（LoRA-Pre）表明低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具——其具体设计（见第 3 节）可作为后续工作的直接参考。
+3. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

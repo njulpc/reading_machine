@@ -57,7 +57,6 @@
 ### 3.2 分点创新
 
 1. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -70,13 +69,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"The results show that the proposed attribution-inspired pruning consistently identifies different layers as least important compared to L1-norm-based methods, leading to improved accuracy--efficiency trade-offs."*
-- *"Notably, for ShuffleNetV2, our method yields a 10\% empirical increase in inference speed, whereas L1-pruning degrades performance by 13.7\%."*
-- *"For RetinaNet, the proposed approach preserves the baseline mAP (0.151) with negligible impact on inference speed, while L1-pruning incurs a 1.3\% mAP drop for a 6.2\% speed increase."*
-
-**摘要中出现的关键数值**（去重后）：0.151, 1, 1.3, 10, 13.7, 2, 6.2
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

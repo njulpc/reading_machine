@@ -58,26 +58,22 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"From the inference perspective, Winograd transformations introduce extensive additions and require frequent bit width conversions to avoid inference overflow, leading to non-negligible communication overhead; 2) From the training perspective, Winograd transformations introduce weight outliers that ma"*
-2. *"At the protocol level, we propose a series of graph-level optimizations for 2PC inference to minimize the communication"*
-3. *"At the algorithm level, we develop a mixed-precision QAT algorithm based on layer sensitivity to optimize model accuracy given communication constraints"*
+1. *"From the inference perspective, Winograd transformations introduce extensive additions and require frequent bit width conversions to avoid inference overflow, leading to non-negligible communication overhead"*
+2. *"From the training perspective, Winograd transformations introduce weight outliers that make quantization-aware training (QAT) difficult, resulting in inferior model accuracy"*
+3. *"At the protocol level, we propose a series of graph-level optimizations for 2PC inference to minimize the communication"*
+4. *"At the algorithm level, we develop a mixed-precision QAT algorithm based on layer sensitivity to optimize model accuracy given communication constraints"*
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Private convolutional neural network (CNN) inference based on secure two-party computation (2PC) suffers from high communication and latency overhead, especially from convolution layers."*
-- *"UFO features a novel 2PC protocol that systematically combines the efficient Winograd convolution algorithm with quantization to improve inference efficiency."*
-- *"However, we observe that naively combining quantization and Winograd convolution faces the following challenges: 1) From the inference perspective, Winograd transformations introduce extensive additions and require frequent bit width conversions to avoid inference overflow, leading to non-negligible communication overhead; 2) From the training perspective, Winograd transformations introduce weight outliers that make quantization-aware training (QAT) difficult, resulting in inferior model accuracy."*
-- *"2) At the algorithm level, we develop a mixed-precision QAT algorithm based on layer sensitivity to optimize model accuracy given communication constraints."*
-- *"To accommodate the outliers, we further introduce a 2PC-friendly bit re-weighting algorithm to increase the representation range without explicitly increasing bit widths."*
 - *"With extensive experiments, UFO demonstrates 11.7x, 3.6x, and 6.3x communication reduction with 1.29%, 1.16%, and 1.29% higher accuracy compared to state-of-the-art frameworks SiRNN, COINN, and CoPriv, respectively."*
 
-**摘要中出现的关键数值**（去重后）：1, 1.16%, 1.29%, 11.7x, 2, 3.6x, 6.3x
+**摘要中出现的关键数值**（去重后）：1.16%, 1.29%, 11.7x, 3.6x, 6.3x
 
 ---
 
@@ -99,7 +95,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（UFO）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 UFO 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

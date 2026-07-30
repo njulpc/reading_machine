@@ -15,13 +15,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）**方向的研究，提出了名为 **Visual** 的方法，目标模型/架构涉及 Kimi-VL、Qwen3-VL。
+本文属于**量化（Quantization）**方向的研究，提出了名为 **VEQ** 的方法，目标模型/架构涉及 Kimi-VL、Qwen3-VL。
 
 > 论文摘要首句：*"Mixture-of-Experts(MoE) Vision-Language Models (VLMs) offer remarkable performance but incur prohibitive memory and computational costs, making compression essential."*
 
 ### 1.2 一句话总结
 
-本文提出 Visual：To bridge this gap, we propose Visual Expert Quantization (VEQ), a dual-aware quantization framework designed to simultaneously accommodate cross-modal differences and heterogeneity between experts.（摘要原文）
+本文提出 VEQ：To bridge this gap, we propose Visual Expert Quantization (VEQ), a dual-aware quantization framework designed to simultaneously accommodate cross-modal differences and heterogeneity between experts.（摘要原文）
 
 ---
 
@@ -58,7 +58,8 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"Modality-expert-aware Quantization, which utilizes expert activation frequency to prioritize error minimization for pivotal experts, and 2)Modality-affinity-aware Quantization, which constructs an enhanced Hessian matrix by integrating token-expert affinity with modality information to guide the cali"*
+1. *"Modality-expert-aware Quantization, which utilizes expert activation frequency to prioritize error minimization for pivotal experts, and"*
+2. *"Modality-affinity-aware Quantization, which constructs an enhanced Hessian matrix by integrating token-expert affinity with modality information to guide the calibration process"*
 
 ---
 
@@ -72,6 +73,7 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
+- *"Extensive experiments across diverse benchmarks verify that VEQ consistently outperforms state-of-the-art baselines."*
 - *"Specifically, under the W3A16 configuration, our method achieves significant average accuracy gains of 2.04\% on Kimi-VL and 3.09\% on Qwen3-VL compared to the previous SOTA quantization methods, demonstrating superior robustness across various multimodal tasks."*
 
 **摘要中出现的关键数值**（去重后）：16, 2.04, 3, 3.09
@@ -96,7 +98,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（Visual）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 VEQ 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

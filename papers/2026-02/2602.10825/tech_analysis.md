@@ -15,13 +15,13 @@
 
 ### 1.1 研究主题
 
-本文属于**KV Cache 压缩**方向的研究，提出了名为 **FlowCache** 的方法。
+本文属于**KV Cache 压缩**方向的研究。
 
 > 论文摘要首句：*"Autoregressive models, often built on Transformer architectures, represent a powerful paradigm for generating ultra-long videos by synthesizing content in sequential chunks."*
 
 ### 1.2 一句话总结
 
-本文提出 FlowCache：In this paper, we present FlowCache, the first caching framework specifically designed for autoregressive video generation.（摘要原文）
+本文In this paper, we present FlowCache, the first caching framework specifically designed for autoregressive video generation.（摘要原文）
 
 ---
 
@@ -40,8 +40,6 @@
 - *"While caching strategies have proven effective for accelerating traditional video diffusion models, existing methods assume uniform denoising across all frames-an assumption that breaks down in autoregressive models where different video chunks exhibit varying similarity patterns at identical timesteps."*
 - *"In this paper, we present FlowCache, the first caching framework specifically designed for autoregressive video generation."*
 
-从上述表述可见，作者关注的核心矛盾是在控制 KV Cache 开销的同时保持长上下文能力。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -56,15 +54,14 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **FlowCache**，属于KV Cache 压缩方向的新方案；
-2. 在 KV Cache 的重要性评估、驱逐策略或低位编码方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在 KV Cache 的重要性评估、驱逐策略或低位编码方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
@@ -92,7 +89,7 @@ KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务�
 2. 注意力模式的可预测性（如重要 token 的分布规律）是设计驱逐/保留策略的核心先验；
 3. 长上下文评测基准（如 RULER、LongBench）应成为 KV Cache 方法的标配验证；
 
-4. 本文（FlowCache）表明长上下文与长推理链场景下，KV Cache 的显存占用随序列长度线性增长，已成为大模型推理部署的主要瓶颈之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

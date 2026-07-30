@@ -56,7 +56,6 @@
 ### 3.2 分点创新
 
 1. 在蒸馏信号构造或师生匹配机制方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -69,11 +68,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"By removing a primary source of safety degradation, nuanced `boundary' refusals, we mitigate or even reverse safety declines in student models, although reductions in reasoning performance (GSM8K) persist."*
-
-**摘要中出现的关键数值**（去重后）：8
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -81,7 +76,7 @@
 
 摘要中直接提及的局限性或开放问题：
 
-- *"Large language models (LLMs) are increasingly deployed worldwide, yet their safety alignment remains predominantly English-centric."*
+- *"Overall, our exploratory study highlights the challenges and potential of KD as a technique for multilingual safety alignment, offering a foundation for future research in this direction."*
 
 知识蒸馏的常见局限包括：(1) 学生与教师之间的能力差距限制了蒸馏上限；(2) 蒸馏过程通常需要额外训练数据与算力；(3) 蒸馏后模型在分布外数据上的鲁棒性可能弱于教师。
 

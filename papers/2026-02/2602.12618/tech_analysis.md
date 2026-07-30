@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**KV Cache 压缩、剪枝（Pruning）、高效架构设计**方向的研究，提出了名为 **Attention-Driven** 的方法。
+本文属于**KV Cache 压缩、剪枝（Pruning）、高效架构设计**方向的研究。
 
 > 论文摘要首句：*"Multimodal Large Language Models (MLLMs) incur significant computational cost from processing numerous vision tokens through all LLM layers."*
 
 ### 1.2 一句话总结
 
-本文提出 Attention-Driven：Observing that deeper layers naturally transmit vision-to-text information, we introduce Attention-Driven Self-Compression (ADSC), a simple, broadly applicable method that progressively reduces vision tokens using only the LLM's attention mechanism.（摘要原文）
+本文Observing that deeper layers naturally transmit vision-to-text information, we introduce Attention-Driven Self-Compression (ADSC), a simple, broadly applicable method that progressively reduces vision tokens using only the LLM's attention mechanism.（摘要原文）
 
 ---
 
@@ -40,8 +40,6 @@
 - *"Observing that deeper layers naturally transmit vision-to-text information, we introduce Attention-Driven Self-Compression (ADSC), a simple, broadly applicable method that progressively reduces vision tokens using only the LLM's attention mechanism."*
 - *"Our method applies uniform token downsampling at selected layers, forming bottlenecks that encourage the model to reorganize and compress information into the remaining tokens."*
 
-从上述表述可见，作者关注的核心矛盾是在控制 KV Cache 开销的同时保持长上下文能力。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -56,19 +54,19 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Attention-Driven**，属于KV Cache 压缩、剪枝（Pruning）、高效架构设计方向的新方案；
-2. 在 KV Cache 的重要性评估、驱逐策略或低位编码方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在 KV Cache 的重要性评估、驱逐策略或低位编码方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"Applied to LLaVA-1.5, ADSC reduces FLOPs by 53.7% and peak KV-cache memory by 56.7%, while preserving 98.2% of the original model performance."*
+- *"Across multiple benchmarks, it outperforms prior pruning approaches in both efficiency and accuracy."*
 
 **摘要中出现的关键数值**（去重后）：1.5, 53.7%, 56.7%, 98.2%
 
@@ -76,10 +74,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"It requires no score computation, auxiliary modules, or attention modification, and remains fully compatible with FlashAttention."*
-- *"Crucially, under high compression ratios, our method remains robust while heuristic-based techniques degrade sharply."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务上，激进压缩可能损害长程检索能力；(2) 驱逐策略通常与具体模型和任务分布耦合；(3) 显存节省与实际端到端延迟收益之间存在换算损耗。
 
@@ -95,7 +90,7 @@ KV Cache 压缩的常见局限包括：(1) 在超长上下文或强推理任务�
 2. 注意力模式的可预测性（如重要 token 的分布规律）是设计驱逐/保留策略的核心先验；
 3. 长上下文评测基准（如 RULER、LongBench）应成为 KV Cache 方法的标配验证；
 
-4. 本文（Attention-Driven）表明长上下文与长推理链场景下，KV Cache 的显存占用随序列长度线性增长，已成为大模型推理部署的主要瓶颈之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**模型压缩相关**方向的研究，提出了名为 **DropAnSH-GS** 的方法。
+本文属于**模型压缩相关**方向的研究。
 
 > 论文摘要首句：*"Recent 3D Gaussian Splatting (3DGS) Dropout methods address overfitting under sparse-view conditions by randomly nullifying Gaussian opacities."*
 
 ### 1.2 一句话总结
 
-本文提出 DropAnSH-GS：However, we identify a neighbor compensation effect in these approaches: dropped Gaussians are often compensated by their neighbors, weakening the intended regularization.（摘要原文）
+本文However, we identify a neighbor compensation effect in these approaches: dropped Gaussians are often compensated by their neighbors, weakening the intended regularization.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"Moreover, these methods overlook the contribution of high-degree spherical harmonic coefficients (SH) to overfitting."*
 - *"To address these issues, we propose DropAnSH-GS, a novel anchor-based Dropout strategy."*
 
-从上述表述可见，作者关注的核心矛盾是效率与性能之间的权衡。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -55,18 +53,16 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **DropAnSH-GS**，属于模型压缩相关方向的新方案；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Recent 3D Gaussian Splatting (3DGS) Dropout methods address overfitting under sparse-view conditions by randomly nullifying Gaussian opacities."*
 - *"Experimental results demonstrate that DropAnSH-GS substantially outperforms existing Dropout methods with negligible computational overhead, and can be readily integrated into various 3DGS variants to enhance their performances."*
 
 **摘要中出现的关键数值**（去重后）：3
@@ -89,7 +85,7 @@
 
 1. 理论分析与实证验证的结合能为压缩方法的设计提供更可靠的指导；
 
-2. 本文（DropAnSH-GS）表明该论文涉及模型压缩相关的理论或应用问题——其具体设计（见第 3 节）可作为后续工作的直接参考。
+2. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

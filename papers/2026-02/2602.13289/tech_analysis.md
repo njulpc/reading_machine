@@ -72,11 +72,10 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We evaluate two MLLMs, Qwen2-VL-7B and Idefics3-8B, quantized with data-free (HQQ) and data-aware (MBQ) methods across multiple bit widths."*
 - *"The combination of int4 MBQ and the Selector achieves the best efficiency-reliability trade-off, closing in on uncompressed performance at approx."*
 - *"75% less memory demand."*
 
-**摘要中出现的关键数值**（去重后）：2, 3, 4 MB, 7, 75%, 8
+**摘要中出现的关键数值**（去重后）：4 MB, 75%
 
 ---
 

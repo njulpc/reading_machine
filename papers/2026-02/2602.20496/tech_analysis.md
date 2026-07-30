@@ -15,13 +15,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）、稀疏化（Sparsity）、硬件加速/软硬件协同**方向的研究，提出了名为 **FlashGRU** 的方法。
+本文属于**剪枝（Pruning）、稀疏化（Sparsity）、硬件加速/软硬件协同**方向的研究，提出了名为 **Pip-Stereo** 的方法。
 
 > 论文摘要首句：*"While iterative stereo matching achieves high accuracy, its dependence on Recurrent Neural Networks (RNN) hinders edge deployment, a challenge underexplored in existing researches."*
 
 ### 1.2 一句话总结
 
-本文提出 FlashGRU：We analyze iterative refinement and reveal that disparity updates are spatially sparse and temporally redundant.（摘要原文）
+本文提出 Pip-Stereo：We analyze iterative refinement and reveal that disparity updates are spatially sparse and temporally redundant.（摘要原文）
 
 ---
 
@@ -57,22 +57,16 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **FlashGRU**，属于剪枝（Pruning）、稀疏化（Sparsity）、硬件加速/软硬件协同方向的新方案；
+1. 提出了可命名的新方法/框架 **Pip-Stereo**，属于剪枝（Pruning）、稀疏化（Sparsity）、硬件加速/软硬件协同方向的新方案；
 2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Third, we develop FlashGRU, a hardware-aware RNN operator leveraging structured sparsity and I/O-conscious design, achieving a 7.28$\times$ speedup, 76.6\% memory peak reduction and 80.9\% global memory requests reduction over natvie ConvGRUs under 2K resolution."*
-- *"Our PipStereo enables real-time, high-fidelity stereo matching on edge hardware: it processes 320$\times$640 frames in just 75ms on an NVIDIA Jetson Orin NX (FP16) and 19ms on RTX 4090, matching the accuracy of large iterative based models, and our generalization ability and accuracy far exceeds that of existing real-time methods."*
-
-**摘要中出现的关键数值**（去重后）：16, 19, 2, 320, 4090, 640, 7.28, 75, 76.6, 80.9
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 
@@ -94,7 +88,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（FlashGRU）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 Pip-Stereo 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

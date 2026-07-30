@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）、稀疏化（Sparsity）**方向的研究，提出了名为 **Sparsity-Aware** 的方法。
+本文属于**剪枝（Pruning）、稀疏化（Sparsity）**方向的研究，提出了名为 **SAU** 的方法。
 
 > 论文摘要首句：*"Large Language Models (LLMs) inevitably memorize sensitive information during training, posing significant privacy risks."*
 
 ### 1.2 一句话总结
 
-本文提出 Sparsity-Aware：We find that unlearning effectiveness degrades substantially on sparse models.（摘要原文）
+本文提出 SAU：We find that unlearning effectiveness degrades substantially on sparse models.（摘要原文）
 
 ---
 
@@ -56,16 +56,19 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Sparsity-Aware**，属于剪枝（Pruning）、稀疏化（Sparsity）方向的新方案；
+1. 提出了可命名的新方法/框架 **SAU**，属于剪枝（Pruning）、稀疏化（Sparsity）方向的新方案；
 2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"Extensive experiments demonstrate that SAU significantly outperforms existing methods on sparse LLMs, achieving effective forgetting while preserving model utility."*
 
 ---
 
@@ -87,7 +90,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（Sparsity-Aware）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 SAU 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

@@ -70,12 +70,9 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We apply transcoder adapters to characterize the differences between Qwen2.5-Math-7B and its reasoning-distilled variant, DeepSeek-R1-Distill-Qwen-7B."*
 - *"When evaluated on reasoning benchmarks, adapters match the reasoning model's response lengths and typically recover 50-90% of the accuracy gains from reasoning fine-tuning."*
-- *"When examining adapter features, we find that only ~8% have activating examples directly related to reasoning behaviors."*
-- *"Using attribution graphs, we trace hesitation to only ~2.4% of adapter features (5.6k total) performing one of two functions."*
 
-**摘要中出现的关键数值**（去重后）：1, 2.4%, 2.5, 5.6, 50, 7, 8%, 90%
+**摘要中出现的关键数值**（去重后）：50, 90%
 
 ---
 

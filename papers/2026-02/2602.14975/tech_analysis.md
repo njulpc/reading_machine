@@ -62,16 +62,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"Overall, the DMTS-NC scheme is found to be more stable and efficient than its conservative counterpart with additional speedups reaching 15-30% over DMTS."*
-- *"We obtain additional speedup by combining hydrogen mass repartitioning (HMR), High Hydrogen Friction (HHF) to further extended the largest timestep up to 10fs of our schemes while conserving stability and accuracy."*
-- *"As for DMTS, DMTS-NC is applicable to any neural network potential and can be applied to approaches that are computationally heavier than FeNNix-Bio1."*
-- *"We show a proof of principle applying the approach to the distillation of MACE-OFF23 with consequent speedups ranging from 3.66 to 5.64 compared to single timestep."*
 
-**摘要中出现的关键数值**（去重后）：1, 10, 15, 23, 3.66, 30%, 5.64
+**摘要中出现的关键数值**（去重后）：15, 30%
 
 ---
 
@@ -93,7 +90,7 @@
 2. 在推理模型时代，长思维链的蒸馏成为小模型获取推理能力的关键路径；
 3. 蒸馏过程中的负迁移与能力遗忘需要专门的评估协议；
 
-4. 本文（DMTS-NC）表明知识蒸馏将大模型（教师）的能力迁移到小模型（学生）中，是模型压缩与能力压缩的重要手段——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 DMTS-NC 在知识蒸馏（Knowledge Distillation）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

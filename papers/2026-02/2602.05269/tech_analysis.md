@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）、低秩分解/低秩适应（Low-Rank）、硬件加速/软硬件协同**方向的研究，提出了名为 **Hybrid** 的方法。
+本文属于**量化（Quantization）、低秩分解/低秩适应（Low-Rank）、硬件加速/软硬件协同**方向的研究。
 
 > 论文摘要首句：*"The deployment of Large Language Models (LLMs) on edge devices is fundamentally constrained by the "Memory Wall" -- a hardware limitation where memory bandwidth, not compute, becomes the bottleneck."*
 
 ### 1.2 一句话总结
 
-本文提出 Hybrid：In this work, we introduce Hybrid Gated Flow (HGF), a dual-stream architecture that couples a 1.58-bit ternary backbone with a learnable, low-rank FP16 correction path controlled by adaptive gates.（摘要原文）
+本文In this work, we introduce Hybrid Gated Flow (HGF), a dual-stream architecture that couples a 1.58-bit ternary backbone with a learnable, low-rank FP16 correction path controlled by adaptive gates.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"In this work, we introduce Hybrid Gated Flow (HGF), a dual-stream architecture that couples a 1.58-bit ternary backbone with a learnable, low-rank FP16 correction path controlled by adaptive gates."*
 - *"Through extensive experiments on the TinyStories dataset across two training regimes (2500 and 3500 steps), we demonstrate that HGF 5.4 achieves a validation loss of 0.9306 compared to BitNet's 1.0294, recovering approximately 55% of the quality gap between pure ternary quantization and the FP16 baseline (0.8490)."*
 
-从上述表述可见，作者关注的核心矛盾是在压缩数值精度的同时保持模型能力。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -54,33 +52,28 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Hybrid**，属于量化（Quantization）、低秩分解/低秩适应（Low-Rank）、硬件加速/软硬件协同方向的新方案；
-2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
+1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
+2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"Recent 1.58-bit quantization techniques (eg, BitNet b1.58) dramatically reduce memory footprint but typically incur a perplexity degradation of 20-25% compared to FP16 baselines."*
-- *"In this work, we introduce Hybrid Gated Flow (HGF), a dual-stream architecture that couples a 1.58-bit ternary backbone with a learnable, low-rank FP16 correction path controlled by adaptive gates."*
 - *"Through extensive experiments on the TinyStories dataset across two training regimes (2500 and 3500 steps), we demonstrate that HGF 5.4 achieves a validation loss of 0.9306 compared to BitNet's 1.0294, recovering approximately 55% of the quality gap between pure ternary quantization and the FP16 baseline (0.8490)."*
 - *"This recovery is achieved with only ~12-15% memory overhead beyond the ternary backbone."*
-- *"While a full-precision differential attention baseline (Diff_Only) exhibited training instability with validation loss exceeding 1.68, the ternary-anchored HGF maintained robust convergence throughout training."*
 
-**摘要中出现的关键数值**（去重后）：0.8490, 0.9306, 1.0294, 1.58, 1.68, 12, 15%, 16, 25%, 2500, 3500, 5.4, 55%
+**摘要中出现的关键数值**（去重后）：0.8490, 0.9306, 1.0294, 1.58, 12, 15%, 16, 25%, 2500, 3500, 5.4, 55%
 
 ---
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"The deployment of Large Language Models (LLMs) on edge devices is fundamentally constrained by the "Memory Wall" -- a hardware limitation where memory bandwidth, not compute, becomes the bottleneck."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 
@@ -96,7 +89,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（Hybrid）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

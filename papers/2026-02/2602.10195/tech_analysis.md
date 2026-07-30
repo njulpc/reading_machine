@@ -69,12 +69,10 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"By embedding states in the $Cl_{4,1}$ manifold and evolving them via geometric transformations (rotors), Versor natively represents $SE(3)$-equivariant relationships without requiring explicit structural encoding."*
 - *"Versor is validated on chaotic N-body dynamics, topological reasoning, and standard multimodal benchmarks (CIFAR-10, WikiText-103), consistently outperforming Transformers, Graph Networks, and geometric baselines (GATr, EGNN)."*
-- *"Key results include: orders-of-magnitude fewer parameters ($200\times$ vs."*
 - *"Custom Clifford kernels achieve a cumulative over $100\times$ speedup via bit-masked contraction and specialized Matrix Isomorphism kernels, reducing per-step latency to 1.05 ms and outperforming highly-optimized Transformer baselines."*
 
-**摘要中出现的关键数值**（去重后）：1, 1.05, 10, 100, 103, 3, 4
+**摘要中出现的关键数值**（去重后）：1.05, 10, 100, 103
 
 ---
 
@@ -96,7 +94,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（Versor）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 Versor 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

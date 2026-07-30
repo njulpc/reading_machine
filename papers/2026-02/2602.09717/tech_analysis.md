@@ -68,12 +68,11 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"We construct spiking variants of ShuffleNet, SqueezeNet, MnasNet, and MixNet, and evaluate them on CIFAR-10, CIFAR-100, and TinyImageNet, measuring accuracy, F1-score, parameter count, computational complexity, and energy consumption."*
-- *"Our results show that SNNs can achieve up to 15.7x higher energy efficiency than their CNN counterparts while retaining competitive accuracy."*
+- *"Among these, the SNN variant of SqueezeNet consistently outperforms other lightweight SNNs."*
 - *"This pruned model improves CIFAR-10 accuracy by 6% and reduces parameters by 19% compared to the original SNN-SqueezeNet."*
 - *"Crucially, it narrows the gap with CNN-SqueezeNet, achieving nearly the same accuracy (only 1% lower) but with an 88.1% reduction in energy consumption due to sparse spike-driven computations."*
 
-**摘要中出现的关键数值**（去重后）：1, 1%, 10, 100, 15.7x, 19%, 6%, 88.1%
+**摘要中出现的关键数值**（去重后）：1%, 10, 19%, 6%, 88.1%
 
 ---
 

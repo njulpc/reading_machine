@@ -60,11 +60,12 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"We find that creating a distilled 8B model is over 2,000 times more compute-efficient than training its vanilla counterpart, while achieving reasoning capabilities on par with, or even exceeding, standard models ten times its size."*
+- *"These findings validate distillation not just as a compression technique, but as a primary strategy for building state-of-the-art, accessible AI"*
 
 **摘要中出现的关键数值**（去重后）：000 times, 2, 8
 

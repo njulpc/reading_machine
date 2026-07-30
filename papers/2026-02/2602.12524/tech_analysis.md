@@ -61,15 +61,11 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"It allows 2D image encoders to extract useful features for various downstream tasks, including those related to vision-based systems."*
-- *"To address these issues, we propose a novel self-supervised approach, \textbf{Collaborative Distillation}, which leverages 3D LiDAR as self-supervision to improve robustness to noisy and adverse weather conditions in 2D image encoders while retaining their original capabilities."*
-- *"In addition, our method also improves 3D awareness stemming from LiDAR's characteristics."*
-
-**摘要中出现的关键数值**（去重后）：2, 3
+- *"Our method outperforms competing methods in various downstream tasks across diverse conditions and exhibits strong generalization ability."*
 
 ---
 

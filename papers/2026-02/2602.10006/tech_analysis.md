@@ -60,14 +60,13 @@
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"Extensive experiments demonstrate that our 32B teacher model achieves state-of-the-art performance."*
-- *"Moreover, the AFRL architecture enables efficient knowledge distillation, successfully transferring expert-level logic to a 0.6B model, thereby reconciling reasoning depth with deployment latency."*
 
-**摘要中出现的关键数值**（去重后）：0.6, 32
+**摘要中出现的关键数值**（去重后）：32
 
 ---
 

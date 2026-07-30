@@ -14,13 +14,13 @@
 
 ### 1.1 研究主题
 
-本文属于**量化（Quantization）、向量量化（Vector Quantization）**方向的研究，提出了名为 **Robot** 的方法。
+本文属于**量化（Quantization）、向量量化（Vector Quantization）**方向的研究。
 
 > 论文摘要首句：*"Leveraging auditory and visual feedback for attention reorientation is essential for natural gaze shifts in social interaction."*
 
 ### 1.2 一句话总结
 
-本文提出 Robot：In this work, we propose the Robot Gaze-Shift (RGS) framework, which integrates these two components into a unified pipeline.（摘要原文）
+本文In this work, we propose the Robot Gaze-Shift (RGS) framework, which integrates these two components into a unified pipeline.（摘要原文）
 
 ---
 
@@ -39,8 +39,6 @@
 - *"In this work, we propose the Robot Gaze-Shift (RGS) framework, which integrates these two components into a unified pipeline."*
 - *"First, RGS employs a vision--language model (VLM)-based gaze reasoning pipeline to infer context-appropriate gaze targets from multimodal interaction cues, ensuring consistency with human gaze-orienting regularities."*
 
-从上述表述可见，作者关注的核心矛盾是在压缩数值精度的同时保持模型能力。
-
 ---
 
 ## 3. 核心方法与创新点 (Methodology & Innovations)
@@ -53,14 +51,13 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Robot**，属于量化（Quantization）、向量量化（Vector Quantization）方向的新方案；
-2. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
+1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
 摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
@@ -68,9 +65,7 @@
 
 ## 5. 局限性与未来展望 (Limitations & Future Work)
 
-摘要中直接提及的局限性或开放问题：
-
-- *"However, enabling humanoid robots to perform natural and context-appropriate gaze shifts in unconstrained human--robot interaction (HRI) remains challenging, as it requires the coupling of cognitive attention mechanisms and biomimetic motion generation."*
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
 
 量化方法的常见局限包括：(1) 极低比特（≤2bit）下精度损失仍然显著；(2) 多数方法在特定模型族与任务上验证，跨架构、跨模态的泛化性有待检验；(3) 报告的收益多基于仿真或特定 kernel，真实端到端加速依赖硬件实现成熟度。
 
@@ -86,7 +81,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（Robot）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
 
 ---
 

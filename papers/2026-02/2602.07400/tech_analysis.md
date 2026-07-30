@@ -54,9 +54,9 @@
 
 ### 3.2 分点创新
 
-摘要中以编号形式列出的技术要点：
-
-1. *"We evaluate the best-of-space model on all three backends"*
+1. 提出了可命名的新方法/框架 **BitLogic**，属于剪枝（Pruning）、硬件加速/软硬件协同方向的新方案；
+2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
+3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -71,9 +71,8 @@
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
 - *"Combining the per-axis winners identifies a new best-of-space configuration that outperforms every retrained prior on every (dataset, width) cell in which every compared prior fits the shared budget, across MNIST, Fashion-MNIST, CIFAR-10, and CIFAR-100."*
-- *"On MNIST, the resulting two-layer network reaches ${\sim}126$\,MSamples/s on FPGA, ${\sim}15\times$ the throughput of a bit-packed GPU forward path that itself processes $64$ samples per $64$-bit operation, at four-to-five orders of magnitude less energy."*
 
-**摘要中出现的关键数值**（去重后）：10, 100, 126, 15, 64
+**摘要中出现的关键数值**（去重后）：10, 100
 
 ---
 
@@ -95,7 +94,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（BitLogic）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 BitLogic 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

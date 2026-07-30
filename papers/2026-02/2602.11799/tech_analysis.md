@@ -55,7 +55,7 @@
 
 摘要中以编号形式列出的技术要点：
 
-1. *"Suboptimal Tokenization: existing methods (e"*
+1. *"Suboptimal Tokenization: existing methods (e.g., RQ-VAE) lack disentanglement between shared cross-modal semantics and modality-specific details, causing redundancy or collapse; ("*
 2. *"Architecture-Data Mismatch: vanilla Transformers treat semantic IDs as flat streams, ignoring the hierarchy of user interactions, items, and tokens"*
 3. *"Disentangled Semantic Tokenizer (DST): unifies modalities via geometry-aware alignment and quantizes them via a coarse-to-fine strategy"*
 4. *"Hierarchical Memory-Anchor Transformer (HMAT): splits positional encoding into inter- and intra-item subspaces via Hierarchical RoPE to restore hierarchy"*
@@ -72,10 +72,10 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"Shared codebooks distill consensus while modality-specific ones recover nuances from residuals, enforced by mutual information minimization; (2) Hierarchical Memory-Anchor Transformer (HMAT): splits positional encoding into inter- and intra-item subspaces via Hierarchical RoPE to restore hierarchy."*
+- *"Experiments on real-world datasets show consistent improvements over SOTA baselines, especially in cold-start scenarios."*
 - *"Deployed on a large-scale social platform serving millions of users, Hi-SAM achieved a 6.55% gain in the core online metric."*
 
-**摘要中出现的关键数值**（去重后）：2, 6.55%
+**摘要中出现的关键数值**（去重后）：6.55%
 
 ---
 
@@ -97,7 +97,7 @@
 2. 离群值（outlier）处理、旋转/缩放等数值变换是当前低比特量化的关键技巧，可与本文方法组合使用；
 3. 评估量化方案时应同时报告精度、显存、端到端延迟三个维度，避免单一指标误导；
 
-4. 本文（Hi-SAM）表明即通过降低权重/激活的数值精度来压缩模型体积、降低显存占用并加速推理，是大模型部署的核心技术之一——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 Hi-SAM 在量化（Quantization）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 

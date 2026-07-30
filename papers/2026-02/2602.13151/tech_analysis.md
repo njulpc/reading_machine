@@ -55,7 +55,6 @@
 ### 3.2 分点创新
 
 1. 在量化误差控制（如缩放、截断、离群值处理或块级设计）方面给出了新的设计选择；
-2. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
 ---
 
@@ -67,13 +66,7 @@
 
 ### 4.2 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"We show that standard full-parameter fine-tuning often induces parameter changes that are too small to survive 4-bit quantization."*
-- *"On Llama-2-7B evaluated with MUSE dataset (BOOKS and NEWS), LoRA improves 4-bit utility by up to 7.93 points (NPO+GDR on BOOKS: 50.17 to 58.10) and yields higher 4-bit utility on NEWS for GA+GDR (40.06 to 44.82, increase of 4.76)."*
-- *"LoRA also substantially reduces privacy leakage under 4-bit PTQ, eg, for GA+KLR on BOOKS, PrivLeak moves from -25.68 to -5.86 (closer to ideal 0), while maintaining strong forgetting (VerMem and KnowMem near 0)."*
-
-**摘要中出现的关键数值**（去重后）：0, 2, 25.68, 4, 4.76, 40.06, 44.82, 5.86, 50.17, 58.10, 7, 7.93
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

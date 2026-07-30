@@ -52,21 +52,15 @@
 
 ### 3.2 分点创新
 
-摘要中以编号形式列出的技术要点：
-
-1. *"Across three model scales (315K--2"*
+1. 在秩分配、分解方式或低秩适配机制方面给出了新的设计选择；
 
 ---
 
 ## 4. 实验设计与结果 (Experiments & Results)
 
-### 4.2 关键结果（摘要原文数据）
+### 4.1 关键结果（摘要原文数据）
 
-以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
-
-- *"Reconstruction from 3--5 trajectory PCs recovers over 95\% of final accuracy, whereas both per-matrix and joint SVD fail at sub-full rank."*
-
-**摘要中出现的关键数值**（去重后）：3, 5, 95
+摘要中未给出具体数值结果；该文可能以理论分析、方法框架或系统设计为主，详细实验数据需查阅全文。
 
 ---
 

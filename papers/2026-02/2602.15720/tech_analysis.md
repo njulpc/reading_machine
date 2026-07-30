@@ -15,13 +15,13 @@
 
 ### 1.1 研究主题
 
-本文属于**剪枝（Pruning）**方向的研究，提出了名为 **Token** 的方法，目标模型/架构涉及 ViT、ViT-MAE、ViT-MAE-Huge、ViTs，在 ADE20K、CIFAR-100、COCO、COCO. 等基准上进行了验证。
+本文属于**剪枝（Pruning）**方向的研究，提出了名为 **ToaSt** 的方法，目标模型/架构涉及 ViT、ViT-MAE、ViT-MAE-Huge、ViTs，在 ADE20K、CIFAR-100、COCO、COCO. 等基准上进行了验证。
 
 > 论文摘要首句：*"Vision Transformers (ViTs) have achieved remarkable success across various vision tasks, yet their deployment is often hindered by prohibitive computational costs."*
 
 ### 1.2 一句话总结
 
-本文提出 Token：We propose ToaSt, a decoupled framework applying specialized strategies to distinct ViT components.（摘要原文）
+本文提出 ToaSt：We propose ToaSt, a decoupled framework applying specialized strategies to distinct ViT components.（摘要原文）
 
 ---
 
@@ -55,7 +55,7 @@
 
 ### 3.2 分点创新
 
-1. 提出了可命名的新方法/框架 **Token**，属于剪枝（Pruning）方向的新方案；
+1. 提出了可命名的新方法/框架 **ToaSt**，属于剪枝（Pruning）方向的新方案；
 2. 在重要性度量与稀疏结构选择方面给出了新的设计选择；
 3. 通过实验验证了方法相对基线的优势（详见第 4 节）。
 
@@ -72,11 +72,10 @@
 
 以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
 
-- *"For Feed-Forward Networks (over 60% of FLOPs), we introduce Token Channel Selection (TCS), a training-free method that filters redundant noise channels at inference time."*
+- *"Extensive evaluations across nine diverse models, including DeiT, ViT-MAE, and Swin Transformer, demonstrate that ToaSt achieves superior trade-offs between accuracy and efficiency, consistently outperforming existing baselines."*
 - *"On ViT-MAE-Huge, ToaSt achieves 88.52% accuracy (+1.64%p) with 39.4% FLOPs reduction."*
-- *"ToaSt also transfers effectively to diverse downstream tasks (COCO detection, ADE20K segmentation, CIFAR-100 classification), achieving 52.2 versus 51.9 mAP on COCO."*
 
-**摘要中出现的关键数值**（去重后）：1.64%, 100, 39.4%, 51.9, 52.2, 60%, 88.52%
+**摘要中出现的关键数值**（去重后）：1.64%, 39.4%, 88.52%
 
 ---
 
@@ -98,7 +97,7 @@
 2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
 3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
 
-4. 本文（Token）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+4. 本文提出的 ToaSt 在剪枝（Pruning）方向提供了可直接借鉴的具体设计（见第 3 节原文引用），复现并与本文结果对比是切入该方向的低成本路径。
 
 ---
 
