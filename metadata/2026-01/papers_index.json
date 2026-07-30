@@ -39,7 +39,8 @@
         "distillation"
       ],
       "target_model": "LLM时序知识图推理的知识蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.00222",
@@ -61,7 +62,8 @@
         "quantization"
       ],
       "target_model": "组合向量量化的低维码本LooC",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.00282",
@@ -91,7 +93,8 @@
         "analysis"
       ],
       "target_model": "量化对LLM自我解释能力影响的实证研究",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.00359",
@@ -116,7 +119,8 @@
         "distillation"
       ],
       "target_model": "蒸馏+RGB-D Transformer高效预测稠密视觉嵌入",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.00426",
@@ -141,7 +145,8 @@
         "kv_cache"
       ],
       "target_model": "RMAAT:星形胶质细胞启发的记忆压缩与重放",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.00434",
@@ -165,7 +170,8 @@
         "hardware"
       ],
       "target_model": "TDC谐振存算一体INT8 CNN加速器",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.00679",
@@ -191,7 +197,8 @@
         "hardware"
       ],
       "target_model": "脉冲驱动语言模型的性能/内存感知量化框架QSLM",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.00714",
@@ -217,7 +224,8 @@
         "distillation"
       ],
       "target_model": "KDPhys:注意力引导3D到2D蒸馏的实时生理测量",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.00913",
@@ -240,7 +248,8 @@
         "pruning"
       ],
       "target_model": "Clean-GS:语义掩码引导的3DGS剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.00926",
@@ -264,7 +273,8 @@
         "distillation"
       ],
       "target_model": "MACA:将可信LLM蒸馏为高效检索器框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.00942",
@@ -287,7 +297,8 @@
         "analysis"
       ],
       "target_model": "稀疏MoE与稠密LM跨解码温度的可靠性实证",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.01204",
@@ -314,7 +325,8 @@
         "kv_cache"
       ],
       "target_model": "XStreamVGGT:KV Cache压缩的极致内存高效流式VGGT",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.01296",
@@ -341,7 +353,8 @@
         "analysis"
       ],
       "target_model": "激进压缩使LLM权重窃取成为可能",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.01608",
@@ -367,7 +380,8 @@
         "sparsity"
       ],
       "target_model": "引导token稀疏扩散模型",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.02213",
@@ -390,7 +404,8 @@
         "quantization"
       ],
       "target_model": "SO(3)等变图神经网络量化用于分子性质预测",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.02298",
@@ -411,7 +426,8 @@
         "quantization"
       ],
       "target_model": "2的幂次量化感知训练(PoT-QAT)用于LLM",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.02353",
@@ -437,7 +453,8 @@
         "pruning"
       ],
       "target_model": "元学习引导剪枝用于边缘少样本植物病理",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.02437",
@@ -465,7 +482,8 @@
         "pruning"
       ],
       "target_model": "TAP-ViTs:ViT端侧部署的任务自适应剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.02455",
@@ -495,7 +513,8 @@
         "quantization"
       ],
       "target_model": "编码器-解码器ASR模型PTQ的诊断驱动逐层补偿",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.02563",
@@ -524,7 +543,8 @@
         "analysis"
       ],
       "target_model": "量化与蒸馏对编程token的隐性影响",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.02613",
@@ -549,7 +569,8 @@
         "hardware"
       ],
       "target_model": "稀疏感知流式SNN加速器(自动调制分类)",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.02674",
@@ -573,7 +594,8 @@
         "pruning"
       ],
       "target_model": "多域校准的LLM迭代结构化剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.02680",
@@ -601,7 +623,8 @@
         "analysis"
       ],
       "target_model": "针对LLM量化的对抗攻击(量化安全)",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.02819",
@@ -627,7 +650,8 @@
         "sparsity"
       ],
       "target_model": "标点感知混合可训练稀疏注意力用于LLM",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.02888",
@@ -658,7 +682,8 @@
         "quantization"
       ],
       "target_model": "残差投影多协作闭环单实例量化RPIQ(视障辅助)",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.03043",
@@ -693,7 +718,8 @@
         "analysis"
       ],
       "target_model": "后训练稀疏注意力算法在长解码阶段的失效分析",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.03067",
@@ -715,7 +741,8 @@
         "kv_cache"
       ],
       "target_model": "KV-Cache块联合编码实现可扩展LLM服务",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.03195",
@@ -738,7 +765,8 @@
         "sparsity"
       ],
       "target_model": "稀疏知识蒸馏:概率域温度缩放与多阶段压缩数学框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.03332",
@@ -758,7 +786,8 @@
         "quantization"
       ],
       "target_model": "KAN的分段LUT量化加速推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.03484",
@@ -791,7 +820,8 @@
         "quantization"
       ],
       "target_model": "LLM驱动的硬件感知量化智能体From Bits to Chips",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.04264",
@@ -814,7 +844,8 @@
         "distillation"
       ],
       "target_model": "MemKD:记忆差异蒸馏的高效时间序列分类",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.04348",
@@ -838,7 +869,8 @@
         "compression"
       ],
       "target_model": "SCAR-GS:渐进高斯泼溅残差的空间上下文注意力",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.04359",
@@ -860,7 +892,8 @@
         "kv_cache"
       ],
       "target_model": "PackCache:紧凑KV-Cache免训练加速统一自回归视频生成",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.04519",
@@ -883,7 +916,8 @@
         "token_compression"
       ],
       "target_model": "TokenSeg:层次视觉token压缩实现3D医学分割",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.04719",
@@ -909,7 +943,8 @@
         "hardware"
       ],
       "target_model": "GPU加速INT8 KV Cache量化压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.05379",
@@ -931,7 +966,8 @@
         "compression"
       ],
       "target_model": "EdgeLDR:四元数低位移秩神经网络边缘高效深度学习",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.05388",
@@ -954,7 +990,8 @@
         "distillation"
       ],
       "target_model": "蛋白质语言模型蒸馏产生基础隐式溶剂模型",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.05394",
@@ -980,7 +1017,8 @@
         "compression"
       ],
       "target_model": "Sketch&Patch++:高效结构感知3D高斯表示",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.05639",
@@ -1003,7 +1041,8 @@
         "distillation"
       ],
       "target_model": "序贯蒸馏高效训练紧凑压缩模型",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.05684",
@@ -1028,7 +1067,8 @@
         "low_rank"
       ],
       "target_model": "柔性低秩矩阵速写加速LLM量化FLRQ",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.05913",
@@ -1051,7 +1091,8 @@
         "distillation"
       ],
       "target_model": "识别相关子空间蒸馏轻量领域专家",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.06227",
@@ -1079,7 +1120,8 @@
         "compression"
       ],
       "target_model": "双阶段蒸馏+Pareto压缩液态神经网络(边缘电池预测)",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.06702",
@@ -1100,7 +1142,8 @@
         "sparsity"
       ],
       "target_model": "GRASP LoRA:GRPO引导的适配器稀疏策略",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.06787",
@@ -1126,7 +1169,8 @@
         "analysis"
       ],
       "target_model": "LLM垃圾注意力:BOS沉没头与沉没感知剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.06959",
@@ -1148,7 +1192,8 @@
         "sparsity"
       ],
       "target_model": "Hessian自适应稀疏向量量化HAS-VQ",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.07048",
@@ -1173,7 +1218,8 @@
         "hardware"
       ],
       "target_model": "GPU加速量化近似最近邻搜索系统",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.07197",
@@ -1198,7 +1244,8 @@
         "analysis"
       ],
       "target_model": "超越方差:Fisher对齐子空间诊断的知识感知LLM压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.07212",
@@ -1223,7 +1270,8 @@
         "pruning"
       ],
       "target_model": "互信息优化LLM剪枝MI-PRUN",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.07372",
@@ -1264,7 +1312,8 @@
         "sparsity"
       ],
       "target_model": "可扩展查找的条件记忆:LLM稀疏性新维度",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.07396",
@@ -1287,7 +1336,8 @@
         "compression"
       ],
       "target_model": "子空间感知特征缓存实现高效扩散Transformer",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.07475",
@@ -1313,7 +1363,8 @@
         "quantization"
       ],
       "target_model": "增广残差通道提升NVFP4量化ARCQuant",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.07568",
@@ -1340,7 +1391,8 @@
         "distillation"
       ],
       "target_model": "d3LLM:伪轨迹蒸馏实现超快扩散LLM",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.07667",
@@ -1365,7 +1417,8 @@
         "pruning"
       ],
       "target_model": "LLM推理逐层token剪枝的自适应层选择",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.07878",
@@ -1389,7 +1442,8 @@
         "quantization"
       ],
       "target_model": "切片Wasserstein分布对齐损失改进超低比特LLM量化",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.07891",
@@ -1414,7 +1468,8 @@
         "pruning"
       ],
       "target_model": "KVzap:快速自适应忠实的KV Cache剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.07892",
@@ -1444,7 +1499,8 @@
         "sparsity"
       ],
       "target_model": "1.25比特三元量化Sherry(细粒度稀疏化)",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.08033",
@@ -1467,7 +1523,8 @@
         "distillation"
       ],
       "target_model": "InfGraND:影响引导的GNN到MLP知识蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.08089",
@@ -1496,7 +1553,8 @@
         "quantization"
       ],
       "target_model": "量化之上捎带安全重对齐Q-realign",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.08169",
@@ -1519,7 +1577,8 @@
         "distillation"
       ],
       "target_model": "基于微调功能向量的关系知识蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.08301",
@@ -1542,7 +1601,8 @@
         "distillation"
       ],
       "target_model": "ReCo-KD:区域与上下文感知蒸馏的高效3D医学分割",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.08343",
@@ -1570,7 +1630,8 @@
         "analysis"
       ],
       "target_model": "多智能体系统中KV Cache复用何时失效",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.08412",
@@ -1595,7 +1656,8 @@
         "distillation"
       ],
       "target_model": "CoT引导混合蒸馏用于边缘无人机控制代码生成",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.08743",
@@ -1622,7 +1684,8 @@
         "kv_cache"
       ],
       "target_model": "TableCache:主外键引导KV Cache预计算加速Text-to-SQL",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.08764",
@@ -1646,7 +1709,8 @@
         "quantization"
       ],
       "target_model": "模态融合语义ID生成式音乐推荐FusID",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.08882",
@@ -1670,7 +1734,8 @@
         "compression"
       ],
       "target_model": "流形约束优化压缩地理空间迁移学习中的ViT",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.09059",
@@ -1693,7 +1758,8 @@
         "distillation"
       ],
       "target_model": "翻译流水线+蒸馏语言模型实现高效多语言对话",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.09165",
@@ -1714,7 +1780,8 @@
         "distillation"
       ],
       "target_model": "多教师集成蒸馏:概率域知识聚合数学框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.09176",
@@ -1744,7 +1811,8 @@
         "sparsity"
       ],
       "target_model": "双Taylor展开+注意力分布感知稀疏化LLM(D²Prune)",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.09191",
@@ -1770,7 +1838,8 @@
         "distillation"
       ],
       "target_model": "知识蒸馏分割器用于本地化临床工作流",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.09306",
@@ -1793,7 +1862,8 @@
         "compression"
       ],
       "target_model": "OD-LLM:序列推荐端侧LLM任务自适应压缩框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.09352",
@@ -1816,7 +1886,8 @@
         "pruning"
       ],
       "target_model": "谱复自编码器剪枝:保真度引导的极端结构化通道压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.09451",
@@ -1839,7 +1910,8 @@
         "quantization"
       ],
       "target_model": "状态空间模型激活软边量化器Quamba-SE",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.09555",
@@ -1868,7 +1940,8 @@
         "analysis"
       ],
       "target_model": "微缩放浮点格式下LLM PTQ基准评测",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.09694",
@@ -1891,7 +1964,8 @@
         "pruning"
       ],
       "target_model": "LLM压缩LLM:智能体自适应剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.09773",
@@ -1916,7 +1990,8 @@
         "hardware"
       ],
       "target_model": "LUT基DNN推理的架构与连接优化",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.09865",
@@ -1941,7 +2016,8 @@
         "distillation"
       ],
       "target_model": "Muon优化的蒸馏+量化用于LLM部署",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.09881",
@@ -1968,7 +2044,8 @@
         "distillation"
       ],
       "target_model": "转移匹配蒸馏实现快速视频生成",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.09985",
@@ -1992,7 +2069,8 @@
         "quantization"
       ],
       "target_model": "分层残差量化FaTRQ用于LLM向量检索",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.10015",
@@ -2014,7 +2092,8 @@
         "distillation"
       ],
       "target_model": "CAFEDistill:联邦早退网络蒸馏学习个性化动态模型",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.10114",
@@ -2037,7 +2116,8 @@
         "distillation"
       ],
       "target_model": "跟随教师脚步:领域LLM的调度检查点蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.10155",
@@ -2058,7 +2138,8 @@
         "kv_cache"
       ],
       "target_model": "LOOKAT:内存高效Transformer的查找优化键注意力",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.10321",
@@ -2083,7 +2164,8 @@
         "distillation"
       ],
       "target_model": "校准LLM蒸馏的高效长上下文排序架构(人岗匹配)",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.10729",
@@ -2111,7 +2193,8 @@
         "kv_cache"
       ],
       "target_model": "OrbitFlow:SLO感知长上下文服务的细粒度KV Cache重配置",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.10765",
@@ -2134,7 +2217,8 @@
         "sparsity"
       ],
       "target_model": "剪枝即进化:通过选择动力学涌现稀疏性",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.10801",
@@ -2167,7 +2251,8 @@
         "low_rank"
       ],
       "target_model": "张量网络模型实现FPGA低延迟喷注标记",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.10953",
@@ -2195,7 +2280,8 @@
         "hardware"
       ],
       "target_model": "SwiftKV:面向边缘的注意力算法与多头加速器",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.10987",
@@ -2216,7 +2302,8 @@
         "distillation"
       ],
       "target_model": "轻量自动程序修复的推理蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.11200",
@@ -2242,7 +2329,8 @@
         "quantization"
       ],
       "target_model": "家族感知量化FAQ:再生成校准数据缓解量化误差",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.11269",
@@ -2268,7 +2356,8 @@
         "distillation"
       ],
       "target_model": "X-Distill:视觉运动学习的跨架构视觉蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.11471",
@@ -2293,7 +2382,8 @@
         "low_rank"
       ],
       "target_model": "低秩键值注意力",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.11630",
@@ -2318,7 +2408,8 @@
         "distillation"
       ],
       "target_model": "FreeFlow层数再蒸馏:单层Transformer一步生成",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.11641",
@@ -2343,7 +2434,8 @@
         "sparsity"
       ],
       "target_model": "分布混合很重要:视频DiT动态稀疏注意力",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.11660",
@@ -2368,7 +2460,8 @@
         "quantization"
       ],
       "target_model": "掩码二值U-Net在Tensor Core上的分割",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.11663",
@@ -2391,7 +2484,8 @@
         "analysis"
       ],
       "target_model": "激活敏感度作为PTQ统一原理",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.11667",
@@ -2416,7 +2510,8 @@
         "distillation"
       ],
       "target_model": "Distill-then-Replace:高效任务特定混合注意力模型构建",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.11865",
@@ -2441,7 +2536,8 @@
         "distillation"
       ],
       "target_model": "CTPD:跨tokenizer偏好蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.12033",
@@ -2463,7 +2559,8 @@
         "quantization"
       ],
       "target_model": "关键权重保护保持量化LLM公平性与安全性",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.12042",
@@ -2491,7 +2588,8 @@
         "analysis"
       ],
       "target_model": "视觉token压缩的安全隐患:越少越脆弱",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.12272",
@@ -2513,7 +2611,8 @@
         "pruning"
       ],
       "target_model": "AgenticPruner:LLM驱动策略搜索的MAC约束网络压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.12638",
@@ -2538,7 +2637,8 @@
         "hardware"
       ],
       "target_model": "TensorRT混合精度PointPillars 3D检测",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.12785",
@@ -2563,7 +2663,8 @@
         "distillation"
       ],
       "target_model": "蒸馏时间序列基础模型实现高效预测",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.12814",
@@ -2589,7 +2690,8 @@
         "compression"
       ],
       "target_model": "CSGaussian:3DGS渐进率失真压缩与分割",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.12894",
@@ -2615,7 +2717,8 @@
         "pruning"
       ],
       "target_model": "实时剪枝加速扩散策略Sparse ActionGen",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.12904",
@@ -2648,7 +2751,8 @@
         "kv_cache"
       ],
       "target_model": "从前缀缓存到融合RAG缓存:加速RAG推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.13100",
@@ -2669,7 +2773,8 @@
         "distillation"
       ],
       "target_model": "递归元蒸馏:迭代知识精炼公理化框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.13143",
@@ -2692,7 +2797,8 @@
         "pruning"
       ],
       "target_model": "音视频LLM推理的高效token剪枝FastAV",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.13155",
@@ -2717,7 +2823,8 @@
         "pruning"
       ],
       "target_model": "自预测token跳过实现长上下文LLM高效推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.13563",
@@ -2738,7 +2845,8 @@
         "quantization"
       ],
       "target_model": "可压缩扩展的三元专家ButterflyMoE",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.13631",
@@ -2763,7 +2871,8 @@
         "kv_cache"
       ],
       "target_model": "ContiguousKV:粒度对齐KV Cache管理加速LLM预填充",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.13684",
@@ -2791,7 +2900,8 @@
         "kv_cache"
       ],
       "target_model": "HeteroCache:长上下文推理异构KV Cache压缩动态检索",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.13992",
@@ -2820,7 +2930,8 @@
         "distillation"
       ],
       "target_model": "兼容感知多教师CoT蒸馏框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.14032",
@@ -2850,7 +2961,8 @@
         "distillation"
       ],
       "target_model": "RM-Distiller:利用生成式LLM进行奖励模型蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.14051",
@@ -2876,7 +2988,8 @@
         "distillation"
       ],
       "target_model": "Kakugo:低资源语言蒸馏进小语言模型",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.14243",
@@ -2906,7 +3019,8 @@
         "quantization"
       ],
       "target_model": "统一训练/ rollout精度的在线FP8强化学习Jet-RL",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.14277",
@@ -2928,7 +3042,8 @@
         "analysis"
       ],
       "target_model": "llama.cpp量化在Llama-3.1-8B上的统一评测",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.14279",
@@ -2951,7 +3066,8 @@
         "analysis"
       ],
       "target_model": "KV Cache压缩中学习型重要性打分的极限",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.14290",
@@ -2973,7 +3089,8 @@
         "distillation"
       ],
       "target_model": "Project Aletheia:验证器引导的小语言模型回溯蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.14549",
@@ -2997,7 +3114,8 @@
         "quantization"
       ],
       "target_model": "异常值感知量化+涌现内存协同设计QMC(边缘SLM)",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.14699",
@@ -3022,7 +3140,8 @@
         "distillation"
       ],
       "target_model": "说话人验证的分诊知识蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.14724",
@@ -3048,7 +3167,8 @@
         "kv_cache"
       ],
       "target_model": "HERMES:KV Cache作为层次内存实现流式视频理解",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.14821",
@@ -3071,7 +3191,8 @@
         "compression"
       ],
       "target_model": "POTR:后训练3D高斯泼溅压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.14888",
@@ -3103,7 +3224,8 @@
         "analysis"
       ],
       "target_model": "低比特QAT对推理LLM为何有效的系统研究",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.15079",
@@ -3128,7 +3250,8 @@
         "low_rank"
       ],
       "target_model": "量化图神经网络训练的低秩聚合提示LoRAP",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.15287",
@@ -3154,7 +3277,8 @@
         "analysis"
       ],
       "target_model": "视觉语言模型量化最佳实践研究",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.15305",
@@ -3175,7 +3299,8 @@
         "sparsity"
       ],
       "target_model": "门控稀疏注意力兼顾长上下文效率与训练稳定",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.15370",
@@ -3200,7 +3325,8 @@
         "sparsity"
       ],
       "target_model": "权重与数据稀疏组合提升MoE计算效率",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.15394",
@@ -3230,7 +3356,8 @@
         "analysis"
       ],
       "target_model": "语言模型知识蒸馏中的记忆动力学",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.15538",
@@ -3252,7 +3379,8 @@
         "quantization"
       ],
       "target_model": "量化感知遗忘QUAIL缓解LLM错误信息",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.15598",
@@ -3275,7 +3403,8 @@
         "quantization"
       ],
       "target_model": "互补神经元增强的三元脉冲神经网络",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.15657",
@@ -3299,7 +3428,8 @@
         "distillation"
       ],
       "target_model": "整合知识蒸馏方法:序贯多阶段框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.16073",
@@ -3324,7 +3454,8 @@
         "distillation"
       ],
       "target_model": "DSFedMed:基础与轻量模型互蒸馏的联邦医学分割",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.16093",
@@ -3359,7 +3490,8 @@
         "token_compression"
       ],
       "target_model": "SAMTok:两个词表示任意掩码",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.16210",
@@ -3386,7 +3518,8 @@
         "token_compression"
       ],
       "target_model": "PyraTok:语言对齐金字塔视频tokenizer",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.16219",
@@ -3408,7 +3541,8 @@
         "distillation"
       ],
       "target_model": "低资源领域离线响应式知识蒸馏的效能研究",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.16235",
@@ -3433,7 +3567,8 @@
         "distillation"
       ],
       "target_model": "个性化语音增强嵌入精炼的对比知识蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.16366",
@@ -3457,7 +3592,8 @@
         "pruning"
       ],
       "target_model": "图曲率驱动的后训练神经网络剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.16515",
@@ -3487,7 +3623,8 @@
         "sparsity"
       ],
       "target_model": "SALAD:高效线性注意力微调实现视频DiT高稀疏注意力",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.16536",
@@ -3513,7 +3650,8 @@
         "hardware"
       ],
       "target_model": "W4A16混合精度矩阵乘法在昇腾NPU的核设计",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.16547",
@@ -3546,7 +3684,8 @@
         "distillation"
       ],
       "target_model": "CORD:加权在策略跨模态蒸馏弥合音频-文本推理差距",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.16986",
@@ -3575,7 +3714,8 @@
         "kv_cache"
       ],
       "target_model": "Crystal-KV:答案优先原则的CoT LLM KV Cache管理",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.16991",
@@ -3607,7 +3747,8 @@
         "low_rank"
       ],
       "target_model": "LLM高效微调的稀疏感知低秩表示",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.17042",
@@ -3631,7 +3772,8 @@
         "sparsity"
       ],
       "target_model": "解耦成员-子空间建模的可解释稀疏线性注意力",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.17112",
@@ -3654,7 +3796,8 @@
         "low_rank"
       ],
       "target_model": "余弦Lanczos双对角化实现LLM权重低秩张量近似",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.17187",
@@ -3678,7 +3821,8 @@
         "analysis"
       ],
       "target_model": "高速率量化矩阵乘法的理论分析",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.17279",
@@ -3706,7 +3850,8 @@
         "hardware"
       ],
       "target_model": "SIMD Posit计算引擎SPADE加速DNN",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.17357",
@@ -3729,7 +3874,8 @@
         "distillation"
       ],
       "target_model": "谱几何深度学习:RMT-KD压缩与幻觉检测",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.17367",
@@ -3758,7 +3904,8 @@
         "sparsity"
       ],
       "target_model": "弹性注意力:测试时自适应稀疏率",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.17438",
@@ -3788,7 +3935,8 @@
         "quantization"
       ],
       "target_model": "软标识符统一生成式推荐UniGRec",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.17443",
@@ -3814,7 +3962,8 @@
         "compression"
       ],
       "target_model": "聚类驱动的端侧LLM内存压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.17668",
@@ -3837,7 +3986,8 @@
         "kv_cache"
       ],
       "target_model": "Fast KVzip:门控KV驱逐实现高效准确LLM推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.17818",
@@ -3860,7 +4010,8 @@
         "pruning"
       ],
       "target_model": "视觉-文本语义协同剪枝加速大型VLM(ViTCoP)",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.17836",
@@ -3887,7 +4038,8 @@
         "sparsity"
       ],
       "target_model": "释放稀疏注意力在CTR长期行为建模的潜力",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.17910",
@@ -3908,7 +4060,8 @@
         "distillation"
       ],
       "target_model": "多尺度教师集成优化的自适应加权蒸馏公理化框架",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.17917",
@@ -3937,7 +4090,8 @@
         "pruning"
       ],
       "target_model": "后缀剪枝+动态解码加速扩散LLM(Streaming-dLLM)",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.17987",
@@ -3968,7 +4122,8 @@
         "analysis"
       ],
       "target_model": "最小深度学习架构的统一分析:收敛/剪枝/量化",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.18091",
@@ -3992,7 +4147,8 @@
         "pruning"
       ],
       "target_model": "面向推理中心模型重新思考剪枝(LLM到LRM)",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.18150",
@@ -4019,7 +4175,8 @@
         "quantization"
       ],
       "target_model": "FP8-RL:实用稳定的低精度强化学习栈",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.18306",
@@ -4044,7 +4201,8 @@
         "analysis"
       ],
       "target_model": "多语言校准数据提升量化多语言LLM",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.18527",
@@ -4068,7 +4226,8 @@
         "kv_cache"
       ],
       "target_model": "面向上下文内检索与高效KV缓存的长上下文LM微调",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.18570",
@@ -4094,7 +4253,8 @@
         "quantization"
       ],
       "target_model": "残差量化码本的特征索引联邦推荐",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.18909",
@@ -4117,7 +4277,8 @@
         "analysis"
       ],
       "target_model": "知识蒸馏中不确定性如何传播",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.18999",
@@ -4143,7 +4304,8 @@
         "analysis"
       ],
       "target_model": "随机化提升KV缓存与学习平衡查询负载的联合视角",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.19026",
@@ -4173,7 +4335,8 @@
         "analysis"
       ],
       "target_model": "微缩放格式在LLM中的极限研究",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.19178",
@@ -4200,7 +4363,8 @@
         "kv_cache"
       ],
       "target_model": "CollectiveKV:序列推荐中协作信息的解耦与共享",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.19213",
@@ -4230,7 +4394,8 @@
         "quantization"
       ],
       "target_model": "元数据增强微缩放数据格式M2XFP",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.19320",
@@ -4258,7 +4423,8 @@
         "quantization"
       ],
       "target_model": "超低比特位宽稳定量化感知训练StableQAT",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.19503",
@@ -4281,7 +4447,8 @@
         "pruning"
       ],
       "target_model": "梯度引导层剪枝GradPruner(LLM高效微调与推理)",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.19675",
@@ -4307,7 +4474,8 @@
         "low_rank"
       ],
       "target_model": "置换块级旋转增强低秩量化LoPRo",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.19794",
@@ -4330,7 +4498,8 @@
         "pruning"
       ],
       "target_model": "梯度重要性估计的神经网控制器组件感知剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.19919",
@@ -4355,7 +4524,8 @@
         "distillation"
       ],
       "target_model": "ASKD-Whisper:自适应自蒸馏实现高效低延迟ASR",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.19920",
@@ -4383,7 +4553,8 @@
         "hardware"
       ],
       "target_model": "128kbit处理-in-CAM端到端二值神经网络加速器PiC-BNN",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.20088",
@@ -4433,7 +4604,8 @@
         "distillation"
       ],
       "target_model": "量化感知蒸馏恢复NVFP4推理精度",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.20107",
@@ -4460,7 +4632,8 @@
         "compression"
       ],
       "target_model": "结构锚剪枝:视觉文档检索的免训练多向量压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.20168",
@@ -4484,7 +4657,8 @@
         "pruning"
       ],
       "target_model": "LLaDA-V的高效token剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.20262",
@@ -4506,7 +4680,8 @@
         "distillation"
       ],
       "target_model": "Shallow-π:流基VLA的知识蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.20267",
@@ -4533,7 +4708,8 @@
         "sparsity"
       ],
       "target_model": "SATA:选择性token注意力的稀疏感知调度",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.20301",
@@ -4555,7 +4731,8 @@
         "compression"
       ],
       "target_model": "压缩感知锐度最小化实现紧凑鲁棒DNN",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.20317",
@@ -4585,7 +4762,8 @@
         "quantization"
       ],
       "target_model": "视觉几何接地Transformer的通用量化VersaQ-3D",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.20326",
@@ -4613,7 +4791,8 @@
         "analysis"
       ],
       "target_model": "超越加速:利用KV Cache进行采样与推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.20499",
@@ -4642,7 +4821,8 @@
         "pruning"
       ],
       "target_model": "Dummy Forcing:自回归视频扩散的异构头内存分配",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.20745",
@@ -4667,7 +4847,8 @@
         "quantization"
       ],
       "target_model": "Hessian引导可微QAT框架HESTIA(极低比特LLM)",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21069",
@@ -4692,7 +4873,8 @@
         "pruning"
       ],
       "target_model": "图像超分Transformer的量化+剪枝CompSRT",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21193",
@@ -4716,7 +4898,8 @@
         "quantization"
       ],
       "target_model": "多视角语义ID用于文生视频检索",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21198",
@@ -4742,7 +4925,8 @@
         "compression"
       ],
       "target_model": "ZipMoE:无损压缩+缓存亲和调度的端侧MoE服务",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.21219",
@@ -4765,7 +4949,8 @@
         "quantization"
       ],
       "target_model": "软量化:通过权重耦合的模型压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21238",
@@ -4790,7 +4975,8 @@
         "quantization"
       ],
       "target_model": "自回归视觉生成模型后训练量化PTQ4ARVG",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21279",
@@ -4813,7 +4999,8 @@
         "sparsity"
       ],
       "target_model": "NEXUS:无代理训练实现ANN到SNN比特精确等价",
-      "highlight": true
+      "highlight": true,
+      "domain": "quantization"
     },
     {
       "id": "2601.21288",
@@ -4848,7 +5035,8 @@
         "distillation"
       ],
       "target_model": "Drive-KD:自动驾驶VLM多教师蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.21345",
@@ -4874,7 +5062,8 @@
         "sparsity"
       ],
       "target_model": "预训练模型类增量学习的语义引导动态稀疏化",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.21420",
@@ -4898,7 +5087,8 @@
         "compression"
       ],
       "target_model": "ConceptMoE:自适应token到概念压缩的隐式算力分配",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.21531",
@@ -4928,7 +5118,8 @@
         "analysis"
       ],
       "target_model": "视觉token压缩下大型VLM的对抗鲁棒性",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.21611",
@@ -4956,7 +5147,8 @@
         "distillation"
       ],
       "target_model": "多视角CoT潜在推理蒸馏(电商相关性)",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.21623",
@@ -4984,7 +5176,8 @@
         "mixed_precision"
       ],
       "target_model": "LAMP:LLM前瞻混合精度推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21626",
@@ -5010,7 +5203,8 @@
         "quantization"
       ],
       "target_model": "Hessian条件化稳定低比特量化框架HeRo-Q",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21686",
@@ -5039,7 +5233,8 @@
         "low_rank"
       ],
       "target_model": "Stiefel流形上学习KV Cache低秩近似",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.21737",
@@ -5067,7 +5262,8 @@
         "hardware"
       ],
       "target_model": "RRAM存算一体加速器的混合精度训练与编译",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.21896",
@@ -5091,7 +5287,8 @@
         "kv_cache"
       ],
       "target_model": "自回归视频扩散中过去-未来信息KV Cache策略",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.21927",
@@ -5118,7 +5315,8 @@
         "kv_cache"
       ],
       "target_model": "SONIC:KV缓存信息压缩的分段优化联结",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.21968",
@@ -5147,7 +5345,8 @@
         "distillation"
       ],
       "target_model": "OVD:在策略口头蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.22069",
@@ -5174,7 +5373,8 @@
         "token_compression"
       ],
       "target_model": "VTC-R1:长上下文推理的视觉-文本压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.22101",
@@ -5199,7 +5399,8 @@
         "quantization"
       ],
       "target_model": "无全精度主权重的量化训练ECO",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22141",
@@ -5225,7 +5426,8 @@
         "pruning"
       ],
       "target_model": "路由彩票:异构数据的自适应子网络",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22244",
@@ -5249,7 +5451,8 @@
         "analysis"
       ],
       "target_model": "层次量化对最优重建是否必要(VQ-VAE)",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22275",
@@ -5276,7 +5479,8 @@
         "sparsity"
       ],
       "target_model": "VMonarch:结构化注意力的高效视频DiT",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22347",
@@ -5302,7 +5506,8 @@
         "quantization"
       ],
       "target_model": "后训练量化中块旋转的极限探索",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22362",
@@ -5326,7 +5531,8 @@
         "analysis"
       ],
       "target_model": "量化/批处理/服务策略对LLM能耗的影响",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22379",
@@ -5349,7 +5555,8 @@
         "sparsity"
       ],
       "target_model": "SPLA:长上下文建模的块稀疏+线性注意力",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22475",
@@ -5374,7 +5581,8 @@
         "distillation"
       ],
       "target_model": "分布式强化学习教师的持续策略蒸馏",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.22488",
@@ -5395,7 +5603,8 @@
         "compression"
       ],
       "target_model": "弹性谱状态空间模型实现预算化推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.22531",
@@ -5417,7 +5626,8 @@
         "distillation"
       ],
       "target_model": "向理性主义者学习:蒸馏中间可解释理由",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.22594",
@@ -5443,7 +5653,8 @@
         "analysis"
       ],
       "target_model": "语言模型回路在神经元基下是稀疏的",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22632",
@@ -5468,7 +5679,8 @@
         "pruning"
       ],
       "target_model": "知识神经元动态追踪实现自适应推理时剪枝DART",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22660",
@@ -5489,7 +5701,8 @@
         "quantization"
       ],
       "target_model": "逐层渐进冻结实现无STE深度二值网络训练",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22674",
@@ -5514,7 +5727,8 @@
         "token_compression"
       ],
       "target_model": "VisionTrim:免训练MLLM加速的统一视觉token压缩",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22709",
@@ -5538,7 +5752,8 @@
         "distillation"
       ],
       "target_model": "置信度蒸馏门控关系对齐实现高效VLM",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2601.22716",
@@ -5565,7 +5780,8 @@
         "low_rank"
       ],
       "target_model": "连续低秩分解缩放统一LLM量化与适配",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22766",
@@ -5591,7 +5807,8 @@
         "analysis"
       ],
       "target_model": "稀疏注意力作为紧凑核回归",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22787",
@@ -5618,7 +5835,8 @@
         "compression"
       ],
       "target_model": "熵编码实现无数据模型压缩Float8@2bits",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22795",
@@ -5643,7 +5861,8 @@
         "analysis"
       ],
       "target_model": "稀疏还是稠密:Transformer LLM计算密度的机理估计",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22813",
@@ -5666,7 +5885,8 @@
         "quantization"
       ],
       "target_model": "Quartet II:改进无偏梯度估计的NVFP4 LLM预训练",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2601.22841",
@@ -5690,7 +5910,8 @@
         "analysis"
       ],
       "target_model": "遥感基础模型的冗余与可瘦身性研究",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22876",
@@ -5717,7 +5938,8 @@
         "hardware"
       ],
       "target_model": "Matterhorn:掩码TTFS编码的模拟稀疏脉冲Transformer",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22980",
@@ -5747,7 +5969,8 @@
         "pruning"
       ],
       "target_model": "Transformer结构化稀疏的可学习置换",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2601.22996",
@@ -5771,7 +5994,8 @@
         "analysis"
       ],
       "target_model": "LLM推理的竞争性非预知KV-Cache调度",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2601.23148",
@@ -5798,7 +6022,8 @@
         "low_rank"
       ],
       "target_model": "低秩卷积分解压缩BC-LISTA",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2602.00165",
@@ -5822,7 +6047,8 @@
         "quantization"
       ],
       "target_model": "Benford定律作为LLM后训练量化的分布先验",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2602.00247",
@@ -5844,7 +6070,8 @@
         "pruning"
       ],
       "target_model": "CAPA:大型VLM的贡献感知剪枝与FFN近似",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2602.00268",
@@ -5868,7 +6095,8 @@
         "token_compression"
       ],
       "target_model": "TokenTrim:自回归长视频生成的推理时token剪枝",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2602.00372",
@@ -5895,7 +6123,8 @@
         "low_rank"
       ],
       "target_model": "结构化SVD剪枝+自指蒸馏的后训练概率流形校正",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2602.00397",
@@ -5921,7 +6150,8 @@
         "sparsity"
       ],
       "target_model": "预测性FFN稀疏加速LLM预填充Fast Forward",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2602.00450",
@@ -5949,7 +6179,8 @@
         "mixed_precision"
       ],
       "target_model": "多相机3D检测跟踪的INT8/FP8量化与混合精度评估",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2602.00534",
@@ -5972,7 +6203,8 @@
         "pruning"
       ],
       "target_model": "状态空间模型状态剪枝的渐近脉冲响应能量AIRE-Prune",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2602.00686",
@@ -5999,7 +6231,8 @@
         "token_compression"
       ],
       "target_model": "自适应视觉token缓存加速VLA模型",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2602.00777",
@@ -6025,7 +6258,8 @@
         "compression"
       ],
       "target_model": "HyLRA:混合层复用注意力实现长上下文高效推理",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2602.00780",
@@ -6054,7 +6288,8 @@
         "pruning"
       ],
       "target_model": "VLA模型的环境感知自适应剪枝与交错推理编排",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2602.00838",
@@ -6081,7 +6316,8 @@
         "hardware"
       ],
       "target_model": "低精度DL加速器的一元算术矩阵乘单元",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2602.00852",
@@ -6105,7 +6341,8 @@
         "analysis"
       ],
       "target_model": "虚假相关下子任务蒸馏的鲁棒性研究",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2602.00879",
@@ -6135,7 +6372,8 @@
         "sparsity"
       ],
       "target_model": "MoE扩散LLM的动态专家共享:解耦内存与并行",
-      "highlight": false
+      "highlight": false,
+      "domain": "pruning"
     },
     {
       "id": "2602.02538",
@@ -6161,7 +6399,8 @@
         "quantization"
       ],
       "target_model": "未来激活感知增强后训练量化",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2602.02579",
@@ -6191,7 +6430,8 @@
         "kv_cache"
       ],
       "target_model": "ProphetKV:RAG中用户查询驱动的选择性重计算KV复用",
-      "highlight": false
+      "highlight": false,
+      "domain": "others"
     },
     {
       "id": "2602.02581",
@@ -6218,7 +6458,8 @@
         "quantization"
       ],
       "target_model": "微调信号驱动的大型推理模型量化QuantLRM",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2602.11184",
@@ -6245,7 +6486,8 @@
         "low_rank"
       ],
       "target_model": "KLT引导SVD+偏差校正向量量化压缩MoE LLM",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2602.15836",
@@ -6268,7 +6510,8 @@
         "quantization"
       ],
       "target_model": "EdgeNav-QE:QLoRA量化+动态早退的边缘导航",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     },
     {
       "id": "2602.15845",
@@ -6294,7 +6537,8 @@
         "survey"
       ],
       "target_model": "KD4MT:机器翻译知识蒸馏综述",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2602.20164",
@@ -6320,7 +6564,8 @@
         "analysis"
       ],
       "target_model": "资源受限环境蒸馏语言模型基准:性能与效率",
-      "highlight": false
+      "highlight": false,
+      "domain": "knowledge_distillation"
     },
     {
       "id": "2603.08713",
@@ -6353,7 +6598,8 @@
         "quantization"
       ],
       "target_model": "MXFP4量化误差降低策略研究",
-      "highlight": false
+      "highlight": false,
+      "domain": "quantization"
     }
   ]
 }
