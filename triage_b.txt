@@ -1,0 +1,482 @@
+2601.00151|Reinforcement Learning with Function Approximation for Non-Markov Processes
+2601.00186|Reinforcement-Learned Unequal Error Protection for Quantized Semantic Embeddings
+2601.00192|Optimized Hybrid Feature Engineering for Resource-Efficient Arrhythmia Detection in ECG Signals: An Optimization Framework
+2601.00513|When Small Models Are Right for Wrong Reasons: Process Verification for Trustworthy Agents
+2601.00526|Federated Customization of Large Models: Approaches, Experiments, and Insights
+2601.00545|Variable Elimination in Hybrid Factor Graphs for Discrete-Continuous Inference & Estimation
+2601.00590|SafeMo: Linguistically Grounded Unlearning for Trustworthy Text-to-Motion Generation
+2601.00626|HyperPriv-EPN: Hypergraph Learning with Privileged Knowledge for Ependymoma Prognosis
+2601.00694|A Vision-and-Knowledge Enhanced Large Language Model for Generalizable Pedestrian Crossing Behavior Inference
+2601.00728|Precision autotuning for linear solvers via contextual bandit-based RL
+2601.00919|Attention Needs to Focus: A Unified Perspective on Attention Allocation
+2601.01015|HyperJoin: LLM-augmented Hypergraph Link Prediction for Joinable Table Discovery
+2601.01064|Efficient Hyperspectral Image Reconstruction Using Lightweight Separate Spectral Transformers
+2601.01087|Family of High-Chern-Number Orbital Magnets in Twisted Rhombohedral Graphene
+2601.01184|SecureCodeRL: Security-Aware Reinforcement Learning for Code Generation with Partial-Credit Rewards
+2601.01198|Area discreteness, Lorentz covariance and Hilbert space non-separability
+2601.01219|HD-GEN: A High-Performance Software System for Human Mobility Data Generation Based on Patterns of Life
+2601.01244|Racka: Efficient Hungarian LLM Adaptation on Academic Infrastructure
+2601.01246|Quantum graphs and spin models
+2601.01271|CatchAll: Repository-Aware Exception Handling with Knowledge-Guided LLMs
+2601.01291|Curator: Efficient Vector Search with Low-Selectivity Filters
+2601.01297|ARGUS: Adaptive Rotation-Invariant Geometric Unsupervised System
+2601.01310|Making MoE-based LLM Inference Resilient with Tarragon
+2601.01321|Digital Twin AI: Opportunities and Challenges from Large Language Models to World Models
+2601.01339|Achieving Fine-grained Cross-modal Understanding through Brain-inspired Hierarchical Representation Learning
+2601.01355|Soliton Thouless pumping engineered by inter-site nonlinearities
+2601.01358|A New Framework for Explainable Rare Cell Identification in Single-Cell Transcriptomics Data
+2601.01403|A Graph-based Framework for Online Time Series Anomaly Detection Using Model Ensemble
+2601.01405|Exact and Approximate Range Queries for Efficient Ball Mapper Construction
+2601.01430|Context-Aware Information Transfer via Digital Semantic Communication in UAV-Based Networks
+2601.01562|Logics-STEM: Empowering LLM Reasoning via Failure-Driven Post-Training and Document Knowledge Enhancement
+2601.01696|Real-Time Lane Detection via Efficient Feature Alignment and Covariance Optimization for Low-Power Embedded Systems
+2601.01701|Digital Twin-Driven Communication-Efficient Federated Anomaly Detection for Industrial IoT
+2601.01712|RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference
+2601.01721|Subsymmetry-protected compact edge states
+2601.01746|Point-SRA: Self-Representation Alignment for 3D Representation Learning
+2601.01785|SRAS: A Lightweight Reinforcement Learning-based Document Selector for Edge-Native RAG Pipelines
+2601.01937|Vector Search for the Future: From Memory-Resident, Static Heterogeneous Storage, to Cloud-Native Architectures
+2601.02076|Deferred Commitment Decoding for Diffusion Language Models
+2601.02135|HFRWKV: A High-Performance Fully On-Chip Hardware Accelerator for RWKV
+2601.02163|EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning
+2601.02241|From Mice to Trains: Amortized Bayesian Inference on Graph Data
+2601.02273|TopoLoRA-SAM: Topology-Aware Parameter-Efficient Adaptation of Foundation Segmenters for Thin-Structure and Cross-Domain Binary Semantic Segmentation
+2601.02293|M5 brane to D4 brane via cyclification of rational relative 3-cohomotopy
+2601.02457|PatchAlign3D: Local Feature Alignment for Dense 3D Shape understanding
+2601.02485|Symmetric topological Mott insulator and Mott semimetal
+2601.02500|GEM-Style Constraints for PEFT with Dual Gradient Projection in LoRA
+2601.02535|ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation
+2601.02631|Copyright Laundering Through the AI Ouroboros: Adapting the 'Fruit of the Poisonous Tree' Doctrine to Recursive AI Training
+2601.02771|AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs
+2601.02818|Quantum-enhanced long short-term memory with attention for spatial permeability prediction in oilfield reservoirs
+2601.02827|AI-Native 6G Physical Layer with Cross-Module Optimization and Cooperative Control Agents
+2601.02838|Data-Driven Modeling of Global Bifurcations and Chaos in a Mechanical System under Delayed and Quantized Control
+2601.02850|Sample-Efficient Neurosymbolic Deep Reinforcement Learning
+2601.02897|Single-quark electromagnetic form factors of charmonium up to $J=2$
+2601.03001|Towards Efficient 3D Object Detection for Vehicle-Infrastructure Collaboration via Risk-Intent Selection
+2601.03007|From inconsistency to decision: explainable operation and maintenance of battery energy storage systems
+2601.03011|ReCCur: A Recursive Corner-Case Curation Framework for Robust Vision-Language Understanding in Open and Edge Scenarios
+2601.03041|Egorov-Type Semiclassical Limits for Open Quantum Systems with a Bi-Lindblad Structure
+2601.03055|A Fast Semidefinite Convex Relaxation for Optimal Control Problems With Spatio-Temporal Constraints
+2601.03199|DIP: Dynamic In-Context Planner For Diffusion Language Models
+2601.03205|UltraLogic: Enhancing LLM Reasoning through Large-Scale Data Synthesis and Bipolar Float Reward
+2601.03232|Multi-RADS Synthetic Radiology Report Dataset and Head-to-Head Benchmarking of 41 Open-Weight and Proprietary Language Models
+2601.03289|Differentiation Between Faults and Cyberattacks through Combined Analysis of Cyberspace Logs and Physical Measurements
+2601.03320|Ratio-Variance Regularized Policy Optimization for Efficient LLM Fine-tuning
+2601.03365|Time-Dependent Dunkl-Pauli Oscillator in the Presence of the Aharonov-Bohm Effect
+2601.03417|Implicit Graph, Explicit Retrieval: Towards Efficient and Interpretable Long-horizon Memory for Large Language Models
+2601.03429|DeepLeak: Privacy Enhancing Hardening of Model Explanations Against Membership Leakage
+2601.03439|The Zubarev Double Time Greens function-A Vintage Many Body Technique
+2601.03442|Local Updates in Distributed Optimization: Provable Acceleration and Topology Effects
+2601.03476|Online Decision-Making Under Uncertainty for Vehicle-to-Building Systems
+2601.03479|Efficient Sequential Recommendation for Long Term User Interest Via Personalization
+2601.03505|Beyond Perplexity: A Lightweight Benchmark for Knowledge Retention in Supervised Fine-Tuning
+2601.03525|Beyond Binary: Turning Partial Success into Dense Verifiable Rewards for Reinforcement Learning in Code Generation
+2601.03550|ReEfBench: Quantifying the Reasoning Efficiency of LLMs
+2601.03606|Policy-Guided Search on Tree-of-Thoughts for Efficient Problem Solving with Bounded Language Model Queries
+2601.03641|Agent-Dice: Disentangling Knowledge Updates via Geometric Consensus for Agent Continual Learning
+2601.03645|LLM-MC-Affect: LLM-Based Monte Carlo Modeling of Affective Trajectories and Latent Ambiguity for Interpersonal Dynamic Insight
+2601.03718|Towards Real-world Lens Active Alignment with Unlabeled Data via Domain Adaptation
+2601.03743|O-Researcher: An Open Ended Deep Research Model via Multi-Agent Distillation and Agentic RL
+2601.03776|Improving Compactness and Reducing Ambiguity of CFIRE Rule-Based Explanations
+2601.03779|Tracing the complexity profiles of different linguistic phenomena through the intrinsic dimension of LLM representations
+2601.03812|AI Generated Text Detection
+2601.03854|Inductive First-Order Formula Synthesis by ASP: A Case Study in Invariant Inference
+2601.03868|What Matters For Safety Alignment?
+2601.03903|Unleashing the Potential of Neighbors: Diffusion-based Latent Neighbor Generation for Session-based Recommendation
+2601.04005|Padé Neurons for Efficient Neural Models
+2601.04181|Lightweight Test-Time Adaptation for EMG-Based Gesture Recognition
+2601.04302|Embedding Textual Information in Images Using Quinary Pixel Combinations
+2601.04370|End-to-end differentiable design of geometric waveguide displays
+2601.04381|Few-Shot LoRA Adaptation of a Flow-Matching Foundation Model for Cross-Spectral Object Detection
+2601.04426|XGrammar-2: Efficient Dynamic Structured Generation Engine for Agentic LLMs
+2601.04432|AHA: Scalable Alternative History Analysis for Operational Timeseries Applications
+2601.04433|Achievable Rate and Coding Principle for MIMO Multicarrier Systems With Cross-Domain MAMP Receiver Over Doubly Selective Channels
+2601.04562|Reasoning Over Space: Enabling Geographic Reasoning for LLM-Based Generative Next POI Recommendation
+2601.04567|All Changes May Have Invariant Principles: Improving Ever-Shifting Harmful Meme Detection via Design Concept Reproduction
+2601.04608|Distributionally Robust Recovery of Omitted Factors from Forecast Residuals with Application to Interest Rate Risk Management
+2601.04634|Limited Math: Aligning Mathematical Semantics with Finite Computation
+2601.04674|PROMISE: Process Reward Models Unlock Test-Time Scaling Laws in Generative Recommendations
+2601.04698|TourPlanner: A Competitive Consensus Framework with Constraint-Gated Reinforcement Learning for Travel Planning
+2601.04703|Beyond Monolithic Architectures: A Multi-Agent Search and Knowledge Optimization Framework for Agentic Search
+2601.04792|PyramidalWan: On Making Pretrained Video Model Pyramidal for Efficient Inference
+2601.04800|Integrated Framework for Selecting and Enhancing Ancient Marathi Inscription Images from Stone, Metal Plate, and Paper Documents
+2601.04809|SCALER:Synthetic Scalable Adaptive Learning Environment for Reasoning
+2601.04849|Stability of Constrained Optimization Models for Structured Signal Recovery
+2601.04859|A Navigational Approach for Comprehensive RAG via Traversal over Proposition Graphs
+2601.04879|Mind2Report: A Cognitive Deep Research Agent for Expert-Level Commercial Report Synthesis
+2601.04899|Rotation-Robust Regression with Convolutional Model Trees
+2601.04960|A Unified Spoken Language Model with Injected Emotional-Attribution Thinking for Human-like Interaction
+2601.04977|On the Definition and Detection of Cherry-Picking in Counterfactual Explanations
+2601.05062|Compositional Steering of Large Language Models with Steering Tokens
+2601.05130|Sparsity and uniform regularity for regularised optimal transport
+2601.05204|Extended Heun Hierarchy in Quantum Seiberg-Witten Geometry
+2601.05230|Learning Latent Action World Models In The Wild
+2601.05298|Mathematical Knowledge Graph-Driven Framework for Equation-Based Predictive and Reliable Additive Manufacturing
+2601.05305|Microscopic Unitarity and the Quantization of Black Hole Evaporation Time
+2601.05330|Improving Enzyme Prediction with Chemical Reaction Equations by Hypergraph-Enhanced Knowledge Graph Embeddings
+2601.05394|Sketch&Patch++: Efficient Structure-Aware 3D Gaussian Representation
+2601.05544|Buffered AUC maximization for scoring systems via mixed-integer optimization
+2601.05713|Visualising Information Flow in Word Embeddings with Diffusion Tensor Imaging
+2601.05775|Nonlinear mode interactions under parametric excitation in a YIG microdisk
+2601.05852|Kidney Cancer Detection Using 3D-Based Latent Diffusion Models
+2601.05960|Distilling Feedback into Memory-as-a-Tool
+2601.06002|The Molecular Structure of Thought: Mapping the Topology of Long Chain-of-Thought Reasoning
+2601.06097|Semantic Event Graphs for Long-Form Video Question Answering
+2601.06122|COVR:Collaborative Optimization of VLMs and RL Agent for Visual-Based Control
+2601.06127|AIS-CycleGen: A CycleGAN-Based Framework for High-Fidelity Synthetic AIS Data Generation and Augmentation
+2601.06156|Channel Knowledge Map Construction via Guided Flow Matching
+2601.06160|Student Guides Teacher: Weak-to-Strong Inference via Spectral Orthogonal Exploration
+2601.06218|Two-step Authentication: Multi-biometric System Using Voice and Facial Recognition
+2601.06243|Real-Time Image Processing Algorithms for Embedded Systems
+2601.06288|AIConfigurator: Lightning-Fast Configuration Optimization for Multi-Framework LLM Serving
+2601.06373|DemMA: Dementia Multi-Turn Dialogue Agent with Expert-Guided Reasoning and Action Simulation
+2601.06478|Deriving Decoder-Free Sparse Autoencoders from First Principles
+2601.06496|3D CoCa v2: Contrastive Learners with Test-Time Search for Generalizable Spatial Intelligence
+2601.06501|Coding for Fading Channels with Imperfect CSI at the Transmitter and Quantized Feedback
+2601.06519|MedRAGChecker: Claim-Level Verification for Biomedical Retrieval-Augmented Generation
+2601.06540|Self-Organizing Dual-Buffer Adaptive Clustering Experience Replay (SODACER) for Safe Reinforcement Learning in Optimal Control
+2601.06562|Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming
+2601.06622|Inexact DC Algorithms in Hilbert Spaces with Applications to PDE-Constrained Optimization
+2601.06629|Lower Bounds for the Algorithmic Complexity of Learned Indexes
+2601.06635|Comminution as a Non-Hermitian Quantum Field Theory: Log-Size Jump Generators, Branching Embeddings, and the Airy Solvable Sector
+2601.06767|GanitLLM: Difficulty-Aware Bengali Mathematical Reasoning through Curriculum-GRPO
+2601.06779|CyberLLM-FINDS 2025: Instruction-Tuned Fine-tuning of Domain-Specific LLMs with Retrieval-Augmented Generation and Graph Integration for MITRE Evaluation
+2601.06848|Explainable Multimodal Aspect-Based Sentiment Analysis with Dependency-guided Large Language Model
+2601.06932|Symphonym: Universal Phonetic Embeddings for Cross-Script Name Matching
+2601.06939|Essentially No Energy Barrier Between Independent Fermionic Neural Quantum State Minima
+2601.06941|Towards Operational Streamflow Forecasting in the Limpopo River Basin using Long Short-Term Memory Networks
+2601.06953|X-Coder: Advancing Competitive Programming with Fully Synthetic Tasks, Solutions, and Tests
+2601.06969|Generalization Bounds for Transformer Channel Decoders
+2601.06991|Continuous Energy Landscape Model for Analyzing Brain State Transitions
+2601.07058|Hallucinations Live in Variance
+2601.07133|Geometry-Aware LoRaWAN Gateway Placement in Dense Urban Cities Using Digital Twins
+2601.07149|Rewarding Creativity: A Human-Aligned Generative Reward Model for Reinforcement Learning in Storytelling
+2601.07251|MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences
+2601.07293|Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples
+2601.07322|Performance Bounds of Joint Detection with Kalman Filtering and Channel Decoding for Wireless Networked Control Systems
+2601.07346|Curvature-driven shifts of the Potts transition on spherical Fibonacci graphs: a graph-convolutional transfer-learning study
+2601.07393|Software-Hardware Co-optimization for Modular E2E AV Paradigm: A Unified Framework of Optimization Approaches, Simulation Environment and Evaluation Metrics
+2601.07590|Dynamical gluon effects in twist-3 generalized parton distributions of the proton
+2601.07648|What Are We Measuring in NLG? A Meta-Analysis of Evaluation Trends 2020-2025
+2601.07695|Smooth Operator: Smooth Verifiable Reward Activates Spatial Reasoning Ability of Vision-Language Model
+2601.07790|Benchmarking Small Language Models and Small Reasoning Language Models on System Log Severity Classification
+2601.07845|Edge-AI Perception Node for Cooperative Road-Safety Enforcement and Connected-Vehicle Integration
+2601.07864|A Symmetric Random Scan Collapsed Gibbs Sampler for Fully Bayesian Variable Selection with Spike-and-Slab Priors
+2601.07910|Generalized Entropy is von Neumann Entropy II: The complete symmetry group and edge modes
+2601.07944|Neural Architectures for Amortized Bayesian Inference: Statistical Foundations and Empirical Assessments
+2601.07975|An Efficient Additive Kolmogorov-Arnold Transformer for Point-Level Maize Localization in Unmanned Aerial Vehicle Imagery
+2601.07994|DYCP: Dynamic Context Pruning for Long-Form Dialogue with LLMs
+2601.08079|MemoBrain: Executive Memory as an Agentic Brain for Reasoning
+2601.08082|Hierarchical Recursive Precision for Accelerating Symmetric Linear Solves on MXUs
+2601.08142|Joint Communication and Sensing in RIS-Assisted MIMO System Under Mutual Coupling
+2601.08148|Enriching Semantic Profiles into Knowledge Graph for Recommender Systems Using Large Language Models
+2601.08169|Relational Knowledge Distillation Using Fine-tuned Function Vectors
+2601.08173|The Agent's First Day: Benchmarking Learning, Exploration, and Scheduling in the Workplace Scenarios
+2601.08209|Generation-Augmented Generation: A Plug-and-Play Framework for Private Knowledge Injection in Large Language Models
+2601.08267|Med-CoReasoner: Reducing Language Disparities in Medical Reasoning via Language-Informed Co-Reasoning
+2601.08310|ORBIT: On-policy Exploration-Exploitation for Controllable Multi-Budget Reasoning
+2601.08418|Taxon: Hierarchical Tax Code Prediction with Semantically Aligned LLM Expert Guidance
+2601.08435|Fine-Mem: Fine-Grained Feedback Alignment for Long-Horizon Memory Management
+2601.08468|JudgeRLVR: Judge First, Generate Second for Efficient Reasoning
+2601.08489|Surgical Refusal Ablation: Disentangling Safety from Intelligence via Concept-Guided Spectral Cleaning
+2601.08670|Parallel Context-of-Experts Decoding for Retrieval Augmented Generation
+2601.08733|A Novel Approach to Explainable AI with Quantized Active Ingredients in Decision Making
+2601.08764|FusID: Modality-Fused Semantic IDs for Generative Music Recommendation
+2601.08788|Condensation of area quanta ensembles with quantum statistics in Schwarzschild spacetimes
+2601.08886|BRST Symmetry Violation and Fundamental Limitations of Asymptotic Safety in Quantum Gravity
+2601.08893|Spectral Generative Flow Models: A Physics-Inspired Replacement for Vectorized Large Language Models
+2601.08970|Machine Learning-Driven Creep Law Discovery Across Alloy Compositional Space
+2601.08999|Physics-Guided Counterfactual Explanations for Large-Scale Multivariate Time Series: Application in Scalable and Interpretable SEP Event Prediction
+2601.09069|From Symbolic to Natural-Language Relations: Rethinking Knowledge Graph Construction in the Era of Large Language Models
+2601.09078|Exploring Reliable Spatiotemporal Dependencies for Efficient Visual Tracking
+2601.09118|LPCAN: Lightweight Pyramid Cross-Attention Network for Rail Surface Defect Detection Using RGB-D Data
+2601.09123|Data-Driven Exploration and Insights into Temperature-Dependent Phonons in Inorganic Materials
+2601.09152|PrivacyReasoner: Can LLM Emulate a Human-like Privacy Mind?
+2601.09170|N-EIoU-YOLOv9: A Signal-Aware Bounding Box Regression Loss for Lightweight Mobile Detection of Rice Leaf Diseases
+2601.09230|CLIDD: Cross-Layer Independent Deformable Description for Efficient and Discriminative Local Feature Representation
+2601.09239|DSA-Tokenizer: Disentangled Semantic-Acoustic Tokenization via Flow Matching-based Hierarchical Fusion
+2601.09260|Efficient Paths and Dense Rewards: Probabilistic Flow Reasoning for Large Language Models
+2601.09291|TIDI-GS: Floater Suppression in 3D Gaussian Splatting for Enhanced Indoor Scene Fidelity
+2601.09377|ReflexDiffusion: Reflection-Enhanced Trajectory Planning for High-lateral-acceleration Scenarios in Autonomous Driving
+2601.09465|EvoFSM: Controllable Self-Evolution for Deep Research with Finite State Machines
+2601.09529|Strange quark star I: the maximum gravitational mass and deformation of magnetized spinning model
+2601.09708|Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning
+2601.09742|Adaptive Orchestration: Scalable Self-Evolving Multi-Agent Systems
+2601.09748|Instalación, configuración y utilización de un nodo Bitcoin en Linux
+2601.09770|GUI-Eyes: Tool-Augmented Perception for Visual Grounding in GUI Agents
+2601.09925|High Dimensional Gaussian and Bootstrap Approximations in Generalized Linear Models
+2601.10037|Parameter Efficient Machine Unlearning on Hybrid Resistive Memory based Compute-in-Memory Accelerators
+2601.10068|S$^2$F: Principled Hybrid Testing With Fuzzing, Symbolic Execution, and Sampling
+2601.10073|ReaMIL: Reasoning- and Evidence-Aware Multiple Instance Learning for Whole-Slide Histopathology
+2601.10306|Evidence-Augmented Policy Optimization with Reward Co-Evolution for Long-Context Reasoning
+2601.10322|Conjugate Gradient Methods are Not Efficient: Experimental Study of the Locality Limitation
+2601.10324|SRAW-Attack: Space-Reweighted Adversarial Warping Attack for SAR Target Recognition
+2601.10331|Low-Complexity Blind Estimator of SNR and MSE for mmWave Multi-Antenna Communications
+2601.10355|Unlocking Implicit Experience: Synthesizing Tool-Use Trajectories from Text
+2601.10611|Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding
+2601.10657|PACEvolve: Enabling Long-Horizon Progress-Aware Consistent Evolution
+2601.10737|Differentiating through binarized topology changes: Second-order subpixel-smoothed projection
+2601.10761|LSR-Net: A Lightweight and Strong Robustness Network for Bearing Fault Diagnosis in Noise Environment
+2601.10801|Towards Tensor Network Models for Low-Latency Jet Tagging on FPGAs
+2601.10810|Digital Metabolism: Decoupling Logic from Facts via Regenerative Unlearning -- Towards a Pure Neural Logic Core
+2601.10914|FAConvLSTM: Factorized-Attention ConvLSTM for Efficient Feature Extraction in Multivariate Climate Data
+2601.10931|Sparse Data Tree Canopy Segmentation: Fine-Tuning Leading Pretrained Models on Only 150 Images
+2601.10953|SwiftKV: An Edge-Oriented Attention Algorithm and Multi-Head Accelerator for Fast, Efficient LLM Decoding
+2601.10963|Large Wireless Foundation Models: Stronger over Bigger
+2601.11036|Self-Augmented Mixture-of-Experts for QoS Prediction
+2601.11144|Deep GraphRAG: A Balanced Approach to Hierarchical Retrieval and Adaptive Integration
+2601.11311|FORESTLLM: Large Language Models Make Random Forest Great on Few-shot Tabular Learning
+2601.11350|FEATHer: Fourier-Efficient Adaptive Temporal Hierarchy Forecaster for Time-Series Forecasting
+2601.11447|IMS: Intelligent Hardware Monitoring System for Secure SoCs
+2601.11491|Extractive summarization on a CMOS Ising machine
+2601.11581|Enhancing the QA Model through a Multi-domain Debiasing Framework
+2601.11590|EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend
+2601.11604|Hindsight Preference Replay Improves Preference-Conditioned Multi-Objective Reinforcement Learning
+2601.11622|Dynamical Systems Analysis Reveals Functional Regimes in Large Language Models
+2601.11644|Predicting When to Trust Vision-Language Models for Spatial Reasoning
+2601.11659|The Llama 4 Herd: Architecture, Training, Evaluation, and Deployment Notes
+2601.11685|Towards Efficient Image Deblurring for Edge Deployment
+2601.11714|Experimental observation of dynamical blockade between transmon qubits via ZZ interaction engineering
+2601.11762|Industry-Aligned Granular Topic Modeling
+2601.11792|A self-evolving multi-role collaborative framework with fine-grained difficulty guidance for innovative mathematical problem generation
+2601.11822|RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation
+2601.11833|Karhunen-Loève Expansion-Based Residual Anomaly Map for Resource-Efficient Glioma MRI Segmentation
+2601.11901|Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control
+2601.11921|Laughlin pumping assisted by surface acoustic waves
+2601.11932|Event Detection with a Context-Aware Encoder and LoRA for Improved Performance on Long-Tailed Classes
+2601.11939|COVERT: Trojan Detection in COTS Hardware via Statistical Activation of Microarchitectural Events
+2601.12156|Biological Intuition on Digital Hardware: An RTL Implementation of Poisson-Encoded SNNs for Static Image Classification
+2601.12194|Coherent Comparison as Information Cost: A Cost-First Ledger Framework for Discrete Dynamics
+2601.12228|Bio-Inspired Photonic Spectral Encoders
+2601.12303|Concepts from Representations: Post-hoc Concept Bottleneck Models via Sparse Decomposition of Visual Representations
+2601.12338|Actionable Advice from Reviews via Mixture of LoRA Experts: A Two-LLM Pipeline for Issue Extraction and Business Recommendations
+2601.12391|Class-Partitioned VQ-VAE and Latent Flow Matching for Point Cloud Scene Generation
+2601.12479|Language-Based Swarm Perception: Decentralized Person Re-Identification via Natural Language Descriptions
+2601.12693|BlocksecRT-DETR: Decentralized Privacy-Preserving and Token-Efficient Federated Transformer Learning for Secure Real-Time Object Detection in ITS
+2601.12699|Bandit Algorithms for Deep Brain Stimulation
+2601.12719|S2DiT: Sandwich Diffusion Transformer for Mobile Streaming Video Generation
+2601.12767|Bayesian Variable Selection with the Quasi-Posterior
+2601.12804|SL-CBM: Enhancing Concept Bottleneck Models with Semantic Locality for Better Interpretability
+2601.12917|CooperLLM: Cloud-Edge-End Cooperative Federated Fine-tuning for LLMs via ZOO-based Gradient Correction
+2601.12957|Random tree Besov priors: Data-driven regularisation parameter selection
+2601.12967|Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference
+2601.13007|ArchAgent: Scalable Legacy Software Architecture Recovery with LLMs
+2601.13213|Conflict Detection in AI-RAN: Efficient Interaction Learning and Autonomous Graph Reconstruction
+2601.13247|Aligning Agentic World Models via Knowledgeable Experience Learning
+2601.13252|Autonomous Navigation at the Nano-Scale: Algorithms, Architectures, and Constraints
+2601.13373|A Lightweight Model-Driven 4D Radar Framework for Pervasive Human Detection in Harsh Conditions
+2601.13467|Quantum Entanglement, Stratified Spaces, and Topological Matter: Towards Entanglement-Sensitive Langlands Data
+2601.13470|Joint Subarray Selection, User Scheduling, and Pilot Assignment for XL-MIMO
+2601.13476|A Unified Variational Imputation Framework for Electric Vehicle Charging Data Using Retrieval-Augmented Language Model
+2601.13514|Post-selection inference for penalized M-estimators via score thinning
+2601.13572|Behavior Knowledge Merge in Reinforced Agentic Models
+2601.13606|ChartVerse: Scaling Chart Reasoning via Reliable Programmatic Synthesis from Scratch
+2601.13761|DARC: Decoupled Asymmetric Reasoning Curriculum for LLM Evolution
+2601.13876|Pedagogical Alignment for Vision-Language-Action Models: A Comprehensive Framework for Data, Architecture, and Evaluation in Education
+2601.13948|Stream-Voice-Anon: Enhancing Utility of Real-Time Speaker Anonymization via Neural Audio Codec and Language Models
+2601.13969|Autonomous Knowledge Graph Exploration with Adaptive Breadth-Depth Retrieval
+2601.14041|Top 10 Open Challenges Steering the Future of Diffusion Language Model and Its Variants
+2601.14051|Kakugo: Distillation of Low-Resource Languages into Small Language Models
+2601.14192|Toward Efficient Agents: Memory, Tool learning, and Planning
+2601.14217|Many-body Euler topology
+2601.14251|LightOnOCR: A 1B End-to-End Multilingual Vision-Language Model for State-of-the-Art OCR
+2601.14287|Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents
+2601.14304|Guided by the Plan: Enhancing Faithful Autoregressive Text-to-Audio Generation with Guided Decoding
+2601.14346|DiSPA: Differential Substructure-Pathway Attention for Drug Response Prediction
+2601.14364|Theory of reentrant superconductivity in Corbino Josephson junctions
+2601.14523|Large Language Model-Powered Evolutionary Code Optimization on a Phylogenetic Tree
+2601.14541|Report for NSF Workshop on AI for Electronic Design Automation
+2601.14563|Scribble-Supervised Medical Image Segmentation with Dynamic Teacher Switching and Hierarchical Consistency
+2601.14595|IntelliSA: An Intelligent Static Analyzer for IaC Security Smell Detection Using Symbolic Rules and Neural Inference
+2601.14681|FARE: Fast-Slow Agentic Robotic Exploration
+2601.14695|CoScale-RL: Efficient Post-Training by Co-Scaling Data and Computation
+2601.14720|PULSE: Socially-Aware User Representation Modeling Toward Parameter-Efficient Graph Collaborative Filtering
+2601.14746|RefProtoFL: Communication-Efficient Federated Learning via External-Referenced Prototype Alignment
+2601.14800|FastFI: Enhancing API Call-Site Robustness in Microservice-Based Systems with Fault Injection
+2601.14872|Finite-Sample Inference for Sparsely Permuted Linear Regression
+2601.14919|Energy-Selective Complete Spin Polarization in an Extended Su-Schrieffer-Heeger Ferromagnetic Chain
+2601.15261|Orbital angular momentum of spatiotemporal vortices: a ray-mechanical analogy
+2601.15404|Partially Polarized Polar Codes: A New Design for 6G Control Channels
+2601.15474|BadImplant: Injection-based Multi-Targeted Graph Backdoor Attack
+2601.15479|Benchmarking LLMs for Pairwise Causal Discovery in Biomedical and Multi-Domain Contexts
+2601.15493|Testing Deep Learning Libraries via Neurosymbolic Constraint Learning
+2601.15605|ToxiTwitch: Toward Emote-Aware Hybrid Moderation for Live Streaming Platforms
+2601.15655|Event-VStream: Event-Driven Real-Time Understanding for Long Video Streams
+2601.15721|CoNRec: Context-Discerning Negative Recommendation with LLMs
+2601.15793|HumanLLM: Towards Personalized Understanding and Simulation of Human Nature
+2601.15968|HyperAlign: Hypernetwork for Efficient Test-Time Alignment of Diffusion Models
+2601.16093|SAMTok: Representing Any Mask with Two Words
+2601.16158|Domain-Incremental Continual Learning for Robust and Efficient Keyword Spotting in Resource Constrained Systems
+2601.16174|Beyond Predictive Uncertainty: Reliable Representation Learning with Structural Constraints
+2601.16214|CamPilot: Improving Camera Control in Video Diffusion Model with Efficient Camera Reward Feedback
+2601.16224|Limits of n-gram Style Control for LLMs via Logit-Space Injection
+2601.16249|Ordering-based Causal Discovery via Generalized Score Matching
+2601.16278|Better as Generators Than Classifiers: Leveraging LLMs and Synthetic Data for Low-Resource Multilingual Classification
+2601.16312|Teaching and Evaluating LLMs to Reason About Polymer Design Related Tasks
+2601.16316|EdgeSpot: Efficient and High-Performance Few-Shot Model for Keyword Spotting
+2601.16463|Cutting the Gordian Knot: Detecting Malicious PyPI Packages via a Knowledge-Mining Framework
+2601.16494|Indefinite Causal Order from Failure-to-Glue: Contextual Semantics and Parametric Time
+2601.16550|Spiking Neural Networks for Communication Systems: Encoding Schemes, Learning Algorithms, and Equalization~Techniques
+2601.16615|AuroraEdge-V-2B: A Faster And Stronger Edge Visual Large Language Model
+2601.16945|A new class of colored Gaussian graphical models with explicit normalizing constants
+2601.17028|PALMA: A Lightweight Tropical Algebra Library for ARM-Based Embedded Systems
+2601.17076|E2PL: Effective and Efficient Prompt Learning for Incomplete Multi-view Multi-Label Class Incremental Learning
+2601.17227|Hierarchical Informative Path Planning via Graph Guidance and Trajectory Optimization
+2601.17262|Unsupervised segmentation and clustering workflow for efficient processing of 4D-STEM and 5D-STEM data
+2601.17279|SPADE: A SIMD Posit-enabled compute engine for Accelerating DNN Efficiency
+2601.17391|SMV-EAR: Bring Spatiotemporal Multi-View Representation Learning into Efficient Event-Based Action Recognition
+2601.17407|Efficient Dilated Squeeze and Excitation Neural Operator for Differential Equations
+2601.17472|Adversarial Alignment and Disentanglement for Cross-Domain CTR Prediction with Domain-Encompassing Features
+2601.17517|EuleroDec: A Complex-Valued RVQ-VAE for Efficient and Robust Audio Coding
+2601.17568|Fast Multirate Encoding for 360° Video in OMAF Streaming Workflows
+2601.17665|Comment on "Aharonov-Bohm Phase is Locally Generated Like All Other Quantum Phases"
+2601.17868|VidLaDA: Bidirectional Diffusion Large Language Models for Efficient Video Understanding
+2601.17902|dLLM-ASR: A Faster Diffusion LLM-based Framework for Speech Recognition
+2601.17958|TensorLens: End-to-End Transformer Analysis via High-Order Attention Tensors
+2601.18036|Hybridization of topologically distinct quartet modes in three-terminal graphene Josephson junctions
+2601.18088|Cross-Domain Transfer with Self-Supervised Spectral-Spatial Modeling for Hyperspectral Image Classification
+2601.18096|Enhancing LLM-based Recommendation with Preference Hint Discovery from Knowledge Graph
+2601.18129|Typhoon-S: Minimal Open Post-Training for Sovereign Large Language Models
+2601.18189|Smooth, Sparse, and Stable: Finite-Time Exact Skeleton Recovery via Smoothed Proximal Gradients
+2601.18228|Facial Emotion Recognition on FER-2013 using an EfficientNetB2-Based Approach
+2601.18337|Quantum vortex driven Kelvin wave in the thermal background of superfluid helium
+2601.18393|OCR-Enhanced Multimodal ASR Can Read While Listening
+2601.18416|Refinement and Performance Benchmark for Range-Separated Water Force Field
+2601.18469|First-principles study of bulk stacking, $J_{\rm eff}$ picture, magnetic Hamiltonian, $g$ factors, and structural distortions of $α$-RuCl$_3$
+2601.18508|Magnetic Signatures of a Putative Fractional Topological Insulator in Twisted MoTe2
+2601.18548|Fast and Safe Trajectory Optimization for Mobile Manipulators With Neural Configuration Space Distance Field
+2601.18585|GimmBO: Interactive Generative Image Model Merging via Bayesian Optimization
+2601.18639|Constraint-Aware Discrete-Time PID Gain Optimization for Robotic Joint Control Under Actuator Saturation
+2601.18725|Explaining the thermal emission of old neutron stars with rotochemical heating and magnetized superconducting protons
+2601.18747|The $\mathbf{P}$-Completeness of Inverted Index Traversal: On the Complexity of Evaluating Boolean Query DAGs
+2601.18778|Teaching Models to Teach Themselves: Reasoning at the Edge of Learnability
+2601.18898|Fault-tolerant quantum simulation of the Pauli-Breit Hamiltonian for ab initio hybrid quantum-classical molecular design with applications to photodynamic therapy
+2601.18902|Flatter Tokens are More Valuable for Speculative Draft Model Training
+2601.18938|FSD-CAP: Fractional Subgraph Diffusion with Class-Aware Propagation for Graph Feature Imputation
+2601.19001|FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning
+2601.19003|Asymptotically tight Lagrangian dual of smooth nonconvex problems via improved error bound of Shapley-Folkman Lemma
+2601.19053|From Answer Givers to Design Mentors: Guiding LLMs with the Cognitive Apprenticeship Model
+2601.19064|LvD: A New Algorithm for Computing the Likelihood of a Phylogeny
+2601.19125|Stroboscopic motion reversals in delay-coupled neural fields
+2601.19155|LocationAgent: A Hierarchical Agent for Image Geolocation via Decoupling Strategy and Evidence from Parametric Knowledge
+2601.19263|A Reconfigurable Framework for AI-FPGA Agent Integration and Acceleration
+2601.19278|DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference
+2601.19286|ReToP: Learning to Rewrite Electronic Health Records for Clinical Prediction
+2601.19314|Instance-Guided Radar Depth Estimation for 3D Object Detection
+2601.19342|Modeling Behavioral Signals in Job Scams: A Human-Centered Security Study
+2601.19447|KG-CRAFT: Knowledge Graph-based Contrastive Reasoning with LLMs for Enhancing Automated Fact-checking
+2601.19501|Masked Diffusion Generative Recommendation
+2601.19533|SLM-SS: Speech Language Model for Generative Speech Separation
+2601.19561|AROMMA: Unifying Olfactory Embeddings for Single Molecules and Mixtures
+2601.19563|Modular Foundation Model Inference at the Edge: Network-Aware Microservice Optimization
+2601.19578|Yunque DeepResearch Technical Report
+2601.19588|From Atoms to Chains: Divergence-Guided Reasoning Curriculum for Unlabeled LLM Domain Adaptation
+2601.19620|R^3: Replay, Reflection, and Ranking Rewards for LLM Reinforcement Learning
+2601.19630|Mass generation for the two dimensional O(N) Linear Sigma Model in the large N limit
+2601.19637|RATE: Reviewer Profiling and Annotation-free Training for Expertise Ranking in Peer Review Systems
+2601.19802|Zero-Shot Stance Detection in the Wild: Dynamic Target Generation and Multi-Target Adaptation
+2601.19843|Graphical X Splatting (GraphiXS): A Graphical Model for 4D Gaussian Splatting under Uncertainty
+2601.19920|PiC-BNN: A 128-kbit 65 nm Processing-in-CAM-Based End-to-End Binary Neural Network Accelerator
+2601.19942|Latent Object Permanence: Topological Phase Transitions, Free-Energy Principles, and Renormalization Group Flows in Deep Transformer Manifolds
+2601.19969|E2HiL: Entropy-Guided Sample Selection for Efficient Real-World Human-in-the-Loop Reinforcement Learning
+2601.20014|Teaching LLMs to Ask: Self-Querying Category-Theoretic Planning for Under-Specified Reasoning
+2601.20026|Semantic Uncertainty Quantification of Hallucinations in LLMs: A Quantum Tensor Network Based Method
+2601.20061|Primitive-Driven Acceleration of Hyperdimensional Computing for Real-Time Image Classification
+2601.20119|Improving Smoothed Aggregation AMG Robustness on Stretched Mesh Applications
+2601.20138|Scaling Next-Brain-Token Prediction for MEG
+2601.20147|Not All Tokens Matter: Data-Centric Optimization for Efficient Code Summarization
+2601.20186|A general interpretation of nonlinear connected time crystals: quantum self-sustaining combined with quantum synchronization
+2601.20199|MERGE: Next-Generation Item Indexing Paradigm for Large-Scale Streaming Recommendation
+2601.20309|SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips
+2601.20339|Improving Diffusion Language Model Decoding through Joint Search in Generation Order and Token Space
+2601.20351|PalmBridge: A Plug-and-Play Feature Alignment Framework for Open-Set Palmprint Verification
+2601.20364|RAW-Flow: Advancing RGB-to-RAW Image Reconstruction with Deterministic Latent Flow Matching
+2601.20408|Meeting SLOs, Slashing Hours: Automated Enterprise LLM Optimization with OptiKIT
+2601.20436|Violation of the Leggett-Garg inequality in photon-graviton conversion
+2601.20649|P2S: Probabilistic Process Supervision for General-Domain Reasoning Question Answering
+2601.20701|One Step Is Enough: Dispersive MeanFlow Policy Optimization
+2601.20784|REASON: Accelerating Probabilistic Logical Reasoning for Scalable Neuro-Symbolic Intelligence
+2601.20810|Context-Augmented Code Generation Using Programming Knowledge Graphs
+2601.20845|PatchFormer: A Patch-Based Time Series Foundation Model with Hierarchical Masked Reconstruction and Cross-Domain Transfer Learning for Zero-Shot Multi-Horizon Forecasting
+2601.21031|SIGMA-PPG: Statistical-prior Informed Generative Masking Architecture for PPG Foundation Model
+2601.21147|Smooth Dynamic Cutoffs for Machine Learning Interatomic Potentials
+2601.21148|BrainStack: Neuro-MoE with Functionally Guided Expert Routing for EEG-Based Language Decoding
+2601.21149|Mobility-Embedded POIs: Learning What A Place Is and How It Is Used from Human Movement
+2601.21187|FRISM: Fine-Grained Reasoning Injection via Subspace-Level Model Merging for Vision-Language Models
+2601.21193|Generative Recall, Dense Reranking: Learning Multi-View Semantic IDs for Efficient Text-to-Video Retrieval
+2601.21244|Less Noise, More Voice: Reinforcement Learning for Reasoning via Instruction Purification
+2601.21279|NEXUS: Bit-Exact ANN-to-SNN Equivalence via Neuromorphic Gate Circuits with Surrogate-Free Training
+2601.21323|Adversarial Vulnerability Transcends Computational Paradigms: Feature Engineering Provides No Defense Against Neural Adversarial Transfer
+2601.21346|HPTune: Hierarchical Proactive Tuning for Collision-Free Model Predictive Control
+2601.21526|KAPSO: A Knowledge-grounded framework for Autonomous Program Synthesis and Optimization
+2601.21528|High-Coherence and High-frequency Quantum Computing: The Design of a High-Frequency, High-Coherence and Scalable Quantum Computing Architecture
+2601.21561|SAL: Selective Adaptive Learning for Backpropagation-Free Training with Sparsification
+2601.21564|Representation Unlearning: Forgetting through Information Compression
+2601.21617|PathReasoner-R1: Instilling Structured Reasoning into Pathology Vision-Language Model via Knowledge-Guided Policy Optimization
+2601.21632|Position: Sustainable Open-Source AI Requires Tracking the Cumulative Footprint of Derivatives
+2601.21682|FIT to Forget: Robust Continual Unlearning for Large Language Models
+2601.21732|Neural Wasserstein Two-Sample Tests
+2601.21758|EWSJF: An Adaptive Scheduler with Hybrid Partitioning for Mixed-Workload LLM Inference
+2601.21765|Mean-field Variational Bayes for Sparse Probit Regression
+2601.21795|Effective LoRA Adapter Routing using Task Representations
+2601.21796|KID: Knowledge-Injected Dual-Head Learning for Knowledge-Grounded Harmful Meme Detection
+2601.21804|Distribution-Aware Reward Estimation for Test-Time Reinforcement Learning
+2601.21805|The Double-Edged Sword of Knowledge Transfer: Diagnosing and Curing Fairness Pathologies in Cross-Domain Recommendation
+2601.21821|MMFineReason: Closing the Multimodal Reasoning Gap via Open Data-Centric Methods
+2601.21839|Test-Time Compute Games
+2601.21851|Visual Disentangled Diffusion Autoencoders: Scalable Counterfactual Generation for Foundation Models
+2601.21912|ProRAG: Process-Supervised Reinforcement Learning for Retrieval-Augmented Generation
+2601.21933|Just Noticeable Difference Modeling for Deep Visual Features
+2601.21940|DisContSE: Single-Step Diffusion Speech Enhancement Based on Joint Discrete and Continuous Embeddings
+2601.21969|Token-Guard: Towards Token-Level Hallucination Control via Self-Checking Decoding
+2601.22016|TBDFiltering: Sample-Efficient Tree-Based Data Filtering
+2601.22124|A Federated and Parameter-Efficient Framework for Large Language Model Training in Medicine
+2601.22151|Late Breaking Results: Conversion of Neural Networks into Logic Flows for Edge Computing
+2601.22318|Federate the Router: Learning Language Model Routers with Sparse and Decentralized Evaluations
+2601.22332|Photon-graviton polarization entanglement induced by a classical electromagnetic wave
+2601.22438|Towards Resiliency in Large Language Model Serving with KevlarFlow
+2601.22488|Elastic Spectral State Space Models for Budgeted Inference
+2601.22528|Darwinian Memory: A Training-Free Self-Regulating Memory System for GUI Agent Evolution
+2601.22541|Benchmarking Long Roll-outs of Auto-regressive Neural Operators for the Compressible Navier-Stokes Equations with Conserved Quantity Correction
+2601.22551|Hybrid Cross-Device Localization via Neural Metric Learning and Feature Fusion
+2601.22563|EUGens: Efficient, Unified, and General Dense Layers
+2601.22647|Test-Time Mixture of World Models for Embodied Agents in Dynamic Environments
+2601.22674|VisionTrim: Unified Vision Token Compression for Training-Free MLLM Acceleration
+2601.22692|FNF: Functional Network Fingerprint for Large Language Models
+2601.22705|CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
+2601.22758|AutoRefine: From Trajectories to Reusable Expertise for Continual LLM Agent Refinement
+2601.22791|Understanding on the Edge: LLM-generated Boundary Test Explanations
+2601.22898|$f_2(1270)\toπ+π$ as a probe of spin and vorticity in heavy-ion collisions
+2601.22918|Microbiome association diversity reflects proximity to the edge of instability
+2601.22930|MTDrive: Multi-turn Interactive Reinforcement Learning for Autonomous Driving
+2601.22996|Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference
+2601.23006|InstructDiff: Domain-Adaptive Data Selection via Differential Entropy for Efficient LLM Fine-Tuning
+2601.23009|SolAgent: A Specialized Multi-Agent Framework for Solidity Code Generation
+2601.23052|Adaptive Edge Learning for Density-Aware Graph Generation
+2601.23219|MonoScale: Scaling Multi-Agent System with Monotonic Improvement
+2601.23225|Agile Reinforcement Learning through Separable Neural Architecture and Applications
+2601.23286|VideoGPA: Distilling Geometry Priors for 3D-Consistent Video Generation
+2602.00071|A generating-function approach to the interference of squeezed states with partial distinguishability
+2602.00088|From Numbers to Prompts: A Cognitive Symbolic Transition Mechanism for Lightweight Time-Series Forecasting
+2602.00121|A Prior-Predictive Monte Carlo Framework for Pricing Complex Data Products in Data-Poor Markets
+2602.00217|Dispersion Loss Counteracts Embedding Condensation and Improves Generalization in Small Language Models
+2602.00268|TokenTrim: Inference-Time Token Pruning for Autoregressive Long Video Generation
+2602.00486|Higher-order Liouvillian exceptional points in the dissipative dynamics of quadratic fermions
+2602.00491|From Knowledge to Inference: Formalizing Specialized Public Health Reasoning on GlobalHealthAtlas
+2602.00590|Multimodal Machine Learning for Integrating Heterogeneous Analytical Systems
+2602.00686|Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching
+2602.00693|Topology and Geometry of the Learning Space of ReLU Networks: Connectivity and Singularities
+2602.00719|Super-resolution Imaging of Limited-size Objects
+2602.00759|Adaptive Ability Decomposing for Unlocking Large Reasoning Model Effective Reinforcement Learning
+2602.00879|Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs
+2602.02559|Experience-Driven Multi-Agent Systems Are Training-free Context-aware Earth Observers
+2602.07001|OTFS-based Integrated Positioning and Communication Systems with Low-Resolution ADCs
+2602.11181|Code Mixologist : A Practitioner's Guide to Building Code-Mixed LLMs
+2602.11182|MetaMem: Evolving Meta-Memory for Knowledge Utilization through Self-Reflective Symbolic Optimization
+2602.13231|An Explainable Failure Prediction Framework for Neural Networks in Radio Access Networks
+2602.13234|Stay in Character, Stay Safe: Dual-Cycle Adversarial Self-Evolution for Safety Role-Playing Agents
+2602.13244|Responsible AI in Business
+2603.28772|Federated Inference for Heterogeneous LLM Communication and Collaboration
+2603.29572|Turbo4DGen: Ultra-Fast Acceleration for 4D Generation
+2604.06172|EviSnap: Faithful Evidence-Cited Explanations for Cold-Start Cross-Domain Recommendation

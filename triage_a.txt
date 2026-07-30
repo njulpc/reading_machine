@@ -1,0 +1,749 @@
+id|title
+2601.18091|From LLMs to LRMs: Rethinking Pruning for Reasoning-Centric Models
+2601.19675|LoPRo: Enhancing Low-Rank Quantization via Permuted Block-Wise Rotation
+2601.09694|LLMs can Compress LLMs: Adaptive Pruning by Agents
+2601.10765|Pruning as Evolution: Emergent Sparsity Through Selection Dynamics in Neural Networks
+2601.16991|Sparsity-Aware Low-Rank Representation for Efficient Fine-Tuning of Large Language Models
+2601.06959|HAS-VQ: Hessian-Adaptive Sparse Vector Quantization for High-Fidelity LLM Compression
+2601.12042|Less Is More -- Until It Breaks: Security Pitfalls of Vision Token Compression in Large Vision-Language Models
+2602.00372|Post-Training Probability Manifold Correction via Structured SVD Pruning and Self-Referential Distillation
+2601.00282|Can Large Language Models Still Explain Themselves? Investigating the Impact of Quantization on Self-Explanations
+2601.07878|Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models
+2601.07892|Sherry: Hardware-Efficient 1.25-Bit Ternary Quantization via Fine-grained Sparsification
+2601.09865|Advancing Model Refinement: Muon-Optimized Distillation and Quantization for LLM Deployment
+2601.10079|Sparse-RL: Breaking the Memory Wall in LLM Reinforcement Learning via Stable Sparse Rollouts
+2601.10155|LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers
+2601.13563|ButterflyMoE: Compression-Scalable Ternary Experts via Structured Butterfly Orbits
+2601.15538|QUAIL: Quantization Aware Unlearning for Mitigating Misinformation in LLMs
+2601.20107|Structural Anchor Pruning: Training-Free Multi-Vector Compression for Visual Document Retrieval
+2601.21069|CompSRT: Quantization and Pruning for Image Super Resolution Transformers
+2601.21626|HeRo-Q: A General Framework for Stable Low Bit Quantization via Hessian Conditioning
+2602.11184|KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models
+2601.03195|Sparse Knowledge Distillation: A Mathematical Framework for Probability-Domain Temperature Scaling and Multi-Stage Compression
+2601.22716|Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation
+2602.02546|D$^2$Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs
+2601.00679|QSLM: A Performance- and Memory-aware Quantization Framework with Tiered Search Strategy for Spike-driven Language Models
+2601.05684|FLRQ: Faster LLM Quantization with Flexible Low-Rank Matrix Sketching
+2601.06558|Robust Sparse Signal Recovery with Outliers: A Hard Thresholding Pursuit Approach Based on LAD
+2601.06702|GRASP LoRA: GRPO Guided Adapter Sparsity Policy for Cross Lingual Transfer
+2601.12638|Mixed Precision PointPillars for Efficient 3D Object Detection with TensorRT
+2601.15079|LoRAP: Low-Rank Aggregation Prompting for Quantized Graph Neural Networks Training
+2601.15772|LL-GaussianImage: Efficient Image Representation for Zero-shot Low-Light Enhancement with 2D Gaussian Splatting
+2601.18150|FP8-RL: A Practical and Stable Low-Precision Stack for LLM Reinforcement Learning
+2601.19503|GradPruner: Gradient-Guided Layer Pruning Enabling Efficient Fine-Tuning and Inference for LLMs
+2601.20317|VersaQ-3D: Architecture Support for Visual Geometry Grounded Transformers via Versatile Quantization
+2601.21531|On the Adversarial Robustness of Large Vision-Language Models under Visual Token Compression
+2602.00377|DecompressionLM: Deterministic, Diagnostic, and Zero-Shot Concept Graph Extraction from Language Models
+2602.00780|Environment-Aware Adaptive Pruning with Interleaved Inference Orchestration for Vision-Language-Action Models
+2601.00942|Reliability Under Randomness: An Empirical Analysis of Sparse and Dense Language Models Across Decoding Temperatures
+2601.02437|TAP-ViTs: Task-Adaptive Pruning for On-Device Deployment of Vision Transformers
+2601.02875|Revisiting Data Compression with Language Modeling
+2601.03387|SEP Analysis of a Low-Resolution SIMO System with M-PSK over Fading Channels
+2601.03851|Rethinking Table Pruning in TableQA: From Sequential Revisions to Gold Trajectory-Supervised Parallel Search
+2601.04719|GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models
+2601.05913|Distilling Lightweight Domain Experts from Large ML Models by Identifying Relevant Subspaces
+2601.06483|Joint Impact of ADC and Fronthaul Quantization in Cell-Free Massive MIMO-OFDM Uplink
+2601.11663|Activation Sensitivity as a Unifying Principle for Post-Training Quantization
+2601.13559|AgentGC: Evolutionary Learning-based Lossless Compression for Genomics Data with LLM-driven Multiple Agent
+2601.15287|Towards Understanding Best Practices for Quantization of Vision-Language Models
+2601.15394|Memorization Dynamics in Knowledge Distillation for Language Models
+2601.16746|SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents
+2601.17987|Systematic Characterization of Minimal Deep Learning Architectures: A Unified Analysis of Convergence, Pruning, and Quantization
+2601.20088|Quantization-Aware Distillation for NVFP4 Inference Accuracy Recovery
+2601.20362|Switchcodec: Adaptive residual-expert sparse quantization for high-fidelity neural audio coding
+2601.20467|CtrlCoT: Dual-Granularity Chain-of-Thought Compression for Controllable Reasoning
+2601.20745|HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs
+2601.22101|ECO: Quantized Training without Full-Precision Master Weights
+2601.22709|Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs
+2601.23105|Lossy Compression of Cellular Network KPIs
+2602.00534|AIRE-Prune: Asymptotic Impulse-Response Energy for State Pruning in State Space Models
+2601.01204|XStreamVGGT: Extremely Memory-Efficient Streaming Vision Geometry Grounded Transformer with KV Cache Compression
+2601.02213|Quantized SO(3)-Equivariant Graph Neural Networks for Efficient Molecular Property Prediction
+2601.03290|Lightweight Transformer Architectures for Edge Devices in Real-Time Applications
+2601.03609|Unveiling Text in Challenging Stone Inscriptions: A Character-Context-Aware Patching Strategy for Binarization
+2601.04263|Learning to Reason: Temporal Saliency Distillation for Interpretable Knowledge Transfer
+2601.05038|ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG
+2601.09176|$D^2Prune$: Sparsifying Large Language Models via Dual Taylor Expansion and Attention Distribution Awareness
+2601.10379|Online sparse Bayesian identification of nonlinear time-varying systems
+2601.12337|Turbo-GoDec: Exploiting the Cluster Sparsity Prior for Hyperspectral Anomaly Detection
+2601.14888|What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study
+2601.16039|Characterizations of monadically dependent tree-ordered weakly sparse structures
+2601.16536|W4A16 Mixed-Precision Matrix Multiplication on Decoupled Architecture: Kernel Design and Memory Bottleneck Analysis for Ascend NPUs
+2601.17625|BrainDistill: Implantable Motor Decoding with Task-Specific Knowledge Distillation
+2601.18306|Calibrating Beyond English: Language Diversity for Better Quantized Multilingual LLM
+2601.18734|Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models
+2601.19026|Is Finer Better? The Limits of Microscaling Formats in Large Language Models
+2601.20301|Towards Compact and Robust DNNs via Compression-aware Sharpness Minimization
+2601.21219|Soft Quantization: Model Compression Via Weight Coupling
+2601.21238|PTQ4ARVG: Post-Training Quantization for AutoRegressive Visual Generation Models
+2601.21269|Lightweight High-Fidelity Low-Bitrate Talking Face Compression for 3D Video Conference
+2602.00165|Benford's Law as a Distributional Prior for Post-Training Quantization of Large Language Models
+2602.00450|Model Optimization for Multi-Camera 3D Detection and Tracking
+2602.00577|SAU: Sparsity-Aware Unlearning for LLMs via Gradient Masking and Importance Redistribution
+2601.02888|RPIQ: Residual-Projected Multi-Collaboration Closed-Loop and Single Instance Quantization for Visually Impaired Assistance
+2601.03067|Joint Encoding of KV-Cache Blocks for Scalable LLM Serving
+2601.04476|Memory-Guided Unified Hardware Accelerator for Mixed-Precision Scientific Computing
+2601.05398|Markovian Compression: Looking to the Past Helps Accelerate the Future
+2601.05526|Discrete Homogeneity and Quantizer Design for Nonlinear Homogeneous Control Systems
+2601.05639|Efficient training for compact compression models via sequential distillation
+2601.06474|SparseOccVLA: Bridging Occupancy and Vision-Language Models via Sparse Queries for Unified 4D Scene Understanding and Planning
+2601.07212|MI-PRUN: Optimize Large Language Model Pruning via Mutual Information
+2601.07523|Sparse Point-wise Privacy Leakage: Mechanism Design and Fundamental Limits
+2601.09093|Hidden States as Early Signals: Step-level Trace Evaluation and Pruning for Efficient Test-Time Scaling
+2601.09361|GeoRA: Geometry-Aware Low-Rank Adaptation for RLVR
+2601.10090|Difficulty-guided Sampling: Bridging the Target Gap between Dataset Distillation and Downstream Tasks
+2601.11058|Impurity Self-Trapping in Lattice Bose systems
+2601.11396|SUG-Occ: Explicit Semantics and Uncertainty Guided Sparse Learning for Efficient 3D Occupancy Prediction
+2601.11626|Concatenated Matrix SVD: Compression Bounds, Incremental Approximation, and Error-Constrained Clustering
+2601.11631|Compress to Focus: Efficient Coordinate Compression for Policy Optimization in Multi-Turn GUI Agents
+2601.13100|Recursive Meta-Distillation: An Axiomatic Framework for Iterative Knowledge Refinement
+2601.13631|ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management
+2601.13953|Differentiable Logic Synthesis: Spectral Coefficient Selection via Sinkhorn-Constrained Composition
+2601.14032|RM-Distiller: Exploiting Generative LLM for Reward Model Distillation
+2601.14243|Jet-RL: Enabling On-Policy FP8 Reinforcement Learning with Unified Training and Rollout Precision Flow
+2601.14277|Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct
+2601.14549|QMC: Efficient SLM Edge Inference via Outlier-Aware Quantization and Emergent Memories Co-Design
+2601.15370|Improving MoE Compute Efficiency by Composing Weight and Data Sparsity
+2601.16780|PocketDVDNet: Realtime Video Denoising for Real Camera Noise
+2601.18547|REMAC: Reference-Based Martian Asymmetrical Image Compression
+2601.18909|How Is Uncertainty Propagated in Knowledge Distillation?
+2601.19117|Optimized $k$-means color quantization of digital images in machine-based and human perception-based colorspaces
+2601.22813|Quartet II: Accurate LLM Pre-Training in NVFP4 by Improved Unbiased Gradient Estimation
+2601.23148|Compressed BC-LISTA via Low-Rank Convolutional Decomposition
+2602.00135|LLaVA-FA: Learning Fourier Approximation for Compressing Large Multimodal Models
+2602.00852|Investigating the Robustness of Subtask Distillation under Spurious Correlation
+2602.02538|Enhancing Post-Training Quantization via Future Activation Awareness
+2602.02581|QuantLRM: Quantization of Large Reasoning Models via Fine-Tuning Signals
+2601.01608|Guiding Token-Sparse Diffusion Models
+2601.02298|Power-of-Two Quantization-Aware-Training (PoT-QAT) in Large Language Models (LLMs)
+2601.02455|Diagnostic-Driven Layer-Wise Compensation for Post-Training Quantization of Encoder-Decoder ASR Models
+2601.02662|When Prompting Meets Spiking: Graph Sparse Prompting via Spiking Graph Prompt Learning
+2601.02674|Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration
+2601.02819|Punctuation-aware Hybrid Trainable Sparse Attention for Large Language Models
+2601.03066|Do LLMs Encode Functional Importance of Reasoning Tokens?
+2601.03332|LUT-KAN: Segment-wise LUT Quantization for Fast KAN Inference
+2601.04359|PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache
+2601.07475|ARCQuant: Boosting NVFP4 Quantization with Augmented Residual Channels for LLMs
+2601.07584|Vector Quantized-Aided XL-MIMO CSI Feedback with Channel Adaptive Transmission
+2601.07667|Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference
+2601.08271|Sparsity Is Necessary: Polynomial-Time Stability for Agentic LLMs in Large Action Spaces
+2601.08280|Greedy Is Enough: Sparse Action Discovery in Agentic LLMs
+2601.09088|Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning
+2601.09352|Spectral Complex Autoencoder Pruning: A Fidelity-Guided Criterion for Extreme Structured Channel Compression
+2601.09881|Transition Matching Distillation for Fast Video Generation
+2601.10015|CAFEDistill: Learning Personalized and Dynamic Models through Federated Early-Exit Network Distillation
+2601.10373|Towards Efficient Low-rate Image Compression with Frequency-aware Diffusion Prior Refinement
+2601.11200|FAQ: Mitigating Quantization Error via Regenerating Calibration Data with Family-Aware Quantization
+2601.11269|X-Distill: Cross-Architecture Vision Distillation for Visuomotor Learning
+2601.11915|Low-rank Orthogonal Subspace Intervention for Generalizable Face Forgery Detection
+2601.12272|AgenticPruner: MAC-Constrained Neural Network Compression via LLM-Driven Strategy Search
+2601.12757|CodeSep: Low-Bitrate Codec-Driven Speech Separation with Base-Token Disentanglement and Auxiliary-Token Serial Prediction
+2601.12814|CSGaussian: Progressive Rate-Distortion Compression and Segmentation for 3D Gaussian Splatting
+2601.12894|Sparse ActionGen: Accelerating Diffusion Policy with Real-time Pruning
+2601.13143|FastAV: Efficient Token Pruning for Audio-Visual Large Language Model Inference
+2601.13412|Using deep learning for predicting cleansing quality of colon capsule endoscopy images
+2601.14621|Direct and Converse Theorems in Estimating Signals with Sublinear Sparsity
+2601.14821|POTR: Post-Training 3DGS Compression
+2601.15598|Ternary Spiking Neural Networks Enhanced by Complemented Neurons and Membrane Potential Aggregation
+2601.15838|TinySense: Effective CSI Compression for Scalable and Accurate Wi-Fi Sensing
+2601.16427|Perfect Clustering for Sparse Directed Stochastic Block Models
+2601.17187|High-Rate Quantized Matrix Multiplication I
+2601.17684|A Model-Driven Lossless Compression Algorithm Resistant to Mismatch
+2601.17818|ViTCoP: Accelerating Large Vision-Language Models via Visual and Textual Semantic Collaborative Pruning
+2601.17836|Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction
+2601.19320|StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths
+2601.19919|ASKD-Whisper: Adaptive Self-knowledge Distillation for Efficient and Low-Latency Automatic Speech Recognition
+2601.20075|Sparse CLIP: Co-Optimizing Interpretability and Performance in Contrastive Learning
+2601.21296|Grounding and Enhancing Informativeness and Utility in Dataset Distillation
+2601.21481|Compressed Sensing-Driven Near-Field Localization Exploiting Array of Subarrays
+2601.21686|Don't be so Stief! Learning KV Cache low-rank approximation over the Stiefel manifold
+2601.22980|Learnable Permutation for Structured Sparsity on Transformer Models
+2602.00100|Frequent Pattern Mining approach to Image Compression
+2602.00397|Fast Forward: Accelerating LLM Prefill with Predictive FFN Sparsity
+2602.00535|Invertible Memory Flow Networks
+2602.15843|The Perplexity Paradox: Why Code Compresses Better Than Math in LLM Prompts
+2602.20164|Benchmarking Distilled Language Models: Performance and Efficiency in Resource-Constrained Settings
+2601.00383|Probabilistic Entanglement Distillation: Error Exponents via Postselected Quantum Hypothesis Testing Against Separable States
+2601.00920|MODE: Efficient Time Series Prediction with Mamba Enhanced by Low-Rank Neural ODEs
+2601.01296|Aggressive Compression Enables LLM Weight Theft
+2601.01773|Joint Sparsity and Beamforming Design for RDARS-Aided Systems
+2601.02563|Compressed code: the hidden effects of quantization and distillation on programming tokens
+2601.02727|Foreground-Aware Dataset Distillation via Dynamic Patch Selection
+2601.03484|From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs
+2601.04348|SCAR-GS: Spatial Context Attention for Residuals in Progressive Gaussian Splatting
+2601.04968|SparseLaneSTP: Leveraging Spatio-Temporal Priors with Sparse Transformers for 3D Lane Detection
+2601.04973|ConMax: Confidence-Maximizing Compression for Efficient Chain-of-Thought Reasoning
+2601.05019|Hán Dān Xué Bù (Mimicry) or Qīng Chū Yú Lán (Mastery)? A Cognitive Perspective on Reasoning Distillation in Large Language Models
+2601.05191|AgentCompress: Task-Aware Compression for Affordable Large Language Model Agents
+2601.06227|When Smaller Wins: Dual-Stage Distillation and Pareto-Guided Compression of Liquid Neural Networks for Edge Battery Prognostics
+2601.07411|SCALPEL: Selective Capability Ablation via Low-rank Parameter Editing for Large Language Model Interpretability Analysis
+2601.07891|KVzap: Fast, Adaptive, and Faithful KV Cache Pruning
+2601.08519|CD^2: Constrained Dataset Distillation for Few-Shot Class-Incremental Learning
+2601.08698|Double Strike: Breaking Approximation-Based Side-Channel Countermeasures for DNNs
+2601.09209|Pairing-free Group-level Knowledge Distillation for Robust Gastrointestinal Lesion Classification in White-Light Endoscopy
+2601.09254|A Theoretical Framework for Rate-Distortion Limits in Learned Image Compression
+2601.09286|Why not Collaborative Filtering in Dual View? Bridging Sparse and Dense Models
+2601.09306|On-Device Large Language Models for Sequential Recommendation
+2601.09555|Benchmarking Post-Training Quantization of Large Language Models under Microscaling Floating Point Formats
+2601.10124|VQ-Seg: Vector-Quantized Token Perturbation for Semi-Supervised Medical Image Segmentation
+2601.11464|MHA2MLA-VLM: Enabling DeepSeek's Economical Multi-Head Latent Attention across Vision-Language Models
+2601.12033|Preserving Fairness and Safety in Quantized LLMs Through Critical Weight Protection
+2601.12261|DALD-PCAC: Density-Adaptive Learning Descriptor for Point Cloud Lossless Attribute Compression
+2601.14130|GIC-DLC: Differentiable Logic Circuits for Hardware-Friendly Grayscale Image Compression
+2601.14240|LRC-DHVC: Towards Local Rate Control in Neural Video Compression
+2601.15311|Aeon: High-Performance Neuro-Symbolic Memory Management for Long-Horizon LLM Agents
+2601.15829|Towards Realistic Remote Sensing Dataset Distillation with Discriminative Prototype-guided Diffusion
+2601.16515|SALAD: Achieve High-Sparsity Attention via Efficient Linear Attention Tuning for Video Diffusion Transformer
+2601.16986|Crystal-KV: Efficient KV Cache Management for Chain-of-Thought LLMs via Answer-First Principle
+2601.17555|Saliency Driven Imagery Preprocessing for Efficient Compression -- Industrial Paper
+2601.17562|Sparse RBF Networks for PDEs and nonlocal equations: function space theory, operator calculus, and training algorithms
+2601.18527|Exploring Fine-Tuning for In-Context Retrieval and Efficient KV-Caching in Long-Context Language Models
+2601.18821|Lossy Image Compression -- A Frequent Sequence Mining perspective employing efficient Clustering
+2601.20168|Efficient Token Pruning for LLaDA-V
+2601.20697|Adaptive Dimension Reduction for Overlapping Group Sparsity
+2601.20706|NPU Design for Diffusion Language Model Inference
+2601.21291|Gaussian Belief Propagation Network for Depth Completion
+2601.21737|Mixed-Precision Training and Compilation for RRAM-based Computing-in-Memory Accelerators
+2601.21873|Low-Rank Plus Sparse Matrix Transfer Learning under Growing Representations and Ambient Dimensions
+2601.21896|Past- and Future-Informed KV Cache Policy with Salience Estimation in Autoregressive Video Diffusion
+2601.22141|Routing the Lottery: Adaptive Subnetworks for Heterogeneous Data
+2601.22244|Is Hierarchical Quantization Essential for Optimal Reconstruction?
+2601.22766|Sparse Attention as Compact Kernel Regression
+2601.22905|FlexLoRA: Entropy-Guided Flexible Low-Rank Adaptation
+2602.00400|KEPO: Knowledge-Enhanced Preference Optimization for Multimodal Reasoning with Applications to Medical VQA
+2602.00792|Latent Shadows: The Gaussian-Discrete Duality in Masked Diffusion
+2601.00202|Knowledge Distillation for Temporal Knowledge Graph Reasoning with Large Language Models
+2601.00285|SV-GS: Sparse View 4D Reconstruction with Skeleton-Driven Gaussian Splatting
+2601.00454|Defensive M2S: Training Guardrail Models on Compressed Multi-turn Conversations
+2601.00672|Sparse FEONet: A Low-Cost, Memory-Efficient Operator Network via Finite-Element Local Sparsity for Parametric PDEs
+2601.00714|KDPhys: An Attention Guided 3D to 2D Knowledge Distillation for Real-time Video-Based Physiological Measurement
+2601.00938|Rate-Distortion Analysis of Compressed Query Delegation with Low-Rank Riemannian Updates
+2601.02353|Meta-Learning Guided Pruning for Few-Shot Plant Pathology on Edge Devices
+2601.02613|Sparsity-Aware Streaming SNN Accelerator with Output-Channel Dataflow for Automatic Modulation Classification
+2601.02735|Revisiting Forest Proximities via Sparse Leaf-Incidence Kernels
+2601.02776|UniSRCodec: Unified and Low-Bitrate Single Codebook Codec with Sub-Band Reconstruction
+2601.03229|SpANNS: Optimizing Approximate Nearest Neighbor Search for Sparse Vectors Using Near Memory Processing
+2601.03292|From Loop Quantum Gravity to a Theory of Everything
+2601.03704|Investigating Knowledge Distillation Through Neural Networks for Protein Binding Affinity Prediction
+2601.04519|TokenSeg: Efficient 3D Medical Image Segmentation via Hierarchical Visual Token Compression
+2601.04587|FedKDX: Federated Learning with Negative Knowledge Distillation for Enhanced Healthcare AI Systems
+2601.04786|AgentOCR: Reimagining Agent History via Optical Self-Compression
+2601.04983|Assessing the Impact of Low Resolution Control Electronics on Quantum Neural Network Performance
+2601.07197|Beyond Variance: Knowledge-Aware LLM Compression via Fisher-Aligned Subspace Diagnostics
+2601.07607|Quantization-scheme-Independent Energy and Its Implications for Holographic Bounds
+2601.08187|Improving LLM Reasoning with Homophily-aware Structural and Semantic Text-Attributed Graph Compression
+2601.08412|Hybrid Distillation with CoT Guidance for Edge-Drone Control Code Generation
+2601.08882|Compressing Vision Transformers in Geospatial Transfer Learning with Manifold-Constrained Optimization
+2601.09165|Multi-Teacher Ensemble Distillation: A Mathematical Framework for Probability-Domain Knowledge Aggregation
+2601.09331|Arbitrary fractional quantization in Dirac systems
+2601.09985|FaTRQ: Tiered Residual Quantization for LLM Vector Search in Far-Memory-Aware ANNS Systems
+2601.10109|Skill-Aware Data Selection and Fine-Tuning for Data-Efficient Reasoning Distillation
+2601.10378|Global Context Compression with Interleaved Vision-Text Transformation
+2601.10410|TF3-RO-50M: Training Compact Romanian Language Models from Scratch on Synthetic Moral Microfiction
+2601.10673|Single-Stage Huffman Encoder for ML Compression
+2601.11024|PruneRAG: Confidence-Guided Query Decomposition Trees for Efficient Retrieval-Augmented Generation
+2601.11471|Low-Rank Key Value Attention
+2601.11630|A one-step generation model with a Single-Layer Transformer: Layer number re-distillation of FreeFlow
+2601.11641|Mixture of Distributions Matters: Dynamic Sparse Attention for Efficient Video Diffusion Transformers
+2601.11865|CTPD: Cross Tokenizer Preference Distillation
+2601.12213|One-Sided Matrix Completion from Ultra-Sparse Samples
+2601.12383|An efficient penalty decomposition algorithm for minimization over sparse symmetric sets
+2601.12400|BiCoLoR: Communication-Efficient Optimization with Bidirectional Compression and Local Training
+2601.12785|Distilling Time Series Foundation Models for Efficient Forecasting
+2601.13684|HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference
+2601.13994|torch-sla: Differentiable Sparse Linear Algebra with Adjoint Solvers and Sparse Tensor Parallelism for PyTorch
+2601.15305|Gated Sparse Attention: Combining Computational Efficiency with Training Stability for Long-Context Language Models
+2601.15441|CASL: Concept-Aligned Sparse Latents for Interpreting Diffusion Models
+2601.15657|Integrating Knowledge Distillation Methods: A Sequential Multi-Stage Framework
+2601.16073|DSFedMed: Dual-Scale Federated Medical Image Segmentation via Mutual Distillation Between Foundation and Lightweight Models
+2601.16366|Post-Training Neural Network Pruning using Graph Curvature
+2601.16556|PRISM: Purified Representation and Integrated Semantic Modeling for Generative Sequential Recommendation
+2601.17112|Low-Rank Tensor Approximation of Weights in Large Language Models via Cosine Lanczos Bidiagonalization
+2601.17367|Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers
+2601.17598|Deep Intrinsic Surprise-Regularized Control (DISRC): A Biologically Inspired Mechanism for Efficient Deep Q-Learning in Sparse Environments
+2601.17910|Adaptive Weighting in Knowledge Distillation: An Axiomatic Framework for Multi-Scale Teacher Ensemble Optimization
+2601.18064|Resonant Sparse Geometry Networks
+2601.18782|Low-Bit Quantization of Bandlimited Graph Signals via Iterative Methods
+2601.18932|Advances in Diffusion-Based Generative Compression
+2601.19213|M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization
+2601.19794|Component-Aware Pruning Framework for Neural Network Controllers via Gradient-Based Importance Estimation
+2601.20028|Decomposing multimodal embedding spaces with group-sparse autoencoders
+2601.20262|Shallow-π: Knowledge Distillation for Flow-based VLAs
+2601.20742|Compression Tells Intelligence: Visual Coding, Visual Token Technology, and the Unification
+2601.20782|Neural Quantum States in Mixed Precision
+2601.21288|Drive-KD: Multi-Teacher Distillation for VLMs in Autonomous Driving
+2601.21345|Semantic-Guided Dynamic Sparsification for Pre-Trained Model-based Class-Incremental Learning
+2601.21461|L$^3$: Large Lookup Layers
+2601.21611|Thinking Broad, Acting Fast: Latent Reasoning Distillation from Multi-Perspective Chain-of-Thought for E-Commerce Relevance
+2601.21664|SENDAI: A Hierarchical Sparse-measurement, EfficieNt Data AssImilation Framework
+2601.21927|SONIC: Segmented Optimized Nexus for Information Compression in Key-Value Caching
+2601.21944|Clarity: The Flexibility-Interpretability Trade-Off in Sparsity-aware Concept Bottleneck Models
+2601.21968|OVD: On-policy Verbal Distillation
+2601.22275|VMonarch: Efficient Video Diffusion Transformers with Structured Attention
+2601.22347|Pushing the Limits of Block Rotations in Post-Training Quantization
+2601.22632|DART-ing Through the Drift: Dynamic Tracing of Knowledge Neurons for Adaptive Inference-Time Pruning
+2601.22787|Float8@2bits: Entropy Coding Enables Data-Free Model Compression
+2602.00047|Lightweight Edge Learning via Dataset Pruning
+2602.00664|Fronthaul-Efficient Distributed Cooperative 3D Positioning with Quantized Latent CSI Embeddings
+2602.00777|HyLRA: Hybrid Layer Reuse Attention for Efficient Long-Context Inference
+2602.00910|Efficient Deep Learning for Medical Imaging: Bridging the Gap Between High-Performance AI and Clinical Deployment
+2602.15836|EdgeNav-QE: QLoRA Quantization and Dynamic Early Exit for LAM-based Navigation on Edge Devices
+2602.21221|Latent Context Compilation: Distilling Long Context into Compact Portable Memory
+2601.00245|Modern Neuromorphic AI: From Intra-Token to Inter-Token Processing
+2601.00276|Task-Driven Kernel Flows: Label Rank Compression and Laplacian Spectral Filtering
+2601.00329|Sparse Probabilistic Coalition Structure Generation: Bayesian Greedy Pursuit and $\ell_1$ Relaxations
+2601.00377|Sparse Tucker Decomposition and Graph Regularization for High-Dimensional Time Series Forecasting
+2601.00756|Memory Bank Compression for Continual Adaptation of Large Language Models
+2601.00913|Clean-GS: Semantic Mask-Guided Pruning for 3D Gaussian Splatting
+2601.01298|Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware
+2601.01299|T3C: Test-Time Tensor Compression with Consistency Guarantees
+2601.01484|SGD-Based Knowledge Distillation with Bayesian Teachers: Theory and Guidelines
+2601.01800|Sparse Threats, Focused Defense: Criticality-Aware Robust Reinforcement Learning for Safe Autonomous Driving
+2601.01840|Tackling Resource-Constrained and Data-Heterogeneity in Federated Learning with Double-Weight Sparse Pack
+2601.02564|Comparative Analysis of Binarization Methods For Medical Image Hashing On Odir Dataset
+2601.02680|Adversarial Contrastive Learning for LLM Quantization Attacks
+2601.02978|Mechanistic Knobs in LLMs: Retrieving and Steering High-Order Semantic Features via Sparse Autoencoders
+2601.03043|Lil: Less is Less When Applying Post-Training Sparse-Attention Algorithms in Long-Decode Stage
+2601.03596|Adaptive Attention Distillation for Robust Few-Shot Segmentation under Environmental Perturbations
+2601.04407|Exact Multimode Quantization of Superconducting Circuits via Boundary Admittance and Continued Fractions
+2601.04907|Distributed Online Convex Optimization with Efficient Communication: Improved Algorithm and Lower bounds
+2601.05679|Do Sparse Autoencoders Identify Reasoning Features in Language Models?
+2601.06273|Performance Analysis of DCT, Hadamard, and PCA in Block-Based Image Compression
+2601.06305|Why LoRA Fails to Forget: Regularized Low-Rank Adaptation Against Backdoors in Language Models
+2601.06333|Building Envelope Inversion by Data-driven Interpretation of Ground Penetrating Radar
+2601.06724|DS-CIM: Digital Stochastic Computing-In-Memory Featuring Accurate OR-Accumulation via Sample Region Remapping for Edge AI Models
+2601.06787|Garbage Attention in Large Language Models: BOS Sink Heads and Sink-aware Pruning
+2601.07190|Active Context Compression: Autonomous Memory Management in LLM Agents
+2601.07355|Fast and Provable Nonconvex Robust Matrix Completion
+2601.07366|HiVid-Narrator: Hierarchical Video Narrative Generation with Scene-Primed ASR-anchored Compression
+2601.07372|Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models
+2601.07396|Forecast the Principal, Stabilize the Residual: Subspace-Aware Feature Caching for Efficient Diffusion Transformers
+2601.07568|d3LLM: Ultra-Fast Diffusion LLM using Pseudo-Trajectory Distillation
+2601.08033|InfGraND: An Influence-Guided GNN-to-MLP Knowledge Distillation
+2601.08089|Q-realign: Piggybacking Realignment on Quantization for Safe and Efficient LLM Deployment
+2601.08107|STO-RL: Offline RL under Sparse Rewards via LLM-Guided Subgoal Temporal Order
+2601.08273|HIPPO: Accelerating Video Large Language Models Inference via Holistic-aware Parallel Speculative Decoding
+2601.08300|Variable-Length Wideband CSI Feedback via Loewner Interpolation and Deep Learning
+2601.08301|ReCo-KD: Region- and Context-Aware Knowledge Distillation for Efficient 3D Medical Image Segmentation
+2601.08303|SnapGen++: Unleashing Diffusion Transformers for Efficient High-Fidelity Image Generation on Edge Devices
+2601.08441|YaPO: Learnable Sparse Activation Steering Vectors for Domain Adaptation
+2601.08482|DiffMM: Efficient Method for Accurate Noisy and Sparse Trajectory Map Matching via One Step Diffusion
+2601.08743|TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL
+2601.09037|Probabilistic Computers for MIMO Detection: From Sparsification to 2D Parallel Tempering
+2601.09191|From Performance to Practice: Knowledge-Distilled Segmentator for On-Premises Clinical Workflows
+2601.09451|Late Breaking Results: Quamba-SE: Soft-edge Quantizer for Activations in State Space Models
+2601.10064|Long-Chain Reasoning Distillation via Adaptive Prefix Alignment
+2601.10114|Following the Teacher's Footsteps: Scheduled Checkpoint Distillation for Domain-Specific LLMs
+2601.10282|SPIKE: Sparse Koopman Regularization for Physics-Informed Neural Networks
+2601.10491|Communication-Efficient Federated Learning by Exploiting Spatio-Temporal Correlations of Gradients
+2601.10535|SVII-3D: Advancing Roadside Infrastructure Inventory with Decimeter-level 3D Localization and Comprehension from Sparse Street Imagery
+2601.10729|OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration
+2601.10987|Reasoning Distillation for Lightweight Automated Program Repair
+2601.11183|Democratizing planetary-scale analysis: An ultra-lightweight Earth embedding database for accurate and flexible global land monitoring
+2601.11210|VidLeaks: Membership Inference Attacks Against Text-to-Video Models
+2601.11719|jBOT: Semantic Jet Representation Clustering Emerges from Self-Distillation
+2601.12904|From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation
+2601.13155|Probe and Skip: Self-Predictive Token Skipping for Efficient Long-Context LLM Inference
+2601.13214|An AMP-Based Asymptotic Analysis For Nonlinear One-Bit Precoding
+2601.13398|Can LLMs Compress (and Decompress)? Evaluating Code Understanding and Execution via Invertibility
+2601.13879|Chain-of-Thought Compression Should Not Be Blind: V-Skip for Efficient Multimodal Reasoning via Dual-Path Anchoring
+2601.14053|LLMOrbit: A Circular Taxonomy of Large Language Models -From Scaling Walls to Agentic AI Systems
+2601.14165|ASBA: A-line State Space Model and B-line Attention for Sparse Optical Doppler Tomography Reconstruction
+2601.14279|On the Limits of Learned Importance Scoring for KV Cache Compression
+2601.14699|Triage knowledge distillation for speaker verification
+2601.15442|A tensor network formalism for neuro-symbolic AI
+2601.15644|SuperOcc: Toward Cohesive Temporal Modeling for Superquadric-based 3D Occupancy Prediction
+2601.15831|Performance Analysis of Digital Beamforming mmWave MIMO with Low-Resolution DACs/ADCs
+2601.16012|Low-Complexity Sparse Superimposed Coding for Ultra Reliable Low Latency Communications
+2601.16636|Conformal prediction for full and sparse polynomial chaos expansions
+2601.16660|Fast, faithful and photorealistic diffusion-based image super-resolution with enhanced Flow Map models
+2601.16697|Sparsity-dependent Complexity Lower Bound of Quantum Linear System Solvers
+2601.16734|SeeMPS: A Python-based Matrix Product State and Tensor Train Library
+2601.16880|Theory of Minimal Weight Perturbations in Deep Networks and its Applications for Low-Rank Activated Backdoor Attacks
+2601.16897|FedSGM: A Unified Framework for Constraint Aware, Bidirectionally Compressed, Multi-Step Federated Optimization
+2601.16963|Constrained Symplectic Quantization I: the Quantum Harmonic Oscillator
+2601.17042|Interpretable and Sparse Linear Attention with Decoupled Membership-Subspace Modeling via MCR2 Objective
+2601.17089|GRASP: Guided Region-Aware Sparse Prompting for Adapting MLLMs to Remote Sensing
+2601.17093|The Triangle of Similarity: A Multi-Faceted Framework for Comparing Neural Network Representations
+2601.17357|Spectral Geometry for Deep Learning: Compression and Hallucination Detection via Random Matrix Theory
+2601.17443|Clustering-driven Memory Compression for On-device Large Language Models
+2601.17485|Curvelet-Regularized SPDE Inversion on Piecewise-Planar Fractures with Trace-Graph Coupling
+2601.17500|To Case or Not to Case: An Empirical Study in Learned Sparse Retrieval
+2601.17668|Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction
+2601.17711|CaSNet: Compress-and-Send Network Based Multi-Device Speech Enhancement Model for Distributed Microphone Arrays
+2601.17917|Streaming-dLLM: Accelerating Diffusion LLMs via Suffix Pruning and Dynamic Decoding
+2601.18545|Tight semidefinite programming relaxations for sparse box-constrained quadratic programs
+2601.18619|Scale-Aware Self-Supervised Learning for Segmentation of Small and Sparse Structures
+2601.18886|XProvence: Zero-Cost Multilingual Context Pruning for Retrieval-Augmented Generation
+2601.19178|CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation
+2601.20267|SATA: Sparsity-Aware Scheduling for Selective Token Attention
+2601.20326|Beyond Speedup -- Utilizing KV Cache for Sampling and Reasoning
+2601.20420|Concept Component Analysis: A Principled Approach for Concept Extraction in LLMs
+2601.20564|DiffVC-RT: Towards Practical Real-Time Diffusion-based Perceptual Neural Video Compression
+2601.20623|When Vision Meets Texts in Listwise Reranking
+2601.21109|ChunkWise LoRA: Adaptive Sequence Partitioning for Memory-Efficient Low-Rank Adaptation and Accelerated LLM Inference
+2601.21308|A Time-Domain Dual-Edge Asynchronous Pipelined SAR ADC Featuring Reset-Free Quantization at Multi-GS/s
+2601.21535|Sparsity for isotropic spherical random fields
+2601.21576|Chain Of Thought Compression: A Theoretical Analysis
+2601.22045|Urban Neural Surface Reconstruction from Constrained Sparse Aerial Imagery with 3D SAR Fusion
+2601.22069|VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning
+2601.22379|SPLA: Block Sparse Plus Linear Attention for Long Context Modeling
+2601.22475|Continual Policy Distillation from Distributed Reinforcement Learning Teachers
+2601.23259|Geometric Quantization by Paths, Part III: The Metaplectic Anomaly
+2602.00247|CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models
+2602.00790|Denoising deterministic networks using iterative Fourier transforms
+2602.02579|ProphetKV: User-Query-Driven Selective Recomputation for Efficient KV Cache Reuse in Retrieval-Augmented Generation
+2602.06063|Mapping Gemma3 onto an Edge Dataflow Architecture
+2602.09039|Efficient Distance Pruning for Process Suffix Comparison in Prescriptive Process Monitoring
+2602.15845|KD4MT: A Survey of Knowledge Distillation for Machine Translation
+2602.21215|Inference-time Alignment via Sparse Junction Steering
+2603.08713|Unveiling the Potential of Quantization with MXFP4: Strategies for Quantization Error Reduction
+2603.21012|Consensus-Driven Group Recommendation on Sparse Explicit Feedback: A Collaborative Filtering and Choquet-Borda Aggregation Framework
+2603.21024|Query, Decompose, Compress: Structured Query Expansion for Efficient Multi-Hop Retrieval
+2604.07351|FedUTR: Federated Recommendation with Augmented Universal Textual Representation for Sparse Interaction Scenarios
+2601.00146|Combining datasets with different ground truths using Low-Rank Adaptation to generalize image-based CNN models for photometric redshift prediction
+2601.00222|LooC: Effective Low-Dimensional Codebook for Compositional Vector Quantization
+2601.00342|Solving nonlinear subsonic compressible flow in infinite domain via multi-stage neural networks
+2601.00434|Time--to--Digital Converter (TDC)--Based Resonant Compute--in--Memory for INT8 CNNs with Layer--Optimized SRAM Mapping
+2601.00519|A Sparse-Attention Deep Learning Model Integrating Heterogeneous Multimodal Features for Parkinson's Disease Severity Profiling
+2601.00566|Low Rank Comes with Low Security: Gradient Assembly Poisoning Attacks against Distributed LoRA-based LLM Systems
+2601.00616|Splitting Precoding with Subspace Selection and Quantized Refinement for Massive MIMO
+2601.01048|CuFuzz: Hardening CUDA Programs through Transformation and Fuzzing
+2601.01141|YODA: Yet Another One-step Diffusion-based Video Compressor
+2601.01207|Sparse Bayesian Message Passing under Structural Uncertainty
+2601.01268|Accelerated Full Waveform Inversion by Deep Compressed Learning
+2601.01431|EdgeNeRF: Edge-Guided Regularization for Neural Radiance Fields from Sparse Views
+2601.01507|DiffKD-DCIS: Predicting Upgrade of Ductal Carcinoma In Situ with Diffusion Augmentation and Knowledge Distillation
+2601.01684|LACONIC: Dense-Level Effectiveness for Scalable Sparse Retrieval via a Two-Phase Training Curriculum
+2601.01757|Sparse Convex Biclustering
+2601.01780|LIA: Supervised Fine-Tuning of Large Language Models for Automatic Issue Assignment
+2601.01901|FedBiCross: Personalized One-Shot Federated Learning on Medical Images
+2601.01922|Efficient temporal prediction of compressible flows in irregular domains using Fourier neural operators
+2601.02512|Green LLM Techniques in Action: How Effective Are Existing Techniques for Improving the Energy Efficiency of LLM-Based Applications in Industry?
+2601.02553|SimpleMem: Efficient Lifelong Memory for LLM Agents
+2601.02569|LoRA-Drop: Temporal LoRA Decoding for Efficient LLM Inference
+2601.02605|Beyond Path Loss: Altitude-Dependent Spectral Structure Modeling for UAV Measurements
+2601.02712|Transform and Entropy Coding in AV2
+2601.03466|Latent Geometry of Taste: Scalable Low-Rank Matrix Factorization for Recommender Systems
+2601.03658|Group and Exclusive Sparse Regularization-based Continual Learning of CNNs
+2601.03882|Feature-Aware One-Shot Federated Learning via Hierarchical Token Sequences
+2601.04236|SmoothSync: Dual-Stream Diffusion Transformers for Jitter-Robust Beat-Synchronized Gesture Generation from Quantized Audio
+2601.04264|MemKD: Memory-Discrepancy Knowledge Distillation for Efficient Time Series Classification
+2601.04473|Convergence Rates for Learning Pseudo-Differential Operators
+2601.04538|A new method for augmenting short time series, with application to pain events in sickle cell disease
+2601.05379|EdgeLDR: Quaternion Low-Displacement Rank Neural Networks for Edge-Efficient Deep Learning
+2601.05388|Knowledge Distillation of a Protein Language Model Yields a Foundational Implicit Solvent Model
+2601.05623|Continual Learning of Achieving Forgetting-free and Positive Knowledge Transfer
+2601.06124|Learning Minimally-Congested Drive Times from Sparse Open Networks: A Lightweight RF-Based Estimator for Urban Roadway Operations
+2601.06199|FastSLM: Hierarchical Temporal Abstraction for Efficient Long-Form Speech Adaptation
+2601.06320|Sensoformer: Robust Sim-to-Real Inference on Variable-Geometry Sensor Sets via Physics-Structured Randomization
+2601.06584|Softly Induced Functional Simplicity: Implications for Neural Network Generalisation, Robustness, and Distillation
+2601.06677|Plasticity vs. Rigidity: The Impact of Low-Rank Adapters on Reasoning on a Micro-Budget
+2601.06867|U-MASK: User-adaptive Spatio-Temporal Masking for Personalized Mobile AI Applications
+2601.07048|GPU-Accelerated ANNS: Quantized for Speed, Built for Change
+2601.07410|Classification of single-bubble blow-up solutions for Calogero--Moser derivative nonlinear Schrödinger equation
+2601.07416|SDHSI-Net: Learning Better Representations for Hyperspectral Images via Self-Distillation
+2601.07462|From Sketch to Fresco: Efficient Diffusion Transformer with Progressive Resolution
+2601.07608|Recursive Binary Identification with Differential Privacy and Data Tampering Attacks
+2601.07632|GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models
+2601.07766|TrackHHL: The 1-Bit Quantum Filter for particle trajectory reconstruction
+2601.08343|When KV Cache Reuse Fails in Multi-Agent Systems: Cross-Candidate Interaction is Crucial for LLM Judges
+2601.08383|Deconstructing Pre-training: Knowledge Attribution Analysis in MoE and Dense Models
+2601.08584|Ministral 3
+2601.08618|Robust low-rank estimation with multiple binary responses using pairwise AUC loss
+2601.09025|Universal Latent Homeomorphic Manifolds: A Framework for Cross-Domain Representation Unification
+2601.09043|Horseshoe Mixtures-of-Experts (HS-MoE)
+2601.09059|Efficient Multilingual Dialogue Processing via Translation Pipelines and Distilled Language Models
+2601.09096|Comparative Assessment of Concrete Compressive Strength Prediction at Industry Scale Using Embedding-based Neural Networks, Transformers, and Traditional Machine Learning Approaches
+2601.09185|OrthoGeoLoRA: Geometric Parameter-Efficient Fine-Tuning for Structured Social Science Concept Retrieval on theWeb
+2601.09697|Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering
+2601.09773|Enhancing LUT-based Deep Neural Networks Inference through Architecture and Connectivity Optimization
+2601.09776|TimeSAE: Causal Sparse Decoding for Faithful Explanations of Black-Box Time Series Models
+2601.09823|NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration
+2601.09924|Composite Bogoliubov Fermi liquid in a half-filled Chern band
+2601.10321|An Efficient Long-Context Ranking Architecture With Calibrated LLM Distillation: Application to Person-Job Fit
+2601.10701|Communication-Efficient and Privacy-Adaptable Mechanism -- a Federated Learning Scheme with Convergence Analysis
+2601.11020|From Interpretability to Performance: Optimizing Retrieval Heads for Long-Context Language Models
+2601.11400|Wetland mapping from sparse annotations with satellite image time series and temporal-aware segment anything model
+2601.11609|Auxiliary-predicted Compress Memory Model(ApCM Model): A Neural Memory Storage Model Based on Invertible Compression and Learnable Prediction
+2601.11660|Zeros can be Informative: Masked Binary U-Net for Image Segmentation on Tensor Cores
+2601.11667|Distill-then-Replace: Efficient Task-Specific Hybrid Attention Model Construction
+2601.12020|DIAMOND-SSS: Diffusion-Augmented Multi-View Optimization for Data-efficient SubSurface Scattering
+2601.12109|Energy-Aware Ensemble Learning for Coffee Leaf Disease Classification
+2601.12255|DeepRAHT: Learning Predictive RAHT for Point Cloud Attribute Compression
+2601.12423|HOT-POT: Optimal Transport for Sparse Stereo Matching
+2601.12525|Approximating splits for decision trees quickly in sparse data streams
+2601.13055|VoCodec: An Efficient Lightweight Low-Bitrate Speech Codec
+2601.13204|Hierarchical Sparse Vector Transmission for Ultra Reliable and Low Latency Communications
+2601.13322|Quantum Circuit Pruning: Improving Fidelity via Compilation-Aware Circuit Approximation
+2601.13502|DIS2: Disentanglement Meets Distillation with Classwise Attention for Robust Remote Sensing Segmentation under Missing Modalities
+2601.13704|Performance and Complexity Trade-off Optimization of Speech Models During Training
+2601.14327|Yuan3.0 Ultra: A Trillion-Parameter Enterprise-Oriented MoE LLM
+2601.14690|FeedbackSTS-Det: Sparse Frames-Based Spatio-Temporal Semantic Feedback Network for Moving Infrared Small Target Detection
+2601.14724|HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding
+2601.14980|Parallel Collaborative ADMM Privacy Computing and Adaptive GPU Acceleration for Distributed Edge Networks
+2601.15416|DuFal: Dual-Frequency-Aware Learning for High-Fidelity Extremely Sparse-view CBCT Reconstruction
+2601.15710|FlexLLM: Composable HLS Library for Flexible Hybrid LLM Accelerator Design
+2601.16065|DTP: A Simple yet Effective Distracting Token Pruning Framework for Vision-Language Action Models
+2601.16117|Distillation-based Layer Dropping (DLD): Effective End-to-end Framework for Dynamic Speech Networks
+2601.16461|Log-Likelihood Loss for Semantic Compression
+2601.16703|Dirac-Bergmann algorithm and canonical quantization of $k$-essence cosmology
+2601.17124|iFSQ: Improving FSQ for Image Generation with 1 Line of Code
+2601.17215|JetFormer: A Scalable and Efficient Transformer for Jet Tagging from Offline Analysis to FPGA Triggers
+2601.17364|Parameter Efficient Fine Tuning Llama 3.1 for Answering Arabic Legal Questions: A Case Study on Jordanian Laws
+2601.17532|Less is More for RAG: Information Gain Pruning for Generator-Aligned Reranking and Evidence Selection
+2601.17702|S$^3$-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference
+2601.17720|Advancing Structured Priors for Sparse-Voxel Surface Reconstruction
+2601.17927|RemEdit: Efficient Diffusion Editing with Riemannian Geometry
+2601.18229|Breakdown of bosonic Thouless pump due to interaction in a quasiperiodic lattice
+2601.18351|An Adaptive Purification Controller for Quantum Networks: Dynamic Protocol Selection and Multipartite Distillation
+2601.18475|LoD-Structured 3D Gaussian Splatting for Streaming Video Reconstruction
+2601.18539|Hybrid Radar Fusion with Quantization: CRB-Rate Trade-offs and ADC Dynamic Range
+2601.18560|AI-enabled Satellite Edge Computing: A Single-Pixel Feature based Shallow Classification Model for Hyperspectral Imaging
+2601.19112|Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation
+2601.19293|Reinforced Rate Control for Neural Video Compression via Inter-Frame Rate-Distortion Awareness
+2601.19368|Divergence-Free Diffusion Models for Incompressible Fluid Flows
+2601.19611|Explicit Multi-head Attention for Inter-head Interaction in Large Language Models
+2601.19634|AC^2-VLA: Action-Context-Aware Adaptive Computation in Vision-Language-Action Models for Efficient Robotic Manipulation
+2601.19690|DSVM-UNet : Enhancing VM-UNet with Dual Self-distillation for Medical Image Segmentation
+2601.19897|Self-Distillation Enables Continual Learning
+2601.19946|MK-SGC-SC: Multiple Kernel Guided Sparse Graph Construction in Spectral Clustering for Unsupervised Speaker Diarization
+2601.20234|MALLOC: Benchmarking the Memory-aware Long Sequence Compression for Large Sequential Recommendation
+2601.20332|Window-Diffusion: Accelerating Diffusion Language Model Inference with Windowed Token Pruning and Caching
+2601.20687|Positive-Unlabeled Reinforcement Learning Distillation for On-Premise Small Models
+2601.20769|Leveraging Second-Order Curvature for Efficient Learned Image Compression: Theory and Empirical Evidence
+2601.20802|Reinforcement Learning via Self-Distillation
+2601.20909|Leveraging Generative AI for Enhancing Domain-Driven Software Design
+2601.21003|Bayesian-LoRA: Probabilistic Low-Rank Adaptation of Large Language Models
+2601.21204|Scaling Embeddings Outperforms Scaling Experts in Language Models
+2601.21217|A Flexible Empirical Bayes Approach to Generalized Linear Models, with Applications to Sparse Logistic Regression
+2601.21283|DUET: Distilled LLM Unlearning from an Efficiently Contextualized Teacher
+2601.21349|L2R: Low-Rank and Lipschitz-Controlled Routing for Mixture-of-Experts
+2601.21391|Intrinsic Reward Policy Optimization for Sparse-Reward Environments
+2601.21420|ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation
+2601.21444|APB-V: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention
+2601.21467|A block-coordinate descent framework for non-convex composite optimization. Application to sparse precision matrix estimation
+2601.21468|MemOCR: Layout-Aware Visual Memory for Efficient Long-Horizon Reasoning
+2601.21477|Mean-Field Control on Sparse Graphs: From Local Limits to GNNs via Neighborhood Distributions
+2601.21503|MAR: Efficient Large Language Models via Module-aware Architecture Refinement
+2601.21673|Multimodal Visual Surrogate Compression for Alzheimer's Disease Classification
+2601.21709|Why Attention Patterns Exist: A Unifying Temporal Perspective Analysis
+2601.22032|Drive-JEPA: Video JEPA Meets Multimodal Trajectory Distillation for End-to-End Driving
+2601.22156|Hybrid Linear Attention Done Right: Efficient Distillation and Effective Architectures for Extremely Long Contexts
+2601.22594|Language Model Circuits Are Sparse in the Neuron Basis
+2601.22746|UrbanMoE: A Sparse Multi-Modal Mixture-of-Experts Framework for Multi-Task Urban Region Profiling
+2601.22795|Sparse or Dense? A Mechanistic Estimation of Computation Density in Transformer-based LLMs
+2601.22828|Decomposing and Composing: Towards Efficient Vision-Language Continual Learning via Rank-1 Expert Pool in a Single LoRA
+2601.22949|Autonomous Chain-of-Thought Distillation for Graph-Based Fraud Detection
+2601.23076|Learning-Based Signal Recovery in Nonlinear Systems with Spectrally Separated Interference
+2601.23180|TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification
+2602.00198|SCALED : Surrogate-gradient for Codec-Aware Learning of Downsampling in ABR Streaming
+2602.00567|Forget by Uncertainty: Orthogonal Entropy Unlearning for Quantized Neural Networks
+2602.00568|Dual-View Predictive Diffusion: Lightweight Speech Enhancement via Spectrogram-Image Synergy
+2602.00642|LegalOne: A Family of Foundation Models for Reliable Legal Reasoning
+2602.00871|Beyond Output Critique: Self-Correction via Task Distillation
+2602.00899|Domain-Adaptive and Scalable Dense Retrieval for Content-Based Recommendation
+2602.02508|Precoding-Oriented CSI Feedback Design with Mutual Information Regularized VQ-VAE
+2602.02536|From Sparse Decisions to Dense Reasoning: A Multi-attribute Trajectory Paradigm for Multimodal Moderation
+2603.05517|Traversal-as-Policy: Log-Distilled Gated Behavior Trees as Externalized, Verifiable Policies for Safe, Robust, and Efficient Agents
+2601.00256|Equivariant Cohomology, BRST Quantization, and Analytic Localization: A Unified Framework
+2601.00357|Traffic-MoE: A Sparse Foundation Model for Network Traffic Security Analysis
+2601.00359|Efficient Prediction of Dense Visual Embeddings via Distillation and RGB-D Transformers
+2601.00426|RMAAT: Astrocyte-Inspired Memory Compression and Replay for Efficient Long-Context Transformers
+2601.00428|Interpretable ML Under the Microscope: Performance, Meta-Features, and the Regression-Classification Predictability Gap
+2601.00504|MotionPhysics: Learnable Motion Distillation for Text-Guided Simulation
+2601.00525|Optimizing LSTM Neural Networks for Resource-Constrained Retail Sales Forecasting: A Model Compression Study
+2601.00543|ECR: Manifold-Guided Semantic Cues for Compact Language Models
+2601.00549|CoCo-Fed: A Unified Framework for Memory- and Communication-Efficient Federated Learning at the Wireless Edge
+2601.00583|HFedMoE: Resource-aware Heterogeneous Federated Learning with Mixture-of-Experts
+2601.00926|MACA: A Framework for Distilling Trustworthy LLMs into Efficient Retrievers
+2601.01322|LinMU: Multimodal Understanding Made Linear
+2601.01325|Optimal estimators and tests for reciprocal effects
+2601.02199|Topological States Enabled by Non-local Nonlinearity in Synthetic Dimensions
+2601.02236|CD4LM: Consistency Distillation and aDaptive Decoding for Diffusion Language Models
+2601.02281|InfiniteVGGT: Visual Geometry Grounded Transformer for Endless Streams
+2601.02739|Mitigating Prompt-Induced Hallucinations in Large Language Models via Structured Reasoning
+2601.02963|Soliton Pumping in the Rice-Mele Model with On-Cell Kerr Nonlinearity
+2601.02967|MoE Adapter for Large Audio Language Models: Sparsity, Disentanglement, and Gradient-Conflict-Free
+2601.03211|Fine-tuning Small Language Models as Efficient Enterprise Search Relevance Labelers
+2601.03495|Cyberattack Detection in Virtualized Microgrids Using LightGBM and Knowledge-Distilled Classifiers
+2601.03595|Controllable LLM Reasoning via Sparse Autoencoder-Based Steering
+2601.03717|MIND: From Passive Mimicry to Active Reasoning through Capability-Aware Multi-Perspective CoT Distillation
+2601.03928|FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection
+2601.04036|Analyzing and Improving Cross-lingual Knowledge Transfer for Machine Translation
+2601.04086|KDCM: Reducing Hallucination in LLMs through Explicit Reasoning Structures
+2601.04229|Noncommutative spaces as quantized constrained Hamiltonian systems
+2601.04237|SAGE-32B: Agentic Reasoning via Iterative Distillation
+2601.04342|ReHyAt: Recurrent Hybrid Attention for Video Diffusion Transformers
+2601.04366|Machine Learning Model for Sparse PCM Completion
+2601.04709|Bridging Temporal and Textual Modalities: A Multimodal Framework for Automated Cloud Failure Root Cause Analysis
+2601.04855|Rethinking GNNs and Missing Features: Challenges, Evaluation and a Robust Solution
+2601.04885|CuMA: Aligning LLMs with Sparse Cultural Values via Demographic-Aware Mixture of Adapters
+2601.04912|Decentralized Privacy-Preserving Federal Learning of Computer Vision Models on Edge Devices
+2601.05136|State integrals for the quantized $\operatorname{SL}_2(\mathbb{C})$ Chern-Simons invariant
+2601.05144|Distilling the Thought, Watermarking the Answer: A Principle Semantic Guided Watermark for Large Reasoning Models
+2601.05157|Learning Mixture Models via Efficient High-dimensional Sparse Fourier Transforms
+2601.05200|Multivector Reranking in the Era of Strong First-Stage Retrievers
+2601.05296|MoEBlaze: Breaking the Memory Wall for Efficient MoE Training on Modern GPUs
+2601.05407|Interactive Distillation for Cooperative Multi-Agent Reinforcement Learning
+2601.05474|Efficient Differentiable Causal Discovery via Reliable Super-Structure Learning
+2601.05505|FlashMem: Distilling Intrinsic Latent Memory via Computation Reuse
+2601.05875|Estimating optimal interpretable individualized treatment regimes from a classification perspective using adaptive LASSO
+2601.05910|Multi-task Modeling for Engineering Applications with Sparse Data
+2601.06163|Forget-It-All: Multi-Concept Machine Unlearning via Concept-Aware Neuron Masking
+2601.06466|SecureDyn-FL: A Robust Privacy-Preserving Federated Learning Framework for Intrusion Detection in IoT Networks
+2601.06597|Understanding and inverse design of implicit bias in stochastic learning: a geometric perspective
+2601.06637|Efficient Aspect Term Extraction using Spiking Neural Network
+2601.06790|SecMoE: Communication-Efficient Secure MoE Inference via Select-Then-Compute
+2601.06792|Cross-Modal Computational Model of Brain-Heart Interactions via HRV and EEG Feature
+2601.07092|Efficient Visual Question Answering Pipeline for Autonomous Driving via Scene Region Compression
+2601.07155|Stable On-Policy Distillation through Adaptive Target Reformulation
+2601.07161|Blues for Alice: The Interplay of Neo-Riemannian and Cadential Viewpoints
+2601.07281|Covariance-Driven Regression Trees: Reducing Overfitting in CART
+2601.07354|Semantic Compression of LLM Instructions via Symbolic Metalanguages
+2601.07469|Knowledge Distillation for LLM-Based Human Activity Recognition in Homes
+2601.07507|High-Rank Structured Modulation for Parameter-Efficient Fine-Tuning
+2601.07613|GAP-Net: Calibrating User Intent via Gated Adaptive Progressive Learning for CTR Prediction
+2601.07935|Towards Specialized Generalists: A Multi-Task MoE-LoRA Framework for Domain-Specific LLM Adaptation
+2601.08044|LUT-Compiled Kolmogorov-Arnold Networks for Lightweight DoS Detection on IoT Edge Devices
+2601.08128|Embedded AI Companion System on Edge Devices
+2601.08165|Representation Learning with Semantic-aware Instance and Sparse Token Alignments
+2601.08215|Towards Principled Design of Mixture-of-Experts Language Models under Memory and Inference Constraints
+2601.08421|Coverage Improvement and Fast Convergence of On-policy Preference Learning
+2601.08816|MemRec: Collaborative Memory-Augmented Agentic Recommender System
+2601.09031|Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation
+2601.09159|LLMs Meet Isolation Kernel: Lightweight, Learning-free Binary Embeddings for Fast Retrieval
+2601.09350|See More, Store Less: Memory-Efficient Resolution for Video Moment Retrieval
+2601.09461|Analysis of the Maximum Prediction Gain of Short-Term Prediction on Sustained Speech
+2601.09527|Private LLM Inference on Consumer Blackwell GPUs: A Practical Guide for Cost-Effective Local Deployment in SMEs
+2601.09603|Linear Complexity Self-Supervised Learning for Music Understanding with Random Quantizer
+2601.09684|Disentangling Task Conflicts in Multi-Task LoRA via Orthogonal Gradient Projection
+2601.09698|COMPOSE: Hypergraph Cover Optimization for Multi-view 3D Human Pose Estimation
+2601.09703|ShortCoder: Knowledge-Augmented Syntax Optimization for Token-Efficient Code Generation
+2601.09855|Thinking Long, but Short: Stable Sequential Test-Time Scaling for Large Reasoning Models
+2601.10043|Instruction Finetuning LLaMA-3-8B Model Using LoRA for Financial Named Entity Recognition
+2601.10402|Toward Ultra-Long-Horizon Agentic Science: Cognitive Accumulation for Machine Learning Engineering
+2601.10639|STEM: Scaling Transformers with Embedding Modules
+2601.10823|Mugi: Value Level Parallelism For Efficient LLMs
+2601.10872|Locally sparse varying coefficient mixed model with application to longitudinal microbiome differential abundance
+2601.10995|GP-DHT: A Dual-Head Transformer with Contras-tive Learning for Predicting Gene Regulatory Rela-tionships across Species from Single-Cell Data
+2601.11182|From Knots to Knobs: Towards Steerable Collaborative Filtering Using Sparse Autoencoders
+2601.11207|LoRA as Oracle
+2601.11219|SDFLoRA: Selective Decoupled Federated LoRA for Privacy-preserving Fine-tuning with Heterogeneous Clients
+2601.11461|Smooth SCAD: A Raised Cosine SCAD Type Thresholding Rule for Wavelet Denoising
+2601.12145|Threshold Differential Attention for Sink-Free, Ultra-Sparse, and Non-Dispersive Language Modeling
+2601.12161|Streaming Operator Inference for Model Reduction of Large-Scale Dynamical Systems
+2601.12223|${\bf \frac{h}{e}}$ flux quantization in metals due to Berry phase coherence
+2601.12307|Rethinking the Value of Multi-Agent Workflow: A Strong Single Agent Baseline
+2601.12310|Survival is the Only Reward: Sustainable Self-Training Through Environment-Mediated Selection
+2601.12432|SkeFi: Cross-Modal Knowledge Transfer for Wireless Skeleton-Based Action Recognition
+2601.12842|SCULPT: Constraint-Guided Pruned MCTS that Carves Efficient Paths for Mathematical Reasoning
+2601.12865|Proxy Robustness in Vision Language Models is Effortlessly Transferable
+2601.12879|Hierarchical Sparse Circuit Extraction from Billion-Parameter Language Models through Scalable Attribution Graph Decomposition
+2601.13251|Beyond Cosine Similarity: Taming Semantic Drift and Antonym Intrusion in a 15-Million Node Turkish Synonym Graph
+2601.13525|More Than Efficiency: Embedding Compression Improves Domain Adaptation in Dense Retrieval
+2601.13628|PRIMAL: Processing-In-Memory Based Low-Rank Adaptation for LLM Inference Accelerator
+2601.13745|Variational Dual-path Attention Network for CSI-Based Gesture Recognition
+2601.13992|"The Whole Is Greater Than the Sum of Its Parts": A Compatibility-Aware Multi-Teacher CoT Distillation Framework
+2601.14157|ConceptCaps: a Distilled Concept Dataset for Interpretability in Music Models
+2601.14173|Penalizing Localized Dirichlet Energies in Low Rank Tensor Products
+2601.14249|Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment
+2601.14256|Implicit Neural Representation Facilitates Unified Universal Vision Encoding
+2601.14290|Project Aletheia: Verifier-Guided Distillation of Backtracking for Small Language Models
+2601.14448|Gaussian Based Adaptive Multi-Modal 3D Semantic Occupancy Prediction
+2601.14619|Maximum Edge-based Quasi-Clique: Novel Iterative Frameworks
+2601.14803|Efficient Beamforming for Discrete SIM-Aided Multiuser Systems Under Statistical CSI
+2601.14933|Rank-one Riemannian Subspace Descent for Nonlinear Matrix Equations
+2601.15254|Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible?
+2601.15269|Lightweight LLMs for Network Attack Detection in IoT Networks
+2601.15482|Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding
+2601.16128|Proximity Operator of the $\ell_1$ over $\ell_2$ Function
+2601.16150|Pay (Cross) Attention to the Melody: Curriculum Masking for Single-Encoder Melodic Harmonization
+2601.16155|HVD: Human Vision-Driven Video Representation Learning for Text-Video Retrieval
+2601.16210|PyraTok: Language-Aligned Pyramidal Tokenizer for Video Understanding and Generation
+2601.16219|Domain Specific Specialization in Low-Resource Settings: The Efficacy of Offline Response-Based Knowledge Distillation in Large Language Models
+2601.16235|Contrastive Knowledge Distillation for Embedding Refinement in Personalized Speech Enhancement
+2601.16547|CORD: Bridging the Audio-Text Reasoning Gap via Weighted On-policy Cross-modal Distillation
+2601.16622|E2Former-V2: On-the-Fly Equivariant Attention with Linear Activation Memory
+2601.16882|Explaining Group Recommendations via Counterfactuals
+2601.17063|FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices
+2601.17085|Recovering Performance in Speech Emotion Recognition from Discrete Tokens via Multi-Layer Fusion and Paralinguistic Feature Integration
+2601.17133|Learning to Collaborate: An Orchestrated-Decentralized Framework for Peer-to-Peer LLM Federation
+2601.17185|LGDWT-GS: Local and Global Discrete Wavelet-Regularized 3D Gaussian Splatting for Sparse-View Scene Reconstruction
+2601.17438|UniGRec: Unified Generative Recommendation with Soft Identifiers for End-to-End Optimization
+2601.17602|Understanding Transformer Encoder-Decoder Representations through Bernoulli Dropout
+2601.17612|A Regularised Latent-Class Item Response Model for Detecting Measurement Non-Invariance in Ordinal Response Scales
+2601.17616|Split-on-Share: Mixture of Sparse Experts for Task-Agnostic Continual Learning
+2601.17743|Video Compression with Hierarchical Temporal Neural Representation
+2601.17864|Generation of gravitating solutions with Baryonic charge from Einstein-Scalar-Maxwell seeds
+2601.17921|ShapLoRA: Allocation of Low-rank Adaption on Large Language Models via Shapley Value Inspired Importance Estimation
+2601.18267|Orchestrating Specialized Agents for Trustworthy Enterprise RAG
+2601.18570|Feature-Indexed Federated Recommendation with Residual-Quantized Codebooks
+2601.18765|Goal-oriented Communication for Fast and Robust Robotic Fault Detection and Recovery
+2601.18823|VAE with Hyperspherical Coordinates: Improving Anomaly Detection from Hypervolume-Compressed Latent Space
+2601.18999|Randomization Boosts KV Caching, Learning Balances Query Load: A Joint Perspective
+2601.19087|Passive Beam Shaping via Binary-Coded Apertures
+2601.19090|Privacy-Preserving Model Transcription with Differentially Private Synthetic Distillation
+2601.19158|Accelerating Generative Recommendation via Simple Categorical User Sequence Compression
+2601.19822|A Latent Space Framework for Modeling Transient Engine Emissions Using Joint Embedding Predictive Architectures
+2601.19929|Stingy Context: 18:1 Hierarchical Code Compression for LLM Auto-Coding
+2601.19951|Pianoroll-Event: A Novel Score Representation for Symbolic Music
+2601.20094|T-Mimi: A Transformer-based Mimi Decoder for Real-Time On-Phone TTS
+2601.20170|Local Duality for Sparse Support Vector Machines
+2601.20174|NeuraLSP: A Neural Spectral Preconditioner for Accelerating PDE Solvers
+2601.20218|DenseGRPO: From Sparse to Dense Reward for Flow Matching Model Alignment
+2601.20286|Quantum Cosmology as a Hydrogen atom: Discrete $Λ$ and cyclic Universes from Wheeler-DeWitt quantization
+2601.20496|Leveraging Differentiable PDE Solvers for Semi-Neural Spatial Reconstruction From Sparse Measurements
+2601.20499|Efficient Autoregressive Video Diffusion with Dummy Head
+2601.20689|Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework
+2601.20738|SA-PEF: Step-Ahead Partial Error Feedback for Efficient Federated Learning
+2601.20831|MemCtrl: Using MLLMs as Active Memory Controllers on Embodied Agents
+2601.20901|Towards Sensitivity-Aware Language Models
+2601.21198|ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling
+2601.21351|Analytical Provisioning for Attention-FFN Disaggregated LLM Serving under Stochastic Workloads
+2601.21365|Small models, big threats: Characterizing safety challenges from low-compute AI models
+2601.21369|Rethinking Federated Graph Foundation Models: A Graph-Language Alignment-based Approach
+2601.21571|Shaping capabilities with token-level data filtering
+2601.21623|LAMP: Look-Ahead Mixed-Precision Inference of Large Language Models
+2601.21684|Do Not Waste Your Rollouts: Recycling Search Experience for Efficient Test-Time Scaling
+2601.21719|LoRA and Privacy: When Random Projections Help (and When They Don't)
+2601.21726|DropoutTS: Sample-Adaptive Dropout for Robust Time Series Forecasting
+2601.21733|CE-GOCD: Central Entity-Guided Graph Optimization for Community Detection to Augment LLM Scientific Question Answering
+2601.21919|Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning
+2601.21929|LoRIF: Low-Rank Influence Functions for Scalable Training Data Attribution
+2601.22001|Heterogeneous Computing: The Key to Powering the Future of AI Agent Inference
+2601.22054|MetricAnything: Scaling Metric Depth Pretraining with Noisy Heterogeneous Sources
+2601.22178|Discovering High-utility Sequential Rules with Increasing Utility Ratio
+2601.22182|ShellForge: Adversarial Co-Evolution of Webshell Generation and Multi-View Detection for Robust Webshell Defense
+2601.22202|A Survey on Semantic Communication for Vision: Categories, Frameworks, Enabling Techniques, and Applications
+2601.22362|Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use
+2601.22447|Beyond Activation Patterns: A Weight-Based Out-of-Context Explanation of Sparse Autoencoder Features
+2601.22531|Learn from A Rationalist: Distilling Intermediate Interpretable Rationales
+2601.22631|PEFT-MuTS: A Multivariate Parameter-Efficient Fine-Tuning Framework for Remaining Useful Life Prediction based on Cross-domain Time Series Representation Model
+2601.22660|Layerwise Progressive Freezing Enables STE-Free Training of Deep Binary Neural Networks
+2601.22679|Stabilizing Consistency Training: A Flow Map Analysis and Self-Distillation
+2601.22708|A Unified Study of LoRA Variants: Taxonomy, Review, Codebase, and Empirical Evaluation
+2601.22730|ImgCoT: Compressing Long Chain of Thought into Compact Visual Tokens for Efficient Reasoning of Large Language Model
+2601.22841|How Much of a Model Do We Need? Redundancy and Slimmability in Remote Sensing Foundation Models
+2601.22876|Matterhorn: Efficient Analog Sparse Spiking Transformer Architecture with Masked Time-To-First-Spike Encoding
+2601.22922|Open strings on knot complements
+2601.22925|BEAR: Towards Beam-Search-Aware Optimization for Recommendation with Large Language Models
+2601.22966|A Unified View of Attention and Residual Sinks: Outlier-Driven Rescaling is Essential for Transformer Training
+2601.23011|Leveraging Convolutional Sparse Autoencoders for Robust Movement Classification from Low-Density sEMG
+2601.23058|From Absolute to Relative: Rethinking Reward Shaping in Group-Based Reinforcement Learning
+2601.23257|From Historical Patches to Repair Plans: Outcome-Conditioned Reasoning for Repository-Level Program Repair
+2602.00218|GRIP2: A Robust and Powerful Deep Knockoff Method for Feature Selection
+2602.00328|Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference
+2602.00367|Path integrals and deformation quantization:the fermionic case
+2602.00488|OD-DEAL: Dynamic Expert-Guided Adversarial Learning with Online Decomposition for Scalable Capacitated Vehicle Routing
+2602.00509|PROBE: Co-Balancing Computation and Communication in MoE Inference via Real-Time Predictive Prefetching
+2602.00513|Minerva: Reinforcement Learning with Verifiable Rewards for Cyber Threat Intelligence LLMs
+2602.00516|SPARK: Stochastic Propagation via Affinity-guided Random walK for training-free unsupervised segmentation
+2602.00740|ExperienceWeaver: Optimizing Small-sample Experience Learning for LLM-based Clinical Text Improvement
+2602.00838|Exploration of Unary Arithmetic-Based Matrix Multiply Units for Low Precision DL Accelerators
+2602.00874|Sublinear Time Quantum Algorithm for Attention Approximation
+2602.00885|Reliability-Aware Determinantal Point Processes for Robust Informative Data Selection in Large Language Models
+2602.06057|QEIL v2: Heterogeneous Computing for Edge Intelligence via Roofline-Derived Pareto-Optimal Energy Modeling and Multi-Objective Orchestration
+2602.11164|Automated Optimization Modeling via a Localizable Error-Driven Perspective
+2602.13229|Pocket RAG: On-Device RAG for First Aid Guidance in Offline Mobile Environment
+2604.09551|SemaCDR: LLM-Powered Transferable Semantics for Cross-Domain Sequential Recommendation
