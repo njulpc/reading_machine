@@ -1,0 +1,105 @@
+{
+  "collection_date": "2026-07-29",
+  "date_range": "2026-07-29",
+  "query_keywords": ["quantization", "model compression", "pruning", "distillation", "efficient inference", "sparsity"],
+  "source": "arxiv.org",
+  "total_papers": 8,
+  "papers": [
+    {
+      "id": "2607.26515",
+      "title": "HiFloat4 Format for End-To-End Reinforcement Learning Post-Training of Large Language Models",
+      "authors": ["Hei Yi Mak", "Shadan Golestan", "Hoang Le", "Mehran Taghian", "Yunke Peng", "Yaoyuan Wang", "Yao Wang", "Junsong Wang", "Tianchi Hu", "Fengchen He", "Guipeng Hu", "Tanzila Rahman", "Anandharaju Durai Raju"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.LG"],
+      "url": "https://arxiv.org/abs/2607.26515",
+      "keywords": ["FP4", "quantization", "RL", "HiFloat4", "Rollout-ResQ", "post-training"],
+      "techniques": ["quantization"],
+      "target_model": "Qwen2.5-3B, Qwen2.5-Math-7B",
+      "highlight": "首次端到端FP4 RL后训练，三级层次化缩放，Rollout-ResQ稀疏残差修正"
+    },
+    {
+      "id": "2607.27042",
+      "title": "GPTQ-2D: Cubic-Time Two-Sided Adaptive Rounding",
+      "authors": ["Jiale Chen", "Torsten Hoefler", "Dan Alistarh"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.DS", "cs.LG"],
+      "url": "https://arxiv.org/abs/2607.27042",
+      "keywords": ["GPTQ", "adaptive rounding", "two-sided", "quantization", "Kronecker"],
+      "techniques": ["quantization"],
+      "target_model": "通用权重矩阵",
+      "highlight": "双边自适应舍入，反斜对角线并行化，O(m³)复杂度"
+    },
+    {
+      "id": "2607.27054",
+      "title": "CoCaRS: Correlation Calibration-Based Redundancy Suppression for Heterogeneous Knowledge Distillation",
+      "authors": ["Fengming Yu", "Haiwei Pan", "Kejia Zhang", "Chunling Chen", "Jian Guan", "Baoying Ma"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.CV", "cs.AI"],
+      "url": "https://arxiv.org/abs/2607.27054",
+      "keywords": ["knowledge distillation", "heterogeneous", "redundancy suppression", "correlation calibration"],
+      "techniques": ["distillation"],
+      "target_model": "CNN/ViT/MLP",
+      "highlight": "混淆证据估计+强度分配控制+自适应系数调节"
+    },
+    {
+      "id": "2607.27031",
+      "title": "Lottery Tickets Are Not Deployment Tickets",
+      "authors": ["Bum Jun Kim"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.LG", "cs.CV"],
+      "url": "https://arxiv.org/abs/2607.27031",
+      "keywords": ["lottery ticket", "sparsity", "deployment", "behavioral compatibility", "pruning"],
+      "techniques": ["pruning", "sparsity"],
+      "target_model": "ResNet/WideResNet/ConvNeXt/ViT",
+      "highlight": "清洁精度恢复≠部署兼容性，7-10%决策变化"
+    },
+    {
+      "id": "2607.26835",
+      "title": "A Low-Power Sparse Convolution Accelerator with Idle-First-Task-Assignment for Edge Vision",
+      "authors": ["Jingyue Zhuge", "Johannes Partzsch", "Christian Mayr"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.AR"],
+      "url": "https://arxiv.org/abs/2607.26835",
+      "keywords": ["sparse accelerator", "edge vision", "low power", "FPGA", "IFTA"],
+      "techniques": ["pruning", "sparsity"],
+      "target_model": "VGG16/MobileNetV2",
+      "highlight": "16nm芯片，0.5mm²，12-16mW，6.5×加速"
+    },
+    {
+      "id": "2607.26648",
+      "title": "The Sparsity Ceiling: Where Spiking Networks Can and Cannot Trade Activity for Energy",
+      "authors": ["Zeyu Wang"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.NE", "cs.LG"],
+      "url": "https://arxiv.org/abs/2607.26648",
+      "keywords": ["sparsity", "SNN", "energy efficiency", "firing floor", "neuromorphic"],
+      "techniques": ["sparsity"],
+      "target_model": "SNN",
+      "highlight": "任务决定稀疏上限，信息论firing floor下界"
+    },
+    {
+      "id": "2607.26763",
+      "title": "Long-Tailed 3D Point Cloud Dataset Distillation",
+      "authors": ["Jiahao You", "Xu Han", "Jinfeng Xu", "Xianzhi Li"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2607.26763",
+      "keywords": ["dataset distillation", "3D point cloud", "long-tailed", "synthetic data"],
+      "techniques": ["distillation"],
+      "target_model": "3D Point Cloud Models",
+      "highlight": "ShapeNet55上提升7.0个精度点"
+    },
+    {
+      "id": "2607.27113",
+      "title": "Veritas++: Value-aware On-Policy Distillation for Perception-Enhanced AIGI Detection",
+      "authors": ["Hao Tan", "Jun Lan", "Zichang Tan", "Ajian Liu", "Zijian Yu", "Chuanbiao Song", "Huijia Zhu", "Weiqiang Wang", "Jun Wan", "Zhen Lei"],
+      "submitted": "2026-07-29",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2607.27113",
+      "keywords": ["distillation", "AIGI detection", "perception", "MLLM", "on-policy"],
+      "techniques": ["distillation"],
+      "target_model": "MLLM",
+      "highlight": "感知导向学习+Value-aware On-Policy Distillation"
+    }
+  ]
+}

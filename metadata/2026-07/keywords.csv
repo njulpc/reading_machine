@@ -1,0 +1,17 @@
+keyword,count,papers
+quantization,2,2607.26515;2607.27042
+distillation,3,2607.27054;2607.26763;2607.27113
+pruning,2,2607.27031;2607.26835
+sparsity,3,2607.27031;2607.26835;2607.26648
+FP4,1,2607.26515
+GPTQ,1,2607.27042
+adaptive rounding,1,2607.27042
+RL post-training,1,2607.26515
+knowledge distillation,1,2607.27054
+heterogeneous KD,1,2607.27054
+lottery ticket,1,2607.27031
+sparse accelerator,1,2607.26835
+SNN,1,2607.26648
+dataset distillation,1,2607.26763
+AIGI detection,1,2607.27113
+edge deployment,1,2607.26835
