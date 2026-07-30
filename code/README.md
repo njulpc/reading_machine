@@ -37,9 +37,11 @@ quantized_weight, alpha, delta = quantizer.quantize_layer(weight, calibration_in
 
 ## Implementation Notes
 
-- **Learnable Modulation (LM)**: Three learnable factors (δ_μ, δ_α, δ_Δ) modulate weight distribution
-- **Softened Ternarization (ST)**: Two-stage relay with tanh-based transition function
-  - Stage 1 (0 < t ≤ γ): Differentiable with progressive sharpness s = (t/γ)·s₀
-  - Stage 2 (γ < t ≤ 1): Hard ternarization with straight-through estimator
-- **Sliding-window optimization**: Output reconstruction across multiple layers
-- **Default calibration**: 512 samples, 60 epochs, γ=0.5, s₀=30
+- **Learnable Modulation (LM)**: per-group statistics (group_size=128) with three learnable factors (δ_μ, δ_α, δ_Δ); reconstruction uses `W ≈ αT` without adding μ back
+- **Softened Ternarization (ST)**: two-stage relay with tanh-based transition function
+  - Normalized time uses `t=(epoch+1)/num_epochs`; paper defaults are γ=0.8, s₀=30, Δ₀=0.5
+  - Stage 1 (`0 < t ≤ γ`): differentiable with progressive sharpness `s=(t/γ)·s₀`
+  - Stage 2 (`γ < t ≤ 1`): forward is exactly hard ternarization; backward uses STE (the paper does not specify a different hard-stage backward rule)
+- **Calibration**: the adapter captures real layer activations with forward hooks; random-input calibration was removed
+- **Sliding window**: CAT-Q's full SliderQuant-style multi-layer window is not plumbed into this compact adapter; `window_size=1` gives per-layer output reconstruction
+- **Positive factors**: δ_α and δ_Δ are parameterized with softplus and initialized so the initial multipliers are exactly 1

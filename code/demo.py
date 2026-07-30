@@ -16,7 +16,8 @@ def main():
     parser.add_argument("--calibration-samples", type=int, default=512, help="Number of calibration samples")
     parser.add_argument("--seq-length", type=int, default=2048, help="Sequence length")
     parser.add_argument("--epochs", type=int, default=60, help="Number of optimization epochs")
-    parser.add_argument("--gamma", type=float, default=0.5, help="Differentiable stage ratio")
+    parser.add_argument("--gamma", type=float, default=0.8, help="Differentiable stage ratio (paper default)")
+    parser.add_argument("--activation-rows", type=int, default=512, help="Rows subsampled from captured layer inputs")
     parser.add_argument("--lr", type=float, default=1e-3, help="Learning rate")
     parser.add_argument("--output", default="./catq_qwen3_0.6b", help="Output path")
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu", help="Device")
@@ -32,6 +33,7 @@ def main():
     print(f"  Sequence length: {args.seq_length}")
     print(f"  Epochs: {args.epochs}")
     print(f"  Gamma: {args.gamma}")
+    print(f"  Activation rows: {args.activation_rows}")
     print(f"  LR: {args.lr}")
     print(f"  Device: {args.device}")
     print()
@@ -41,6 +43,7 @@ def main():
         seq_length=args.seq_length,
         num_epochs=args.epochs,
         gamma=args.gamma,
+        activation_rows=args.activation_rows,
         lr=args.lr,
         device=args.device,
     )
