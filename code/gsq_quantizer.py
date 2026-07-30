@@ -1,26 +1,23 @@
 """
 GSQ: Gumbel-Softmax Quantization Core
 ======================================
-Implementation of GSQ (arXiv:2604.18556) for post-training scalar quantization.
+Compact implementation of GSQ (arXiv:2604.18556) for post-training scalar quantization.
 
-Key features:
-  - Group-wise quantization (group_size=128)
-  - GPTQ warm-start initialization
-  - Gumbel-Softmax relaxation with temperature annealing
-  - Lion optimizer (sign-based, handles vanishing gradients)
-  - Local-shift formulation for b > 2 (with correct soft indexing)
-  - Integer symmetric grid compatible with scalar inference kernels
-
-Supports:
-  - Ternary (1.58-bit) quantization
-  - 2-bit quantization
-  - General b-bit quantization with local-shift formulation
+Aligned with the paper / official implementation:
+  - symmetric integer grids: ternary {-1,0,1}, 2-bit {-2,-1,0,1},
+    b-bit {-(2^(b-1)), ..., 2^(b-1)-1}
+  - group_size=128 row-wise groups with one learnable scale per group
+  - GPTQ warm-start by default (RTN fallback for smoke tests)
+  - Gumbel-Softmax relaxation, temperature annealed 2.0 -> 0.05 and
+    logit scale kappa annealed 100 -> 500
+  - Lion optimizer with separate LR / weight-decay for logits and scales
+  - local-shift formulation for b > 2 with a validity mask at grid boundaries
 """
 
+import math
 import torch
 import torch.nn as nn
-import numpy as np
-from typing import Optional, Literal, Tuple
+from typing import Literal, Tuple, Optional
 from dataclasses import dataclass
 
 
@@ -31,6 +28,12 @@ class GSQConfig:
     group_size: int = 128
     num_epochs: int = 20
     batch_size: int = 64
+    # Initialization: paper Eq. 4 / official defaults are std=0.01, strength=6.
+    init_method: Literal["gptq", "rtn"] = "gptq"
+    init_noise_std: float = 0.01      # sigma_init
+    init_alpha: float = 6.0           # GPTQ warm-start strength
+    gptq_percdamp: float = 0.01
+    gptq_blocksize: int = 128
     # Gumbel-Softmax schedules
     temp_start: float = 2.0
     temp_end: float = 0.05
@@ -39,511 +42,354 @@ class GSQConfig:
     # Optimizer: Lion with different LR for logits vs scales
     lr_logits: float = 1e-4
     lr_scales: float = 5e-5
-    weight_decay: float = 1.0
+    lr_min_ratio: float = 0.1         # cosine decay to 10% of base LR
+    weight_decay: float = 1.0         # logits only; scales use weight_decay=0
     betas: Tuple[float, float] = (0.9, 0.95)
-    # Initialization
-    init_noise_std: float = 1.0
-    init_alpha: float = 0.5  # GPTQ warm-start strength
     # Local-shift (for b > 2)
-    local_shift_range: int = 2  # shifts in {-2, -1, 0, 1, 2}
+    local_shift_range: int = 2        # shifts in {-2, -1, 0, 1, 2}
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-class GumbelSoftmaxSampler:
-    """
-    Gumbel-Softmax sampling for discrete grid selection.
-    Algorithm 1 from the paper.
-    """
-
-    def __init__(self, temperature: float = 2.0, kappa: float = 100.0):
-        self.temperature = temperature
-        self.kappa = kappa
-
-    def sample(self, logits: torch.Tensor, grid_values: torch.Tensor) -> torch.Tensor:
-        """
-        Sample from discrete set using Gumbel-Softmax.
-
-        Args:
-            logits: [..., n_candidates] learnable logits
-            grid_values: [n_candidates] candidate grid values
-
-        Returns:
-            soft_sample: [...] weighted sum of grid values
-        """
-        # Draw Gumbel noise
-        gumbel = -torch.log(-torch.log(torch.rand_like(logits) + 1e-10) + 1e-10)
-
-        # Compute probabilities
-        perturbed_logits = self.kappa * logits + gumbel
-        probs = torch.softmax(perturbed_logits / self.temperature, dim=-1)
-
-        # Weighted sum over grid values
-        grid_view = grid_values.view(*([1] * (logits.dim() - 1) + [-1]))
-        soft_sample = torch.sum(probs * grid_view, dim=-1)
-        return soft_sample
-
-    def hard_sample(self, logits: torch.Tensor, grid_values: torch.Tensor) -> torch.Tensor:
-        """Hard argmax selection (for final quantization)."""
-        idx = torch.argmax(logits, dim=-1)
-        return grid_values[idx]
-
-
 class LionOptimizer:
-    """
-    Lion optimizer (Chen et al., 2023).
-    Sign-based update: θ = θ - lr * sign(m_t)
-    Less sensitive to vanishing gradients than AdamW.
+    """Lion optimizer (Chen et al., 2023).
+
+    Standard update order:
+      c = beta1 * m + (1 - beta1) * g
+      p <- p - lr * (sign(c) + weight_decay * p)
+      m <- beta2 * m + (1 - beta2) * g
     """
 
-    def __init__(self, param_groups, betas: Tuple[float, float] = (0.9, 0.99), weight_decay: float = 0.0):
-        self.param_groups = param_groups  # List of dict: {'params': [...], 'lr': float}
+    def __init__(self, param_groups, betas: Tuple[float, float] = (0.9, 0.95), weight_decay: float = 0.0):
+        self.param_groups = param_groups
         self.beta1, self.beta2 = betas
         self.weight_decay = weight_decay
         self.m = {}
         for group in self.param_groups:
-            for p in group['params']:
+            group.setdefault("weight_decay", weight_decay)
+            group["base_lr"] = group["lr"]
+            for p in group["params"]:
                 if p.requires_grad:
                     self.m[id(p)] = torch.zeros_like(p)
 
+    def set_lr(self, progress: float, min_ratio: float = 0.1):
+        """Cosine LR decay used by the official trainer."""
+        progress = min(max(progress, 0.0), 1.0)
+        factor = min_ratio + 0.5 * (1.0 - min_ratio) * (1.0 + math.cos(math.pi * progress))
+        for group in self.param_groups:
+            group["lr"] = group["base_lr"] * factor
+
+    @torch.no_grad()
     def step(self):
         for group in self.param_groups:
-            lr = group['lr']
-            for p in group['params']:
+            lr = group["lr"]
+            wd = group.get("weight_decay", self.weight_decay)
+            for p in group["params"]:
                 if not p.requires_grad or p.grad is None:
                     continue
-
                 grad = p.grad
-
-                # Weight decay
-                if self.weight_decay > 0:
-                    grad = grad + self.weight_decay * torch.sign(p)
-
-                # Momentum update
                 m = self.m[id(p)]
+                c = m.mul(self.beta1).add(grad, alpha=1 - self.beta1)
+                update = torch.sign(c)
+                if wd > 0:
+                    update = update + wd * p
+                p.add_(update, alpha=-lr)
                 m.mul_(self.beta2).add_(grad, alpha=1 - self.beta2)
-
-                # Sign-based update
-                update = torch.sign(self.beta1 * m + (1 - self.beta1) * grad)
-                p.data.add_(update, alpha=-lr)
 
     def zero_grad(self):
         for group in self.param_groups:
-            for p in group['params']:
+            for p in group["params"]:
                 if p.grad is not None:
                     p.grad.zero_()
 
 
 class GSQQuantizer:
-    """
-    GSQ quantizer for a single linear layer.
-
-    Implements group-wise ternary, 2-bit, and general b-bit quantization
-    with local-shift formulation for b > 2.
-    """
+    """GSQ quantizer for a single linear layer weight [out_features, in_features]."""
 
     def __init__(self, config: GSQConfig):
         self.config = config
-        self.sampler = GumbelSoftmaxSampler(config.temp_start, config.kappa_start)
         self.device = torch.device(config.device)
 
-    def _get_grid(self, bits):
-        """Get quantization grid for given bit-width."""
+    # ------------------------- grids / grouping -------------------------
+    def _get_grid(self, bits) -> torch.Tensor:
         if bits == "ternary":
             return torch.tensor([-1.0, 0.0, 1.0], device=self.device)
-        elif bits == 2:
+        if bits == 2:
             return torch.tensor([-2.0, -1.0, 0.0, 1.0], device=self.device)
-        elif bits in [3, 4]:
-            # Integer symmetric grid: {0, 1, 2, ..., 2^b - 1}
-            # Scale factor handles the symmetry; grid is non-negative integers
-            n_levels = 2 ** bits
-            return torch.arange(n_levels, device=self.device).float()
-        else:
-            raise ValueError(f"Unsupported bit-width: {bits}")
+        if bits in (3, 4):
+            lo = -(2 ** (bits - 1))
+            hi = 2 ** (bits - 1) - 1
+            return torch.arange(lo, hi + 1, device=self.device, dtype=torch.float32)
+        raise ValueError(f"Unsupported bit-width: {bits}")
 
-    def _group_weights(self, weight: torch.Tensor):
+    def _pad_in_features(self, w: torch.Tensor, x: Optional[torch.Tensor] = None):
+        out_f, in_f = w.shape
+        gs = self.config.group_size
+        pad = (gs - (in_f % gs)) % gs
+        if pad:
+            w = torch.nn.functional.pad(w, (0, pad))
+            if x is not None:
+                x = torch.nn.functional.pad(x, (0, pad))
+        n_groups = (in_f + pad) // gs
+        return w, x, out_f, in_f, pad, n_groups
+
+    @staticmethod
+    def _nearest_grid(values: torch.Tensor, grid: torch.Tensor) -> torch.Tensor:
+        # values: [...,], grid: [m] -> nearest grid value with shape values.shape
+        idx = (values.unsqueeze(-1) - grid).abs().argmin(dim=-1)
+        return grid[idx]
+
+    def _rtn_prior(self, w: torch.Tensor, grid: torch.Tensor):
+        """Round-to-nearest prior, kept as an explicit smoke-test fallback."""
+        w_pad, _, out_f, in_f, pad, n_groups = self._pad_in_features(w)
+        gs = self.config.group_size
+        wg = w_pad.view(out_f, n_groups, gs)
+        max_abs_grid = max(abs(grid.min().item()), abs(grid.max().item()))
+        scales = wg.abs().amax(dim=-1).clamp(min=1e-6) / max_abs_grid
+        q_norm = self._nearest_grid(wg / scales.unsqueeze(-1), grid)
+        q = q_norm * scales.unsqueeze(-1)
+        q = q.view(out_f, n_groups * gs)
+        if pad:
+            q[:, -pad:] = 0.0
+        q_norm = q / scales.repeat_interleave(gs, dim=1)
+        return q_norm, scales
+
+    def _gptq_prior(self, w: torch.Tensor, x: torch.Tensor, grid: torch.Tensor):
+        """Compact GPTQ prior for one linear layer.
+
+        Returns normalized grid values q_norm and per-group scales.
+        Uses the standard GPTQ Cholesky update; intended as a warm-start for GSQ.
         """
-        Reshape weight for group-wise processing.
+        w_pad, x_pad, out_f, in_f, pad, n_groups = self._pad_in_features(w, x)
+        gs = self.config.group_size
+        block = self.config.gptq_blocksize
+        n = w_pad.shape[1]
+        max_abs_grid = max(abs(grid.min().item()), abs(grid.max().item()))
 
-        Args:
-            weight: [out_features, in_features]
+        X = x_pad.reshape(-1, x_pad.shape[-1]).float()
+        W = w_pad.float().clone()
+        H = X.T @ X / max(X.shape[0], 1)
+        dead = torch.diag(H) == 0
+        H[dead, dead] = 1.0
+        W[:, dead] = 0.0
+        damp = (self.config.gptq_percdamp * torch.mean(torch.diag(H))).clamp(min=1e-6)
 
-        Returns:
-            grouped: [num_groups, group_size] (flattened and transposed for row-wise grouping)
-            out_features, in_features
-        """
-        out_f, in_f = weight.shape
-        # Row-wise grouping: each row is split into groups of group_size
-        # Pad if necessary
-        pad = (self.config.group_size - (in_f % self.config.group_size)) % self.config.group_size
-        if pad > 0:
-            w_padded = torch.nn.functional.pad(weight, (0, pad))
-        else:
-            w_padded = weight
+        # Cholesky with progressively stronger damping if needed.
+        Hinv_upper = None
+        for _ in range(5):
+            try:
+                Hd = H + torch.eye(n, device=H.device, dtype=H.dtype) * damp
+                L = torch.linalg.cholesky(Hd)
+                Hinv = torch.cholesky_inverse(L)
+                Hinv_upper = torch.linalg.cholesky(Hinv, upper=True)
+                break
+            except RuntimeError:
+                damp *= 10.0
+        if Hinv_upper is None:
+            # Numerical fallback: still better to run GSQ from RTN than to crash.
+            return self._rtn_prior(w, grid)
 
-        # [out_features, num_groups_per_row, group_size]
-        num_groups_per_row = w_padded.shape[1] // self.config.group_size
-        grouped = w_padded.view(out_f, num_groups_per_row, self.config.group_size)
-        # [num_groups, group_size]
-        grouped = grouped.reshape(-1, self.config.group_size)
-        return grouped, out_f, in_f, pad
+        scales = torch.zeros(out_f, n_groups, device=self.device, dtype=torch.float32)
+        Q = torch.zeros_like(W)
+        Err = torch.zeros_like(W)
 
-    def _gptq_init(self, weight: torch.Tensor, grid: torch.Tensor):
-        """
-        Approximate GPTQ initialization: round-to-nearest on the grid.
+        for i1 in range(0, n, block):
+            i2 = min(i1 + block, n)
+            count = i2 - i1
+            W1 = W[:, i1:i2].clone()
+            Err1 = torch.zeros_like(W1)
+            Hinv1 = Hinv_upper[i1:i2, i1:i2]
 
-        Returns:
-            quantized_init: hard quantized values on the grid
-            scales: per-group scales (absmax)
-        """
-        grouped, out_f, in_f, pad = self._group_weights(weight)
-        num_groups = grouped.shape[0]
+            for j in range(count):
+                col = i1 + j
+                if col % gs == 0:
+                    g = col // gs
+                    gend = min(col + gs, n)
+                    scales[:, g] = (W[:, col:gend].abs().amax(dim=1) / max_abs_grid).clamp(min=1e-6)
+                s = scales[:, col // gs]
+                w_col = W1[:, j]
+                q_norm = self._nearest_grid(w_col / s, grid)
+                Q[:, col] = q_norm * s
+                d = Hinv1[j, j].clamp(min=1e-8)
+                err = (w_col - Q[:, col]) / d
+                W1[:, j:] -= err.unsqueeze(1) * Hinv1[j, j:].unsqueeze(0)
+                Err1[:, j] = err
 
-        # Per-group absmax scale
-        scales = grouped.abs().amax(dim=1, keepdim=True)
-        scales = scales.clamp(min=1e-6)
+            Err[:, i1:i2] = Err1
+            if i2 < n:
+                W[:, i2:] -= Err1 @ Hinv_upper[i1:i2, i2:]
 
-        # Normalize to [-1, 1] or [0, 1] depending on grid
-        if grid.min().item() < 0:
-            # Symmetric grid (ternary, 2-bit)
-            normalized = grouped / scales
-        else:
-            # Non-negative integer grid (3-bit, 4-bit)
-            # Map to [0, max_grid]
-            normalized = (grouped / scales + 1) / 2
-            normalized = normalized * (grid.max().item())
+        if pad:
+            Q[:, -pad:] = 0.0
+        scale_full = scales.repeat_interleave(gs, dim=1)
+        q_norm_full = Q / scale_full.clamp(min=1e-8)
+        return q_norm_full, scales
 
-        # Round to nearest grid point
-        distances = (normalized.unsqueeze(-1) - grid.view(1, 1, -1)).abs()
-        init_idx = distances.argmin(dim=-1)
-        quantized_init = grid[init_idx]
+    def _init_prior(self, weight: torch.Tensor, calibration_input: Optional[torch.Tensor], grid: torch.Tensor):
+        w = weight.to(self.device).float()
+        x = None if calibration_input is None else calibration_input.to(self.device).float()
+        if x is not None and x.dim() > 2:
+            x = x.reshape(-1, x.shape[-1])
+        if self.config.init_method == "gptq" and x is not None:
+            return self._gptq_prior(w, x, grid)
+        return self._rtn_prior(w, grid)
 
-        # Restore padding mask
-        if pad > 0:
-            mask = torch.ones(out_f, in_f + pad, device=self.device)
-            mask[:, -pad:] = 0
-            mask = mask.view(out_f, -1, self.config.group_size).reshape(-1, self.config.group_size)
-            quantized_init = quantized_init * mask
+    def _opt_loop(self, w, x, make_soft_norm, make_hard_norm, logit_params, scales_flat, out_f, in_f, n_groups):
+        """Run annealed Gumbel optimization. make_*_norm(step_frac) -> [out_f, in_f+pad]."""
+        gs = self.config.group_size
+        opt = LionOptimizer([
+            {"params": logit_params, "lr": self.config.lr_logits, "weight_decay": self.config.weight_decay},
+            {"params": [scales_flat], "lr": self.config.lr_scales, "weight_decay": 0.0},
+        ], betas=self.config.betas, weight_decay=self.config.weight_decay)
 
-        return quantized_init, scales, init_idx, grouped, num_groups, out_f, in_f, pad
+        N = x.shape[0]
+        bs = min(self.config.batch_size, N)
+        steps_per_epoch = max(1, (N + bs - 1) // bs)
+        total_steps = max(1, self.config.num_epochs * steps_per_epoch)
+        target = x @ w.t()
+        step = 0
+        for _ in range(self.config.num_epochs):
+            perm = torch.randperm(N, device=x.device)
+            for b in range(steps_per_epoch):
+                idx = perm[b * bs:(b + 1) * bs]
+                xb = x[idx]
+                frac = step / max(total_steps - 1, 1)
+                temp = self.config.temp_start + (self.config.temp_end - self.config.temp_start) * frac
+                kappa = self.config.kappa_start + (self.config.kappa_end - self.config.kappa_start) * frac
 
-    def quantize_ternary(self, weight: torch.Tensor, calibration_input: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
-        """
-        Quantize weight to ternary {-s, 0, s} using GSQ with group-wise scales.
-        """
-        w = weight.to(self.device)
-        x = calibration_input.to(self.device)
+                soft_norm = make_soft_norm(temp, kappa)
+                scale_full = scales_flat.view(out_f, n_groups).repeat_interleave(gs, dim=1)
+                soft_w = scale_full * soft_norm
+                pred = xb @ soft_w[:, :in_f].t()
+                loss = nn.functional.mse_loss(pred, target[idx])
 
+                loss.backward()
+                opt.set_lr(frac, self.config.lr_min_ratio)
+                opt.step()
+                opt.zero_grad()
+                step += 1
+
+        with torch.no_grad():
+            hard_norm = make_hard_norm()
+            scale_full = scales_flat.view(out_f, n_groups).repeat_interleave(gs, dim=1)
+            q = (scale_full * hard_norm)[:, :in_f]
+        return q.detach().cpu(), scales_flat.detach().cpu()
+
+    # ------------------------- public quantizers -------------------------
+    def quantize_ternary(self, weight: torch.Tensor, calibration_input: torch.Tensor):
         grid = self._get_grid("ternary")
+        w = weight.to(self.device).float()
+        x = calibration_input.to(self.device).float()
+        if x.dim() > 2:
+            x = x.reshape(-1, x.shape[-1])
+        _, _, out_f, in_f, pad, n_groups = self._pad_in_features(w)
+        q_norm, scales_mat = self._init_prior(w, x, grid)
+        scales_flat = scales_mat.reshape(-1).detach().clone().requires_grad_(True)
 
-        # GPTQ initialization with group-wise scales
-        q_init, scales, init_idx, grouped, num_groups, out_f, in_f, pad = self._gptq_init(w, grid)
+        std, strength = self.config.init_noise_std, self.config.init_alpha
+        sign_logits = (std * (torch.randn_like(q_norm) + torch.sign(q_norm) * strength)).requires_grad_(True)
+        mask_logits = (std * (torch.randn_like(q_norm) + (2.0 * q_norm.abs() - 1.0) * strength)).requires_grad_(True)
 
-        # Flatten for per-coordinate processing
-        grouped_flat = grouped.reshape(-1)
-        q_init_flat = q_init.reshape(-1)
-        d = grouped_flat.numel()
+        def soft_norm(temp, kappa):
+            # Binary GSQ: logits {-ell, +ell}; difference of two Gumbels is logistic.
+            u_m = torch.rand_like(mask_logits)
+            noise_m = torch.logit(u_m, eps=1e-8)
+            soft_mask = torch.sigmoid((2.0 * kappa * mask_logits + noise_m) / temp)
+            u_s = torch.rand_like(sign_logits)
+            noise_s = torch.logit(u_s, eps=1e-8)
+            soft_sign = 2.0 * torch.sigmoid((2.0 * kappa * sign_logits + noise_s) / temp) - 1.0
+            y = soft_mask * soft_sign
+            if pad:
+                y = y.clone(); y[:, -pad:] = 0.0
+            return y
 
-        # Initialize mask and sign logits from GPTQ warm-start
-        mask_init = torch.where(q_init_flat != 0, 1.0, -1.0)
-        sign_init = torch.where(q_init_flat > 0, 1.0, -1.0)
-        sign_init = torch.where(q_init_flat == 0, 0.0, sign_init)
+        def hard_norm():
+            y = (mask_logits > 0).float() * torch.where(sign_logits > 0, 1.0, -1.0)
+            if pad:
+                y[:, -pad:] = 0.0
+            return y
 
-        mask_logits = (self.config.init_alpha * mask_init +
-                       self.config.init_noise_std * torch.randn_like(mask_init)).requires_grad_(True)
-        sign_logits = (self.config.init_alpha * sign_init +
-                       self.config.init_noise_std * torch.randn_like(sign_init)).requires_grad_(True)
+        return self._opt_loop(w, x, soft_norm, hard_norm, [mask_logits, sign_logits], scales_flat, out_f, in_f, n_groups)
 
-        # Scales: per-group, learnable
-        scales_learnable = scales.reshape(-1).detach().clone().requires_grad_(True)
-
-        # Separate optimizer groups for logits and scales
-        opt = LionOptimizer([
-            {'params': [mask_logits, sign_logits], 'lr': self.config.lr_logits},
-            {'params': [scales_learnable], 'lr': self.config.lr_scales},
-        ], betas=self.config.betas, weight_decay=self.config.weight_decay)
-
-        # Target output
-        with torch.no_grad():
-            target_out = x @ w.t()
-
-        num_steps = self.config.num_epochs
-
-        for step in range(num_steps):
-            progress = step / max(num_steps - 1, 1)
-            self.sampler.temperature = self.config.temp_start + (self.config.temp_end - self.config.temp_start) * progress
-            self.sampler.kappa = self.config.kappa_start + (self.config.kappa_end - self.config.kappa_start) * progress
-
-            # Gumbel-Softmax sampling for mask and sign
-            grid_mask = torch.tensor([0.0, 1.0], device=self.device)
-            grid_sign = torch.tensor([-1.0, 1.0], device=self.device)
-
-            # Mask: binary Gumbel-Softmax
-            mask_logits_2 = torch.stack([-mask_logits, mask_logits], dim=-1)  # [d, 2]
-            soft_mask = self.sampler.sample(mask_logits_2, grid_mask)  # [d]
-
-            # Sign: binary Gumbel-Softmax
-            sign_logits_2 = torch.stack([-sign_logits, sign_logits], dim=-1)  # [d, 2]
-            soft_sign = self.sampler.sample(sign_logits_2, grid_sign)  # [d]
-
-            # Compose ternary weight: repeat scales for each element in group
-            scales_expanded = scales_learnable.unsqueeze(1).repeat(1, self.config.group_size).reshape(-1)[:d]
-            soft_weight_flat = scales_expanded * soft_mask * soft_sign  # [d]
-            soft_weight = soft_weight_flat.reshape(num_groups, self.config.group_size)
-
-            # Restore padding
-            if pad > 0:
-                mask = torch.ones(out_f, in_f + pad, device=self.device)
-                mask[:, -pad:] = 0
-                mask = mask.view(out_f, -1, self.config.group_size).reshape(-1, self.config.group_size)
-                soft_weight = soft_weight * mask
-
-            # Reconstruct full weight
-            soft_weight_full = soft_weight.reshape(out_f, -1)[:, :in_f]
-
-            # Reconstruction loss
-            pred_out = x @ soft_weight_full.t()
-            loss = nn.functional.mse_loss(pred_out, target_out)
-
-            loss.backward()
-            opt.step()
-            opt.zero_grad()
-
-            if step % 5 == 0:
-                print(f"  Step {step}/{num_steps}, Loss: {loss.item():.6f}, Temp: {self.sampler.temperature:.4f}")
-
-        # Final hard quantization
-        hard_mask = (mask_logits > 0).float()
-        hard_sign = torch.where(sign_logits > 0, 1.0, -1.0)
-
-        scales_expanded = scales_learnable.unsqueeze(1).repeat(1, self.config.group_size).reshape(-1)[:d]
-        quantized_flat = scales_expanded.detach() * hard_mask * hard_sign
-        quantized = quantized_flat.reshape(num_groups, self.config.group_size)
-
-        if pad > 0:
-            mask = torch.ones(out_f, in_f + pad, device=self.device)
-            mask[:, -pad:] = 0
-            mask = mask.view(out_f, -1, self.config.group_size).reshape(-1, self.config.group_size)
-            quantized = quantized * mask
-
-        quantized = quantized.reshape(out_f, -1)[:, :in_f]
-        scales_final = scales_learnable.detach().cpu()
-
-        return quantized.detach().cpu(), scales_final
-
-    def quantize_2bit(self, weight: torch.Tensor, calibration_input: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
-        """
-        Quantize weight to 2-bit with grid {-2, -1, 0, 1} using group-wise scales.
-        """
-        w = weight.to(self.device)
-        x = calibration_input.to(self.device)
-
+    def quantize_2bit(self, weight: torch.Tensor, calibration_input: torch.Tensor):
         grid = self._get_grid(2)
+        w = weight.to(self.device).float()
+        x = calibration_input.to(self.device).float()
+        if x.dim() > 2:
+            x = x.reshape(-1, x.shape[-1])
+        _, _, out_f, in_f, pad, n_groups = self._pad_in_features(w)
+        q_norm, scales_mat = self._init_prior(w, x, grid)
+        scales_flat = scales_mat.reshape(-1).detach().clone().requires_grad_(True)
 
-        # GPTQ initialization
-        q_init, scales, init_idx, grouped, num_groups, out_f, in_f, pad = self._gptq_init(w, grid)
+        std, strength = self.config.init_noise_std, self.config.init_alpha
+        logits = -0.5 * (q_norm.unsqueeze(-1) - grid).pow(2)
+        logits = logits - logits.mean(dim=-1, keepdim=True)
+        logits = (std * (torch.randn_like(logits) + logits * strength)).requires_grad_(True)
 
-        grouped_flat = grouped.reshape(-1)
-        q_init_flat = q_init.reshape(-1)
-        d = grouped_flat.numel()
+        def soft_norm(temp, kappa):
+            u = torch.rand_like(logits)
+            noise = -torch.log(-torch.log(u + 1e-8) + 1e-8)
+            probs = torch.softmax((kappa * logits + noise) / temp, dim=-1)
+            y = (probs * grid).sum(dim=-1)
+            if pad:
+                y = y.clone(); y[:, -pad:] = 0.0
+            return y
 
-        # Initialize logits: Gaussian-like prior centered at GPTQ solution
-        n_levels = grid.numel()
-        logits = torch.zeros(d, n_levels, device=self.device)
-        for i in range(d):
-            idx = init_idx.reshape(-1)[i]
-            for j in range(n_levels):
-                logits[i, j] = -((j - idx) ** 2) / 2.0
-        logits = logits + torch.randn_like(logits) * self.config.init_noise_std
-        logits.requires_grad_(True)
+        def hard_norm():
+            y = grid[logits.argmax(dim=-1)]
+            if pad:
+                y[:, -pad:] = 0.0
+            return y
 
-        # Per-group scales
-        scales_learnable = scales.reshape(-1).detach().clone().requires_grad_(True)
+        return self._opt_loop(w, x, soft_norm, hard_norm, [logits], scales_flat, out_f, in_f, n_groups)
 
-        opt = LionOptimizer([
-            {'params': [logits], 'lr': self.config.lr_logits},
-            {'params': [scales_learnable], 'lr': self.config.lr_scales},
-        ], betas=self.config.betas, weight_decay=self.config.weight_decay)
-
-        with torch.no_grad():
-            target_out = x @ w.t()
-
-        num_steps = self.config.num_epochs
-
-        for step in range(num_steps):
-            progress = step / max(num_steps - 1, 1)
-            self.sampler.temperature = self.config.temp_start + (self.config.temp_end - self.config.temp_start) * progress
-            self.sampler.kappa = self.config.kappa_start + (self.config.kappa_end - self.config.kappa_start) * progress
-
-            # Sample quantized values
-            soft_q = self.sampler.sample(logits, grid)  # [d]
-
-            # Group-wise scale
-            scales_expanded = scales_learnable.unsqueeze(1).repeat(1, self.config.group_size).reshape(-1)[:d]
-            soft_weight_flat = scales_expanded * soft_q
-            soft_weight = soft_weight_flat.reshape(num_groups, self.config.group_size)
-
-            if pad > 0:
-                mask = torch.ones(out_f, in_f + pad, device=self.device)
-                mask[:, -pad:] = 0
-                mask = mask.view(out_f, -1, self.config.group_size).reshape(-1, self.config.group_size)
-                soft_weight = soft_weight * mask
-
-            soft_weight_full = soft_weight.reshape(out_f, -1)[:, :in_f]
-
-            pred_out = x @ soft_weight_full.t()
-            loss = nn.functional.mse_loss(pred_out, target_out)
-
-            loss.backward()
-            opt.step()
-            opt.zero_grad()
-
-            if step % 5 == 0:
-                print(f"  Step {step}/{num_steps}, Loss: {loss.item():.6f}")
-
-        # Hard quantization
-        hard_idx = torch.argmax(logits, dim=-1)
-        hard_q = grid[hard_idx]
-
-        scales_expanded = scales_learnable.unsqueeze(1).repeat(1, self.config.group_size).reshape(-1)[:d]
-        quantized_flat = scales_expanded.detach() * hard_q
-        quantized = quantized_flat.reshape(num_groups, self.config.group_size)
-
-        if pad > 0:
-            mask = torch.ones(out_f, in_f + pad, device=self.device)
-            mask[:, -pad:] = 0
-            mask = mask.view(out_f, -1, self.config.group_size).reshape(-1, self.config.group_size)
-            quantized = quantized * mask
-
-        quantized = quantized.reshape(out_f, -1)[:, :in_f]
-        scales_final = scales_learnable.detach().cpu()
-
-        return quantized.detach().cpu(), scales_final
-
-    def quantize_general(self, weight: torch.Tensor, calibration_input: torch.Tensor, bits: int) -> Tuple[torch.Tensor, torch.Tensor]:
-        """
-        Quantize weight to b-bit using local-shift formulation (for b > 2).
-
-        FIXED: Uses soft indexing to maintain gradient flow through local shifts.
-        """
-        w = weight.to(self.device)
-        x = calibration_input.to(self.device)
-
+    def quantize_general(self, weight: torch.Tensor, calibration_input: torch.Tensor, bits: int):
         grid = self._get_grid(bits)
-        n_levels = grid.numel()
+        min_grid, max_grid = grid.min().item(), grid.max().item()
+        w = weight.to(self.device).float()
+        x = calibration_input.to(self.device).float()
+        if x.dim() > 2:
+            x = x.reshape(-1, x.shape[-1])
+        _, _, out_f, in_f, pad, n_groups = self._pad_in_features(w)
+        init, scales_mat = self._init_prior(w, x, grid)
+        init = init.clamp(min_grid, max_grid)
+        scales_flat = scales_mat.reshape(-1).detach().clone().requires_grad_(True)
 
-        # GPTQ initialization
-        q_init, scales, init_idx, grouped, num_groups, out_f, in_f, pad = self._gptq_init(w, grid)
+        r = self.config.local_shift_range
+        shift_values = torch.arange(-r, r + 1, device=self.device, dtype=torch.float32)
+        cand = init.unsqueeze(-1) + shift_values
+        valid = (cand >= min_grid) & (cand <= max_grid)
 
-        grouped_flat = grouped.reshape(-1)
-        init_idx_flat = init_idx.reshape(-1)
-        d = grouped_flat.numel()
+        std, strength = self.config.init_noise_std, self.config.init_alpha
+        logits = -0.5 * shift_values.pow(2).view(1, 1, -1).expand_as(cand)
+        denom = valid.sum(dim=-1, keepdim=True).clamp(min=1)
+        mean = (logits * valid).sum(dim=-1, keepdim=True) / denom
+        logits = logits - mean
+        logits = (std * (torch.randn_like(logits) + logits * strength)).requires_grad_(True)
 
-        # Local-shift candidates: {-2, -1, 0, 1, 2}
-        shift_values = torch.tensor([-2, -1, 0, 1, 2], device=self.device).float()
-        num_shifts = shift_values.numel()
+        def soft_norm(temp, kappa):
+            masked = logits.masked_fill(~valid, -1e9)
+            u = torch.rand_like(masked)
+            noise = -torch.log(-torch.log(u + 1e-8) + 1e-8)
+            probs = torch.softmax((kappa * masked + noise) / temp, dim=-1)
+            soft_shift = (probs * shift_values).sum(dim=-1)
+            y = init + soft_shift
+            if pad:
+                y = y.clone(); y[:, -pad:] = 0.0
+            return y
 
-        # Initialize shift logits: favor 0 shift (stay at GPTQ init)
-        shift_logits = torch.zeros(d, num_shifts, device=self.device)
-        shift_logits[:, 2] = 1.0  # center at 0 shift
-        # Gaussian-like prior: closer shifts get higher prior
-        for k in range(num_shifts):
-            shift_logits[:, k] += -0.5 * (shift_values[k] ** 2)
-        shift_logits = shift_logits + torch.randn_like(shift_logits) * self.config.init_noise_std
-        shift_logits.requires_grad_(True)
+        def hard_norm():
+            masked = logits.masked_fill(~valid, -1e9)
+            hard_shift = shift_values[masked.argmax(dim=-1)]
+            y = init + hard_shift
+            if pad:
+                y[:, -pad:] = 0.0
+            return y
 
-        # Per-group scales
-        scales_learnable = scales.reshape(-1).detach().clone().requires_grad_(True)
+        return self._opt_loop(w, x, soft_norm, hard_norm, [logits], scales_flat, out_f, in_f, n_groups)
 
-        opt = LionOptimizer([
-            {'params': [shift_logits], 'lr': self.config.lr_logits},
-            {'params': [scales_learnable], 'lr': self.config.lr_scales},
-        ], betas=self.config.betas, weight_decay=self.config.weight_decay)
-
-        with torch.no_grad():
-            target_out = x @ w.t()
-
-        num_steps = self.config.num_epochs
-
-        for step in range(num_steps):
-            progress = step / max(num_steps - 1, 1)
-            self.sampler.temperature = self.config.temp_start + (self.config.temp_end - self.config.temp_start) * progress
-            self.sampler.kappa = self.config.kappa_start + (self.config.kappa_end - self.config.kappa_start) * progress
-
-            # Sample soft shifts: [d], differentiable
-            soft_shift = self.sampler.sample(shift_logits, shift_values)  # [d]
-
-            # Build soft grid values via differentiable soft indexing
-            # For each coordinate i, soft_shift_i gives a float offset
-            # We compute soft_q_i = grid[clip(init_idx_i + soft_shift_i)]
-            # But this must be differentiable!
-            # Solution: for each coordinate, compute weighted sum of grid values
-            # for all possible final indices, weighted by shift probability.
-
-            init_idx_f = init_idx_flat.float().unsqueeze(1)  # [d, 1]
-            shift_values_expanded = shift_values.view(1, -1)  # [1, num_shifts]
-
-            # Possible final indices for each shift
-            candidate_indices = init_idx_f + shift_values_expanded  # [d, num_shifts]
-            candidate_indices = torch.clamp(candidate_indices, 0, n_levels - 1).long()
-
-            # Candidate grid values
-            candidate_grid_values = grid[candidate_indices]  # [d, num_shifts]
-
-            # Get shift probabilities from logits
-            shift_probs = torch.softmax(self.sampler.kappa * shift_logits / self.sampler.temperature, dim=-1)
-            # Soft quantized value = weighted sum over candidate grid values
-            soft_q = torch.sum(shift_probs * candidate_grid_values, dim=-1)  # [d]
-
-            # Group-wise scale
-            scales_expanded = scales_learnable.unsqueeze(1).repeat(1, self.config.group_size).reshape(-1)[:d]
-            soft_weight_flat = scales_expanded * soft_q
-            soft_weight = soft_weight_flat.reshape(num_groups, self.config.group_size)
-
-            if pad > 0:
-                mask = torch.ones(out_f, in_f + pad, device=self.device)
-                mask[:, -pad:] = 0
-                mask = mask.view(out_f, -1, self.config.group_size).reshape(-1, self.config.group_size)
-                soft_weight = soft_weight * mask
-
-            soft_weight_full = soft_weight.reshape(out_f, -1)[:, :in_f]
-
-            pred_out = x @ soft_weight_full.t()
-            loss = nn.functional.mse_loss(pred_out, target_out)
-
-            loss.backward()
-            opt.step()
-            opt.zero_grad()
-
-            if step % 5 == 0:
-                print(f"  Step {step}/{num_steps}, Loss: {loss.item():.6f}")
-
-        # Hard quantization
-        hard_shift_idx = torch.argmax(shift_logits, dim=-1)
-        hard_shift = shift_values[hard_shift_idx].long()
-        final_idx = init_idx_flat + hard_shift
-        final_idx = torch.clamp(final_idx, 0, n_levels - 1)
-        hard_q = grid[final_idx]
-
-        scales_expanded = scales_learnable.unsqueeze(1).repeat(1, self.config.group_size).reshape(-1)[:d]
-        quantized_flat = scales_expanded.detach() * hard_q
-        quantized = quantized_flat.reshape(num_groups, self.config.group_size)
-
-        if pad > 0:
-            mask = torch.ones(out_f, in_f + pad, device=self.device)
-            mask[:, -pad:] = 0
-            mask = mask.view(out_f, -1, self.config.group_size).reshape(-1, self.config.group_size)
-            quantized = quantized * mask
-
-        quantized = quantized.reshape(out_f, -1)[:, :in_f]
-        scales_final = scales_learnable.detach().cpu()
-
-        return quantized.detach().cpu(), scales_final
-
-    def quantize(self, weight: torch.Tensor, calibration_input: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
-        """Dispatch to appropriate quantization method."""
+    def quantize(self, weight: torch.Tensor, calibration_input: torch.Tensor):
         if self.config.bits == "ternary":
             return self.quantize_ternary(weight, calibration_input)
-        elif self.config.bits == 2:
+        if self.config.bits == 2:
             return self.quantize_2bit(weight, calibration_input)
-        else:
-            return self.quantize_general(weight, calibration_input, self.config.bits)
+        return self.quantize_general(weight, calibration_input, int(self.config.bits))

@@ -21,13 +21,16 @@ cd code
 pip install -r requirements.txt
 
 # Run ternary quantization demo
-python demo.py --model Qwen/Qwen3-0.6B --bits ternary --calibration-data path/to/calib
+python demo.py --model Qwen/Qwen3-0.6B --bits ternary --init-method gptq
 
 # Run 2-bit quantization demo
-python demo.py --model Qwen/Qwen3-0.6B --bits 2 --calibration-data path/to/calib
+python demo.py --model Qwen/Qwen3-0.6B --bits 2 --init-method gptq
 
 # Run 3-bit with local-shift
-python demo.py --model Qwen/Qwen3-0.6B --bits 3 --calibration-data path/to/calib
+python demo.py --model Qwen/Qwen3-0.6B --bits 3 --init-method gptq
+
+# Fast smoke test without GPTQ
+python demo.py --model Qwen/Qwen3-0.6B --bits 2 --init-method rtn --epochs 2
 ```
 
 ## Target Model: Qwen3-0.6B

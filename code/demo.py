@@ -15,6 +15,7 @@ def main():
     parser.add_argument("--model", default="Qwen/Qwen3-0.6B", help="Model path")
     parser.add_argument("--bits", default="2", choices=["ternary", "2", "3", "4"], help="Bit-width")
     parser.add_argument("--group-size", type=int, default=128, help="Quantization group size")
+    parser.add_argument("--init-method", default="gptq", choices=["gptq", "rtn"], help="Warm-start prior")
     parser.add_argument("--epochs", type=int, default=20, help="Number of optimization epochs")
     parser.add_argument("--batch-size", type=int, default=64, help="Calibration batch size")
     parser.add_argument("--output", default="./gsq_qwen3_0.6b", help="Output path")
@@ -40,6 +41,7 @@ def main():
     config = GSQConfig(
         bits=bits,
         group_size=args.group_size,
+        init_method=args.init_method,
         num_epochs=args.epochs,
         batch_size=args.batch_size,
         device=args.device,

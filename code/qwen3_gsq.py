@@ -9,7 +9,6 @@ FIXED: Uses forward hooks to capture real layer activations from calibration dat
 import torch
 import torch.nn as nn
 from typing import Optional, List, Dict, Tuple
-from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from gsq_quantizer import GSQQuantizer, GSQConfig
 
@@ -27,6 +26,8 @@ class Qwen3GSQ:
     def __init__(self, model_path: str = "Qwen/Qwen3-0.6B", config: Optional[GSQConfig] = None):
         self.config = config or GSQConfig()
         self.device = torch.device(self.config.device)
+
+        from transformers import AutoModelForCausalLM, AutoTokenizer
 
         print(f"Loading Qwen3-0.6B from {model_path}...")
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)

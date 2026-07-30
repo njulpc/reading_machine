@@ -44,10 +44,11 @@ quantized_weight, scales = quantizer.quantize(weight, calibration_input)
 
 ## Implementation Details
 
-- **Group-wise quantization**: group_size=128, per-group scales
-- **GPTQ warm-start initialization**: Round-to-nearest initialization with Gaussian noise
-- **Gumbel-Softmax relaxation**: Temperature annealed 2.0 → 0.05, kappa annealed 100 → 500
-- **Lion optimizer**: Sign-based updates with separate LR for logits (1e-4) and scales (5e-5)
-- **Local-shift (b>2)**: Soft indexing maintains gradient flow; 5 logits per coordinate
-- **Integer symmetric grid**: Compatible with scalar inference kernels
-- **Real calibration data**: Forward hooks capture actual layer activations
+- **Group-wise symmetric quantization**: group_size=128, one learnable scale per group; no zero-points
+- **Warm-start**: GPTQ prior by default (`--init-method gptq`); `--init-method rtn` is kept for fast smoke tests
+- **Grids**: ternary `{-1,0,1}`, 2-bit `{-2,-1,0,1}`, b-bit `{-(2^(b-1)), ..., 2^(b-1)-1}`
+- **Gumbel-Softmax relaxation**: temperature annealed 2.0 → 0.05, kappa annealed 100 → 500
+- **Initialization scale**: `init_noise_std=0.01`, `init_alpha=6.0` (paper Eq. 4 / official `std=0.01`, `strength=6`)
+- **Lion optimizer**: separate LR for logits (1e-4, weight decay 1.0) and scales (5e-5, weight decay 0), cosine decay to 10%
+- **Local-shift (b>2)**: learns shifts `{-2,-1,0,+1,+2}` around the initialized grid value with a boundary validity mask
+- **Real calibration data**: forward hooks capture actual layer activations through the already-quantized prefix
