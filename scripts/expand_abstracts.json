@@ -1,0 +1,942 @@
+{
+ "2603.22370": {
+  "id": "2603.22370",
+  "version": "2603.22370v1",
+  "title": "FAAR: Format-Aware Adaptive Rounding for NVFP4",
+  "abstract": "Deploying large language models (LLMs) on edge devices requires extremely low-bit quantization. Ultra-low precision formats such as NVFP4 offer a promising solution for reducing memory footprint and accelerating computation. However, existing quantization methods typically rely on conventional rounding strategies and fail to account for the non-uniformity of the NVFP4 numerical grid, resulting in suboptimal rounding decisions and amplified quantization errors. To address this, we propose Format-Aware Adaptive Rounding (FAAR), a learnable rounding strategy tailored for the NVFP4 format. Unlike conventional quantization paradigms, FAAR explicitly incorporates the non-uniform NVFP4 grid into the optimization process. By adaptively adjusting rounding decisions guided by loss gradients, our method effectively approximates the theoretically optimal quantization. To complement FAAR, we introduce a 2-stages Format Alignment (2FA) fine-tuning scheme that aligns LLM parameters layer-by-layer to the NVFP4 numerical space, further narrowing the performance gap. Remarkably, this learnable optimization incurs a minimal training overhead of only 4 GPU hours on Llama3-1B. Extensive experiments demonstrate the effectiveness of our approach. Compared with Round-to-Nearest (RTN), our method reduces perplexity on WikiText-2 from 14.28 to 12.60 on Llama3-1B and from 23.06 to 21.27 on Qwen3-1.7B. Additionally, our method consistently outperforms state-of-the-art approaches across various zero-shot downstream tasks.",
+  "published": "2026-03-23T06:29:01Z",
+  "updated": "2026-03-23T06:29:01Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Hanglin Li",
+   "Shuchang Tian",
+   "Chen Lin",
+   "Zhiyong Zhao",
+   "Kun Zhan"
+  ],
+  "hits": [
+   "quant"
+  ]
+ },
+ "2603.11021": {
+  "id": "2603.11021",
+  "version": "2603.11021v2",
+  "title": "Leech Lattice Vector Quantization for Efficient LLM Compression",
+  "abstract": "Scalar quantization of large language models (LLMs) is fundamentally limited by information-theoretic bounds. While vector quantization (VQ) overcomes these limits by encoding blocks of parameters jointly, practical implementations must avoid the need for expensive lookup mechanisms or other explicit codebook storage. Lattice approaches address this through highly structured and dense packing. This paper explores the Leech lattice, which, with its optimal sphere packing and kissing configurations at 24 dimensions, is the highest dimensional lattice known with such optimal properties. To make the Leech lattice usable for LLM quantization, we extend an existing search algorithm based on the extended Golay code construction, to i) support indexing, enabling conversion to and from bitstrings without materializing the codebook, ii) allow angular search over union of Leech lattice shells, iii) propose fully-parallelisable dequantization kernel. Lastly, we provide a geometric reinterpretation of combining shape--gain quantization with GPTQ-style Hessian corrections: the standard scale-correction step of shape--gain acts as a retraction onto a product of spheres, yielding a Spherical GPTQ primarily acting on directions. We find that low-angular-distortion LLVQ reduces sensitivity to Hadamard/rotation preprocessing, and enables a strong Hadamard-free PTQ in practice. LLVQ delivers state-of-the-art LLM quantization performance, outperforming recent methods such as Quip\\#, QTIP, and PVQ. The results highlight the effectiveness of high-dimensional lattices for scalable, theoretically grounded model compression.",
+  "published": "2026-03-11T17:48:45Z",
+  "updated": "2026-07-07T12:10:29Z",
+  "categories": [
+   "cs.LG"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Tycho F. A. van der Ouderaa",
+   "Mart van Baalen",
+   "Paul Whatmough",
+   "Markus Nagel"
+  ],
+  "hits": [
+   "quant",
+   "prune",
+   "distill"
+  ]
+ },
+ "2603.17230": {
+  "id": "2603.17230",
+  "version": "2603.17230v1",
+  "title": "KANtize: Exploring Low-bit Quantization of Kolmogorov-Arnold Networks for Efficient Inference",
+  "abstract": "Kolmogorov-Arnold Networks (KANs) have gained attention for their potential to outperform Multi-Layer Perceptrons (MLPs) in terms of parameter efficiency and interpretability. Unlike traditional MLPs, KANs use learnable non-linear activation functions, typically spline functions, expressed as linear combinations of basis splines (B-splines). B-spline coefficients serve as the model's learnable parameters. However, evaluating these spline functions increases computational complexity during inference. Conventional quantization reduces this complexity by lowering the numerical precision of parameters and activations. However, the impact of quantization on KANs, and especially its effectiveness in reducing computational complexity, is largely unexplored, particularly for quantization levels below 8 bits. The study investigates the impact of low-bit quantization on KANs and its impact on computational complexity and hardware efficiency. Results show that B-splines can be quantized to 2-3 bits with negligible loss in accuracy, significantly reducing computational complexity. Hence, we investigate the potential of using low-bit quantized precomputed tables as a replacement for the recursive B-spline algorithm. This approach aims to further reduce the computational complexity of KANs and enhance hardware efficiency while maintaining accuracy. For example, ResKAN18 achieves a 50x reduction in BitOps without loss of accuracy using low-bit-quantized B-spline tables. Additionally, precomputed 8-bit lookup tables improve GPU inference speedup by up to 2.9x, while on FPGA-based systolic-array accelerators, reducing B-spline table precision from 8 to 3 bits cuts resource usage by 36%, increases clock frequency by 50%, and enhances speedup by 1.24x. On a 28nm FD-SOI ASIC, reducing the B-spline bit-width from 16 to 3 bits achieves 72% area reduction and 50% higher maximum frequency.",
+  "published": "2026-03-18T00:32:11Z",
+  "updated": "2026-03-18T00:32:11Z",
+  "categories": [
+   "cs.AR",
+   "cs.AI"
+  ],
+  "primary_category": "cs.AR",
+  "authors": [
+   "Sohaib Errabii",
+   "Olivier Sentieys",
+   "Marcello Traiola"
+  ],
+  "hits": [
+   "quant"
+  ]
+ },
+ "2603.08173": {
+  "id": "2603.08173",
+  "version": "2603.08173v2",
+  "title": "Evolution Strategy-Based Calibration for Low-Bit Quantization of Speech Models",
+  "abstract": "Quantization has become essential for the efficient deployment of speech processing systems. Although widely studied, most existing quantization methods were developed for vision and NLP architectures, while the specific challenges of audio signals remain largely overlooked. In particular, we show that audio activations can exhibit large calibration ranges, leading to significant information loss when standard calibration techniques are applied. To address this, we propose ESC, an Evolution Strategy-based Calibration method that formulates activation scaling as an optimization problem and solves it using a two-step local-global scheme driven by an evolution strategy. ESC enables unaltered performance under full INT8 quantization and is the first calibration method to achieve near-lossless performance for full INT4 quantization across multiple speech tasks. Integrating ESC with PTQ methods further reduces performance loss, achieving a 1% relative accuracy degradation on the AST model.",
+  "published": "2026-03-09T09:53:05Z",
+  "updated": "2026-07-18T12:50:12Z",
+  "categories": [
+   "cs.SD",
+   "cs.AI"
+  ],
+  "primary_category": "cs.SD",
+  "authors": [
+   "Lucas Rakotoarivony"
+  ],
+  "hits": [
+   "quant"
+  ]
+ },
+ "2603.16731": {
+  "id": "2603.16731",
+  "version": "2603.16731v1",
+  "title": "Understanding Quantization of Optimizer States in LLM Pre-training: Dynamics of State Staleness and Effectiveness of State Resets",
+  "abstract": "Quantizing optimizer states is becoming an important ingredient of memory-efficient large-scale pre-training, but the resulting optimizer dynamics remain only partially understood. We study low-precision exponential moving average (EMA) optimizer states and show how quantization can cause many nominal updates to round back to the same stored value, making the state effectively stale and slowing adaptation beyond what the nominal decay would suggest. We then develop a simple predictive model of stalling that estimates one-step stalling probabilities and characterizes how stalling builds up over time after the initialization. This perspective provides a mechanistic explanation for why optimizer-state resets help in low precision: once a quantized EMA becomes effectively stale, resetting it can temporarily restore responsiveness. Motivated by this picture, we derive a simple theory-guided method for choosing useful reset periods, showing that in low precision the key question is not only whether resets help, but when they should be applied. Experiments in controlled simulations and LLM pre-training show that suitable reset schedules recover the performance lost to low-precision state storage while substantially reducing optimizer-state memory.",
+  "published": "2026-03-17T16:14:36Z",
+  "updated": "2026-03-17T16:14:36Z",
+  "categories": [
+   "cs.LG"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Kristi Topollai",
+   "Anna Choromanska"
+  ],
+  "hits": [
+   "quant"
+  ]
+ },
+ "2603.07904": {
+  "id": "2603.07904",
+  "version": "2603.07904v2",
+  "title": "DyQ-VLA: Temporal-Dynamic-Aware Quantization for Embodied Vision-Language-Action Models",
+  "abstract": "Vision-Language-Action (VLA) models are dominant in embodied intelligence but are constrained by inference overheads. While model quantization alleviates these bottlenecks for edge deployment, static quantization approaches remain suboptimal for VLAs due to two critical challenges: (1) Temporal-dynamic sensitivity, where fixed precision wastes resources by ignoring stage-varying error tolerances; and (2) Real-time allocation, where identifying real-time sensitivity to guide bit allocation remains unsolved. To address these challenges, we propose DyQ-VLA, a dynamic quantization framework for VLAs. Specifically, a sensitivity-aware switching strategy leverages real-time kinematic proxies to trigger the bit-width switch, while a kinematic-guided module dynamically allocates the optimal bit-width. Experiments show that DyQ-VLA requires only 30.9% of the original memory footprint while maintaining 99.5% of its original performance, achieving 1.49x simulation and up to 1.43x real-world speedups.",
+  "published": "2026-03-09T02:52:57Z",
+  "updated": "2026-03-14T08:30:13Z",
+  "categories": [
+   "cs.LG",
+   "cs.RO"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Zihao Zheng",
+   "Hangyu Cao",
+   "Sicheng Tian",
+   "Jiayu Chen",
+   "Maoliang Li",
+   "Xinhao Sun",
+   "Hailong Zou",
+   "Zhaobo Zhang",
+   "Xuanzhe Liu",
+   "Donggang Cao",
+   "Hong Mei",
+   "Xiang Chen"
+  ],
+  "hits": [
+   "quant"
+  ]
+ },
+ "2603.03380": {
+  "id": "2603.03380",
+  "version": "2603.03380v1",
+  "title": "LiteVLA-Edge: Quantized On-Device Multimodal Control for Embedded Robotics",
+  "abstract": "Vision-Language-Action (VLA) models provide a unified framework for perception, language conditioning, and action generation, but many existing systems remain difficult to deploy in embedded robotic settings because of their computational requirements and inference latency. In this paper, we present LiteVLA-Edge, a deployment-oriented VLA pipeline for fully on-device inference on Jetson Orin-class hardware. Our approach combines supervised image-to-action fine-tuning in FP32 with post-training 4-bit GGUF quantization and GPU-accelerated inference through the \\texttt{llama.cpp} runtime. Under our deployment configuration, LiteVLA-Edge achieves a mean end-to-end latency of 150.5\\,ms (approximately 6.6\\,Hz) while operating entirely offline within a ROS~2-integrated perception--reasoning--action pipeline. Rather than introducing a new policy objective, our contribution is a practical systems path for executing compact multimodal control models locally on embedded hardware while preserving modular interfaces between perception, reasoning, and actuation. These results establish timing feasibility for reactive language-conditioned control and provide a reproducible baseline for future task-level evaluation of on-device VLAs in robotics.",
+  "published": "2026-03-03T03:20:52Z",
+  "updated": "2026-03-03T03:20:52Z",
+  "categories": [
+   "cs.RO",
+   "cs.AI"
+  ],
+  "primary_category": "cs.RO",
+  "authors": [
+   "Justin Williams",
+   "Kishor Datta Gupta",
+   "Roy George",
+   "Mrinmoy Sarkar"
+  ],
+  "hits": [
+   "quant"
+  ]
+ },
+ "2603.22943": {
+  "id": "2603.22943",
+  "version": "2603.22943v1",
+  "title": "PersonalQ: Select, Quantize, and Serve Personalized Diffusion Models for Efficient Inference",
+  "abstract": "Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these repositories efficiently is difficult for two reasons: natural-language requests are often ambiguous and can be misrouted to visually similar checkpoints, and standard post-training quantization can distort the fragile representations that encode personalized concepts. We present PersonalQ, a unified framework that connects checkpoint selection and quantization through a shared signal -- the checkpoint's trigger token. Check-in performs intent-aligned selection by combining intent-aware hybrid retrieval with LLM-based reranking over checkpoint context and asks a brief clarification question only when multiple intents remain plausible; it then rewrites the prompt by inserting the selected checkpoint's canonical trigger. Complementing this, Trigger-Aware Quantization (TAQ) applies trigger-aware mixed precision in cross-attention, preserving trigger-conditioned key/value rows (and their attention weights) while aggressively quantizing the remaining pathways for memory-efficient inference. Experiments show that PersonalQ improves intent alignment over retrieval and reranking baselines, while TAQ consistently offers a stronger compression-quality trade-off than prior diffusion PTQ methods, enabling scalable serving of personalized checkpoints without sacrificing fidelity.",
+  "published": "2026-03-24T08:39:35Z",
+  "updated": "2026-03-24T08:39:35Z",
+  "categories": [
+   "cs.AI"
+  ],
+  "primary_category": "cs.AI",
+  "authors": [
+   "Qirui Wang",
+   "Qi Guo",
+   "Yiding Sun",
+   "Junkai Yang",
+   "Dongxu Zhang",
+   "Shanmin Pang",
+   "Qing Guo"
+  ],
+  "hits": [
+   "quant"
+  ]
+ },
+ "2603.01399": {
+  "id": "2603.01399",
+  "version": "2603.01399v1",
+  "title": "Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification",
+  "abstract": "Speculative Decoding (SD) has emerged as a premier technique for accelerating Large Language Model (LLM) inference by decoupling token generation into rapid drafting and parallel verification. While recent advancements in self-speculation and lookahead decoding have successfully minimized drafting overhead, they have shifted the primary performance bottleneck to the verification phase. Since verification requires a full forward pass of the target model, it remains strictly memory-bandwidth bound, fundamentally limiting the maximum achievable speedup.In this paper, we introduce \\textbf{Quasar} (\\textbf{Qua}ntized \\textbf{S}elf-speculative \\textbf{A}cceleration for \\textbf{R}apid Inference), a novel, training-free framework designed to overcome this \"memory wall\" by employing low-bit quantization specifically for the verification stage. Our empirical analysis reveals that while aggressive structural pruning significantly degrades verification accuracy, quantization-based verification preserves the logit distribution with high fidelity while effectively halving memory traffic. Extensive experiments on state-of-the-art models (e.g., OpenPangu and Qwen3) demonstrate that Quasar maintains a speculative acceptance length comparable to full-precision methods while achieving a $1.28\\times$ improvement in end-to-end throughput. Being orthogonal to existing drafting strategies, Quasar offers a generic and efficient pathway to accelerate the verification leg of speculative execution. Code is available at https://github.com/Tom-HG/Quasar.",
+  "published": "2026-03-02T03:02:25Z",
+  "updated": "2026-03-02T03:02:25Z",
+  "categories": [
+   "cs.DC",
+   "cs.LG"
+  ],
+  "primary_category": "cs.DC",
+  "authors": [
+   "Guang Huang",
+   "Zeyi Wen"
+  ],
+  "hits": [
+   "quant",
+   "prune",
+   "distill"
+  ]
+ },
+ "2604.09595": {
+  "id": "2604.09595",
+  "title": "Why Smaller Is Slower? Dimensional Misalignment in Compressed LLMs",
+  "abstract": "Post-training compression reduces LLM parameter counts but often produces irregular tensor dimensions that degrade GPU performance -- a phenomenon we call \\emph{dimensional misalignment}. We present a full-stack analysis tracing root causes at three levels: framework, library, and hardware. The key insight is that model inference becomes slower because the resulting dimensions are unfriendly with the GPU execution stack. For example, compressing Llama-3-8B with activation-aware singular value decomposition (ASVD) has 15\\% fewer parameters yet runs no faster than the uncompressed baseline, because 95\\% of its dimensions are misaligned. We propose \\textbf{GAC} (GPU-Aligned Compression), a new compression paradigm that wraps any dimension-reducing compressor and re-selects hardware-aligned dimensions via multi-choice knapsack optimization under the same parameter budget. We evaluate GAC on Llama-3-8B with ASVD and LLM-Pruner, achieving 100\\% alignment and recovering up to 1.5$\\times$ speedup while preserving model quality.",
+  "published": "2026-03-05T14:50:39Z",
+  "categories": [
+   "cs.DC",
+   "cs.AI"
+  ],
+  "authors": [
+   "Jihao Xin",
+   "Tian Lyu",
+   "Qilong Pan",
+   "Kesen Wang",
+   "Marco Canini"
+  ]
+ },
+ "2603.16435": {
+  "id": "2603.16435",
+  "version": "2603.16435v1",
+  "title": "VQKV: High-Fidelity and High-Ratio Cache Compression via Vector-Quantization",
+  "abstract": "The growing context length of Large Language Models (LLMs) enlarges the Key-Value (KV) cache, limiting deployment in resource-limited environments. Prior training-free approaches for KV cache compression typically rely on low-rank approximation or scalar quantization, which fail to simultaneously achieve high compression ratios and high reconstruction fidelity. We propose VQKV, a novel, training-free method introducing vector quantization (VQ) to obtain highly compressed KV representations while preserving high model fidelity, allowing for the representation of thousands of floating-point values with just a few integer indices. As a result, VQKV achieves an 82.8\\% compression ratio on LLaMA3.1-8B while retaining 98.6\\% of the baseline performance on LongBench and enabling 4.3x longer generation length on the same memory footprint.",
+  "published": "2026-03-17T12:16:06Z",
+  "updated": "2026-03-17T12:16:06Z",
+  "categories": [
+   "cs.CL"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Yixuan Wang",
+   "Qingyu Shi",
+   "Jiayu Zhou",
+   "Dianbo Liu",
+   "Ziwei He",
+   "Zhouhan Lin"
+  ],
+  "hits": [
+   "quant",
+   "prune",
+   "distill"
+  ]
+ },
+ "2603.22910": {
+  "id": "2603.22910",
+  "version": "2603.22910v2",
+  "title": "EchoKV: Efficient KV Cache Compression via Similarity-Based Reconstruction",
+  "abstract": "The increasing memory demand of the Key-Value (KV) cache poses a significant bottleneck for Large Language Models (LLMs) in long-context applications. Existing low-rank KV compression methods reduce this footprint by modifying model projections, limiting the flexibility to switch back to standard full-cache inference when sufficient memory is available. In this paper, we propose EchoKV, a flexible KV cache compression framework that supports on-demand transitions from full KV caching to compressed caching. Unlike traditional compression-decompression paradigms, EchoKV utilizes a lightweight network to reconstruct the discarded KV components from a partial subset, exploiting intrinsic inter-layer and intra-layer similarities among attention heads. We further introduce a lightweight two-stage fine-tuning strategy, requiring only a few minutes on a single A100 GPU for a 7B model. Experimental results on LongBench and RULER demonstrate that EchoKV consistently outperforms existing methods across multiple compression ratios and backbone models while preserving the throughput of full-cache inference in short-context scenarios.",
+  "published": "2026-03-24T07:58:42Z",
+  "updated": "2026-05-13T05:25:05Z",
+  "categories": [
+   "cs.CL"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Shiyu Ji",
+   "Yixuan Wang",
+   "Yijun Liu",
+   "Qingfu Zhu",
+   "Wanxiang Che"
+  ],
+  "hits": [
+   "prune",
+   "distill"
+  ]
+ },
+ "2603.11564": {
+  "id": "2603.11564",
+  "version": "2603.11564v1",
+  "title": "Where Matters More Than What: Decoding-aligned KV Cache Compression via Position-aware Pseudo Queries",
+  "abstract": "The Key-Value (KV) cache is crucial for efficient Large Language Models (LLMs) inference, but excessively long contexts drastically increase KV cache memory footprint. Existing KV cache compression methods typically rely on input-side attention patterns within a prompt observation window to estimate token importance during the prefill stage. They fail to preserve critical tokens for future generation since these assessments are not derived from the decoding process. Intuitively, an effective observation window should mirror the decoding-stage queries to accurately reflect which tokens the generation process will attend to. However, ground-truth decoding queries are inherently unavailable during inference. For constructing pseudo queries to approximate them, we find that positional information plays a more critical role than semantic content. Motivated by this insight, we propose decoding-aligned KV cache compression via position-aware pseudo queries (DapQ), a novel and lightweight eviction framework that leverages position-aware pseudo queries to simulate the output tokens, thereby establishing an effective observation window for importance assessment. It aligns closely with the actual generation context and enables precise token eviction. Extensive evaluations across multiple benchmarks and LLMs demonstrate that DapQ achieves superior performance, particularly under strict memory constraints (e.g., up to nearly lossless performance 99.5% on NIAH with 3% KV cache budgets).",
+  "published": "2026-03-12T05:36:32Z",
+  "updated": "2026-03-12T05:36:32Z",
+  "categories": [
+   "cs.CL"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Zhenxu Tian",
+   "Yi Su",
+   "Juntao Li",
+   "Min Zhang"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2603.14224": {
+  "id": "2603.14224",
+  "version": "2603.14224v1",
+  "title": "Self-Indexing KVCache: Predicting Sparse Attention from Compressed Keys",
+  "abstract": "The KV cache in self-attention has emerged as a major bottleneck in long-context and large-batch inference for LLMs. Existing approaches often treat sparsity prediction and compression as separate modules, relying on auxiliary index structures to select relevant tokens, and on complex quantization schemes to reduce memory usage. This fragmented design introduces redundant overhead and limits scalability. In this paper, we propose a novel paradigm: treating the compressed key representation not merely as storage, but as a self-indexing structure that directly enables efficient sparse attention. By designing a sign-based 1-bit vector quantization (VQ) scheme, our method unifies compression and retrieval in a single, hardware-friendly format. This approach eliminates the need for external indices or learning-based predictors, offering a lightweight yet robust solution for memory-constrained inference. All components are designed to be hardware-efficient and easy to implement. By implementing custom CUDA kernels, our method integrates seamlessly with FlashAttention, minimizing additional runtime and memory overhead. Experimental results demonstrate that our approach delivers both effectiveness and efficiency.",
+  "published": "2026-03-15T05:02:17Z",
+  "updated": "2026-03-15T05:02:17Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Xu Yang",
+   "Jiapeng Zhang",
+   "Dongyang Zhao",
+   "Guo Chen",
+   "Zhuo Tang"
+  ],
+  "hits": [
+   "quant",
+   "prune",
+   "distill"
+  ]
+ },
+ "2603.14303": {
+  "id": "2603.14303",
+  "version": "2603.14303v1",
+  "title": "SemantiCache: Efficient KV Cache Compression via Semantic Chunking and Clustered Merging",
+  "abstract": "Existing KV cache compression methods generally operate on discrete tokens or non-semantic chunks. However, such approaches often lead to semantic fragmentation, where linguistically coherent units are disrupted, causing irreversible information loss and degradation in model performance. To address this, we introduce SemantiCache, a novel compression framework that preserves semantic integrity by aligning the compression process with the semantic hierarchical nature of language. Specifically, we first partition the cache into semantically coherent chunks by delimiters, which are natural semantic boundaries. Within each chunk, we introduce a computationally efficient Greedy Seed-Based Clustering (GSC) algorithm to group tokens into semantic clusters. These clusters are further merged into semantic cores, enhanced by a Proportional Attention mechanism that rebalances the reduced attention contributions of the merged tokens. Extensive experiments across diverse benchmarks and models demonstrate that SemantiCache accelerates the decoding stage of inference by up to 2.61 times and substantially reduces memory footprint, while maintaining performance comparable to the original model.",
+  "published": "2026-03-15T09:36:25Z",
+  "updated": "2026-03-15T09:36:25Z",
+  "categories": [
+   "cs.CL"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Shunlong Wu",
+   "Hai Lin",
+   "Shaoshen Chen",
+   "Tingwei Lu",
+   "Yongqin Zeng",
+   "Shaoxiong Zhan",
+   "Hai-Tao Zheng",
+   "Hong-Gee Kim"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2603.19664": {
+  "id": "2603.19664",
+  "version": "2603.19664v1",
+  "title": "The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference",
+  "abstract": "The key-value (KV) cache is widely treated as essential state in transformer inference, and a large body of work engineers policies to compress, evict, or approximate its entries. We prove that this state is entirely redundant: keys and values at every layer are deterministic projections of the residual stream, and recomputing them from a single residual vector per token incurs exactly zero reconstruction error, not approximately, but bit-identically. We verify this across six models from four architecture families (135M to 4B parameters). Cross-task residual patching at every layer produces D_KL = 0 between patched and original output distributions, confirming that the residual stream satisfies a Markov property and is the sole information-carrying state. Removing the cache entirely and recomputing from scratch yields token-identical output under greedy decoding on all models tested. We build on this result with KV-Direct, a bounded-memory inference scheme that checkpoints residual vectors (5 KB per token on Gemma 3-4B) instead of full KV pairs (136 KB), recomputing keys and values on demand. Over 20 conversation turns, KV-Direct holds peak memory at 42 MB while the standard cache grows past 103 MB. Against five eviction baselines (H2O, StreamingLLM, SnapKV, TOVA, window-only), KV-Direct maintains 100% token match at every cache budget; all baselines degrade to 5-28%. A per-operation latency analysis shows recomputation runs up to 5x faster than reading cached tensors at moderate batch sizes. Code is available at https://github.com/Kaleemullahqasim/KV-Direct.",
+  "published": "2026-03-20T05:59:50Z",
+  "updated": "2026-03-20T05:59:50Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Kaleem Ullah Qasim",
+   "Jiashu Zhang",
+   "Muhammad Kafeel Shaheen",
+   "Razan Alharith",
+   "Heying Zhang"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2604.19769": {
+  "id": "2604.19769",
+  "version": "2604.19769v1",
+  "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference",
+  "abstract": "Key-value (KV) caching is critical for efficient inference in large language models (LLMs), yet its memory footprint scales linearly with context length, resulting in a severe scalability bottleneck. Existing approaches largely treat KV states as equally important across time, implicitly assuming uniform precision and accessibility. However, this assumption contrasts with human memory systems, where memories vary in clarity, recall frequency, and relevance with temporal proximity.Motivated by this insight, we propose TTKV, a KV cache management framework that maps the human memory system onto the KV cache. TTKV partitions the KV cache into temporal tiers with heterogeneous capacity and precision. The design addresses three aspects: (1) Tier Layout, decoupling fast and slow memory using HBM and DRAM; (2) Tier Content, assigning more recent KV states to faster, higher-precision tiers based on temporal proximity; and (3) Tier Interaction, employing block-wise streaming attention to overlap communication and computation when accessing slow tiers. Experiments show that TTKV reduces cross-tier traffic by 5.94x on 128K-context tasks, achieving up to 76% latency reduction and 2x throughput improvement over strong baselines.",
+  "published": "2026-03-27T09:01:23Z",
+  "updated": "2026-03-27T09:01:23Z",
+  "categories": [
+   "cs.CL",
+   "cs.AI",
+   "cs.LG"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Gradwell Dzikanyanga",
+   "Weihao Yang",
+   "Hao Huang",
+   "Donglei Wu",
+   "Shihao Wang",
+   "Wen Xia",
+   "Sanjeeb K C"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2603.10899": {
+  "id": "2603.10899",
+  "version": "2603.10899v1",
+  "title": "LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation",
+  "abstract": "Transformer-based large language models (LLMs) rely on key-value (KV) caching to avoid redundant computation during autoregressive inference. While this mechanism greatly improves efficiency, the cache size grows linearly with the input sequence length, quickly becoming a bottleneck for long-context tasks. Existing solutions mitigate this problem by evicting prompt KV that are deemed unimportant, guided by estimated importance scores. Notably, a recent line of work proposes to improve eviction quality by \"glimpsing into the future\", in which a draft generator produces a surrogate future response approximating the target model's true response, and this surrogate is subsequently used to estimate the importance of cached KV more accurately. However, these approaches rely on computationally expensive draft generation, which introduces substantial prefilling overhead and limits their practicality in real-world deployment. To address this challenge, we propose LookaheadKV, a lightweight eviction framework that leverages the strength of surrogate future response without requiring explicit draft generation. LookaheadKV augments transformer layers with parameter-efficient modules trained to predict true importance scores with high accuracy. Our design ensures negligible runtime overhead comparable to existing inexpensive heuristics, while achieving accuracy superior to more costly approximation methods. Extensive experiments on long-context understanding benchmarks, across a wide range of models, demonstrate that our method not only outperforms recent competitive baselines in various long-context understanding tasks, but also reduces the eviction cost by up to 14.5x, leading to significantly faster time-to-first-token. Our code is available at https://github.com/SamsungLabs/LookaheadKV.",
+  "published": "2026-03-11T15:44:32Z",
+  "updated": "2026-03-11T15:44:32Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Jinwoo Ahn",
+   "Ingyu Seong",
+   "Akhil Kedia",
+   "Junhan Kim",
+   "Hyemi Jang",
+   "Kangwook Lee",
+   "Yongkweon Jeon"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2603.08083": {
+  "id": "2603.08083",
+  "version": "2603.08083v1",
+  "title": "High-Fidelity Pruning for Large Language Models",
+  "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance across a wide range of tasks, yet their significant computational and memory requirements present major challenges for deployment. A common approach uses Taylor expansion on the loss function to estimate neuron importance. However, its reliance on one-hot cross entropy loss, a key limitation is that it narrowly assesses importance based only on the probability assigned to the single predicted next token, thereby ignoring the other potential predictions of the original model. An intuitive solution to address this is to employ self distillation criterion for importance evaluation. However, this approach introduces significant computational overhead by requiring a separate teacher model for supervision. To this end, we propose a simple but effective criterion, information entropy of the model's output distribution, to efficiently evaluate importance scores of neurons with Taylor pruning without requirement of additional teacher. Compared to plain cross entropy criterion, it provides a more holistic criterion for Taylor pruning to prune neurons with the least impact on the prediction of model in a global manner, thereby preserving the fidelity of the model's predictive capabilities. Experimental results on extensive zero-shot benchmarks demonstrate that our method consistently outperforms existing pruning methods across the LLaMA and Qwen series models. The source code and trained weights are availabel at https://github.com/visresearch/HFPrune.",
+  "published": "2026-03-09T08:24:48Z",
+  "updated": "2026-03-09T08:24:48Z",
+  "categories": [
+   "cs.CL"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Yijun Zhu",
+   "Jianxin Wang",
+   "Chengchao Shen"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.06003": {
+  "id": "2603.06003",
+  "version": "2603.06003v2",
+  "title": "EvoESAP: Non-Uniform Expert Pruning for Sparse MoE",
+  "abstract": "Sparse Mixture-of-Experts (SMoE) language models achieve strong capability at low per-token compute, yet deployment remains constrained by memory footprint and throughput because the full expert pool must still be stored and served. Post-training expert pruning reduces this cost, but most methods focus on which experts to prune within each layer and default to a uniform layer-wise sparsity allocation, even though the layer-wise allocation can strongly affect performance. We decouple pruning into within-layer expert ranking and across-layer budget allocation, and introduce \\textbf{E}xpected \\textbf{S}peculative \\textbf{A}cceptance \\textbf{P}roxy (\\textbf{ESAP}), a speculative-decoding-inspired, teacher-forced metric that measures how well a pruned model matches the full model without costly autoregressive decoding. ESAP is bounded and stable, enabling cheap comparison of many candidates. Building on ESAP, we propose EvoESAP, an evolutionary search framework that finds an improved non-uniform layer-wise sparsity allocation under a fixed global budget while holding the within-layer pruning order fixed, making it a plug-and-play method for criteria such as Frequency, EAN, SEER, and REAP. Across 7B--30B SMoE LLMs at 25\\% and 50\\% sparsity, EvoESAP consistently discovers non-uniform allocations that improve open-ended generation (up to \\textbf{+19.6\\%} on MATH-500 at 50\\% sparsity) while preserving competitive multiple-choice accuracy compared with uniform pruning at the same sparsity. Code is available at https://github.com/ZongfangLiu/EvoESAP.",
+  "published": "2026-03-06T08:02:58Z",
+  "updated": "2026-04-11T04:36:36Z",
+  "categories": [
+   "cs.LG"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Zongfang Liu",
+   "Shengkun Tang",
+   "Boyang Sun",
+   "Zhiqiang Shen",
+   "Xin Yuan"
+  ],
+  "hits": [
+   "prune",
+   "distill"
+  ]
+ },
+ "2603.18492": {
+  "id": "2603.18492",
+  "version": "2603.18492v3",
+  "title": "AIMER: Calibration-Free Task-Agnostic MoE Expert Pruning",
+  "abstract": "Mixture-of-Experts (MoE) language models increase parameter capacity without proportional per-token computation, yet deployment still requires storing the full expert pool, making expert pruning important for reducing memory and serving overhead. Existing task-agnostic expert-pruning methods are typically calibration-dependent: they estimate expert importance from routing or activation statistics on a calibration set, making pruning decisions sensitive to calibration-data variation while introducing substantial preprocessing cost. We propose AIMER (\\textbf{A}bsolute mean over root mean square \\textbf{IM}portance for \\textbf{E}xpert \\textbf{R}anking), a simple calibration-free criterion that identifies more distinct experts by capturing the concentration pattern of expert weights, making it well suited for task-agnostic expert pruning. Across 7B to 47B MoE language models with distinct architectures and 16 diverse benchmarks, AIMER consistently delivers stronger capability balance across diverse tasks than existing calibration-free methods. Surprisingly, AIMER also achieves better balance than strong calibration-based expert-pruning baselines calibrated on the widely used task-agnostic C4 corpus, while requiring only 0.22--2.06 seconds to score all experts.",
+  "published": "2026-03-19T04:54:37Z",
+  "updated": "2026-06-16T06:49:37Z",
+  "categories": [
+   "cs.LG"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Zongfang Liu",
+   "Guangyi Chen",
+   "Shengkun Tang",
+   "Yifan Shen",
+   "Huan Wang",
+   "Xin Yuan"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.05105": {
+  "id": "2603.05105",
+  "version": "2603.05105v1",
+  "title": "Diff-ES: Stage-wise Structural Diffusion Pruning via Evolutionary Search",
+  "abstract": "Diffusion models have achieved remarkable success in high-fidelity image generation but remain computationally demanding due to their multi-step denoising process and large model sizes. Although prior work improves efficiency either by reducing sampling steps or by compressing model parameters, existing structured pruning approaches still struggle to balance real acceleration and image quality preservation. In particular, prior methods such as MosaicDiff rely on heuristic, manually tuned stage-wise sparsity schedules and stitch multiple independently pruned models during inference, which increases memory overhead. However, the importance of diffusion steps is highly non-uniform and model-dependent. As a result, schedules derived from simple heuristics or empirical observations often fail to generalize and may lead to suboptimal performance. To this end, we introduce \\textbf{Diff-ES}, a stage-wise structural \\textbf{Diff}usion pruning framework via \\textbf{E}volutionary \\textbf{S}earch, which optimizes the stage-wise sparsity schedule and executes it through memory-efficient weight routing without model duplication. Diff-ES divides the diffusion trajectory into multiple stages, automatically discovers an optimal stage-wise sparsity schedule via evolutionary search, and activates stage-conditioned weights dynamically without duplicating model parameters. Our framework naturally integrates with existing structured pruning methods for diffusion models including depth and width pruning. Extensive experiments on DiT and SDXL demonstrate that Diff-ES consistently achieves wall-clock speedups while incurring minimal degradation in generation quality, establishing state-of-the-art performance for structured diffusion model pruning.",
+  "published": "2026-03-05T12:18:40Z",
+  "updated": "2026-03-05T12:18:40Z",
+  "categories": [
+   "cs.CV"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "Zongfang Liu",
+   "Shengkun Tang",
+   "Zongliang Wu",
+   "Xin Yuan",
+   "Zhiqiang Shen"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.20280": {
+  "id": "2603.20280",
+  "version": "2603.20280v1",
+  "title": "Mix-and-Match Pruning: Globally Guided Layer-Wise Sparsification of DNNs",
+  "abstract": "Deploying deep neural networks (DNNs) on edge devices requires strong compression with minimal accuracy loss. This paper introduces Mix-and-Match Pruning, a globally guided, layer-wise sparsification framework that leverages sensitivity scores and simple architectural rules to generate diverse, high-quality pruning configurations. The framework addresses a key limitation that different layers and architectures respond differently to pruning, making single-strategy approaches suboptimal. Mix-and-Match derives architecture-aware sparsity ranges, e.g., preserving normalization layers while pruning classifiers more aggressively, and systematically samples these ranges to produce ten strategies per sensitivity signal (magnitude, gradient, or their combination). This eliminates repeated pruning runs while offering deployment-ready accuracy-sparsity trade-offs. Experiments on CNNs and Vision Transformers demonstrate Pareto-optimal results, with Mix-and-Match reducing accuracy degradation on Swin-Tiny by 40% relative to standard single-criterion pruning. These findings show that coordinating existing pruning signals enables more reliable and efficient compressed models than introducing new criteria.",
+  "published": "2026-03-17T23:27:07Z",
+  "updated": "2026-03-17T23:27:07Z",
+  "categories": [
+   "cs.CV",
+   "cs.AR",
+   "cs.LG"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "Danial Monachan",
+   "Samira Nazari",
+   "Mahdi Taheri",
+   "Ali Azarpeyvand",
+   "Milos Krstic",
+   "Michael Huebner",
+   "Christian Herglotz"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.20991": {
+  "id": "2603.20991",
+  "version": "2603.20991v2",
+  "title": "Structural Sensitivity in Compressed Transformers: Relative Error Propagation and Layer Removal",
+  "abstract": "Compressing transformer weights makes large language models cheaper to deploy. But each layer's compression introduces an error. These errors accumulate as the signal passes through later layers, and how they accumulate is not well understood. We measure this directly: at each layer, we take the ratio of output to input error, calling it rho. A value below one means the layer absorbs the error; above one means it grows. Computing rho on six transformers (117M to 8B parameters) yields three findings. (i) Errors at layer t scale downstream by the product of later rho values, predicting representation drift (Spearman r = -0.44, p < 10^-4). This explains why compressing early layers hurts more than late ones, and why depth-decreasing sparsity schedules outperform uniform ones. Across architecture families, however, model width and redundancy matter more than rho alone. (ii) Within a layer, naive pruning shows a ~600x spread in component sensitivity. Activation-aware pruning (Wanda) shrinks this to 3-7x; the ranking reverses across architectures, so fixed importance scores do not transfer. (iii) For depth pruning, ranking layers by how far rho is from one takes two forward passes. It beats ShortGPT's Block Influence with 1.6x lower perplexity at eight layers removed, and physical deletion delivers 1.22x wall-clock speed-up. A blend of the two criteria does best (perplexity 14.2, 60.0% downstream accuracy on LLaMA-2-7B). Twelve Lean 4 norm inequalities provide machine-checked per-matrix error bounds. The contraction profile thus gives a training-free instrument for two decisions: where to compress within layers, and which to remove.",
+  "published": "2026-03-22T00:24:08Z",
+  "updated": "2026-05-07T06:45:07Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI",
+   "cs.CL",
+   "cs.LO"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Abhinaba Basu",
+   "Kumkum Basu",
+   "Koushik Deb"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.24652": {
+  "id": "2603.24652",
+  "version": "2603.24652v3",
+  "title": "Demystifying When Pruning Works via Representation Hierarchies",
+  "abstract": "Network pruning, which removes less important parameters or architectures, is often expected to improve efficiency while preserving performance. However, this expectation does not consistently hold across language tasks: pruned models can perform well on non-generative tasks but frequently fail in generative settings. To understand this discrepancy, we analyze network pruning from a representation-hierarchy perspective, decomposing the internal computation of language models into three sequential spaces: embedding (hidden representations), logit (pre-softmax outputs), and probability (post-softmax distributions). We find that representations in the embedding and logit spaces are largely robust to pruning-induced perturbations. However, the nonlinear transformation from logits to probabilities amplifies these deviations, which accumulate across time steps and lead to substantial degradation during generation. In contrast, the stability of the categorical-token probability subspace, together with the robustness of the embedding space, supports the effectiveness of pruning for non-generative tasks such as retrieval and multiple-choice selection. Our analysis disentangles the effects of pruning across tasks and provides practical guidance for its application. Code is available at https://github.com/CASE-Lab-UMD/Pruning-on-Representations",
+  "published": "2026-03-25T17:55:52Z",
+  "updated": "2026-05-11T22:57:09Z",
+  "categories": [
+   "cs.CL",
+   "cs.LG"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Shwai He",
+   "Guoheng Sun",
+   "Haichao Zhang",
+   "Yun Fu",
+   "Ang Li"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.25325": {
+  "id": "2603.25325",
+  "version": "2603.25325v1",
+  "title": "How Pruning Reshapes Features: Sparse Autoencoder Analysis of Weight-Pruned Language Models",
+  "abstract": "Weight pruning is a standard technique for compressing large language models, yet its effect on learned internal representations remains poorly understood. We present the first systematic study of how unstructured pruning reshapes the feature geometry of language models, using Sparse Autoencoders (SAEs) as interpretability probes. Across three model families (Gemma 3 1B, Gemma 2 2B, Llama 3.2 1B), two pruning methods (magnitude and Wanda), and six sparsity levels (0--60%), we investigate five research questions spanning seed stability, feature survival, SAE transferability, feature fragility, and causal relevance. Our most striking finding is that rare SAE features--those with low firing rates--survive pruning far better than frequent ones, with within-condition Spearman correlations of rho = -1.0 in 11 of 17 experimental conditions. This counter-intuitive result suggests that pruning acts as implicit feature selection, preferentially destroying high-frequency generic features while preserving specialized rare ones. We further show that Wanda pruning preserves feature structure up to 3.7x better than magnitude pruning, that pre-trained SAEs remain viable on Wanda-pruned models up to 50% sparsity, and that geometric feature survival does not predict causal importance--a dissociation with implications for interpretability under compression.",
+  "published": "2026-03-26T11:12:42Z",
+  "updated": "2026-03-26T11:12:42Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Hector Borobia",
+   "Elies Seguí-Mas",
+   "Guillermina Tormo-Carbó"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2604.03258": {
+  "id": "2604.03258",
+  "version": "2604.03258v1",
+  "title": "SoLA: Leveraging Soft Activation Sparsity and Low-Rank Decomposition for Large Language Model Compression",
+  "abstract": "Large language models (LLMs) have demonstrated impressive capabilities across various tasks, but the billion-scale parameters pose deployment challenges. Although existing methods attempt to reduce the scale of LLMs, they require either special hardware support or expensive post-training to maintain model quality. To facilitate efficient and affordable model slimming, we propose a novel training-free compression method for LLMs, named \"SoLA\", which leverages \\textbf{So}ft activation sparsity and \\textbf{L}ow-r\\textbf{A}nk decomposition. SoLA can identify and retain a minority of components significantly contributing to inference, while compressing the majority through low-rank decomposition, based on our analysis of the activation pattern in the feed-forward network (FFN) of modern LLMs. To alleviate the decomposition loss, SoLA is equipped with an adaptive component-wise low-rank allocation strategy to assign appropriate truncation positions for different weight matrices. We conduct extensive experiments on LLaMA-2-7B/13B/70B and Mistral-7B models across a variety of benchmarks. SoLA exhibits remarkable improvement in both language modeling and downstream task accuracy without post-training. For example, with a 30\\% compression rate on the LLaMA-2-70B model, SoLA surpasses the state-of-the-art method by reducing perplexity from 6.95 to 4.44 and enhancing downstream task accuracy by 10\\%.",
+  "published": "2026-03-12T04:01:11Z",
+  "updated": "2026-03-12T04:01:11Z",
+  "categories": [
+   "cs.CL",
+   "cs.AI"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Xinhao Huang",
+   "You-Liang Huang",
+   "Zeyi Wen"
+  ],
+  "hits": [
+   "prune",
+   "distill"
+  ]
+ },
+ "2604.03298": {
+  "id": "2604.03298",
+  "version": "2604.03298v2",
+  "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
+  "abstract": "The rapid scaling of Large Language Models presents significant challenges for their deployment and inference, particularly on resource-constrained specialized AI hardware accelerators such as Huawei's Ascend NPUs, where weight data transfer has become a critical performance bottleneck. While lossless compression can preserve model accuracy and reduce data volume, existing lossless compression algorithms exhibit extremely low throughput when ported to the Ascend NPU architecture. In this paper, we propose ENEC, a novel lossless compression method specifically customized for AI model weights and optimized for Ascend Neural Processing Units. ENEC adopts a block-based fixed-length encoding scheme and incorporates a series of NPU-specific optimizations: bit-width quantization with hierarchical halving bit-packing, vectorized branch-free integer transformation, and dependency-decoupled intra-segment scan for efficient prefix-sum computation. Experimental results demonstrate that ENEC outperforms existing state-of-the-art NPU compressors in both compression ratio and throughput. Compared to leading GPU solutions, ENEC achieves a 3.43X higher throughput than DietGPU and a 1.12X better compression ratio than nvCOMP. By reducing weight transmission overhead, ENEC significantly improves end-to-end inference performance, achieving up to a 6.3X speedup. On Ascend NPUs, ENEC is the first open-source lossless compression algorithm for model weights that achieves performance comparable to state-of-the-art GPU compressors, offering an effective solution for deploying large-scale AI models.",
+  "published": "2026-03-28T16:11:56Z",
+  "updated": "2026-04-07T13:42:14Z",
+  "categories": [
+   "cs.AR",
+   "cs.DC",
+   "cs.LG"
+  ],
+  "primary_category": "cs.AR",
+  "authors": [
+   "Jinwu Yang",
+   "Jiaan Wu",
+   "Zedong Liu",
+   "Xinyang Ma",
+   "Hairui Zhao",
+   "Yida Gu",
+   "Yuanhong Huang",
+   "Xingchen Liu",
+   "Wenjing Huang",
+   "Zheng Wei",
+   "Jing Xing",
+   "Yili Ma",
+   "Qingyi Zhang",
+   "Baoyi An",
+   "Zhongzhe Hu",
+   "Shaoteng Liu",
+   "Xia Zhu",
+   "Jiaxun Lu",
+   "Guangming Tan",
+   "Dingwen Tao"
+  ],
+  "hits": [
+   "quant",
+   "prune",
+   "distill"
+  ]
+ },
+ "2603.22056": {
+  "id": "2603.22056",
+  "version": "2603.22056v2",
+  "title": "Dual-Space Knowledge Distillation with Key-Query Matching for Large Language Models with Vocabulary Mismatch",
+  "abstract": "Large language models (LLMs) achieve state-of-the-art (SOTA) performance across language tasks, but are costly to deploy due to their size and resource demands. Knowledge Distillation (KD) addresses this by training smaller Student models to mimic larger Teacher models, improving efficiency without significant performance loss. Dual-Space Knowledge Distillation with Cross-Model Attention (DSKD-CMA) has emerged as a SOTA method for KD between LLMs with distinct tokenizers, yet its internal workings remain largely opaque. In this work, we systematically analyse the attention mechanism of DSKD-CMA through manual token alignment probing and heatmap visualisations, revealing both strengths and limitations. Building on this, we introduce a novel method, DSKD-CMA-GA, based on Generative Adversarial (GA) learning, to address the mismatched distributions between the keys and queries computed from distinct models. Experiments show modest but consistent ROUGE-L gains in text generation quality, particularly on out-of-distribution data (+0.37 on average), narrowing the gap between cross- and same-tokenizer KD.",
+  "published": "2026-03-23T14:53:55Z",
+  "updated": "2026-05-17T16:55:46Z",
+  "categories": [
+   "cs.CL"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Stella Eva Tsiapali",
+   "Cong-Thanh Do",
+   "Kate Knill"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2603.21426": {
+  "id": "2603.21426",
+  "version": "2603.21426v1",
+  "title": "Uncertainty-Aware Knowledge Distillation for Multimodal Large Language Models",
+  "abstract": "Knowledge distillation establishes a learning paradigm that leverages both data supervision and teacher guidance. However, determining the optimal balance between learning from data and learning from the teacher is challenging, as some samples may be noisy while others are subject to teacher uncertainty. This motivates the need for adaptively balancing data and teacher supervision. We propose Beta-weighted Knowledge Distillation (Beta-KD), an uncertainty-aware distillation framework that adaptively modulates how much the student relies on teacher guidance. Specifically, we formulate teacher--student learning from a unified Bayesian perspective and interpret teacher supervision as a Gibbs prior over student activations. This yields a closed-form, uncertainty-aware weighting mechanism and supports arbitrary distillation objectives and their combinations. Extensive experiments on multimodal VQA benchmarks demonstrate that distilling student Vision-Language Models from a large teacher VLM consistently improves performance. The results show that Beta-KD outperforms existing knowledge distillation methods. The code is available at https://github.com/Jingchensun/beta-kd.",
+  "published": "2026-03-22T22:33:25Z",
+  "updated": "2026-03-22T22:33:25Z",
+  "categories": [
+   "cs.CV"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "Jingchen Sun",
+   "Shaobo Han",
+   "Deep Patel",
+   "Wataru Kohno",
+   "Can Jin",
+   "Changyou Chen"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2604.00223": {
+  "id": "2604.00223",
+  "title": "Diversity-Aware Reverse Kullback-Leibler Divergence for Large Language Model Distillation",
+  "abstract": "Reverse Kullback-Leibler (RKL) divergence has recently emerged as the preferred objective for large language model (LLM) distillation, consistently outperforming forward KL (FKL), particularly in regimes with large vocabularies and significant teacher-student capacity mismatch, where RKL focuses learning on dominant modes rather than enforcing dense alignment. However, RKL introduces a structural limitation that drives the student toward overconfident predictions. We first provide an analysis of RKL by decomposing its gradients into target and non-target components, and show that non-target gradients consistently push the target logit upward even when the student already matches the teacher, thereby reducing output diversity. In addition, RKL provides weak supervision over non-target classes, leading to poor tail alignment. To address these issues, we propose Diversity-aware RKL (DRKL), which removes this gradient effect and strengthens non-target supervision while preserving the optimization benefits of RKL. Extensive experiments across datasets and model families demonstrate that DRKL consistently outperforms FKL, RKL, and other state-of-the-art distillation objectives, achieving better performance and a superior fidelity-diversity trade-off.",
+  "published": "2026-03-31T20:39:47Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "authors": [
+   "Hoang-Chau Luong",
+   "Dat Ba Tran",
+   "Lingwei Chen"
+  ]
+ },
+ "2603.25562": {
+  "id": "2603.25562",
+  "title": "Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes",
+  "abstract": "On-policy distillation (OPD) is increasingly used in LLM post-training because it can leverage a teacher model to provide dense supervision on student rollouts. The standard implementation, however, usually reduces distribution matching to a sampled-token log-ratio, which can make the learning signal fragile on long rollouts whose prefixes drift away from the teacher's typical support. We revisit this formulation from both theoretical and implementation perspectives. Theoretically, token-level OPD is biased relative to sequence-level reverse-KL minimization, but admits a substantially tighter worst-case variance bound; a controlled synthetic study further shows that stronger future-reward coupling increases gradient variance and destabilizes training. Empirically, we identify three failure modes of sampled-token OPD: imbalanced token-level supervision, unreliable teacher guidance on student-generated prefixes, and tokenizer or special-token mismatch. These findings motivate teacher top-K local support matching, a truncated reverse-KL objective that compares teacher and student distributions over a teacher-supported token set at each prefix, together with top-p rollout sampling and special-token masking. Across single-task reasoning and multi-task benchmarks spanning agentic and reasoning settings, this objective improves optimization stability and yields a +19.8% performance gain over standard sampled-token OPD baselines, providing a practical recipe for more stable on-policy distillation.",
+  "published": "2026-03-26T15:35:59Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI",
+   "cs.CL"
+  ],
+  "authors": [
+   "Yuqian Fu",
+   "Haohuan Huang",
+   "Kaiwen Jiang",
+   "Jiacai Liu",
+   "Zhuo Jiang",
+   "Yuanheng Zhu",
+   "Dongbin Zhao"
+  ]
+ },
+ "2603.26778": {
+  "id": "2603.26778",
+  "version": "2603.26778v1",
+  "title": "TED: Training-Free Experience Distillation for Multimodal Reasoning",
+  "abstract": "Knowledge distillation is typically realized by transferring a teacher model's knowledge into a student's parameters through supervised or reinforcement-based optimization. While effective, such approaches require repeated parameter updates and large-scale training data, limiting their applicability in resource-constrained environments. In this work, we propose TED, a training-free, context-based distillation framework that shifts the update target of distillation from model parameters to an in-context experience injected into the student's prompt. For each input, the student generates multiple reasoning trajectories, while a teacher independently produces its own solution. The teacher then compares the student trajectories with its reasoning and the ground-truth answer, extracting generalized experiences that capture effective reasoning patterns. These experiences are continuously refined and updated over time. A key challenge of context-based distillation is unbounded experience growth and noise accumulation. TED addresses this with an experience compression mechanism that tracks usage statistics and selectively merges, rewrites, or removes low-utility experiences. Experiments on multimodal reasoning benchmarks MathVision and VisualPuzzles show that TED consistently improves performance. On MathVision, TED raises the performance of Qwen3-VL-8B from 0.627 to 0.702, and on VisualPuzzles from 0.517 to 0.561 with just 100 training samples. Under this low-data, no-update setting, TED achieves performance competitive with fully trained parameter-based distillation while reducing training cost by over 5x, demonstrating that meaningful knowledge transfer can be achieved through contextual experience.",
+  "published": "2026-03-25T01:08:36Z",
+  "updated": "2026-03-25T01:08:36Z",
+  "categories": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Shuozhi Yuan",
+   "Jinqing Wang",
+   "Zihao Liu",
+   "Miaomiao Yuan",
+   "Haoran Peng",
+   "Jin Zhao",
+   "Bingwen Wang",
+   "Haoyi Wang"
+  ],
+  "hits": [
+   "distill"
+  ]
+ },
+ "2603.08258": {
+  "id": "2603.08258",
+  "version": "2603.08258v1",
+  "title": "WaDi: Weight Direction-aware Distillation for One-step Image Synthesis",
+  "abstract": "Despite the impressive performance of diffusion models such as Stable Diffusion (SD) in image generation, their slow inference limits practical deployment. Recent works accelerate inference by distilling multi-step diffusion into one-step generators. To better understand the distillation mechanism, we analyze U-Net/DiT weight changes between one-step students and their multi-step teacher counterparts. Our analysis reveals that changes in weight direction significantly exceed those in weight norm, highlighting it as the key factor during distillation. Motivated by this insight, we propose the Low-rank Rotation of weight Direction (LoRaD), a parameter-efficient adapter tailored to one-step diffusion distillation. LoRaD is designed to model these structured directional changes using learnable low-rank rotation matrices. We further integrate LoRaD into Variational Score Distillation (VSD), resulting in Weight Direction-aware Distillation (WaDi)-a novel one-step distillation framework. WaDi achieves state-of-the-art FID scores on COCO 2014 and COCO 2017 while using only approximately 10% of the trainable parameters of the U-Net/DiT. Furthermore, the distilled one-step model demonstrates strong versatility and scalability, generalizing well to various downstream tasks such as controllable generation, relation inversion, and high-resolution synthesis.",
+  "published": "2026-03-09T11:27:28Z",
+  "updated": "2026-03-09T11:27:28Z",
+  "categories": [
+   "cs.CV"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "Lei Wang",
+   "Yang Cheng",
+   "Senmao Li",
+   "Ge Wu",
+   "Yaxing Wang",
+   "Jian Yang"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.03681": {
+  "id": "2603.03681",
+  "version": "2603.03681v1",
+  "title": "EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs",
+  "abstract": "Multimodal Large Language Models (MLLMs) have shown strong performance in vision-language tasks, but their inference efficiency is severely limited by the exponential growth of visual tokens in complex scenarios such as high-resolution images and videos. Existing visual token pruning methods mainly operate after visual encoding, overlooking the substantial computational cost incurred during the encoding stage. To address this issue, we propose EvoPrune, an early-stage visual token pruning method for MLLMs that performs pruning directly during visual encoding. Specifically, EvoPrune employs a layer-wise pruning strategy guided by token similarity, diversity, and attention-based importance to retain the most informative visual tokens at selected encoding layers. Extensive experiments on image and video benchmarks validate the effectiveness of EvoPrune. In particular, on the VideoMME dataset, EvoPrune achieves 2$\\times$ inference speedup with less than 1% performance degradation, demonstrating its potential for latency-sensitive MLLM deployment.",
+  "published": "2026-03-04T03:15:14Z",
+  "updated": "2026-03-04T03:15:14Z",
+  "categories": [
+   "cs.CV",
+   "cs.AI"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "Yuhao Chen",
+   "Bin Shan",
+   "Xin Ye",
+   "Cheng Chen"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.05950": {
+  "id": "2603.05950",
+  "version": "2603.05950v1",
+  "title": "Energy-Driven Adaptive Visual Token Pruning for Efficient Vision-Language Models",
+  "abstract": "Visual token reduction is critical for accelerating Vision-Language Models (VLMs), yet most existing approaches rely on a fixed budget shared across all inputs, overlooking the substantial variation in image information density. We propose E-AdaPrune, an energy-driven adaptive pruning framework that determines the token budget from the singular value spectrum of the visual features space. By preserving a certain proportion of spectral energy, our method allocates more tokens to information-dense scenes while aggressively compressing redundant ones, without introducing additional learnable parameters. We evaluate E-AdaPrune on nine benchmarks and three VLM backbones, LLaVA-1.5-7B, LLaVA-1.5-13B, and LLaVA-NeXT-8B. Under matched average token budgets, E-AdaPrune consistently yields an average improvement of up to 0.6\\%, including a significant +5.1\\% relative boost on the MMVet reasoning task. Using randomized singular value decomposition, the additional latency is limited to 8ms per image.",
+  "published": "2026-03-06T06:32:57Z",
+  "updated": "2026-03-06T06:32:57Z",
+  "categories": [
+   "cs.CV",
+   "cs.AI"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "Jialuo He",
+   "Huangxun Chen"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.21105": {
+  "id": "2603.21105",
+  "version": "2603.21105v1",
+  "title": "ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models",
+  "abstract": "Large Vision-Language Models (LVLMs) rely on dense visual tokens to capture fine-grained visual information, but processing all these tokens incurs substantial computational and memory overhead during inference. To address this issue, we propose ResPrune, a training-free visual token pruning framework that enables efficient LVLM inference by selecting a compact yet informative subset of visual tokens. ResPrune formulates visual token pruning as a subspace reconstruction problem and employs a greedy subspace expansion strategy guided by residual energy, allowing it to preserve the geometric structure of the original visual token space. To further incorporate cross modal alignment, the selection process is conditioned on textual relevance, encouraging the retention of tokens that are both informative and instruction-relevant. The proposed method is lightweight and model-agnostic, and can be seamlessly integrated into existing LVLM pipelines without retraining or architectural modifications. Extensive experiments on multiple LVLM backbones, including LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL, demonstrate that ResPrune consistently outperforms existing pruning approaches across a wide range of benchmarks, while achieving effective reductions in computation, memory consumption, and inference latency.",
+  "published": "2026-03-22T07:44:45Z",
+  "updated": "2026-03-22T07:44:45Z",
+  "categories": [
+   "cs.LG"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Xu Li",
+   "Yi Zheng",
+   "Yuxuan Liang",
+   "Zhe Liu",
+   "Xiaolei Chen",
+   "Haotian Chen",
+   "Rui Zhu",
+   "Xiangyang Xue"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.24680": {
+  "id": "2603.24680",
+  "version": "2603.24680v2",
+  "title": "ReDiPrune: Relevance-Diversity Pre-Projection Token Pruning for Efficient Multimodal LLMs",
+  "abstract": "Recent multimodal large language models are computationally expensive because Transformers must process a large number of visual tokens. We present ReDiPrune, a training-free token pruning method applied before the vision-language projector, where visual features remain rich and discriminative. Unlike post-projection pruning methods that operate on compressed representations, ReDiPrune selects informative tokens directly from vision encoder outputs, preserving fine-grained spatial and semantic cues. Each token is scored by a lightweight rule that jointly consider text-conditioned relevance and max-min diversity, ensuring the selected tokens are both query-relevant and non-redundant. ReDiPrune is fully plug-and-play, requiring no retraining or architectural modifications, and can be seamlessly inserted between the encoder and projector. Across four video and five image benchmarks, it consistently improves the accuracy-efficiency trade-off. For example, on EgoSchema with LLaVA-NeXT-Video-7B, retaining only 15% of visual tokens yields a +2.0% absolute accuracy gain while reducing computation by more than $6\\times$ in TFLOPs. Code is available at https://github.com/UA-CVML/ReDiPrune.",
+  "published": "2026-03-25T18:01:19Z",
+  "updated": "2026-03-31T17:09:40Z",
+  "categories": [
+   "cs.CV"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "An Yu",
+   "Ting Yu Tsai",
+   "Zhenfei Zhang",
+   "Weiheng Lu",
+   "Felix X. -F. Ye",
+   "Ming-Ching Chang"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.27650": {
+  "id": "2603.27650",
+  "version": "2603.27650v1",
+  "title": "V-CAST: Video Curvature-Aware Spatio-Temporal Pruning for Efficient Video Large Language Models",
+  "abstract": "Video large language models (VideoLLMs) show strong capability in video understanding, yet long-context inference is still dominated by massive redundant visual tokens in the prefill stage. We revisit token compression for VideoLLMs under a tight budget and identify a key bottleneck, namely insufficient spatio-temporal information coverage. Existing methods often introduce discontinuous coverage through coarse per-frame allocation or scene segmentation, and token merging can further misalign spatio-temporal coordinates under MRoPE-style discrete (t,h,w) bindings. To address these issues, we propose V-CAST (Video Curvature-Aware Spatio-Temporal Pruning), a training-free, plug-and-play pruning policy for long-context video inference. V-CAST casts token compression as a trajectory approximation problem and introduces a curvature-guided temporal allocation module that routes per-frame token budgets to semantic turns and event boundaries. It further adopts a dual-anchor spatial selection mechanism that preserves high-entropy visual evidence without attention intervention, while keeping retained tokens at their original coordinates to maintain positional alignment. Extensive experiments across multiple VideoLLMs of different architectures and scales demonstrate that V-CAST achieves 98.6% of the original performance, outperforms the second-best method by +1.1% on average, and reduces peak memory and total latency to 86.7% and 86.4% of vanilla Qwen3-VL-8B-Instruct.",
+  "published": "2026-03-29T11:53:32Z",
+  "updated": "2026-03-29T11:53:32Z",
+  "categories": [
+   "cs.CV"
+  ],
+  "primary_category": "cs.CV",
+  "authors": [
+   "Xinying Lin",
+   "Xuyang Liu",
+   "Yiyu Wang",
+   "Teng Ma",
+   "Wenqi Ren"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2603.21365": {
+  "id": "2603.21365",
+  "version": "2603.21365v1",
+  "title": "TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference",
+  "abstract": "Large language models run every token through every layer, regardless of difficulty. We present TIDE, a post-training system that attaches tiny learned routers at periodic checkpoint layers and, at inference time, selects the earliest layer whose hidden state has converged for each token. TIDE requires no model retraining, works with any HuggingFace causal LM, auto-detects GPU architecture, and supports float32, float16, and bfloat16 through fused CUDA kernels. On an NVIDIA A100 with DeepSeek R1 Distill 8B, TIDE achieves 100% prefill exit rate (5% of tokens exit at layer 11, the remaining at layer 31), reduces prefill latency by 7.2%, and increases single-batch throughput by 6.6%. During autoregressive decoding, 98-99% of tokens exit early while the model correctly solves a multi-step math problem with 95 unique output tokens. On Qwen3 8B (36 layers), throughput improves by 8.1% at batch size 8. Calibration on 2,000 WikiText samples takes under 3 minutes and produces a ~4 MB router checkpoint. The system comprises 1,308 lines of Python and 1,081 lines of CUDA/C++ with 74 passing tests. Code: https://github.com/RightNow-AI/TIDE",
+  "published": "2026-03-22T18:58:07Z",
+  "updated": "2026-03-22T18:58:07Z",
+  "categories": [
+   "cs.LG",
+   "cs.CL"
+  ],
+  "primary_category": "cs.LG",
+  "authors": [
+   "Jaber Jaber",
+   "Osama Jaber"
+  ],
+  "hits": [
+   "prune"
+  ]
+ },
+ "2604.18592": {
+  "id": "2604.18592",
+  "version": "2604.18592v1",
+  "title": "Two-dimensional early exit optimisation of LLM inference",
+  "abstract": "We introduce a two-dimensional (2D) early exit strategy that coordinates layer-wise and sentence-wise exiting for classification tasks in large language models. By processing input incrementally sentence-by-sentence while progressively activating deeper layers, our method achieves multiplicative computational savings that exceed those from optimizing either dimension independently. Experimental evaluation across four state-of-the-art LLMs (Llama 3.1, Llama 3.2, Gemma, Qwen; 3B-8B parameters) on three sentiment classification datasets demonstrates additional speed-ups of 1.4--2.3$\\times$ over optimal layer-wise early exit for simpler tasks with vanilla models, with graceful degradation on complex multi-class problems. Fine-tuning reduces but does not eliminate this advantage. The approach is model-agnostic, requires only lightweight classification adapters, and is orthogonal to complementary efficiency methods such as quantization and pruning. Our findings indicate that 2D early exit strategies excel when semantic information accumulates predictably across input structure, suggesting possible applicability to sequence-processing tasks beyond sentiment classification.",
+  "published": "2026-03-27T15:27:58Z",
+  "updated": "2026-03-27T15:27:58Z",
+  "categories": [
+   "cs.CL",
+   "cs.AI"
+  ],
+  "primary_category": "cs.CL",
+  "authors": [
+   "Jan Hůla",
+   "David Adamczyk",
+   "Tomáš Filip",
+   "Martin Pavlíček",
+   "Petr Sosík"
+  ],
+  "hits": [
+   "quant",
+   "prune"
+  ]
+ }
+}
