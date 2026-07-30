@@ -1,0 +1,94 @@
+# 深度技术分析：Global Low-Rank, Local Full-Rank: The Holographic Encoding of Learned Algorithms
+
+> **论文信息**
+> - **arXiv ID**: 2602.18649
+> - **标题**: Global Low-Rank, Local Full-Rank: The Holographic Encoding of Learned Algorithms
+> - **作者**: Yongzhong Xu
+> - **提交日期**: 20 Feb 2026
+> - **分类**: cs.AI, cs.LG
+> - **链接**: https://arxiv.org/abs/2602.18649
+
+---
+
+## 1. 核心速览
+
+### 1.1 研究主题
+
+本文属于**低秩分解/低秩适应（Low-Rank）**方向的研究。
+
+> 论文摘要首句：*"Grokking -- the abrupt transition from memorization to generalization after extended training -- has been linked to the emergence of low-dimensional structure in learning dynamics."*
+
+### 1.2 一句话总结
+
+本文We investigate this question in multi-task modular arithmetic, training shared-trunk Transformers with separate heads for addition, multiplication, and a quadratic operation modulo 97.（摘要原文）
+
+---
+
+## 2. 研究背景与动机 (Background & Motivation)
+
+### 2.1 领域背景
+
+低秩方法利用权重矩阵或激活矩阵的低秩结构进行分解、压缩或参数高效适配，在减少参数量和计算量的同时保持模型表达能力，是参数高效微调与模型压缩的重要工具。
+
+### 2.2 本文针对的具体问题
+
+以下为摘要中直接陈述研究动机与问题定义的原文句子：
+
+- *"Grokking -- the abrupt transition from memorization to generalization after extended training -- has been linked to the emergence of low-dimensional structure in learning dynamics."*
+- *"Yet neural network parameters inhabit extremely high-dimensional spaces."*
+- *"How can a low-dimensional learning process produce solutions that resist low-dimensional compression?"*
+- *"We investigate this question in multi-task modular arithmetic, training shared-trunk Transformers with separate heads for addition, multiplication, and a quadratic operation modulo 97."*
+- *"Reconstruction from 3--5 trajectory PCs recovers over 95\% of final accuracy, whereas both per-matrix and joint SVD fail at sub-full rank."*
+
+---
+
+## 3. 核心方法与创新点 (Methodology & Innovations)
+
+### 3.1 方法概述
+
+摘要中关于方法设计的核心陈述如下：
+
+- *"We investigate this question in multi-task modular arithmetic, training shared-trunk Transformers with separate heads for addition, multiplication, and a quadratic operation modulo 97."*
+
+### 3.2 分点创新
+
+摘要中以编号形式列出的技术要点：
+
+1. *"Across three model scales (315K--2"*
+
+---
+
+## 4. 实验设计与结果 (Experiments & Results)
+
+### 4.2 关键结果（摘要原文数据）
+
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"Reconstruction from 3--5 trajectory PCs recovers over 95\% of final accuracy, whereas both per-matrix and joint SVD fail at sub-full rank."*
+
+**摘要中出现的关键数值**（去重后）：3, 5, 95
+
+---
+
+## 5. 局限性与未来展望 (Limitations & Future Work)
+
+摘要未明确讨论局限性。结合该方向的普遍情况，本文方法可能存在以下局限（基于领域常识的一般性分析，非论文原文陈述）：
+
+低秩方法的常见局限包括：(1) 秩的选择缺乏理论最优准则，多依赖经验搜索；(2) 对本质满秩的权重矩阵，低秩近似会引入不可忽略的误差；(3) 与其他压缩手段（如量化）叠加时的误差耦合尚需研究。
+
+**未来展望**：可在以下方向继续推进——(1) 将本文方法与正交压缩手段（量化/剪枝/蒸馏/低秩）级联，验证综合压缩率；(2) 在更大规模模型与更多任务上检验泛化性；(3) 面向真实硬件做端到端部署验证。
+
+---
+
+## 6. 学术启发 (Takeaways for My Research)
+
+结合本文工作与该方向的研究脉络，可提炼以下启发：
+
+1. 低秩适配（LoRA 类）与低秩分解（SVD 类）可以分别视为训练期与训练后的压缩工具，二者组合值得探索；
+2. 激活低秩性与权重低秩性往往互补，联合利用可进一步提升压缩率；
+
+3. 本文的具体设计（见第 3 节原文引用）可作为后续工作的直接参考。
+
+---
+
+*本分析基于论文摘要与可获取信息撰写；所有标注为原文引用的句子与数字均直接摘自论文摘要，未做改写或虚构。*

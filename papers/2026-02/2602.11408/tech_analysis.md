@@ -1,0 +1,108 @@
+# 深度技术分析：GHOST: Unmasking Phantom States in Mamba2 via Grouped Hidden-state Output-aware Selection & Truncation
+
+> **论文信息**
+> - **arXiv ID**: 2602.11408
+> - **标题**: GHOST: Unmasking Phantom States in Mamba2 via Grouped Hidden-state Output-aware Selection & Truncation
+> - **作者**: Michael Menezes, Anastasios Kyrillidis
+> - **提交日期**: 2026-02-11
+> - **分类**: cs.AI, cs.LG, eess.SY
+> - **链接**: https://arxiv.org/abs/2602.11408
+> - **代码**: 论文称代码开源
+
+---
+
+## 1. 核心速览
+
+### 1.1 研究主题
+
+本文属于**剪枝（Pruning）、稀疏化（Sparsity）**方向的研究，提出了名为 **GHOST** 的方法，目标模型/架构涉及 Mamba2，在 WikiText-2. 等基准上进行了验证。
+
+> 论文摘要首句：*"While Mamba2's expanded state dimension enhances temporal modeling, it incurs substantial inference overhead that saturates bandwidth during autoregressive generation."*
+
+### 1.2 一句话总结
+
+本文提出 GHOST：Standard pruning methods fail to address this bottleneck: unstructured sparsity leaves activations dense, magnitude-based selection ignores runtime dynamics, and gradient-based methods impose prohibitive costs.（摘要原文）
+
+---
+
+## 2. 研究背景与动机 (Background & Motivation)
+
+### 2.1 领域背景
+
+剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量。核心挑战在于如何准确评估各结构的重要性，使剪枝后的模型在目标稀疏度下尽可能保持精度，并真正转化为硬件可感知的加速。
+
+### 2.2 本文针对的具体问题
+
+以下为摘要中直接陈述研究动机与问题定义的原文句子：
+
+- *"While Mamba2's expanded state dimension enhances temporal modeling, it incurs substantial inference overhead that saturates bandwidth during autoregressive generation."*
+- *"Standard pruning methods fail to address this bottleneck: unstructured sparsity leaves activations dense, magnitude-based selection ignores runtime dynamics, and gradient-based methods impose prohibitive costs."*
+- *"We introduce GHOST (Grouped Hidden-state Output-aware Selection and Truncation), a structured pruning framework that approximates control-theoretic balanced truncation using only forward-pass statistics."*
+- *"By jointly measuring controllability and observability, GHOST rivals the fidelity of gradient-based methods without requiring backpropagation."*
+
+从上述表述可见，作者关注的核心矛盾是在移除冗余结构的同时保持模型精度，并以 Mamba2 等模型为主要研究对象。
+
+---
+
+## 3. 核心方法与创新点 (Methodology & Innovations)
+
+### 3.1 方法概述
+
+摘要中关于方法设计的核心陈述如下：
+
+- *"Standard pruning methods fail to address this bottleneck: unstructured sparsity leaves activations dense, magnitude-based selection ignores runtime dynamics, and gradient-based methods impose prohibitive costs."*
+- *"We introduce GHOST (Grouped Hidden-state Output-aware Selection and Truncation), a structured pruning framework that approximates control-theoretic balanced truncation using only forward-pass statistics."*
+- *"As a highlight, on models ranging from 130M to 2.7B parameters, our approach achieves a 50\% state-dimension reduction with approximately 1 perplexity point increase on WikiText-2."*
+
+### 3.2 分点创新
+
+摘要中以编号形式列出的技术要点：
+
+1. *"Code is available at https://anonymous"*
+
+---
+
+## 4. 实验设计与结果 (Experiments & Results)
+
+### 4.1 实验设置
+
+- **涉及模型/架构**: Mamba2
+- **涉及基准/数据集**: WikiText-2.
+
+### 4.2 关键结果（摘要原文数据）
+
+以下为摘要中含具体数值或对比结论的原文句子，所有数字均直接引自摘要：
+
+- *"While Mamba2's expanded state dimension enhances temporal modeling, it incurs substantial inference overhead that saturates bandwidth during autoregressive generation."*
+- *"As a highlight, on models ranging from 130M to 2.7B parameters, our approach achieves a 50\% state-dimension reduction with approximately 1 perplexity point increase on WikiText-2."*
+- *"Code is available at https://anonymous.4open.science/r/mamba2_ghost-7BCB/."*
+
+**摘要中出现的关键数值**（去重后）：1, 130, 2, 2.7, 4, 50, 7
+
+---
+
+## 5. 局限性与未来展望 (Limitations & Future Work)
+
+摘要中直接提及的局限性或开放问题：
+
+- *"Standard pruning methods fail to address this bottleneck: unstructured sparsity leaves activations dense, magnitude-based selection ignores runtime dynamics, and gradient-based methods impose prohibitive costs."*
+
+剪枝方法的常见局限包括：(1) 重要性评估准则存在近似误差，高稀疏度下精度下降明显；(2) 非结构化稀疏难以转化为实际加速，结构化剪枝又损失更多精度；(3) 多数方法需要额外的微调或重训练成本。
+
+**未来展望**：可在以下方向继续推进——(1) 将本文方法与正交压缩手段（量化/剪枝/蒸馏/低秩）级联，验证综合压缩率；(2) 在更大规模模型与更多任务上检验泛化性；(3) 面向真实硬件做端到端部署验证。
+
+---
+
+## 6. 学术启发 (Takeaways for My Research)
+
+结合本文工作与该方向的研究脉络，可提炼以下启发：
+
+1. 重要性准则的设计应贴近最终部署的硬件收益模型，而非仅优化参数量指标；
+2. 剪枝与量化、蒸馏的级联组合通常能获得比单一手段更高的综合压缩率；
+3. 一次剪枝（one-shot）与迭代剪枝的成本-效果权衡值得针对不同模型规模重新评估；
+
+4. 本文（GHOST）表明剪枝通过移除模型中冗余的权重、神经元、通道或层，直接减少计算量与参数量——其具体设计（见第 3 节）可作为后续工作的直接参考。
+
+---
+
+*本分析基于论文摘要与可获取信息撰写；所有标注为原文引用的句子与数字均直接摘自论文摘要，未做改写或虚构。*
