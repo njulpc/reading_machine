@@ -1,0 +1,77 @@
+{
+  "collection_date": "2026-07-31",
+  "date_range": "2026-07-30",
+  "query_keywords": [
+    "quantization",
+    "model compression",
+    "pruning",
+    "distillation",
+    "efficient inference",
+    "sparsity",
+    "KV cache"
+  ],
+  "source": "arxiv.org",
+  "total_papers": 5,
+  "papers": [
+    {
+      "id": "2607.28589",
+      "title": "MixFrag: Fragility-Guided Mixed-Precision Post-Training Quantization for Vision Transformers",
+      "authors": [],
+      "submitted": "2026-07-30",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2607.28589",
+      "keywords": ["PTQ", "mixed-precision", "ViT", "fragility", "MCKP"],
+      "techniques": ["quantization"],
+      "target_model": "Vision Transformers",
+      "highlight": "KL散度脆弱性估计 + MCKP比特分配，COCO上提升9.6 AP"
+    },
+    {
+      "id": "2607.28495",
+      "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+      "authors": [],
+      "submitted": "2026-07-30",
+      "categories": ["cs.LG"],
+      "url": "https://arxiv.org/abs/2607.28495",
+      "keywords": ["KV Cache", "precision control", "cache transplantation", "BF16"],
+      "techniques": ["KV cache optimization"],
+      "target_model": "Qwen2.5-derived",
+      "highlight": "固定前缀精度控制，双向缓存移植，43/43完全跟随donor"
+    },
+    {
+      "id": "2607.28418",
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "authors": [],
+      "submitted": "2026-07-30",
+      "categories": ["cs.AI"],
+      "url": "https://arxiv.org/abs/2607.28418",
+      "keywords": ["dynamic pruning", "token-level", "width pruning", "LLM"],
+      "techniques": ["pruning"],
+      "target_model": "LLMs",
+      "highlight": "Token级动态宽度剪枝，端到端加速1.68x，内核级1.98x/4.95x"
+    },
+    {
+      "id": "2607.28069",
+      "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
+      "authors": [],
+      "submitted": "2026-07-30",
+      "categories": ["cs.AI"],
+      "url": "https://arxiv.org/abs/2607.28069",
+      "keywords": ["KV Cache", "position-independent", "LoRA", "semantic caching"],
+      "techniques": ["KV cache optimization"],
+      "target_model": "LLMs",
+      "highlight": "LoRA行为蒸馏编译语义位置无关KV，micro-F1从0.53提升至0.60"
+    },
+    {
+      "id": "2607.28341",
+      "title": "Capturing Token Tendencies for Training-Free Token Pruning in Multimodal Large Language Models",
+      "authors": [],
+      "submitted": "2026-07-30",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2607.28341",
+      "keywords": ["token pruning", "MLLM", "training-free", "attention flow"],
+      "techniques": ["pruning"],
+      "target_model": "Multimodal LLMs",
+      "highlight": "注意力流动量捕捉，77.8%视觉Token压缩，保留约23个token"
+    }
+  ]
+}
