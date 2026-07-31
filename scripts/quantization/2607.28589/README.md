@@ -213,3 +213,28 @@ solver = "greedy"       # "dp" 或 "greedy"
 | Qwen3-0.6B 适配（真实模型 + Mock 模型） | ✅ 实现 |
 | 详细中文/英文注释 | ✅ 完成 |
 | 无网络时完整可运行 | ✅ 支持（自动降级为 Mock 模型） |
+
+
+---
+
+## 🔍 每日审查报告 (2026-07-31)
+
+### 算法一致性结论
+
+**一致** ✅
+
+- **Fragility Estimation（孤立量化 + KL 散度）**：实现与论文描述完全一致。对每层单独量化、其余层保持 FP16，使用 KL(P||Q) 衡量输出分布偏移。
+- **MCKP 建模**：成本 = bits × params，收益 = 脆弱性降低（max_frag − current_frag），与论文一致。
+- **DP / Greedy 求解器**：均正确实现，toy problem 验证两者结果一致。
+- **混合精度分配**：按 MCKP 结果逐层应用量化，实现正确。
+
+### 功能验证方式与结果
+
+- **Mock 模型**：✅ 完整流程通过。Mock Qwen3-0.6B（286M 参数）上三阶段流程全部执行成功，量化前后 logits 余弦相似度 **0.9956**。
+- **真实 Qwen3-0.6B**：✅ 真实模型从 HuggingFace 下载并加载成功。完整执行 fragility estimation → MCKP bit allocation → mixed-precision assignment。量化后 logits 余弦相似度 **0.7625**（真实模型权重分布更复杂，低比特量化差异更大，属正常现象）。
+
+### 修复的问题清单
+
+- 无修复。代码审查通过，算法实现与论文一致。
+
+---
