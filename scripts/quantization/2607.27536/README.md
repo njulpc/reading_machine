@@ -51,7 +51,7 @@ pip install transformers accelerate
 python3 demo.py --model Qwen/Qwen3-0.6B
 ```
 
-对 Qwen3-0.6B 模型的 q_proj 层执行 GyRot 量化，并生成文本验证效果。
+对 Qwen3-0.6B 模型的 q_proj 层执行 GyRot 量化，用 `GyRotLinear` 包装层替换原始 `Linear`，在 forward 中同步旋转输入，并生成文本验证效果。可用 `--max-layers N` 限制真实模型验证时的 q_proj 层数量；`0` 表示全部 q_proj 层。
 
 **注意**: 如果无法下载模型权重（网络限制或权限问题），请使用 `--synthetic` 模式或 `mock_validate.py` 验证算法逻辑。代码中的算法实现不依赖特定模型权重。
 
@@ -103,6 +103,8 @@ python3 mock_validate.py
 
 ## 审查结论与验证结果
 
+> 2026-08-01 复审记录：已重新核查 arXiv、修正真实模型量化 forward 路径，并重新运行合成权重与 mock 模型验证。真实 Qwen3-0.6B 加载仍在权重加载阶段触发退出码 139（Segmentation fault），未能完成端到端真实模型验证。
+
 ### 算法一致性
 
 | 检查项 | 结论 | 说明 |
@@ -110,22 +112,23 @@ python3 mock_validate.py
 | 论文 ID 匹配 | ❌ 不一致 | arXiv 2607.27536 实际为博弈论论文，与量化无关 |
 | 旋转 + 分组量化 | ⚠️ 部分一致 | 代码实现了合理的 Hadamard 旋转 + 组量化，但无法与任何真实论文对照 |
 | HAP（谐波对齐置换）| ⚠️ 近似实现 | 使用组内排序作为 HAP 的近似，可能与原设计不同 |
-| 零舍入非对称量化 | ✅ 一致 | 标准非对称量化配合零点舍入，公式正确 |
+| 零舍入非对称量化 | ⚠️ 部分一致 | 实现了非对称量化与整数零点舍入，但未能依据真实 GyRot 论文验证缩放因子补偿细节 |
 | 整数反量化 | ✅ 一致 | IntegerDequantizer 实现正确 |
 
 ### 功能验证
 
 | 验证方式 | 结果 | 说明 |
 |----------|------|------|
-| 合成权重验证 (`--synthetic`) | ✅ 通过 | MSE 改进 201.55x，代码路径完整 |
-| Mock 模型验证 (`mock_validate.py`) | ✅ 通过 | 全部代码路径可执行，量化前后输出差异合理 |
-| Qwen3-0.6B 真实模型 | ❌ 未跑通 | 下载过程中 Segmentation fault（资源限制） |
+| 合成权重验证 (`python3 demo.py --synthetic`) | ✅ 通过 | Baseline output MSE 2262.3650；GyRot output MSE 11.2249；改进 201.55x |
+| Mock 模型验证 (`python3 mock_validate.py`) | ✅ 通过 | 随机初始化 2 层 mock LM；2 个 q_proj 替换为 `GyRotLinear`；forward、生成、包装层输出路径全部可执行 |
+| Qwen3-0.6B 真实模型 (`python3 demo.py --model Qwen/Qwen3-0.6B --max-layers 1`) | ❌ 未跑通 | 权重加载 0% 阶段进程退出码 139（Segmentation fault），未完成真实模型量化与生成 |
 
 ### 修复的问题清单
 
 1. **demo.py `inference()` 方法文档**: 添加说明，明确量化后的权重保留在旋转空间中，推理时必须旋转输入。
-2. **demo.py `demo_real_model()` 警告**: 添加显式警告，说明标准 `F.linear` 在不旋转输入时会产生错误结果，正确部署需要覆盖 Linear 的 forward。
-3. **新增 `mock_validate.py`**: 创建 mock 模型验证脚本，在真实模型无法下载时验证全部代码路径。
+2. **demo.py `GyRotLinear` 包装层**: 修复真实模型验证路径，避免把旋转空间权重直接交给标准 `F.linear`；现在 q_proj forward 会先旋转输入再做线性计算。
+3. **demo.py `demo_real_model()`**: 改为遍历并替换 q_proj 层，支持 `--max-layers` 控制验证规模，默认可量化全部 q_proj 层。
+4. **mock_validate.py**: 改为使用 `GyRotLinear` 替换 mock 模型 q_proj，验证量化后模型 forward、生成与包装层输出路径。
 
 ## 关键设计决策
 

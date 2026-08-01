@@ -7,7 +7,7 @@ when real model download fails due to network or resource constraints.
 
 import torch
 import torch.nn as nn
-from demo import CoRFIGQuantizer
+from demo import CoRFIGQuantizer, GyRotLinear
 
 class MockTransformerLayer(nn.Module):
     """Minimal transformer-like layer with q_proj Linear."""
@@ -76,7 +76,8 @@ def validate_mock():
     for name, m in model.named_modules():
         if isinstance(m, nn.Linear) and 'q_proj' in name:
             w_q, meta = gyrot.quantize(m.weight.data)
-            m.weight.data = w_q.to(m.weight.dtype)
+            layer_idx = int(name.split(".")[1])
+            model.layers[layer_idx].q_proj = GyRotLinear(m, w_q, meta)
             quantized += 1
             print(f"  Quantized {name}: {m.weight.shape}")
     print(f"\nTotal quantized layers: {quantized}")
@@ -102,10 +103,9 @@ def validate_mock():
     print("\n--- Testing gyrot.inference() code path ---")
     x = torch.randn(1, 10, 512)
     for name, m in model.named_modules():
-        if isinstance(m, nn.Linear) and 'q_proj' in name:
-            w_q, meta = gyrot.quantize(m.weight.data)
-            out = gyrot.inference(x, w_q, meta)
-            print(f"  inference() output shape: {out.shape}")
+        if isinstance(m, GyRotLinear) and 'q_proj' in name:
+            out = m(x)
+            print(f"  {name} GyRotLinear output shape: {out.shape}")
             break
     
     print("\n" + "=" * 70)

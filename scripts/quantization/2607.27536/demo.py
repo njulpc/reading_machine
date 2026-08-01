@@ -13,6 +13,7 @@ Usage:
 
 import argparse, math
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
 from typing import Tuple
 
@@ -107,6 +108,41 @@ class IntegerDequantizer:
         diff = x_q - z_r
         return (diff.float() * scale_int.float()) / (2 ** shift)
 
+class GyRotLinear(nn.Module):
+    """Linear wrapper for weights quantized in GyRot's rotated space.
+
+    The quantizer right-multiplies weights by a Hadamard rotation. A standard
+    Linear forward is therefore incorrect after replacement; this wrapper applies
+    the same rotation to activations before the matmul.
+    """
+    def __init__(self, linear: nn.Linear, w_q: torch.Tensor, meta: dict):
+        super().__init__()
+        self.in_features = linear.in_features
+        self.out_features = linear.out_features
+        self.register_buffer("weight", w_q.detach().to(dtype=linear.weight.dtype), persistent=True)
+        if linear.bias is None:
+            self.register_buffer("bias", None, persistent=True)
+        else:
+            self.register_buffer("bias", linear.bias.detach().clone(), persistent=True)
+        H = meta.get("H_coarse")
+        if H is None:
+            self.register_buffer("H_coarse", None, persistent=True)
+        else:
+            self.register_buffer("H_coarse", H.detach().float(), persistent=True)
+        self.pad_in = int(meta.get("pad_in", linear.in_features))
+        self.orig_in_f = int(meta.get("orig_in_f", linear.in_features))
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        if self.H_coarse is None:
+            return F.linear(x, self.weight, self.bias)
+        if x.shape[-1] != self.orig_in_f:
+            raise ValueError(f"Expected last dim {self.orig_in_f}, got {x.shape[-1]}")
+        x_pad = F.pad(x, (0, self.pad_in - x.shape[-1])) if x.shape[-1] < self.pad_in else x
+        x_rot = x_pad.float() @ self.H_coarse.to(device=x.device).T
+        if self.pad_in > self.orig_in_f:
+            x_rot = x_rot[..., :self.orig_in_f]
+        return F.linear(x_rot.to(dtype=self.weight.dtype), self.weight, self.bias)
+
 def demo_synthetic():
     print("=" * 70)
     print(" GyRot Demo - Synthetic Weight Validation")
@@ -150,7 +186,12 @@ def demo_synthetic():
     
     print("\n" + "=" * 70)
 
-def demo_real_model(model_name="Qwen/Qwen3-0.6B"):
+def _replace_submodule(root: nn.Module, dotted_name: str, new_module: nn.Module):
+    parent_name, _, child_name = dotted_name.rpartition(".")
+    parent = root.get_submodule(parent_name) if parent_name else root
+    setattr(parent, child_name, new_module)
+
+def demo_real_model(model_name="Qwen/Qwen3-0.6B", max_layers=0):
     try:
         from transformers import AutoModelForCausalLM, AutoTokenizer
     except ImportError:
@@ -169,20 +210,19 @@ def demo_real_model(model_name="Qwen/Qwen3-0.6B"):
     
     gyrot = CoRFIGQuantizer(n_bits=4, group_size=128, coarse_block_size=512)
     quantized = 0
-    for name, m in model.named_modules():
-        if isinstance(m, torch.nn.Linear) and 'q_proj' in name:
+    targets = [(name, m) for name, m in model.named_modules()
+               if isinstance(m, torch.nn.Linear) and 'q_proj' in name]
+    for name, m in targets:
+        if max_layers > 0 and quantized >= max_layers:
+            break
+        with torch.no_grad():
             w_q, meta = gyrot.quantize(m.weight.data)
-            # NOTE: For correct inference, the model's forward must rotate inputs
-            # using gyrot.inference() instead of standard F.linear.
-            # This demo replaces weights only; full deployment requires modifying
-            # the model's attention mechanism to apply rotation to activations.
-            m.weight.data = w_q.to(m.weight.dtype)
-            quantized += 1
-            if quantized >= 3:
-                break
-    print(f"Quantized {quantized} layers (weights in rotated space).")
-    print("WARNING: Standard F.linear will produce incorrect results without input rotation.")
-    print("For correct deployment, override the Linear forward to use gyrot.inference().")
+        _replace_submodule(model, name, GyRotLinear(m, w_q, meta).to(device=m.weight.device))
+        quantized += 1
+        print(f"  Quantized and wrapped {name}: {tuple(m.weight.shape)}")
+    if quantized == 0:
+        raise RuntimeError("No q_proj Linear layers were found to quantize.")
+    print(f"Quantized {quantized} q_proj layers with GyRotLinear wrappers.")
     
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     inputs = tokenizer("The future of AI is", return_tensors="pt").to(model.device)
@@ -194,8 +234,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--synthetic", action="store_true")
     parser.add_argument("--model", type=str, default="Qwen/Qwen3-0.6B")
+    parser.add_argument("--max-layers", type=int, default=0,
+                        help="Limit q_proj layers for real-model validation; 0 means all.")
     args = parser.parse_args()
-    demo_synthetic() if args.synthetic else demo_real_model(args.model)
+    demo_synthetic() if args.synthetic else demo_real_model(args.model, args.max_layers)
 
 if __name__ == "__main__":
     main()
