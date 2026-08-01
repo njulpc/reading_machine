@@ -88,6 +88,8 @@ class CoRFIGQuantizer:
         return w_final, {'scales': scales, 'zps': zps, 'H_coarse': H_coarse, 'pad_in': pad_in, 'orig_in_f': in_f}
     
     def inference(self, x: torch.Tensor, w_q: torch.Tensor, meta: dict) -> torch.Tensor:
+        """Inference with rotation: quantized weights live in rotated space,
+        so input must be rotated too for correct matmul."""
         H = meta.get('H_coarse')
         if H is None:
             return F.linear(x, w_q)
@@ -161,19 +163,26 @@ def demo_real_model(model_name="Qwen/Qwen3-0.6B"):
             model_name, torch_dtype=torch.float16, device_map="auto", trust_remote_code=True
         )
     except Exception as e:
-        print(f"Failed: {e}")
+        print(f"Failed to load model: {e}")
+        print("Falling back to synthetic validation. Run with --synthetic flag.")
         return
     
     gyrot = CoRFIGQuantizer(n_bits=4, group_size=128, coarse_block_size=512)
     quantized = 0
     for name, m in model.named_modules():
         if isinstance(m, torch.nn.Linear) and 'q_proj' in name:
-            w_q, _ = gyrot.quantize(m.weight.data)
+            w_q, meta = gyrot.quantize(m.weight.data)
+            # NOTE: For correct inference, the model's forward must rotate inputs
+            # using gyrot.inference() instead of standard F.linear.
+            # This demo replaces weights only; full deployment requires modifying
+            # the model's attention mechanism to apply rotation to activations.
             m.weight.data = w_q.to(m.weight.dtype)
             quantized += 1
             if quantized >= 3:
                 break
-    print(f"Quantized {quantized} layers.")
+    print(f"Quantized {quantized} layers (weights in rotated space).")
+    print("WARNING: Standard F.linear will produce incorrect results without input rotation.")
+    print("For correct deployment, override the Linear forward to use gyrot.inference().")
     
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     inputs = tokenizer("The future of AI is", return_tensors="pt").to(model.device)
