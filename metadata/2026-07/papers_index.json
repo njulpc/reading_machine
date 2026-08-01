@@ -1,0 +1,786 @@
+{
+  "collection_date": "2026-08-01",
+  "date_range": "2026-07-31",
+  "query_keywords": [
+    "quantization",
+    "pruning",
+    "distillation",
+    "sparsity",
+    "model compression",
+    "efficient inference",
+    "kv cache",
+    "low-bit",
+    "mixed precision"
+  ],
+  "source": "arxiv.org",
+  "total_papers": 32,
+  "papers": [
+    {
+      "id": "2607.27275",
+      "title": "Flat Score, Amplified Failures: How the Error Budget Masks Damage in Quantized LLM Agents",
+      "authors": [
+        "Jiwon Jang",
+        "Kisu Yang",
+        "Heuiseok Lim",
+        "Hyunwoo Park"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27275",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "post-training quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "LLM",
+      "highlight": "Post-training quantization to 4-bit weights is widely reported to be nearly lossless. We test this claim for multi-turn, tool-calling agents, where it..."
+    },
+    {
+      "id": "2607.27581",
+      "title": "MUGEN: A Unified Framework for Efficient Motion Understanding and Generation",
+      "authors": [
+        "Zhankai Ye",
+        "Yukai Jin",
+        "Bingyang Wei",
+        "Bofan Li",
+        "Yusen Wu",
+        "Fangyi Li",
+        "Shangqian Gao",
+        "Xin Liu"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27581",
+      "keywords": [
+        "quantization",
+        "codebook"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "Motion Model",
+      "highlight": "Grounding human motion in language, and language in motion, is a central step toward physical AI systems that can understand, generate, and communicat..."
+    },
+    {
+      "id": "2607.27591",
+      "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
+      "authors": [
+        "Jinyi Liu",
+        "Wei Chen",
+        "Pengyu Chen",
+        "Xinyi Yuan",
+        "Minghe Bai",
+        "Guoquan Wu",
+        "Jun Wei"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27591",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "sparsity",
+        "sparsification",
+        "sparse"
+      ],
+      "techniques": [
+        "quantization",
+        "sparsity"
+      ],
+      "target_model": "LLM",
+      "highlight": "Feed-forward networks (FFNs) dominate memory traffic and computation in large language model (LLM) inference, making them a primary target for activat..."
+    },
+    {
+      "id": "2607.27536",
+      "title": "GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference",
+      "authors": [
+        "Sangjin Kim",
+        "Yuseon Choi",
+        "Byeongcheol Kim",
+        "Jungjun Oh",
+        "Hoi-jun Yoo"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27536",
+      "keywords": [
+        "quantization",
+        "low-bit",
+        "int4"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "LLM",
+      "highlight": "Low-bit quantization is essential for efficient LLM inference, and both rotation and fine-grained group quantization have shown individual promise. Ho..."
+    },
+    {
+      "id": "2607.28191",
+      "title": "CACHE-UK: A Stability-Aware Memory Editor for Sequentially Updated Quantized LLMs in Finance",
+      "authors": [
+        "Anubhav Lakra",
+        "Yue Feng"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28191",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "LLM",
+      "highlight": "Large Language Models (LLMs) deployed in dynamic financial environments face a critical challenge: maintaining factual accuracy as market conditions, ..."
+    },
+    {
+      "id": "2607.28423",
+      "title": "MixFrag: Fragility-Guided Mixed-Precision Post-Training Quantization for Vision Transformers",
+      "authors": [
+        "Md. Mehrab Hossain Opi",
+        "Robiul Islam Ryad",
+        "Md. Umar Faruk"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28423",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "post-training quantization"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "Vision Model",
+      "highlight": "Post-training quantization (PTQ) has emerged as an effective solution for deploying Vision Transformers (ViTs) on resource-constrained devices. Howeve..."
+    },
+    {
+      "id": "2607.27600",
+      "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
+      "authors": [
+        "Stephen Gould",
+        "Anton van den Hengel"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27600",
+      "keywords": [
+        "prune",
+        "compression",
+        "kv cache"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "LLM",
+      "highlight": "Key-value (KV) cache management through compression and eviction strategies has emerged as an important research direction in recent years. Computatio..."
+    },
+    {
+      "id": "2607.28135",
+      "title": "Beyond Geometric Complementarity: Coherent Overlap in Sparse Mixture-of-Experts Routing",
+      "authors": [
+        "Huiyuan Tian",
+        "Bonan Xu",
+        "Shijian Li"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28135",
+      "keywords": [
+        "pruning",
+        "sparse"
+      ],
+      "techniques": [
+        "pruning",
+        "sparsity"
+      ],
+      "target_model": "LLM",
+      "highlight": "Sparse mixture-of-experts (MoE) language models route each token to multiple experts, suggesting a geometric account of their benefit: co-selected exp..."
+    },
+    {
+      "id": "2607.28248",
+      "title": "Fairness Pruning: Locating Demographic Bias in GLU-MLP Layers via Differential Activations",
+      "authors": [
+        "Pere Martra",
+        "Eugenio Martínez Cámara",
+        "Alfonso Ureña López"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28248",
+      "keywords": [
+        "pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "LLM",
+      "highlight": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bia..."
+    },
+    {
+      "id": "2607.28306",
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "authors": [
+        "Haozhe Hu",
+        "Hao Wu",
+        "Peiran Yin",
+        "Chao Han",
+        "Yunpu Ma",
+        "Xiaoyu Shen"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28306",
+      "keywords": [
+        "pruning",
+        "sparsity",
+        "sparse",
+        "structured pruning",
+        "dynamic pruning"
+      ],
+      "techniques": [
+        "pruning",
+        "sparsity"
+      ],
+      "target_model": "LLM",
+      "highlight": "Pruning is a promising approach for improving the efficiency of LLMs. Existing static structured pruning methods are hardware-friendly and can deliver..."
+    },
+    {
+      "id": "2607.28591",
+      "title": "Efficient LLMs with AMP: Attention Heads and MLP Pruning",
+      "authors": [
+        "Leandro Giusti Mugnaini",
+        "Bruno Lopes Yamamoto",
+        "Lucas Lauton de Alcantara",
+        "Victor Zacarias",
+        "Edson Bollis",
+        "Lucas Pellicer",
+        "Anna Helena Reali Costa",
+        "Artur Jordao"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28591",
+      "keywords": [
+        "pruning",
+        "structured pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "LLM",
+      "highlight": "Deep learning drives a new wave in computing systems and triggers the automation of increasingly complex problems. In particular, Large Language Model..."
+    },
+    {
+      "id": "2607.28196",
+      "title": "Fidelity Is Not Safety: Gently-Compressed LLMs Pass Every Data-Free Quality Guard Yet Invent Procedure Steps in Agentic Execution",
+      "authors": [
+        "I. Kennedy",
+        "T.Kennedy"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28196",
+      "keywords": [
+        "pruning",
+        "compressed",
+        "compression",
+        "magnitude pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "LLM",
+      "highlight": "Practitioners accept a compressed language model once it clears a stack of data-cheap quality guards: perplexity within a small factor of the original..."
+    },
+    {
+      "id": "2607.28410",
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "authors": [
+        "Haozhe Hu",
+        "Hao Wu",
+        "Peiran Yin",
+        "Chao Han",
+        "Yunpu Ma",
+        "Xiaoyu Shen"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28410",
+      "keywords": [
+        "pruning",
+        "sparsity",
+        "sparse",
+        "structured pruning",
+        "dynamic pruning"
+      ],
+      "techniques": [
+        "pruning",
+        "sparsity"
+      ],
+      "target_model": "LLM",
+      "highlight": "Pruning is a promising approach for improving the efficiency of LLMs. Existing static structured pruning methods are hardware-friendly and can deliver..."
+    },
+    {
+      "id": "2607.27700",
+      "title": "Calibrate Before Reason: Robust Visual Token Reduction against Semantic Drift in VLMs",
+      "authors": [
+        "Jiasheng Li",
+        "Zhong Ji",
+        "Yan Zhang",
+        "Huihui Li"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27700",
+      "keywords": [
+        "pruning",
+        "prune",
+        "pruned"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "Vision Model",
+      "highlight": "Large Vision-Language Models (VLMs) suffer from prohibitive inference overhead due to long sequences of visual tokens. However, existing visual token ..."
+    },
+    {
+      "id": "2607.27952",
+      "title": "LAST: The Last Query Token Guides Visual Token Pruning for Edge-Cloud Collaborative MLLM Inference",
+      "authors": [
+        "Feng Yang",
+        "Xinrui Ju",
+        "Keyang Zhang",
+        "Xiandong Meng",
+        "Rongqun Lin",
+        "Howard Leung",
+        "Shiqi Wang",
+        "Haoliang Li",
+        "Chris Xing Tian"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27952",
+      "keywords": [
+        "pruning",
+        "token pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "Vision Model",
+      "highlight": "Multimodal foundation models are reshaping edge-cloud visual intelligence from task-specific feature pipelines into token-based interfaces, where edge..."
+    },
+    {
+      "id": "2607.27951",
+      "title": "LAST: The Last Query Token Guides Visual Token Pruning for Edge-Cloud Collaborative MLLM Inference",
+      "authors": [
+        "Feng Yang",
+        "Xinrui Ju",
+        "Keyang Zhang",
+        "Xiandong Meng",
+        "Rongqun Lin",
+        "Howard Leung",
+        "Shiqi Wang",
+        "Haoliang Li",
+        "Chris Xing Tian"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27951",
+      "keywords": [
+        "pruning",
+        "token pruning"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "Vision Model",
+      "highlight": "Multimodal foundation models are reshaping edge-cloud visual intelligence from task-specific feature pipelines into token-based interfaces, where edge..."
+    },
+    {
+      "id": "2607.27712",
+      "title": "Beyond the Best Teacher: Expanding and Compressing the Reasoning Solution Manifold",
+      "authors": [
+        "Songshuo Lu",
+        "Zhi Chen",
+        "Yaohua Tang"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27712",
+      "keywords": [
+        "distillation",
+        "compression"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "A single reinforcement-learning run can produce a strong reasoner yet an incomplete teacher: it often amplifies only a subset of the valid solution mo..."
+    },
+    {
+      "id": "2607.27953",
+      "title": "Flux-OPD: On-Policy Distillation with Evolving Contexts",
+      "authors": [
+        "Yuran Wang",
+        "Zekun Wang",
+        "Bohan Zeng",
+        "Ruixu Zhang",
+        "Wenxuan Liu",
+        "Liu Yang",
+        "Yifan Dai",
+        "Yang Shi",
+        "Bozhou Li",
+        "Chengzhuo Tong",
+        "Daili Hua",
+        "Yuanxing Zhang",
+        "Wentao Zhang"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27953",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "Large language model training in open-ended domains lacks verifiable rewards, making task preferences difficult to formalize as effective supervision...."
+    },
+    {
+      "id": "2607.27966",
+      "title": "Contrastive Reinforced Policy Optimization via Privileged Self-Distillation",
+      "authors": [
+        "Xingjian Wu",
+        "Junlin Liu",
+        "Xingchen Liu",
+        "Xuhang Zhu",
+        "Jianing Wang",
+        "Linsen Guo",
+        "Xiaoyu Li",
+        "Xuezhi Cao",
+        "Xunliang Cai"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27966",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "Recent advances in post-training Large Language Models (LLMs) increasingly rely on Reinforcement Learning with Verifiable Rewards (RLVR) or On-Policy ..."
+    },
+    {
+      "id": "2607.28428",
+      "title": "$β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
+      "authors": [
+        "Jiawei Xu",
+        "Minghui Liu",
+        "Juzheng Zhang",
+        "Tom Goldstein",
+        "Furong Huang"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28428",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "On-policy self-distillation (OPSD) is a promising approach to improve reasoning language models, but it remains brittle in practice: making it work re..."
+    },
+    {
+      "id": "2607.27891",
+      "title": "Group-Reflective Self-Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Binbin Zheng",
+        "Zijun Xie",
+        "Guanqun Zhao",
+        "Enlei Gong",
+        "Xing Ma",
+        "Xiaoliang Fu",
+        "Zeyu Chen"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27891",
+      "keywords": [
+        "sparse",
+        "distillation"
+      ],
+      "techniques": [
+        "distillation",
+        "sparsity"
+      ],
+      "target_model": "LLM",
+      "highlight": "Reinforcement learning with verifiable rewards (RLVR) is effective for training large language model agents. However, terminal rewards provide only co..."
+    },
+    {
+      "id": "2607.28498",
+      "title": "VAD: Attributing Visual Evidence for Target Reconstruction in Multimodal On-Policy Distillation",
+      "authors": [
+        "Kangning Zhang",
+        "Yixing Li",
+        "Shuai Shao",
+        "Qingyao Li",
+        "Zhengxi Lu",
+        "Zhiyuan Yao",
+        "Jianghao Lin",
+        "Wenxiang Jiao",
+        "Yuan Lu",
+        "Weiwen Liu",
+        "Weinan Zhang",
+        "Yong Yu"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28498",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "Vision Model",
+      "highlight": "Multimodal on-policy distillation (OPD) transfers fine-grained visual knowledge by supervising student-generated trajectories with a privileged-view t..."
+    },
+    {
+      "id": "2607.28154",
+      "title": "OPLD: On-Policy Latent Distillation for Multimodal Reasoning",
+      "authors": [
+        "Shoutai Zhu",
+        "Tianyang Xu",
+        "Bin Sun",
+        "Mingyuan Xu",
+        "Yu Liu",
+        "Qinzhen Guo"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28154",
+      "keywords": [
+        "distillation",
+        "compressed"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "Interleaved multimodal Chain-of-Thought (CoT) improves visual reasoning by incorporating auxiliary visual evidence into intermediate reasoning. Howeve..."
+    },
+    {
+      "id": "2607.28269",
+      "title": "Theia: Large-Scale Multimodal Captioning and Automated Validation of the Incidents1M Dataset for Data-Free Distillation",
+      "authors": [
+        "Simone Giano",
+        "Lorenzo Severini",
+        "Alessandro Galdelli",
+        "Adriano Mancini"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28269",
+      "keywords": [
+        "distillation",
+        "knowledge distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "The deployment of Vision-Language Models (VLMs) in critical domains like disaster management requires high-quality multimodal datasets, especially for..."
+    },
+    {
+      "id": "2607.27937",
+      "title": "From Scoring to Acting: Outcome-Verified Comparative Self-Distillation for LLM Agents",
+      "authors": [
+        "Xu Xia",
+        "Jinghua Piao",
+        "Min Yang",
+        "Xiaochong Lan",
+        "Jiaju Chen",
+        "Yong Li"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27937",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "Recent work on LLM agents is shifting from external capability elicitation to capability internalization, enabling agents to retain useful skills with..."
+    },
+    {
+      "id": "2607.28048",
+      "title": "SKILL-KD: Contrastive Skill Distillation for LLM Agents",
+      "authors": [
+        "Qiming Shi",
+        "Yibo Dou",
+        "Jiawen Zhu",
+        "Yulong Tao",
+        "Linbo Jin",
+        "Zhaolu Kang",
+        "Yunfan Zhou",
+        "Di Weng"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28048",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "Skill-based prompting has become a practical mechanism for improving large language model (LLM) agents, yet existing skill acquisition methods often t..."
+    },
+    {
+      "id": "2607.28069",
+      "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
+      "authors": [
+        "Hui Xie",
+        "Peng Xiao",
+        "Yutong Deng\\textsuperscript",
+        "Shuoran Dou",
+        "Jian Yang",
+        "Jinyang Guo"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28069",
+      "keywords": [
+        "distillation",
+        "kv cache"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "Long-context retrieval and agentic workloads repeatedly reuse the same documents under changing instructions, histories, and document orders. Prefix c..."
+    },
+    {
+      "id": "2607.28336",
+      "title": "Correcting What You Cannot See: Credit Assignment for Perception Distillation in Multimodal Reasoners",
+      "authors": [
+        "Feng Xiong",
+        "Leyan Xue",
+        "Hongyu Lin"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28336",
+      "keywords": [
+        "distillation"
+      ],
+      "techniques": [
+        "distillation"
+      ],
+      "target_model": "LLM",
+      "highlight": "On-policy distillation provides dense supervision for multimodal reasoners, but its trajectory-level reward cannot determine whether a failed answer a..."
+    },
+    {
+      "id": "2607.28399",
+      "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+      "authors": [
+        "Alexander Boesgaard Lorup"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28399",
+      "keywords": [
+        "kv cache"
+      ],
+      "techniques": [],
+      "target_model": "LLM",
+      "highlight": "Stage-replay diagnostics reconstruct intermediate token prefixes and treat fresh-prefill continuation as continuation from the decoder state that orig..."
+    },
+    {
+      "id": "2607.27532",
+      "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
+      "authors": [
+        "Wenshuai Yao",
+        "Wenyong Zhou",
+        "Hanyong Shao",
+        "Yizhe Chen",
+        "Zhiyuan Ning",
+        "Yuannuo Feng",
+        "Ru Huang",
+        "Kechao Tang"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27532",
+      "keywords": [
+        "sparse",
+        "kv cache"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "LLM",
+      "highlight": "Top-$K$ sparse attention reduces the cost of Softmax and value aggregation by attending to only a small subset of key--value (KV) entries. However, id..."
+    },
+    {
+      "id": "2607.27735",
+      "title": "A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding",
+      "authors": [
+        "Yuesong Liu",
+        "Yuan Zeng",
+        "Min Lyu",
+        "Ruilin Liu",
+        "Yu Guo",
+        "Yinlong Xu"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.27735",
+      "keywords": [
+        "sparse",
+        "kv cache",
+        "speculative decoding"
+      ],
+      "techniques": [
+        "sparsity"
+      ],
+      "target_model": "LLM",
+      "highlight": "Speculative decoding alleviates the memory-bandwidth bottleneck in large language model inference, but its acceleration is jointly constrained by draf..."
+    },
+    {
+      "id": "2607.28457",
+      "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+      "authors": [
+        "Alexander Boesgaard Lorup"
+      ],
+      "submitted": "2026-07-31",
+      "categories": [],
+      "url": "https://arxiv.org/abs/2607.28457",
+      "keywords": [
+        "kv cache"
+      ],
+      "techniques": [],
+      "target_model": "LLM",
+      "highlight": "Stage-replay diagnostics reconstruct intermediate token prefixes and treat fresh-prefill continuation as continuation from the decoder state that orig..."
+    }
+  ]
+}

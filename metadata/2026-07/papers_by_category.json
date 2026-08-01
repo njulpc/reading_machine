@@ -1,0 +1,712 @@
+{
+  "quantization": [
+    {
+      "arxiv_id": "2607.27275",
+      "title": "Flat Score, Amplified Failures: How the Error Budget Masks Damage in Quantized LLM Agents",
+      "authors": [
+        "Jiwon Jang",
+        "Kisu Yang",
+        "Heuiseok Lim",
+        "Hyunwoo Park"
+      ],
+      "abstract": "Post-training quantization to 4-bit weights is widely reported to be nearly lossless. We test this claim for multi-turn, tool-calling agents, where it now matters most. On $\\tau^2$-bench, across two open-weight model families in dense and MoE variants and two domains (eight cells, 456 episodes each, at 16-, 8-, and 4-bit weights), quantization indeed looks free on the standard metric. No cell shows a score change that survives multiple-comparison correction, and in the cell that carries the largest process damage, equivalence testing bounds the change within $\\pm$7.5 points. The process tells a different story. Quantization amplifies the failure the model already exhibits at full precision (tool-name hallucination in telecom, with the same directional trend in retail entity errors) by up to 2.5$\\times$ in volume (+17.6 points per task), while creating essentially no new failures. The failure set is the same at every precision (rank correlation $\\geq$ 0.94, 0.18% novel events). The score stays flat because the benchmark&#39;s ten-error budget absorbs the extra failures. Shrinking the budget to two errors re-exposes a score gap of 17 points, and it does so only in the one cell where quantization added error volume, exactly as the masking account predicts. A targeted error-repair prompt, run for five telecom models at every precision, removes the damage exactly and only where it lives. Both diagnostics, the per-channel error rate and success under a shrinking budget, come from logs benchmarks already collect; we suggest reporting them alongside task reward.",
+      "url": "https://arxiv.org/abs/2607.27275",
+      "pdf_url": "https://arxiv.org/pdf/2607.27275.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "post-training quantization"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27581",
+      "title": "MUGEN: A Unified Framework for Efficient Motion Understanding and Generation",
+      "authors": [
+        "Zhankai Ye",
+        "Yukai Jin",
+        "Bingyang Wei",
+        "Bofan Li",
+        "Yusen Wu",
+        "Fangyi Li",
+        "Shangqian Gao",
+        "Xin Liu"
+      ],
+      "abstract": "Grounding human motion in language, and language in motion, is a central step toward physical AI systems that can understand, generate, and communicate human behavior. Unified motion--language systems first coupled the two directions through a shared discrete motion codebook, but quantization limits generation quality. The strongest generators buy quality back at growing cost: stacked residual codebooks enlarge the representation; masked decoding stages, long autoregressive rollouts, and denoising chains of tens to hundreds of steps stretch inference; even the continuous-latent designs among them reach their latent only through an iterative diffusion head; and none of this decoding machinery serves understanding. We therefore propose MUGEN, a unified motion--language framework that pays neither cost: no codebook, one draw. A single adaptive-length autoencoder compresses any-length motion into a few continuous latent slots, the system&#39;s only motion representation: the language model generates them for text-to-motion and reads them back for motion understanding. Depth-routed hidden states let each slot read from the transformer depth it needs, and a calibrated head predicts a joint distribution over the full latent set, so a single draw carries the text-conditional, cross-slot variation a description permits. At a decoding cost of K language-model steps, one draw, and one decoder pass, MUGEN leads language-model baselines on FID on HumanML3D while raising retrieval precision above the real-motion reference under the standard evaluator, achieves the best CIDEr and BLEU@4 scores, and surpasses the discrete-token state of the art on every retrieval and alignment metric on SnapMoGen.",
+      "url": "https://arxiv.org/abs/2607.27581",
+      "pdf_url": "https://arxiv.org/pdf/2607.27581.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "quantization",
+        "codebook"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27591",
+      "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
+      "authors": [
+        "Jinyi Liu",
+        "Wei Chen",
+        "Pengyu Chen",
+        "Xinyi Yuan",
+        "Minghe Bai",
+        "Guoquan Wu",
+        "Jun Wei"
+      ],
+      "abstract": "Feed-forward networks (FFNs) dominate memory traffic and computation in large language model (LLM) inference, making them a primary target for activation sparsification. However, existing training-free methods suffer substantial model-quality degradation at high sparsity due to limitations in their channel-selection strategies. We observe that the SwiGLU intermediate state provides a highly effective channel-selection signal, but obtaining it requires costly dense computation. To address this, we present \\emph{Prox}, a two-stage training-free framework for sparse SwiGLU FFNs. Prox hinges on the key insight: sparse execution requires only the channel mask induced by the intermediate state, which can be constructed from the magnitude ranking of its entries rather than their exact values. Specifically, Stage 1 uses input sparsity and quantized proxy weights to construct a shared mask; Stage 2 computes the selected channels exactly, enabling sparse execution of all three projections. Across ten LLMs from six model families, Prox outperforms training-free baselines at all sparsity levels, achieves up to a $1.99\\times$ end-to-end decoding speedup at 70\\% FFN sparsity, and is compatible with quantization and sparse attention.",
+      "url": "https://arxiv.org/abs/2607.27591",
+      "pdf_url": "https://arxiv.org/pdf/2607.27591.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "sparsity",
+        "sparsification",
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27536",
+      "title": "GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference",
+      "authors": [
+        "Sangjin Kim",
+        "Yuseon Choi",
+        "Byeongcheol Kim",
+        "Jungjun Oh",
+        "Hoi-jun Yoo"
+      ],
+      "abstract": "Low-bit quantization is essential for efficient LLM inference, and both rotation and fine-grained group quantization have shown individual promise. However, their combination often leads to accuracy degradation or hardware overhead due to a mismatch between the global nature of rotation and the localized behavior of group scaling. We propose GyRot, a quantization framework and hardware accelerator that bridges this gap through algorithm-hardware co-design. GyRot introduces Coarse Rotation, Fine Grouping (CoRFiG) and Harmonic-Aligned Permutation (HAP) to enable cooperative integration of rotation and group quantization, enhancing quantizability while relaxing scaling factor precision. To further reduce hardware cost, we reformulate asymmetric quantization and introduce a zero-point rounding strategy that enables fully integer dequantization. Implemented on an INT4-based tensor PE architecture, GyRot achieves state-of-the-art 4-bit accuracy across LLaMA-family models, while delivering up to 3.4x speedup and 3.6x energy efficiency over baseline LLM accelerators. These results validate GyRot&#39;s practical effectiveness for scalable and energy-efficient LLM deployment.",
+      "url": "https://arxiv.org/abs/2607.27536",
+      "pdf_url": "https://arxiv.org/pdf/2607.27536.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "quantization",
+        "low-bit",
+        "int4"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28191",
+      "title": "CACHE-UK: A Stability-Aware Memory Editor for Sequentially Updated Quantized LLMs in Finance",
+      "authors": [
+        "Anubhav Lakra",
+        "Yue Feng"
+      ],
+      "abstract": "Large Language Models (LLMs) deployed in dynamic financial environments face a critical challenge: maintaining factual accuracy as market conditions, regulations, and corporate facts change continuously. While 4-bit quantization enables efficient deployment, it severely limits the viability of sequential memory editing: existing methods undergo catastrophic performance degradation under this &#34;quantization stability crisis.&#34; We introduce CACHE-UK (Contextual Adaptive Continual Hybrid Editor for UK Finance), a stability-aware memory editing framework specifically designed for domain-specific, quantized LLMs. CACHE-UK integrates three components: a rank-1 LoRA perturbation mechanism that confines edits to the low-rank adapter subspace, a financial domain prioritization module for content-adaptive edit strength, and a closed-loop Stability Controller that tracks &#34;degradation debt&#34; to prevent catastrophic forgetting across sequential updates. Evaluated on a 4-bit quantized OpenLLaMA-3B model with a curated UK financial corpus of 88,021 documents, CACHE-UK reduces knowledge degradation by 11-17% relative to adapted baselines under identical 4-bit constraints -- its most robust effect -- while attaining the highest test success (generalization) rate observed in our setting (28%, a 6 percentage point improvement over the strongest adapted baseline). These results indicate that stability-aware editing can improve factual maintenance in resource-constrained financial LLM deployments, though absolute generalization rates remain low.",
+      "url": "https://arxiv.org/abs/2607.28191",
+      "pdf_url": "https://arxiv.org/pdf/2607.28191.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "quantization",
+        "quantize",
+        "quantized"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28423",
+      "title": "MixFrag: Fragility-Guided Mixed-Precision Post-Training Quantization for Vision Transformers",
+      "authors": [
+        "Md. Mehrab Hossain Opi",
+        "Robiul Islam Ryad",
+        "Md. Umar Faruk"
+      ],
+      "abstract": "Post-training quantization (PTQ) has emerged as an effective solution for deploying Vision Transformers (ViTs) on resource-constrained devices. However, existing PTQ methods typically employ uniform bit-widths across transformer components, overlooking their heterogeneous sensitivity to quantization and leading to inefficient precision allocation. In this paper, we propose {MixFrag, a fragility-guided mixed-precision PTQ framework for Vision Transformers. MixFrag first estimates component-level quantization fragility by measuring the Kullback--Leibler (KL) divergence between full-precision and isolated quantized output distributions using a small calibration set. It then formulates bit allocation as a Multiple-Choice Knapsack Problem (MCKP), enabling adaptive layer-wise precision assignment under a target bit budget. Extensive experiments on ImageNet-1K across multiple Vision Transformer architectures demonstrate that MixFrag achieves competitive classification performance under practical mixed-precision settings. Furthermore, evaluations on COCO object detection and instance segmentation show that MixFrag achieves state-of-the-art performance among existing mixed-precision PTQ methods, improving the previous best method by up to 9.6 AP under the challenging MP3/MP3 setting. Additional analyses validate the proposed fragility metric and demonstrate its strong correlation with the learned bit allocation. These results establish MixFrag as an effective framework for mixed-precision post-training quantization of Vision Transformers.",
+      "url": "https://arxiv.org/abs/2607.28423",
+      "pdf_url": "https://arxiv.org/pdf/2607.28423.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "post-training quantization"
+      ]
+    }
+  ],
+  "pruning": [
+    {
+      "arxiv_id": "2607.27600",
+      "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
+      "authors": [
+        "Stephen Gould",
+        "Anton van den Hengel"
+      ],
+      "abstract": "Key-value (KV) cache management through compression and eviction strategies has emerged as an important research direction in recent years. Computational demands of large language models (LLMs) and their multi-modal variants during output generation can be partially alleviated by caching previous key and value calculations needed by subsequent scaled dot-product attention operations. However, this leads to another problem: the size of the resulting KV cache grows linearly with context length and quickly consumes all available GPU memory when either the prompt or the generated output are long. KV cache management periodically prunes entries from the cache thereby reducing its memory footprint while attempting to retain sufficient information for accurate generation. A by-product is faster inference speed. We propose a simple yet effective KV eviction scheme motivated by the insight that past tokens which can be well-predicted from more recent tokens are redundant and their associated keys and values can be removed from the cache. To score entries for eviction we run the model on the tokens in their original order, reusing the key and value representations already stored in the KV cache, and applying a counter-causal attention mask so that each position attends only to its future context. This is in-distribution, tied directly to the actual cache contents, and requires no additional training. To further reduce cost, we additionally propose a fast single-layer approximation that restricts the counter-causal pass to the last transformer layer, achieving a significant speedup per refresh cycle at marginal accuracy cost. We evaluate our strategy on various open-source LLMs and benchmark datasets showing competitive or improved performance over other state-of-the-art methods. Reference code is available at this https URL.",
+      "url": "https://arxiv.org/abs/2607.27600",
+      "pdf_url": "https://arxiv.org/pdf/2607.27600.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "prune",
+        "compression",
+        "kv cache"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28135",
+      "title": "Beyond Geometric Complementarity: Coherent Overlap in Sparse Mixture-of-Experts Routing",
+      "authors": [
+        "Huiyuan Tian",
+        "Bonan Xu",
+        "Shijian Li"
+      ],
+      "abstract": "Sparse mixture-of-experts (MoE) language models route each token to multiple experts, suggesting a geometric account of their benefit: co-selected experts should contribute distinct representation directions. Existing evidence often conflates route coherence, candidate quality, and candidate-by-context interaction. We distinguish these quantities using an Expert Subspace Separation Index (ESSI), matched-route residuals, and a prefix-controlled $2\\times2$ factorial; frozen-route interventions and a controlled Top-$k$ study assess functional value. Three paired contrasts organize the findings. First, across six MoE architectures, expert subspaces overlap substantially, yet actual routes explain token representations better than matched alternatives. Second, across the 39 factorial cells in OLMoE, Mixtral, and DeepSeek, the selected candidate explains more of the residual representation than the strongest unselected rival in every cell, yet the actual prefix narrows this advantage throughout: all interactions are negative, and every 95% confidence interval lies below zero. Third, this geometric narrowing does not imply functional redundancy: adding later experts improves next-token prediction in 24 of 39 frozen-route comparisons, while the other 15 estimates are inconclusive; a controlled training study also favors Top-2 over Top-1 in all three seeds. We call this joint pattern coherent overlap: routing selects token-relevant experts from a shared geometric neighborhood, while useful multi-expert computation persists without disjoint linear coverage. Separating these quantities clarifies why geometric similarity alone cannot determine redundancy or pruning value.",
+      "url": "https://arxiv.org/abs/2607.28135",
+      "pdf_url": "https://arxiv.org/pdf/2607.28135.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "pruning",
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28248",
+      "title": "Fairness Pruning: Locating Demographic Bias in GLU-MLP Layers via Differential Activations",
+      "authors": [
+        "Pere Martra",
+        "Eugenio Martínez Cámara",
+        "Alfonso Ureña López"
+      ],
+      "abstract": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bias in large language models (LLMs). As a foundational empirical validation of this method, this work focuses on causal bias localization. Using minimally contrastive prompt pairs and inference-time activation capture, the method identifies neurons that react differentially when processing demographic attributes in GLU architectures, evaluating the signal at the down_proj input. Empirical evaluation was conducted on models of up to 3 billion parameters (Llama-3.2 family and Salamandra-2B), combining standardized benchmark evaluation with qualitative text generation experiments. Results demonstrate that zeroing the identified neurons alters how the model responds to associated demographic variables. However, rather than producing flat mitigation, the intervention causes bidirectional bias destabilization: because BiasScore is unsigned, candidate sets mix neurons that push toward and against the stereotype, and the net effect on aggregate bias depends on which sign dominates. The intervention is extremely surgical: zeroing at most 40 neurons in Llama-3.2-1B (less than 0.031% of total MLP width) achieves a mean retention of 99.49% in reasoning and general knowledge capabilities. These findings empirically confirm that demographic bias processing and model capabilities operate on dissociable circuits, establishing the methodological foundations for transitioning from blind zeroing toward directional behavior modulation.",
+      "url": "https://arxiv.org/abs/2607.28248",
+      "pdf_url": "https://arxiv.org/pdf/2607.28248.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "pruning"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28306",
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "authors": [
+        "Haozhe Hu",
+        "Hao Wu",
+        "Peiran Yin",
+        "Chao Han",
+        "Yunpu Ma",
+        "Xiaoyu Shen"
+      ],
+      "abstract": "Pruning is a promising approach for improving the efficiency of LLMs. Existing static structured pruning methods are hardware-friendly and can deliver practical throughput gains, but their input-agnostic computation allocation often causes substantial accuracy degradation under aggressive sparsity. Recent dynamic sparsity methods improve quality retention by adapting computation to individual inputs, yet they remain largely limited to coarse-grained structural decisions and their practical acceleration under real-world inference scenarios remains challenging. To address these challenges, we present WIDE, the first end-to-end differentiable token-level dynamic width pruning framework designed for both prefill and decode scenarios. WIDE enables fine-grained computation allocation by allowing each token to dynamically select attention-head groups and FFN-channel groups, extending dynamic pruning beyond layer-level decisions to neuron-block-level granularity. Through a two-stage training pipeline, WIDE learns effective token-wise sparse execution patterns and achieves substantially better quality retention than existing approaches. To make such fine-grained dynamic pruning practical, we further propose a pruning--kernel co-design framework that decomposes dynamic sparsity acceleration into mask reordering, hardware-agnostic block-level skipping, and hardware-dependent intra-block skipping, enabling efficient execution across different granularities. At 50% sparsity, WIDE provides 55.1% performance boost when compared to the state-of-the-art dynamic depth pruning under calibration-only settings. Under prefill and decoding inference workloads, WIDE achieves close-to-theoretical kernel-level speedups of up to 1.98x for prefill and 4.95x for decoding, as well as 1.68x and 1.55x end-to-end acceleration. Our code is available at this https URL.",
+      "url": "https://arxiv.org/abs/2607.28306",
+      "pdf_url": "https://arxiv.org/pdf/2607.28306.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "pruning",
+        "sparsity",
+        "sparse",
+        "structured pruning",
+        "dynamic pruning"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28591",
+      "title": "Efficient LLMs with AMP: Attention Heads and MLP Pruning",
+      "authors": [
+        "Leandro Giusti Mugnaini",
+        "Bruno Lopes Yamamoto",
+        "Lucas Lauton de Alcantara",
+        "Victor Zacarias",
+        "Edson Bollis",
+        "Lucas Pellicer",
+        "Anna Helena Reali Costa",
+        "Artur Jordao"
+      ],
+      "abstract": "Deep learning drives a new wave in computing systems and triggers the automation of increasingly complex problems. In particular, Large Language Models (LLMs) have significantly advanced cognitive tasks, often matching or even surpassing human-level performance. However, their extensive parameters result in high computational costs and slow inference, posing challenges for deployment in resource-limited settings. Among the strategies to overcome the aforementioned challenges, pruning emerges as a successful mechanism since it reduces model size while maintaining predictive ability. In this paper, we introduce AMP: Attention Heads and MLP Pruning, a novel structured pruning method that efficiently compresses LLMs by removing less critical structures within Multi-Head Attention (MHA) and Multilayer Perceptron (MLP). By projecting the input data onto weights, AMP assesses structural importance and overcomes the limitations of existing techniques, which often fall short in flexibility or efficiency. In particular, AMP surpasses the current state-of-the-art on commonsense reasoning tasks by up to 1.49 percentage points, achieving a 30% pruning ratio with minimal impact on zero-shot task performance. Moreover, AMP also improves inference speeds, making it well-suited for deployment in resource-constrained environments. We confirm the flexibility of AMP on different families of LLMs, including LLaMA and Phi.",
+      "url": "https://arxiv.org/abs/2607.28591",
+      "pdf_url": "https://arxiv.org/pdf/2607.28591.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "pruning",
+        "structured pruning"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28196",
+      "title": "Fidelity Is Not Safety: Gently-Compressed LLMs Pass Every Data-Free Quality Guard Yet Invent Procedure Steps in Agentic Execution",
+      "authors": [
+        "I. Kennedy",
+        "T.Kennedy"
+      ],
+      "abstract": "Practitioners accept a compressed language model once it clears a stack of data-cheap quality guards: perplexity within a small factor of the original, downstream accuracy (for example MMLU) inside a confidence interval, and data-free output-fidelity signals that compare the compressed and original network&#39;s internal representations under random probe inputs. This stack has a blind spot. Across three model families, gently-compressed models clear every guard and then invent procedure steps that were never in the instructions when they run a standard operating procedure (SOP) as an agent. The effect is operator-specific: coherent low-rank (SVD) truncation induces it, and magnitude pruning matched to the same perplexity does not. One dissociation isolates the cause. The same compressed weights that CI-win a paired output-fidelity test CI-fail the invented-step canary. The governing axis is the coherence of the compression error times its rate; the magnitude of the damage does not predict it. The data-free fidelity probe is a fidelity oracle by construction, so it cannot see this axis. We characterize the blindspot and dissociation with paired confidence intervals on a pre-registered, powered canary across three architectures. Operator-specificity replicates on all three, and the perplexity-guard evasion appears where the model admits in-guard low-rank headroom. We then give a data-free screen: a two-axis statistic of the compression error (coherent-fraction and error-rate) that flags the failing builds with fixed thresholds across architectures and matches the coherence-times-rate mechanism. Perplexity, MMLU, and fidelity acceptance do not certify agent safety. Screen gently-compressed low-rank builds before agentic deployment",
+      "url": "https://arxiv.org/abs/2607.28196",
+      "pdf_url": "https://arxiv.org/pdf/2607.28196.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CL",
+      "matched_keywords": [
+        "pruning",
+        "compressed",
+        "compression",
+        "magnitude pruning"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28410",
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "authors": [
+        "Haozhe Hu",
+        "Hao Wu",
+        "Peiran Yin",
+        "Chao Han",
+        "Yunpu Ma",
+        "Xiaoyu Shen"
+      ],
+      "abstract": "Pruning is a promising approach for improving the efficiency of LLMs. Existing static structured pruning methods are hardware-friendly and can deliver practical throughput gains, but their input-agnostic computation allocation often causes substantial accuracy degradation under aggressive sparsity. Recent dynamic sparsity methods improve quality retention by adapting computation to individual inputs, yet they remain largely limited to coarse-grained structural decisions and their practical acceleration under real-world inference scenarios remains challenging. To address these challenges, we present WIDE, the first end-to-end differentiable token-level dynamic width pruning framework designed for both prefill and decode scenarios. WIDE enables fine-grained computation allocation by allowing each token to dynamically select attention-head groups and FFN-channel groups, extending dynamic pruning beyond layer-level decisions to neuron-block-level granularity. Through a two-stage training pipeline, WIDE learns effective token-wise sparse execution patterns and achieves substantially better quality retention than existing approaches. To make such fine-grained dynamic pruning practical, we further propose a pruning--kernel co-design framework that decomposes dynamic sparsity acceleration into mask reordering, hardware-agnostic block-level skipping, and hardware-dependent intra-block skipping, enabling efficient execution across different granularities. At 50% sparsity, WIDE provides 55.1% performance boost when compared to the state-of-the-art dynamic depth pruning under calibration-only settings. Under prefill and decoding inference workloads, WIDE achieves close-to-theoretical kernel-level speedups of up to 1.98x for prefill and 4.95x for decoding, as well as 1.68x and 1.55x end-to-end acceleration. Our code is available at this https URL.",
+      "url": "https://arxiv.org/abs/2607.28410",
+      "pdf_url": "https://arxiv.org/pdf/2607.28410.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CL",
+      "matched_keywords": [
+        "pruning",
+        "sparsity",
+        "sparse",
+        "structured pruning",
+        "dynamic pruning"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27700",
+      "title": "Calibrate Before Reason: Robust Visual Token Reduction against Semantic Drift in VLMs",
+      "authors": [
+        "Jiasheng Li",
+        "Zhong Ji",
+        "Yan Zhang",
+        "Huihui Li"
+      ],
+      "abstract": "Large Vision-Language Models (VLMs) suffer from prohibitive inference overhead due to long sequences of visual tokens. However, existing visual token reduction methods mainly improve efficiency by pruning or compressing redundant tokens without examining whether the resulting representation remains semantically consistent with the original representation. Mapping the original N-token visual sequence to K tokens may discard, dilute, or misassign critical visual cues, triggering severe semantic drift that deviates the VLM&#39;s understanding. In this paper, we first introduce the principle of &#39;Calibrate Before Reason&#39; to visual token reduction and propose CaRe, a training-free robust framework that calibrates compact visual representations before reasoning to preserve semantic fidelity in VLMs. CaRe consists of two mutually complementary modules: 1) Perturbation-Robust Calibration Anchoring, which identifies calibration anchors with stable model-side influence under multi-directional perturbations; 2) Confidence-Gated Token Calibration, which extracts reliable calibration signals from unselected tokens and injects them into anchors. Extensive evaluations across diverse VLM architectures and benchmarks verify that CaRe outperforms state-of-the-art token reduction baselines. While pruning 94.4% of visual tokens, our method retains 96.4% of the original full-token performance, delivering up to 2.30 times faster end-to-end inference speed relative to unpruned vanilla models.",
+      "url": "https://arxiv.org/abs/2607.27700",
+      "pdf_url": "https://arxiv.org/pdf/2607.27700.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CV",
+      "matched_keywords": [
+        "pruning",
+        "prune",
+        "pruned"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27952",
+      "title": "LAST: The Last Query Token Guides Visual Token Pruning for Edge-Cloud Collaborative MLLM Inference",
+      "authors": [
+        "Feng Yang",
+        "Xinrui Ju",
+        "Keyang Zhang",
+        "Xiandong Meng",
+        "Rongqun Lin",
+        "Howard Leung",
+        "Shiqi Wang",
+        "Haoliang Li",
+        "Chris Xing Tian"
+      ],
+      "abstract": "Multimodal foundation models are reshaping edge-cloud visual intelligence from task-specific feature pipelines into token-based interfaces, where edge devices encode visual inputs into tokens for a general-purpose cloud MLLM. However, dense visual-token sequences increase cloud-side inference costs. Existing pruning methods mainly target centralized inference: vision-driven methods can operate before cloud execution but are typically query-agnostic, whereas query-guided methods often rely on internal states of the target MLLM and cannot determine token relevance before transmission. Compact guidance models offer an alternative, but existing designs may require costly attention aggregation or auxiliary generation. We propose LAST, a training-free framework for query-dependent visual token pruning in edge-cloud collaborative MLLM inference. LAST uses a compact edge-side VLM as a guidance proxy and derives a lightweight importance signal from the last query token&#39;s attention to visual tokens. Under causal attention, the last query token can attend to the full visual sequence and the entire query context, enabling query-aware pruning without cloud-model access, autoregressive generation, or costly aggregation over multiple query positions. LAST then retains a diverse set of query-relevant visual tokens under a fixed token budget. We evaluate LAST on 11 multimodal benchmarks under multiple token budgets against pruning methods with different guidance strategies. Experiments show that LAST consistently achieves the strongest performance, preserving 95.4% of the full-token accuracy while retaining only 12.5% of the visual tokens, with low edge-side selection overhead and reduced cloud-side computation.",
+      "url": "https://arxiv.org/abs/2607.27952",
+      "pdf_url": "https://arxiv.org/pdf/2607.27952.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CV",
+      "matched_keywords": [
+        "pruning",
+        "token pruning"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27951",
+      "title": "LAST: The Last Query Token Guides Visual Token Pruning for Edge-Cloud Collaborative MLLM Inference",
+      "authors": [
+        "Feng Yang",
+        "Xinrui Ju",
+        "Keyang Zhang",
+        "Xiandong Meng",
+        "Rongqun Lin",
+        "Howard Leung",
+        "Shiqi Wang",
+        "Haoliang Li",
+        "Chris Xing Tian"
+      ],
+      "abstract": "Multimodal foundation models are reshaping edge-cloud visual intelligence from task-specific feature pipelines into token-based interfaces, where edge devices encode visual inputs into tokens for a general-purpose cloud MLLM. However, dense visual-token sequences increase cloud-side inference costs. Existing pruning methods mainly target centralized inference: vision-driven methods can operate before cloud execution but are typically query-agnostic, whereas query-guided methods often rely on internal states of the target MLLM and cannot determine token relevance before transmission. Compact guidance models offer an alternative, but existing designs may require costly attention aggregation or auxiliary generation. We propose LAST, a training-free framework for query-dependent visual token pruning in edge-cloud collaborative MLLM inference. LAST uses a compact edge-side VLM as a guidance proxy and derives a lightweight importance signal from the last query token&#39;s attention to visual tokens. Under causal attention, the last query token can attend to the full visual sequence and the entire query context, enabling query-aware pruning without cloud-model access, autoregressive generation, or costly aggregation over multiple query positions. LAST then retains a diverse set of query-relevant visual tokens under a fixed token budget. We evaluate LAST on 11 multimodal benchmarks under multiple token budgets against pruning methods with different guidance strategies. Experiments show that LAST consistently achieves the strongest performance, preserving 95.4% of the full-token accuracy while retaining only 12.5% of the visual tokens, with low edge-side selection overhead and reduced cloud-side computation.",
+      "url": "https://arxiv.org/abs/2607.27951",
+      "pdf_url": "https://arxiv.org/pdf/2607.27951.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.AI",
+      "matched_keywords": [
+        "pruning",
+        "token pruning"
+      ]
+    }
+  ],
+  "distillation": [
+    {
+      "arxiv_id": "2607.27712",
+      "title": "Beyond the Best Teacher: Expanding and Compressing the Reasoning Solution Manifold",
+      "authors": [
+        "Songshuo Lu",
+        "Zhi Chen",
+        "Yaohua Tang"
+      ],
+      "abstract": "A single reinforcement-learning run can produce a strong reasoner yet an incomplete teacher: it often amplifies only a subset of the valid solution modes. We argue that reinforcement learning (RL)-trained policies should therefore be viewed as local probes of a multi-basin reasoning solution manifold, rather than as globally reliable supervisors. Based on this view, we propose an expand-then-compress framework that couples teacher construction with multi-teacher policy distillation. In the expansion stage, Residual Group Relative Policy Optimization (RGRPO) trains a sequence of teachers from a common initialization and redirects each later round toward examples not yet covered by the accumulated teacher union. In the compression stage, reliability-gated Teacher-Union On-policy Distillation (TU-OPD) lets the student learn from its own response prefixes. For each example, only reliable teachers contribute, and their sampled-token OPD losses are weighted by their per-example quality. We further introduce Consensus-Residual Decomposition, which preserves a winner teacher&#39;s excess token preferences over its reliable peers, preventing specialist behavior from being suppressed during teacher aggregation. Experiments on mathematical reasoning, code generation, and instruction following show that the resulting Qwen3-1.7B student consistently outperforms the strongest individual teacher across all three domains, yielding relative improvements of 2.0%, 8.3%, and 6.9%, respectively, while retaining single-model inference. These results establish a simple but powerful principle: stronger students can be obtained not by selecting a single better teacher, but by deliberately constructing and compressing a complementary teacher union.",
+      "url": "https://arxiv.org/abs/2607.27712",
+      "pdf_url": "https://arxiv.org/pdf/2607.27712.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "distillation",
+        "compression"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27953",
+      "title": "Flux-OPD: On-Policy Distillation with Evolving Contexts",
+      "authors": [
+        "Yuran Wang",
+        "Zekun Wang",
+        "Bohan Zeng",
+        "Ruixu Zhang",
+        "Wenxuan Liu",
+        "Liu Yang",
+        "Yifan Dai",
+        "Yang Shi",
+        "Bozhou Li",
+        "Chengzhuo Tong",
+        "Daili Hua",
+        "Yuanxing Zhang",
+        "Wentao Zhang"
+      ],
+      "abstract": "Large language model training in open-ended domains lacks verifiable rewards, making task preferences difficult to formalize as effective supervision. Contexts can convey such preferences, yet provide little additional supervision once distilled into the student, motivating contexts that evolve with student performance. However, directly using evolving contexts as in-training supervision results in an unstable distillation target and conflicting distributions, requiring mechanisms to stabilize target and downweight conflicts. In this paper, we analyze the effect of contexts through a decomposition of the reverse KL objective, revealing two findings: the student is distilled toward the geometric mean of context-conditioned teachers, and the objective contains a conflict term that measures conflicts among these teachers. Based on this decomposition, we propose Flux-OPD, an OPD paradigm that uses evolving contexts as in-training supervision to capture task preferences in open-ended domains. Flux-OPD treats the differences between context-conditioned and context-free teachers as contextual difference signals, injects them as contextual corrections into the context-free teacher anchor, and weights their correction strength using the conflict term as an indicator. Experiments on open-ended tasks show that Flux-OPD outperforms existing OPD paradigms, highlighting the potential to combine teacher supervision with evolving contexts.",
+      "url": "https://arxiv.org/abs/2607.27953",
+      "pdf_url": "https://arxiv.org/pdf/2607.27953.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27966",
+      "title": "Contrastive Reinforced Policy Optimization via Privileged Self-Distillation",
+      "authors": [
+        "Xingjian Wu",
+        "Junlin Liu",
+        "Xingchen Liu",
+        "Xuhang Zhu",
+        "Jianing Wang",
+        "Linsen Guo",
+        "Xiaoyu Li",
+        "Xuezhi Cao",
+        "Xunliang Cai"
+      ],
+      "abstract": "Recent advances in post-training Large Language Models (LLMs) increasingly rely on Reinforcement Learning with Verifiable Rewards (RLVR) or On-Policy Self-Distillation (OPSD). While OPSD provides dense, logit-level supervision, it inherently suffers from exposure bias due to the privileged information of the self-teacher. In multi-turn agentic settings, this leads to reasoning route convergence and the loss of clear optimization directions. To tackle these challenges, we introduce Contrastive Reinforced Policy Optimization (CRPO), which reformulates agentic OPSD from a contrastive learning perspective. By leveraging predictive entropy to distinguish between positive positions (reflective exploration) and negative positions (exposure bias), CRPO conducts group-wise contrast to preserve reliable, fine-grained optimization signals. Extensive evaluations across 13 challenging reasoning and deep-search benchmarks demonstrate that CRPO consistently outperforms existing reinforcement learning and self-distillation baselines, significantly enhancing training stability and generalization in long-horizon interactions.",
+      "url": "https://arxiv.org/abs/2607.27966",
+      "pdf_url": "https://arxiv.org/pdf/2607.27966.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28428",
+      "title": "$β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
+      "authors": [
+        "Jiawei Xu",
+        "Minghui Liu",
+        "Juzheng Zhang",
+        "Tom Goldstein",
+        "Furong Huang"
+      ],
+      "abstract": "On-policy self-distillation (OPSD) is a promising approach to improve reasoning language models, but it remains brittle in practice: making it work reliably often requires substantial engineering effort. We identify a structural source of this difficulty: vanilla OPSD is precisely the $\\beta=1$ member of a broader policy-optimization family, where $\\beta$ weights the KL penalty anchoring the student to a reference policy. This equivalence turns $\\beta$ from an implicit value fixed at one into a controllable regularization parameter, yielding a more general formulation that trades off proximity to a reference policy against privileged teacher guidance. We introduce $\\beta$-OPSD and derive its optimal policy as a geometric interpolation between the reference policy and the privileged teacher. Directly optimizing this objective with reinforcement learning, however, would be costly and high-variance. Rather than optimize the RL objective directly, we turn its closed-form solution into a distillation target. Each value of $\\beta$ selects a target along the reference-to-teacher path, which we implement efficiently by mixing their token-level logits. In this way, inexpensive distillation approximates the solution of expensive policy optimization. Return-to-go credit assignment further aligns token updates with the sequence-level objective while retaining the simplicity of OPSD. Experiments on mathematical reasoning benchmarks show that $\\beta$-OPSD consistently outperforms vanilla OPSD, improving optimization stability and downstream reasoning performance. Our results provide a principled route from self-distillation to policy optimization and back without sacrificing the efficiency that makes OPSD practical.",
+      "url": "https://arxiv.org/abs/2607.28428",
+      "pdf_url": "https://arxiv.org/pdf/2607.28428.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27891",
+      "title": "Group-Reflective Self-Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Binbin Zheng",
+        "Zijun Xie",
+        "Guanqun Zhao",
+        "Enlei Gong",
+        "Xing Ma",
+        "Xiaoliang Fu",
+        "Zeyu Chen"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is effective for training large language model agents. However, terminal rewards provide only coarse trajectory-level supervision, leaving successful behaviors, recurring mistakes, and incidental choices entangled in the same outcome signal. Existing agentic self-distillation methods enrich sparse supervision with natural-language skills, but skills retrieved externally or extracted from a single trajectory by stronger models may mismatch current experience, exceed the policy&#39;s capability, or remain path-specific. We propose Group-Reflective Self-Distillation (GRSD), which derives capability-aligned and outcome-discriminative guidance from the policy&#39;s own verified rollouts. For each prompt, the policy reflects on each verified trajectory in an on-policy group, and a stop-gradient snapshot contrasts the resulting reflections from successful and failed rollouts to construct group-level privileged guidance. Conditioned on this guidance, a self-teacher refines turn-level credit assignment by modulating outcome-based advantages while preserving the verifier-determined learning direction. Experiments across multiple agentic environments and model scales demonstrate that GRSD consistently outperforms competitive baselines and generalizes more effectively to unseen tasks.",
+      "url": "https://arxiv.org/abs/2607.27891",
+      "pdf_url": "https://arxiv.org/pdf/2607.27891.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "sparse",
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28498",
+      "title": "VAD: Attributing Visual Evidence for Target Reconstruction in Multimodal On-Policy Distillation",
+      "authors": [
+        "Kangning Zhang",
+        "Yixing Li",
+        "Shuai Shao",
+        "Qingyao Li",
+        "Zhengxi Lu",
+        "Zhiyuan Yao",
+        "Jianghao Lin",
+        "Wenxiang Jiao",
+        "Yuan Lu",
+        "Weiwen Liu",
+        "Weinan Zhang",
+        "Yong Yu"
+      ],
+      "abstract": "Multimodal on-policy distillation (OPD) transfers fine-grained visual knowledge by supervising student-generated trajectories with a privileged-view teacher. Yet its next-token corrections are source-mixed, combining visual signals with linguistic priors and teacher-specific effects. The key challenge is to estimate which corrections are supported by visual evidence, not merely where or how strongly to distill. We introduce Visual Attribution Distillation (VAD), a counterfactual target-reconstruction algorithm that estimates the visually attributable part of a teacher correction. At each student-generated prefix, VAD evaluates the same fixed teacher with the relevant evidence present and removed. The corresponding change in centered log-probabilities defines ut, a signed proxy for the visual evidence direction that estimates how revealing the evidence supports or refutes candidate tokens. VAD projects the original correction onto this proxy to obtain an intervention-aligned component and a proxy-unexplained residual, then reconstructs a student-anchored target from the former. During training, this reconstructed target supplies the primary supervision signal, while the privileged teacher contributes a weak regularizer. Across six fine-grained visual benchmarks at 4B and 9B scales, VAD outperforms direct privileged-view distillation and visual-advantage weighting. Token- level and controlled-target analyses show that the proxy-aligned component is enriched in task-relevant visual corrections and yields stronger target shifts, especially when evidence refutes a mistaken answer. These results support counterfactual target reconstruction as an effective alternative to source-mixed supervision.",
+      "url": "https://arxiv.org/abs/2607.28498",
+      "pdf_url": "https://arxiv.org/pdf/2607.28498.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CL",
+      "matched_keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28154",
+      "title": "OPLD: On-Policy Latent Distillation for Multimodal Reasoning",
+      "authors": [
+        "Shoutai Zhu",
+        "Tianyang Xu",
+        "Bin Sun",
+        "Mingyuan Xu",
+        "Yu Liu",
+        "Qinzhen Guo"
+      ],
+      "abstract": "Interleaved multimodal Chain-of-Thought (CoT) improves visual reasoning by incorporating auxiliary visual evidence into intermediate reasoning. However, existing approaches remain constrained by externally defined reasoning traces and visual operations, limiting their ability to develop flexible and abstract visual thinking. Reasoning with latent has recently offered a promising direction by internalizing intermediate computation into continuous representations. Nevertheless, existing visual-latent methods mainly supervise latent states through alignment with compressed auxiliary visual features, treating them as proxies for visual observations rather than active reasoning states. Consequently, they capture the provided evidence but fail to fully internalize the abstract reasoning process induced by multimodal CoT. In this paper, we propose OPLD (On-Policy Latent Distillation), a simple framework that transfers the reasoning capability induced by privileged multimodal CoT into latent reasoning representations. Extensive experiments on diverse multimodal benchmarks demonstrate that OPLD consistently outperforms existing latent reasoning methods and achieves state-of-the-art performance on multiple benchmarks. The results suggest that supervising latent representations at the reasoning-process level provides a more effective paradigm for multimodal latent reasoning than conventional feature-level alignment.",
+      "url": "https://arxiv.org/abs/2607.28154",
+      "pdf_url": "https://arxiv.org/pdf/2607.28154.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CV",
+      "matched_keywords": [
+        "distillation",
+        "compressed"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28269",
+      "title": "Theia: Large-Scale Multimodal Captioning and Automated Validation of the Incidents1M Dataset for Data-Free Distillation",
+      "authors": [
+        "Simone Giano",
+        "Lorenzo Severini",
+        "Alessandro Galdelli",
+        "Adriano Mancini"
+      ],
+      "abstract": "The deployment of Vision-Language Models (VLMs) in critical domains like disaster management requires high-quality multimodal datasets, especially for transferring knowledge via Data-Free Knowledge Distillation (DFKD). However, existing datasets in this domain either entirely lack descriptive text, such as Incidents1M, or suffer from severe text-image semantic misalignment, such as CrisisMMD. In this work, we present a novel methodology to construct and automatically validate a large-scale multimodal dataset for disaster response. Starting from the vision-only Incidents1M, we successfully recovered 100,000 images and generated high-fidelity textual descriptions using two distinct Qwen3.5 architectures: a 4B dense model and a 35B Mixture-of-Experts (MoE) model. To ensure the generated captions provide reliable semantic anchoring for DFKD, we introduce an image-blind LLM-as-a-Judge validation pipeline leveraging Qwen3.5-9B. By intentionally obscuring the original image from the judge, this evaluator accurately simulates the modality gap of the student model during data-free distillation. Our evaluation across 173,179 label pairs demonstrates a high semantic agreement (78.65/100) between the two architectures. Furthermore, the automated evaluation reveals a conservative captioning behaviour, characterized by a high Precision (77.6%) and low Recall (46.0%). This minimizes the false positive noise, while simultaneously exposing underlying human annotation inconsistencies in the original ground truth. This work provides a scalable, LLM-validated multimodal dataset and a reproducible framework to advance cross-modal knowledge distillation.",
+      "url": "https://arxiv.org/abs/2607.28269",
+      "pdf_url": "https://arxiv.org/pdf/2607.28269.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CV",
+      "matched_keywords": [
+        "distillation",
+        "knowledge distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27937",
+      "title": "From Scoring to Acting: Outcome-Verified Comparative Self-Distillation for LLM Agents",
+      "authors": [
+        "Xu Xia",
+        "Jinghua Piao",
+        "Min Yang",
+        "Xiaochong Lan",
+        "Jiaju Chen",
+        "Yong Li"
+      ],
+      "abstract": "Recent work on LLM agents is shifting from external capability elicitation to capability internalization, enabling agents to retain useful skills without retrieval at inference time. On-policy self-distillation (OPSD) offers a promising direction, but many existing methods typically supervise students by scoring actions along student-generated trajectories. Such supervision has two limitations: teacher preferences are not validated by environment outcomes, and action-level scores underuse information from student rollouts, teacher rollouts, and their behavioral relationship. We therefore advocate outcome-verified teacher supervision and comparative learning over teacher-student trajectories. Based on this view, we propose Outcome-Verified Comparative Self-Distillation (OVCSD). OVCSD organizes failed student rollouts into a prefix tree, adaptively invokes a skill-conditioned teacher from student-reached states, and retains only outcome-verified successful continuations. It then applies localized comparative learning at the first state-aligned divergence and distills the post-divergence teacher suffix to transfer completion behavior. Experiments on ALFWorld and WebShop across three model scales show that OVCSD consistently outperforms skill-free RL and existing self-distillation baselines, achieving up to 29.7 and 5.4 absolute success-rate gains over the strongest baselines on ALFWorld and WebShop, respectively, while adding less than 3% privileged interaction during training.",
+      "url": "https://arxiv.org/abs/2607.27937",
+      "pdf_url": "https://arxiv.org/pdf/2607.27937.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.AI",
+      "matched_keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28048",
+      "title": "SKILL-KD: Contrastive Skill Distillation for LLM Agents",
+      "authors": [
+        "Qiming Shi",
+        "Yibo Dou",
+        "Jiawen Zhu",
+        "Yulong Tao",
+        "Linbo Jin",
+        "Zhaolu Kang",
+        "Yunfan Zhou",
+        "Di Weng"
+      ],
+      "abstract": "Skill-based prompting has become a practical mechanism for improving large language model (LLM) agents, yet existing skill acquisition methods often treat skills as experience summaries, memory entries, or direct summaries of successful demonstrations. This creates a mismatch for weaker student agents: when a student fails because it lacks task knowledge or operational strategy, its failed trajectory may not contain enough evidence to infer the missing behavior, while the teacher trajectory may be too implicit to be internalized as reusable guidance. We propose SKILL-KD, a contrastive skill distillation framework that treats skills as an explicit distillation medium between agents of different capabilities. Given a student failure and the teacher trajectory on the same task, SKILL-KD distills their actionable discrepancy into a textual skill patch, evaluates the patch by re-running the student, and iteratively refines the patch when the student still fails. To prevent repeated local updates from causing skill drift, SKILL-KD further maintains trace-linked edit histories and performs Drift-Aware Skill Consolidation, deciding whether each patch should add a new rule, delete or modify an existing rule, or be skipped. Across five agent benchmarks and two student settings, SKILL-KD consistently improves frozen student agents over fixed-model adaptation baselines.",
+      "url": "https://arxiv.org/abs/2607.28048",
+      "pdf_url": "https://arxiv.org/pdf/2607.28048.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.AI",
+      "matched_keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28069",
+      "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
+      "authors": [
+        "Hui Xie",
+        "Peng Xiao",
+        "Yutong Deng\\textsuperscript",
+        "Shuoran Dou",
+        "Jian Yang",
+        "Jinyang Guo"
+      ],
+      "abstract": "Long-context retrieval and agentic workloads repeatedly reuse the same documents under changing instructions, histories, and document orders. Prefix caching cannot exploit this reuse, while position-independent caching (PIC) remains unreliable because independently compiled KV states lack the future context in which they will be consumed. Our diagnostics show that a learned boundary-conditioned baseline sharply reduces attention deviation near reusable-block boundaries but leaves interior and task-level residuals, motivating adaptation of the document representation itself. We present \\emph{SemPIC}, which trains a LoRA-enabled Writer to compile native per-layer document KVs through behavioral distillation while retaining the pretrained decoder as an unchanged Reader. Adaptation is confined to offline cache construction, preserving the standard KV interface and cache-hit decoding path. We further introduce KV Gradient Checkpointing, which reduces peak training memory without severing gradients through cached KVs. Across three models and four tasks, SemPIC raises mean micro-F1 over KV Packet from 0.53 to 0.60, approaching Full Recompute at 0.62.",
+      "url": "https://arxiv.org/abs/2607.28069",
+      "pdf_url": "https://arxiv.org/pdf/2607.28069.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.AI",
+      "matched_keywords": [
+        "distillation",
+        "kv cache"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28336",
+      "title": "Correcting What You Cannot See: Credit Assignment for Perception Distillation in Multimodal Reasoners",
+      "authors": [
+        "Feng Xiong",
+        "Leyan Xue",
+        "Hongyu Lin"
+      ],
+      "abstract": "On-policy distillation provides dense supervision for multimodal reasoners, but its trajectory-level reward cannot determine whether a failed answer arose from perception or subsequent reasoning. Perception Success Rate (PSR), estimated from multiple reasonings sharing one perception, remains ambiguous because low success conflates perceptual insufficiency with reasoning difficulty. We introduce \\textbf{Perception-Correction Distillation (PCD)}, a label-free method that identifies correctable perception failures using downstream failure and teacher--student disagreement as complementary witnesses. Their product, , forms a soft AND gate that strengthens distillation only when both witnesses are present. We motivate this rule through Bayesian evidence combination and show that multiplication is the unique normalized bilinear gate that vanishes when either witness is absent. PCD uses separated perception--reasoning rollouts and mean-preserving weights, leaving the reasoning objective unchanged. Across eight benchmarks, PCD improves the 8B 2B macro average from 44.50 with OPD to 47.28 and the 32B 8B result from 56.94 to 61.22. In matched 2B ablations, removing PCD and separated rollout reduces held-out average by 2.22 and 0.88 points, respectively. Effective multimodal distillation therefore depends not only on what the teacher predicts, but also on identifying when perception is the appropriate target of correction.",
+      "url": "https://arxiv.org/abs/2607.28336",
+      "pdf_url": "https://arxiv.org/pdf/2607.28336.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.AI",
+      "matched_keywords": [
+        "distillation"
+      ]
+    }
+  ],
+  "kv_cache": [
+    {
+      "arxiv_id": "2607.28399",
+      "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+      "authors": [
+        "Alexander Boesgaard Lorup"
+      ],
+      "abstract": "Stage-replay diagnostics reconstruct intermediate token prefixes and treat fresh-prefill continuation as continuation from the decoder state that originally reached the prefix. We audit that assumption at a whole reasoning-stage boundary in a Qwen2.5-derived system. A matched 200-item experiment compares retained live cache with one-shot prefill of identical integer tokens and places an exact replica on both sides. In BF16, replicas remain exact while the constructions differ on 166 suffixes and 20 correctness labels; the accuracy difference is only one point (paired 95% CI [-3.5, +5.5]). A fixed-prefix 2x2 holds all 200 token states constant while crossing construction and precision. The BF16 disagreements recur, whereas FP32 produces no decoded disagreement (95% Wilson upper bound 1.88%). A prospective bridge makes token-by-token incremental and retained live caches bit-exact on 12/12 rows; an all-200 saved-ledger audit reproduces every retained trajectory and comparison fingerprint. Bidirectional transplantation of all 48 key/value layers makes every tested divergent continuation follow its cache donor, both on a selected set at the primary checkpoint (24/24) and an outcome-blind replication at a later checkpoint (43/43). Exact-token replay can therefore be repeatable without preserving live-state fidelity. On the tested states, boundary K/V cache is a causally sufficient carrier of the divergent trajectory, while numerical precision moderates its behavioral expression.",
+      "url": "https://arxiv.org/abs/2607.28399",
+      "pdf_url": "https://arxiv.org/pdf/2607.28399.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "kv cache"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27532",
+      "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
+      "authors": [
+        "Wenshuai Yao",
+        "Wenyong Zhou",
+        "Hanyong Shao",
+        "Yizhe Chen",
+        "Zhiyuan Ning",
+        "Yuannuo Feng",
+        "Ru Huang",
+        "Kechao Tang"
+      ],
+      "abstract": "Top-$K$ sparse attention reduces the cost of Softmax and value aggregation by attending to only a small subset of key--value (KV) entries. However, identifying this subset still requires scoring the current query against the full KV cache and performing global Top-$K$ selection, leaving selector cost linear in context length and limiting the practical efficiency of sparse attention for long-context decoding. In this paper, we introduce ReTopK, a training-free method that accelerates dynamic Top-$K$ attention by reusing historical retrieval decisions. ReTopK builds on the observation that similar queries often attend to overlapping supports and that partially overlapping supports can still preserve most of the Exact Top-$K$ attention mass. For each attention head, it maintains a bounded cache of historical query--support pairs, retrieves the most similar cached queries for each new query, unions their stored supports with a recent window, and reranks only the resulting compact candidate set using exact current-query scores. A similarity-based fallback invokes full-history Exact Top-$K$ when reuse is unreliable, while periodic exact refreshes limit cache drift. ReTopK retains the complete KV cache and reuses only selected indices, rather than historical scores, attention weights, or outputs. Across 16K--128K contexts, ReTopK achieves the lowest PG19 perplexity and the highest NIAH and LongBench scores among the evaluated approximate methods. At 128K with $K=512$, ReTopK incurs only a 0.50\\% perplexity increase over Exact Top-$K$ while accelerating attention computation by $3.07\\times$.",
+      "url": "https://arxiv.org/abs/2607.27532",
+      "pdf_url": "https://arxiv.org/pdf/2607.27532.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.LG",
+      "matched_keywords": [
+        "sparse",
+        "kv cache"
+      ]
+    },
+    {
+      "arxiv_id": "2607.27735",
+      "title": "A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding",
+      "authors": [
+        "Yuesong Liu",
+        "Yuan Zeng",
+        "Min Lyu",
+        "Ruilin Liu",
+        "Yu Guo",
+        "Yinlong Xu"
+      ],
+      "abstract": "Speculative decoding alleviates the memory-bandwidth bottleneck in large language model inference, but its acceleration is jointly constrained by drafting overhead, token acceptance, and speculation length. We present a unified efficiency analysis showing that extending the speculation horizon can reduce rather than improve speedup when the marginal acceptance probability falls below the relative drafting cost. Guided by this analysis, we introduce SparseSpec-L, a training-free self-speculative decoding framework for long-context inference. SparseSpec-L generates lightweight drafts directly from the target model using a dynamically sparsified and recallable KV cache. It recycles per-head attention statistics produced during full-context verification as a no-extra-forward importance signal, allowing critical historical tokens to be recalled without permanently discarding the dense KV cache. An online entropy-based controller further selects the speculation length according to expected step-wise efficiency. Experiments across multiple long-context tasks and model scales show consistent end-to-end acceleration, with up to speedup over autoregressive decoding while preserving the target model&#39;s output distribution.",
+      "url": "https://arxiv.org/abs/2607.27735",
+      "pdf_url": "https://arxiv.org/pdf/2607.27735.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CL",
+      "matched_keywords": [
+        "sparse",
+        "kv cache",
+        "speculative decoding"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28457",
+      "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+      "authors": [
+        "Alexander Boesgaard Lorup"
+      ],
+      "abstract": "Stage-replay diagnostics reconstruct intermediate token prefixes and treat fresh-prefill continuation as continuation from the decoder state that originally reached the prefix. We audit that assumption at a whole reasoning-stage boundary in a Qwen2.5-derived system. A matched 200-item experiment compares retained live cache with one-shot prefill of identical integer tokens and places an exact replica on both sides. In BF16, replicas remain exact while the constructions differ on 166 suffixes and 20 correctness labels; the accuracy difference is only one point (paired 95% CI [-3.5, +5.5]). A fixed-prefix 2x2 holds all 200 token states constant while crossing construction and precision. The BF16 disagreements recur, whereas FP32 produces no decoded disagreement (95% Wilson upper bound 1.88%). A prospective bridge makes token-by-token incremental and retained live caches bit-exact on 12/12 rows; an all-200 saved-ledger audit reproduces every retained trajectory and comparison fingerprint. Bidirectional transplantation of all 48 key/value layers makes every tested divergent continuation follow its cache donor, both on a selected set at the primary checkpoint (24/24) and an outcome-blind replication at a later checkpoint (43/43). Exact-token replay can therefore be repeatable without preserving live-state fidelity. On the tested states, boundary K/V cache is a causally sufficient carrier of the divergent trajectory, while numerical precision moderates its behavioral expression.",
+      "url": "https://arxiv.org/abs/2607.28457",
+      "pdf_url": "https://arxiv.org/pdf/2607.28457.pdf",
+      "submitted": "2026-07-31",
+      "categories": [],
+      "source_category": "cs.CL",
+      "matched_keywords": [
+        "kv cache"
+      ]
+    }
+  ]
+}
