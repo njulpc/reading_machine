@@ -28,6 +28,7 @@ arXiv: https://arxiv.org/abs/2607.28405
 
 import os
 import math
+import gc
 import warnings
 from typing import Dict, List, Tuple, Optional
 
@@ -62,7 +63,7 @@ class Config:
     lambda_action = 0.5        # λ_a: 动作流目标权重
 
     # 校准样本数 (论文中使用 32 条轨迹)
-    num_calibration_samples = 16  # demo 中减少样本数以加速
+    num_calibration_samples = 4   # demo 中减少样本数以加速并降低内存
 
     # 随机种子
     seed = 42
@@ -125,9 +126,8 @@ def randomized_hadamard(dim: int, seed: int = 42) -> torch.Tensor:
     """
     H = construct_hadamard_matrix(dim, seed)
     torch.manual_seed(seed)
-    D = torch.diag(torch.choice(
-        torch.tensor([-1.0, 1.0]), (dim,)
-    ).float())
+    signs = torch.randint(0, 2, (dim,)).float() * 2 - 1  # 随机 ±1
+    D = torch.diag(signs)
     R = D @ H
     return R
 
@@ -801,13 +801,18 @@ def collect_activations_and_gradients(
     tokenizer,
     calibration_texts: List[str],
     device: str = "cpu"
-) -> Tuple[Dict[str, List[torch.Tensor]], Dict[str, List[torch.Tensor]], Dict[str, List[torch.Tensor]]]:
+) -> Tuple[Dict[str, List[torch.Tensor]], Dict[str, dict]]:
     """
-    收集校准数据下的激活值和双流梯度。
+    收集校准数据下的激活值和双流梯度的 Fisher 统计量。
 
     本 demo 中:
     - 视频流目标 ℓ_v: 下一 token 预测的交叉熵损失
-    - 动作流目标 ℓ_a: 隐藏状态一致性损失 (中间层输出与 FP16 参考的 MSE)
+    - 动作流目标 ℓ_a: 隐藏状态一致性损失 (中间层输出与 FP 参考的 MSE)
+
+    为降低内存，梯度不存储原始张量，而是即时计算 Fisher 对角统计量:
+      gv_sq[out] = E[g_v^2]  (对样本和输入维度取均值)
+      ga_sq[out] = E[g_a^2]
+      cross[out] = E[g_v ⊙ g_a]
 
     参数:
         model: 目标模型
@@ -816,12 +821,11 @@ def collect_activations_and_gradients(
         device: 计算设备
     返回:
         activations: {层名: [激活张量列表]}
-        grad_video: {层名: [视频流梯度列表]}
-        grad_action: {层名: [动作流梯度列表]}
+        fisher_stats: {层名: {"gv_sq": [out], "ga_sq": [out], "cross": [out]}}
     """
     activations = {}
-    grad_video = {}
-    grad_action = {}
+    fisher_accum = {}  # {name: {"gv_sq": [out], "ga_sq": [out], "cross": [out], "count": int}}
+    input_cov_accum = {}  # {name: [in]} 累积 E[x^2]
 
     model.eval()
 
@@ -831,10 +835,13 @@ def collect_activations_and_gradients(
         if isinstance(module, nn.Linear):
             linear_layers[name] = module
 
-    for text in calibration_texts:
+    linear_weights = [m.weight for m in linear_layers.values()]
+    linear_names = list(linear_layers.keys())
+
+    for sample_idx, text in enumerate(calibration_texts):
         # 编码输入
         inputs = tokenizer(
-            text, return_tensors="pt", truncation=True, max_length=128
+            text, return_tensors="pt", truncation=True, max_length=64
         ).to(device)
 
         # 前向传播，收集激活
@@ -843,7 +850,6 @@ def collect_activations_and_gradients(
 
         def make_hook(name):
             def hook_fn(module, input, output):
-                # 保存输入激活 (Linear 的输入)
                 if isinstance(input, tuple) and len(input) > 0:
                     layer_activations[name] = input[0].detach().clone()
             return hook_fn
@@ -851,8 +857,8 @@ def collect_activations_and_gradients(
         for name, module in linear_layers.items():
             hooks.append(module.register_forward_hook(make_hook(name)))
 
-        # 前向传播
-        outputs = model(**inputs, labels=inputs["input_ids"])
+        # 前向传播（需要 hidden_states 用于模拟动作流目标）
+        outputs = model(**inputs, labels=inputs["input_ids"], output_hidden_states=True)
         loss_video = outputs.loss  # 下一 token 预测损失 (模拟 ℓ_v)
 
         # 移除 hook
@@ -862,9 +868,7 @@ def collect_activations_and_gradients(
         # 获取中间隐藏状态作为动作流参考 (模拟 ℓ_a)
         hidden_states = outputs.hidden_states if hasattr(outputs, "hidden_states") else None
         if hidden_states is not None:
-            # 使用最后一层隐藏状态计算一致性损失
             ref_hidden = hidden_states[-1].detach()
-            # 动作流目标: 隐藏状态的 MSE (模拟动作预测的一致性)
             noise = torch.randn_like(ref_hidden) * 0.01
             loss_action = F.mse_loss(
                 hidden_states[-1] + noise, ref_hidden
@@ -872,48 +876,71 @@ def collect_activations_and_gradients(
         else:
             loss_action = loss_video * 0.1  # 退化情况
 
-        # 计算双流梯度
-        loss_co = Config.lambda_video * loss_video + Config.lambda_action * loss_action
+        # 计算双流梯度：使用 autograd.grad
+        gv_list = torch.autograd.grad(
+            loss_video, linear_weights, retain_graph=True, allow_unused=True
+        )
+        ga_list = torch.autograd.grad(
+            loss_action, linear_weights, allow_unused=True
+        )
 
-        for name, module in linear_layers.items():
+        # 即时计算 Fisher 统计量，避免存储完整梯度
+        for name, gv, ga in zip(linear_names, gv_list, ga_list):
             if name not in layer_activations:
+                continue
+            if gv is None or ga is None:
                 continue
 
             act = layer_activations[name]  # [1, seq, d] 或 [1, d]
+            act_flat = act.reshape(-1, act.shape[-1])  # [seq, d]
 
-            # 计算对层输出的梯度
-            # 视频流梯度
-            module.zero_grad()
-            if module.weight.grad is not None:
-                module.weight.grad.zero_()
-            loss_video.backward(retain_graph=True)
-            gv = module.weight.grad.clone() if module.weight.grad is not None else None
+            # 存储激活（用于离群值校准，张量较小）
+            if name not in activations:
+                activations[name] = []
+            activations[name].append(act_flat.detach())
 
-            # 动作流梯度
-            module.zero_grad()
-            if module.weight.grad is not None:
-                module.weight.grad.zero_()
-            loss_action.backward(retain_graph=True)
-            ga = module.weight.grad.clone() if module.weight.grad is not None else None
+            # 即时计算 Fisher 对角统计量
+            # gv, ga: [out, in] -> 对 in 维取均值得 [out]
+            gv_sq_sample = (gv.float() ** 2).mean(dim=1)  # [out]
+            ga_sq_sample = (ga.float() ** 2).mean(dim=1)  # [out]
+            cross_sample = (gv.float() * ga.float()).mean(dim=1)  # [out]
 
-            if gv is not None and ga is not None:
-                # 梯度形状 [out, in]，按输出维度取均值模拟 E[g]
-                # 展平为 [N, out] 形式 (这里 N=1，简化处理)
-                gv_flat = gv.unsqueeze(0)  # [1, out, in] -> 取每个样本
-                ga_flat = ga.unsqueeze(0)
+            # 输入协方差对角 E[x^2]
+            x_sq_sample = (act_flat.float() ** 2).mean(dim=0)  # [in]
 
-                if name not in activations:
-                    activations[name] = []
-                    grad_video[name] = []
-                    grad_action[name] = []
+            if name not in fisher_accum:
+                fisher_accum[name] = {
+                    "gv_sq": gv_sq_sample.clone(),
+                    "ga_sq": ga_sq_sample.clone(),
+                    "cross": cross_sample.clone(),
+                    "x_sq": x_sq_sample.clone(),
+                    "count": 1
+                }
+            else:
+                fisher_accum[name]["gv_sq"] += gv_sq_sample
+                fisher_accum[name]["ga_sq"] += ga_sq_sample
+                fisher_accum[name]["cross"] += cross_sample
+                fisher_accum[name]["x_sq"] += x_sq_sample
+                fisher_accum[name]["count"] += 1
 
-                activations[name].append(act.reshape(-1, act.shape[-1]).detach())
-                grad_video[name].append(gv.reshape(gv.shape[0], -1).detach())
-                grad_action[name].append(ga.reshape(ga.shape[0], -1).detach())
+        # 释放本样本的中间变量
+        del outputs, loss_video, loss_action, gv_list, ga_list, layer_activations
+        if 'hidden_states' in dir():
+            del hidden_states
+        gc.collect()
 
-        model.zero_grad()
+    # 计算最终均值
+    fisher_stats = {}
+    for name, acc in fisher_accum.items():
+        n = acc["count"]
+        fisher_stats[name] = {
+            "gv_sq": (acc["gv_sq"] / n).detach(),
+            "ga_sq": (acc["ga_sq"] / n).detach(),
+            "cross": (acc["cross"] / n).detach(),
+            "x_sq": (acc["x_sq"] / n).detach(),
+        }
 
-    return activations, grad_video, grad_action
+    return activations, fisher_stats
 
 
 def identify_coordinate_compatible_groups(
@@ -999,12 +1026,14 @@ def load_model_and_tokenizer(config: Config):
     tokenizer = AutoTokenizer.from_pretrained(
         config.model_name, trust_remote_code=True
     )
+    # CPU 使用 float32（float16 在 CPU 上不稳定且不支持所有算子）
+    dtype = torch.float16 if config.device == "cuda" else torch.float32
     model = AutoModelForCausalLM.from_pretrained(
         config.model_name,
-        torch_dtype=torch.float16,
+        torch_dtype=dtype,
         device_map="auto" if config.device == "cuda" else None,
         trust_remote_code=True,
-        output_hidden_states=True,  # 需要隐藏状态用于模拟动作流目标
+        low_cpu_mem_usage=True,
     )
     model.to(config.device)
     model.eval()
@@ -1065,8 +1094,8 @@ def run_calibration(
         tokenizer, config.num_calibration_samples
     )
 
-    # 收集激活和梯度
-    activations, grad_video, grad_action = collect_activations_and_gradients(
+    # 收集激活和 Fisher 统计量
+    activations, fisher_stats = collect_activations_and_gradients(
         model, tokenizer, calibration_texts, config.device
     )
 
@@ -1114,44 +1143,53 @@ def run_calibration(
         upgrade_ratio=config.weight_upgrade_ratio
     )
 
-    # 计算每层的升级收益
+    # 计算每层的升级收益（使用预计算的 Fisher 统计量）
     layer_benefits = {}
     fusion_benefits = {}
     cross_contributions = {}
 
-    for layer_name in activations:
-        if layer_name not in grad_video or layer_name not in grad_action:
-            continue
+    lv, la = config.lambda_video, config.lambda_action
 
+    for layer_name in fisher_stats:
         # 获取权重
         module = dict(model.named_modules())[layer_name]
         weight = module.weight.data
 
-        # 合并所有校准样本的梯度和激活
-        gv = torch.cat(grad_video[layer_name], dim=0)  # [N, out*in] 或 [N, out]
-        ga = torch.cat(grad_action[layer_name], dim=0)
-        act = torch.cat(activations[layer_name], dim=0)  # [N, in]
+        stats = fisher_stats[layer_name]
+        gv_sq = stats["gv_sq"]    # [out] E[g_v^2]
+        ga_sq = stats["ga_sq"]    # [out] E[g_a^2]
+        cross = stats["cross"]    # [out] E[g_v ⊙ g_a]
+        x_sq = stats["x_sq"]      # [in]  E[x^2]
 
-        # 梯度形状适配: [N, out*in] -> 需要调整到 [N, out] 用于 Fisher 对角
-        # Fisher 对角只需要输出维度: G_ii = E[g_i^2]
-        # 将权重梯度 [out, in] 展平后按输出维度分组
-        weight_out = weight.shape[0]
-        gv_reshaped = gv.reshape(gv.shape[0], weight_out, -1).mean(dim=2)  # [N, out]
-        ga_reshaped = ga.reshape(ga.shape[0], weight_out, -1).mean(dim=2)  # [N, out]
+        # 联合 Fisher 对角 (保留跨流项)
+        joint_diag = lv**2 * gv_sq + la**2 * ga_sq + 2 * lv * la * cross
+        # 后融合 Fisher 对角 (丢失跨流项)
+        fusion_diag = lv**2 * gv_sq + la**2 * ga_sq
 
-        # 输入激活适配
-        if act.shape[-1] != weight.shape[1]:
-            act = act[:, :weight.shape[1]]
+        # 输入协方差对角
+        input_cov_diag = x_sq
 
-        benefit_joint, benefit_fusion, cross = saliency.compute_layer_benefit(
-            weight, gv_reshaped, ga_reshaped, act,
-            bits_low=config.weight_bits_low,
-            bits_high=config.weight_bits_high
-        )
+        # 输入维度适配
+        if input_cov_diag.shape[0] != weight.shape[1]:
+            input_cov_diag = input_cov_diag[:weight.shape[1]]
+
+        # 计算量化失真 D_L(b) = 0.5 * Σ_ij G_ii * Σ_jj * ε_ij^2
+        eps_low = compute_quantization_error(weight, config.weight_bits_low, dim=0)
+        eps_high = compute_quantization_error(weight, config.weight_bits_high, dim=0)
+
+        D_low_joint = 0.5 * (joint_diag.unsqueeze(1) * input_cov_diag.unsqueeze(0) * eps_low ** 2).sum().item()
+        D_high_joint = 0.5 * (joint_diag.unsqueeze(1) * input_cov_diag.unsqueeze(0) * eps_high ** 2).sum().item()
+        D_low_fusion = 0.5 * (fusion_diag.unsqueeze(1) * input_cov_diag.unsqueeze(0) * eps_low ** 2).sum().item()
+        D_high_fusion = 0.5 * (fusion_diag.unsqueeze(1) * input_cov_diag.unsqueeze(0) * eps_high ** 2).sum().item()
+
+        # 升级收益 B_L = D_L(b_lo) - D_L(b_hi)
+        benefit_joint = D_low_joint - D_high_joint
+        benefit_fusion = D_low_fusion - D_high_fusion
+        cross_contrib = benefit_joint - benefit_fusion
 
         layer_benefits[layer_name] = benefit_joint
         fusion_benefits[layer_name] = benefit_fusion
-        cross_contributions[layer_name] = cross
+        cross_contributions[layer_name] = cross_contrib
 
     # 层级精度分配
     weight_alloc = saliency.allocate_precision(layer_benefits)
@@ -1201,10 +1239,10 @@ def run_quantization_and_verification(
 
     for text in test_texts:
         inputs = tokenizer(
-            text, return_tensors="pt", truncation=True, max_length=128
+            text, return_tensors="pt", truncation=True, max_length=64
         ).to(config.device)
 
-        # FP16 参考
+        # FP 参考输出
         with torch.no_grad():
             ref_output = model(**inputs)
             ref_logits = ref_output.logits.float()
