@@ -1,0 +1,69 @@
+{
+  "collection_date": "2026-08-01",
+  "date_range": "2026-07-30 (supplementary collection; 2026-08-01 is Saturday with no new arXiv submissions)",
+  "query_keywords": ["quantization", "quantize", "low-bit", "model compression", "pruning", "sparsity", "knowledge distillation", "KV cache compression", "mixed precision", "GPTQ", "AWQ"],
+  "source": "arxiv.org",
+  "total_papers": 4,
+  "papers": [
+    {
+      "id": "2607.28405",
+      "title": "QuantWAMs: Calibrating at the Right Granularity for World Action Models",
+      "authors": ["Jiacheng Zhou", "Jinfan Lv", "Ruixuan Li", "Longtai Zhang", "Yan Wang", "Wenqiang Zhang", "Lizhe Qi"],
+      "submitted": "2026-07-30",
+      "categories": ["cs.AI", "cs.LG"],
+      "url": "https://arxiv.org/abs/2607.28405",
+      "keywords": ["PTQ", "W4A4", "outlier calibration", "Fisher saliency", "WAM", "Hadamard rotation", "mixed precision"],
+      "techniques": ["quantization"],
+      "target_model": "World Action Models (Fast-WAM, LingBot-VA)",
+      "highlight": "校准上下文原则：结构/分布/目标三维度对齐量化决策与部署场景，W4A4下仅差0.2-0.7pp，内存降至29%",
+      "category": "quantization",
+      "code_reproduced": true,
+      "code_path": "scripts/quantization/2607.28405/"
+    },
+    {
+      "id": "2607.28341",
+      "title": "Capturing Token Tendencies for Training-Free Token Pruning in Multimodal Large Language Models",
+      "authors": ["Jie Ma", "Zhike Qiu", "Jie Gao", "Jiayi Ji", "Qian Chen", "Xiaoshuai Sun", "Rongrong Ji"],
+      "submitted": "2026-07-30",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2607.28341",
+      "keywords": ["token pruning", "training-free", "MLLM", "trend-aware", "attention flow", "dynamic rectification"],
+      "techniques": ["pruning"],
+      "target_model": "MLLMs (LLaVA, Qwen2.5-VL)",
+      "highlight": "时序轨迹建模+动态纠正，77.8% Token剪枝率，最终层仅~23个Token",
+      "category": "pruning",
+      "code_reproduced": false,
+      "code_path": null
+    },
+    {
+      "id": "2607.28449",
+      "title": "Lightning OPD 2.0: Mitigating Style Bias in Cross-Teacher On-Policy Distillation for Large Reasoning Models",
+      "authors": ["Yecheng Wu", "Song Han", "Han Cai"],
+      "submitted": "2026-07-30",
+      "categories": ["cs.CL"],
+      "url": "https://arxiv.org/abs/2607.28449",
+      "keywords": ["on-policy distillation", "cross-teacher", "style bias", "style residualization", "reasoning", "cross-fitting"],
+      "techniques": ["knowledge distillation"],
+      "target_model": "Large Reasoning Models (Klear-Reasoner-8B)",
+      "highlight": "交叉拟合风格残差化解决跨教师OPD风格偏置，AIME 2024达82.4%，LiveCodeBench v5达63.0%",
+      "category": "knowledge_distillation",
+      "code_reproduced": false,
+      "code_path": null
+    },
+    {
+      "id": "2607.28627",
+      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+      "authors": ["Yao Xiao", "Reuben Tan", "Zhen Zhu", "Yuqun Wu", "Jianfeng Gao", "Derek Hoiem"],
+      "submitted": "2026-07-30",
+      "categories": ["cs.CV", "cs.AI", "cs.LG"],
+      "url": "https://arxiv.org/abs/2607.28627",
+      "keywords": ["token selection", "KV cache", "VLM", "retrieval", "sparse selection", "learnable embedding"],
+      "techniques": ["other"],
+      "target_model": "VLMs (Qwen3VL-8B, InternVL3.5)",
+      "highlight": "单一可学习Token实现稀疏视觉Token检索，Visual Haystacks +13.4分，代码开源",
+      "category": "other",
+      "code_reproduced": false,
+      "code_path": "https://github.com/avaxiao/ReToken"
+    }
+  ]
+}

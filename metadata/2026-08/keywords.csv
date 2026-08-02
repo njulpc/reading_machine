@@ -1,0 +1,29 @@
+keyword,occurrence,paper_ids
+quantization,1,2607.28405
+PTQ,1,2607.28405
+W4A4,1,2607.28405
+outlier calibration,1,2607.28405
+Fisher saliency,1,2607.28405
+Hadamard rotation,1,2607.28405
+mixed precision,1,2607.28405
+WAM,1,2607.28405
+pruning,1,2607.28341
+token pruning,1,2607.28341
+training-free,1,2607.28341
+MLLM,1,2607.28341
+trend-aware,1,2607.28341
+attention flow,1,2607.28341
+dynamic rectification,1,2607.28341
+knowledge distillation,1,2607.28449
+on-policy distillation,1,2607.28449
+cross-teacher,1,2607.28449
+style bias,1,2607.28449
+style residualization,1,2607.28449
+cross-fitting,1,2607.28449
+reasoning,1,2607.28449
+token selection,1,2607.28627
+KV cache,1,2607.28627
+VLM,1,2607.28627
+retrieval,1,2607.28627
+sparse selection,1,2607.28627
+learnable embedding,1,2607.28627
