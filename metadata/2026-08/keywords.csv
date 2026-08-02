@@ -1,29 +1,54 @@
 keyword,occurrence,paper_ids
-quantization,1,2607.28405
-PTQ,1,2607.28405
-W4A4,1,2607.28405
-outlier calibration,1,2607.28405
-Fisher saliency,1,2607.28405
-Hadamard rotation,1,2607.28405
-mixed precision,1,2607.28405
-WAM,1,2607.28405
-pruning,1,2607.28341
-token pruning,1,2607.28341
-training-free,1,2607.28341
-MLLM,1,2607.28341
-trend-aware,1,2607.28341
-attention flow,1,2607.28341
-dynamic rectification,1,2607.28341
-knowledge distillation,1,2607.28449
-on-policy distillation,1,2607.28449
-cross-teacher,1,2607.28449
-style bias,1,2607.28449
-style residualization,1,2607.28449
-cross-fitting,1,2607.28449
-reasoning,1,2607.28449
-token selection,1,2607.28627
-KV cache,1,2607.28627
-VLM,1,2607.28627
-retrieval,1,2607.28627
-sparse selection,1,2607.28627
-learnable embedding,1,2607.28627
+PTQ,1,2607.28589
+mixed-precision,1,2607.28589
+KL divergence,1,2607.28589
+MCKP,1,2607.28589
+fragility,1,2607.28589
+bit allocation,1,2607.28589
+Vision Transformer,1,2607.28589
+4-bit quantization,1,2607.28292
+memory editing,1,2607.28292
+LoRA,2,2607.28292;2607.28069
+stability controller,1,2607.28292
+degradation debt,1,2607.28292
+finance,1,2607.28292
+rank-1 perturbation,1,2607.28292
+dynamic pruning,1,2607.28418
+width pruning,1,2607.28418
+token-level,1,2607.28418
+attention head,1,2607.28418
+FFN channel,1,2607.28418
+pruning-kernel co-design,1,2607.28418
+differentiable,1,2607.28418
+structural pruning,1,2607.28319
+bias mitigation,1,2607.28319
+GLU-MLP,1,2607.28319
+differential activation,1,2607.28319
+demographic bias,1,2607.28319
+fairness,1,2607.28319
+KV cache compression,1,2607.28263
+layer-axis memory,1,2607.28263
+self-distillation,1,2607.28263
+long-context,1,2607.28263
+depth division of labor,1,2607.28263
+intermediate layer,1,2607.28263
+CoMem,1,2607.28263
+KV cache,1,2607.28069
+position-independent caching,1,2607.28069
+LoRA Writer,1,2607.28069
+behavioral distillation,1,2607.28069
+KV gradient checkpointing,1,2607.28069
+prefix caching,1,2607.28069
+compression safety,1,2607.28196
+low-rank compression,1,2607.28196
+SVD truncation,1,2607.28196
+magnitude pruning,1,2607.28196
+agentic execution,1,2607.28196
+coherence-times-rate,1,2607.28196
+data-free screen,1,2607.28196
+sparse MoE,1,2607.28097
+expert reduction,1,2607.28097
+numerical precision,1,2607.28097
+behavioral divergence,1,2607.28097
+numerical compatibility,1,2607.28097
+DeepSeek-V4-Flash,1,2607.28097
