@@ -27,10 +27,7 @@ ViT 的组件 (attention qkv, MLP fc) 对应到 LLM 的 (q/k/v_proj, gate/up/dow
 依赖: torch, transformers, numpy
 """
 
-import os
-import math
 import gc
-import warnings
 from typing import Dict, List, Tuple, Optional
 
 import numpy as np
@@ -47,9 +44,9 @@ class Config:
     # 目标模型
     model_name = "Qwen/Qwen3-0.6B"
 
-    # 可选位宽选项 (论文中 W4A4, W6A6, W8A8)
-    bit_options = [4, 6, 8]          # 每层可分配的位宽候选
-    act_bit_options = [4, 6, 8]      # 激活值位宽候选（与权重同步）
+    # 可选位宽选项 (论文中 W3A3, W4A4, W6A6, W8A8；含 3-bit 混合精度 MP3/MP3)
+    bit_options = [3, 4, 6, 8]       # 每层可分配的位宽候选
+    act_bit_options = [3, 4, 6, 8]   # 激活值位宽候选（与权重同步）
 
     # 目标平均比特预算 (论文中在 4~8 bit 之间自适应)
     target_bit_budget = 5.0          # 目标平均位宽，MCKP 在此约束下最大化脆弱性收益
@@ -886,7 +883,7 @@ def run_quantization_and_verification(
             ref_outputs.append(ref_output.logits.float())
 
     # 应用权重量化
-    print("      应用混合精度量量化...")
+    print("      应用混合精度量化...")
     quantizer.apply_quantization(model)
 
     # 量化后推理（激活也即时量化）
@@ -988,8 +985,8 @@ def print_model_statistics(
 
     # 内存估算
     # FP32: 4 bytes/param, FP16: 2 bytes/param
-    # W4: 0.5 bytes/param, W6: 0.75 bytes/param, W8: 1 byte/param
-    bytes_per_param = {4: 0.5, 6: 0.75, 8: 1.0, 16: 2.0, 32: 4.0}
+    # W3: 0.375 bytes/param, W4: 0.5 bytes/param, W6: 0.75 bytes/param, W8: 1 byte/param
+    bytes_per_param = {3: 0.375, 4: 0.5, 6: 0.75, 8: 1.0, 16: 2.0, 32: 4.0}
 
     fp32_mem = linear_params * 4 / 1e9  # GB
     fp16_mem = linear_params * 2 / 1e9

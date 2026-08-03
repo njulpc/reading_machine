@@ -394,31 +394,42 @@ class SharedBasisOutlierCalibration:
             per_sample_energies.append(torch.stack(sample_energies, dim=0))
 
         # 步骤 4: 池化交叉点检验
+        # 修复4: N_cal 应为每成员的校准样本数（per_sample_energies 中每成员的
+        #   样本维度大小），而非成员数 m。论文 Proposition 1 中 N 是每成员样本数。
+        N_cal_per_member = (
+            per_sample_energies[0].shape[0] if per_sample_energies else 0
+        )
         analysis = self.check_pooling_crossover(
-            per_sample_energies, N_cal=len(member_activations)
+            per_sample_energies, N_cal=N_cal_per_member
         )
         self.pooling_analysis[group_name] = analysis
 
         # 步骤 5: 池化能量并选择 Top-K 通道
+        # 修复5: 池化检验结果必须影响实际掩码选择。
+        #   池化时：各成员能量取均值，组内共享掩码（坐标兼容）。
+        #   不池化时：各成员基于自身能量独立选择掩码，而非使用池化均值。
         if analysis["should_pool"]:
             # 池化: 加权平均各成员能量 (论文中 π_i 编码部署曝光)
             # 这里使用等权重
             pooled_energy = torch.stack(member_energies).mean(dim=0)
+            # Top-K 选择: 保留能量最大的 K 个通道
+            topk_values, topk_indices = torch.topk(pooled_energy, K)
+            mask = torch.zeros(d, dtype=torch.bool, device=pooled_energy.device)
+            mask[topk_indices] = True
+            # 坐标兼容: 组内共享掩码
+            for name in member_names:
+                self.outlier_masks[name] = mask
             mask_source = "pooled"
         else:
-            # 不池化: 使用第一个成员的能量 (或各成员独立掩码)
-            # 为简化 demo，使用各成员能量的均值作为折中
-            pooled_energy = torch.stack(member_energies).mean(dim=0)
-            mask_source = "individual_fallback"
-
-        # Top-K 选择: 保留能量最大的 K 个通道
-        topk_values, topk_indices = torch.topk(pooled_energy, K)
-        mask = torch.zeros(d, dtype=torch.bool, device=pooled_energy.device)
-        mask[topk_indices] = True
-
-        # 为组内每个成员设置相同的掩码 (坐标兼容才能共享)
-        for name in member_names:
-            self.outlier_masks[name] = mask
+            # 不池化: 各成员基于自身能量统计独立选择掩码
+            for name, energy in zip(member_names, member_energies):
+                topk_values_i, topk_indices_i = torch.topk(energy, K)
+                mask_i = torch.zeros(d, dtype=torch.bool, device=energy.device)
+                mask_i[topk_indices_i] = True
+                self.outlier_masks[name] = mask_i
+            # 返回值取第一个成员的 Top-K 信息用于打印
+            topk_values, topk_indices = torch.topk(member_energies[0], K)
+            mask_source = "individual"
 
         return {
             "group_name": group_name,
@@ -707,7 +718,8 @@ class W4A4Quantizer:
     def quantize_activation(
         self,
         activation: torch.Tensor,
-        module_name: str
+        module_name: str,
+        weight_bits: int = 4
     ) -> torch.Tensor:
         """
         激活量化（含 Hadamard 变换 + 离群值保留）。
@@ -715,17 +727,24 @@ class W4A4Quantizer:
         步骤:
         1. 施加 Hadamard 旋转和平滑变换
         2. 识别离群值通道（Top-K）
-        3. 离群值通道保留 BF16，其余量化到 A4
+        3. 离群值通道保留 BF16，其余按层精度量化
+
+        修复2: 论文规定升级层为 W8A8，即权重位宽为 8 的层，
+        其非离群值激活也应量化到 8 位而非恒定 4 位。
 
         参数:
             activation: [*, d] 激活值
             module_name: 模块名
+            weight_bits: 该层权重位宽（4 或 8），决定非离群值激活位宽
         返回:
             量化后的激活值
         """
+        # 修复2: 升级层（W8）的非离群值激活也升级到 A8
+        act_bits = 8 if weight_bits >= 8 else 4
+
         if module_name not in self.calib.rotations:
             # 未校准的模块，直接 per-token 量化
-            return symmetric_quantize(activation, 4, dim=-1)
+            return symmetric_quantize(activation, act_bits, dim=-1)
 
         # 步骤 1: Hadamard 变换
         transformed = self.calib.transform_activation(activation, module_name)
@@ -739,12 +758,12 @@ class W4A4Quantizer:
         quantized = flat.clone()
         non_outlier_mask = ~mask.unsqueeze(0)  # [1, d]
 
-        # 非离群值通道量化到 A4 (per-token)
+        # 非离群值通道按层精度量化 (A4 或 A8, per-token)
         non_outlier_vals = flat[non_outlier_mask.expand_as(flat)].reshape(
             flat.shape[0], -1
         )
         if non_outlier_vals.numel() > 0:
-            quantized_non = symmetric_quantize(non_outlier_vals, 4, dim=-1)
+            quantized_non = symmetric_quantize(non_outlier_vals, act_bits, dim=-1)
             quantized[non_outlier_mask.expand_as(flat)] = quantized_non.reshape(-1)
 
         return quantized.reshape(orig_shape)
@@ -758,8 +777,16 @@ class W4A4Quantizer:
         """
         模拟量化后的 Linear 前向传播。
 
-        论文: 公共 Hadamard 旋转融合到权重中。
-        W_quantized = Q_b(W @ R)  (旋转后的权重量化)
+        修复1: Hadamard 旋转 R 和平滑 S 必须在权重侧补偿，使得变换无损。
+        论文公式 (1): 激活侧 Ã = (A @ R) @ diag(S^{-1})
+        对应权重侧: W' = W @ R @ diag(S)  即 weight_effective = (W @ R) * S
+        数学等价性: y = Ã @ W'^T
+                   = (A @ R @ diag(S^{-1})) @ (W @ R @ diag(S))^T
+                   = A @ R @ diag(S^{-1}) @ diag(S) @ R^T @ W^T
+                   = A @ R @ R^T @ W^T        (R 正交: R @ R^T = I)
+                   = A @ W^T
+        若仅在激活侧施加 R 和 S^{-1} 而权重侧不补偿，则前向传播计算的是
+        完全不同的函数 (A @ R / S) @ W^T ≠ A @ W^T，Cosine Similarity 极低。
 
         参数:
             layer: nn.Linear 层
@@ -771,13 +798,26 @@ class W4A4Quantizer:
         weight = layer.weight.data  # [out, in]
         bits = self.weight_alloc.get(layer_name, 4)
 
-        # 激活量化 (含 Hadamard 变换)
-        act_quantized = self.quantize_activation(activation, layer_name)
+        # 激活量化 (含 Hadamard 变换 R 和平滑 S⁻¹)
+        # 修复2: 传入 weight_bits 使升级层激活也升级到 A8
+        act_quantized = self.quantize_activation(
+            activation, layer_name, weight_bits=bits
+        )
+
+        # 修复1: 权重侧融合 Hadamard 旋转 R 和平滑 S
+        # W' = (W @ R) * S，其中 R 是组内共享 Hadamard 矩阵，S 是平滑因子
+        # 这样激活侧变换 (A@R)/S 与权重侧 W' 配合后，前向传播数学等价于 A @ W^T
+        if layer_name in self.calib.rotations:
+            R = self.calib.rotations[layer_name].to(weight.device)
+            S = self.calib.smoothing_scales[layer_name].to(weight.device)
+            # weight: [out, in], R: [in, in] -> weight @ R: [out, in]
+            # S: [in] -> * S 按输入维度(最后一维)缩放
+            weight_effective = (weight.float() @ R) * S.unsqueeze(0)
+        else:
+            weight_effective = weight.float()
 
         # 权重量化
-        # 注意: 在完整实现中，Hadamard 旋转应融合到权重中
-        # 这里简化为直接量化权重 (旋转已在激活侧应用)
-        weight_quantized = self.quantize_weight(weight, bits)
+        weight_quantized = self.quantize_weight(weight_effective, bits)
 
         # 前向传播: y = act_quantized @ W_quantized^T + bias
         output = F.linear(act_quantized, weight_quantized, layer.bias)
@@ -825,7 +865,6 @@ def collect_activations_and_gradients(
     """
     activations = {}
     fisher_accum = {}  # {name: {"gv_sq": [out], "ga_sq": [out], "cross": [out], "count": int}}
-    input_cov_accum = {}  # {name: [in]} 累积 E[x^2]
 
     model.eval()
 
@@ -835,7 +874,6 @@ def collect_activations_and_gradients(
         if isinstance(module, nn.Linear):
             linear_layers[name] = module
 
-    linear_weights = [m.weight for m in linear_layers.values()]
     linear_names = list(linear_layers.keys())
 
     for sample_idx, text in enumerate(calibration_texts):
@@ -844,14 +882,17 @@ def collect_activations_and_gradients(
             text, return_tensors="pt", truncation=True, max_length=64
         ).to(device)
 
-        # 前向传播，收集激活
+        # 前向传播，收集激活和层输出
         hooks = []
-        layer_activations = {}
+        layer_inputs = {}    # 输入激活（detach，用于协方差和校准）
+        layer_outputs = {}   # 层输出（保持计算图，用于梯度计算）
 
         def make_hook(name):
             def hook_fn(module, input, output):
                 if isinstance(input, tuple) and len(input) > 0:
-                    layer_activations[name] = input[0].detach().clone()
+                    layer_inputs[name] = input[0].detach().clone()
+                # 捕获层输出（pre-activation），保持计算图以便 autograd
+                layer_outputs[name] = output
             return hook_fn
 
         for name, module in linear_layers.items():
@@ -861,7 +902,7 @@ def collect_activations_and_gradients(
         outputs = model(**inputs, labels=inputs["input_ids"], output_hidden_states=True)
         loss_video = outputs.loss  # 下一 token 预测损失 (模拟 ℓ_v)
 
-        # 移除 hook
+        # 移除 hook（层输出已捕获，计算图保留在 outputs 中）
         for h in hooks:
             h.remove()
 
@@ -876,22 +917,34 @@ def collect_activations_and_gradients(
         else:
             loss_action = loss_video * 0.1  # 退化情况
 
-        # 计算双流梯度：使用 autograd.grad
+        # 修复3: 论文公式使用损失对层输出（pre-activation）的梯度，
+        #   而非对权重的梯度。权重梯度已隐含输入信息 (∂ℓ/∂W = g_out · x^T)，
+        #   后续再乘以输入协方差 Σ 会导致双重计数。
+        #   改为捕获层输出 y，用 autograd.grad 计算 ∂ℓ/∂y。
+        grad_targets = []
+        grad_target_names = []
+        for name in linear_names:
+            out = layer_outputs.get(name)
+            if out is not None:
+                grad_targets.append(out)
+                grad_target_names.append(name)
+
+        # 计算双流对层输出的梯度
         gv_list = torch.autograd.grad(
-            loss_video, linear_weights, retain_graph=True, allow_unused=True
+            loss_video, grad_targets, retain_graph=True, allow_unused=True
         )
         ga_list = torch.autograd.grad(
-            loss_action, linear_weights, allow_unused=True
+            loss_action, grad_targets, allow_unused=True
         )
 
         # 即时计算 Fisher 统计量，避免存储完整梯度
-        for name, gv, ga in zip(linear_names, gv_list, ga_list):
-            if name not in layer_activations:
+        for name, gv, ga in zip(grad_target_names, gv_list, ga_list):
+            if name not in layer_inputs:
                 continue
             if gv is None or ga is None:
                 continue
 
-            act = layer_activations[name]  # [1, seq, d] 或 [1, d]
+            act = layer_inputs[name]  # [1, seq, d] 或 [1, d]
             act_flat = act.reshape(-1, act.shape[-1])  # [seq, d]
 
             # 存储激活（用于离群值校准，张量较小）
@@ -899,11 +952,14 @@ def collect_activations_and_gradients(
                 activations[name] = []
             activations[name].append(act_flat.detach())
 
-            # 即时计算 Fisher 对角统计量
-            # gv, ga: [out, in] -> 对 in 维取均值得 [out]
-            gv_sq_sample = (gv.float() ** 2).mean(dim=1)  # [out]
-            ga_sq_sample = (ga.float() ** 2).mean(dim=1)  # [out]
-            cross_sample = (gv.float() * ga.float()).mean(dim=1)  # [out]
+            # 修复3: gv, ga 现在是层输出梯度，形状 [*, out]
+            #   对 token 维取均值得 [out]（论文 Fisher 对角 E[g_out^2]）
+            gv_flat = gv.reshape(-1, gv.shape[-1])  # [seq, out]
+            ga_flat = ga.reshape(-1, ga.shape[-1])  # [seq, out]
+
+            gv_sq_sample = (gv_flat.float() ** 2).mean(dim=0)  # [out]
+            ga_sq_sample = (ga_flat.float() ** 2).mean(dim=0)  # [out]
+            cross_sample = (gv_flat.float() * ga_flat.float()).mean(dim=0)  # [out]
 
             # 输入协方差对角 E[x^2]
             x_sq_sample = (act_flat.float() ** 2).mean(dim=0)  # [in]
@@ -924,7 +980,8 @@ def collect_activations_and_gradients(
                 fisher_accum[name]["count"] += 1
 
         # 释放本样本的中间变量
-        del outputs, loss_video, loss_action, gv_list, ga_list, layer_activations
+        del outputs, loss_video, loss_action, gv_list, ga_list
+        del layer_inputs, layer_outputs
         if 'hidden_states' in dir():
             del hidden_states
         gc.collect()
@@ -1366,3 +1423,47 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ===========================================================================
+# 修复说明 (QuantWAMs 复现代码 Bug 修复)
+# ===========================================================================
+#
+# 修复1 (最关键): Hadamard 旋转和平滑未在权重侧补偿
+#   位置: W4A4Quantizer.quantize_linear_forward
+#   问题: 原代码仅在激活侧施加 Ã = (A @ R) / S，权重侧无补偿，导致前向
+#         传播计算 (A@R/S) @ W^T ≠ A @ W^T，Cosine Similarity 仅 ~0.08。
+#   修复: 权重量化前融合 R 和 S: W' = (W @ R) * S。
+#         激活侧 (A@R)/S 与权重侧 (W@R)*S 配合后:
+#         (A@R/S) @ (W@R*S)^T = A @ R @ diag(S^{-1}) @ diag(S) @ R^T @ W^T
+#                             = A @ R @ R^T @ W^T = A @ W^T  (R 正交)
+#         变换无损，量化前后函数等价。
+#
+# 修复2: 升级层激活位宽未升级
+#   位置: W4A4Quantizer.quantize_activation
+#   问题: 原代码对所有层非离群值激活恒定使用 4 位，但论文规定升级层为 W8A8。
+#   修复: quantize_activation 增加 weight_bits 参数，当 weight_bits=8 时
+#         非离群值激活也量化到 8 位 (A8)，其余保持 A4。quantize_linear_forward
+#         调用时传入该层权重位宽。
+#
+# 修复3: 使用权重梯度代替输出梯度
+#   位置: collect_activations_and_gradients (Fisher 计算)
+#   问题: 原代码计算损失对权重的梯度 (∂ℓ/∂W, 形状 [out, in])，但论文公式
+#         使用损失对层输出 (pre-activation) 的梯度 (∂ℓ/∂y, 形状 [*, out])。
+#         权重梯度已隐含输入信息 (∂ℓ/∂W = g_out · x^T)，后续再乘以输入
+#         协方差 Σ 会导致双重计数。
+#   修复: forward hook 同时捕获层输出 (保持计算图)，用 autograd.grad 计算
+#         ∂ℓ/∂y，Fisher 对角统计量对 token 维取均值 (dim=0) 而非输入维 (dim=1)。
+#
+# 修复4: 池化交叉点 N_cal 参数传值错误
+#   位置: SharedBasisOutlierCalibration.fit_group
+#   问题: N_cal 被赋值为 len(member_activations) (成员数 m)，但论文中 N 是
+#         每成员的校准样本数。
+#   修复: 传入 per_sample_energies 中每成员的样本维度大小。
+#
+# 修复5: 池化交叉点检验结果不影响实际操作
+#   位置: SharedBasisOutlierCalibration.fit_group
+#   问题: if 和 else 两个分支执行相同计算 (都是 mean)，池化检验是 no-op。
+#   修复: 池化时各组员能量取均值、组内共享掩码；不池化时各成员基于自身
+#         能量统计独立选择 Top-K 掩码。
+# ===========================================================================

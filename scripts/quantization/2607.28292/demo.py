@@ -58,22 +58,26 @@ class Config:
     quant_dim = 0                # 权重按输出通道量化 (per-output-channel)
 
     # LoRA 编辑参数
-    lora_rank = 1                # LoRA 秩 (论文中为 rank-1)
+    lora_rank = 16               # LoRA 秩 r=16 (论文 §4.1: "LoRA rank r=16")
     lora_alpha_base = 0.001      # LoRA 基础缩放因子 α（需较小以控制扰动幅度）
     lora_layers = None           # None 表示对所有 Linear 层编辑；也可指定层名列表
 
-    # 金融领域优先级参数
-    finance_keywords = [         # 金融领域关键词（用于内容自适应强度调整）
+    # 金融领域优先级参数 (论文 §4.2 公式3: Δ'=Δ·λ(1+β_uk·s_uk+β_bank·s_bank))
+    uk_finance_keywords = [      # UK 金融关键词 (s_uk 二值评分)
         "stock", "market", "trading", "investment", "portfolio",
-        "risk", "asset", "bond", "equity", "derivative",
-        "financial", "bank", "credit", "loan", "interest",
+        "equity", "derivative", "bond", "interest", "financial",
     ]
-    finance_priority_boost = 2.0  # 金融内容的编辑强度倍数
-    general_priority_scale = 1.0  # 通用内容的编辑强度倍数
+    bank_keywords = [            # 银行关键词 (s_bank 二值评分)
+        "bank", "credit", "loan", "asset", "risk",
+    ]
+    domain_lambda = 1.0          # 基础缩放因子 λ
+    beta_uk = 1.0                # UK 金融增益系数 β_uk
+    beta_bank = 0.5              # 银行增益系数 β_bank
 
-    # 稳定性控制器参数
-    degradation_threshold = 0.05  # 退化债务阈值（超过则降低编辑强度）
-    max_degradation_debt = 0.15   # 最大退化债务（超过则触发回滚）
+    # 稳定性控制器参数 (论文 §4.3 公式4: 整数计数器)
+    degradation_threshold = 0.05  # 退化阈值 T (deg_t > T 时累积债务)
+    max_degradation_debt = 3      # 最大退化债务计数 (整数，超过则触发回滚)
+    recovery_delta = 1            # 恢复步长 δ (无退化时债务减 δ)
     rollback_scale = 0.5          # 回滚时的编辑强度缩减比例
 
     # 编辑轮次
@@ -255,26 +259,27 @@ class LoRAEditor:
     """
     Rank-1 LoRA 扰动编辑机制。
 
-    论文 Section 3.2 - Rank-1 LoRA Perturbation:
-    - 将知识编辑限制在低秩适配器子空间中
-    - ΔW = α · b ⊗ a，其中 a ∈ R^in, b ∈ R^out
-    - 编辑时仅更新 LoRA 参数 (a, b)，不修改量化后的基础权重
-    - 编辑后的等效权重: W' = W_quant + α · b ⊗ a
+    论文 Section 4.1 - Rank-1 LoRA Perturbation:
+    - LoRA 前向传播: h = W₀x + BAx，其中 B∈R^{d_out×r}, A∈R^{r×d_in}
+    - 论文中 LoRA 秩 r=16，B∈R^{d_out×16} 仅约 51K 参数（OpenLLaMA-3B）
+    - Rank-1 扰动: ΔB = α · outer(Δ', k_A)，其中 k_A = Ak ∈ R^r
+    - 关键创新: 编辑作用于 LoRA B 矩阵，而非冻结的基础权重 W₀
+    - 编辑后的等效权重: W' = W_quant + scaling · (B @ A)
 
     优势:
     1. 低秩约束限制了编辑的影响范围，避免灾难性遗忘
-    2. LoRA 参数量极小 (in + out)，不影响推理效率
-    3. 可以随时回滚（移除 LoRA 即恢复量化权重）
+    2. LoRA 参数量极小 (r×(in+out))，不影响推理效率
+    3. 基础量化权重 W₀ 保持冻结，编辑不破坏量化精度
 
     编辑目标:
-    - 对指定的 Linear 层注入 rank-1 LoRA 扰动
+    - 对指定的 Linear 层注入 rank-1 LoRA 扰动到 B 矩阵
     - 扰动方向由编辑数据（金融知识）的梯度决定
     """
 
-    def __init__(self, rank: int = 1, alpha: float = 0.1, seed: int = 42):
+    def __init__(self, rank: int = 16, alpha: float = 0.1, seed: int = 42):
         """
         参数:
-            rank: LoRA 秩 (论文中为 1)
+            rank: LoRA 秩 r (论文 §4.1: r=16)
             alpha: LoRA 缩放因子 α
             seed: 随机种子
         """
@@ -282,35 +287,38 @@ class LoRAEditor:
         self.alpha = alpha
         self.seed = seed
         # 存储每层的 LoRA 参数
-        # lora_params[layer_name] = {"a": [in], "b": [out], "alpha": float}
+        # lora_params[layer_name] = {"A": [r, in], "B": [out, r], "alpha": float, "W_quant": [out, in]}
         self.lora_params: Dict[str, dict] = {}
         # 编辑历史
         self.edit_history: List[dict] = []
 
     def init_lora_for_layer(self, layer_name: str, weight: torch.Tensor):
         """
-        为指定层初始化 rank-1 LoRA 参数。
+        为指定层初始化 LoRA A/B 矩阵。
 
-        LoRA 参数初始化:
-        - a: 随机正态分布（较小的标准差）
-        - b: 零初始化（初始时 ΔW = 0，不改变模型行为）
+        LoRA 参数初始化 (标准 LoRA 初始化):
+        - A: [r, in] 高斯随机初始化（较小标准差）
+        - B: [out, r] 零初始化（初始时 BA=0，不改变模型行为）
+        - W_quant: 保存冻结的量化后权重，编辑不修改此权重
 
         参数:
             layer_name: 层名
             weight: [out, in] 权重矩阵（用于确定形状）
         """
         out_dim, in_dim = weight.shape
-        torch.manual_seed(self.seed + hash(layer_name) % 2**31)
+        rng = torch.Generator(device=weight.device)
+        rng.manual_seed(self.seed + abs(hash(layer_name)) % (2**31))
 
-        # a: 输入侧向量，小随机初始化
-        a = torch.randn(in_dim, dtype=weight.dtype, device=weight.device) * 0.01
-        # b: 输出侧向量，零初始化
-        b = torch.zeros(out_dim, dtype=weight.dtype, device=weight.device)
+        # A: [r, in] 随机正态初始化
+        A = torch.randn(self.rank, in_dim, generator=rng, dtype=weight.dtype, device=weight.device) * 0.01
+        # B: [out, r] 零初始化
+        B = torch.zeros(out_dim, self.rank, dtype=weight.dtype, device=weight.device)
 
         self.lora_params[layer_name] = {
-            "a": a,
-            "b": b,
+            "A": A,
+            "B": B,
             "alpha": self.alpha,
+            "W_quant": weight.data.clone(),  # 冻结的量化权重
         }
 
     def compute_edit_gradient(
@@ -409,16 +417,15 @@ class LoRAEditor:
         edit_id: int = 0
     ):
         """
-        应用 rank-1 LoRA 扰动编辑。
+        应用 rank-1 LoRA 扰动编辑到 B 矩阵。
 
-        论文: 编辑后的等效权重 W' = W_quant + α · edit_strength · b ⊗ a
-
-        本实现将 LoRA 扰动直接加到权重上（因为量化权重已固定）。
-        在完整实现中，LoRA 可以作为独立模块在推理时动态合并。
+        论文 §4.1 公式2: ΔB = α · outer(Δ', k_A)，其中 k_A = Ak ∈ R^r
+        - 编辑作用于 LoRA B 矩阵，而非冻结的基础权重 W₀
+        - 等效权重: W' = W_quant + (α/r) · (B @ A)
 
         参数:
             model: 目标模型
-            lora_directions: {层名: (a, b)} LoRA 方向
+            lora_directions: {层名: (a_dir, b_dir)} LoRA 方向 (a_dir∈R^in, b_dir∈R^out)
             edit_strength: 编辑强度（由金融领域优先级模块调整）
             edit_id: 编辑 ID（用于历史记录）
         """
@@ -428,25 +435,36 @@ class LoRAEditor:
             if name not in lora_directions:
                 continue
 
-            a, b = lora_directions[name]
+            a_dir, b_dir = lora_directions[name]  # a_dir: [in], b_dir: [out]
 
             # 初始化 LoRA 参数（如果尚未初始化）
             if name not in self.lora_params:
                 self.init_lora_for_layer(name, module.weight.data)
 
-            # 更新 LoRA 参数
-            self.lora_params[name]["a"] = a.clone()
-            self.lora_params[name]["b"] = b.clone()
-            self.lora_params[name]["alpha"] = self.alpha * edit_strength
+            params = self.lora_params[name]
+            A = params["A"]   # [r, in]
+            B = params["B"]   # [out, r]
+            W_quant = params["W_quant"]  # [out, in] 冻结的量化权重
 
-            # 计算扰动: ΔW = α · edit_strength · b ⊗ a
+            # 论文公式2: k_A = A @ a_dir  (将输入方向投影到 LoRA 子空间, ∈ R^r)
+            k_A = A @ a_dir  # [r]
+
+            # 论文公式2: ΔB = α · edit_strength · outer(b_dir, k_A)
+            # b_dir 已包含领域优先级缩放 (Δ')，edit_strength 由控制模块调整
             alpha_eff = self.alpha * edit_strength
-            delta_w = alpha_eff * torch.outer(b, a)  # [out, in]
+            delta_B = alpha_eff * torch.outer(b_dir, k_A)  # [out, r]
 
-            # 应用扰动到权重
-            module.weight.data = module.weight.data + delta_w
+            # 更新 B 矩阵 (而非基础权重 W₀)
+            B.add_(delta_B)
+
+            # 计算等效权重: W' = W_quant + (1/r) · (B @ A)
+            # 标准 LoRA 缩放: scaling = α_eff / r
+            lora_scaling = 1.0 / self.rank
+            effective_weight = W_quant + lora_scaling * (B @ A)
+            module.weight.data = effective_weight
 
             # 记录编辑历史
+            delta_w = lora_scaling * (delta_B @ A)  # 等效权重扰动
             self.edit_history.append({
                 "edit_id": edit_id,
                 "layer_name": name,
@@ -456,14 +474,14 @@ class LoRAEditor:
             })
 
     def compute_edit_magnitude(self) -> float:
-        """计算当前所有 LoRA 编辑的总扰动幅度"""
+        """计算当前所有 LoRA 编辑的总扰动幅度 (B@A 的范数)"""
         total_norm = 0.0
         for params in self.lora_params.values():
-            a = params["a"]
-            b = params["b"]
-            alpha = params["alpha"]
-            delta_norm = (alpha * torch.outer(b, a)).norm().item()
-            total_norm += delta_norm ** 2
+            B = params["B"]
+            A = params["A"]
+            lora_scaling = 1.0 / self.rank
+            delta = lora_scaling * (B @ A)
+            total_norm += delta.norm().item() ** 2
         return math.sqrt(total_norm)
 
 
@@ -475,65 +493,63 @@ class FinanceDomainPriority:
     """
     金融领域优先级模块。
 
-    论文 Section 3.3 - Finance Domain Priority:
-    - 内容自适应的编辑强度调整
-    - 对金融领域相关内容施加更强的编辑
-    - 对通用内容施加较弱的编辑
-    - 通过输入文本的领域相关性评分动态调整编辑强度 α
-
-    评分机制:
-    1. 检测输入文本中包含的金融关键词数量
-    2. 计算领域相关性评分: score = min(1.0, num_keywords / threshold)
-    3. 编辑强度: strength = base_scale + (boost - base_scale) * score
+    论文 Section 4.2 - Finance Domain Prioritization (公式3):
+    - Δ' = Δ · λ(1 + β_uk·s_uk + β_bank·s_bank)
+    - s_uk, s_bank ∈ {0, 1} 为二值关键词相关性评分
+    - s_uk = 1 当文本包含 UK 金融词典关键词，否则 0
+    - s_bank = 1 当文本包含银行词典关键词，否则 0
+    - β_uk, β_bank 为独立增益系数
     """
 
     def __init__(
         self,
-        keywords: List[str],
-        boost: float = 2.0,
-        base_scale: float = 1.0,
-        threshold: int = 3
+        uk_keywords: List[str],
+        bank_keywords: List[str],
+        lam: float = 1.0,
+        beta_uk: float = 1.0,
+        beta_bank: float = 0.5,
     ):
         """
         参数:
-            keywords: 金融领域关键词列表
-            boost: 金融内容的编辑强度倍数
-            base_scale: 通用内容的编辑强度倍数
-            threshold: 关键词数量阈值（达到此数量视为完全金融领域）
+            uk_keywords: UK 金融领域关键词列表
+            bank_keywords: 银行领域关键词列表
+            lam: 基础缩放因子 λ
+            beta_uk: UK 金融增益系数 β_uk
+            beta_bank: 银行增益系数 β_bank
         """
-        self.keywords = [kw.lower() for kw in keywords]
-        self.boost = boost
-        self.base_scale = base_scale
-        self.threshold = threshold
+        self.uk_keywords = [kw.lower() for kw in uk_keywords]
+        self.bank_keywords = [kw.lower() for kw in bank_keywords]
+        self.lam = lam
+        self.beta_uk = beta_uk
+        self.beta_bank = beta_bank
 
-    def compute_domain_score(self, text: str) -> float:
+    def compute_domain_score(self, text: str) -> Tuple[float, float]:
         """
-        计算输入文本的金融领域相关性评分。
+        计算输入文本的金融领域二值相关性评分 (论文 §4.2)。
 
         参数:
             text: 输入文本
         返回:
-            score: 0.0 ~ 1.0 的领域相关性评分
+            (s_uk, s_bank): 各为 0.0 或 1.0 的二值评分
         """
         text_lower = text.lower()
-        keyword_count = sum(1 for kw in self.keywords if kw in text_lower)
-        score = min(1.0, keyword_count / self.threshold)
-        return score
+        s_uk = 1.0 if any(kw in text_lower for kw in self.uk_keywords) else 0.0
+        s_bank = 1.0 if any(kw in text_lower for kw in self.bank_keywords) else 0.0
+        return s_uk, s_bank
 
     def get_edit_strength(self, text: str) -> float:
         """
-        根据文本的领域相关性计算编辑强度。
+        根据文本的领域相关性计算编辑强度 (论文公式3)。
 
-        论文: 编辑强度 = base_scale + (boost - base_scale) * domain_score
-        即金融内容得到更强的编辑，通用内容得到较弱的编辑。
+        公式: strength = λ · (1 + β_uk·s_uk + β_bank·s_bank)
 
         参数:
             text: 输入文本
         返回:
             edit_strength: 编辑强度倍数
         """
-        score = self.compute_domain_score(text)
-        strength = self.base_scale + (self.boost - self.base_scale) * score
+        s_uk, s_bank = self.compute_domain_score(text)
+        strength = self.lam * (1.0 + self.beta_uk * s_uk + self.beta_bank * s_bank)
         return strength
 
     def batch_edit_strengths(self, texts: List[str]) -> List[float]:
@@ -570,23 +586,26 @@ class StabilityController:
     def __init__(
         self,
         degradation_threshold: float = 0.05,
-        max_degradation_debt: float = 0.15,
+        max_degradation_debt: int = 3,
+        recovery_delta: int = 1,
         rollback_scale: float = 0.5
     ):
         """
         参数:
-            degradation_threshold: 退化债务阈值（超过则降低编辑强度）
-            max_degradation_debt: 最大退化债务（超过则触发回滚）
+            degradation_threshold: 退化阈值 T (deg_t > T 时累积债务)
+            max_degradation_debt: 最大退化债务计数 (整数，超过则触发回滚)
+            recovery_delta: 恢复步长 δ (无退化时债务减 δ)
             rollback_scale: 回滚时的编辑强度缩减比例
         """
         self.degradation_threshold = degradation_threshold
         self.max_degradation_debt = max_degradation_debt
+        self.recovery_delta = recovery_delta
         self.rollback_scale = rollback_scale
 
         # 基线性能
         self.baseline_loss: Optional[float] = None
-        # 当前退化债务
-        self.degradation_debt: float = 0.0
+        # 当前退化债务 (整数计数器)
+        self.degradation_debt: int = 0
         # 退化历史
         self.degradation_history: List[float] = []
         # 控制动作历史
@@ -636,10 +655,11 @@ class StabilityController:
 
     def update_degradation(self, current_loss: float) -> float:
         """
-        更新退化债务。
+        更新退化债务 (论文 §4.3 公式4: 整数计数器)。
 
-        退化债务 = 当前损失 - 基线损失
-        累积退化债务 = Σ max(0, 当前退化) （只累积正向退化）
+        公式4:
+        - D_debt,t = D_debt,t-1 + 1          if deg_t > T
+        - D_debt,t = max(0, D_debt,t-1 - δ)  otherwise
 
         参数:
             current_loss: 当前编辑后的保留集损失
@@ -650,12 +670,11 @@ class StabilityController:
             return 0.0
 
         current_degradation = current_loss - self.baseline_loss
-        # 只累积正向退化（性能下降）
-        if current_degradation > 0:
-            self.degradation_debt += current_degradation * 0.5  # 衰减系数
+        # 论文公式4: 整数计数器
+        if current_degradation > self.degradation_threshold:
+            self.degradation_debt += 1
         else:
-            # 性能恢复时减少退化债务
-            self.degradation_debt = max(0, self.degradation_debt + current_degradation * 0.3)
+            self.degradation_debt = max(0, self.degradation_debt - self.recovery_delta)
 
         self.degradation_history.append(current_degradation)
         return current_degradation
@@ -706,8 +725,8 @@ class StabilityController:
         return action
 
     def reset_debt(self):
-        """重置退化债务（回滚后调用）"""
-        self.degradation_debt *= 0.3  # 部分重置
+        """重置退化债务（回滚后调用，减少 2 个计数）"""
+        self.degradation_debt = max(0, self.degradation_debt - 2)
         self.rollback_triggered = False
 
 
@@ -873,12 +892,15 @@ def main():
         print(f"      LoRA 基础缩放因子: {config.lora_alpha_base}")
 
         finance_priority = FinanceDomainPriority(
-            keywords=config.finance_keywords,
-            boost=config.finance_priority_boost,
-            base_scale=config.general_priority_scale
+            uk_keywords=config.uk_finance_keywords,
+            bank_keywords=config.bank_keywords,
+            lam=config.domain_lambda,
+            beta_uk=config.beta_uk,
+            beta_bank=config.beta_bank,
         )
-        print(f"      金融关键词数: {len(config.finance_keywords)}")
-        print(f"      金融内容编辑倍数: {config.finance_priority_boost}")
+        print(f"      UK 金融关键词数: {len(config.uk_finance_keywords)}")
+        print(f"      银行关键词数: {len(config.bank_keywords)}")
+        print(f"      增益系数: β_uk={config.beta_uk}, β_bank={config.beta_bank}")
 
         # ---------------------------------------------------------------
         # 步骤 4: 初始化稳定性控制器
@@ -887,10 +909,12 @@ def main():
         stability_ctrl = StabilityController(
             degradation_threshold=config.degradation_threshold,
             max_degradation_debt=config.max_degradation_debt,
+            recovery_delta=config.recovery_delta,
             rollback_scale=config.rollback_scale
         )
-        print(f"      退化债务阈值: {config.degradation_threshold}")
+        print(f"      退化阈值 T: {config.degradation_threshold}")
         print(f"      最大退化债务: {config.max_degradation_debt}")
+        print(f"      恢复步长 δ: {config.recovery_delta}")
 
         # 设置基线性能
         print("      评估基线性能...")
@@ -1006,7 +1030,7 @@ def main():
         print(f"        W4 权重内存: {post_quant_stats['w4_memory_gb']:.4f} GB")
         print(f"        LoRA 额外参数: {len(lora_editor.lora_params)} 层")
         lora_param_count = sum(
-            p["a"].numel() + p["b"].numel()
+            p["A"].numel() + p["B"].numel()
             for p in lora_editor.lora_params.values()
         )
         print(f"        LoRA 参数量: {lora_param_count} ({lora_param_count / 1e6:.4f}M)")
