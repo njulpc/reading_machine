@@ -263,7 +263,8 @@ def compute_tv_bound(keys: torch.Tensor, keys_quantized: torch.Tensor,
 # Subtractive Dither Quantization
 # =============================================================================
 
-def subtractive_dither_quantize(x: torch.Tensor, bits: int = 8):
+def subtractive_dither_quantize(x: torch.Tensor, bits: int = 8,
+                                 per_channel: bool = True):
     """
     Subtractive dither quantization:
       1. Generate dither d ~ Uniform(-s/2, s/2), s = quantization step
@@ -271,13 +272,24 @@ def subtractive_dither_quantize(x: torch.Tensor, bits: int = 8):
       3. Dequantize: x_hat = round((x - d) / s) * s + d
 
     The dither makes the quantization error uniform and unbiased.
+
+    Args:
+        x: input tensor [batch, seq, n_heads, head_dim] or [N, head_dim]
+        bits: quantization bit width
+        per_channel: if True, use per-channel scale (matching standard INT8)
     """
     qmax = 2 ** (bits - 1) - 1
     qmin = -(2 ** (bits - 1))
-    scale = x.abs().max() / qmax
-    scale = max(scale.item(), 1e-8)
 
-    # Generate dither
+    if per_channel and x.ndim >= 2:
+        # Per-channel scale (along last dim, matching standard KV-cache quant)
+        scale = x.abs().amax(dim=tuple(range(x.ndim - 1)), keepdim=True) / qmax
+        scale = scale.clamp_min(1e-8)
+    else:
+        scale = x.abs().max() / qmax
+        scale = torch.tensor(max(scale.item(), 1e-8))
+
+    # Generate dither (same scale per channel)
     d = (torch.rand_like(x) - 0.5) * scale  # Uniform(-s/2, s/2)
 
     # Quantize with subtractive dither
@@ -422,8 +434,9 @@ def main():
             keys, k_dq_bits, queries, head_dim
         )
         mode_b = gating_decision(tv_bnd, 1.0)
+        bound_status = "holds" if cert else "VIOLATED"
         print(f"    {bits:2d}-bit: TV_bound={tv_bnd:.6f}, "
-              f"TV_actual={tv_act:.6f}, mode={mode_b}")
+              f"TV_actual={tv_act:.6f}, bound={bound_status}, mode={mode_b}")
 
     # --- Step 7: Subtractive dither quantization ---
     print("\n--- Subtractive Dither Quantization ---")

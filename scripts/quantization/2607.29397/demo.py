@@ -72,22 +72,53 @@ class WeightQuantizer:
             self.gptq = GPTQQuantizer(bits=bits, group_size=group_size)
 
     def _rtn_quantize(self, w: torch.Tensor) -> torch.Tensor:
-        """RTN分组量化"""
-        orig_shape = w.shape
-        flat = w.flatten()
+        """
+        RTN量化 — 按行(per-output-channel)分组
 
-        # 填充到group_size的倍数
-        pad = (self.group_size - flat.numel() % self.group_size) % self.group_size
-        if pad > 0:
-            flat = F.pad(flat, (0, pad))
+        8-bit: per-output-channel量化(每行独立尺度), 标准做法。
+        4-bit: per-channel分组量化(每行内按group_size分组),
+               避免不同行的SmoothQuant缩放混合在同一组中。
+        1D:    分组量化。
+        """
+        if w.ndim == 2:
+            # 2D权重 [out_features, in_features]
+            orig_shape = w.shape
+            out_features, in_features = w.shape
 
-        blocks = flat.reshape(-1, self.group_size)
-        w_max = blocks.abs().amax(dim=1, keepdim=True)
-        scale = (w_max / self.qmax).clamp_min(1e-8)
-
-        q = torch.clamp(torch.round(blocks / scale), self.qmin, self.qmax)
-        dq = (q * scale).flatten()[:w.numel()].reshape(orig_shape)
-        return dq
+            if self.bits == 8:
+                # 8-bit: Per-output-channel (per-row) 量化
+                w_max = w.abs().amax(dim=1, keepdim=True)
+                scale = (w_max / self.qmax).clamp_min(1e-8)
+                q = torch.clamp(torch.round(w / scale), self.qmin, self.qmax)
+                return q * scale
+            else:
+                # 4-bit: Per-channel group quantization
+                # 每行独立分组, 不混合不同output channel的SmoothQuant缩放
+                pad = (self.group_size - in_features % self.group_size) % self.group_size
+                if pad > 0:
+                    w_padded = F.pad(w, (0, pad))
+                else:
+                    w_padded = w
+                # [out, num_groups, group_size]
+                blocks = w_padded.reshape(out_features, -1, self.group_size)
+                w_max = blocks.abs().amax(dim=2, keepdim=True)
+                scale = (w_max / self.qmax).clamp_min(1e-8)
+                q = torch.clamp(torch.round(blocks / scale), self.qmin, self.qmax)
+                dq = (q * scale).reshape(orig_shape)
+                return dq
+        else:
+            # 1D: 分组量化
+            orig_shape = w.shape
+            flat = w.flatten()
+            pad = (self.group_size - flat.numel() % self.group_size) % self.group_size
+            if pad > 0:
+                flat = F.pad(flat, (0, pad))
+            blocks = flat.reshape(-1, self.group_size)
+            w_max = blocks.abs().amax(dim=1, keepdim=True)
+            scale = (w_max / self.qmax).clamp_min(1e-8)
+            q = torch.clamp(torch.round(blocks / scale), self.qmin, self.qmax)
+            dq = (q * scale).flatten()[:w.numel()].reshape(orig_shape)
+            return dq
 
     def quantize(self, w: torch.Tensor, calib_x: Optional[torch.Tensor] = None) -> torch.Tensor:
         """
@@ -105,7 +136,9 @@ class WeightQuantizer:
         w = w.float()
 
         # 对超大层 (如lm_head) 使用RTN替代GPTQ, 避免逐列量化过慢
-        GPTQ_PARAM_THRESHOLD = 10_000_000  # 10M参数
+        # 2.5M阈值: 跳过gate/up/down_proj(3.1M参数, in_features=3072/1024)
+        # 保留q/k/v/o_proj的GPTQ(in_features<=2048, CPU可接受)
+        GPTQ_PARAM_THRESHOLD = 2_500_000  # 2.5M参数
 
         if self.method == "gptq" and calib_x is not None \
                 and w.numel() < GPTQ_PARAM_THRESHOLD:
@@ -113,9 +146,23 @@ class WeightQuantizer:
             # 计算Hessian: H = X^T @ X / N
             N = calib_x.shape[0]
             H = (calib_x.t() @ calib_x) / N
+
+            # 检查Hessian是否病态(SmoothQuant可能产生极端值)
+            # 条件数过大时回退到RTN, 避免GPTQ误差补偿失效
+            diag_h = torch.diag(H)
+            h_mean = diag_h.mean().clamp(min=1e-10)
+            h_max = diag_h.max()
+            # 如果最大对角元素超过均值的1000倍, Hessian病态
+            if h_max > 1000 * h_mean:
+                result = self._rtn_quantize(w)
+                return result.to(orig_dtype)
+
             result = self.gptq.quantize_layer(w.clone(), H, calib_x)
-            # 检查数值稳定性, 如有NaN/inf则回退到RTN
+            # 检查数值稳定性, 如有NaN/inf或极端值则回退到RTN
             if torch.isnan(result).any() or torch.isinf(result).any():
+                result = self._rtn_quantize(w)
+            # 检查量化结果是否合理(误差过大说明GPTQ失败)
+            elif (result - w).abs().max() > w.abs().max() * 0.5:
                 result = self._rtn_quantize(w)
             return result.to(orig_dtype)
         else:
@@ -269,6 +316,9 @@ class QuantizationPipeline:
             if not isinstance(module, nn.Linear):
                 continue
 
+            # 保存原始dtype, 量化后恢复
+            model_dtype = module.weight.data.dtype
+
             w_orig = module.weight.data.clone()
             calib_x = self.calibration_data.get(name)
 
@@ -278,16 +328,38 @@ class QuantizationPipeline:
             if calib_x is not None:
                 calib_x = calib_x.float()
 
-            # 1. SmoothQuant平滑
+            # 1. SmoothQuant平滑 (排除lm_head: 平滑输出投影会破坏logits分布)
             #    核心思想: W' = W * s, X' = X / s, 使两者更适合量化
             #    量化后保留平滑权重, 推理时用pre-hook平滑激活: x' = x / s
             smooth_scale = None
-            if self.scheme.use_smooth and calib_x is not None:
+            if self.scheme.use_smooth and calib_x is not None \
+                    and "lm_head" not in name:
+                # 保存原始权重(smooth()不会修改module.weight.data)
+                w_original = module.weight.data.clone()
                 # smooth() returns (x_smoothed, w_smoothed, scale) when b=None
-                calib_x_smoothed, w_smoothed, smooth_scale = self.scheme.smooth.smooth(
+                _, _, raw_scale = self.scheme.smooth.smooth(
                     calib_x, module.weight.data
                 )
-                # 用平滑后的权重和校准数据进行量化
+                # 4-bit量化时限制SmoothQuant缩放范围:
+                # 4-bit仅有15个量化级别, 过大的缩放因子使权重
+                # 动态范围超出量化表示能力, 导致灾难性精度损失。
+                # 归一化到均值1, 再限制到[0.2, 5.0]范围。
+                if self.scheme.w_bits <= 4:
+                    s_mean = raw_scale.mean().clamp(min=1e-8)
+                    smooth_scale = (raw_scale / s_mean).clamp(0.2, 5.0)
+                else:
+                    smooth_scale = raw_scale
+
+                # 用(可能限幅后的)scale重新计算平滑权重和校准激活
+                if w_original.ndim == 2:
+                    s_col = smooth_scale.reshape(1, -1)
+                    w_smoothed = w_original * s_col
+                    calib_x_smoothed = calib_x / s_col if calib_x.ndim == 2 \
+                        else calib_x / smooth_scale
+                else:
+                    w_smoothed = w_original * smooth_scale
+                    calib_x_smoothed = calib_x / smooth_scale
+
                 module.weight.data = w_smoothed
                 calib_x = calib_x_smoothed
                 smooth_scales[name] = smooth_scale.detach()
@@ -306,7 +378,8 @@ class QuantizationPipeline:
             total_weight_error += quant_error
             total_weight_norm += module.weight.data.norm().item()
 
-            module.weight.data = w_quantized
+            # 恢复原始dtype (FP16), 避免FP32/FP16混合导致推理异常
+            module.weight.data = w_quantized.to(model_dtype)
             quantized_layers += 1
 
         avg_error = total_weight_error / max(total_weight_norm, 1e-8)
@@ -330,6 +403,8 @@ class QuantizationPipeline:
         注册SmoothQuant前向Hook (pre-hook)
         推理时将输入激活除以平滑尺度: x' = x / s
         确保 Y = (x/s) @ quantize(W*s)^T ≈ x @ W^T
+
+        关键: 保持输入dtype一致, 避免FP16/FP32混合导致PPL爆炸。
         """
         for name, module in self.model.named_modules():
             if name in smooth_scales:
@@ -337,26 +412,35 @@ class QuantizationPipeline:
 
                 def make_smooth_hook(s):
                     def hook(mod, inp):
-                        # inp[0] 是输入激活 [batch, seq, hidden] 或 [batch, hidden]
                         x = inp[0]
-                        return (x / s.to(x.device),)
+                        # 除法用FP32保证精度, 再转回输入dtype
+                        result = (x.float() / s.to(x.device).float()).to(x.dtype)
+                        return (result,)
                     return hook
 
                 module.register_forward_pre_hook(make_smooth_hook(scale))
 
     def _register_act_quant_hooks(self):
-        """注册激活量化Hook"""
+        """
+        注册激活量化Hook (对Linear输入进行量化)
+
+        标准W8A8做法: 量化Linear的输入激活(即上一层输出经过LayerNorm后的值),
+        而非Linear的输出。量化输入可以确保量化发生在矩阵乘法之前,
+        且不破坏RoPE、attention softmax等非线性操作的数值范围。
+        """
         act_quant = self.scheme.act_quantizer
 
-        def make_act_hook():
-            def hook(module, input, output):
-                if isinstance(output, torch.Tensor):
-                    return act_quant.quantize(output)
+        def make_act_prehook():
+            def hook(module, input):
+                x = input[0]
+                if isinstance(x, torch.Tensor):
+                    return (act_quant.quantize(x),)
             return hook
 
         for name, module in self.model.named_modules():
-            if isinstance(module, nn.Linear):
-                module.register_forward_hook(make_act_hook())
+            # 排除 lm_head: logits输出不应被量化
+            if isinstance(module, nn.Linear) and "lm_head" not in name:
+                module.register_forward_pre_hook(make_act_prehook())
 
 
 # =============================================================================
@@ -730,13 +814,16 @@ def main():
         # 深拷贝原始模型
         quant_model = copy.deepcopy(model).to(device)
 
-        # 准备校准数据
+        # 准备校准数据 (使用所有评估文本以提高校准质量)
         print("\n[1/3] 收集校准数据...")
-        sample_text = eval_texts[0]
-        tokens = tokenizer(sample_text, return_tensors="pt")
-        sample_input = tokens.input_ids.to(device)
-        if sample_input.size(1) > 64:
-            sample_input = sample_input[:, :64]
+        calib_ids = []
+        for txt in eval_texts:
+            toks = tokenizer(txt, return_tensors="pt")
+            ids = toks.input_ids.to(device)
+            if ids.size(1) > 64:
+                ids = ids[:, :64]
+            calib_ids.append(ids)
+        sample_input = torch.cat(calib_ids, dim=1)
 
         pipeline = QuantizationPipeline(quant_model, scheme, device)
         pipeline.collect_calibration_data(sample_input)

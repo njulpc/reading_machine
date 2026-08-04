@@ -62,7 +62,7 @@ cd scripts/quantization/2607.29659
 python3 demo.py
 ```
 
-无需 GPU 和模型下载，默认使用 mock 模型运行。若环境中有 Qwen3-0.6B 权重和 GPU，自动切换到真实模型。
+无需 GPU 和模型下载，默认使用 mock 模型运行。设置环境变量 `USE_REAL_MODEL=1` 可尝试加载真实 Qwen3-0.6B 模型。
 
 ## 输出示例
 
