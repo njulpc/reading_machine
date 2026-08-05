@@ -177,31 +177,41 @@ class DifferentiableTernarize(nn.Module):
         """
         可微三值化前向传播。
 
+        前向: 硬三值化 {-1, 0, 1}
+        反向: 通过 sigmoid 软近似传递梯度到 scale 和 threshold
+
         Args:
             w: 权重 [out_features, in_features]
 
         Returns:
             w_dequant: 反量化后的权重
         """
+        # 统一转为 FP32 计算, 避免 FP16 梯度溢出
+        w = w.float()
+
         scale = self.scale.clamp_min(1e-8)
         threshold = scale * torch.sigmoid(self.threshold_ratio)
+        threshold = threshold.clamp_min(1e-8)
 
         # === 前向: 硬三值化 ===
-        w_q = torch.zeros_like(w)
+        w_q_hard = torch.zeros_like(w)
         mask_pos = w > threshold
         mask_neg = w < -threshold
-        w_q = torch.where(mask_pos, torch.ones_like(w), w_q)
-        w_q = torch.where(mask_neg, -torch.ones_like(w), w_q)
+        w_q_hard = torch.where(mask_pos, torch.ones_like(w), w_q_hard)
+        w_q_hard = torch.where(mask_neg, -torch.ones_like(w), w_q_hard)
 
-        # 反量化
+        # === 软三值化 (为反向传播提供梯度) ===
+        # 使用 sigmoid 软近似: 梯度可流向 threshold
+        temp = 1.0  # 温度参数 (1.0 保证梯度稳定)
+        p_pos = torch.sigmoid((w - threshold) / temp)
+        p_neg = torch.sigmoid((-w - threshold) / temp)
+        w_q_soft = p_pos - p_neg  # ∈ (-1, 1)
+
+        # STE: 前向=硬三值化, 反向=软三值化
+        w_q = w_q_soft + (w_q_hard - w_q_soft).detach()
+
+        # 反量化: 梯度可流向 scale (通过乘法)
         w_dequant = w_q * scale
-
-        # === STE: 反向时梯度直通 ===
-        # w_dequant = w + (w_dequant - w).detach()
-        # 但我们还希望梯度能流向 scale 和 threshold
-        # 所以用: w_dequant = w.detach() * (w_q / w).detach() * scale + (w - w.detach())
-        # 简化: 使用标准 STE + 可学习参数
-        w_dequant = w + (w_dequant - w).detach()
         return w_dequant
 
 
@@ -235,13 +245,13 @@ class CATQTrainer:
                 num_out = module.weight.shape[0]
                 ternarizer = DifferentiableTernarize(num_out)
 
-                # 用权重统计初始化 scale
+                # 用权重统计初始化 scale (确保 FP32)
                 with torch.no_grad():
-                    scale_init = module.weight.data.abs().mean(dim=1, keepdim=True)
-                    ternarizer.scale.data = scale_init.clamp_min(1e-8)
+                    scale_init = module.weight.data.float().abs().mean(dim=1, keepdim=True)
+                    ternarizer.scale.data.copy_(scale_init.clamp_min(1e-8))
 
                 self.ternarizers[name] = ternarizer
-                self.original_weights[name] = module.weight.data.clone()
+                self.original_weights[name] = module.weight.data.float().clone()
                 layer_count += 1
 
     def train(self, calib_input_ids: torch.Tensor,
@@ -328,6 +338,7 @@ class CATQTrainer:
                     stats["initial_loss"] = loss.item()
                 if iteration == self.num_iterations - 1:
                     stats["final_loss"] = loss.item()
+                print(f"    [CAT-Q] iter {iteration+1}/{self.num_iterations}, loss={loss.item():.6f}")
             except Exception as e:
                 if iteration == 0:
                     stats["initial_loss"] = -1
@@ -344,71 +355,108 @@ class CATQTrainer:
     def train_with_fp_output(self, calib_input_ids: torch.Tensor,
                              fp_output: torch.Tensor) -> dict:
         """
-        使用预计算的全精度输出进行 CAT-Q 训练 (避免需要第二个模型实例)。
+        使用逐层优化 (layer-wise) 进行 CAT-Q 训练。
+
+        标准 PTQ 做法: 逐层独立优化量化参数, 避免全模型前向/反向传播。
+        1. 先用全精度模型前向一次, 收集每个目标 Linear 层的输入/输出激活
+        2. 对每层独立优化 ternarizer 的 scale 和 threshold
+        3. 损失: 量化层输出 vs 全精度层输出的 MSE
+
+        这比全模型端到端训练快几个数量级, 且是 PTQ 文献中的标准做法。
 
         Args:
             calib_input_ids: 校准数据 [batch, seq_len]
-            fp_output: 预计算的全精度模型输出
+            fp_output: 预计算的全精度模型输出 (用于日志记录)
 
         Returns:
             训练统计
         """
         device = next(self.model.parameters()).device
-
-        # 收集所有可学习参数
-        params = []
-        for ternarizer in self.ternarizers.values():
-            params.extend(list(ternarizer.parameters()))
-        optimizer = torch.optim.Adam(params, lr=self.lr)
-
-        fp_output = fp_output.detach().to(device)
-
         stats = {"initial_loss": 0.0, "final_loss": 0.0}
 
-        for iteration in range(self.num_iterations):
-            optimizer.zero_grad()
+        # === 步骤 1: 收集每层的输入/输出激活 ===
+        layer_acts = {}  # {name: (input_act, output_act)}
 
-            # 应用可微三值化到权重
-            for name, module in self.model.named_modules():
-                if isinstance(module, nn.Linear) and name in self.ternarizers:
-                    ternarizer = self.ternarizers[name]
-                    orig_w = self.original_weights[name].to(device)
-                    module.weight.data = ternarizer(orig_w)
+        hooks = []
+        for name, module in self.model.named_modules():
+            if isinstance(module, nn.Linear) and name in self.ternarizers:
+                def make_hook(n):
+                    def hook(mod, inp, out):
+                        layer_acts[n] = (inp[0].detach(), out.detach())
+                    return hook
+                hooks.append(module.register_forward_hook(make_hook(name)))
 
-            # 前向传播
-            try:
-                quant_output = self.model(calib_input_ids)
-                if hasattr(quant_output, 'logits'):
-                    quant_output = quant_output.logits
+        with torch.no_grad():
+            self.model(calib_input_ids)
+
+        for h in hooks:
+            h.remove()
+
+        # === 步骤 2: 逐层优化 ===
+        all_losses = []
+
+        for name, ternarizer in self.ternarizers.items():
+            if name not in layer_acts:
+                continue
+
+            inp_act, fp_out = layer_acts[name]
+            orig_w = self.original_weights[name].to(device)
+
+            # 转为 FP32 以保证数值稳定
+            inp_act = inp_act.float()
+            fp_out = fp_out.float()
+
+            # 获取 bias
+            submod = self.model.get_submodule(name)
+            bias = submod.bias if (hasattr(submod, 'bias') and submod.bias is not None) else None
+
+            # 为该层创建独立优化器
+            opt = torch.optim.Adam(ternarizer.parameters(), lr=self.lr)
+
+            for iteration in range(self.num_iterations):
+                opt.zero_grad()
+
+                # 可微三值化
+                w_quantized = ternarizer(orig_w)
+
+                # 检查 NaN
+                if torch.isnan(w_quantized).any():
+                    print(f"    [CAT-Q] WARNING: w_quantized has NaN at iter {iteration}")
+                    break
+
+                # 量化层输出
+                quant_out = F.linear(inp_act, w_quantized, bias)
 
                 # 损失: 量化输出 vs 全精度输出
-                loss = F.mse_loss(quant_output.float(), fp_output.float())
+                loss = F.mse_loss(quant_out, fp_out)
 
-                # 正则化: 鼓励稀疏 (更多零值)
-                sparsity_reg = 0.0
-                for ternarizer in self.ternarizers.values():
-                    sparsity_reg += -torch.sigmoid(ternarizer.threshold_ratio).mean()
+                # 正则化: 鼓励稀疏
+                sparsity_reg = -torch.sigmoid(ternarizer.threshold_ratio).mean()
                 loss = loss + 0.01 * sparsity_reg
 
                 loss.backward()
-                optimizer.step()
+                torch.nn.utils.clip_grad_norm_(ternarizer.parameters(), max_norm=1.0)
+                opt.step()
 
-                if iteration == 0:
-                    stats["initial_loss"] = loss.item()
-                if iteration == self.num_iterations - 1:
-                    stats["final_loss"] = loss.item()
-            except Exception as e:
-                if iteration == 0:
-                    stats["initial_loss"] = -1
-                    stats["final_loss"] = -1
-                    stats["error"] = str(e)
-                break
+                all_losses.append(loss.item())
+
+            short_name = name[-28:] if len(name) > 28 else name
+            print(f"    [CAT-Q] {short_name}: final_loss={loss.item():.6f}")
+
+        if all_losses:
+            stats["initial_loss"] = all_losses[0]
+            stats["final_loss"] = all_losses[-1]
+        else:
+            stats["initial_loss"] = -1
+            stats["final_loss"] = -1
+            stats["error"] = "No layers to optimize"
 
         return stats
 
     def apply_hard_ternarization(self):
         """训练完成后, 执行硬三值化得到最终量化模型。"""
         device = next(self.model.parameters()).device
+        model_dtype = next(self.model.parameters()).dtype
         for name, module in self.model.named_modules():
             if isinstance(module, nn.Linear) and name in self.ternarizers:
                 ternarizer = self.ternarizers[name]
@@ -425,7 +473,8 @@ class CATQTrainer:
                     w_q[mask_pos] = 1.0
                     w_q[mask_neg] = -1.0
 
-                    module.weight.data = w_q * scale
+                    # 转回模型 dtype 以避免 dtype 不匹配
+                    module.weight.data = (w_q * scale).to(model_dtype)
 
         print("  CAT-Q hard ternarization applied.")
 
@@ -622,6 +671,7 @@ def main():
         print("    已转换为 FP16 以节省内存")
 
     # 真实模型限制处理层数 (避免 OOM)
+    # 逐层优化模式下 CPU 也可处理 10 层
     max_layers = 10 if not is_mock else 0
 
     # 准备测试输入
@@ -649,7 +699,9 @@ def main():
 
     ayot_builder = AYOTCalibrationBuilder(
         model_fp, tokenizer, max_new_tokens=32, is_mock=is_mock)
-    calib_batch = ayot_builder.build_calibration_batch(max_length=64)
+    # CPU 上减小校准序列长度以加速验证
+    calib_max_len = 64 if device == "cuda" else 32
+    calib_batch = ayot_builder.build_calibration_batch(max_length=calib_max_len)
     calib_batch = calib_batch.to(device)
     print(f"    校准 batch shape: {calib_batch.shape}")
 
@@ -698,8 +750,11 @@ def main():
     print("=" * 70)
 
     # CAT-Q 训练 (在同一模型上操作)
-    print("  [CAT-Q] 初始化可微三值化模块...")
-    catq = CATQTrainer(model_fp, lr=0.001, num_iterations=30, max_layers=max_layers)
+    # CPU 上减少迭代次数以保证验证可行性 (GPU 上使用完整 30 次迭代)
+    catq_iterations = 30 if device == "cuda" else 5
+    print(f"  [CAT-Q] 初始化可微三值化模块 (iterations={catq_iterations})...")
+    catq = CATQTrainer(model_fp, lr=0.001, num_iterations=catq_iterations,
+                       max_layers=max_layers)
 
     print("  [CAT-Q] 使用 AYOT 校准数据进行训练...")
 
@@ -733,7 +788,7 @@ def main():
     total_rtn_mse = 0.0
     total_scaleq_mse = 0.0
     layer_count = 0
-    max_compare_layers = 10 if not is_mock else 999
+    max_compare_layers = max_layers if not is_mock else 999
 
     for name in original_weights:
         if name not in rtn_weights or name not in scaleq_weights:
