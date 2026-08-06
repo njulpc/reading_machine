@@ -1,19 +1,34 @@
 keyword,occurrence,paper_ids
-quantization,11,2608.01847|2608.01078|2608.01653|2608.01343|2608.00859|2608.02901|2608.03057|2608.03276|2608.03854|2608.03867|2608.03919
-pruning,12,2608.00859|2608.00481|2608.01985|2608.01979|2608.01536|2608.02134|2608.03026|2608.03083|2608.03112|2608.03580|2608.03681|2608.03812
-LLM,9,2608.01847|2608.01078|2608.00481|2608.01536|2608.01631|2608.02901|2608.03276|2608.03867|2608.03796
-token pruning,6,2608.01985|2608.01979|2608.02134|2608.03083|2608.03112|2608.03681
-knowledge distillation,4,2608.00129|2608.02048|2608.03490|2608.03796
+LLM,7,2608.01847|2608.02901|2608.03867|2608.00481|2608.01536|2608.03796|2608.04991
+token pruning,7,2608.01985|2608.03083|2608.03112|2608.03681|2608.04680|2608.04496|2608.04483
+pruning,6,2608.00859|2608.00481|2608.03026|2608.02134|2608.05104|2608.05111
+VLM,5,2608.01985|2608.03580|2608.04496|2608.04483|2608.04472
 PTQ,4,2608.01847|2608.01078|2608.01653|2608.03919
-KV cache compression,4,2608.01631|2608.01536|2608.02901|2608.03276
 INT8,4,2608.01653|2608.00859|2608.03854|2608.02954
-VLM,4,2608.01985|2608.01979|2608.02134|2608.03580
-QAT,3,2608.01653|2608.00859|2608.03919
-FPGA,3,2608.00859|2608.01536|2608.02954
-training-free,3,2608.01979|2608.03112|2608.03812
-visual token,3,2608.02134|2608.01979|2608.03649
+KV cache compression,4,2608.02901|2608.03276|2608.01631|2608.04771
+training-free,4,2608.01979|2608.03112|2608.03812|2608.04405
+knowledge distillation,4,2608.00129|2608.02048|2608.03490|2608.03796
+token reduction,4,2608.03649|2608.04610|2608.04515|2608.04771
+quantization,3,2608.00859|2608.03057|2608.01631
+token compression,3,2608.03812|2608.04610|2608.04891
 MXFP4,2,2608.01847|2608.03867
+reasoning,2,2608.01078|2608.01631
+QAT,2,2608.01653|2608.03919
 low-bit,2,2608.01343|2608.03919
+ViT,2,2608.01343|2608.04680
+FPGA,2,2608.00859|2608.02954
+long-context,2,2608.02901|2608.04405
+MLLM,2,2608.01979|2608.04515
+GPU kernel,2,2608.01536|2608.05033
+structured pruning,2,2608.03580|2608.04811
+Mamba,2,2608.03490|2608.02954
+visual token,2,2608.02134|2608.03649
+LoRA,2,2608.03579|2608.04488
+vector quantization,2,2608.05127|2608.05069
+KV cache,2,2608.04405|2608.04893
+sparsity,2,2608.05033|2608.04472
+visual evidence,2,2608.04515|2608.04496
+real-time,2,2608.04428|2608.04891
 FP4,1,2608.01847
 NVFP4,1,2608.01847
 scale learning,1,2608.01847
@@ -23,47 +38,18 @@ ternary quantization,1,2608.01078
 1.58-bit,1,2608.01078
 AYOT,1,2608.01078
 CAT-Q,1,2608.01078
-reasoning,2,2608.01078|2608.01631
 Qwen3,1,2608.01078
-INT4,1,2608.03854
-4-bit,1,2608.00859
 Hadamard transform,1,2608.01653
 learned image coding,1,2608.01653
 TensorRT,1,2608.01653
 delta computation,1,2608.01343
 multiplier-less,1,2608.01343
-ViT,1,2608.01343
 value locality,1,2608.01343
 KAN,1,2608.00859
+4-bit,1,2608.00859
 differentiable gates,1,2608.00859
-Fisher information,1,2608.00481
-WANDA,1,2608.00481
-unstructured,1,2608.00481
-LLaMA,2,2608.00481|2608.01536
-differentiable,1,2608.01985
-information throttling,1,2608.01985
-Gumbel-Softmax,1,2608.01985
-MLLM,1,2608.01979
-evidence-aware,1,2608.01979
-dynamic budget,1,2608.01979
-OCR,1,2608.01979
-dual-sparsity,1,2608.01536
-spMspV,1,2608.01536
-GPU kernel,1,2608.01536
-SIMT,1,2608.01536
-RLC-CSC,1,2608.01536
-sparsity,1,2608.01536
-progressive,1,2608.00129
-compression,2,2608.00129|2608.02134
-adapter,1,2608.00129
-intrinsic dimension,1,2608.00129
-faithfulness,1,2608.01631
-token eviction,1,2608.01631
-coreset,1,2608.02134
-message,1,2608.02134
 anchor-residual,1,2608.02901
 no-eviction,1,2608.02901
-long-context,1,2608.02901
 bit sparsification,1,2608.03057
 diffusion model,1,2608.03057
 temporal-adaptive,1,2608.03057
@@ -73,6 +59,7 @@ query-agnostic,1,2608.03276
 task-guided pruning,1,2608.03276
 quantization scale factor,1,2608.03276
 outlier detection,1,2608.03276
+INT4,1,2608.03854
 calibration,1,2608.03854
 biomedical LLM,1,2608.03854
 scoring rule,1,2608.03854
@@ -87,6 +74,20 @@ NAP,1,2608.03919
 normalization affine,1,2608.03919
 subspace optimization,1,2608.03919
 distillation,1,2608.03919
+Fisher information,1,2608.00481
+WANDA,1,2608.00481
+unstructured,1,2608.00481
+differentiable,1,2608.01985
+information throttling,1,2608.01985
+Gumbel-Softmax,1,2608.01985
+visual token pruning,1,2608.01979
+evidence-aware,1,2608.01979
+dynamic budget,1,2608.01979
+OCR,1,2608.01979
+dual-sparsity,1,2608.01536
+spMspV,1,2608.01536
+SIMT,1,2608.01536
+RLC-CSC,1,2608.01536
 co-inference,1,2608.03026
 AI-RAN,1,2608.03026
 multi-cluster,1,2608.03026
@@ -101,7 +102,6 @@ video-language model,1,2608.03112
 adaptive,1,2608.03112
 two-stage,1,2608.03112
 frame pruning,1,2608.03112
-structured pruning,1,2608.03580
 sensitivity-aware,1,2608.03580
 dynamic pruning,1,2608.03580
 visual token selection,1,2608.03580
@@ -111,18 +111,20 @@ defect-preserving,1,2608.03681
 zero-shot,1,2608.03681
 self-distillation,1,2608.03681
 CLIP,1,2608.03681
-token compression,1,2608.03812
 omni-modal,1,2608.03812
 audio-visual,1,2608.03812
 Qwen2.5-Omni,1,2608.03812
 FLOPs reduction,1,2608.03812
+progressive,1,2608.00129
+compression,1,2608.00129
+adapter,1,2608.00129
+intrinsic dimension,1,2608.00129
 generative recommendation,1,2608.02048
 hierarchy-aware,1,2608.02048
 beam search,1,2608.02048
 ranking distillation,1,2608.02048
 semantic ID,1,2608.02048
 3D object detection,1,2608.03490
-Mamba,2,2608.03490|2608.02954
 LiDAR,1,2608.03490
 voxel,1,2608.03490
 feature alignment,1,2608.03490
@@ -130,11 +132,15 @@ offline KD,1,2608.03796
 top-K logits,1,2608.03796
 chunked KL loss,1,2608.03796
 memory efficient,1,2608.03796
-low-rank,2,2608.02954|2608.03579
+faithfulness,1,2608.01631
+token eviction,1,2608.01631
+VLM compression,1,2608.02134
+coreset,1,2608.02134
+message,1,2608.02134
+low-rank,1,2608.02954
 SVD,1,2608.02954
 hardware-software co-design,1,2608.02954
 state space model,1,2608.02954
-LoRA,1,2608.03579
 ultra-low-rank,1,2608.03579
 subspace alignment,1,2608.03579
 centroid-residual,1,2608.03579
@@ -142,6 +148,77 @@ multi-tenant serving,1,2608.03579
 vLLM,1,2608.03579
 latency,1,2608.03649
 break-even,1,2608.03649
-token reduction,1,2608.03649
 multimodal inference,1,2608.03649
 hardware benchmark,1,2608.03649
+differential privacy,1,2608.05127
+federated learning,1,2608.05127
+tight frame,1,2608.05127
+LDP,1,2608.05127
+subsampled,1,2608.05127
+VQ-GAN,1,2608.05069
+video anomaly detection,1,2608.05069
+motion codebook,1,2608.05069
+pose-based,1,2608.05069
+activation compression,1,2608.04991
+split inference,1,2608.04991
+residual quantization,1,2608.04991
+reference-aware,1,2608.04991
+grouped affine,1,2608.04991
+QLoRA,1,2608.04488
+LoRA+,1,2608.04488
+BitFit,1,2608.04488
+PEFT,1,2608.04488
+NF4,1,2608.04488
+energy-efficient,1,2608.04488
+on-device,1,2608.04488
+SLM,1,2608.04488
+binary hashing,1,2608.04405
+PCA,1,2608.04405
+sparse attention,1,2608.04405
+BinaryPC,1,2608.04405
+lottery ticket,1,2608.05104
+Bengali,1,2608.05104
+BERT,1,2608.05104
+few-shot,1,2608.05104
+sparse,1,2608.05104
+SpMM,1,2608.05033
+LLM agent,1,2608.05033
+sparse matrix,1,2608.05033
+semantic segmentation,1,2608.04811
+static pruning,1,2608.04811
+SegFormer,1,2608.04811
+adversarial robustness,1,2608.04680
+efficiency degradation,1,2608.04680
+defense,1,2608.04680
+3D VLM,1,2608.04610
+hierarchical clustering,1,2608.04610
+3D scene,1,2608.04610
+reservoir pruning,1,2608.04593
+Echo State Networks,1,2608.04593
+dynamical perspective,1,2608.04593
+Jacobian Gramian,1,2608.04593
+3D medical volume,1,2608.04515
+anisotropic,1,2608.04515
+dynamic,1,2608.04496
+iterative,1,2608.04496
+token roles,1,2608.04483
+redundancy analysis,1,2608.04483
+endoscopy,1,2608.04472
+anatomy-guided,1,2608.04472
+progressive alignment,1,2608.04472
+bit-level sparsity,1,2608.04428
+VLA,1,2608.04428
+speculative inference,1,2608.04428
+embodied AI,1,2608.04428
+efficient reasoning,1,2608.04771
+reward-coordinated,1,2608.04771
+video compression,1,2608.04891
+generative codec,1,2608.04891
+ultra-low bitrate,1,2608.04891
+multi-agent LLM,1,2608.04893
+causal audit,1,2608.04893
+latent communication,1,2608.04893
+neural memory,1,2608.05111
+reinforcement learning,1,2608.05111
+exploration,1,2608.05111
+reward structure,1,2608.05111
