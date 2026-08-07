@@ -98,12 +98,14 @@ def truncate_lsb(w_int: torch.Tensor, k: int) -> torch.Tensor:
     """
     LSB 截断: 截断 k 个最低有效位。
 
-    对整数做算术右移 k 位再左移 k 位, 把 k 个 LSB 置零:
-        x_trunc = (x_int >> k) << k
-    这等价于把权重舍入到 2^k 的倍数, 有效精度降为 (8 - k) bit。
+    论文明确使用 "truncating least-significant bits" (截断, 非四舍五入)。
+    对整数做向零截断 (保持符号的 floor), 把 k 个 LSB 置零:
+        x_trunc = sign(x) * floor(|x| / 2^k) * 2^k
+    这等价于把权重截断到 2^k 的倍数 (向零方向), 有效精度降为 (8 - k) bit。
     截断后非零 bit-plane 数 = 8 - k, 位串行计算周期随之减少。
 
-    注意: 用 round-half-to-even 的整数运算, 对称 INT8 用算术移位保持符号。
+    注意: 这里是真正的截断 (truncate, 向零取整), 而非四舍五入 (round)。
+    截断总是向零方向舍入, 保持符号; 与论文 "truncating LSB" 一致。
 
     Args:
         w_int: 整数权重 (值在 [-128, 127])
@@ -114,13 +116,11 @@ def truncate_lsb(w_int: torch.Tensor, k: int) -> torch.Tensor:
     """
     if k <= 0:
         return w_int
-    # 算术移位 (保持符号): round to nearest multiple of 2^k
-    # 先加偏置做四舍五入: round(x / 2^k) * 2^k
     factor = 2 ** k
-    # 四舍五入到最近的 2^k 倍数 (对称)
-    w_rounded = torch.round(w_int / factor) * factor
+    # 截断 (truncate) 到 2^k 的倍数: 向零取整, 保持符号
+    w_trunc = torch.sign(w_int) * torch.floor(torch.abs(w_int) / factor) * factor
     # 钳位回 [-128, 127]
-    w_trunc = torch.clamp(w_rounded, -128, 127)
+    w_trunc = torch.clamp(w_trunc, -128, 127)
     return w_trunc
 
 

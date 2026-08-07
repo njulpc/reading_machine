@@ -342,7 +342,7 @@ class AdaMXQuantizer:
         ms_optimal = (block * x_dq0).sum() / denom
         # 量化到 INT4 / 8 (范围 [-1, 0.875], 步长 0.125)
         ms_quantized = torch.clamp(torch.round(ms_optimal * 8), -8, 7) / 8.0
-        ms_quantized = ms_quantized.clamp_min(0.125)  # 防止乘零
+        ms_quantized = ms_quantized.clamp_min(1e-4)  # 允许负微缩放, 仅防止乘零
 
         x_dq = x_dq0 * ms_quantized
         return x_dq, scale, {"scheme": 1, "micro_scale": ms_quantized.item()}
@@ -485,7 +485,7 @@ class AdaMXQuantizer:
             ms_optimal = (x_blocks * x_dq_0).sum(dim=1, keepdim=True) / denom
             # 量化到 INT4/8
             ms_q = torch.clamp(torch.round(ms_optimal * 8), -8, 7) / 8.0
-            ms_q = ms_q.clamp_min(0.125)
+            ms_q = ms_q.clamp_min(1e-4)
             x_dq_1 = x_dq_0 * ms_q  # [num_blocks, block_size]
             mse_1 = (x_dq_1 - x_blocks).pow(2).mean(dim=1)
 
@@ -493,7 +493,7 @@ class AdaMXQuantizer:
             use_scheme_1 = mse_1 < mse_0
             schemes = use_scheme_1.long()  # 0 or 1
             x_dq_final = torch.where(use_scheme_1.unsqueeze(1), x_dq_1, x_dq_0)
-            scales_final = torch.where(use_scheme_1.unsqueeze(1), scales_0, scales_0)
+            scales_final = scales_0
 
         else:
             # === Scheme 2: MXFP4 + 离群值保持 (向量化) ===
@@ -789,7 +789,7 @@ def main():
     print("论文: arXiv:2608.03867 | 目标模型: Qwen3-0.6B")
     print("=" * 78)
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cpu"
 
     # 1. 加载模型
     print("\n[1] 加载模型...")

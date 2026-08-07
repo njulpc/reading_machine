@@ -150,7 +150,7 @@ def extract_kv_cache(model, input_ids, is_mock: bool):
             # 继续前向 (简化 attention)
             q = layer['q_proj'](h).view(B, T, m.num_heads, m.head_dim).transpose(1, 2)
             attn = _simple_attention(q, k.transpose(1, 2), v.transpose(1, 2))
-            x = x + layer['o_proj'](attn.reshape(B, T, -1))
+            x = x + layer['o_proj'](attn.transpose(1, 2).reshape(B, T, -1))
             h2 = layer['post_norm'](x)
             x = x + layer['down_proj'](
                 F.silu(layer['gate_proj'](h2)) * layer['up_proj'](h2))
@@ -229,15 +229,26 @@ def extract_kv_cache_mock_fallback(model, input_ids, num_kv_heads, head_dim):
 
 
 def _simple_attention(q, k, v):
-    """简化多头注意力 (MockTransformer 用)。"""
-    B, T, H, D = q.shape
-    q = q.transpose(1, 2)  # [B, H, T, D]
-    k = k.transpose(1, 2)
-    v = v.transpose(1, 2)
+    """简化多头注意力 (MockTransformer 用), 支持 GQA。
+
+    Args:
+        q: [B, H_q, T, D]
+        k: [B, H_kv, T, D]
+        v: [B, H_kv, T, D]
+
+    Returns:
+        out: [B, H_q, T, D]
+    """
+    B, H_q, T, D = q.shape
+    H_kv = k.shape[1]
+    if H_q != H_kv:
+        # GQA: 复制 KV head 以匹配 query head 数
+        rep = H_q // H_kv
+        k = k.repeat_interleave(rep, dim=1)
+        v = v.repeat_interleave(rep, dim=1)
     scores = torch.matmul(q, k.transpose(-2, -1)) / math.sqrt(D)
     attn = F.softmax(scores, dim=-1)
-    out = torch.matmul(attn, v)  # [B, H, T, D]
-    return out.transpose(1, 2)  # [B, T, H, D]
+    return torch.matmul(attn, v)  # [B, H_q, T, D]
 
 
 # =============================================================================

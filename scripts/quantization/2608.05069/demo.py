@@ -52,10 +52,11 @@ class VectorQuantizerEMA(nn.Module):
              + self.codebook.pow(2).sum(1)
              - 2.0 * z_e @ self.codebook.t())          # [N, K]
         indices = d.argmin(1)                            # [N]
-        z_q = self.codebook[indices]                     # [N, D]
+        z_q = self.codebook[indices]                     # [N, D] (EMA 更新前)
 
         # EMA 码本更新 (仅训练阶段)
         if self.training:
+            z_q_pre = z_q.clone()                        # 保存 EMA 更新前的 z_q 副本
             with torch.no_grad():
                 one_hot = F.one_hot(indices, self.num_codes).float()
                 cluster_size = one_hot.sum(0)                          # [K]
@@ -69,9 +70,11 @@ class VectorQuantizerEMA(nn.Module):
                 normalized = self.ema_w / (self.ema_cluster_size.unsqueeze(1) + self.eps)
                 self.codebook.copy_(n.unsqueeze(1) * normalized
                                      + (1.0 - n).unsqueeze(1) * self.codebook)
-            z_q = self.codebook[indices]
+            z_q = self.codebook[indices]                 # 更新后的 z_q (用于 STE 前向)
+            commit_loss = F.mse_loss(z_e, z_q_pre.detach())  # 用更新前的 z_q 计算承诺损失
+        else:
+            commit_loss = F.mse_loss(z_e, z_q.detach())  # 推理阶段无 EMA 更新
 
-        commit_loss = F.mse_loss(z_e, z_q.detach())     # 承诺损失 (梯度只回编码器)
         z_q_st = z_e + (z_q - z_e).detach()             # STE: 前向 z_q, 反向直通 z_e
         return z_q_st, commit_loss, indices
 
@@ -188,19 +191,26 @@ def main():
     H, N = hidden.shape[1], hidden.shape[0]
     print(f"    隐藏状态: {N} 个向量, 维度 H={H}")
 
-    # 3. 构建 VQ-VAD 并在 "正常" 数据上训练
-    print("\n[3] 训练 VQ-VAD (正常数据)...")
+    # 3. 拆分训练集/测试集 (避免异常检测数据泄漏)
+    print("\n[3] 拆分训练集/测试集 (前80%训练, 后20%测试)...")
+    n_train = int(N * 0.8)
+    train_data = hidden[:n_train]
+    test_data = hidden[n_train:]
+    print(f"    训练集: {n_train} 个向量, 测试集: {N - n_train} 个向量")
+
+    # 4. 构建 VQ-VAD 并在训练集上训练
+    print("\n[4] 训练 VQ-VAD (仅训练集)...")
     latent_dim, num_codes = 32, 64
     vqvad = VQVAD(hidden_size=H, latent_dim=latent_dim,
                   num_codes=num_codes).to(device)
-    train_vqvad(vqvad, hidden, epochs=200, lr=3e-3, beta=0.25)
+    train_vqvad(vqvad, train_data, epochs=200, lr=3e-3, beta=0.25)
 
-    # 4. 码本利用率与重构误差
-    print("\n[4] 码本利用率与重构误差...")
+    # 5. 码本利用率与重构误差 (在测试集上评估)
+    print("\n[5] 码本利用率与重构误差 (测试集)...")
     with torch.no_grad():
-        x_hat, _, indices = vqvad(hidden)
+        x_hat, _, indices = vqvad(test_data)
     usage = vqvad.vq.codebook_usage(indices)
-    m = quantization_error_metrics(hidden, x_hat)
+    m = quantization_error_metrics(test_data, x_hat)
     bits_orig = H * 16                      # fp16 原始
     bits_comp = math.log2(num_codes)        # 码本索引
     ratio = bits_orig / bits_comp
@@ -209,14 +219,15 @@ def main():
     print(f"    压缩: {bits_orig:.0f} bit/vec -> {bits_comp:.1f} bit/vec, "
           f"压缩比 ≈ {ratio:.1f}x")
 
-    # 5. 异常检测: 注入离群点构造异常样本
-    print("\n[5] 异常检测 (重构误差分离)...")
+    # 6. 异常检测: 在测试集上注入离群点构造异常样本
+    print("\n[6] 异常检测 (测试集, 重构误差分离)...")
     torch.manual_seed(1)
-    n_anom = N // 2
-    anom = hidden[:n_anom].clone()
+    n_test = test_data.size(0)
+    n_anom = n_test // 2
+    anom = test_data[:n_anom].clone()
     mask = torch.rand_like(anom) < 0.2      # 随机选 20% 维度注入大幅离群扰动
     anom[mask] += torch.randn_like(anom[mask]) * 6.0
-    err_normal = recon_error_per_sample(vqvad, hidden[n_anom:])
+    err_normal = recon_error_per_sample(vqvad, test_data[n_anom:])
     err_anom = recon_error_per_sample(vqvad, anom)
     thr = err_normal.mean() + 3 * err_normal.std()
     detect = (err_anom > thr).float().mean()
@@ -227,8 +238,8 @@ def main():
     print(f"    检测阈值 (mean+3σ): {thr:.4f}")
     print(f"    异常检出率: {detect*100:.1f}%")
 
-    # 6. 分层压缩示例: 对首层隐藏状态逐 token 压缩
-    print("\n[6] 隐藏状态压缩示例 (首序列逐 token)")
+    # 7. 分层压缩示例: 对首层隐藏状态逐 token 压缩
+    print("\n[7] 隐藏状态压缩示例 (首序列逐 token)")
     h0 = get_hidden_states(model_llm, seqs[0], is_mock)[0]   # [T, H]
     h0 = (h0.float() / (h0.std() + 1e-6)).to(device)
     idx0 = vqvad.encode_only(h0)

@@ -28,10 +28,14 @@ from quantization_toolkit import load_model_or_mock, quantization_error_metrics
 
 def compute_pca(data: torch.Tensor, n_components: int):
     """SVD 计算 PCA 主成分, 作为二值哈希的投影方向。返回 ([D, n_comp], [1, D] mean)。"""
+    assert n_components <= min(data.shape[0], data.shape[1]), \
+        f"n_components ({n_components}) must be <= min(data.shape[0], data.shape[1]) = {min(data.shape[0], data.shape[1])}"
+    orig_dtype = data.dtype
+    data = data.float()
     mean = data.mean(dim=0, keepdim=True)
     centered = data - mean
     _, _, Vt = torch.linalg.svd(centered, full_matrices=False)
-    return Vt[:n_components].t(), mean  # 主成分方向, 均值
+    return Vt[:n_components].t().to(orig_dtype), mean.to(orig_dtype)  # 主成分方向, 均值
 
 
 # === 2. 二值哈希与 Hamming 距离 ===
@@ -128,7 +132,7 @@ def main():
     print("论文: arXiv:2608.04405 | 目标模型: Qwen3-0.6B")
     print("=" * 72)
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cpu"
 
     # 1. 加载模型
     print("\n[1] 加载模型...")

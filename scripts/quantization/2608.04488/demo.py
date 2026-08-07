@@ -119,7 +119,7 @@ class LoRALinear(nn.Module):
         # 冻结基础权重 (QLoRA 时量化为 NF4)
         if quantize_base:
             w_q = quantize_nf4(base_linear.weight.data, nf4_group_size)
-            self.register_buffer("base_weight", w_q)
+            self.register_buffer("base_weight", w_q.to(base_linear.weight.dtype))
         else:
             self.register_buffer("base_weight", base_linear.weight.data.clone())
 
@@ -128,8 +128,10 @@ class LoRALinear(nn.Module):
             self.bias = nn.Parameter(base_linear.bias.data.clone())
 
         # LoRA 适配器: A [r, in_f], B [out_f, r]
-        self.lora_A = nn.Parameter(torch.empty(r, in_f))
-        self.lora_B = nn.Parameter(torch.zeros(out_f, r))
+        # 确保 LoRA 参数 dtype 与基础权重一致 (避免 float16/float32 混用)
+        lora_dtype = self.base_weight.dtype
+        self.lora_A = nn.Parameter(torch.empty(r, in_f, dtype=lora_dtype))
+        self.lora_B = nn.Parameter(torch.zeros(out_f, r, dtype=lora_dtype))
         nn.init.kaiming_uniform_(self.lora_A, a=math.sqrt(5))
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -255,7 +257,7 @@ def simulate_lora_training(model: nn.Module, input_ids: torch.Tensor,
     模拟 LoRA / LoRA+ 训练, 记录损失变化。
 
     LoRA:  A 和 B 使用相同学习率 lr
-    LoRA+: A 使用 lr * ratio, B 使用 lr (B 学习慢, A 学习快)
+    LoRA+: A 使用 lr, B 使用 lr * ratio (B 学习快, 因为 B 的梯度依赖 A)
 
     Args:
         model: 带 LoRA 适配器的模型
@@ -269,6 +271,10 @@ def simulate_lora_training(model: nn.Module, input_ids: torch.Tensor,
     Returns:
         losses: 每步损失列表
     """
+    # 转换为 float32 以避免 float16 反向传播中的 NaN 梯度
+    # (大词表模型的 logits 值很大, float16 梯度容易溢出)
+    model.float()
+
     # 收集 A 和 B 参数
     params_A, params_B = [], []
     for name, p in model.named_parameters():
@@ -318,7 +324,7 @@ def main():
     print("论文: arXiv:2608.04488 | 目标模型: Qwen3-0.6B")
     print("=" * 70)
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cpu"
 
     # 1. 加载模型
     print("\n[1] 加载模型...")
@@ -332,7 +338,7 @@ def main():
         target = torch.randint(0, vocab_size, (2, 16), device=device)
     else:
         input_ids = torch.randint(0, 32000, (2, 16), device=device)
-        target = input_ids.clone()
+        target = torch.randint(0, 32000, input_ids.shape, device=device)
 
     # 获取全精度基线输出
     with torch.no_grad():

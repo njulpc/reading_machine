@@ -57,7 +57,6 @@ class ReferenceStore:
         self.max_spans = max_spans
         self.span_length = span_length
         self.spans = []          # list of [span_length, hidden_dim]
-        self.span_norms = []     # 预计算 L2 范数, 加速检索
 
     def add(self, activation: torch.Tensor):
         """
@@ -71,11 +70,9 @@ class ReferenceStore:
         for i in range(0, seq_len - step + 1, step):
             span = activation[i:i + step].detach()
             self.spans.append(span)
-            self.span_norms.append(span.norm().item() + 1e-8)
             # 超过容量时淘汰最旧的 span (FIFO)
             if len(self.spans) > self.max_spans:
                 self.spans.pop(0)
-                self.span_norms.pop(0)
 
     def retrieve(self, query: torch.Tensor):
         """
@@ -92,10 +89,9 @@ class ReferenceStore:
             return None, 0.0
 
         q_flat = query.flatten().unsqueeze(0)         # [1, span*hidden]
-        q_norm = q_flat.norm().item() + 1e-8
 
         best_sim, best_span = -1.0, None
-        for span, s_norm in zip(self.spans, self.span_norms):
+        for span in self.spans:
             s_flat = span.flatten().unsqueeze(0)
             sim = F.cosine_similarity(q_flat, s_flat).item()
             if sim > best_sim:
@@ -151,21 +147,20 @@ class GroupedAffineAlignment:
         ref_g = ref_p.reshape(span_len, num_groups, g)
 
         # 逐组最小二乘: scale = cov(ref,cur)/var(ref), zero = mean(cur)-scale*mean(ref)
-        mean_ref = ref_g.mean(dim=0, keepdim=True)   # [1, num_groups, g]
-        mean_cur = cur_g.mean(dim=0, keepdim=True)
-        ref_c = ref_g - mean_ref
-        cur_c = cur_g - mean_cur
+        # 每组只产生一个 scale 和一个 zero (在 span 和 group 元素上联合 reduce)
+        mean_ref = ref_g.mean(dim=(0, 2))            # [num_groups]
+        mean_cur = cur_g.mean(dim=(0, 2))            # [num_groups]
+        ref_c = ref_g - mean_ref.view(1, -1, 1)      # [span_len, num_groups, g]
+        cur_c = cur_g - mean_cur.view(1, -1, 1)
 
-        var_ref = (ref_c ** 2).sum(dim=0)            # [num_groups, g]
-        cov_rc = (ref_c * cur_c).sum(dim=0)          # [num_groups, g]
-        scales = cov_rc / var_ref.clamp_min(1e-8)    # [num_groups, g]
-        zeros = mean_cur.squeeze(0) - scales * mean_ref.squeeze(0)
+        var_ref = (ref_c ** 2).sum(dim=(0, 2))       # [num_groups]
+        cov_rc = (ref_c * cur_c).sum(dim=(0, 2))     # [num_groups]
+        scales = cov_rc / var_ref.clamp_min(1e-8)    # [num_groups]
+        zeros = mean_cur - scales * mean_ref         # [num_groups]
 
-        # 应用仿射变换
-        aligned_g = ref_g * scales.unsqueeze(0) + zeros.unsqueeze(0)
+        # 应用仿射变换: 每组一个 scale 和一个 zero, broadcast 到 g 维度
+        aligned_g = ref_g * scales.view(1, -1, 1) + zeros.view(1, -1, 1)
         aligned_ref = aligned_g.reshape(span_len, -1)[:, :hidden]
-        scales = scales.reshape(num_groups, g).mean(dim=1)  # 每组平均 scale (统计用)
-        zeros = zeros.reshape(num_groups, g).mean(dim=1)
 
         return aligned_ref, scales, zeros
 

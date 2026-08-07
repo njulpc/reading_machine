@@ -30,9 +30,9 @@ torch.manual_seed(0)
 
 
 # --- 1. 过完备紧框架 / 随机旋转 ---
-def random_tight_frame(d: int, n: int) -> torch.Tensor:
+def random_tight_frame(d: int, n: int, device=None) -> torch.Tensor:
     """生成 N x d 随机紧框架 R (R^T R=(N/d)I); N=d 时为正交随机旋转。"""
-    Q, _ = torch.linalg.qr(torch.randn(n, d))  # Q: [N, d], Q^T Q = I_d
+    Q, _ = torch.linalg.qr(torch.randn(n, d, device=device))  # Q: [N, d], Q^T Q = I_d
     return math.sqrt(n / d) * Q                 # [N, d], R^T R = (N/d) I_d
 
 
@@ -52,17 +52,19 @@ def stochastic_sign_quantize(y: torch.Tensor) -> torch.Tensor:
 
 # --- 4. 隐私机制: Flat RR 与 Metric-Aware Laplace ---
 def flat_randomized_response(signs: torch.Tensor, eps: float) -> torch.Tensor:
-    """二值随机化响应 (eps-LDP): 以概率 e^eps/(e^eps+1) 上报真值, 否则随机。"""
+    """二值随机化响应 (eps-LDP): 以概率 p_true 上报真值, 否则上报反值 (-sign)。
+    E[priv] = a·sign, a=(e^eps-1)/(e^eps+1), 去偏 1/a 即可恢复 sign。"""
     p_true = math.exp(eps) / (math.exp(eps) + 1.0)
-    u, v = torch.rand_like(signs), torch.rand_like(signs)
-    rand_sign = torch.where(v < 0.5, torch.ones_like(signs), -torch.ones_like(signs))
-    return torch.where(u < p_true, signs, rand_sign)
+    u = torch.rand_like(signs)
+    return torch.where(u < p_true, signs, -signs)
 def rr_debias_factor(eps: float) -> float:
     """RR 衰减因子 a=(e^eps-1)/(e^eps+1), 去偏时除以 a。"""
     return (math.exp(eps) - 1.0) / (math.exp(eps) + 1.0)
 def metric_aware_laplace(y: torch.Tensor, eps: float) -> torch.Tensor:
     """度量感知拉普拉斯: y+Lap(0,2/eps), 敏感度 2, eps-LDP, 无偏。"""
-    return y + torch.distributions.Laplace(0.0, 2.0 / max(eps, 1e-6)).sample(y.shape)
+    loc = torch.tensor(0.0, device=y.device)
+    scale = torch.tensor(2.0 / max(eps, 1e-6), device=y.device)
+    return y + torch.distributions.Laplace(loc, scale).sample(y.shape)
 
 
 # --- 5. SSTQ 量化器 (旋转 + 子采样 + 随机符号 + LDP) ---
@@ -77,16 +79,17 @@ class SSTQQuantizer:
         self.mechanism = mechanism
         self._R_cache = {}      # 缓存旋转矩阵, 避免重复 QR
 
-    def _frame(self, d: int):
+    def _frame(self, d: int, device=None):
         N = self.frame_size if self.frame_size is not None else d
         if (d, N) not in self._R_cache:
-            self._R_cache[(d, N)] = (random_tight_frame(d, N), N)
+            self._R_cache[(d, N)] = (random_tight_frame(d, N, device=device), N)
         return self._R_cache[(d, N)]
 
     def encode(self, x: torch.Tensor):
         """编码权重组 x:[d] -> (idx[s], priv[s], norm, R, N)。"""
         d = x.shape[0]
-        R, N = self._frame(d)
+        R, N = self._frame(d, device=x.device)
+        R = R.to(x.device)                              # 确保设备匹配 (缓存可能跨设备)
         norm = x.norm().clamp_min(1e-8)
         u = x / norm                            # 单位向量
         y = R @ u                               # [N], ||y||^2 = N/d

@@ -110,7 +110,7 @@ class FakeQuantize(nn.Module):
         """
         if self.training:
             scale = self.compute_scale(x.detach())
-            self.scale = scale
+            self.scale.copy_(scale)
         else:
             scale = self.compute_scale(x.detach())
 
@@ -359,6 +359,9 @@ class NAPPTQ:
         print(f"    [NAP-PTQ] 冻结骨干参数: {self.stats['backbone_params']}")
         print(f"    [NAP-PTQ] 迭代次数: {self.num_iterations}, LR: {self.lr}")
 
+        # 转换为 float32 以避免 float16 反向传播中的 NaN 梯度
+        self.student.float()
+
         # === 步骤1: 预计算 teacher logits (在 fake quant 之前) ===
         print(f"    [NAP-PTQ] 预计算 teacher (全精度) 输出...")
         self.student.eval()
@@ -565,17 +568,11 @@ def evaluate_output_fidelity(orig_model, quant_model, input_ids, is_mock: bool):
         metrics: dict 包含各项指标
     """
     # 原始模型输出
-    if is_mock:
-        orig_out = orig_model(input_ids)
-    else:
-        orig_out = orig_model(input_ids)
+    orig_out = orig_model(input_ids)
     orig_logits = orig_out.logits if hasattr(orig_out, 'logits') else orig_out
 
     # 量化模型输出
-    if is_mock:
-        quant_out = quant_model(input_ids)
-    else:
-        quant_out = quant_model(input_ids)
+    quant_out = quant_model(input_ids)
     quant_logits = quant_out.logits if hasattr(quant_out, 'logits') else quant_out
 
     # MSE
@@ -933,7 +930,7 @@ def main():
     print("论文: arXiv:2608.03919 | 目标模型: Qwen3-0.6B")
     print("=" * 78)
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cpu"
 
     # 1. 加载模型
     print("\n[1] 加载模型...")
@@ -1116,6 +1113,14 @@ def main():
     print(f"    - 交替执行, 打破全参数耦合训练瓶颈")
 
     if is_mock:
+        # 恢复全精度 Linear 权重给 NAPQAT 的 teacher
+        # NAPPTQ 已将 model 的 Linear 权重量化, 需恢复为全精度
+        # NAPQAT 内部会 deepcopy model 作为 student, 所以 teacher=model 应为全精度
+        for name, module in model.named_modules():
+            if name in fp_weight_snapshots:
+                module.weight.data = fp_weight_snapshots[name].clone()
+        print(f"    [NAP-QAT] 已恢复全精度 Linear 权重作为 teacher")
+
         # Mock 模型: 内存充足, 运行完整 NAP-QAT
         nap_qat = NAPQAT(model, bits=bits, is_mock=is_mock, num_cycles=2,
                           qat_lr=1e-4, nap_lr=1e-3,

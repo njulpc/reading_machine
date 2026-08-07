@@ -42,6 +42,7 @@ Quantization Effects on Biomedical LLM Reliability
 import sys
 import math
 import copy
+import hashlib
 from pathlib import Path
 
 import torch
@@ -380,7 +381,7 @@ def classify_sample(model, tokenizer_or_vocab, sentence: str, template_name: str
 
     # softmax 归一化为概率
     summed_probs = F.softmax(summed_logprobs_t, dim=0)
-    mean_probs = F.softmax(mean_logprobs_t * 10, dim=0)  # 放大 mean 的差异
+    mean_probs = F.softmax(mean_logprobs_t, dim=0)
 
     return {
         "summed_probs": summed_probs,
@@ -395,13 +396,14 @@ def classify_sample(model, tokenizer_or_vocab, sentence: str, template_name: str
 def _mock_tokenize(text: str, vocab_size: int, device: str) -> torch.Tensor:
     """
     Mock tokenize: 将文本按字符 hash 到 vocab id。
-    用简单的 rolling hash, 保证同一文本得到相同 token 序列。
+    用确定性的 md5 hash (而非 Python 内置 hash, 后者跨进程/会话不确定),
+    保证同一文本得到相同 token 序列。
     """
     tokens = []
     words = text.split()
     for w in words:
-        # 用词的 hash 映射到 vocab (避免逐字符太长)
-        h = hash(w) % vocab_size
+        # 用 md5 确定性 hash 映射到 vocab (避免逐字符太长)
+        h = int(hashlib.md5(w.encode()).hexdigest(), 16) % vocab_size
         tokens.append(h)
     if len(tokens) == 0:
         tokens = [0]
@@ -520,6 +522,13 @@ class TemperatureScaler(nn.Module):
     但对 mean scoring 无效 (因为 mean scoring 的概率已不同)。
 
     优化: 在验证集上最小化 NLL loss 来学习 T。
+
+    实现说明 (简化): 标准的 temperature scaling 应作用于模型原始 logits
+    (即每一层 vocab 维度的未归一化输出), 再重新计算 log-likelihood。
+    但本 demo 用合成数据且为简化实现, 这里直接对已聚合的类别
+    log-likelihood (summed_logprobs, 形状 [N, C]) 当作 logits 做
+    temperature scaling。这是一种方法简化, 不影响 demo 展示 scoring rule
+    与 temperature 的交互效应; 完整复现需在原始 logits 上操作。
     """
 
     def __init__(self):
@@ -591,6 +600,7 @@ def run_experiment(model, tokenizer_or_vocab, is_mock: bool, device: str,
     summed_preds = []
     mean_preds = []
     true_labels = []
+    summed_logprobs_list = []
 
     for i, (sentence, label) in enumerate(dataset):
         result = classify_sample(quantized_model, tokenizer_or_vocab,
@@ -600,6 +610,8 @@ def run_experiment(model, tokenizer_or_vocab, is_mock: bool, device: str,
         summed_preds.append(result["summed_pred"])
         mean_preds.append(result["mean_pred"])
         true_labels.append(LABELS.index(label))
+        # 同时保存 summed logprobs, 供 temperature scaling 使用 (避免重复分类)
+        summed_logprobs_list.append(result["summed_logprobs"])
 
         if (i + 1) % 50 == 0:
             print(f"      已处理 {i+1}/{len(dataset)}")
@@ -627,12 +639,8 @@ def run_experiment(model, tokenizer_or_vocab, is_mock: bool, device: str,
     mean_ece, _ = compute_ece(mean_conf, mean_preds, true_labels)
 
     # 7. Temperature scaling 校准
-    # 用 summed logprobs 拟合 temperature
-    summed_logprobs_list = []
-    for i in range(len(dataset)):
-        result = classify_sample(quantized_model, tokenizer_or_vocab,
-                                 dataset[i][0], template_name, is_mock, device)
-        summed_logprobs_list.append(result["summed_logprobs"])
+    # 用第一次分类循环中已保存的 summed logprobs 拟合 temperature
+    # (避免对同一批样本重复分类)
     summed_logprobs_all = torch.stack(summed_logprobs_list)
 
     temp_scaler = TemperatureScaler().to(device)

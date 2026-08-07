@@ -83,7 +83,7 @@ def extract_kv_cache(model, input_ids, is_mock: bool):
             # 继续前向
             q = layer['q_proj'](h).view(B, T, m.num_heads, m.head_dim).transpose(1, 2)
             attn = _simple_attention(q, k.transpose(1, 2), v.transpose(1, 2))
-            x = x + layer['o_proj'](attn.reshape(B, T, -1))
+            x = x + layer['o_proj'](attn.transpose(1, 2).reshape(B, T, -1))
             h2 = layer['post_norm'](x)
             x = x + layer['down_proj'](
                 F.silu(layer['gate_proj'](h2)) * layer['up_proj'](h2))
@@ -181,8 +181,23 @@ def extract_guide_kv(model, guide_ids, is_mock: bool):
 
 
 def _simple_attention(q, k, v):
-    """简化多头注意力。q/k/v: [B, H, T, D] 或 [B, H, Tq, D]/[B,H,Tk,D]。"""
-    D = q.shape[-1]
+    """简化多头注意力, 支持 GQA。
+
+    Args:
+        q: [B, H_q, T, D]
+        k: [B, H_kv, T, D]
+        v: [B, H_kv, T, D]
+
+    Returns:
+        out: [B, H_q, T, D]
+    """
+    B, H_q, T, D = q.shape
+    H_kv = k.shape[1]
+    if H_q != H_kv:
+        # GQA: 复制 KV head 以匹配 query head 数
+        rep = H_q // H_kv
+        k = k.repeat_interleave(rep, dim=1)
+        v = v.repeat_interleave(rep, dim=1)
     scores = torch.matmul(q, k.transpose(-2, -1)) / math.sqrt(D)
     attn = F.softmax(scores, dim=-1)
     return torch.matmul(attn, v)
@@ -471,10 +486,11 @@ def baseline_uniform_prune(k_cache, v_cache, meta_query, keep_ratio: float,
 
     num_keep = max(1, int(T * keep_ratio))
     keep_mask = torch.zeros(B, T, dtype=torch.bool, device=k_cache.device)
-    kept_k_list, kept_v_list = [], []
+    kept_k_list, kept_v_list, kept_indices_list = [], [], []
     for b in range(B):
         idx = importance[b].topk(num_keep).indices
         keep_mask[b, idx] = True
+        kept_indices_list.append(idx)
         k_q, _ = group_quantize_with_scale(k_cache[b, :, idx, :],
                                             bits, 64)
         v_q, _ = group_quantize_with_scale(v_cache[b, :, idx, :],
@@ -487,7 +503,8 @@ def baseline_uniform_prune(k_cache, v_cache, meta_query, keep_ratio: float,
     for b in range(B):
         kept_k[b] = kept_k_list[b]
         kept_v[b] = kept_v_list[b]
-    return {"kept_k": kept_k, "kept_v": kept_v, "keep_mask": keep_mask}
+    return {"kept_k": kept_k, "kept_v": kept_v, "keep_mask": keep_mask,
+            "kept_indices": kept_indices_list}
 
 
 # =============================================================================
@@ -662,7 +679,7 @@ def main():
                                      keep_ratio=0.3, bits=4)
         up_k_full, up_v_full = reconstruct_full_cache(
             {"kept_k": up["kept_k"], "kept_v": up["kept_v"],
-             "kept_indices": tp["kept_indices"]}, seq_len, device)
+             "kept_indices": up["kept_indices"]}, seq_len, device)
 
         # 基线: uniform quantize 4-bit (不剪枝)
         uq = baseline_uniform_quantize(k_h, v_h, bits=4)
