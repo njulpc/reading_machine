@@ -1,0 +1,740 @@
+{
+  "date": "2026-08-07",
+  "count": 40,
+  "papers": [
+    {
+      "arxiv_id": "2608.05253",
+      "title": "Beyond Rotations: AuroOFT for Expressive Quantized Orthogonal Fine-Tuning",
+      "authors": [
+        "Yue Han",
+        "Dianlin Wang"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "quantize",
+      "abstract": "Quantized orthogonal fine-tuning (qoft) enables parameter-efficient adaptation of low-bit language models by learning structured activation rotations before frozen quantized weights. However, its task-specific updates remain constrained to linear orthogonal transformations, limiting input-dependent nonlinear corrections. We introduce AuroOFT, which keeps qoft as a stable quantization-compatible branch while attaching a zero-start gated low-rank nonlinear residual to each adapted linear layer. AuroOFT maps activations into an RMS-normalized compact latent space and uses adaptive nonlinear bases with bounded or token-dependent gating. The zero-initialized up projection makes AuroOFT functionally identical to qoft at initialization, while orthogonality remains a branch-level stability property rather than a property of the combined nonlinear layer. Under matched data, optimization, decoding, and parser protocols, AuroOFT improves Macro-6 over matched qoft by 1.30-2.70% on the 1.5B/3B Qwen2.5 settings, exceeds QLoRA by 6.52-10.62%, and saves 32.3-44.7% trainable parameters relative to QLoRA in representative scales. The small exam-style multiple-choice math set is treated only as a protocol-sensitivity diagnostic. Our code is available at the anonymous repository: this https URL.",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "low-bit"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05326",
+      "title": "QEvict: Recoverable Quantized KV Eviction for Attention-Drift-Robust Long-Context Decoding",
+      "authors": [
+        "Ayushman Garg",
+        "Akshita Gupta",
+        "Shaswata Bhattacharya",
+        "Abhishek Gupta",
+        "Sandeep Kumar",
+        "Manoj Kumar"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "quantize",
+      "abstract": "Autoregressive large language model inference is increasingly constrained by the memory footprint of the Key-Value (KV) cache. A dominant line of work reduces this footprint by evicting tokens that appear unimportant under attention-derived scores. However, such policies make an implicit irreversible decision: once a token is evicted, it cannot become useful again. We show that this assumption is brittle during decoding. Token and window importance drift as generated queries evolve, causing standard eviction policies to permanently discard states that later receive substantial attention under the full-cache model. To characterize this behaviour, we introduce Future Missed Mass and Global LIR, two diagnostics that measure future attention assigned to discarded states and the reactivation of historically inactive regions. We propose QEvict, a three-tier KV-cache management scheme that replaces binary retain-or-delete eviction with recoverable eviction. QEvict maintains high-confidence windows in full precision, stores intermediate windows in a quantized recoverable tier, and deletes only the lowest-confidence windows. During decoding, cumulative attention scores update window importance and when a quantized window becomes important again, it is dequantized and promoted to the full-precision. Under a fixed memory budget, this design preserves broader historical context while retaining exact full precision for the most important regions. Across long-context understanding, retrieval, and reasoning benchmarks, QEvict consistently improves over representative eviction and quantization baselines, reducing missed attention and improving information retention",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "kv-cache",
+        "kv-cache"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05358",
+      "title": "DG-FedReuse: Proxy-Gradient-Gated Cached-Update Reuse with Matched Sparse Uplink Accounting",
+      "authors": [
+        "Rahil Aftab",
+        "Vineet Kumar Rakesh",
+        "Soumya Mazumdar",
+        "Tapas Samanta"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "sparse",
+      "abstract": "Federated learning repeatedly incurs local optimization and model-update transmission. We study DG-FedReuse, a simulator-level mechanism that allows selected clients to contribute age-decayed cached updates when a stochastic head-gradient discrepancy proxy remains below a round-dependent threshold. A hard cache-age limit and minimum fresh-client quota constrain reuse, while fresh updates use an adaptive per-tensor Top-K numerical-field representation. Experiments cover six image-classification datasets, 50 virtual clients, Dirichlet label heterogeneity ({\\alpha}=0.5), and three seeds. At a common 90-round budget, DG-FedReuse yields 83.36-85.42% modeled update-data-field uplink saving, compared with 76.88% for matched Top-K FedAvg; the seed-aligned accuracy differences range from -5.29 to -0.14 percentage points. Best-observed test accuracies obtained under test-controlled checkpointing are retained only as exploratory archival evidence and range from -2.38 to +0.45 percentage points relative to matched FedAvg. A symmetric dense-model-downlink sensitivity reduces the headline saving to 41.68-F42.71% and the incremental gain over Top-K FedAvg to 3.24-4.27 percentage points, demonstrating the dependence of communication conclusions on the accounting boundary. The study characterizes the proposed reuse rule in the implemented simulator; it does not establish unbiased generalization, end-to-end bandwidth reduction, runtime or energy savings, faster convergence, or superiority over existing stale-update and lazy-aggregation methods.",
+      "keywords": [
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05416",
+      "title": "Spectral Distillation: From Nonlinear Dynamics to Linear State-Space Models",
+      "authors": [
+        "Liane Galanti",
+        "Devan Shah",
+        "Shlomo Fortgang",
+        "Elad Hazan"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "distillation",
+      "abstract": "Can nonlinear dynamical systems be learned through a compact linear state-space representation, without directly solving a non-convex system-identification problem? We give a provable pipeline for doing so. Starting from observations of an unknown nonlinear dynamical system, we first learn an implicit spectral predictor using Observation Spectral Filtering (OSF), a convex method that competes with the best linear observer for the system. We then apply spectral-to-LDS distillation to convert this predictor into an explicit recurrent linear dynamical system. Our main theorem shows that the average prediction error of the distilled LDS decomposes into an exponentially-small distillation term and the OSF learning term governed by the Luenberger complexity of the best observer. The guarantee is dimension-free: it depends on observer complexity rather than on the latent dimension needed to represent the nonlinear system. To our knowledge, this yields the first end-to-end provable method for extracting a best-in-hindsight LDS representation of nonlinear dynamics through convex learning followed by provable distillation. Experiments on linear LDS benchmarks and MuJoCo behavior cloning show that the train-then-distill pipeline produces compact LDS predictors that match or outperform directly trained baselines.",
+      "keywords": [
+        "distillation",
+        "distilled"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05732",
+      "title": "CircuitSteer: Geometrically Aligned Multi-Layer Steering via Sparse Autoencoder Circuits",
+      "authors": [
+        "Mehrshad Saadatinia",
+        "Parsa Razmara",
+        "Ardalan Aryashad",
+        "Ali Abbasi",
+        "Seyedarmin Azizi"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "sparse",
+      "abstract": "Controlling the behavior of large language models (LLMs) remains a critical challenge for AI alignment. Existing steering methods, such as Contrastive Activation Addition (CAA), typically rely on fixed single-layer interventions derived from aggregate activation differences. These methods impose a single intervention across semantically diverse inputs and often fail to sustain consistent behavioral changes across layers, limiting the effectiveness of the steering. In this work, we introduce CircuitSteer, a novel framework that leverages Sparse Autoencoders (SAEs) to identify and manipulate coherent semantic circuits distributed across multiple layers. By constructing a feature flow circuit based on feature co-activation and the geometric alignment of decoder directions, we isolate the specific multi-layer subcircuits responsible for a target behavior. We then synthesize dense steering vectors from these sparse features and apply multi-point interventions to guide the model&#39;s internal semantic trajectory. We evaluate CircuitSteer using contrastive examples across a diverse set of tasks, including toxicity, emotion-intensity, sycophancy, and refusal, spanning two model families. Across all models and datasets, CircuitSteer is the only method to consistently produce fluency-preserving interventions; competing methods either sacrifice text quality or lack coverage, failing entirely on complex behaviors like sycophancy and refusal. These results demonstrate that multi-layer circuit steering, enabled by enforcing geometric alignment among selected features, yields strictly more robust and effective behavioral control than static single-point interventions. Code is available at this https URL.",
+      "keywords": [
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2608.06023",
+      "title": "BioKD: Selective Physiology-to-Video Knowledge Distillation via Reliability Gate for Emotion Recognition",
+      "authors": [
+        "Bojing Hou",
+        "Ruohao Li",
+        "Yitong Zhu",
+        "Hongjun Liu",
+        "Luwen Yu",
+        "Yuyang Wang"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "knowledge distillation",
+      "abstract": "To address the limitations of video-based emotion recognition under ambiguous or socially masked behavioral cues, as well as the poor deployability of physiological signals, this paper proposes a reliability-aware physiology-to-video knowledge distillation framework, termed BioKD. The proposed framework leverages physiological signals as privileged information during training to guide a video-based student model in learning deep affective representations, while relying solely on non-intrusive video inputs at inference time. To cope with the high noise and instability of physiological teacher supervision caused by inter-subject variability, signal artifacts, and temporal inconsistency, BioKD incorporates a sample-wise reliability-aware gating mechanism together with a progressive distillation strategy. By adaptively regulating the strength of knowledge transfer, the framework suppresses negative transfer induced by unreliable physiological supervision and enables more stable cross-modal distillation. Experiments on DEAP and AMIGOS show that BioKD consistently outperforms representative baselines under both trial-wise and subject-wise evaluation protocols for valence and arousal recognition. For example, BioKD achieves 68.01\\% on DEAP (trial-wise arousal) and 65.29\\% under the more challenging subject-wise setting, demonstrating improved performance under a subject-independent evaluation setting. Further analyses show that BioKD effectively mitigates overconfident teacher errors and outperforms an entropy-only weighting strategy, confirming the importance of explicitly modeling supervision reliability. In addition, BioKD introduces no additional inference-time overhead relative to the same video student architecture and removes the need for physiological sensing and multimodal synchronization.",
+      "keywords": [
+        "knowledge distillation",
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.06291",
+      "title": "BaKron: Efficient Quantization with Kronecker-Factored Hessians",
+      "authors": [
+        "Johann Birnick",
+        "Rayan Saab"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "quantization",
+      "abstract": "We accelerate a family of algorithms for neural network quantization whose geometry is informed by any Kronecker-factored approximation of the Hessian. GPTQ-style adaptive rounding typically uses one-sided information derived from input activations. Two-sided Kronecker-factored Hessian approximations can additionally capture correlations across output coordinates, but applying GPTQ directly in the vectorized weight domain is computationally expensive. Building on the two-sided adaptive-rounding formulation used by BoA and YAQA, we introduce BaKron, an efficient solver that combines anti-diagonal parallelism with a recursive divide-and-conquer construction. For an $m\\times n$ weight matrix, BaKron uses $O(m+n)$ sequential steps while reducing the total work from $O(m^2n^2)$ to $O(mn(m+n))$. Thus, it matches the cubic scaling of GPTQ while exploiting richer curvature information. Moreover, BaKron is modular with respect to both the base quantizer and the Hessian estimator. We also provide practical benchmarks, consider a range of Hessians that BaKron can be called with, find an efficient technique to compute these Hessians, and evaluate the algorithm experimentally.",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "GPTQ",
+        "PTQ"
+      ]
+    },
+    {
+      "arxiv_id": "2608.06296",
+      "title": "On-Policy Self-Distillation without Any Supervision",
+      "authors": [
+        "Yijiang Li",
+        "Bingyang Wang",
+        "Yijun Liang",
+        "Yunjie Tian",
+        "Di Fu",
+        "Nuno Vasconcelos"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "distillation",
+      "abstract": "On-policy (Self-)Distillation (OPD / OPSD) has shown strong potential for post-training large language models (LLMs). However, existing methods still rely heavily on external supervision, including ground-truth signals, environmental feedback, or guidance from larger models, and therefore fall short of genuine &#34;self&#34;-distillation. In this study, we show that on-policy self-distillation can be achieved using only a model&#39;s own generations via internal consistency. We propose Unsupervised On-Policy Self-Distillation (U-OPSD). U-OPSD first samples multiple rollouts and constructs a pseudo-solution by majority vote under a self-consistency threshold. It then conditions a teacher distribution on the shortest pseudo-solution and distills it into prefixes of the model&#39;s longest incorrect completion, allowing the model to correct itself precisely where it is confidently wrong. Across diverse benchmarks, base models, and training settings, U-OPSD consistently improves over the base models and matches or surpasses supervised methods with ground truth (GT), such as OPSD and GRPO. On AIME24, AIME25, HMMT25, MATH500, and AMC23, U-OPSD improves over the base model by 8.5% and 10.7% on Qwen3 non-thinking mode at the 4B and 8B scales, respectively, and outperforms OPSD by an average of 3.2% and 2.3%. In thinking mode, U-OPSD remains on par with OPSD, outperforming it by 0.9% at 4B and matching it at 8B, while surpassing GRPO by 0.7% and 1.1%, respectively.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05240",
+      "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization",
+      "authors": [
+        "Yuma Ichikawa",
+        "Moeto Mishima"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "quantization",
+      "abstract": "One-bit post-training quantization represents each weight using only its sign, requiring all deployment contexts to share the same binary weight matrix even when their activation statistics favor different sign patterns. We study this shared-sign constraint and introduce Quantum Random Access Quantization (QRAQ). This framework encodes context-dependent signs in a quantum random-access code and retrieves them via context-matched Pauli measurements. Under an explicit fresh-copy logical readout model, QRAQ produces an unbiased, context-specific binary surrogate with a tractable shot-noise penalty. We prove a row-wise separation from shared-sign one-bit PTQ with signed per-row scales. When the optimal context-wise signs are incompatible, QRAQ achieves a strictly lower ideal reconstruction risk. We also derive finite-shot and calibrated-noise conditions under which this separation is retained. Fixed-readout quantum schemes are classically simulable, so the relevant resource in this model is measurement incompatibility rather than quantization alone. Finally, we characterize the role of scale granularity, provide finite-sample certificates, and evaluate the predicted ideal, finite-shot, noisy, and multi-context regimes in simulator experiments.",
+      "keywords": [
+        "quantization",
+        "post-training quantization",
+        "PTQ",
+        "one-bit"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05464",
+      "title": "Effective pruning of task-trained recurrent neural networks using noisy fluctuations and connection rescaling",
+      "authors": [
+        "Sanjith Senthil",
+        "Rishidev Chaudhuri"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "pruning",
+      "abstract": "The pruning of network connections is key to brain function but, despite its importance, there exist few biologically-plausible pruning rules with demonstrated good performance. In this work we evaluate noise-prune, a recently introduced unsupervised local pruning rule for recurrent networks that uses noisy fluctuations to determine the importance of connections. Noise-prune has previously only been empirically tested on random networks without a specific computational function. We show that noise-prune preserves task-performance in task-trained recurrent neural networks, greatly outperforming a strategy that only uses the magnitude of connections and performing on par with or exceeding a non-local strategy that uses second-order information. Rather than deterministically removing connections that fall below a certain threshold importance, noise-prune samples connections to preserve based on their importance and strengthens retained connections to preserve average synaptic strength. We show that this sampling and rescaling is essential to good performance, but that the optimal empirical degree of rescaling is lower than that predicted by the original theoretical argument. Our work thus validates noise-prune as a biologically-plausible pruning rule for functional recurrent network architectures and characterizes its optimal parameter settings.",
+      "keywords": [
+        "pruning",
+        "prune"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05499",
+      "title": "APQF: Agentic Profiling-Guided Structured Pruning and Mixed-Precision Quantization with Adaptive Fine-Tuning",
+      "authors": [
+        "Sadegh Jafari",
+        "Mohiuddin Bilwal",
+        "Fan Zhou",
+        "Brian Gelder",
+        "Ali Jannesari"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "quantization",
+      "abstract": "Modern deep neural networks achieve strong performance, but their scale makes them costly and slow, especially on resource-constrained edge devices. Pruning and quantization address this, but rely on manual, expert choices and on algorithms that are hard to apply across architectures. Uniform settings also ignore how differently individual layers respond to compression, which costs accuracy. We introduce APQF, an agentic profiling-guided framework that combines structured pruning, mixed-precision quantization-aware training, and accuracy recovery in one automated pipeline. A profiling agent measures how cost is distributed across the model and how sensitive each part is to pruning, and this evidence drives per-layer pruning ratios, per-layer bit-widths, and the recovery strategy, all proposed by LLM planners and validated before execution. To our knowledge, APQF is the first framework to combine LLM-guided, profiling-grounded decisions with a fully training-aware pruning and quantization pipeline for both CNNs and vision transformers. We evaluate APQF on ResNet, VGG7, ViT, DeiT, and Swin using ImageNet-1k and CIFAR-10. On ImageNet it cuts compute to 5.6-7.7 percent of the original bit-operations, a 13-18x reduction, while keeping accuracy close to the baseline, and under a 200K-image budget it stays roughly 17 points higher in Top-1 than existing joint pruning and quantization methods. On CIFAR-10 it compresses further than that method on four of five architectures. On VGG7 it reaches 93.15 percent using only 0.41 percent of baseline bit-operations, the only method at that compression level to improve on its full-precision baseline. Ablations show that uniform compression loses the most accuracy at matched compute, and that withholding profiling data from the planner hurts every model. Six LLM planners, including free open-weight ones, all reach 97.4-97.9 percent on Swin-Tiny.",
+      "keywords": [
+        "quantization",
+        "compress",
+        "compression",
+        "pruning",
+        "quantization-aware"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05724",
+      "title": "Sparse Mutual Information Graph Averaging for Improving Random Indexing Embeddings",
+      "authors": [
+        "Sriram Loganathan",
+        "Gokul Anand",
+        "Aung Bo Bo",
+        "Yourui Shao",
+        "William B. Andreopoulos"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "sparse",
+      "abstract": "Sparse word embedding pipelines can avoid dense co-occurrence matrix materialization, dense factorization, and gradient training while still relying on sparse global corpus statistics. This paper studies Random Indexing (RI) vectors refined by weighted averaging on a sparse Positive Pointwise Mutual Information (PPMI) graph. On a fairytales corpus, the covered semantic analogy set consists of 272 Google family- category questions. On this family subset, PPMI top-K graph averaging repairs a weak RI initialization, improving accuracy from 19.4+-0.7% to 30.7+-2.9% across five seeds. Under the single tested runs, the same neighborhood averaging reduces family- subset analogy accuracy for PPMI+SVD (singular value decom- position), Binary+SVD, CBOW, and Skip-gram. Thus the method is not competitive with neural baselines on text8 and gives near- zero strict similarity correlation on SimLex-999. While Bloom filter sketches underperform RI in the tested configuration, we find that PPMI graph averaging with top-K pruning is a useful non-gradient repair for weak RI embeddings. On the fairytales dataset, PPMI top-K=50 graph averaging improves RI with accuracy going from 19.4+-0.7% to 30.7+-2.9%, and performing best with a seed42 of 34.6%.",
+      "keywords": [
+        "pruning",
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05802",
+      "title": "On-Policy Delta Distillation for Multilingual Math Reasoning",
+      "authors": [
+        "Byeongho Heo",
+        "Jaehui Hwang",
+        "Sangdoo Yun",
+        "Dongyoon Han"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "distillation",
+      "abstract": "On-Policy Distillation (OPD) is emerging as a promising alternative to reinforcement learning for LLM post-training, yet its effectiveness in multilingual settings remains underexplored. We study OPD and its advanced variant, On-Policy Delta Distillation (OPD$^2$), for mathematical reasoning in English, Korean, and Japanese. OPD$^2$ improves OPD by using the probability gap between a post-trained teacher and its base model as the learning signal. Experiments with Qwen3 show that OPD$^2$ consistently outperforms the original OPD, with particularly strong improvements in Korean and Japanese, and generally narrows the English-Korean performance gap. We further find that English-only OPD can also increase performance for Korean and Japanese, but often shifts the responses toward English, highlighting the importance of multilingual data to preserving target-language responses.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05987",
+      "title": "AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Zi-Han Wang",
+        "Zhengxi Lu",
+        "Zhiyuan Yao",
+        "Jinyang Wu",
+        "Jie Wu",
+        "Zhengzhou Cai",
+        "Yueqing Sun",
+        "Ziang Ye",
+        "Linji Hao",
+        "Qi Gu",
+        "Xunliang Cai",
+        "Yongliang Shen",
+        "Yujiu Yang"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "distillation",
+      "abstract": "Reinforcement learning (RL) with verifiable rewards constructs trajectory-level advantage estimates, yet it often fails to credit the few pivotal decisions that determine outcomes in long-horizon, multi-turn agentic tasks. Recent work introduces privileged self-distillation for credit assignment, providing denser supervision, but it remains unclear how such local signals should represent sequential credit. We propose AgentOPSD, a critic-free, recursive method for turn-level credit assignment in agentic reinforcement learning. AgentOPSD aggregates token-level teacher-student log-probability gaps into turn-level evidence and recursively updates a Bayesian belief state in log-odds space. This yields a principled reweighting scheme that converts sparse outcome supervision into turn-level credit signals and identifies pivotal turns through the marginal belief revision between consecutive states. The method is fully compatible with standard policy optimization and requires neither an additional critic nor extra rollouts. We evaluate AgentOPSD on ALFWorld, WebShop, and Search-QA using Qwen2.5 models at two scales (3B and 7B). AgentOPSD outperforms GRPO and strong self-distillation baselines, achieving 89.1% success on ALFWorld with Qwen2.5-7B. Ablation studies attribute the gains to turn-level aggregation and history-dependent recursive belief updates.",
+      "keywords": [
+        "sparse",
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2511.17852",
+      "title": "Transformers with RL or SFT Provably Learn Sparse Boolean Functions, But Differently",
+      "authors": [
+        "Bochen Lyu",
+        "Yiyang Jia",
+        "Xiaohao Cai",
+        "Zhanxing Zhu"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "sparse",
+      "abstract": "Transformers can acquire Chain-of-Thought (CoT) capabilities to solve reasoning tasks via fine-tuning. Reinforcement learning (RL) and supervised fine-tuning (SFT) are two primary approaches to this end. In this work, we examine RL with verifiable process rewards and SFT for learning $k$-sparse Boolean functions with a one-layer transformer through intermediate reasoning steps akin to CoT. In particular, we consider Boolean functions that can be recursively decomposed into fixed 2-sparse Boolean functions. We first analyze the learning dynamics of RL fine-tuning with verifiable process rewards and SFT in a unified way, allowing us to identify sufficient conditions under which the transformer provably learns these functions. We then verify that the conditions hold for three examples, including $k$-PARITY, $k$-AND, and $k$-OR, thus demonstrating their learnability via both RL and SFT. Notably, we reveal that RL and SFT exhibit distinct learning behaviors depending on supervision: RL learns the whole CoT chain simultaneously, whereas SFT without teacher forcing learns the CoT step-by-step. Overall, our findings provide insights on the mechanisms underlying RL and SFT and how they differ in triggering the CoT capabilities of transformers, and suggest that the comparison between RL and SFT should consider the intermediate supervision.",
+      "keywords": [
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2601.07568",
+      "title": "d3LLM: Ultra-Fast Diffusion LLM using Pseudo-Trajectory Distillation",
+      "authors": [
+        "Yu-Yang Qian",
+        "Junda Su",
+        "Lanxiang Hu",
+        "Peiyuan Zhang",
+        "Zhijie Deng",
+        "Peng Zhao",
+        "Hao Zhang"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "distillation",
+      "abstract": "Diffusion large language models (dLLMs) offer capabilities beyond those of autoregressive (AR) LLMs, such as parallel decoding and random-order generation. However, realizing these benefits in practice is non-trivial, as dLLMs inherently face an accuracy-parallelism trade-off. Despite increasing interest, existing methods typically focus on only one-side of the coin, targeting either efficiency or accuracy. To address this limitation, we propose d3LLM (Pseudo-Distilled Diffusion Large Language Model), striking a balance between accuracy and parallelism: (i) during training, we introduce pseudo-trajectory distillation to teach the model which tokens can be decoded confidently at early steps, thereby improving parallelism; (ii) during inference, we employ entropy-based multi-block decoding with a KV-cache refresh mechanism to achieve high parallelism while maintaining accuracy. To better evaluate dLLMs, we also introduce AUP (Accuracy Under Parallelism), a new metric that jointly measures accuracy and parallelism. Experiments demonstrate that our d3LLM achieves up to 10$\\times$ speedup over vanilla LLaDA/Dream, and 5$\\times$ speedup over AR models without much accuracy drop. Our code is available at this https URL.",
+      "keywords": [
+        "distillation",
+        "distilled",
+        "kv-cache",
+        "kv-cache"
+      ]
+    },
+    {
+      "arxiv_id": "2602.01997",
+      "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
+      "authors": [
+        "Safal Shrestha",
+        "Anubhav Shrestha",
+        "Aadim Nepal",
+        "Minwu Kim",
+        "Keith Ross"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "pruning",
+      "abstract": "Recent work has shown that layer pruning can effectively compress large language models (LLMs) while retaining strong performance on classification benchmarks, often with little or no finetuning. In contrast, generative reasoning tasks, such as GSM8K and HumanEval\\textsuperscript{+}, exhibit substantially weaker recovery. We show that beyond surface-level text degradation, pruning leads to a loss of key algorithmic capabilities, including arithmetic computation and balanced parenthesis generation. Under realistic post-training constraints, using a single 80GB GPU and without access to pretraining-scale data or compute, we evaluate a simple recovery strategy based on supervised finetuning with self-generated responses. This approach recovers up to 90\\% of baseline performance on classification tasks, but recovery for generative reasoning remains limited. We further find that this gap persists even under a favorable task-aligned recovery setting, where pruned models are fully finetuned on self-generated GSM8K responses, suggesting that the degradation is not merely due to generic instruction data or parameter-efficient tuning. As complementary evidence, we analyze a depth-pruned model trained with nearly 100B post-pruning tokens and find that deficits persist even on simple arithmetic tasks that do not require multi-step generation. Overall, we characterize practical recovery limits of layer pruning for generative reasoning and provide guidance on when depth reduction is effective under constrained post-training regimes.",
+      "keywords": [
+        "compress",
+        "pruning",
+        "prune",
+        "pruned"
+      ]
+    },
+    {
+      "arxiv_id": "2604.03873",
+      "title": "SODA: Semi On-Policy Black-Box Distillation for Large Language Models",
+      "authors": [
+        "Xiwen Chen",
+        "Jingjing Wang",
+        "Wenhui Zhu",
+        "Peijie Qiu",
+        "Xuanzhao Dong",
+        "Yueyue Deng",
+        "Hejian Sang",
+        "Zhipeng Wang",
+        "Alborz Geramifard",
+        "Feng Luo"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "distillation",
+      "abstract": "Black-box knowledge distillation for large language models presents a strict trade-off. Simple off-policy methods (e.g., sequence-level knowledge distillation) struggle to correct the student&#39;s inherent errors. Fully on-policy methods (e.g., Generative Adversarial Distillation) solve this via adversarial training but introduce well-known training instability and crippling computational overhead. To address this dilemma, we propose SODA (Semi On-policy Distillation with Alignment), a highly efficient alternative motivated by the inherent capability gap between frontier teachers and much smaller base models. Because a compact student model&#39;s natural, zero-shot responses are almost strictly inferior to the powerful teacher&#39;s targets, we can construct a highly effective contrastive signal simply by pairing the teacher&#39;s optimal response with a one-time static snapshot of the student&#39;s outputs. This demonstrates that exposing the small student to its own static inferior behaviors is sufficient for high-quality distribution alignment, eliminating the need for costly dynamic rollouts and fragile adversarial balancing. Extensive evaluations across four compact Qwen2.5 and Llama-3 models validate this semi on-policy paradigm. SODA matches or outperforms the state-of-the-art methods on 15 out of 16 benchmark results. More importantly, it achieves this superior distillation quality while training 10 times faster, consuming 27% less peak GPU memory, and completely eliminating adversarial instability.",
+      "keywords": [
+        "knowledge distillation",
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2606.14695",
+      "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
+      "authors": [
+        "Jinsu Kim",
+        "Jihoon Tack",
+        "Noah Lee",
+        "Jongheon Jeong"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "prune",
+      "abstract": "Language Models (LMs) have shown remarkable potential as role-playing chatbots, delivering consistent, stylized interactions when given a specification of a character or user persona. However, applying these capabilities to real-world applications (e.g., ecosystems with numerous NPCs interacting simultaneously) exposes a critical inefficiency due to the excessive computational cost. In this paper, we question the necessity of dedicating a full, generalist model to a single persona, hypothesizing that a specific character identity relies on only a fraction of the model&#39;s total capacity. We observe that naively pruning LMs often severely degrades the role-playing performance for a specific persona; it does not distinguish between redundant knowledge and essential character traits. We propose Persona-Pruner, a framework that sculpts a lightweight role-playing model by isolating persona-specific sub-networks from a single description. Our experiments consistently show that Persona-Pruner preserves role-playing performance substantially more effectively than existing state-of-the-art LLM pruning techniques, reducing the performance drop from the dense model by up to 93.8% over the strongest baseline on RoleBench in LLM-as-a-judge score, while still maintaining general LLM capabilities. Code is available at this https URL.",
+      "keywords": [
+        "pruning",
+        "prune"
+      ]
+    },
+    {
+      "arxiv_id": "2607.07144",
+      "title": "Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference",
+      "authors": [
+        "Vladimir Gusev"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "kv-cache",
+      "abstract": "The key-value (KV) cache dominates the memory cost of long-context autoregressive inference, and a growing body of work compresses it through quantization, eviction, or offloading. We study a complementary question: once a position&#39;s KV state has been quantized to codebook indices, how should the resulting symbol stream be stored, and can the storage layer do more than store? A family of contractive iterated-map codes that serialize a symbol sequence into a sequence of low-dimensional real vectors is revisited, and it is shown that they form a natural archive format for a quantized KV cache with the following features. The method provides exactly the access pattern a growing cache requires. It is lossless, it runs in linear time, and supports O(1) random access and O(1) amortized append. A controlled study of the quantizer feeding this archive is conducted on GPT-2 with 1024-token contexts. Keeping a small exact window (4 attention sinks plus 32 recent tokens) and archiving the rest, per-head residual vector quantization reduces the archived cache by 36-54x relative to an fp16 cache at a perplexity cost of 11-15%, and we quantify a sharp key/value asymmetry - quantizing keys is roughly 4x more damaging than quantizing values, consistent with prior low-bit KV work - and use it to allocate bits in a hybrid scheme. Finally, we show the archive is simultaneously a search index: approximate substring queries execute directly on the stored vectors, and matched context is decoded from the matched vector without ever materializing the surrounding text. We further characterize the archive&#39;s operating range: truncating stored points yields a lossy regime whose distortion we localize, and probability-weighting the maps recovers arithmetic coding, exposing a trade-off between rate efficiency, random access, and memory. We release all code; every number reproduces on a laptop CPU.",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "low-bit",
+        "compress",
+        "KV cache",
+        "kv-cache",
+        "kv cache",
+        "kv-cache"
+      ]
+    },
+    {
+      "arxiv_id": "2607.28428",
+      "title": "Kohn-Sham Spectral Embedding on Sparse Graphs at the Nishimori Temperature for Image Classification",
+      "authors": [
+        "V.S. Usatyuk",
+        "D. A. Sapozhnikov",
+        "S. I. Egorov"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "sparse",
+      "abstract": "We propose Kohn-Sham Spectral Embedding (KSSE), an energy-based model replacing the top-layer classifier of convolutional networks with a sparse-graph spectral embedding at the Nishimori temperature of an associated Random-Bond Ising Model the spectral detectability threshold where class structure becomes marginally distinguishable from disorder. Mapping pre-trained features onto quasi-cyclic low-density parity-check graphs, we construct a regularized Laplacian (Bethe-Hessian) as an effective Kohn-Sham Hamiltonian, yielding D independent spectral problems-one per feature channel-solvable in $O(N log N + k_{mode}^{2} N)$ time by FFT on circulant blocks (Pontryagin self-duality), with low-mode Rayleigh-Ritz refinement ($k_{mode}=5$). Physically, this is a k.p effective-mass reduction on a one-dimensional ring crystal: the circulant support is the perfect crystal, the data weights a slowly varying impurity potential, and the Nishimori crossing a Fermi level at the band edge. Star-domain surgery optimizes the graph: instead of eliminating all frustrated cycles impossible without destroying the codewords-edge shifts create certified convexity around codewords with bounded residual frustration, with multi-scale fractal certification (basins $D_{2}&lt;1$ vs rough landscapes $D_{2}&gt;3$). The theory includes a generalized Ihara-Bass identity with a sharp spectral threshold, a non-backtracking growth trichotomy with frustration as a gauge-invariant $Z_{2}$ flux, a trapping-set spectral test, exact channel separability with a cup-product obstruction, plus loop-series, convexity, surgery, and quasi-stationarity bounds. On ImageNet-1000 with frozen EfficientNet-B4 features (D=1792) under a transductive protocol, KSSE achieves 88.93% Top-1 accuracy with ~21.24M parameters-beating Swin-L (197M, 86.4-87.3%) and matching the lower end of ViT-H/14 (632M, 88.0-89.5%) with 10x and 30x fewer parameters.",
+      "keywords": [
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2608.01263",
+      "title": "Distill What the Student Can See: Fisher-Projected On-Policy Distillation for Vision-Language Models",
+      "authors": [
+        "Leyan Xue",
+        "Feng Xiong",
+        "Mingjun Ma",
+        "Changqing Zhang"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "distillation",
+      "abstract": "On-policy distillation (OPD) samples trajectories from the current student policy and minimizes token-level divergence between student and teacher next-token distributions at prefixes along those trajectories. This aligns the distillation states with the student&#39;s own generation distribution. However, it still assumes that the complete teacher distribution is an appropriate target across student capacities. In vision--language reasoning, teacher corrections can depend on visual distinctions that a compact student cannot represent. Our target-scaling study shows that, as the target approaches the complete teacher distribution, the student realizes less of the prescribed shift and obtains worse downstream performance. We therefore propose \\emph{Fisher-Projected On-Policy Distillation} (FP-OPD), which distills only locally realizable teacher corrections. FP-OPD uses continuous visual perturbations to estimate the student&#39;s local visual tangent space and projects the centered teacher--student log-probability gap onto this space under the student&#39;s Fisher metric. The resulting capacity-aware target is optimized with full-vocabulary reverse KL on student trajectories, retaining the standard OPD framework. In 8B-to-2B distillation, FP-OPD improves all seven evaluated multimodal benchmarks. It raises the average score by 2.77 points over the pretrained student and by 1.60 points over standard OPD. These results demonstrate that locally realizable teacher corrections provide a more effective target for distilling compact vision--language models.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.02691",
+      "title": "Output-Aware Rotation for INT2 KV-Cache Quantization",
+      "authors": [
+        "Vincent-Daniel Yun",
+        "Woosang Lim",
+        "Minsoo Cheong",
+        "Sunwoo Lee",
+        "Murali Annavaram",
+        "Sai Praneeth Karimireddy",
+        "Sungjoo Yoo"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "quantization",
+      "abstract": "The key-value (KV) cache has become a major memory and bandwidth bottleneck in long-context large language model inference, making ultra-low-bit quantization increasingly important. However, existing rotation-based INT2 methods optimize cache statistics or proxy errors before the complete attention readout, even though the model is ultimately affected by the error propagated through attention and the output projection $W_O$. To address this mismatch, we propose \\textit{OptR}, an output-aware rotation method that minimizes post-$W_O$ attention-output error. OptR decomposes the post-$W_O$ attention-output error into key- and value-induced terms and learns per-head orthogonal corrections through the full INT2 quantization and attention path. OptR further applies an attention-equivalent key reparameterization to reduce large channel-wise offsets without changing the softmax distribution. Across three models and five reasoning and coding benchmarks, OptR consistently improves both QuaRot and OSCAR and strengthens long-context retrieval, while preserving the paged KV-cache format with negligible inference overhead.",
+      "keywords": [
+        "quantization",
+        "low-bit",
+        "kv-cache",
+        "kv-cache"
+      ]
+    },
+    {
+      "arxiv_id": "2512.17426",
+      "title": "Perfect reconstruction of sparse signals using nonconvexity control and one-step RSB message passing",
+      "authors": [
+        "Xiaosi Gu",
+        "Ayaka Sakata",
+        "Tomoyuki Obuchi"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "sparse",
+      "abstract": "We consider sparse signal reconstruction via minimization of the smoothly clipped absolute deviation (SCAD) penalty, and develop one-step replica-symmetry-breaking (1RSB) extensions of approximate message passing (AMP), termed 1RSB-AMP. Starting from the 1RSB formulation of belief propagation, we derive explicit update rules of 1RSB-AMP together with the corresponding state evolution (1RSB-SE) equations. A detailed comparison shows that 1RSB-AMP and 1RSB-SE agree remarkably well at the macroscopic level, even in parameter regions where replica-symmetric (RS) AMP, termed RS-AMP, diverges and where the 1RSB description itself is not expected to be thermodynamically exact. Fixed-point analysis of 1RSB-SE reveals a phase diagram consisting of success, failure, and diverging phases, as in the RS case. However, the diverging-region boundary now depends on the Parisi parameter due to the 1RSB ansatz, and we propose a new criterion---minimizing the size of the diverging region---rather than the conventional zero-complexity condition, to determine its value. Combining this criterion with the nonconvexity-control (NCC) protocol proposed in a previous RS study improves the algorithmic limit of perfect reconstruction compared with RS-AMP. Numerical solutions of 1RSB-SE and experiments with 1RSB-AMP confirm that this improved limit is achieved in practice, though the gain is modest and remains slightly inferior to the Bayes-optimal threshold. We also report the behavior of thermodynamic quantities---overlaps, free entropy, complexity, and the non-self-averaging susceptibility---that characterize the 1RSB phase in this problem.",
+      "keywords": [
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2607.18540",
+      "title": "Recti-Q: Feature-Space Rectification for Out-of-Distribution-Robust Quantized Perception in Edge Robotics",
+      "authors": [
+        "Hamidreza Yaghoubi Araghi",
+        "Parastoo Pilevar",
+        "Ming C. Lin"
+      ],
+      "category": "cs.LG",
+      "matched_keyword": "quantize",
+      "abstract": "Robotic perception pipelines increasingly rely on large vision backbones deployed on SWaP-constrained edge platforms, making post-training quantization (PTQ) attractive for real-time inference. However, while PTQ often preserves clean in-distribution accuracy, we show that it can substantially degrade reliability under deployment-relevant distribution shifts (e.g., sensor noise, severe weather, and novel operating environments), creating a Quantization-Induced Robustness Gap. Across foundational vision benchmarks (ImageNet-C and PACS), 4-bit PTQ models exhibit pronounced robustness degradation despite negligible ID accuracy loss. To address this, we propose Recti-Q, a lightweight feature-space rectification framework that freezes the quantized backbone and trains a small classifier-head LoRA adapter using only source data. Recti-Q is architecture-agnostic across CNNs and Transformers, supports efficient teacher-free training, and recovers a significant portion of the lost robustness, in some cases matching or exceeding FP32 performance. At less than 1% parameter overhead (as small as 6 KB), Recti-Q preserves over 99% of PTQ memory savings, adds negligible compute, and enables low-bandwidth Over-The-Air (OTA) resilience patching for deployed robotic fleets operating in unpredictable physical environments.",
+      "keywords": [
+        "quantization",
+        "quantize",
+        "quantized",
+        "post-training quantization",
+        "PTQ",
+        "4-bit"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05604",
+      "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+      "authors": [
+        "Xingyu Tan",
+        "Xiaoyang Wang",
+        "Qing Liu",
+        "Xiwei Xu",
+        "Xin Yuan",
+        "Liming Zhu",
+        "Wenjie Zhang"
+      ],
+      "category": "cs.CL",
+      "matched_keyword": "compress",
+      "abstract": "Large Language Models (LLMs) increasingly act as agents whose procedural knowledge is stored in reusable skill packages and loaded at inference time. As skill libraries grow, a central challenge is to expose the smallest sufficient executable context under a limited context budget. Existing systems struggle to reuse routines below the whole-skill level, preserve procedural contracts during compression, keep compressed routines executable and expandable, and update the compressed library as skills evolve. These challenges reveal a unit mismatch: skills are retrieved as packages, compressed as text, and converted into execution graphs only after retrieval, whereas reliable reuse requires a contract-bearing procedural unit. We propose SkillZip, an execution-aware procedural abstraction framework that performs contract-preserving compression over section-level graphs. SkillZip rewrites recurring contract-valid motifs into reversible ported macros while preserving boundary signatures, dependency closure, verifier reachability, and source-level expansion. At inference time, it hydrates a compact, dependency-closed context and expands macros only when required. ReZip further integrates new skills and revises risky macros using execution evidence. Comprehensive experiments1 on technical and embodied agent benchmarks show SkillZip consistently outperforms the strongest baseline by up to 12.2 points, while achieving a 3.46x compression ratio with 99.2% dependency preservation and 98.7% verifier reachability. Scaling analyses further confirm robust retrieval across skill libraries ranging from 200 to 100K skills.",
+      "keywords": [
+        "compress",
+        "compressed",
+        "compression"
+      ]
+    },
+    {
+      "arxiv_id": "2608.06347",
+      "title": "RP-OPSD: Reasoning-Pivot-Guided On-Policy Self-Distillation for Multilingual Reasoning Transfer",
+      "authors": [
+        "Xinye Wang",
+        "Junxiao Liu",
+        "Shujian Huang"
+      ],
+      "category": "cs.CL",
+      "matched_keyword": "distillation",
+      "abstract": "Multilingual reasoning transfer is crucial for extending reasoning capabilities of large language models (LLMs) beyond high-resource languages. On-policy self-distillation (OPSD) and its variants have emerged as a promising paradigm, providing dense token-level supervision on student-generated rollouts, yet their objectives do not explicitly prioritize reasoning signals most critical to cross-lingual transfer. We characterize that target-language reasoning comprises the generation of both surface text and reasoning pivots, which are decisions that advance or redirect the reasoning process and shape subsequent inference. This motivates concentrating privileged distillation around such pivots. We therefore propose RP-OPSD, Reasoning-Pivot-guided On-Policy Self-Distillation, using the distributional shift between matched teacher views with and without an English reference solution as an operational proxy to guide privileged distillation and reference anchoring. Experiments on mathematical reasoning benchmarks covering 17 languages and multiple difficulty levels show that our method outperforms strong multilingual reasoning baselines and OPSD variants. Further analysis reveals that RP-OPSD concentrates privileged distillation on reasoning-control and problem-condistioned state-update tokens, while downweighting it for tokens that mainly support surface realization. Our code is available at this https URL.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05168",
+      "title": "Woodpecker Distillation: Weak Models Diagnose Reasoning Bugs in Strong Models",
+      "authors": [
+        "Dayu Wang",
+        "Jiaye Yang",
+        "Weikang Li",
+        "Jiahui Liang",
+        "Yang Li",
+        "Deguo Xia",
+        "Jizhou Huang"
+      ],
+      "category": "cs.CL",
+      "matched_keyword": "distillation",
+      "abstract": "Large language models often fail on reasoning tasks despite possessing the capability to solve them. We argue that many such failures arise from localized reasoning bugs in intermediate steps rather than from global incompetence. We show that these bugs are frequently repairable: inserting a short patch generated by a weak probe model after the same strong-model reasoning prefix can redirect the trajectory toward a correct solution.\nHowever, this corrective effect is not reliably internalized by directly fine-tuning on weak patches or repaired trajectories, suggesting that the useful signal lies not in the intervention text itself, but in how it reshapes the model&#39;s future reasoning distribution. We therefore propose Woodpecker Distillation, a weak-to-strong training framework that learns from contrastive local interventions. Our method contrasts successful and unsuccessful weak-model patches at the same prefix, constructs a corrective teacher distribution from their induced future token predictions, and distills this signal into the strong model.\nExperiments on mathematical reasoning benchmarks show that Woodpecker Distillation consistently improves strong-model performance and outperforms direct imitation baselines.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05704",
+      "title": "G$^2$ARD-GS: Geometry-Guided Anchor-Regularized Gaussian Splatting Distillation",
+      "authors": [
+        "Puyuan Zhang",
+        "Jianming Huang",
+        "Wenkai Ye",
+        "Wei Dong"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "distillation",
+      "abstract": "Dense colored LiDAR maps provide accurate city-scale geometry, but lifting them into 3D Gaussian Splatting (3DGS) retains millions of primitives, making the resulting models costly to store, transmit, render, and adapt. Aggressive primitive reduction alleviates this burden, but can remove the local surface support needed for stable novel-view synthesis and downstream geometric use. We introduce G$^2$ARD-GS, a geometry-guided distillation method that converts a dense Gaussian prior instantiated either as a training-free point-cloud lift or a trained GS model into a compact, reusable representation. G$^2$ARD-GS progressively consolidates the prior into surface-aware representatives, then recovers appearance on the resulting fixed topology under construction-time anchor constraints, with no primitives added or removed during recovery. Under limited supervision, geometry-aware view selection allocates the available view budget. On MatrixCity, G$^2$ARD-GS achieves the best PSNR, SSIM, and LPIPS across matched $5\\times$--$30\\times$ compression budgets, outperforming PUP by $3.2$--$6.8$,dB in PSNR. When reused as frozen geometry, the compact model improves off-trajectory appearance adaptation by $3.7$--$4.9$,dB over PUP 3D-GS and preserves image-to-model registration accuracy on Cambridge KingsCollege at $30\\times$ compression. Project page: this https URL.",
+      "keywords": [
+        "compress",
+        "compression",
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05739",
+      "title": "LiteKD-Net: Lightweight Knowledge-Distilled Network for Mobile Image Denoising",
+      "authors": [
+        "Zhou Zhiyi"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "distilled",
+      "abstract": "Mobile image denoising requires both good restoration quality and low computational cost. In addition, it&#39;s annoying to collect large-scale LQ-GT clean pairs. As a result, we propose LiteKD-Net, a lightweight knowledge-distilled network for mobile image denoising. First, a physics-guided noise simulation pipeline generates paired training data by adding pixel crosstalk compared with pipelines applied to cameras. Next, we adapt the Real-ESRGAN to identity-resolution denoising and construct a lightweight Student using Lite-RRDB blocks based on depthwise separable convolutions. Third, feature-level knowledge distillation is applied to transfer the Teacher&#39;s restoration capability to the Student without introducing additional inference cost. Experiments on real-world datasets show that our model reaches great reduction in runtime and increase in the inference rate with good restoration quality. Our model also reaches the best in all metrics compared with SwinIR. These results indicate that LiteKD-Net provides a great trade-off between restoration quality and computational efficiency.",
+      "keywords": [
+        "knowledge distillation",
+        "distillation",
+        "distilled"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05769",
+      "title": "Flow-Map Distillation on Relation Manifolds for Image Restoration",
+      "authors": [
+        "Zihao He",
+        "Songhua Liu"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "distillation",
+      "abstract": "Knowledge distillation for image restoration typically aligns intermediate features or relation matrices between teacher and student networks as static targets, ignoring the dynamic structure of the knowledge transfer process. In this paper, we propose Flow-Map Distillation on Relation Manifolds (FoRM), which reformulates relation-based knowledge transfer as a continuous flow mapping problem on the relation manifold. Rather than regressing a constant velocity field between student and teacher relation states, FoRM learns a flow map operator $\\mathcal{F}_\\theta(\\mathbf{z}, t, s)$ that directly predicts the relation state at any target time $s$ given the current state at time $t$, enabling richer trajectory-level supervision. To ensure global self-consistency of the learned flow map, we introduce a safe semigroup consistency constraint that enforces compositional agreement using ground-truth bridge states, eliminating phantom-state error accumulation. An endpoint anchoring loss further prevents the operator from drifting away from the teacher target. Extensive experiments on five image restoration tasks, including super-resolution, deraining, denoising, deblurring, and low-light enhancement, demonstrate consistent gains over state-of-the-art distillation baselines across multiple backbone architectures, reducing training variance by approximately 50\\% compared to naive flow matching distillation while achieving superior restoration quality.",
+      "keywords": [
+        "knowledge distillation",
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.06059",
+      "title": "DARAD: Dual Adapters and Ranking-Aware Distillation for Continual Remote Sensing Image-Text Retrieval",
+      "authors": [
+        "Xi Chen",
+        "Xu Chen",
+        "Xiangyang Jia",
+        "Wei Wang",
+        "Xu Zhang",
+        "Zhenyuan Sun"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "distillation",
+      "abstract": "With the rapid growth of Earth observation technologies, remote sensing archives are rapidly expanding, making remote sensing image-text retrieval (RS-ITR) increasingly important. However, continual RS-ITR remains challenging because scale variation and distribution shifts in RS aggravate cross-modal alignment space distortion, making it difficult for existing continual learning (CL) methods to support reliable continual retrieval. To address this challenge, we propose DARAD, a dual-adapter and ranking-aware distillation framework that preserves the historical cross-modal ranking structure while learning new visual and textual concepts from evolving archives. Specifically, the visual branch introduces a spatial fusion adapter, which integrates coarse regional cues and fine-grained patch cues to accommodate RS scale variation while anchoring visual updates to the pretrained alignment space. The textual branch employs multi-expert semantic routing, which separates shared textual semantics from semantically specialized residuals to absorb newly emerging descriptions while constraining global text embedding drift. Furthermore, bidirectional ranking distillation uses a frozen teacher model and historical anchors to preserve the historical cross-modal ranking structure, thereby mitigating alignment space distortion across continual stages. Experiments under a multi-stage continual retrieval protocol show that DARAD achieves superior performance over existing CL methods, improving adaptation to newly arrived data while maintaining effectiveness on historical data.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.06065",
+      "title": "The Next Screenshot Knows: Gated Hindsight Distillation for Mobile GUI Agents",
+      "authors": [
+        "Weiwei Li",
+        "Junzhuo Liu",
+        "Tong Chu",
+        "Hengfu Yu",
+        "Wen Li"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "distillation",
+      "abstract": "GUI agents are commonly trained offline from successful interaction trajectories. Standard training decomposes each trajectory into prefix-action pairs: the agent predicts an action from the current screen and interaction history, while the subsequent observation is discarded. This removes the rationale of why an action is correct: the evidence often appears only on the subsequent screen. For example, to enable Soft Wrap, the agent should click Edit or View, but nothing reveals this until the menu opens. Without such evidence, standard imitation gives the model little chance of ever sampling and thus learning the correct reasoning. To address this issue, we propose Gated Hindsight Distillation (GHD), which uses the next screenshot as privileged information during training. A student predicts from the observable trajectory prefix, while a parameter-sharing teacher additionally observes the next screenshot and re-scores the student&#39;s on-policy responses. We apply distillation only when the student fails and the hindsight-conditioned teacher recovers the demonstrated action. GHD improves task success over GRPO on AndroidWorld and AndroidLab across two vision-language models. The code and checkpoints will be made available.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.06164",
+      "title": "BendTwin: Robust Dense-to-Sparse Physical Reconstruction with Bending-Aware Differentiable Spring-Mass Models",
+      "authors": [
+        "Yixiong Jing",
+        "Qi Wang",
+        "Lin Chen",
+        "Junwei Jiang",
+        "Guangming Wang",
+        "Haibing Wu",
+        "Olaf Wysocki",
+        "Wanli Ma",
+        "Brian Sheil"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "sparse",
+      "abstract": "Reconstructing objects with mechanical properties from video observations enables physically consistent dynamic prediction, benefiting robotics planning and interaction. Existing spring--mass based physical driven reconstruction approaches offer efficient and differentiable physical reconstruction, but they typically rely on axial springs alone. Such formulations oversimplify the underlying structural mechanics and can become mechanically under-constrained when the physical graph is coarsened, limiting their ability to preserve stable local deformation. We present BendTwin, a bending-aware differentiable spring--mass framework for video-based reconstruction and future prediction of deformable objects. BendTwin introduces bending stiffness and damping over local surface triplets, penalizing deviations from rest angles and regularizing higher-order deformation. These bending constraints improve mechanical stability while preserving the simplicity of spring--mass system. Experiments show that BendTwin consistently outperforms the axial-only PhysTwin baseline. Ablation studies further demonstrate that the bending constraints maintain system stability across different downsampling ratios and consistently improve upon the original PhysTwin formulation. Overall, BendTwin provides an effective approach for constructing mechanically faithful digital twins from sparse-view RGB-D videos.",
+      "keywords": [
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2605.19688",
+      "title": "DocQT: Improving Document Forgery Localization Robustness via Diverse JPEG Quantization Tables",
+      "authors": [
+        "Kylian Ronfleux-Corail",
+        "Guillaume Bernard",
+        "Mickaël Coustaty",
+        "Nicolas Sidère"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "quantization",
+      "abstract": "Document manipulation localization models achieve strong performance on public benchmarks yet fail to generalize to operational document workflows. We identify a critical and overlooked source of this gap: the mismatch between the narrow distribution of JPEG quantization tables used during training -restricted to standard libjpeg quality factors -and the heterogeneous compression profiles encountered in real-world insurance document pipelines. To isolate this factor, we conduct a controlled factorial study comparing two architectures with contrasting levels of quantization table awareness -FFDN [2] and Mesorch [20] -each trained under either standard quality factor augmentation (Standard-QT ) or operationally calibrated quantization tables sampled from DocQT, a quantization-table bank derived from a MAIF operational image corpus (Real-QT ), and evaluated under three recompression conditions. Training under Real-QT yields substantial localization gains on DocTamper [15] and significantly reduces the pixel-level false positive rate on authentic operational documents, but only for architectures that explicitly ingest the quantization table as input. The released DocQT quantization-table dataset and compression-reproduction material are directly available at this https URL. These results demonstrate that standard quality factor augmentation does not adequately proxy operational compression diversity, and that architectural choices explicitly conditioning on the quantization table provide a meaningful robustness advantage for real-world deployment.",
+      "keywords": [
+        "quantization",
+        "compress",
+        "compression"
+      ]
+    },
+    {
+      "arxiv_id": "2606.23000",
+      "title": "MotionMAR: Multi-scale Auto-Regressive Human Motion Reconstruction from Sparse Observations",
+      "authors": [
+        "Yuhua Luo",
+        "Junsheng Zhang",
+        "Mengyin Liu",
+        "Xincheng Lin",
+        "Ming Yan",
+        "Zhudi Chen",
+        "Chenglu Wen",
+        "Lan Xu",
+        "Siqi Shen",
+        "Cheng Wang"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "sparse",
+      "abstract": "Human motion follows a temporal hierarchical structure, transitioning from low-frequency global trajectories to high-frequency details. Inspired by the success of multi-level autoregressive models in computer vision, we propose MotionMAR, a coarse-to-fine framework for motion reconstruction from sparse observations. It first estimates the global trajectory of human motion and then gradually refines the temporal details. This architecture consists of four integrated components. The Temporal Multi-scale Tokenization (TMT) VQ-VAE encodes the data at multiple temporal resolutions, separating semantic motion from minor jitters. The Motion Autoregressive Network (MAN) operates in this latent space, predicting motion across scales. It first establishes the global structure through coarse indices and then generates finer indices to recover specific details. Meanwhile, the Scale-Aware Control (SAC) module integrates sparse tracking data to ensure the generated output aligns with actual observations. The Motion Refinement Network (MRN) subsequently smooths consecutive poses and eliminates quantization artifacts. Experiments show that MotionMAR achieves state-of-the-art accuracy on the AMASS dataset, providing a reliable and structure-aware approach for motion reconstruction. The source code is publicly available at this http URL.",
+      "keywords": [
+        "quantization",
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2607.06923",
+      "title": "Bi-PT: Bidirectional Cross-Attention Point Transformers for Four-Chamber Heart Reconstruction from Sparse Cardiac MRI Data",
+      "authors": [
+        "Chenchuhui Hu",
+        "Shaoming Pan",
+        "Leon Axel",
+        "Meng Ye"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "sparse",
+      "abstract": "We propose Bi-PT, a pipeline for reconstructing 3D four-chamber human heart meshes from clinical sparsely sampled cardiac magnetic resonance imaging (CMR) data. This work addresses the error-prone generation of 3D cardiac shape from a sparse point cloud (SPC) extracted from 2D long-axis and short-axis views used in routine clinical CMR protocols. Bi-PT enables accurate inference of the four-chamber heart mesh from the SPC by learning robust point features via bidirectional point cross-attention between an atlas and the SPC, together with per-point semantic labels that improve correspondence estimation. We formulate the deformation field as a Neural Ordinary Differential Equation (NODE) parameterized by a per-point affine transformation and translation to deform the atlas toward the target heart shape. By learning such a NODE, we can guarantee the deformation field to be a locally affine diffeomorphic deformation. We also integrate a semantic label loss into the Chamfer distance to encourage label-consistent correspondences and add a smoothness regularization to stabilize and improve the learning of the deformation field. Extensive experiments demonstrate that Bi-PT achieves accurate and robust performance compared to baselines.",
+      "keywords": [
+        "sparse"
+      ]
+    },
+    {
+      "arxiv_id": "2608.03681",
+      "title": "Keep the Needle, Prune the Haystack: Defect-Preserving Token Pruning for Efficient Zero-Shot Anomaly Detection",
+      "authors": [
+        "Yanning Hou",
+        "Jingyuan Zhang",
+        "Xiaoyun Wang",
+        "Qixiang Ma",
+        "Sihang Zhou",
+        "Ke Xu"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "pruning",
+      "abstract": "Zero-shot visual anomaly detection has achieved remarkable progress, with recent vision-only approaches further improving performance while simplifying the inference pipeline. However, existing methods typically perform dense computation over all images and spatial tokens, despite the fact that normal samples dominate real-world scenarios and anomalies usually occupy only small regions. Token pruning offers a promising solution, but introduces an asymmetric pruning risk in anomaly detection: retaining normal tokens mainly incurs redundant computation, whereas removing anomalous tokens may eliminate the only evidence for detection and localization. This risk is particularly severe in early layers, where pruning provides the greatest computational benefit but anomaly semantics remain unreliable. We propose KeepAD, a defect-preserving token pruning framework that formulates token selection as high-recall, anomaly-aware routing. In shallow layers, KeepAD combines coverage-preserving selection over local $2\\times2$ patch neighborhoods with deterministic anomaly rescue to reduce the risk of discarding subtle defects. In deeper layers, frozen normal and abnormal prototypes guide pruning under an image-adaptive token budget, aggressively removing low-risk normal tokens while preserving local anomaly evidence. Dense-to-sparse self-distillation further supervises early token routing without introducing additional inference overhead. Experiments on six industrial and seven medical zero-shot anomaly detection benchmarks show that KeepAD reduces the token retention ratio to below $20\\%$, while limiting the average degradation in image-level and pixel-level AUROC to within $2.7$ percentage points. At the most aggressive operating point, KeepAD achieves a $7.9\\times$ speedup over the strongest CLIP-based baseline.",
+      "keywords": [
+        "pruning",
+        "prune",
+        "sparse",
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2608.05131",
+      "title": "OPD-V: Visual On-Policy Self-Distillation with Modality Balance",
+      "authors": [
+        "Aniri",
+        "Jinhe Bi",
+        "Peng Liao",
+        "Zengjie Jin",
+        "Volker Tresp",
+        "Fei Shen",
+        "Yunpu Ma",
+        "Tat-Seng Chua"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "distillation",
+      "abstract": "On-Policy Self-Distillation (OPSD) has become a standard post-training approach for improving visual reasoning in multimodal large language models (MLLMs). Existing methods draw privileged information from diverse input sources to guide self-distillation. Yet these designs overlook Modality Imbalance, a challenge inherent to MLLM reasoning. When textual information dominates generation, the model cannot fully integrate its multimodal input. Consequently, carefully designed privileged information remains underused, limiting the effectiveness of OPSD. To examine this limitation, we construct a Positive Teacher with the Zoom-In Image and a Negative Teacher with the Mask Image, which exhibit different degrees of Modality Imbalance. Changes in their reasoning correctness and token logits reveal that Modality Balance can itself serve as privileged information. Motivated by this finding, we introduce OPD-V, a visual OPSD paradigm that instantiates such information through the Positive Teacher and Negative Teacher. Positive Modality-Balance Logits Margins define a Modality-Balance Trust Region that selects the on-policy tokens used for self-distillation. Experiments across 6 benchmarks, 4 MLLM backbones, and 5 post-training methods show that OPD-V consistently improves reasoning performance while reducing training cost.",
+      "keywords": [
+        "distillation"
+      ]
+    },
+    {
+      "arxiv_id": "2501.14198",
+      "title": "Sparse Mixture-of-Experts for Non-Uniform Noise Reduction in MRI Images",
+      "authors": [
+        "Zeyun Deng",
+        "Joseph Campbell"
+      ],
+      "category": "cs.CV",
+      "matched_keyword": "sparse",
+      "abstract": "Magnetic Resonance Imaging (MRI) is an essential diagnostic tool in clinical settings, but its utility is often hindered by noise artifacts introduced during the imaging process. Effective denoising is critical for enhancing image quality while preserving anatomical structures. However, traditional denoising methods, which often assume uniform noise distributions, struggle to handle the non-uniform noise commonly present in MRI images. Building on prior multi-branch MRI denoising approaches, we introduce a fine-grained sparse mixture-of-experts framework for MRI image denoising. Our method decomposes each image into patch-based or segmentation-based regions, groups regions according to their learned feature similarity, and routes each region to a specialized denoising convolutional neural network. Our method demonstrates superior performance over state-of-the-art denoising techniques on both synthetic and real-world brain MRI datasets. Furthermore, we show that it generalizes effectively to unseen datasets, highlighting its robustness and adaptability.",
+      "keywords": [
+        "sparse"
+      ]
+    }
+  ]
+}
