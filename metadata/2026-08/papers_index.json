@@ -1,0 +1,9 @@
+{
+  "collection_date": "2026-08-10",
+  "date_range": "2026-08-09",
+  "query_keywords": ["quantization", "model compression", "pruning", "distillation", "efficient inference", "sparsity", "KV cache compression", "GPTQ", "AWQ", "low-bit"],
+  "source": "arxiv.org",
+  "total_papers": 0,
+  "papers": [],
+  "note": "2026-08-09 is Sunday; arXiv does not process new submissions on weekends. Next submission deadline: Mon, 10 Aug 2026 14:00 EDT."
+}
