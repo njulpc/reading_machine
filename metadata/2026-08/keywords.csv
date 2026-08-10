@@ -1,1 +1,13 @@
-keyword,occurrence,paper_ids
+keyword,frequency,first_seen_date
+quantization,9,2026-08-07
+pruning,7,2026-08-07
+sparsity,5,2026-08-07
+distillation,3,2026-08-07
+KV cache,4,2026-08-07
+mixed precision,2,2026-08-07
+low-bit,3,2026-08-07
+model compression,9,2026-08-07
+vision-language model,4,2026-08-07
+multimodal,4,2026-08-07
+edge deployment,2,2026-08-07
+LLM inference,3,2026-08-07

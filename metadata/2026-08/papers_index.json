@@ -1,9 +1,118 @@
 {
   "collection_date": "2026-08-10",
-  "date_range": "2026-08-09",
-  "query_keywords": ["quantization", "model compression", "pruning", "distillation", "efficient inference", "sparsity", "KV cache compression", "GPTQ", "AWQ", "low-bit"],
+  "api_published_date": "2026-08-07",
+  "date_range": "2026-08-07",
+  "query_keywords": ["quantization", "model compression", "pruning", "distillation", "efficient inference", "INT4", "INT8", "FP4", "sparsity", "KV cache"],
   "source": "arxiv.org",
-  "total_papers": 0,
-  "papers": [],
-  "note": "2026-08-09 is Sunday; arXiv does not process new submissions on weekends. Next submission deadline: Mon, 10 Aug 2026 14:00 EDT."
+  "total_papers": 9,
+  "papers": [
+    {
+      "id": "2608.07019",
+      "title": "ReQuant: Fixed-Grid Discrete Refinement for Post-Training Quantization",
+      "authors": ["Yongge Ma"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.LG", "cs.CL"],
+      "url": "https://arxiv.org/abs/2608.07019",
+      "keywords": ["PTQ", "discrete refinement", "fixed grid", "post-training quantization"],
+      "techniques": ["quantization"],
+      "target_model": "General LLM",
+      "highlight": "无需反向传播的固定网格离散精修，即插即用PTQ后处理"
+    },
+    {
+      "id": "2608.06916",
+      "title": "MiCoPro: End-to-End Mixed Precision HW/SW Co-design with HW-aware Proxy Model",
+      "authors": ["Zijun Jiang"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.AR", "cs.LG"],
+      "url": "https://arxiv.org/abs/2608.06916",
+      "keywords": ["mixed precision", "HW/SW co-design", "latency proxy", "edge AI"],
+      "techniques": ["quantization"],
+      "target_model": "Edge AI",
+      "highlight": "硬件感知代理模型，端到端部署，40%延迟降低"
+    },
+    {
+      "id": "2608.06763",
+      "title": "CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights",
+      "authors": ["Xuetian Gao"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.LG", "cs.AR"],
+      "url": "https://arxiv.org/abs/2608.06763",
+      "keywords": ["non-uniform quantization", "cubic curve", "1-8 bit", "LLM inference"],
+      "techniques": ["quantization"],
+      "target_model": "LLM Inference",
+      "highlight": "参数化非均匀标量量化，28% RMSE降低"
+    },
+    {
+      "id": "2608.06901",
+      "title": "Prune Once: Retraining-Free Task-Agnostic Pruning for Vision-Language Models",
+      "authors": ["Minseok Kang"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.CV", "cs.LG"],
+      "url": "https://arxiv.org/abs/2608.06901",
+      "keywords": ["VLM pruning", "task-agnostic", "activation variation"],
+      "techniques": ["pruning"],
+      "target_model": "VLM (CLIP/BLIP/Qwen2-VL)",
+      "highlight": "无需重训练的任务无关VLM剪枝"
+    },
+    {
+      "id": "2608.06849",
+      "title": "Autonomy-of-Heads: Data-Free Sparse Attention from Frozen Query-Key Geometry",
+      "authors": ["Yehan Yang"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.CL", "cs.LG"],
+      "url": "https://arxiv.org/abs/2608.06849",
+      "keywords": ["sparse attention", "spectral geometry", "data-free", "long context"],
+      "techniques": ["pruning"],
+      "target_model": "Long-context LLM",
+      "highlight": "50%稀疏保留96.5%性能，数据无关"
+    },
+    {
+      "id": "2608.07088",
+      "title": "RoRA: Role-Oriented Regional Allocation for Visual Token Pruning in MLLMs",
+      "authors": ["Qiyanhui Lu"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.CV", "cs.CL"],
+      "url": "https://arxiv.org/abs/2608.07088",
+      "keywords": ["visual token pruning", "role-oriented", "MLLM"],
+      "techniques": ["pruning"],
+      "target_model": "MLLM",
+      "highlight": "角色导向区域分配，88.9%剪枝保留96.5%"
+    },
+    {
+      "id": "2608.07193",
+      "title": "AutoPrune: AI4AI Framework for Visual Token Pruning",
+      "authors": ["Jingwen Fu"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.CV", "cs.AI"],
+      "url": "https://arxiv.org/abs/2608.07193",
+      "keywords": ["LLM-driven", "DSL", "visual token pruning", "AI4AI"],
+      "techniques": ["pruning"],
+      "target_model": "MLLM",
+      "highlight": "LLM驱动策略搜索，94.4%移除保留99%"
+    },
+    {
+      "id": "2608.07001",
+      "title": "GraceKV: Global Allocation of Resolution and Coverage for KV Cache Compression",
+      "authors": ["Haolin Tian"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.CL", "cs.LG"],
+      "url": "https://arxiv.org/abs/2608.07001",
+      "keywords": ["KV cache", "global allocation", "prototype tree", "long context"],
+      "techniques": ["kv_cache"],
+      "target_model": "Long-context LLM",
+      "highlight": "全局资源分配，128倍压缩比"
+    },
+    {
+      "id": "2608.07458",
+      "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+      "authors": ["Gyuwan Kim"],
+      "submitted": "2026-08-07",
+      "categories": ["cs.CL", "cs.IR"],
+      "url": "https://arxiv.org/abs/2608.07458",
+      "keywords": ["KV cache reuse", "nugget", "RAG"],
+      "techniques": ["kv_cache"],
+      "target_model": "RAG System",
+      "highlight": "细粒度nugget复用，5.3% F1提升"
+    }
+  ]
 }
