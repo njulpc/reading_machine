@@ -1,0 +1,308 @@
+{
+  "collection_date": "2026-08-12",
+  "date_range": "2026-08-11",
+  "query_keywords": [
+    "quantization",
+    "model compression",
+    "pruning",
+    "distillation",
+    "efficient inference",
+    "KV cache"
+  ],
+  "source": "arxiv.org",
+  "total_papers": 12,
+  "papers": [
+    {
+      "id": "2608.09595",
+      "title": "From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization",
+      "authors": [
+        "Achille Jacquemond",
+        "Yuma Ichikawa",
+        "Akira Sakai"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.09595",
+      "keywords": [
+        "quantization",
+        "cross-block",
+        "PTQ",
+        "kernel fusion"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "LLM",
+      "highlight": "交错执行实现同类型块并行量化，消除顺序依赖，支持内核融合"
+    },
+    {
+      "id": "2608.08910",
+      "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+      "authors": [
+        "Matteo Grella"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2608.08910",
+      "keywords": [
+        "quantization",
+        "trit-planes",
+        "MoE serving",
+        "low-bit"
+      ],
+      "techniques": [
+        "quantization"
+      ],
+      "target_model": "LLM / MoE",
+      "highlight": "固定比例3:1约束双因子为统一九级量化器，设计持久折叠格式支持磁盘流式加载"
+    },
+    {
+      "id": "2608.08624",
+      "title": "Domain-Aware Pruning: Sparsity and Domain Generalization via Regularized Probabilistic Masking",
+      "authors": [
+        "Parham Sazdar",
+        "Mostafa Tavassolipour",
+        "Reshad Hosseini"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2608.08624",
+      "keywords": [
+        "pruning",
+        "sparsity",
+        "domain generalization"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "CNN",
+      "highlight": "联合优化稀疏结构与领域泛化，正则化概率掩码"
+    },
+    {
+      "id": "2608.08794",
+      "title": "Deferred Audio Pruning with Local Audio-Visual Dynamics for Omni-LLMs",
+      "authors": [
+        "Kyeongyoon Lee",
+        "Hongyeob Kim",
+        "Youngeun Kim"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2608.08794",
+      "keywords": [
+        "pruning",
+        "audio",
+        "multimodal",
+        "Omni-LLM"
+      ],
+      "techniques": [
+        "pruning"
+      ],
+      "target_model": "Omni-LLM",
+      "highlight": "利用局部音视频动态延迟决策音频token剪枝"
+    },
+    {
+      "id": "2608.09287",
+      "title": "UniDFKD: A Unified Semantic Prior Framework for Architecture-Agnostic Data-Free Knowledge Distillation",
+      "authors": [
+        "Xuewan He",
+        "Tong Chu",
+        "Zihan Cheng"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.09287",
+      "keywords": [
+        "knowledge distillation",
+        "data-free",
+        "semantic prior"
+      ],
+      "techniques": [
+        "knowledge distillation"
+      ],
+      "target_model": "通用",
+      "highlight": "统一语义先验框架，支持任意教师-学生架构组合"
+    },
+    {
+      "id": "2608.09637",
+      "title": "DUET: A Diversity-Quality Duet of Distillation Experts for Two-Step Video Generation",
+      "authors": [
+        "Zian Li",
+        "Litong Gong",
+        "Borui Liao"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.09637",
+      "keywords": [
+        "distillation",
+        "video generation",
+        "diffusion"
+      ],
+      "techniques": [
+        "knowledge distillation"
+      ],
+      "target_model": "Video Diffusion",
+      "highlight": "双专家分别负责多样性与质量，两步视频生成"
+    },
+    {
+      "id": "2608.09931",
+      "title": "Perception Before Supervision: Self-Contained Visual Distillation from Counterfactual Blind Spots",
+      "authors": [
+        "Shravan Venkatraman",
+        "Omkar Thawakar",
+        "Ritesh Thawkar"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.09931",
+      "keywords": [
+        "distillation",
+        "self-supervised",
+        "MLLM",
+        "counterfactual"
+      ],
+      "techniques": [
+        "knowledge distillation"
+      ],
+      "target_model": "MLLM",
+      "highlight": "利用反事实盲点实现无外部监督的自包含视觉蒸馏"
+    },
+    {
+      "id": "2608.08684",
+      "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
+      "authors": [
+        "Dongjie Xu",
+        "Kai Qian",
+        "Julius"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2608.08684",
+      "keywords": [
+        "KV cache",
+        "cross-layer",
+        "allocation",
+        "long context"
+      ],
+      "techniques": [
+        "KV cache compression"
+      ],
+      "target_model": "LLM",
+      "highlight": "建模扰动层间传播，实现跨层KV Cache最优预算分配"
+    },
+    {
+      "id": "2608.09412",
+      "title": "KVDiagnosis: A Diagnostic Benchmark for KV-Cache Compression in Long-Context Language Models",
+      "authors": [
+        "Chen Qiu",
+        "Ziwu Liu",
+        "Chao Fei"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.09412",
+      "keywords": [
+        "KV cache",
+        "diagnosis",
+        "benchmark",
+        "long context"
+      ],
+      "techniques": [
+        "KV cache compression"
+      ],
+      "target_model": "LLM",
+      "highlight": "细粒度诊断KV Cache压缩方法的能力边界与失效模式"
+    },
+    {
+      "id": "2608.08878",
+      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
+      "authors": [
+        "Asaad Althoubi"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2608.08878",
+      "keywords": [
+        "KV cache",
+        "eviction",
+        "KL divergence",
+        "memory"
+      ],
+      "techniques": [
+        "KV cache compression"
+      ],
+      "target_model": "LLM",
+      "highlight": "KL散度引导的自适应KV Cache逐出，保持分布稳定性"
+    },
+    {
+      "id": "2608.09176",
+      "title": "Not All Visual Tokens Are Equally Safe to Remove: Consequence-Sensitive Visual Token Compression",
+      "authors": [
+        "Jingbo Wen",
+        "Liang He",
+        "Mingyu Cao"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.09176",
+      "keywords": [
+        "token compression",
+        "VLM",
+        "consequence-sensitive"
+      ],
+      "techniques": [
+        "token compression"
+      ],
+      "target_model": "VLM",
+      "highlight": "后果敏感性评估，从相关性到因果性的token剪枝"
+    },
+    {
+      "id": "2608.08960",
+      "title": "Reading is not Reasoning: Bridging the Agentic Policy Gap in Vision-Text Compression",
+      "authors": [
+        "Cheng Fan",
+        "Junyi Zhou",
+        "Tingzhang Luo"
+      ],
+      "submitted": "2026-08-11",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.08960",
+      "keywords": [
+        "token compression",
+        "agent",
+        "vision-text",
+        "policy"
+      ],
+      "techniques": [
+        "token compression"
+      ],
+      "target_model": "Agent LLM",
+      "highlight": "面向代理策略决策的上下文压缩，而非语义完整性"
+    }
+  ]
+}

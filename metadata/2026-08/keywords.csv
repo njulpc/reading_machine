@@ -1,0 +1,25 @@
+keyword,occurrence,paper_ids
+quantization,2,2608.09595|2608.08910
+pruning,2,2608.08624|2608.08794
+knowledge distillation,3,2608.09287|2608.09637|2608.09931
+KV cache compression,3,2608.08684|2608.09412|2608.08878
+token compression,2,2608.09176|2608.08960
+LLM,5,2608.09595|2608.08910|2608.08684|2608.09412|2608.08878
+multimodal,3,2608.08794|2608.09176|2608.08960
+video generation,1,2608.09637
+VLM,1,2608.09176
+agent,1,2608.08960
+cross-block,1,2608.09595
+trit-planes,1,2608.08910
+MoE serving,1,2608.08910
+domain generalization,1,2608.08624
+audio-visual,1,2608.08794
+data-free,1,2608.09287
+semantic prior,1,2608.09287
+diversity-quality,1,2608.09637
+counterfactual,1,2608.09931
+perturbation propagation,1,2608.08684
+diagnostic benchmark,1,2608.09412
+KL divergence,1,2608.08878
+consequence-sensitive,1,2608.09176
+policy gap,1,2608.08960
