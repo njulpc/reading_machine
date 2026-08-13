@@ -1,0 +1,137 @@
+{
+  "collection_date": "2026-08-14",
+  "date_range": "2026-08-12",
+  "query_keywords": [
+    "quantization",
+    "model compression",
+    "pruning",
+    "distillation",
+    "efficient inference",
+    "low-bit",
+    "sparsity"
+  ],
+  "source": "arxiv.org",
+  "total_papers": 10,
+  "papers": [
+    {
+      "id": "2608.12239",
+      "title": "HAMP-LIC: Hessian-Aware Mixed-Precision Post-Training Quantization for Learned Image Compression",
+      "authors": ["Yuefeng Zhang"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.CV", "cs.AI", "cs.MM"],
+      "url": "https://arxiv.org/abs/2608.12239",
+      "keywords": ["Hessian", "Mixed-Precision", "PTQ", "LIC", "Image Compression"],
+      "techniques": ["quantization"],
+      "target_model": "Learned Image Compression",
+      "highlight": "Hessian-aware 4.85x压缩，0.59% BD-rate损失"
+    },
+    {
+      "id": "2608.12026",
+      "title": "SoftWater: Class-Aware Rate Allocation for Softmax Quantization",
+      "authors": ["Joao V. Cavalcanti", "Ashia C. Wilson"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.LG"],
+      "url": "https://arxiv.org/abs/2608.12026",
+      "keywords": ["Softmax", "KL-divergence", "Class-aware", "LM Head", "LLM"],
+      "techniques": ["quantization"],
+      "target_model": "LLM (1B-32B)",
+      "highlight": "KL最优softmax量化，2-bit head减少45-60%存储"
+    },
+    {
+      "id": "2608.11786",
+      "title": "Language-Conditional Dequantization: Recovering What Quantization Steals from Non-English Languages",
+      "authors": ["Nirmal Thomas"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.CL"],
+      "url": "https://arxiv.org/abs/2608.11786",
+      "keywords": ["LoRA", "Multilingual", "GPTQ", "Dequantization", "Fairness"],
+      "techniques": ["quantization"],
+      "target_model": "Multilingual LLM (3B)",
+      "highlight": "per-language rank-2 LoRA恢复70-83%多语言性能"
+    },
+    {
+      "id": "2608.12259",
+      "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting",
+      "authors": ["Junyi Ye", "Ivy Gateri Wanjiku"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.LG", "q-fin.ST"],
+      "url": "https://arxiv.org/abs/2608.12259",
+      "keywords": ["Calibration", "Time-Series", "Finance", "PTQ", "Walk-forward"],
+      "techniques": ["quantization"],
+      "target_model": "Financial Forecasting Models",
+      "highlight": "系统研究校准策略，percentile恢复53-94%退化"
+    },
+    {
+      "id": "2608.11693",
+      "title": "Spec Sheets Are Not Kernels: An ISA- and Source-Level Audit of INT8 Availability on NVIDIA Blackwell Ultra",
+      "authors": ["Teng-Ruei Chen"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.AR"],
+      "url": "https://arxiv.org/abs/2608.11693",
+      "keywords": ["INT8", "B300", "Hardware Audit", "W8A8", "Blackwell"],
+      "techniques": ["quantization"],
+      "target_model": "NVIDIA B300 GPU",
+      "highlight": "全栈审计发现INT8在B300默认不可部署"
+    },
+    {
+      "id": "2608.12140",
+      "title": "FQTree: Fine-grained Quantization and Hardware Generation of Boosted Decision Trees",
+      "authors": ["Zhiqiang Que", "Chang Sun", "Haiyang Wang", "Dinesh Pamunuwa", "Roshan Weerasekera"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.AR", "cs.LG"],
+      "url": "https://arxiv.org/abs/2608.12140",
+      "keywords": ["BDT", "FPGA", "Quantization-Aware Training", "Leaf Quantization"],
+      "techniques": ["quantization"],
+      "target_model": "Boosted Decision Trees",
+      "highlight": "LUT减少26-57%，匹配或提升精度"
+    },
+    {
+      "id": "2608.12032",
+      "title": "LoSA: Near-Lossless Sparse Attention for Training-Free Video Diffusion Acceleration",
+      "authors": ["Enhuai Liu", "Yunke Wang", "Yutong Wang", "Changming Sun", "Chang Xu"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.CV", "cs.AI"],
+      "url": "https://arxiv.org/abs/2608.12032",
+      "keywords": ["Sparse Attention", "Video Diffusion", "Training-Free", "Acceleration"],
+      "techniques": ["pruning", "sparsity"],
+      "target_model": "Video Diffusion Transformer",
+      "highlight": "99%质量保留阈值，3.2x加速"
+    },
+    {
+      "id": "2608.11829",
+      "title": "Towards Understanding On-Policy Distillation through the Lens of Test-Time Scaling",
+      "authors": ["Xinmu Ge", "Zizhuo Zhang", "Yu Huang", "Jianing Zhu", "Lin Yuan"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.LG", "cs.CL"],
+      "url": "https://arxiv.org/abs/2608.11829",
+      "keywords": ["Distillation", "Test-Time Scaling", "Capability Boundary", "LLM"],
+      "techniques": ["distillation"],
+      "target_model": "LLM Reasoning Models",
+      "highlight": "OPD主要是采样效率提升而非能力扩展"
+    },
+    {
+      "id": "2608.12099",
+      "title": "RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive Knowledge Distillation",
+      "authors": ["Rong Chao", "Sung-Feng Huang", "Moreno La Quatra", "Sabato Marco Siniscalchi", "Wen-Huang Cheng"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.SD", "cs.CL"],
+      "url": "https://arxiv.org/abs/2608.12099",
+      "keywords": ["Mamba", "Knowledge Distillation", "Speech Enhancement", "Real-Time"],
+      "techniques": ["distillation"],
+      "target_model": "Speech Enhancement Mamba",
+      "highlight": "渐进KD将8层压缩到1层，PESQ 3.18"
+    },
+    {
+      "id": "2608.11981",
+      "title": "Benchmarking Trustworthiness of SLMs: Pre-trained vs. Compressed",
+      "authors": ["Haokun Lin", "Kaijie Zhu", "Haobo Xu", "Yichen Wu", "Zhichao Lu"],
+      "submitted": "2026-08-12",
+      "categories": ["cs.CL"],
+      "url": "https://arxiv.org/abs/2608.11981",
+      "keywords": ["Trustworthiness", "SLM", "Quantization", "Pruning", "Fairness"],
+      "techniques": ["quantization", "pruning"],
+      "target_model": "Small Language Models",
+      "highlight": "量化比剪枝更能保持可信度，压缩大模型优于从头训练"
+    }
+  ]
+}
