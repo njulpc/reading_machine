@@ -1,0 +1,30 @@
+{
+  "collection_date": "2026-08-18",
+  "date_range": "2026-08-17",
+  "submitted_date_range": "202608170000 TO 202608172359",
+  "query_keywords": [
+    "quantization",
+    "quantize",
+    "low-bit",
+    "model compression",
+    "compress",
+    "pruning",
+    "sparsity",
+    "knowledge distillation",
+    "KV cache compression",
+    "mixed precision",
+    "GPTQ",
+    "AWQ"
+  ],
+  "source": "arxiv.org",
+  "total_papers": 0,
+  "papers": [],
+  "status": "completed",
+  "note": "截至 2026-08-18 02:05 CST，arXiv 公开 API 中 submittedDate 为 2026-08-17 的全部记录为 0；分类 new 列表候选的 v1 均为 2026-08-14，后续应回查目标日以覆盖公告延迟。",
+  "evidence": [
+    "https://export.arxiv.org/api/query?search_query=submittedDate%3A%5B202608170000%20TO%202608172359%5D&start=0&max_results=100&sortBy=submittedDate&sortOrder=ascending",
+    "https://arxiv.org/list/cs.LG/new?skip=0&show=2000",
+    "https://arxiv.org/list/cs.CL/new?skip=0&show=2000",
+    "https://arxiv.org/list/cs.CV/new?skip=0&show=2000"
+  ]
+}
