@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Residual-ranked blockwise mixed precision on Qwen3-0.6B."""
+"""SpecVLA-style 0/4/8-bit block quantization of temporal feature residuals."""
 import argparse
 from pathlib import Path
 import torch
@@ -13,19 +13,23 @@ def qsym(block,bits):
     qmax=(1<<(bits-1))-1;scale=block.abs().amax().clamp_min(1e-8)/qmax
     return torch.round(block/scale).clamp(-qmax,qmax)*scale
 
+def quantize_residual(delta,block,zero_fraction,high_fraction):
+    flat=delta.flatten(); chunks=list(flat.split(block)); scores=torch.tensor([v.abs().sum() for v in chunks])
+    tz=torch.quantile(scores,zero_fraction); th=torch.quantile(scores,1-high_fraction)
+    out=[]; counts=[0,0,0]
+    for values,score in zip(chunks,scores):
+        if score<tz: out.append(torch.zeros_like(values)); counts[0]+=1
+        elif score>th: out.append(qsym(values,8)); counts[2]+=1
+        else: out.append(qsym(values,4)); counts[1]+=1
+    return torch.cat(out).reshape_as(delta),counts,tz.item(),th.item()
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--model-dir",type=Path,required=True);p.add_argument("--block",type=int,default=64);p.add_argument("--eight-bit-fraction",type=float,default=.25);p.add_argument("--seed",type=int,default=13)
-    a=p.parse_args();torch.manual_seed(a.seed);w=load_weight(a.model_dir);x=torch.randn(32,w.shape[1]);ref=x@w.T
-    specs=[]
-    for r in range(0,w.shape[0],a.block):
-        for c in range(0,w.shape[1],a.block):
-            b=w[r:r+a.block,c:c+a.block];q4=qsym(b,4);score=((b-q4).square()*x[:,c:c+b.shape[1]].square().mean(0)).mean();specs.append((score.item(),r,c,q4,qsym(b,8)))
-    keep=max(1,round(len(specs)*a.eight_bit_fraction));high={(r,c) for _,r,c,_,_ in sorted(specs,reverse=True)[:keep]}
-    mixed=torch.empty_like(w);all4=torch.empty_like(w)
-    for _,r,c,q4,q8 in specs:
-        all4[r:r+q4.shape[0],c:c+q4.shape[1]]=q4;mixed[r:r+q4.shape[0],c:c+q4.shape[1]]=q8 if (r,c) in high else q4
-    avg_bits=(keep*8+(len(specs)-keep)*4)/len(specs)
-    print(f"model=Qwen3-0.6B tensor={KEY} slice={tuple(w.shape)} block={a.block}")
-    print(f"all4_output_mse={torch.nn.functional.mse_loss(x@all4.T,ref).item():.8g}")
-    print(f"mixed_output_mse={torch.nn.functional.mse_loss(x@mixed.T,ref).item():.8g} average_bits={avg_bits:.2f}")
+    p=argparse.ArgumentParser();p.add_argument("--model-dir",type=Path,required=True);p.add_argument("--block",type=int,default=64);p.add_argument("--zero-fraction",type=float,default=.358);p.add_argument("--high-fraction",type=float,default=.049);p.add_argument("--seed",type=int,default=13)
+    a=p.parse_args();torch.manual_seed(a.seed);w=load_weight(a.model_dir);x_prev=torch.randn(32,w.shape[1]);x_cur=x_prev+.1*torch.randn_like(x_prev)
+    delta=x_cur-x_prev;qdelta,counts,tz,th=quantize_residual(delta,a.block,a.zero_fraction,a.high_fraction)
+    ref=x_cur@w.T;approx=x_prev@w.T+qdelta@w.T; total=sum(counts)
+    print(f"model=Qwen3-0.6B tensor={KEY} slice={tuple(w.shape)} residual_block={a.block}")
+    print(f"threshold_zero={tz:.8g} threshold_high={th:.8g}")
+    print(f"block_fraction_0bit={counts[0]/total:.6f} block_fraction_4bit={counts[1]/total:.6f} block_fraction_8bit={counts[2]/total:.6f}")
+    print(f"differential_accumulation_output_mse={torch.nn.functional.mse_loss(approx,ref).item():.8g}")
 if __name__=="__main__":main()

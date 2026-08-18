@@ -9,42 +9,58 @@ KEY="model.layers.0.self_attn.q_proj.weight"
 def load_weight(path):
     from safetensors import safe_open
     with safe_open(str(path/"model.safetensors"),framework="pt",device="cpu") as f:
-        return f.get_tensor(KEY)[:32,:128].float().contiguous()
+        return f.get_tensor(KEY)[:32,:256].float().contiguous()
 
-def affine_init(w):
+def affine_init(w, bits=2):
+    qmax=(1 << bits)-1
     lo=w.amin(1,keepdim=True); hi=w.amax(1,keepdim=True)
-    s=((hi-lo)/3).clamp_min(1e-8); z=(-lo/s).round().clamp(0,3)
-    q=(w/s+z).round().clamp(0,3); return q,s,z
+    s=((hi-lo)/qmax).clamp_min(1e-8); z=(-lo/s).round().clamp(0,qmax)
+    q=(w/s+z).round().clamp(0,qmax); return q,s,z
 
-def optimize_group(w,h_eff,iters=2):
+def refit_grid(q, s_mat, target, bits=2):
+    rows=q.shape[0]; best_loss=torch.full((rows,),float("inf")); best_s=torch.ones(rows); best_z=torch.zeros(rows)
+    for zero in range(1 << bits):
+        u=q-zero
+        curvature=torch.einsum("bi,ij,bj->b",u,s_mat,u).clamp_min(1e-8)
+        linear=(target*u).sum(1)
+        scale=(linear/curvature).clamp_min(1e-8)
+        loss=.5*scale.square()*curvature-scale*linear
+        take=loss<best_loss; best_loss=torch.where(take,loss,best_loss); best_s=torch.where(take,scale,best_s); best_z=torch.where(take,torch.full_like(best_z,zero),best_z)
+    return best_s[:,None],best_z[:,None]
+
+def optimize_group(w,s_mat,target,iters=2,bits=2):
     q,s,z=affine_init(w)
     for _ in range(iters):
-        # Least-squares refit w ~= s*q + b, with b=-s*z.
-        qm=q-q.mean(1,keepdim=True); wm=w-w.mean(1,keepdim=True)
-        s=(qm*wm).sum(1,keepdim=True)/(qm.square().sum(1,keepdim=True).clamp_min(1e-8))
-        s=s.abs().clamp_min(1e-8); b=w.mean(1,keepdim=True)-s*q.mean(1,keepdim=True); z=(-b/s).clamp(0,3)
-        deq=s*(q-z); err=deq-w
+        s,z=refit_grid(q,s_mat,target,bits)
+        deq=s*(q-z); phi=deq@s_mat
         for j in range(w.shape[1]):
-            best=q[:,j].clone(); best_loss=torch.einsum("bi,ij,bj->b",err,h_eff,err)
-            old=deq[:,j].clone()
-            for code in range(4):
-                trial=err.clone(); trial[:,j]=s[:,0]*(code-z[:,0])-w[:,j]
-                loss=torch.einsum("bi,ij,bj->b",trial,h_eff,trial)
-                take=loss<best_loss; best=torch.where(take,torch.full_like(best,code),best); best_loss=torch.where(take,loss,best_loss)
-            q[:,j]=best; deq[:,j]=s[:,0]*(best-z[:,0]); err[:,j]=deq[:,j]-w[:,j]
+            codes=torch.arange(1 << bits,dtype=w.dtype)[None,:]
+            values=s*(codes-z)
+            cross=phi[:,j]-deq[:,j]*s_mat[j,j]-target[:,j]
+            losses=.5*s_mat[j,j]*values.square()+cross[:,None]*values
+            best=losses.argmin(1); new=values.gather(1,best[:,None])[:,0]
+            delta=new-deq[:,j]; q[:,j]=best.to(q); deq[:,j]=new; phi+=delta[:,None]*s_mat[j]
     return s*(q-z)
 
+def schur_quantize(w,h,group_size):
+    c=w@h; qw=torch.zeros_like(w)
+    for start in range(0,w.shape[1],group_size):
+        end=min(start+group_size,w.shape[1]); g=slice(start,end); r=slice(end,w.shape[1])
+        c_eff_g=c[:,g]-(qw[:,:start]@h[:start,g] if start else 0)
+        hgg=h[g,g]
+        if end<w.shape[1]:
+            c_eff_r=c[:,r]-(qw[:,:start]@h[:start,r] if start else 0)
+            solve=torch.linalg.solve(h[r,r],h[r,g])
+            s_mat=hgg-h[g,r]@solve; target=c_eff_g-c_eff_r@solve
+        else:
+            s_mat=hgg; target=c_eff_g
+        qw[:,g]=optimize_group(w[:,g],s_mat,target)
+    return qw
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--model-dir",type=Path,required=True);p.add_argument("--group-size",type=int,default=32);p.add_argument("--seed",type=int,default=5)
+    p=argparse.ArgumentParser();p.add_argument("--model-dir",type=Path,required=True);p.add_argument("--group-size",type=int,default=128);p.add_argument("--seed",type=int,default=5)
     a=p.parse_args();torch.manual_seed(a.seed);w=load_weight(a.model_dir);x=torch.randn(96,w.shape[1]);h=x.T@x/x.shape[0]+1e-3*torch.eye(w.shape[1])
-    out=[]
-    for start in range(0,w.shape[1],a.group_size):
-        end=min(start+a.group_size,w.shape[1]); g=torch.arange(start,end); r=torch.arange(end,w.shape[1])
-        hgg=h[g][:,g]
-        if len(r): h_eff=hgg-h[g][:,r]@torch.linalg.solve(h[r][:,r],h[r][:,g])
-        else: h_eff=hgg
-        out.append(optimize_group(w[:,g],h_eff))
-    qw=torch.cat(out,1); base=torch.cat([affine_init(w[:,s:s+a.group_size])[1]*(affine_init(w[:,s:s+a.group_size])[0]-affine_init(w[:,s:s+a.group_size])[2]) for s in range(0,w.shape[1],a.group_size)],1)
+    qw=schur_quantize(w,h,a.group_size); base=torch.cat([affine_init(w[:,s:s+a.group_size])[1]*(affine_init(w[:,s:s+a.group_size])[0]-affine_init(w[:,s:s+a.group_size])[2]) for s in range(0,w.shape[1],a.group_size)],1)
     ref=x@w.T
     print(f"model=Qwen3-0.6B tensor={KEY} slice={tuple(w.shape)} bits=2 group={a.group_size}")
     print(f"affine_init_output_mse={torch.nn.functional.mse_loss(x@base.T,ref).item():.8g}")

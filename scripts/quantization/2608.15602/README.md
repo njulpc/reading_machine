@@ -1,11 +1,17 @@
-# 2608.15602 FluxBin Qwen3-0.6B 复现
+# 2608.15602 FluxBin Qwen3-0.6B 核心复现
 
-真实 Qwen3-0.6B `down_proj` 权重先做 row binary basis，再对残差做 column binary basis；用校准激活二阶矩作为 Hessian 对角代理，保留默认 5% 显著残差。主二值基使用每 8 个输入值构建 256 项查找表并按权重 bit pattern 索引，脚本断言 LUT 与直接乘法数值一致。
+脚本按论文公式拟合 `alpha_r alpha_c^T` 外积尺度的联合二值基；以完整逆 Hessian 的结构化列分数在每个 128 列 group 选择 8 个显著列，再对残差拟合二值 refinement，并验证 group-8 LUT 与直接乘法一致。
 
 ```bash
-python demo.py --model-dir /path/to/Qwen3-0.6B/snapshot --salient-fraction 0.05
+python demo.py --model-dir /path/to/Qwen3-0.6B/snapshot --group-size 128 --base-order 2 --salient-columns 8
+python ../full_model_smoke.py --model-dir /path/to/Qwen3-0.6B/snapshot --method flux
 ```
 
-未实现论文 CUDA 的 virtual column mapping、scale fusion 和能耗测量；这里复现算法-数据布局核心，绝不把 Python LUT 延迟当论文速度。
+## 代码审查与验证（2026-08-19）
 
-**2026-08-19 实测**：显著残差比例 `0.049988`，输出 MSE `0.0126608`，group-8 LUT 数值等价断言与语法检查通过。
+- **一致性：部分一致。** 代表层覆盖 row-column outer-product bases、联合符号搜索、Hessian 结构列显著性、hybrid refinement 与 LUT；未实现 GPTQ 列误差传播、VCM、LUT-BSF、scale fusion 或 CUDA kernel。
+- **修复：** 原代码错误地串联“row basis + column residual basis”，只用 Hessian 对角并选择散乱元素；现按论文 Eq.3-9 改为外积基和每组显著列。
+- **代表层结果：** 64×256 真权重，2 个全局基、每组 8 个显著列（6.25%），输出 MSE `0.020650025`，LUT 等价断言通过。
+- **整模诊断：** 工程退化为全模型两级贪心二值基，196 个 Linear、440,401,920 参数；前向有限，logits MSE `23.882246`，生成 token `他们`，`2.008s`。该结果不是完整 FluxBin。
+- 环境同上：CPU-only，无法验证论文专用 CUDA 性能。
+- **真实 Qwen3-0.6B：未跑通（代表层算法核心通过；整模为退化烟测）。**

@@ -13,22 +13,29 @@ def load_weight(path, rows=128, cols=512):
         return f.get_tensor(KEY)[:rows, :cols].float().contiguous()
 
 
-def flashquant_parts(w, threshold):
-    row_ref = w.abs().mean(1, keepdim=True).clamp_min(1e-8)
-    mask = w.abs() > threshold * row_ref
+def flashquant_parts(w, outlier_fraction):
+    if not 0 < outlier_fraction < 1:
+        raise ValueError("outlier_fraction must be in (0, 1)")
+    k = max(1, round(w.shape[1] * outlier_fraction))
+    indices = torch.topk(w.abs(), k=k, dim=1).indices
+    mask = torch.zeros_like(w, dtype=torch.bool)
+    mask.scatter_(1, indices, True)
     sparse = torch.where(mask, w, torch.zeros_like(w))
     dense = torch.where(mask, torch.zeros_like(w), w)
-    scale = dense.abs().amax(1, keepdim=True).clamp_min(1e-8) / 7
-    code = torch.round(dense / scale).clamp(-7, 7)
-    return code * scale, sparse, mask
+    lo = dense.amin(1, keepdim=True)
+    hi = dense.amax(1, keepdim=True)
+    scale = ((hi - lo) / 15).clamp_min(1e-8)
+    zero = torch.round(-lo / scale).clamp(0, 15)
+    code = torch.round(dense / scale + zero).clamp(0, 15)
+    return scale * (code - zero), sparse, mask
 
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--model-dir",type=Path,required=True)
-    p.add_argument("--outlier-threshold",type=float,default=6.0); p.add_argument("--seed",type=int,default=11)
+    p.add_argument("--outlier-fraction",type=float,default=0.01); p.add_argument("--seed",type=int,default=11)
     a=p.parse_args(); torch.manual_seed(a.seed)
     w=load_weight(a.model_dir); x=torch.randn(16,w.shape[1],dtype=torch.float16).float()
-    dense4,sparse16,mask=flashquant_parts(w,a.outlier_threshold)
+    dense4,sparse16,mask=flashquant_parts(w,a.outlier_fraction)
     fused=x@dense4.T + x@sparse16.T
     reference=x@w.T
     recombined=x@(dense4+sparse16).T
