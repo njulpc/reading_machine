@@ -1,0 +1,66 @@
+{
+  "collection_date": "2026-08-19",
+  "report_date": "2026-08-18",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-16T00:00:00",
+    "end": "2026-08-18T23:59:59",
+    "complete_natural_days": ["2026-08-16", "2026-08-17", "2026-08-18"]
+  },
+  "query_keywords": [
+    "quantization", "quantize", "low-bit", "model compression", "compress", "pruning", "sparsity",
+    "knowledge distillation", "KV cache compression", "mixed precision", "GPTQ", "AWQ", "distillation",
+    "distill", "binary", "binarized", "ternary", "INT8", "INT4", "FP4", "W4A16", "token pruning",
+    "attention sparsification", "KV cache eviction"
+  ],
+  "source": "arXiv API submittedDate plus cs.LG/cs.CL/cs.CV new listings",
+  "daily_audit": {
+    "2026-08-16": {"all_api_results": 524, "keyword_candidates": 58, "relevant_unique_ids": 12},
+    "2026-08-17": {"all_api_results": 915, "keyword_candidates": 94, "relevant_unique_ids": 10},
+    "2026-08-18": {"all_api_results": 0, "keyword_candidates": 0, "relevant_unique_ids": 0}
+  },
+  "positive_control": {"date": "2026-08-14", "all_api_results": 911, "keyword_candidates": 99},
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29", "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31", "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02", "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04", "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06", "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08", "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12", "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15", "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17", "origin/feature/arxiv-daily-2026-08-18"
+  ],
+  "dedup_source_branches_count": 18,
+  "historical_analyzed_ids_count": 166,
+  "historical_metadata_only_ids_not_counted_as_complete": ["2607.27951", "2607.28410", "2607.28457"],
+  "excluded_duplicate_ids": [],
+  "window_relevant_papers_count": 22,
+  "historical_duplicates_count": 0,
+  "new_papers_count": 22,
+  "total_papers": 22,
+  "papers": [
+    {"id":"2608.15475","title":"Bit-Flip Attacks on Vision-Language-Action Models: Action-Decoding Architecture Shapes the Vulnerability","authors":["Yudong Gao","Linghan Chen","Wenhan Wu","Mia Zhou","Jiyao Wang","Kaiyan Ji","Mingyu Guo","Honglong Chen"],"submitted":"2026-08-16","categories":["cs.CR","cs.AI"],"url":"https://arxiv.org/abs/2608.15475","techniques":["quantization"],"highlight":"1–5 个定向 INT8 bit 可摧毁部分 VLA 动作头"},
+    {"id":"2608.15516","title":"UniFed-VLM: Federated Instruction Tuning for Vision-Language Models with Multiple Heterogeneity","authors":["Pengyu Wang","Baochen Xiong","Xiaoshan Yang","Yifan Xu","Zhang Qimeng","Haifeng Chen","Changsheng Xu"],"submitted":"2026-08-16","categories":["cs.LG"],"url":"https://arxiv.org/abs/2608.15516","techniques":["knowledge_distillation"],"highlight":"补偿式子空间聚合与两阶段跨架构蒸馏"},
+    {"id":"2608.15522","title":"Efficient Audio-Visual Generation via Synchrony-Aware Cross-Modal Sparse Attention","authors":["Shengchuan Gao","Teng Hu","Bohao Feng","Luchen Li","Wenqiang Wang","Hongqian Deng","Ran Yi"],"submitted":"2026-08-16","categories":["cs.CV"],"url":"https://arxiv.org/abs/2608.15522","techniques":["pruning","sparsity"],"highlight":"保护同步关键 token，Ovi 1.992× 加速"},
+    {"id":"2608.15531","title":"FlashQuant: Sparse-Dense Fusion for Memory-Efficient Outlier-Aware LLM Inference","authors":["Junqing Lin","Jingwei Sun","Zhengding Hu","Guangzhong Sun"],"submitted":"2026-08-16","categories":["cs.DC"],"url":"https://arxiv.org/abs/2608.15531","techniques":["quantization"],"highlight":"融合 W4 dense 与高精度 sparse，最高 4.18×"},
+    {"id":"2608.15567","title":"SchurQuant: Groupwise Discrete Optimization for Layer-Wise LLM Quantization","authors":["Gunjun Lee","Sehwan Son","Younjoo Lee","Byungjun Kim","Jung Ho Ahn"],"submitted":"2026-08-16","categories":["cs.LG"],"url":"https://arxiv.org/abs/2608.15567","techniques":["quantization"],"highlight":"Schur complement 分组优化，2-bit 最强基线 +9.65pp"},
+    {"id":"2608.15602","title":"FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy","authors":["Qingyao Yang","Runming Yang","He Xiao","Wendong Xu","Junyu Chen","Haobo Liu","Chenchen Ding","Ruihan Hu","Yik-Chung Wu","Ngai Wong"],"submitted":"2026-08-16","categories":["cs.LG","cs.AI"],"url":"https://arxiv.org/abs/2608.15602","techniques":["quantization"],"highlight":"二值基+LUT kernel，4×内存、最高5.92×速度"},
+    {"id":"2608.15636","title":"Algorithm-Architecture Co-Design for Efficient VLA Inference via Speculative Inference and Verification","authors":["Chunyu Qi","Zhuoran Song","Jian Weng","Haozhe Jiang","Xueyuan Liu","Naifeng Jing","Guanghui He","Xiaoyao Liang","Haibing Guan"],"submitted":"2026-08-16","categories":["cs.RO","cs.AI"],"url":"https://arxiv.org/abs/2608.15636","techniques":["quantization","mixed_precision"],"highlight":"block-wise 混合精度 sVLA 做状态感知验证"},
+    {"id":"2608.15660","title":"Adaptive Heterogeneous Compression for Resource-Efficient Federated Knowledge Distillation","authors":["Chenwang Liu","Yijun Liu","Chang Liu","Xu Zhang","Pengchao Han"],"submitted":"2026-08-16","categories":["cs.DC","cs.LG"],"url":"https://arxiv.org/abs/2608.15660","techniques":["knowledge_distillation","gradient_compression"],"highlight":"非平稳 bandit 为每客户端动态选梯度压缩器"},
+    {"id":"2608.15693","title":"Large Models for Small Devices: Recent Advances and Empirical Analysis of Edge AI Deployment","authors":["Subhransu Das","Jiaming Cheng","Arnav Kumar","Sadia Afrose","Mingzhe Han","Michael Silagy","Shreya Palande","Brijesh Soni","Rajiv Ramnath"],"submitted":"2026-08-16","categories":["cs.AI","cs.LG"],"url":"https://arxiv.org/abs/2608.15693","techniques":["deployment_audit","survey"],"highlight":"真实硬件揭示压缩指标与部署表现错位"},
+    {"id":"2608.15787","title":"Routing Divergence Is Not Evidence of Behavioral Influence in Same-Weight MoE Self-Distillation","authors":["Cedric Caruzzo","Donggeun Yoo","Tae Soo Kim"],"submitted":"2026-08-16","categories":["cs.LG","cs.AI","cs.CL"],"url":"https://arxiv.org/abs/2608.15787","techniques":["knowledge_distillation"],"highlight":"router 变化不等于残差流中的行为影响"},
+    {"id":"2608.15797","title":"KV-Rescue: Recovering Reasoning Language Model KV Eviction Loss via Stepwise Interleaving","authors":["Minsoo Cheong","Woosang Lim","Vincent-Daniel Yun","Sungjoo Yoo"],"submitted":"2026-08-16","categories":["cs.AI","cs.CL"],"url":"https://arxiv.org/abs/2608.15797","techniques":["kv_cache_compression"],"highlight":"B=64 时平均恢复 87% eviction 精度损失"},
+    {"id":"2608.15810","title":"Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State","authors":["Fanzhe Wei","Li Liu"],"submitted":"2026-08-16","categories":["cs.AI"],"url":"https://arxiv.org/abs/2608.15810","techniques":["runtime_state_compression"],"highlight":"352,333 次 admission 的 anytime-valid 风险账本"},
+    {"id":"2608.16010","title":"Breaking the Compression Barrier: Cross-Architecture Compression Boundary Learning via Reverse Regrowth","authors":["Zhaocen Liu","Satvik Praveen","Yi Sheng"],"submitted":"2026-08-17","categories":["cs.LG","cs.CV"],"url":"https://arxiv.org/abs/2608.16010","techniques":["pruning"],"highlight":"跨过性能悬崖后反向 regrow，结构化最高 +4.77%"},
+    {"id":"2608.16104","title":"Nexus: Structured Synergy for Efficient Text-to-Image Generation using Rectified Flow Model","authors":["Yizhao Wang"],"submitted":"2026-08-17","categories":["cs.CV"],"url":"https://arxiv.org/abs/2608.16104","techniques":["quantization","sparsity"],"highlight":"per-expert INT4/FP4 QAT，约2.8×加速"},
+    {"id":"2608.16172","title":"SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation","authors":["Xunyao Lei","Renjun Wu","Tianlin Huo","Xuesong Li"],"submitted":"2026-08-17","categories":["cs.RO"],"url":"https://arxiv.org/abs/2608.16172","techniques":["pruning","token_pruning"],"highlight":"历史 anchor 引导视觉 token 剪枝，RoboCerebra 47.12%"},
+    {"id":"2608.16236","title":"A Privacy Study of Sparse Collaborative Inference","authors":["Maximilian Andreas Hoefler","Karsten Mueller","Wojciech Samek"],"submitted":"2026-08-17","categories":["cs.LG"],"url":"https://arxiv.org/abs/2608.16236","techniques":["pruning","activation_sparsity"],"highlight":"稀疏位置本身泄露可重建的人脸信息"},
+    {"id":"2608.16316","title":"Deep Thought Alignment: Trajectory-Level Latent Distillation for Video Reasoning","authors":["Ao Shen","Yongheng Zhang","Yinghui Li","Manning Wang","Di Yin","Xing Sun"],"submitted":"2026-08-17","categories":["cs.CV","cs.AI","cs.CL"],"url":"https://arxiv.org/abs/2608.16316","techniques":["knowledge_distillation"],"highlight":"trajectory-end latent OPD，六基准最高较 vanilla +2.6pp 平均"},
+    {"id":"2608.16320","title":"StreamOPD: A Post-Training Recipe with Spatio-Temporal Cue Gating for Streaming Video Understanding","authors":["Keming Wu","Baoyi Wang","Kaichen Zhang","Xiang An","Zuhao Yang","Sudong Wang","Haowei Zhu","Tingxuan Huang","Hongcheng Gao","Bin Wang"],"submitted":"2026-08-17","categories":["cs.CV"],"url":"https://arxiv.org/abs/2608.16320","techniques":["knowledge_distillation"],"highlight":"固定 recent-4-frame 协议下 77.9%→83.9%"},
+    {"id":"2608.16333","title":"Step-Level On-Policy Distillation: Interpolating Between On-Policy Distillation and Supervised Fine-Tuning","authors":["Changhui Sun","Lanbo Liu","Hang Lei","Tong Ling","Jiahang Xie","Zhiyong Zheng","Yujia Wang","Hao Liu","Feng Xiao","Lu Liu","Yanlong Du","Zifeng Cheng","Ziwei Jiang","Qing Gu"],"submitted":"2026-08-17","categories":["cs.CL","cs.AI"],"url":"https://arxiv.org/abs/2608.16333","techniques":["knowledge_distillation"],"highlight":"step 粒度连接 SFT/OPD，ALFWorld +13.4pp"},
+    {"id":"2608.16585","title":"SQuad: Sub-Quadratic Attention Distillation for Efficient Video Generation","authors":["Animesh Karnewar","Denis Korzhenkov","Amirhossein Habibian","Mohsen Ghafoorian"],"submitted":"2026-08-17","categories":["cs.CV"],"url":"https://arxiv.org/abs/2608.16585","techniques":["knowledge_distillation","attention_compression"],"highlight":"O(n√n) attention，67× attention FLOPs、2×端到端"},
+    {"id":"2608.16647","title":"Every Coin Has Two Sides: On the Dual Nature of Generalization in On-Policy Distillation of Large Language Models","authors":["Zhaoyi Li","Deyang Kong","Yuan Wei","Evan Yang","Ranran Shen","Mahardika Krisna Ihsani","Ming Yang","Wei Zhang","Chuan Hao","Jian Yang","Ran Tao","Bryan Dai","Shikun Zhang","Wei Ye","Ying Wei","Defu Lian"],"submitted":"2026-08-17","categories":["cs.CL"],"url":"https://arxiv.org/abs/2608.16647","techniques":["knowledge_distillation"],"highlight":"同源教师更能跨语言/长度迁移，多教师产生能力跷跷板"},
+    {"id":"2608.16756","title":"Binarized High-Efficiency RAW Video Restoration and Beyond","authors":["Tianyu Zhu","Ying Fu","Hesong Li","Gengchen Zhang","Xin Yuan","Yulun Zhang"],"submitted":"2026-08-17","categories":["cs.CV"],"url":"https://arxiv.org/abs/2608.16756","techniques":["quantization"],"highlight":"1-bit RAW 视频恢复，计算/参数约降96%"}
+  ]
+}
