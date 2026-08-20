@@ -1,0 +1,182 @@
+{
+  "collection_date": "2026-08-20",
+  "report_date": "2026-08-19",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-17T00:00:00",
+    "end": "2026-08-19T23:59:59",
+    "complete_natural_days": ["2026-08-17", "2026-08-18", "2026-08-19"]
+  },
+  "query_keywords": [
+    "quantization", "quantize", "low-bit", "model compression", "compress", "pruning",
+    "sparsity", "knowledge distillation", "distill", "teacher/student",
+    "KV cache compression", "mixed precision", "GPTQ", "AWQ",
+    "token selection", "lightweight", "compact model"
+  ],
+  "source": "arXiv official HTML category new/recent pages plus official abs and PDF pages; arXiv API not used",
+  "category_page_audit": {
+    "recent_show": 2000,
+    "unique_entries_across_2026-08-17_to_2026-08-19_announcement_groups": 1680,
+    "cs.LG": {
+      "recent_total": 993,
+      "announcement_groups": {"2026-08-19": 142, "2026-08-18": 374, "2026-08-17": 138, "2026-08-14_positive_control": 157},
+      "new_page": {"date": "2026-08-19", "new": 81, "cross": 61, "replacement": 95, "total": 237}
+    },
+    "cs.CL": {
+      "recent_total": 483,
+      "announcement_groups": {"2026-08-19": 72, "2026-08-18": 156, "2026-08-17": 62, "2026-08-14_positive_control": 101},
+      "new_page": {"date": "2026-08-19", "new": 49, "cross": 23, "replacement": 62, "total": 134}
+    },
+    "cs.CV": {
+      "recent_total": 694,
+      "announcement_groups": {"2026-08-19": 103, "2026-08-18": 269, "2026-08-17": 89, "2026-08-14_positive_control": 107},
+      "new_page": {"date": "2026-08-19", "new": 89, "cross": 14, "replacement": 68, "total": 171}
+    },
+    "cs.AI": {
+      "recent_total": 1235,
+      "announcement_groups": {"2026-08-19": 170, "2026-08-18": 465, "2026-08-17": 185, "2026-08-14_positive_control": 204},
+      "new_page": {"date": "2026-08-19", "new": 65, "cross": 105, "replacement": 105, "total": 275}
+    },
+    "cs.AR": {
+      "recent_total": 42,
+      "announcement_groups": {"2026-08-19": 7, "2026-08-18": 8, "2026-08-17": 8, "2026-08-14_positive_control": 11},
+      "new_page": {"date": "2026-08-19", "new": 7, "cross": 0, "replacement": 6, "total": 13}
+    }
+  },
+  "daily_audit": {
+    "2026-08-17": {"relevant_unique_ids": 12, "historical_duplicates": 10, "new_papers": 2},
+    "2026-08-18": {"relevant_unique_ids": 7, "historical_duplicates": 0, "new_papers": 7},
+    "2026-08-19": {"relevant_unique_ids": 0, "historical_duplicates": 0, "new_papers": 0}
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19"
+  ],
+  "dedup_source_branches_count": 19,
+  "historical_analyzed_ids_count": 188,
+  "historical_metadata_only_ids_not_counted_as_complete": ["2607.27951", "2607.28410", "2607.28457"],
+  "excluded_duplicate_ids": [
+    "2608.16010", "2608.16104", "2608.16172", "2608.16236", "2608.16316",
+    "2608.16320", "2608.16333", "2608.16585", "2608.16647", "2608.16756"
+  ],
+  "duplicate_source_branches": {
+    "origin/feature/arxiv-daily-2026-08-19": [
+      "2608.16010", "2608.16104", "2608.16172", "2608.16236", "2608.16316",
+      "2608.16320", "2608.16333", "2608.16585", "2608.16647", "2608.16756"
+    ]
+  },
+  "window_relevant_papers_count": 19,
+  "historical_duplicates_count": 10,
+  "new_papers_count": 9,
+  "total_papers": 9,
+  "papers": [
+    {
+      "id": "2608.17069",
+      "title": "Dynamic Entanglement-Weighted Pruning for Quantum Federated Unlearning in Supply-Chain Risk Prediction",
+      "authors": ["Aditya Kumar", "Sumit Chongder"],
+      "submitted": "2026-08-17",
+      "categories": ["quant-ph", "cs.LG"],
+      "url": "https://arxiv.org/abs/2608.17069",
+      "techniques": ["pruning", "quantum_model_unlearning"],
+      "highlight": "Fisher×纠缠剪枝以 3.96s 逼近 65.03s 全重训"
+    },
+    {
+      "id": "2608.17129",
+      "title": "PROBE: Manipulation-Grounded Visual Question Answering with VLM Agents",
+      "authors": ["Vineet Bhat", "Siyi Chen", "Alex Zook", "Xuning Yang", "Stan Birchfield", "Valts Blukis", "Jonathan Tremblay"],
+      "submitted": "2026-08-17",
+      "categories": ["cs.CV", "cs.RO"],
+      "url": "https://arxiv.org/abs/2608.17129",
+      "techniques": ["knowledge_distillation", "trajectory_sft"],
+      "highlight": "教师轨迹使 Qwen3-VL-8B agent 成功率 48.1%→67.8%"
+    },
+    {
+      "id": "2608.17336",
+      "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+      "authors": ["Hanzhi Zhang", "Qiao Zhang", "Qinglei Cao", "Heng Fan", "Yan Huang", "Kewei Sha", "Yunhe Feng"],
+      "submitted": "2026-08-18",
+      "categories": ["cs.AI"],
+      "url": "https://arxiv.org/abs/2608.17336",
+      "techniques": ["quantization", "mixed_precision", "attention_kernel"],
+      "highlight": "score tile 级 FP16/INT8 路由，4k prefill 对 FlashAttention 2.22×"
+    },
+    {
+      "id": "2608.17515",
+      "title": "Beyond FLOPs: Energy-Aware Knowledge Distillation for Sustainable LLMs on Code-Related Task",
+      "authors": ["Enrique Barba Roque", "Luís Cruz", "Annibale Panichella"],
+      "submitted": "2026-08-18",
+      "categories": ["cs.SE", "cs.AI"],
+      "url": "https://arxiv.org/abs/2608.17515",
+      "techniques": ["knowledge_distillation", "energy_aware_search"],
+      "highlight": "CodeT5+ student 体积减 86%、推理能耗最高减 90%"
+    },
+    {
+      "id": "2608.17657",
+      "title": "Denoised Variance-Based Pruning with Optimal Brain Bias Compensation",
+      "authors": ["Geon Tack Lee", "Jaegul Choo", "Kang Eun Jeon"],
+      "submitted": "2026-08-18",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2608.17657",
+      "techniques": ["pruning", "structured_pruning", "second_order_compensation"],
+      "highlight": "50% MLP 剪枝下 Swin-S 比 VBP 高 7.33pp"
+    },
+    {
+      "id": "2608.17707",
+      "title": "DynaForcing: Overcoming Dynamic Collapse in Self-Forcing Distillation for Streaming Avatar Generation",
+      "authors": ["Yubo Huang", "Sirui Zhao", "Xinchen Yao", "Zhengye Zhang", "Jinyang Huang", "Fengqi Cui", "Shiwei Wu", "Enhong Chen"],
+      "submitted": "2026-08-18",
+      "categories": ["cs.CV", "cs.MM"],
+      "url": "https://arxiv.org/abs/2608.17707",
+      "techniques": ["knowledge_distillation", "computation_graph_pruning"],
+      "highlight": "Dyn-Deg 0.31→0.73，训练 GPU·h 减少约 10.7×"
+    },
+    {
+      "id": "2608.17872",
+      "title": "DistillPath: An Efficient 22M Distilled Pathology Encoder Approaching Large Foundation Model Performance",
+      "authors": ["Ramon Kaspar", "Andrey Ignatov", "Valentina Boeva"],
+      "submitted": "2026-08-18",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2608.17872",
+      "techniques": ["knowledge_distillation", "feature_distillation"],
+      "highlight": "22M student 距 632M teacher 仅 0.015 EVA，吞吐快 26.6×"
+    },
+    {
+      "id": "2608.17896",
+      "title": "Dynamic Compression in Recurrent Networks",
+      "authors": ["Jyothish Pari", "Ryan Bahlous-Boldi", "Pulkit Agrawal"],
+      "submitted": "2026-08-18",
+      "categories": ["cs.LG"],
+      "url": "https://arxiv.org/abs/2608.17896",
+      "techniques": ["runtime_state_compression", "selective_rescanning"],
+      "highlight": "111k 动态 state 优于 3.1M single-pass state"
+    },
+    {
+      "id": "2608.17995",
+      "title": "AViTS: Adaptive Spatiotemporal Token Selection for Efficient Dynamic-Resolution Generation",
+      "authors": ["Haoran Qin", "Zhengan Yan", "Shikang Zheng", "Xiaobing Tu", "Jiacheng Liu", "Yuqi Lin", "Chang Zou", "JinShan Liu", "Peiliang Cai", "Xiantao Zhang", "Jinkui Ren", "Linfeng Zhang"],
+      "submitted": "2026-08-18",
+      "categories": ["cs.CV"],
+      "url": "https://arxiv.org/abs/2608.17995",
+      "techniques": ["pruning", "token_selection", "dynamic_resolution"],
+      "highlight": "训练免费 token 选择，FLUX 最高 9.78× latency 加速"
+    }
+  ]
+}
+
