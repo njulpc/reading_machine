@@ -1,0 +1,13 @@
+arxiv_id,submitted,direction,primary_category,keywords
+2608.18399,2026-08-19,knowledge_distillation,cs.CV,"attention transfer; knowledge distillation; ViT"
+2608.18410,2026-08-19,other,cs.LG,"sub-token compression; KV compression; VLA"
+2608.18484,2026-08-19,pruning,cs.CV,"sparse attention; training-free; video generation"
+2608.18486,2026-08-19,other,cs.CL,"KV cache compression; cross-layer mixing; Transformer"
+2608.18578,2026-08-19,quantization,cs.CL,"INT8; INT4; NF4; proactive interference"
+2608.18590,2026-08-19,knowledge_distillation,cs.CV,"knowledge distillation; frequency alignment; object detection"
+2608.18819,2026-08-19,pruning,cs.LG,"lottery ticket; parameter sparsity; GNN"
+2608.18849,2026-08-19,knowledge_distillation,cs.LG,"tabular foundation model; two-stage distillation; MLP"
+2608.18952,2026-08-19,knowledge_distillation,cs.IR,"reasoning distillation; editable memory; recommendation"
+2608.19046,2026-08-19,pruning,cs.AR,"dual sparsity; SNN; accelerator"
+2608.19098,2026-08-19,knowledge_distillation,cs.LG,"multi-teacher; on-policy distillation; token budget"
+2608.19181,2026-08-19,knowledge_distillation,cs.LG,"on-policy distillation; long context; verifier calibration"
