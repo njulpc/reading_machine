@@ -1,0 +1,91 @@
+{
+  "report_date": "2026-08-22",
+  "run_date": "2026-08-23",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-20T00:00:00+08:00",
+    "end": "2026-08-22T23:59:59+08:00",
+    "classification_basis": "arXiv /abs Submission history v1 timestamp"
+  },
+  "official_sources": [
+    "https://arxiv.org/list/cs.LG/new?show=2000",
+    "https://arxiv.org/list/cs.LG/recent?show=2000",
+    "https://arxiv.org/list/cs.CL/new?show=2000",
+    "https://arxiv.org/list/cs.CL/recent?show=2000",
+    "https://arxiv.org/list/cs.CV/new?show=2000",
+    "https://arxiv.org/list/cs.CV/recent?show=2000",
+    "https://arxiv.org/list/cs.AI/new?show=2000",
+    "https://arxiv.org/list/cs.AI/recent?show=2000",
+    "https://arxiv.org/list/cs.AR/new?show=2000",
+    "https://arxiv.org/list/cs.AR/recent?show=2000"
+  ],
+  "official_scan": {
+    "latest_announcement_date": "2026-08-21",
+    "announcement_unique_ids": 720,
+    "abs_pages_requested": 720,
+    "abs_pages_parsed": 720,
+    "abs_failures": 0,
+    "window_entries_by_v1_date": {
+      "2026-08-20": 248,
+      "2026-08-21": 0,
+      "2026-08-22": 0
+    }
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22"
+  ],
+  "historical_analyzed_ids_count": 223,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "related_papers_by_v1_date": {
+    "2026-08-20": 14,
+    "2026-08-21": 0,
+    "2026-08-22": 0
+  },
+  "window_related_papers_count": 14,
+  "excluded_duplicate_ids": [
+    {"arxiv_id": "2608.19536", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19540", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19639", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19662", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19670", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19748", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19758", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19837", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19894", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.19920", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.20052", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.20122", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.20210", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]},
+    {"arxiv_id": "2608.20334", "source_branches": ["origin/feature/arxiv-daily-2026-08-22"]}
+  ],
+  "new_papers_count": 0,
+  "total_papers": 0,
+  "papers": [],
+  "status": "completed",
+  "note": "截至 2026-08-23 02:10 CST，官方分类页最新公告为 2026-08-21；窗口内 14 篇相关论文均已有真实 tech_analysis.md，本次新增为 0。"
+}
