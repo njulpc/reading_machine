@@ -1,0 +1,82 @@
+{
+  "report_date": "2026-08-23",
+  "run_date": "2026-08-24",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-21T00:00:00+08:00",
+    "end": "2026-08-23T23:59:59+08:00",
+    "classification_basis": "arXiv /abs Submission history v1 timestamp"
+  },
+  "official_sources": [
+    "https://arxiv.org/list/cs.LG/new?show=2000",
+    "https://arxiv.org/list/cs.LG/recent?show=2000",
+    "https://arxiv.org/list/cs.CL/new?show=2000",
+    "https://arxiv.org/list/cs.CL/recent?show=2000",
+    "https://arxiv.org/list/cs.CV/new?show=2000",
+    "https://arxiv.org/list/cs.CV/recent?show=2000",
+    "https://arxiv.org/list/cs.AI/new?show=2000",
+    "https://arxiv.org/list/cs.AI/recent?show=2000",
+    "https://arxiv.org/list/cs.AR/new?show=2000",
+    "https://arxiv.org/list/cs.AR/recent?show=2000"
+  ],
+  "official_scan": {
+    "latest_announcement_date": "2026-08-21",
+    "current_list_pages_downloaded": 10,
+    "current_list_pages_complete": true,
+    "current_pages_byte_identical_to_full_scan_on": "2026-08-23",
+    "announcement_unique_ids": 720,
+    "prior_full_abs_pages_requested": 720,
+    "prior_full_abs_pages_parsed": 720,
+    "prior_full_abs_failures": 0,
+    "current_abs_spot_checks": ["2608.19210", "2608.20334", "2608.20338"],
+    "latest_v1_date_in_identical_listing": "2026-08-20",
+    "window_entries_by_v1_date": {
+      "2026-08-21": 0,
+      "2026-08-22": 0,
+      "2026-08-23": 0
+    }
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23"
+  ],
+  "historical_analyzed_ids_count": 223,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "related_papers_by_v1_date": {
+    "2026-08-21": 0,
+    "2026-08-22": 0,
+    "2026-08-23": 0
+  },
+  "window_related_papers_count": 0,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 0,
+  "total_papers": 0,
+  "papers": [],
+  "status": "completed",
+  "note": "截至 2026-08-24 02:07 CST，官方分类页最新公告为 2026-08-21；本窗口没有 v1 落入的条目，故相关、重复和新增均为 0。"
+}
