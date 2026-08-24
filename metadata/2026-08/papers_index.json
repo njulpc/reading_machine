@@ -1,0 +1,102 @@
+{
+  "report_date": "2026-08-24",
+  "run_date": "2026-08-25",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-22T00:00:00+08:00",
+    "end": "2026-08-24T23:59:59+08:00",
+    "classification_basis": "arXiv /abs Submission history v1 timestamp"
+  },
+  "official_sources": [
+    "https://arxiv.org/list/cs.LG/new?show=2000",
+    "https://arxiv.org/list/cs.LG/recent?show=2000",
+    "https://arxiv.org/list/cs.CL/new?show=2000",
+    "https://arxiv.org/list/cs.CL/recent?show=2000",
+    "https://arxiv.org/list/cs.CV/new?show=2000",
+    "https://arxiv.org/list/cs.CV/recent?show=2000",
+    "https://arxiv.org/list/cs.AI/new?show=2000",
+    "https://arxiv.org/list/cs.AI/recent?show=2000",
+    "https://arxiv.org/list/cs.AR/new?show=2000",
+    "https://arxiv.org/list/cs.AR/recent?show=2000"
+  ],
+  "official_scan": {
+    "checked_at": "2026-08-25T02:14:54+08:00",
+    "latest_announcement_date": "2026-08-24",
+    "list_pages_downloaded": 10,
+    "list_pages_complete": true,
+    "show_limit": 2000,
+    "all_list_unique_ids": 2610,
+    "new_page_unique_ids": 581,
+    "new_page_titles_and_abstracts_parsed": 581,
+    "new_page_abs_pages_requested": 581,
+    "new_page_abs_pages_parsed": 581,
+    "new_page_abs_failures": 0,
+    "broad_semantic_candidates_abs_checked": 139,
+    "latest_v1_date_in_current_announcement": "2026-08-21",
+    "window_entries_by_v1_date": {
+      "2026-08-22": 0,
+      "2026-08-23": 0,
+      "2026-08-24": 0
+    },
+    "recent_page_totals": {
+      "cs.LG": 924,
+      "cs.CL": 490,
+      "cs.CV": 655,
+      "cs.AI": 1166,
+      "cs.AR": 41
+    },
+    "new_page_sections": {
+      "cs.LG": {"total": 195, "new": 55, "cross": 57, "replacement": 83},
+      "cs.CL": {"total": 139, "new": 70, "cross": 17, "replacement": 52},
+      "cs.CV": {"total": 151, "new": 82, "cross": 21, "replacement": 48},
+      "cs.AI": {"total": 290, "new": 88, "cross": 112, "replacement": 90},
+      "cs.AR": {"total": 11, "new": 3, "cross": 3, "replacement": 5}
+    }
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24"
+  ],
+  "dedup_source_branches_count": 24,
+  "historical_analyzed_ids_count": 223,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "related_papers_by_v1_date": {
+    "2026-08-22": 0,
+    "2026-08-23": 0,
+    "2026-08-24": 0
+  },
+  "window_related_papers_count": 0,
+  "excluded_duplicate_ids": [],
+  "excluded_duplicate_sources": {},
+  "new_papers_count": 0,
+  "total_papers": 0,
+  "papers": [],
+  "status": "completed",
+  "note": "截至 2026-08-25 02:14 CST，官方 new 页 581 个唯一条目的 /abs 全部成功解析，v1 最晚为 2026-08-21；窗口三日官方可见、相关、重复和新增均为 0。"
+}
