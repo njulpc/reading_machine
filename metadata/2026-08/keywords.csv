@@ -1,0 +1,28 @@
+arxiv_id,title,submitted,technique,categories,keywords
+2608.23744,Calibration-Preserving Pruning: Compression as a Reliability Contract,2026-08-24,pruning,cs.LG;cs.CL,剪枝/稀疏
+2608.23752,"Too much of a good thing -- when knowledge distillation promotes overfitting, and how to avoid it",2026-08-24,knowledge_distillation,cs.CV;cs.AI,知识蒸馏
+2608.23794,Mixture of Channel Experts: Static Sparse Supports with Input-Adaptive Mixing for Pointwise Projections,2026-08-24,pruning,cs.LG;cs.CV,剪枝/稀疏
+2608.23816,AQLoRA: A Zero-Search Recipe for Fast Quantized LoRA Fine-Tuning,2026-08-24,quantization,cs.LG,量化
+2608.23834,Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention,2026-08-24,quantization,cs.AI,量化
+2608.23841,Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode,2026-08-24,other,cs.AR;cs.LG;cs.PF,其他压缩与高效推理
+2608.23843,PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression,2026-08-24,other,cs.LG,其他压缩与高效推理
+2608.23850,DDMS: Discriminative Distillation of Multi-view Foundational Features into Single-view Models,2026-08-24,knowledge_distillation,cs.CV,知识蒸馏
+2608.23879,Spatiotemporal Distillation via Recurrent Bottlenecks for Aortic Tracking,2026-08-24,knowledge_distillation,eess.IV;cs.CV;cs.LG,知识蒸馏
+2608.23880,LG-GER: Language-Guided Group Emotion Recognition via Multimodal Evidence Distillation,2026-08-24,knowledge_distillation,cs.CV,知识蒸馏
+2608.23911,PROOF-Gen: From Optimized Data to Better Distillation,2026-08-24,knowledge_distillation,cs.AI;cs.LG,知识蒸馏
+2608.23921,HAP: Head-Adaptive Visual Token Pruning via Cross-Modal Alignment,2026-08-24,pruning,cs.CV,剪枝/稀疏
+2608.23962,More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving,2026-08-25,other,cs.AI,其他压缩与高效推理
+2608.23987,Low-Latency Activation-Regularized Sparse Neural Operators with Distillation Assistance Towards Real-Time Edge-Deployable Virtual Sensing,2026-08-25,pruning,cs.LG,剪枝/稀疏
+2608.24063,VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference,2026-08-25,pruning,cs.CV;cs.AI,剪枝/稀疏
+2608.24070,"Compression Trinity: Exploring Sparsity, Quantization, and Low-Rank Approximations for LLM Compression",2026-08-25,other,cs.AI;cs.DC;cs.LG;cs.PF,其他压缩与高效推理
+2608.24114,AHEAD: Adaptive Hindsight with Environment-Augmented Distillation for Agentic RL,2026-08-25,knowledge_distillation,cs.AI,知识蒸馏
+2608.24173,SandwichQuant: Which Parameters Matter Before and After Quantization?,2026-08-25,quantization,cs.CV,量化
+2608.24207,PRQ-KMeans: Projection Residual Quantization for Semantic ID Tokenization,2026-08-25,quantization,cs.LG,量化
+2608.24293,Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation,2026-08-25,other,cs.CV,其他压缩与高效推理
+2608.24310,OPDSearch+: On-Policy Distillation with RL Refinement for Search-Augmented Reasoning,2026-08-25,knowledge_distillation,cs.AI,知识蒸馏
+2608.24469,Low-Rank Ternary Adaptation for Fine-Tuning Transformers,2026-08-25,quantization,cs.CV;cs.LG,量化
+2608.24615,Quantization Effects on Bangla Language Understanding in Large Language Models: A Systematic Evaluation,2026-08-25,quantization,cs.CL,量化
+2608.24646,On-Policy Self-Distillation in Diffusion Models,2026-08-25,knowledge_distillation,cs.CV,知识蒸馏
+2608.24674,TurboT2VA: Fast Large-Scale Text-to-Video-Audio Generation via Score-Regularized Consistency Distillation,2026-08-25,knowledge_distillation,cs.CV,知识蒸馏
+2608.24696,On-policy Distillation with Verifiable Reward,2026-08-25,knowledge_distillation,cs.LG;cs.AI,知识蒸馏
+2608.24759,IDeaL: Data-Free Multi-Teacher Distillation via Improved Dead Leaves,2026-08-25,knowledge_distillation,cs.CV,知识蒸馏
