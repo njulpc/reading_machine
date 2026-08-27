@@ -1,0 +1,31 @@
+arxiv_id,title,submitted,technique,categories,keywords
+2608.24973,Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation,2026-08-25,pruning,cs.LG;cs.AI;cs.ET,剪枝/稀疏
+2608.24987,D$^3$-MOPD: Adaptive Dynamic Domain ScheDuling for Efficient Multi-Teacher Distillation,2026-08-25,knowledge_distillation,cs.LG;cs.AI,知识蒸馏
+2608.25037,"Retrieve, Match, Escalate: Accurate and Scalable Product Linking with VLM-Distilled Cross-Encoders and Agentic VLMs",2026-08-25,knowledge_distillation,cs.AI;cs.CL;cs.DB;cs.IR,知识蒸馏
+2608.25053,"Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",2026-08-25,quantization,cs.AR;cs.AI;cs.DC;cs.PF,量化
+2608.25068,SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs,2026-08-25,pruning,cs.CV,剪枝/稀疏
+2608.25188,Transforms for LLM Quantization: The Great Inversion and Format Co-Design,2026-08-25,quantization,cs.LG;cs.IT,量化
+2608.25230,Trust the Mass: Forced Weights in KV-Cache Eviction,2026-08-25,other,cs.LG;cs.CL,其他压缩与高效推理
+2608.25332,Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More,2026-08-26,pruning,cs.CV,剪枝/稀疏
+2608.25354,Escaping Low-Dimensional Overlap: Multi-Task Model Merging via High-Dimensional Sparse Disentanglement,2026-08-26,other,cs.LG;cs.AI;cs.CL,其他压缩与高效推理
+2608.25356,Where to Look Matters: On-Policy Self-Distillation for Long-Video Understanding,2026-08-26,knowledge_distillation,cs.CV,知识蒸馏
+2608.25380,APT: Accelerating Diffusion Transformers via Attention Probability-Guided Pruning and Quantization,2026-08-26,quantization,cs.AR,量化
+2608.25386,Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Image Generation,2026-08-26,pruning,cs.CV,剪枝/稀疏
+2608.25539,CropCop: An Auditable 120-Class Plant-Health Model from Benchmark Reconstruction to a Quantised Runtime Artifact,2026-08-26,quantization,cs.CV;cs.LG,量化
+2608.25542,Reflection Steering: Disentangling Reflection from Reasoning in Activation Space for Token-Efficient Inference,2026-08-26,other,cs.LG;cs.CL,其他压缩与高效推理
+2608.25564,Physics-Informed Foresight Pruning for Sparse PINN Solvers of Nonlinear PDEs,2026-08-26,pruning,cs.LG;cs.AI,剪枝/稀疏
+2608.25575,MLLMCLIP: Feature-Level Distillation of MLLM for Robust Vision-Language Representations,2026-08-26,knowledge_distillation,cs.CV;cs.AI,知识蒸馏
+2608.25583,GRIP: Granular Reward-Guided Parameter Interpolation for Efficient Reasoning,2026-08-26,other,cs.CL,其他压缩与高效推理
+2608.25643,A Token-Level Analysis of Sampled-Token Reverse-KL On-Policy Distillation,2026-08-26,knowledge_distillation,cs.LG;cs.CL,知识蒸馏
+2608.25692,CloSeR: Unified Relational Distillation from Closed-Set Teachers for Category Discovery,2026-08-26,knowledge_distillation,cs.CV,知识蒸馏
+2608.25741,Why Does Graph Learning Fail to Fully Benefit from a Text Teacher?,2026-08-26,knowledge_distillation,cs.LG;cs.CL,知识蒸馏
+2608.25761,"Beam Search, Self-Consistency, and the Limits of Inference-Time Scaling for Grammar-Constrained Text-to-SQL in Small Language Models",2026-08-26,other,cs.CL;cs.AI,其他压缩与高效推理
+2608.25836,Socialized Detector Learning: Trajectory-Guided and Reciprocal Distillation for Heterogeneous Object Detectors,2026-08-26,knowledge_distillation,cs.CV,知识蒸馏
+2608.25936,"One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation",2026-08-26,knowledge_distillation,cs.LG;cs.AI;cs.CL,知识蒸馏
+2608.25941,When Pruning Meets Interpretability: Preserving Sparse Autoencoder Robustness in LLMs,2026-08-26,pruning,cs.LG,剪枝/稀疏
+2608.25977,When Personality Meets Quantization: A Layer-wise MBTI Analysis of Quantized LLMs,2026-08-26,quantization,cs.CL,量化
+2608.26019,DualOPSD: Adaptive Privileged Teachers for On-Policy Self-Distillation,2026-08-26,knowledge_distillation,cs.LG;cs.AI,知识蒸馏
+2608.26049,RTLGuard: A Lightweight Teacher-Student Defense for Poisoned RTL Code Generation Models,2026-08-26,knowledge_distillation,cs.CR;cs.AR,知识蒸馏
+2608.26052,How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention,2026-08-26,other,cs.LG;cs.AI;cs.CL,其他压缩与高效推理
+2608.26069,Group-Shared Low-Rank Approximation for Mobile-Efficient Pointwise Convolutions in Large-Kernel CNNs,2026-08-26,other,cs.LG,其他压缩与高效推理
+2608.26070,Prefix Sliding for efficient test-time scaling,2026-08-26,other,cs.CL;cs.AI;cs.LG,其他压缩与高效推理

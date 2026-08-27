@@ -1,0 +1,736 @@
+{
+  "report_date": "2026-08-27",
+  "run_date": "2026-08-28",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-25T00:00:00+08:00",
+    "end": "2026-08-27T23:59:59+08:00",
+    "classification_basis": "arXiv /abs Submission history v1 date"
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27"
+  ],
+  "dedup_source_branches_count": 27,
+  "historical_analyzed_ids_count": 269,
+  "historical_metadata_ids_count": 272,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "related_papers_by_v1_date": {
+    "2026-08-25": 22,
+    "2026-08-26": 23,
+    "2026-08-27": 0
+  },
+  "window_related_papers_count": 45,
+  "excluded_duplicate_ids": [
+    "2608.23962",
+    "2608.23987",
+    "2608.24063",
+    "2608.24070",
+    "2608.24114",
+    "2608.24173",
+    "2608.24207",
+    "2608.24293",
+    "2608.24310",
+    "2608.24469",
+    "2608.24615",
+    "2608.24646",
+    "2608.24674",
+    "2608.24696",
+    "2608.24759"
+  ],
+  "excluded_duplicate_sources": {
+    "2608.23962": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.23987": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24063": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24070": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24114": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24173": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24207": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24293": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24310": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24469": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24615": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24646": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24674": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24696": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ],
+    "2608.24759": [
+      "origin/feature/arxiv-daily-2026-08-27"
+    ]
+  },
+  "new_papers_count": 30,
+  "total_papers": 30,
+  "papers": [
+    {
+      "arxiv_id": "2608.24973",
+      "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation",
+      "authors": [
+        "Peng Liu",
+        "Huibing Zeng",
+        "Yiqun Zhang",
+        "Yang Yi",
+        "Jigang Wu"
+      ],
+      "abstract": "With the rapid development of large-scale pre-trained language models based on Transformer architectures, their high computational and memory costs have become a major obstacle to deployment, especially in resource-constrained environments. Traditional pruning methods typically depend on full gradient-based importance estimation, and they necessitate prior finetuning of the model to achieve satisfactory performance. This process often results in intolerable resource consumption. This paper proposes REP-LIE, a new approach to enable resource-efficient pruning during the process of finetuning. REP-LIE leverages the gradients of LoRA low-rank matrices to estimate the importance of weights without requiring full gradient computation. To address the inherent randomness in importance estimation, a stability score is introduced, serving as the basis for iterative pruning of unimportant model parameters. The pruned model is further finetuned through lightweight updates, eliminating the need for full-parameter optimization in the process of finetuning. Extensive experiments on both medium-scale encoder models and large-scale generative models (LLaMA-7B and Mistral-7B) demonstrate that REP-LIE still achieves competitive performance compared to existing approaches.",
+      "submitted": "2026-08-25",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.ET"
+      ],
+      "technique": "pruning",
+      "url": "https://arxiv.org/abs/2608.24973",
+      "analysis_path": "papers/2026-08/pruning/2608.24973/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.24987",
+      "title": "D$^3$-MOPD: Adaptive Dynamic Domain ScheDuling for Efficient Multi-Teacher Distillation",
+      "authors": [
+        "Zechen Sun",
+        "Zhiwei Zhang",
+        "Fei Zhao",
+        "Juntao Li",
+        "Mu Chuan",
+        "Huayu Deng",
+        "Guojian Zhan",
+        "Wenliang Chen",
+        "Yao Hu",
+        "Min Zhang"
+      ],
+      "abstract": "Multi-teacher on-policy distillation (MOPD) distills several domain-expert teachers into a single student by minimizing per-domain reverse-KL divergence on the student's own rollouts. Existing approaches typically fix the per-domain data mixture before training, overlooking the fact that different domains converge at substantially different rates: some plateau early while others continue to improve throughout the training budget. A fixed mixture therefore wastes compute on fast-converging domains and undertrains slower-converging ones. To address this, we propose D$^3$-MOPD (Dynamic Domain ScheDuling for MOPD), a zero-overhead scheduler that repurposes the per-domain reverse-KL signal already produced during training to adapt the domain mixture online. Running asynchronously outside the training process, an off-process watcher periodically tracks each domain's KL trajectory, estimates remaining headroom and current improvement rate, and accordingly adjusts the domain sampling ratios without altering the core training loop. Our D$^3$-MOPD scales naturally to arbitrary numbers of domains, and the expected benefit grows as more domains introduce more diverse convergence patterns for the scheduler to exploit. On a Qwen3.6-35B-A3B student distilled from four domain-expert teachers, D$^3$-MOPD closes 97% of the average student-to-teacher performance gap, compared with 63% for vanilla MOPD, reaches the same peak performance with an approximately 3$\\times$ reduction in rollout steps, and surpasses the specialist teachers on three of seven benchmarks.",
+      "submitted": "2026-08-25",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.24987",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.24987/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25037",
+      "title": "Retrieve, Match, Escalate: Accurate and Scalable Product Linking with VLM-Distilled Cross-Encoders and Agentic VLMs",
+      "authors": [
+        "Jian Wang",
+        "Steven Xu",
+        "Sanjyot Thete",
+        "Maryam Barouti",
+        "Tom Tang",
+        "Elaine Wu",
+        "Charu Sareen",
+        "Kyle MacDonald"
+      ],
+      "abstract": "Product linking, the entity-resolution task of mapping merchant product records to canonical catalog products, consolidates fragmented listings so downstream search, recommendation, and advertising see one clean entry per product. At marketplace scale, billions of noisy, multi-category records must be resolved against tens of millions of canonical products, where scoring every candidate with a single model is either too weak for the hard cases or too costly for the easy ones. We present a production retrieve-then-match cascade that spends computation in proportion to difficulty: retrieval surfaces plausible matches, a lightweight text cross-encoder auto-resolves the high-confidence majority, and an agentic multimodal vision-language model settles the ambiguous remainder by inspecting product images and issuing web searches for evidence that is in neither record. The cross-encoder is distilled from millions of dual-VLM-consensus labels, retiring human annotation from the training set, and is calibrated to auto-accept links at a 98% precision bar validated against a smaller operator-certified audit. The agent is a self-hosted open-weight model that reaches a closed frontier VLM's precision at a four-point recall cost (88% versus 92%) for roughly one-seventh the per-pair cost, with no fine-tuning. Per-pair cost spans nearly five orders of magnitude from the cheap cross-encoder to the frontier VLM, so escalating only the hard tail to the agent raises end-to-end link coverage from the cheap stage's 68% to 77%.",
+      "submitted": "2026-08-25",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.DB",
+        "cs.IR"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25037",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25037/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25053",
+      "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
+      "authors": [
+        "Amir Taherin",
+        "Sana Taghipour Anvari",
+        "Charles Amante",
+        "Yixiao Chen",
+        "Ruben Noroian",
+        "Zlatan Feric",
+        "Nicolas Bohm Agostini",
+        "Pu Zhao",
+        "José Cano",
+        "Bin Ren",
+        "Yanzhi Wang",
+        "David Kaeli"
+      ],
+      "abstract": "Edge LLM deployment is shaped by more than model size and precision: inference backend, hardware platform, memory traffic, and power management all affect latency and efficiency. We present Hydra, a common-schema, phase-aware workload characterization framework for LLM inference on edge SoCs. Hydra instruments HuggingFace Transformers and this http URL with a shared per-prompt timing schema and fuses those records with hardware telemetry, enabling a multi-dimensional characterization of performance, system-resource utilization, and efficiency across prefill and decode phases. Using Hydra, we evaluate three consecutive edge System-on-Chip (SoC) generations (AGX Xavier, AGX Orin, and AGX Thor), 13 instruction-tuned LLMs from seven families, five execution formats, and consider input/output-length sensitivity. The resulting artifact contains roughly 107K per-prompt records and is publicly released with Hydra. Our analysis shows that aggregate latency alone hides key deployment effects: backend structure changes where latency is introduced, quantization reduces memory traffic and energy but does not predict power monotonically, and SoC generation changes how utilization and efficiency should be interpreted. By connecting phase-level timing with system-resource utilization and efficiency metrics, Hydra enables reproducible, phase-aware characterization of edge LLM inference. Hydra's source code and the collected per-prompt trace corpus are available open-source at: this https URL",
+      "submitted": "2026-08-25",
+      "categories": [
+        "cs.AR",
+        "cs.AI",
+        "cs.DC",
+        "cs.PF"
+      ],
+      "technique": "quantization",
+      "url": "https://arxiv.org/abs/2608.25053",
+      "analysis_path": "papers/2026-08/quantization/2608.25053/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25068",
+      "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+      "authors": [
+        "Ali Bahri",
+        "Hang Li",
+        "Hongliang Li",
+        "Zhitang Chen"
+      ],
+      "abstract": "Depth pruning removes entire Transformer blocks to reduce the inference cost of large language models, but disrupts the hidden-state distributions expected by downstream layers, leading to significant accuracy loss. We introduce SHIFT-LLM, a training-free post-pruning correction framework that inserts a Linear Residual Adapter (LRA) at each pruning site. Each LRA preserves the identity pathway of the original residual block and adds a lightweight affine residual correction. This correction is calibrated via closed-form least-squares regression on a small held-out set, without gradient computation, to approximate the missing residual update produced by the pruned block. Together with the preserved identity pathway, the resulting LRA output approximates the hidden state produced by the original block, thereby mitigating the distributional mismatch introduced by layer removal while avoiding the expensive attention and feed-forward computations of the removed blocks. The resulting LRAs support low-rank factorization and exact merging across consecutive pruned layers for additional compression, and combine naturally with parameter-efficient fine-tuning for further recovery beyond fine-tuning the pruned model alone. Experiments on five model families, six layer-selection criteria, and seven zero-shot benchmarks show that SHIFT-LLM consistently recovers accuracy lost to depth pruning across most configurations, achieving gains up to +15.7 points on Llama-3.1-8B-Instruct while requiring only a few hundred calibration samples and no gradient computation.",
+      "submitted": "2026-08-25",
+      "categories": [
+        "cs.CV"
+      ],
+      "technique": "pruning",
+      "url": "https://arxiv.org/abs/2608.25068",
+      "analysis_path": "papers/2026-08/pruning/2608.25068/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25188",
+      "title": "Transforms for LLM Quantization: The Great Inversion and Format Co-Design",
+      "authors": [
+        "Ehsan Jokar"
+      ],
+      "abstract": "Most competitive 4-bit LLM research pipelines now open the same way: apply a linear, function-preserving transform (rotation, scaling, permutation, non-orthogonal affine) so the outlier mass sits more favorably against the group scales, and only then round. Yet we are aware of no survey dedicated to this transform stage, and its literature is quietly re-deriving an older theory. We identify and formalize the principle that organizes it, the Great Inversion: allocation-flexible coding rewards energy concentration, whereas the grouped shared-scale quantization a deployed matrix instruction performs rewards within-group flattening. Classical transform coding (1963: decorrelate, allocate bits, quantize) spends different bits per coordinate at a fixed total rate; for a Gaussian source at high rate the Karhunen-Loeve transform's concentration minimizes distortion. A deployed operand tile instead carries one absolute-maximum scale per group and equal bits everywhere, with no allocation; on a uniform grid that objective rewards flattening, approached by Hadamard incoherence. We prove that opposition under within-group majorization: the prescriptions point in opposite directions, each backed by a proof against its own objective, and for a generic spectrum no optimality guarantee transfers. A second axis is the number format: the non-uniform FP4 grid makes flattening buy less, MXFP4's power-of-two block scale still rewards a rotation confined to that block, and NVFP4's mantissa-carrying scale largely removes that pull, so the target pole depends jointly on allocation regime and format. We survey 200 works to a June 2026 cutoff; classify 43 transform methods by structure, data-awareness, searched-versus-constructed, and runtime cost; record, where reported, how they compose with GPTQ rounding; distill a first-choice guide by deployment regime; and close with the open problems it exposes.",
+      "submitted": "2026-08-25",
+      "categories": [
+        "cs.LG",
+        "cs.IT"
+      ],
+      "technique": "quantization",
+      "url": "https://arxiv.org/abs/2608.25188",
+      "analysis_path": "papers/2026-08/quantization/2608.25188/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25230",
+      "title": "Trust the Mass: Forced Weights in KV-Cache Eviction",
+      "authors": [
+        "Jack Shi",
+        "Jerry Gu"
+      ],
+      "abstract": "Every deployed sparse-attention or KV-cache-eviction rule keeps a subset of the keys, discards the rest, and renormalizes the attention weights over the kept set. Enumerating the exact best subset under that constraint on $168{,}192$ attention rows from five models shows that keeping the largest weights is already near-optimal, since the best subset closes only a median $2$ to $5\\%$ of the remaining gap to full attention. If selection closes this little, published margins between eviction methods must come from elsewhere, so we measure the bytes each method holds. In the shared evaluation pipeline, the strongest query-agnostic methods hold the full cache because their per-head selections are stored as masks, and only ragged per-head storage frees that memory. Enforcing a nominal budget on one fixed selection costs $14$ to $62$ benchmark points. We trace an $87.6$-point retrieval margin to rankings computed while the question is visible. ContourKV, a training-free allocator built from the dropped-mass statistic, wins $93$ of $160$ paired comparisons against that state of the art and loses $22$ at the byte count of the budget-enforcing baselines, and it ties the strongest of them.",
+      "submitted": "2026-08-25",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.25230",
+      "analysis_path": "papers/2026-08/other/2608.25230/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25332",
+      "title": "Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More",
+      "authors": [
+        "Chaofang Ma",
+        "Lin Jiang",
+        "Carol Jingyi Li",
+        "Xingyu Liu",
+        "Zeyu Li",
+        "Jiang Xu",
+        "Wei Zhang"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have exhibited impressive performance across diverse visual scenarios. However, this success comes at the cost of explosive growth in visual tokens, which imposes substantial memory and computational overhead during inference, ultimately increasing latency. To improve VLM inference efficiency, a typical class of visual token pruning methods estimates token importance by aggregating attention scores across all heads in the pruning layer of the Large Language Model (LLM) backbone and prunes tokens based on aggregated scores. However, in this paper, we reveal a compelling phenomenon: the capability to pinpoint critical visual tokens is concentrated within a small fraction of heads. Aggregation exclusively on these heads can improve task performance. Inspired by this observation, we propose ProViP, a training-free progressive visual token pruning framework. ProViP first removes redundant visual tokens based on the embedding similarity of input tokens before reasoning of the LLM backbone, and then further prunes tokens during reasoning via head-aware pruning. Experiments demonstrate that ProViP delivers outstanding task performance and inference efficiency. For instance, when applied to LLaVA-1.5-7B, ProViP retains 95.9% of the original performance and achieves 1.62x inference speedup under an 88.9% pruning ratio.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CV"
+      ],
+      "technique": "pruning",
+      "url": "https://arxiv.org/abs/2608.25332",
+      "analysis_path": "papers/2026-08/pruning/2608.25332/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25354",
+      "title": "Escaping Low-Dimensional Overlap: Multi-Task Model Merging via High-Dimensional Sparse Disentanglement",
+      "authors": [
+        "Yihang Zhang",
+        "Shengke Sun",
+        "Junjie Wen",
+        "Feng Zeng"
+      ],
+      "abstract": "Model merging provides an efficient way to construct multi-task generalist models without additional training, but its performance often degrades under severe task interference. Task interference in model merging primarily stems from \\textit{superposition}, where task-specific features become entangled within the parameter space. This entanglement renders conventional decomposition methods insufficient for effectively isolating useful task directions from interfering components. In this paper, we propose a sparse-representation-based merging framework that uses Sparse Autoencoders (SAEs) to project task vectors into a high-dimensional sparse feature space, enabling feature-level disentanglement before fusion. To reduce computational overhead, we further introduce a lightweight Group-Ranked Zeroth-Order Optimizer (GR-ZOO) to identify task-critical layers for selective merging. Experiments on both Qwen2.5-1.5B and Qwen2.5-7B demonstrate that our method consistently outperforms representative baselines, including Task Arithmetic, TIES-Merge, DARE, Fisher-Merge,and several recent training-free merging methods, across mathematical reasoning, code generation, instruction following, and general knowledge tasks. In a highly conflicting four-task setting on Qwen2.5-1.5B, our method further achieves a 2.78\\% improvement over the strongest baseline.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.25354",
+      "analysis_path": "papers/2026-08/other/2608.25354/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25356",
+      "title": "Where to Look Matters: On-Policy Self-Distillation for Long-Video Understanding",
+      "authors": [
+        "Kaishen Wang",
+        "Dongdi Zhao",
+        "Yijun Liang",
+        "Dingqiang Ye",
+        "Ruibo Chen",
+        "Heng Huang",
+        "Di Fu"
+      ],
+      "abstract": "Vision-language models (VLMs) have made substantial progress in long-video understanding, with standard backbone models typically answering questions from frames sampled across the full video. However, as videos become longer, the full-video context inevitably contains more question-irrelevant temporal content, which can distract the model from the evidence needed to answer a specific question. We empirically find that focusing the visual input on short annotated clue intervals containing question-relevant evidence consistently improves prediction accuracy across model scales compared with using the corresponding full videos, while requiring fewer input frames. Based on this finding, we introduce Clue-OPSD, a clue-privileged on-policy self-distillation framework for long-video understanding. During training, a full-video student learns from a self-teacher conditioned on the corresponding clue interval by aligning their next-token distributions along student-generated trajectories. Clue-OPSD thus uses clue intervals as privileged supervision without relying on ground-truth answer labels, while requiring no clue annotations or additional modules at inference time. Extensive experiments across multiple long-video understanding benchmarks and Qwen3.5 model scales demonstrate consistent improvements over the corresponding backbone models and strong performance against supervised post-training baselines.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CV"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25356",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25356/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25380",
+      "title": "APT: Accelerating Diffusion Transformers via Attention Probability-Guided Pruning and Quantization",
+      "authors": [
+        "Sungyeob Yoo",
+        "Seeyeon Kim",
+        "Joonyong Park",
+        "Seunghee Han",
+        "Joo-Young Kim"
+      ],
+      "abstract": "Recent advances in generative AI have significantly increased the demand for high-resolution image and video generation, positioning diffusion models as a core technology. Among them, Diffusion Transformers (DiTs) have emerged as the state-of-the-art (SOTA) models due to their scalability and output quality. However, self-attention in DiTs incurs significant computational overhead, leading to excessively long latency as the complexity grows with the fourth power of the output resolution. While prior works have attempted to mitigate this cost using sparsity and quantization techniques, they fall short of effectively reducing the computational cost in high-resolution DiTs. In this paper, we present APT, a software-hardware co-designed accelerator for high-resolution DiTs. APT leverages attention probabilities as a unified importance metric to jointly optimize computation through fine-grained pruning and adaptive precision scaling. At the algorithm level, we propose Attention Probability-guided Adaptive Dual Thresholding (APDT), which dynamically performs element selection and precision assignment using dual thresholds. To ensure compatibility with memory-efficient FlashAttention, we introduce Timestep-Aware FlashAttention (TAFA), which predicts attention probabilities across timesteps by exploiting temporal similarity. At the architecture level, we co-design a specialized accelerator that efficiently supports irregular sparsity and dual-precision execution, featuring dynamic mask management, address translation, dual-precision compute units, and a tile-based dataflow. Finally, we evaluate APT on SOTA DiT models, including PixArt-$\\alpha$, Stable Diffusion 3, and FLUX. APT achieves up to 8.16$\\times$ speedup and 14.98$\\times$ higher energy efficiency over NVIDIA A100, and up to 3.01$\\times$ speedup and 2.04$\\times$ higher energy efficiency over EXION, a SOTA diffusion model accelerator.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.AR"
+      ],
+      "technique": "quantization",
+      "url": "https://arxiv.org/abs/2608.25380",
+      "analysis_path": "papers/2026-08/quantization/2608.25380/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25386",
+      "title": "Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Image Generation",
+      "authors": [
+        "Guo Niu",
+        "Xiongfei Yao",
+        "Teng Wang",
+        "Nannan Zhu"
+      ],
+      "abstract": "Autoregressive (AR) image generation has shown strong potential for scalable high-fidelity synthesis by modeling images as discrete token sequences. However, traditional next token prediction (NTP) continues to suffer from sparse and myopic supervision, insufficiently discriminative representations, and high training cost caused by dense computation over the full token sequence. To address these issues, we propose multi-token autoregressive (MTAR), a unified training framework that improves autoregressive image generation from three aspects: prediction objectives, representation regularization, and training efficiency. Specifically, MTAR introduces multi-token prediction (MTP) to alleviate the sparsity and myopia of traditional NTP by imposing joint supervision on multiple future tokens; employs token-level contrastive regularization (TCR) to explicitly enhance the separability of sampled token representations and thereby improve representation discriminability; and incorporates semantic dropping (SD) as a semantics-aware training acceleration strategy to reduce redundant computation on low-information tokens while preserving informative learning signals. All three components are applied only during training and introduce no additional overhead during autoregressive inference. On ImageNet, MTAR achieves a better balance between generation quality and training efficiency. Compared with LlamaGen, MTAR achieves up to 0.95 lower FID and 39\\% faster training. Moreover, even with only 1/3 of the training iterations, it still attains performance comparable to or better than the baseline, substantially reducing training time.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CV"
+      ],
+      "technique": "pruning",
+      "url": "https://arxiv.org/abs/2608.25386",
+      "analysis_path": "papers/2026-08/pruning/2608.25386/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25539",
+      "title": "CropCop: An Auditable 120-Class Plant-Health Model from Benchmark Reconstruction to a Quantised Runtime Artifact",
+      "authors": [
+        "Rana Muhammad Ahmed",
+        "Sabahat Abbas"
+      ],
+      "abstract": "A plant-health score can appear precise while resting on duplicated image families, a long-tailed label space, or a runtime file that was never evaluated. We present CropCop, a closed-set recognition system spanning 120 operational plant-health classes and an evidence chain from corpus reconstruction to direct execution of the final quantised artifact. Starting from 117,546 audited images, we rejected the inherited partition after confirming 3,233 duplicate relationships across split boundaries and froze a 109,107-image benchmark with zero crossings among the audited trusted leakage groups and a 151.7 largest-to-smallest class ratio. A fully fine-tuned DINOv3 ConvNeXt-Tiny reference achieved 98.51% accuracy and 96.87% macro-F1 on the locked internal test. A compact MobileNetV4 Conv-Medium derivative achieved 98.46% accuracy and 96.27% macro-F1 without being presented as evidence for a new distillation method. Validation-only post-training quantisation selected dynamic activations with per-channel weights, and the final 22.60 MiB ExecuTorch/XNNPACK PTE achieved 98.46% accuracy and 96.23% macro-F1 when executed directly. Only six of 16,363 top-1 decisions changed between the converted INT8 graph and the PTE, while paired analysis showed a modest class-balanced loss; an exploratory post hoc fruit-label slice localized a larger recall decline than aggregate accuracy revealed. CropCop establishes strong leakage-controlled internal recognition and software-runtime fidelity; it does not establish performance on unseen farms, camera pipelines, or physical Android hardware.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "technique": "quantization",
+      "url": "https://arxiv.org/abs/2608.25539",
+      "analysis_path": "papers/2026-08/quantization/2608.25539/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25542",
+      "title": "Reflection Steering: Disentangling Reflection from Reasoning in Activation Space for Token-Efficient Inference",
+      "authors": [
+        "Jiarui Hu",
+        "Zhiyuan Wen",
+        "Xiaoyun Liu",
+        "Jiaxing Shen",
+        "Yu Yang"
+      ],
+      "abstract": "Large reasoning models often produce reasoning traces with verification, revision, and backtracking. When reflection merely re-checks established results, it wastes reasoning tokens and increases latency. Most existing reflection steering methods add a label-derived mean-difference direction across preset layers, but its entanglement with reasoning and length signals destabilizes the accuracy-efficiency trade-off. In this paper, we propose Reflection Steering, a training-free framework for controlling reflection-associated computation within LLMs by disentangling reflection-related activations from general reasoning. Specifically, we contrast reflective and non-reflective hidden states at each LLM layer, denoise the resulting reflection directions with PCA, and orthogonalize them against general-reasoning directions. To limit downstream amplification from early-layer interventions, we calibrate each layer across multiple intervention strengths on a small set, retain only stable layers, and apply bounded projection removal to their residual-stream activations. We conduct extensive experiments across two public benchmarks and three open-weight LLMs against state-of-the-art activation-steering baselines. Results show that Reflection Steering reduces reasoning tokens by 16.9% on average across six matched settings. Besides, our method further introduces a bounded reflection intervention-strength parameter $\\alpha$, enabling deployment-time adjustment to balance token savings, accuracy, and generation stability.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.25542",
+      "analysis_path": "papers/2026-08/other/2608.25542/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25564",
+      "title": "Physics-Informed Foresight Pruning for Sparse PINN Solvers of Nonlinear PDEs",
+      "authors": [
+        "Ahmad Ishaque Karimi",
+        "Uvini Balasuriya Mudiyanselage",
+        "Kookjin Lee"
+      ],
+      "abstract": "Physics-informed neural networks (PINNs) often rely on over-parameterized models to optimize coupled solution and differential-residual objectives, leaving unclear how much capacity is necessary and what pruning should preserve. We study foresight pruning at initialization for sparse PirateNet PDE solvers. Standard neural tangent kernel spectrum-aware pruning (NTK-SAP) aims to preserve output-side training dynamics but may overlook parameters whose main influence arises through derivatives in the governing equations. We introduce physics-informed spectrum-aware pruning (PI-SAP), which assigns saliency using sensitivity of the PDE residual. Experiments on the Gray-Scott equations, complex Ginzburg-Landau equation, Burgers' equation, and linear convection equation show that PI-SAP more consistently preserves Gray-Scott residual fidelity and is competitive under aggressive sparsity. However, no criterion is uniformly optimal across equations or sparsity levels. Small-batch PINN-NTK diagnostics further show that residual fidelity, solution accuracy, and kernel conditioning are distinct objectives, motivating pruning methods that explicitly balance solution-side and residual-side training dynamics during optimization.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "technique": "pruning",
+      "url": "https://arxiv.org/abs/2608.25564",
+      "analysis_path": "papers/2026-08/pruning/2608.25564/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25575",
+      "title": "MLLMCLIP: Feature-Level Distillation of MLLM for Robust Vision-Language Representations",
+      "authors": [
+        "Jongsuk Kim",
+        "Qiyu Wu",
+        "Zhuoyuan Mao",
+        "Hiromi Wakaki",
+        "Junmo Kim",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Pretrained vision-language models such as CLIP excel at zero-shot recognition but often fail at compositionality, particularly attribute-object and relational structures. Recent studies mitigate this issue by augmenting training with synthetic hard negatives generated by a cascade of large language models and text-to-image models, which incurs substantial pipeline overhead. We instead propose MLLMCLIP, a heterogeneous distillation framework that transfers multimodal knowledge directly from a generative Multimodal Large Language Model (MLLM) teacher into a discriminative CLIP student, bypassing synthetic data entirely. To bridge the architectural mismatch between the two paradigms, we introduce an attention-based per-layer token selection and a CKA-based distillation loss. Compared to prior CLIP-enhancement methods, MLLMCLIP achieves state-of-the-art compositional accuracy while delivering consistent gains on standard zero-shot classification and image-text retrieval, showing that feature-level distillation strengthens both compositional and general vision-language representation capability.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25575",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25575/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25583",
+      "title": "GRIP: Granular Reward-Guided Parameter Interpolation for Efficient Reasoning",
+      "authors": [
+        "Lam So",
+        "Canhui Wu",
+        "Han Lin"
+      ],
+      "abstract": "Reasoning-oriented large language models often achieve strong problem-solving performance by generating long chains of thought, but this behavior substantially increases inference cost and latency. In contrast, instruction-tuned models tend to answer more concisely, yet often lack comparable reasoning ability. This accuracy-efficiency mismatch motivates a lightweight approach that combines the strengths of both models without full model retraining. In this paper, we propose GRIP (Granular Reward-guided Interpolation of Parameters), a reward-guided parameter interpolation framework for efficient reasoning. Given a reasoning model and an instruction model with identical architectures, GRIP assigns learnable interpolation ratios to individual modules and optimizes only these ratios while keeping both source models frozen. The interpolation ratios are trained with a reward signal that favors responses that are both correct and concise. Experiments show that GRIP achieves a better accuracy-efficiency trade-off than fixed or search-based merging baselines and further reveals module-wise fusion patterns associated with efficient reasoning.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CL"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.25583",
+      "analysis_path": "papers/2026-08/other/2608.25583/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25643",
+      "title": "A Token-Level Analysis of Sampled-Token Reverse-KL On-Policy Distillation",
+      "authors": [
+        "Bing Shao",
+        "Jiazheng Zhang",
+        "Long Ma",
+        "Yujiong Shen",
+        "Senjie Jin",
+        "Xin Guo",
+        "Yuming Yang",
+        "Mingxu Chai",
+        "Zhiheng Xi",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "abstract": "On-policy distillation (OPD) supervises a student on its own trajectories with token-level signals from a frozen teacher, yet how a sampled loss allocates updates across tokens remains poorly understood. We analyze the gradient of the per-token K2 estimator of reverse KL with respect to the student logits. The $\\ell_1$ norm of this gradient factorizes into the absolute teacher--student log-probability gap and a student-side softmax factor that grows as the sampled token becomes less likely under the student. In our math-distillation runs, these per-token norms are highly non-uniform: low-student-probability tokens account for a disproportionate share of their sum and are also enriched in large teacher--student gaps. As a lightweight intervention suggested by this analysis, we study Surprise-aware Reweighting (SuRe), a detached, bounded weighting rule that further amplifies this existing allocation. Across two Qwen3 student scales, SuRe improves several math metrics over vanilla OPD and shows no clear degradation on the selected out-of-domain benchmarks. Our primary contribution is therefore a gradient-level characterization of reverse-KL OPD trained with the K2 estimator, with SuRe as one empirical instantiation.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25643",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25643/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25692",
+      "title": "CloSeR: Unified Relational Distillation from Closed-Set Teachers for Category Discovery",
+      "authors": [
+        "Yuanpei Liu",
+        "Zhenqi He",
+        "Jialu Tang",
+        "Kai Han"
+      ],
+      "abstract": "Generalized Category Discovery (GCD) is an intriguing open-world problem that has garnered increasing attention: given partially labelled data, the goal is to correctly recognize known classes while discovering coherent novel categories from unlabelled samples. Recent GCD methods typically adapt foundation models by jointly optimizing supervised classification and unsupervised discovery objectives on mixed labelled and unlabelled data. While effective, this coupled training can entangle closed-set recognition and open-set discovery, leading to objective conflict and biased predictions, and may disturb the semantic geometry of pretrained representations under limited labels and noisy pseudo-labels. We propose CloSeR, a simple plug-and-play framework that injects Closed-Set Relational knowledge into GCD training. CloSeR first builds a domain-adapted closed-set teacher by tuning lightweight block-wise adapters on labelled known-class data while keeping the foundation model backbone frozen, thereby preserving pretrained priors at low training cost. It then transfers the teacher's knowledge to downstream GCD via Unified Relational Distillation (URD), which distills complementary global sample-to-prototype relations to anchor known-class semantics and local sample-to-sample relations to preserve neighborhood structure, using separate feature pathways to reduce optimization interference. CloSeR is head-agnostic and readily integrates with both parametric and non-parametric GCD methods. Extensive experiments with DINO and DINOv2 backbones on six benchmarks (CIFAR-10/100, ImageNet-100, CUB, Stanford-Cars, and FGVC-Aircraft) show consistent gains over GCD baselines, achieving state-of-the-art performance. Project page: this https URL",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CV"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25692",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25692/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25741",
+      "title": "Why Does Graph Learning Fail to Fully Benefit from a Text Teacher?",
+      "authors": [
+        "Fumiaki Kimino",
+        "Ryoma Sato"
+      ],
+      "abstract": "Graph neural networks (GNNs) are widely used to represent complex interactions and relationships among entities. We investigate a multimodal model that combines two complementary ideas: a self-supervised method that enables a GNN encoder pretrained on one dataset to operate directly on another dataset with a different node-feature dimensionality, without rebuilding the model or realigning the data; and an alternating optimization method that updates a language-model module in an E-step and a GNN module in an M-step, rather than jointly training a large language model and a GNN end to end on a large graph. Despite expectations, the combined model did not sufficiently improve predictive performance. We identify six factors: (1) an external anchor in the E-step has a strength-safety trade-off: a weak anchor has little effect, whereas an overly strong anchor can damage the graph representation; (2) the knowledge of the E-step teacher is not injected directly into the GCN embedding Z; (3) the representation space constructed in the M-step is not optimized for the same objective as the E-step teacher space, resulting in a compromise representation for target classification; (4) GCN propagation averages a node's own textual information with information from its neighbors; (5) cosine alignment does not guarantee axes that are discriminative for classification, so stronger geometric alignment with the E-step text anchor need not sufficiently improve the target decision boundary or classification performance; and (6) the force that preserves the source-side self-supervised geometry in the M-step conflicts with the force that moves the representation toward the E-step teacher. We support these observations through a staged set of experiments that varies the influence of the E-step.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25741",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25741/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25761",
+      "title": "Beam Search, Self-Consistency, and the Limits of Inference-Time Scaling for Grammar-Constrained Text-to-SQL in Small Language Models",
+      "authors": [
+        "Ty Chermsirivatana",
+        "John MacCormick"
+      ],
+      "abstract": "One common trade-off in the use of large language models involves reducing the size of the model while increasing the amount of computation at inference time, for example by using a wider beam search. In this paper, we examine the constrained case of this \"model size vs. inference compute\" trade-off, in which the model outputs are constrained by a strict grammar at inference time. Our results demonstrate that the constrained trade-off behaves differently from the unconstrained trade-off. We investigate the task of converting a prose query into an equivalent SQL query (text-to-SQL). Performance is evaluated on the Spider text-to-SQL benchmark, using the Qwen2.5-Instruct model family ranging in size from 0.5B to 7B parameters, all at 4-bit precision. We experiment with two approaches to varying inference compute: (i) beam search with a variable number of beams; and (ii) sample+vote, i.e., sampling several constrained outputs and then voting on their execution results, where the number of samples is varied. On the 1034-example development set, we find that: (a) both beam search and sample+vote improve accuracy, especially on smaller model sizes; (b) the \"model size vs.\\ inference compute\" trade-off is not advantageous in this experiment, because moving to a larger model size typically results in higher accuracy than increasing inference compute on the same model size; (c) beam search outperforms sample+vote at a matched inference budget. This latter result is of particular interest since it contrasts with the findings of the unconstrained trade-off.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.25761",
+      "analysis_path": "papers/2026-08/other/2608.25761/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25836",
+      "title": "Socialized Detector Learning: Trajectory-Guided and Reciprocal Distillation for Heterogeneous Object Detectors",
+      "authors": [
+        "Weihao Li",
+        "Yunqi Zhu",
+        "Zhihe Fan",
+        "Ruipu Zhao",
+        "Boan Tao",
+        "Xinjie Yao",
+        "Yan Fan",
+        "Pengfei Zhu"
+      ],
+      "abstract": "Object detection knowledge is fragmented across independently trained, heterogeneous detectors with complementary category supports. In socialized learning, this knowledge resides in a society, and learning aims to evolve the society collectively through exchange. However, aggregation-based socialization does not explicitly plan transfer order, whereas progressive multi-teacher distillation considers order but remains a one-way student enhancement in a shared category space. Building on Socialized Learning, we formulate Socialized Detector Learning (SDL) for heterogeneous, category-specialized object detectors and propose Trajectory-Guided and Reciprocal Distillation (TGRD).TGRD estimates directed operational Inter-Detector Transfer Difficulty (IDTD) from held-out feature-alignment residuals, precomputes a fixed score table, and greedily constructs a carrier trajectory. Along the trajectory, knowledge is progressively consolidated into a union-category carrier and then returned to experts through reciprocal transfer. A conditional proxy-certificate analysis shows that, under stated assumptions, the progressive certificate is no larger than an aggregated-target counterpart. On MS COCO with four heterogeneous experts and two carrier initializations, final carriers outperform epoch-matched simultaneous aggregation controls by 2.6 AP in both settings. Reciprocal detectors attain 20.8--28.4 AP on previously unsupported categories while remaining within 1.3 AP of original expert-specific performance. These results support order-aware progressive consolidation followed by reciprocal transfer as a viable mechanism for detector-society evolution.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CV"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25836",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25836/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25936",
+      "title": "One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation",
+      "authors": [
+        "Justin Robert",
+        "Raheel Qader"
+      ],
+      "abstract": "On-policy distillation trains a language model on its own generations while a teacher scores them token by token. It combines the dense supervision of imitation learning with the on-policy sampling of reinforcement learning. But it requires a second, larger model to act as teacher. On-Policy Self-Distillation (OPSD) removes that cost. The teacher is the model itself, conditioned on privileged information the student will not have at test time, such as a reference solution, a plan, or environment feedback. The teacher is no stronger than the student, only better informed. Early results were promising, with accuracy comparable to reinforcement learning at a fraction of the generated tokens. But the same asymmetry that produces the signal also biases it. One failure mode now dominates the field: collapse, the progressive narrowing of the set of reasoning paths the model can produce. Collapse is not specific to OPSD, though privileged information aggravates it. This review treats collapse as a symptom governed by three levers: (i) where the signal is applied, that is, how tokens are weighted; (ii) what the teacher is shown, that is, the nature of the privileged information; and (iii) when the signal changes, that is, the teacher's dynamics and the decay of guidance. We restrict our scope to mathematical reasoning, where the method originated and where its failure modes are best documented. We report no new experiments. The contribution is structural: a shared vocabulary for phenomena named differently across papers, and a clear line between what is settled and what is still disputed.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.25936",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.25936/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25941",
+      "title": "When Pruning Meets Interpretability: Preserving Sparse Autoencoder Robustness in LLMs",
+      "authors": [
+        "Suchit Gupte",
+        "Xueru Zhang",
+        "Mohammad Mahdi Khalili"
+      ],
+      "abstract": "Sparse autoencoders (SAEs) are widely used to interpret the internal representations of large language models (LLMs), yet their reliability under post-hoc model compression remains poorly understood. We present a systematic study of how pruning affects SAE behavior and theoretically show that, for a fixed SAE, its impact is governed by perturbation energy, a covariance-weighted norm. This perspective exposes a key limitation of magnitude pruning: by ignoring activation geometry, it distorts the learned representation space and degrades SAE functionality. Activation-aware methods such as Wanda and SparseGPT, in contrast, implicitly control perturbation energy and are therefore substantially more robust at preserving SAE behavior. We further reveal a consistent structural vulnerability across all pruning methods: middle layers are significantly more sensitive to pruning than early or late layers. Guided by this insight, we propose a layer-wise sparsity allocation strategy, achieving lower perplexity under the same average pruning sparsity. Experiments across four model architectures validate our theoretical findings. Code is publicly available at this https URL .",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG"
+      ],
+      "technique": "pruning",
+      "url": "https://arxiv.org/abs/2608.25941",
+      "analysis_path": "papers/2026-08/pruning/2608.25941/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.25977",
+      "title": "When Personality Meets Quantization: A Layer-wise MBTI Analysis of Quantized LLMs",
+      "authors": [
+        "Yao Fu",
+        "Lijia Huang",
+        "Xiaomin Li",
+        "Runchao Li",
+        "Yu Yin",
+        "Kenneth A. Loparo"
+      ],
+      "abstract": "Personality is increasingly important in large language models (LLMs), as it shapes users' trust, engagement, and emotional experiences. While the Myers--Briggs Type Indicator (MBTI) has emerged as a common framework for assessing LLMs' personality, existing studies focus primarily on full-precision models and evaluate only final outputs. They overlook the widespread deployment of quantized LLMs requiring low memory footprints, whose personality traits remain underexplored. In this work, we present a systematic MBTI analysis of open-source LLMs across multiple precisions, including mainstream 4-bit methods (GPTQ, AWQ) and extreme 2-bit settings (AQLM variants). Beyond output-level evaluation, we examine how personality emerges across layers through option-level entropy and confidence-gap dynamics, and introduce Uncertainty-Amplified Layer Decoding (UALD) to study decoding-induced personality drift at inference time. Our results reveal a key insight: LLMs' personality is not a static property, but an emergent, layer-dependent decision process sensitive to quantization, prompting, and decoding. Specifically, we find that (1) ENFJ remains dominant across model families and precisions; (2) 4-bit quantization largely preserves coarse personality structure, while 2-bit quantization disrupts fine-grained prompt consistency and cross-precision agreement; (3) personality decisions emerges in upper layers, following substantial ambiguity in early layers; and (4) inference decoding can shift personality, while personality-aligned conditioning improves robustness. These findings provide a new perspective on the behavioral reliability of quantized LLMs and highlight the importance of considering internal dynamics and inference strategies in personality-sensitive chatbot applications.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CL"
+      ],
+      "technique": "quantization",
+      "url": "https://arxiv.org/abs/2608.25977",
+      "analysis_path": "papers/2026-08/quantization/2608.25977/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.26019",
+      "title": "DualOPSD: Adaptive Privileged Teachers for On-Policy Self-Distillation",
+      "authors": [
+        "Yutong Chen",
+        "Guangfu Guo",
+        "Zhichao Xu",
+        "Kunpeng Liu"
+      ],
+      "abstract": "On-policy self-distillation (OPSD) uses a privileged copy of the student model to provide dense supervision without an external teacher. OPSD keeps this privileged teacher fixed, even though the student distribution and output style change during training. We propose DualOPSD, an asymmetric alternating framework that adapts both policies. The student first learns from the privileged teacher. The teacher then moves toward the updated student distribution on the same student trajectory. This update makes later supervision responsive to the learner and does not require another rollout. On Qwen3-8B in non-thinking mode, DualOPSD improves avg@12 over OPSD by 23.61, 13.89, and 10.00 points on AIME 2024, AIME 2025, and HMMT 2025. Results at 1.7B and 4B show that the accuracy gain depends on model scale. Across all three scales, DualOPSD reduces truncation. The 4B diagnostic also shows lower KL in both directions between the teacher and student.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.26019",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.26019/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.26049",
+      "title": "RTLGuard: A Lightweight Teacher-Student Defense for Poisoned RTL Code Generation Models",
+      "authors": [
+        "Mahshid Rezakhani",
+        "Kimia Azar",
+        "Hadi Kamali"
+      ],
+      "abstract": "The rapid advancement of large language models (LLMs) is driving a shift toward automated register transfer level (RTL) code generation, enabling designers to translate high-level specs. into synthesizable hardware. However, this reliance on pre-trained (3rd-party) fine-tuned models may introduce critical trust issues, as the training data and adaptation process of these models are often opaque. Thus, adversaries (even model providers) may embed hidden backdoor threats during fine-tuning, allowing malicious behavior, e.g., hardware Trojans, to be triggered by seemingly benign prompts given by victim user at inference time. In this paper, we introduce RTLGuard, to mitigate such a trust issue in AI-enabled IC supply chain. Rather than prohibitive computational cost of full-parameter retraining, RTLGuard leverages a teacher-student framework designed to sanitize compromised RTL generation models by (1) fine-tuning a small-scale, \"clean\" teacher model on a limited set of trusted RTL data, (2) guiding the poisoned target model via a composite teacher-student objective, and (3) incorporating feature alignment and knowledge distillation to suppress malicious behaviors. Our experiments across various LLM architectures demonstrate that RTLGuard significantly reduces the Attack Success Rate (ASR) while preserving the functional correctness and synthesizability of the generated RTL code.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CR",
+        "cs.AR"
+      ],
+      "technique": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.26049",
+      "analysis_path": "papers/2026-08/knowledge_distillation/2608.26049/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.26052",
+      "title": "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention",
+      "authors": [
+        "Gerard Conangla Planes"
+      ],
+      "abstract": "Choosing the rank of a low-rank adaptation (LoRA) update is usually an empirical task. In this paper, we provide a task-dependent theory of the approximation error achievable at each LoRA rank for Transformer attention. We fix a pretrained attention head, a target attention function, and a distribution over inputs from the downstream task, and bound the smallest expected Kullback--Leibler (KL) error achievable by a rank-$r$ query LoRA update. When target attention probabilities are bounded away from zero, we prove a lower bound of the error proportional to $\\psi(\\|d\\|_2)$, where $d$ is the difference between candidate and target attention scores and $\\psi(t)=\\min\\{t^2,t\\}$. We also prove an unconditional upper bound $\\min\\{\\|d\\|_2^2/4,\\sqrt2\\|d\\|_2\\}$. Under explicit realizability, geometry, and moment conditions, we then bound the best rank-$r$ error between an explicit multiple of $\\psi(\\sqrt{T_r})$ and $\\min\\{T_r/4,\\sqrt{2T_r}\\}$, where $T_r$ is the downstream-weighted tail energy of the target update. We also provide target-Fisher bounds when candidate scores remain within a fixed range of the target scores, and an unrestricted lower bound when a subset of tokens carries most of the probability mass. These spectral bounds describe finite-score approximation. We then construct explicit families in which softmax saturation makes the rank required to match the attention function strictly smaller than the rank required to match the finite logits. Finally, we extend the analysis to fused multi-head LoRA and joint query/key updates, exposing the effects of rank sharing and query/key factorization constraints.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.26052",
+      "analysis_path": "papers/2026-08/other/2608.26052/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.26069",
+      "title": "Group-Shared Low-Rank Approximation for Mobile-Efficient Pointwise Convolutions in Large-Kernel CNNs",
+      "authors": [
+        "Hao Luo",
+        "Yiting Yang",
+        "Wenyi Zhao",
+        "Man Jiang",
+        "Zhijun Lin",
+        "Ghulam Mohiuddin",
+        "Ting Jiang",
+        "Kunming Luo",
+        "Zihao Zhang",
+        "Qingsen Yan",
+        "Guoqing Wang",
+        "Wei Dong",
+        "Peng Wang"
+      ],
+      "abstract": "Large-kernel Convolutional Neural Networks (CNNs) deliver remarkable performance in vision tasks by significantly expanding receptive fields, yet their quadratic parameter growth critically impedes storage-efficient edge deployment. While existing efficient architectures adopt parameter-efficient depthwise separable convolution backbones that leverage techniques like low-rank approximation and weight sharing to compress depthwise convolutions, we identify a critical oversight: pointwise convolutions dominate parameter volume (>87% in models like RepLKNet-31B) and constitute the primary deployment bottleneck on resource-constrained edge devices. This results in prohibitive storage costs and severe memory-loading constraints on resource-limited devices (e.g., smartphones with 4-12 GB Random Access Memory (RAM)). To overcome this, we propose Channel Group-Shared (CGS) low-rank approximation, a novel Singular Value Decomposition (SVD)-based parameter-sharing strategy. CGS constructs a structured low-rank paradigm isomorphic to SVD decomposition, comprising shared (high-parameter-cost) down/up-projection matrices across channel groups within a layer and channel-group-specific (low-parameter-cost) scalable diagonal matrices. This group-sharing design achieves significant parameter reduction. Extensive experiments demonstrate that large-kernel CNNs (RepLKNet, ConvNeXt, SLaK) enhanced with CGS strike an empirically favorable balance between competitive performance and substantially reduced storage costs. Crucially, by alleviating storage constraints, reducing memory bandwidth pressure during loading, and minimizing model loading latency, CGS enables the feasible deployment of pre-trained large-kernel CNN models on edge devices, thereby bridging the gap between high-performance vision models and practical edge deployment.",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.LG"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.26069",
+      "analysis_path": "papers/2026-08/other/2608.26069/tech_analysis.md"
+    },
+    {
+      "arxiv_id": "2608.26070",
+      "title": "Prefix Sliding for efficient test-time scaling",
+      "authors": [
+        "Niklas Muennighoff",
+        "Zhengyang Wang",
+        "Zeyi Chen",
+        "Weijia Shi",
+        "Binyuan Hui",
+        "John Yang",
+        "Dapeng Jiang",
+        "Mika Senghaas",
+        "Fares Obeid",
+        "Johannes Hagemann",
+        "Sami Jaghouar",
+        "Ludwig Schmidt",
+        "Percy Liang",
+        "Jason Wei",
+        "Andrew Y. Ng",
+        "Luke Zettlemoyer",
+        "Yejin Choi",
+        "Mike Lewis"
+      ],
+      "abstract": "Test-time scaling uses extra test-time compute to improve performance, such as letting language models reason longer when solving a problem. As models keep the entire reasoning trace in memory via full attention, hard tasks that need long thinking can be prohibitively expensive. However, we find most intermediate reasoning tokens lose importance as the model continues reasoning. This calls into question whether retaining them is worth the cost. Based on this insight, we propose Prefix Sliding, which discards tokens during reasoning that are not part of the prefix or the window of the last few thousand tokens. The prefix has key instructions and tools available to the model, while the most recent tokens are the current reasoning the model is working on. This caps the total memory requirement regardless of how long the model reasons, allowing for efficient long-horizon test-time scaling. Without training, Prefix Sliding can make existing models 3x faster while maintaining performance. Training with Prefix Sliding using reinforcement learning can achieve better performance by enabling scaling to reasoning traces beyond a hundred thousand tokens. Ablations show Prefix Sliding outperforms summarizing intermediate tokens or vanilla sliding window. Our code is at this https URL",
+      "submitted": "2026-08-26",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "technique": "other",
+      "url": "https://arxiv.org/abs/2608.26070",
+      "analysis_path": "papers/2026-08/other/2608.26070/tech_analysis.md"
+    }
+  ],
+  "status": "completed"
+}
