@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Transform/format co-design test on a real Qwen3-0.6B weight tile."""
+"""Format-aware Hadamard test plus full-model INT4/MXFP4 reference quantization."""
 import argparse
 import glob
 import os
@@ -10,13 +10,14 @@ import torch
 E2M1 = torch.tensor([0.0, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0])
 
 
-def checkpoint(arg=None):
+def model_dir(arg=None):
     if arg:
         return arg
-    hits = glob.glob('/private/tmp/hf_arxiv/models--Qwen--Qwen3-0.6B/snapshots/*/model.safetensors')
-    hits += glob.glob(os.path.expanduser('~/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/*/model.safetensors'))
+    hits = glob.glob(os.path.expanduser("~/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/*"))
+    hits += glob.glob("/private/tmp/hf_arxiv/models--Qwen--Qwen3-0.6B/snapshots/*")
+    hits = [x for x in hits if os.path.exists(os.path.join(x, "tokenizer.json"))]
     if not hits:
-        raise FileNotFoundError('Pass --checkpoint')
+        raise FileNotFoundError("Pass --model-dir")
     return hits[0]
 
 
@@ -24,65 +25,129 @@ def fwht(x):
     y = x.float().clone()
     n = y.shape[-1]
     if n & (n - 1):
-        raise ValueError('last dimension must be a power of two')
+        raise ValueError("last dimension must be a power of two")
     h = 1
     while h < n:
-        shape = y.shape[:-1] + (-1, 2, h)
-        z = y.reshape(shape)
+        z = y.reshape(y.shape[:-1] + (-1, 2, h))
         a, b = z[..., 0, :].clone(), z[..., 1, :].clone()
         z[..., 0, :], z[..., 1, :] = a + b, a - b
         y = z.reshape_as(y)
         h *= 2
-    return y / n ** 0.5
+    return y / n**0.5
+
+
+def blocks(x, group):
+    flat = x.float().flatten()
+    pad = (-flat.numel()) % group
+    padded = torch.nn.functional.pad(flat, (0, pad)) if pad else flat
+    return padded.view(-1, group), flat.numel()
 
 
 def int4_group(x, group=128):
-    flat = x.flatten()
-    blocks = flat.view(-1, group)
-    scale = blocks.abs().amax(1, keepdim=True).clamp_min(1e-12) / 7
-    return (blocks / scale).round().clamp(-7, 7).mul(scale).view_as(x)
+    b, n = blocks(x, group)
+    scale = b.abs().amax(1, keepdim=True).clamp_min(1e-12) / 7
+    return (b / scale).round().clamp(-7, 7).mul(scale).flatten()[:n].view_as(x)
 
 
-def mxfp4_group(x, group=32, qmax=7.25):
-    flat = x.flatten(); blocks = flat.view(-1, group)
-    maximum = blocks.abs().amax(1, keepdim=True).clamp_min(1e-30)
-    power = torch.ceil(torch.log2(maximum / qmax))
-    scale = torch.pow(2.0, power)
-    norm = blocks / scale
-    mag = norm.abs()
-    idx = (mag[..., None] - E2M1).abs().argmin(-1)
-    return (E2M1[idx] * norm.sign() * scale).view_as(x)
+def fp4_absmax_group(x, group=128):
+    """Ideal E2M1 with a real-valued AbsMax scale (grid-only comparison)."""
+    b, n = blocks(x, group)
+    scale = b.abs().amax(1, keepdim=True).clamp_min(1e-30) / 6
+    normalized = b / scale
+    idx = (normalized.abs()[..., None] - E2M1).abs().argmin(-1)
+    restored = E2M1[idx] * normalized.sign() * scale
+    return restored.flatten()[:n].view_as(x)
+
+
+def mxfp4_group(x, group=32):
+    """MXFP4 reference: E2M1 elements and the paper's floor-selected E8M0 scale."""
+    b, n = blocks(x, group)
+    maximum = b.abs().amax(1, keepdim=True).clamp_min(2.0**-126)
+    scale = torch.pow(2.0, torch.floor(torch.log2(maximum)) - 2)
+    normalized = b / scale
+    idx = (normalized.abs()[..., None] - E2M1).abs().argmin(-1)
+    restored = E2M1[idx] * normalized.sign() * scale
+    return restored.flatten()[:n].view_as(x)
+
+
+def randomized_group_hadamard(x, group=128, seed=42):
+    b, n = blocks(x, group)
+    generator = torch.Generator().manual_seed(seed)
+    signs = torch.randint(0, 2, b.shape, generator=generator).mul(2).sub(1)
+    rotated = fwht(b * signs)
+    recovered = fwht(rotated) * signs
+    assert torch.allclose(b, recovered, atol=2e-5, rtol=2e-5)
+    return rotated.flatten()[:n].view_as(x)
 
 
 def metric(label, x, q):
     mse = (x - q).square().mean().item()
-    rel = (x - q).norm().div(x.norm()).item()
-    print(f'{label}_mse={mse:.10e} {label}_relative_l2={rel:.8f}')
-    return mse
+    sqnr = 10 * torch.log10(x.square().mean() / (x - q).square().mean().clamp_min(1e-30)).item()
+    print(f"{label}_mse={mse:.10e} {label}_sqnr_db={sqnr:.6f}")
+    return mse, sqnr
+
+
+def quantize_model_(model, fmt):
+    quantizer = int4_group if fmt == "int4" else mxfp4_group
+    count = elements = 0
+    with torch.no_grad():
+        for name, module in model.named_modules():
+            if isinstance(module, torch.nn.Linear) and name != "lm_head":
+                module.weight.copy_(quantizer(module.weight).to(module.weight.dtype))
+                count += 1
+                elements += module.weight.numel()
+    return count, elements
 
 
 def main():
-    p = argparse.ArgumentParser(); p.add_argument('--checkpoint'); p.add_argument('--size', type=int, default=1024)
+    p = argparse.ArgumentParser()
+    p.add_argument("--model-dir")
+    p.add_argument("--prompt", default="变换、分组尺度和数值格式必须共同设计。")
+    p.add_argument("--full-model-format", choices=("int4", "mxfp4"), default="mxfp4")
     args = p.parse_args()
-    from safetensors import safe_open
-    with safe_open(checkpoint(args.checkpoint), framework='pt', device='cpu') as f:
-        key = next(k for k in f.keys() if k.endswith('layers.0.self_attn.q_proj.weight'))
-        w = f.get_tensor(key).float()[:args.size, :args.size].contiguous()
-    if w.shape[1] & (w.shape[1]-1):
-        raise ValueError('size must select a power-of-two input dimension')
-    rotated = fwht(w)
-    recovered = fwht(rotated)
-    assert torch.allclose(w, recovered, atol=2e-6, rtol=2e-6)
-    raw_peak = w.abs().view(-1, 128).amax(1).mean().item()
-    rot_peak = rotated.abs().view(-1, 128).amax(1).mean().item()
-    print(f'weight={key} tile={tuple(w.shape)} raw_group_peak_mean={raw_peak:.8f} rotated_group_peak_mean={rot_peak:.8f}')
-    raw_i = metric('raw_int4', w, int4_group(w))
-    rot_i = metric('rotated_int4', rotated, int4_group(rotated))
-    raw_m = metric('raw_mxfp4', w, mxfp4_group(w))
-    rot_m = metric('rotated_mxfp4', rotated, mxfp4_group(rotated))
-    print(f'int4_rotation_mse_ratio={rot_i/raw_i:.8f} mxfp4_rotation_mse_ratio={rot_m/raw_m:.8f}')
-    assert torch.isfinite(torch.tensor([raw_i, rot_i, raw_m, rot_m])).all()
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    directory = model_dir(args.model_dir)
+    tokenizer = AutoTokenizer.from_pretrained(directory, local_files_only=True)
+    model = AutoModelForCausalLM.from_pretrained(
+        directory, local_files_only=True, dtype=torch.float32
+    ).eval()
+    encoded = tokenizer(args.prompt, return_tensors="pt")
+    ids, attention_mask = encoded["input_ids"], encoded["attention_mask"]
+    captured = {}
+    handle = model.model.layers[0].register_forward_pre_hook(
+        lambda _module, inputs: captured.setdefault("hidden", inputs[0].detach().float())
+    )
+    with torch.inference_mode():
+        reference = model(input_ids=ids, attention_mask=attention_mask, use_cache=False).logits[:, -1].float()
+    handle.remove()
+
+    activation = captured["hidden"].reshape(-1, captured["hidden"].shape[-1])
+    rotated = randomized_group_hadamard(activation, group=128)
+    _, raw_int_sqnr = metric("raw_int4_g128", activation, int4_group(activation, 128))
+    _, rot_int_sqnr = metric("rotated_int4_g128", rotated, int4_group(rotated, 128))
+    _, raw_fp_sqnr = metric("raw_fp4_real_scale_g128", activation, fp4_absmax_group(activation, 128))
+    _, rot_fp_sqnr = metric("rotated_fp4_real_scale_g128", rotated, fp4_absmax_group(rotated, 128))
+    _, raw_mx_sqnr = metric("raw_mxfp4_g32", activation, mxfp4_group(activation, 32))
+    _, rot_mx_sqnr = metric("rotated_mxfp4_g32", rotated, mxfp4_group(rotated, 32))
+    print(
+        f"rotation_gain_db int4={rot_int_sqnr-raw_int_sqnr:.6f} "
+        f"ideal_fp4={rot_fp_sqnr-raw_fp_sqnr:.6f} mxfp4={rot_mx_sqnr-raw_mx_sqnr:.6f}"
+    )
+
+    count, elements = quantize_model_(model, args.full_model_format)
+    with torch.inference_mode():
+        quantized = model(input_ids=ids, attention_mask=attention_mask, use_cache=False).logits[:, -1].float()
+        generated = model.generate(input_ids=ids, attention_mask=attention_mask, max_new_tokens=1, do_sample=False, use_cache=True)
+    cosine = torch.nn.functional.cosine_similarity(reference, quantized, dim=-1).item()
+    print(
+        f"full_model_format={args.full_model_format} layers={count} elements={elements} "
+        f"logits_mae={(reference-quantized).abs().mean().item():.8f} cosine={cosine:.8f} "
+        f"generated={tokenizer.decode(generated[0, ids.shape[1]:])!r}"
+    )
+    assert count == 196 and elements == 440401920
+    assert torch.isfinite(quantized).all() and torch.isfinite(torch.tensor(cosine))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
