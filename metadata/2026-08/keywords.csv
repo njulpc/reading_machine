@@ -1,0 +1,39 @@
+arxiv_id,title,submitted,technique,categories,keywords
+2608.26206,Ankhdjet: An Open-Source Compiler for Mask-Programmed Ternary Compute-in-ROM on an Open PDK,2026-08-26,quantization,cs.AR;cs.ET,量化
+2608.26220,MeshReduce-U: Compiler-Guided Communication Reduction for Irregular Neural Reductions on Mesh NoCs,2026-08-26,other,cs.AR;cs.DC,其他压缩与高效推理
+2608.26233,Pruning Binarized Neural Networks: A Dedicated Framework and Globally Weighted Algorithms,2026-08-26,quantization,cs.LG,量化
+2608.26374,Survival-Guided Length Control for Efficient Diffusion Language Models,2026-08-26,other,cs.CL,其他压缩与高效推理
+2608.26389,LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression,2026-08-26,other,cs.CL;cs.LG,其他压缩与高效推理
+2608.26550,SPEAR: Distilling Domain-Adaptive Reasoning Skeletons via Sequential Symbolic Alignment in Reinforcement Learning,2026-08-27,knowledge_distillation,cs.CL,知识蒸馏
+2608.26556,Dynamical phase selection controls compute scaling in looped transformers,2026-08-27,other,cs.LG,其他压缩与高效推理
+2608.26574,Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference,2026-08-27,other,cs.CL,其他压缩与高效推理
+2608.26580,Visual Information-Guided Parallel Decoding for Diffusion Multimodal Large Language Models,2026-08-27,other,cs.CV;cs.CL,其他压缩与高效推理
+2608.26581,Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs,2026-08-27,quantization,cs.LG,量化
+2608.26641,Information-Guided Frontier Decoding: Contextual Utility-Driven Commitment in dMLLMs,2026-08-27,other,cs.CL,其他压缩与高效推理
+2608.26650,Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs,2026-08-27,pruning,cs.CL,剪枝/稀疏
+2608.26676,FOCUS & RePAIR: Mitigating Text Degeneration via Token-Level Guidance for Pruned Large Language Models,2026-08-27,pruning,cs.CL;cs.AI;cs.LG,剪枝/稀疏
+2608.26684,Reason in the Words You Speak: Idiolectal Paraphrasing Off-Policy Traces for Reasoning Distillation in VideoLLMs,2026-08-27,knowledge_distillation,cs.CV,知识蒸馏
+2608.26720,Parameter Efficient Continual Learning for Sparse Event-Based Transformers,2026-08-27,other,cs.CV,其他压缩与高效推理
+2608.26735,Preserving General Capabilities during Domain Specialization with Uncertainty-Calibrated MOPD,2026-08-27,knowledge_distillation,cs.CL,知识蒸馏
+2608.26771,Cross-Architecture Knowledge Distillation from a Vision Foundation Model to a Lightweight Visual State Space Model for Tea Leaf Disease Classification,2026-08-27,knowledge_distillation,cs.CV,知识蒸馏
+2608.26806,Multi-Image Visual Token Pruning in Large Visual Language Models,2026-08-27,pruning,cs.CV,剪枝/稀疏
+2608.26848,MedFG-VQA: Low-Frequency Memory and Graph Attention for Lightweight Medical VQA,2026-08-27,other,cs.CV;cs.AI,其他压缩与高效推理
+2608.26872,Self-OPD: On-Policy Distillation for Flow Matching Models without Teacher,2026-08-27,knowledge_distillation,cs.CV,知识蒸馏
+2608.26926,A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models,2026-08-27,quantization,cs.LG,量化
+2608.26948,KISS-GS: 3D Gaussian Splatting Compression Kept Simple,2026-08-27,other,cs.CV,其他压缩与高效推理
+2608.26949,A Table Is Worth 64 Tokens: Pixel-level Compression for Multi-Table Document Question Answering,2026-08-27,other,cs.AI,其他压缩与高效推理
+2608.26958,Scaling Model-Generated Distillation Data Can Make Latent Teacher Traits More Recoverable,2026-08-27,knowledge_distillation,cs.LG;cs.CL,知识蒸馏
+2608.26965,ClusterAttention: A training-free speedup of bidirectional attention,2026-08-27,other,cs.LG;cs.CV,其他压缩与高效推理
+2608.26973,Squeezing More from Limited Data with Recursive Transformers,2026-08-27,other,cs.CL;cs.LG,其他压缩与高效推理
+2608.27065,Video-OPSD: Exploiting Privileged Visual Evidence for On-Policy Self-Distillation in Video Large Language Models,2026-08-27,knowledge_distillation,cs.CV,知识蒸馏
+2608.27128,TwinKV: A Composable Repair Pass for KV Cache Eviction via Pairwise Key Redundancy,2026-08-27,other,cs.CL,其他压缩与高效推理
+2608.27198,Knowledge Distillation Driven Semantic NOMA with GAN Refinement for 6G Robotic Vehicle Networks,2026-08-27,knowledge_distillation,cs.IT;cs.CV;eess.IV,知识蒸馏
+2608.27206,PACE: A Unified Condense-and-Extract Paradigm for Fast VLM Inference,2026-08-27,pruning,cs.CV;cs.AI,剪枝/稀疏
+2608.27241,Importance Scoring of Transformer Attention Heads in Learning Tabular Data,2026-08-27,pruning,cs.LG,剪枝/稀疏
+2608.27254,Circuit Condensation: Post-Training that Concentrates a Behavior's Causal Circuit,2026-08-27,other,cs.LG,其他压缩与高效推理
+2608.27339,Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting,2026-08-27,other,cs.LG;cs.CL;cs.IT,其他压缩与高效推理
+2608.27370,Puro-2B: Poor Lab's Qwen2-1.5B Trained on RTX 5090 within $5090,2026-08-27,other,cs.CL;cs.LG,其他压缩与高效推理
+2608.27395,LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics,2026-08-27,pruning,cs.CV;cs.AI,剪枝/稀疏
+2608.27409,Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms,2026-08-27,knowledge_distillation,cs.CL,知识蒸馏
+2608.27413,Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling,2026-08-27,other,cs.IR;cs.LG;cs.SI,其他压缩与高效推理
+2608.27448,TTPO: Test-Time Policy Optimization,2026-08-27,knowledge_distillation,cs.CL,知识蒸馏
