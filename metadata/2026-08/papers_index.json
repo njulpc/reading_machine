@@ -1,0 +1,80 @@
+{
+  "report_date": "2026-08-31",
+  "run_date": "2026-09-01",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-29T00:00:00+08:00",
+    "end": "2026-08-31T23:59:59+08:00",
+    "complete_natural_days": [
+      "2026-08-29",
+      "2026-08-30",
+      "2026-08-31"
+    ],
+    "classification_basis": "arXiv /abs Submission history v1 date"
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31"
+  ],
+  "dedup_source_branches_count": 31,
+  "historical_analyzed_ids_count": 337,
+  "historical_metadata_ids_count": 340,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "retrieval_audit": {
+    "official_list_pages_count": 10,
+    "official_unique_ids_count": 2761,
+    "official_abs_pages_verified_count": 2761,
+    "title_abstract_history_complete_count": 2761,
+    "current_new_all_sections_unique_ids_count": 599,
+    "current_new_and_cross_unique_ids_count": 370,
+    "latest_list_announcement_date": "2026-08-31",
+    "latest_v1_date": "2026-08-28",
+    "all_page_declared_actual_group_counts_match": true,
+    "all_pages_below_show_limit": true
+  },
+  "related_papers_by_v1_date": {
+    "2026-08-29": 0,
+    "2026-08-30": 0,
+    "2026-08-31": 0
+  },
+  "window_related_papers_count": 0,
+  "excluded_duplicate_ids": [],
+  "excluded_duplicate_sources": {},
+  "new_papers_count": 0,
+  "total_papers": 0,
+  "papers": [],
+  "status": "completed_no_public_window_entries"
+}
