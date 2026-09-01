@@ -33,3 +33,13 @@ python3 scripts/quantization/2608.30181/demo.py
   "relative_l2": 0.09268416083882929
 }
 ```
+
+## 代码审查与验证（2026-09-02）
+
+本节覆盖上方初始自报结果。对照官方 PDF §2.2、§6.1 和 Table 14，结论为**部分一致**。
+
+- 原实现只量化权重并人为保留 >5.5×scale 的 outlier；论文依靠 GN/SGA gate 抑制 outlier，报告的是 experts-only W4A4 NVFP4，block 示例为 16 元素，不存在该保留分支。
+- 修复：全部 196 个 Qwen Linear 使用 block-16 E2M1，block scale 以 E4M3FN 编码；所有 Linear 输入通过 pre-hook 做 A4。首次实跑发现 E4M3FN scale 溢出导致非有限 logits，现已按格式最大有限值裁剪并复测。
+- 实际命令：`python3 scripts/quantization/2608.30181/demo.py --output-json /private/tmp/arxiv_quant_review_20260902/2608.30181.json`；392 次 activation quant 调用，logits MSE `0.801791`、cosine `0.954884`，生成 `这`，退出码 0，2.00 秒。
+- **真实 Qwen3-0.6B：已跑通** dense W4A4 数值迁移；未跑通 A.X K2 experts-only scope、GN/SGA architecture、NVIDIA NVFP4 kernel、688B/B200/NPU 实验。
+- 环境同批次公共环境；JSON 导出已验证。

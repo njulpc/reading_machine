@@ -34,3 +34,13 @@ python3 scripts/quantization/2608.30439/demo.py
   "relative_l2": 0.2201398437192899
 }
 ```
+
+## 代码审查与验证（2026-09-02）
+
+本节覆盖上方初始自报结果。对照官方 PDF Eq.（1）–（3）、§IV–V 和 Table II/III，结论为**部分一致**。
+
+- 原实现对线性层输出硬置零后做 INT4；论文在每个 projection **输入前**应用 `sign(x)*ReLU(|x|-Δ)`，用 smooth surrogate（C=20）和 L0 proxy（k=10）训练 per-projection Δ；基模是 ternary weight + INT8 activation MMFreeLM。
+- 修复：在真实 Qwen calibration prompt 上为 196 个 Linear 估计 per-projection Δ，全部权重工程三值化，输入执行论文前激活并逐 token INT8；量化后前向/生成覆盖 392 次 hook、9,748,480 activation elements。
+- 实际命令：`python3 scripts/quantization/2608.30439/demo.py --output-json /private/tmp/arxiv_quant_review_20260902/2608.30439.json`；sparsity `0.330014`，logits MSE `17.778524`、cosine `0.351901`，生成 `hart`，退出码 0，1.91 秒。该明显退化是未经论文训练直接迁移的真实负结果。
+- **真实 Qwen3-0.6B：已跑通**工程迁移；未跑通 4B-token continued training、MMFreeLM recurrent state、L0 warmup、Loihi 2 部署或论文 37×/16× 预测。
+- 环境同批次公共环境；JSON 导出已验证。

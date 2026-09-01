@@ -38,3 +38,13 @@ python3 scripts/quantization/2608.30394/demo.py
   "relative_l2": 0.021891800311176348
 }
 ```
+
+## 代码审查与验证（2026-09-02）
+
+本节覆盖上方初始自报结果。对照官方 PDF Eq.（3）–（12）、Figure 4 与 §5，结论为**部分一致**。
+
+- 原实现以 Qwen 权重行局部相似度分组并共享 scale；TopGQ 实际量化 GNN node activations/adjacency，TopPIN 为 `(degree, degree-normalized neighbor inverse-degree sum)`，并在每层校准选择 dual-axis absorption 或 column-wise。
+- 修复：在 deterministic inductive GCN operator 上实现二维 TopPIN、二维聚类分组、group-shared node scale absorption、adjacency/feature UINT8 affine quantization和逐配置 MSE 选择；32 nodes 形成 4 组，本次选择 column-wise（MSE `7.7981e-05` vs dual-axis `9.9088e-05`）。
+- 实际命令：`python3 scripts/quantization/2608.30394/demo.py --output-json /private/tmp/arxiv_quant_review_20260902/2608.30394.json`，退出码 0。
+- **真实 Qwen3-0.6B：未跑通/不适用**。未复现 Cora/Reddit/OGB 图、GCN/SAGE/GIN/GAT checkpoint、INT4 或 Jetson integer kernel。
+- 环境同批次公共环境；JSON 导出已验证。

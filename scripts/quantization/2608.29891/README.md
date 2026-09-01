@@ -32,3 +32,13 @@ python3 scripts/quantization/2608.29891/demo.py
   "code_switch_rate": 0.782608687877655
 }
 ```
+
+## 代码审查与验证（2026-09-02）
+
+本节覆盖上方初始自报结果。对照官方 PDF 的 Methodology、JLSD、Temporal Patch Quantization 和式（2）–（5），结论为**部分一致**。
+
+- 原实现把 Qwen 权重行平均后做普通 masked k-means；它没有整条 joint trajectory 的 JLSD、temporal patch、EMA codebook/inactive reset、commitment loss 或 visible-only velocity loss，不能称为 MASQ。
+- 修复：使用 skeleton-shaped deterministic 输入执行 25% full-trajectory JLSD、patch=4、8-entry EMA VQ、inactive entry 恢复、commitment 与仅可见关节的一阶 velocity loss。
+- 实际命令：`python3 scripts/quantization/2608.29891/demo.py --output-json /private/tmp/arxiv_quant_review_20260902/2608.29891.json`；commitment `0.0569451`、visible velocity loss `1.916567`、code-switch rate `0.90`，退出码 0。
+- **真实 Qwen3-0.6B：未跑通/不适用**。论文量化的是骨架动作 latent token，不是 LLM 权重；未复现 TCN encoder/decoder、HuGaDB/LARa/BABEL 训练及分割指标。
+- 环境同批次公共环境；该路径是原任务结构兼容 synthetic 核心验证，JSON 导出已验证。

@@ -34,3 +34,13 @@ python3 scripts/quantization/2608.29667/demo.py
   "scale": 0.015030944719910622
 }
 ```
+
+## 代码审查与验证（2026-09-02）
+
+本节覆盖上方初始自报结果。对照官方 PDF 的 UAQ（式 1–2）、fake quant（式 3）、STE（式 4）及最小报告清单后，结论为**部分一致**：论文是综述，没有可称为“论文算法”的单一 W4 配方。
+
+- 修复：由 256×256 权重切片改为真实加载 tokenizer/model；第一层逐输出通道 W4 scale 经 STE 校准，随后量化全部 196 个 Transformer Linear（440,401,920 个权重），执行量化后前向和 1-token greedy 生成。
+- 实际命令：`python3 scripts/quantization/2608.29667/demo.py --steps 3 --output-json /private/tmp/arxiv_quant_review_20260902/2608.29667.json`。
+- 结果：首层 MSE `2.7347e-05 -> 2.5035e-05`；整模 logits MSE `1.419209`、cosine `0.918308`，生成 token `这`，退出码 0，约 4.7 秒。
+- **真实 Qwen3-0.6B：已跑通**，但仅代表 target-centric W4 fake-quant/STE 工程迁移，不代表综述中任一方法的完整训练、任务评测或整数 kernel。
+- 环境：Python 3.9.6、PyTorch 2.8.0、Transformers 4.57.6；Apple arm64 CPU，CUDA/MPS 均不可用。JSON 导出已验证。
