@@ -1,0 +1,61 @@
+arxiv_id,title,submitted,technique,categories,keywords
+2608.29519,FuncRoom-Agent: Sequential Feed-Forward 3D Functional Indoor Scene Generation,2026-08-30,knowledge_distillation,cs.CV,知识蒸馏
+2608.29539,LoGo: Token-Level Dynamic Local-Global Attention,2026-08-30,other,cs.CL;cs.LG,其他压缩与高效推理
+2608.29588,Call Neighbours Yourself: Graph Walks with Destination-Conditioned On-Policy Self-Distillation,2026-08-30,knowledge_distillation,cs.AI;cs.CL,知识蒸馏
+2608.29623,MI-Distillation: Selecting from Model-Interpolated Instruct-Reasoning Data Spectrum for Chain-of-Thought Distillation,2026-08-30,knowledge_distillation,cs.AI;cs.CL,知识蒸馏
+2608.29640,LLMODE: Aligning ODEs with LLMs via Gated Token Injection for Irregular Spatio-Temporal Forecasting,2026-08-30,other,cs.AI;cs.LG,其他压缩与高效推理
+2608.29662,ACTD: Anchor-Based Cross-Tokenizer Distillation with Residual Regularization,2026-08-30,knowledge_distillation,cs.CL,知识蒸馏
+2608.29667,A Target-Centric Survey of Quantization-Aware Training,2026-08-30,quantization,cs.LG,量化
+2608.29748,ReTrace: Rejected-Trajectory Conditioning for Speculative Decoding,2026-08-30,other,cs.CL,其他压缩与高效推理
+2608.29765,PruneShift: A Framework for Evaluating Decision Reliability in Structured Pruning,2026-08-30,pruning,cs.LG,剪枝/稀疏化
+2608.29846,Influence-Directed Distillation: Solving the Diversity Bottleneck in Sampled-Token On-Policy Distillation,2026-08-30,knowledge_distillation,cs.CL;cs.LG,知识蒸馏
+2608.29869,Towards an Expressivity-Normalized Energy-Demand Comparison of ANNs and SNNs,2026-08-30,other,cs.LG,其他压缩与高效推理
+2608.29884,Improving Argument Saliency Coverage in Small LLMs for Long Legal Opinion Summarization via Sequence-Level Distillation,2026-08-30,knowledge_distillation,cs.CL,知识蒸馏
+2608.29891,MASQ: Mask-Aware Spatiotemporal Quantization for Unsupervised Skeleton Action Segmentation,2026-08-30,quantization,cs.CV,量化
+2608.29897,When History Is Multimodal: Rethinking Context Management for Long-Horizon Agents,2026-08-30,other,cs.CL,其他压缩与高效推理
+2608.29910,Matrix-Game 3.5: Enhancing Real-Time Streaming Interactive World Models with Patch Memory,2026-08-30,knowledge_distillation,cs.CV,知识蒸馏
+2608.29913,On the Instance Hardness as a Decision Criterion in TinyML Systems,2026-08-30,pruning,cs.AI;cs.LG,剪枝/稀疏化
+2608.29928,Biomechanical 3D Body: Self-Supervised Distillation of Biomechanical Pose from a 3D Body Foundation Model,2026-08-30,knowledge_distillation,cs.CV,知识蒸馏
+2608.29934,Compression-Aware Abstention: Teaching LLMs to Refuse When KV-Compression Masks Remove Answer Evidence,2026-08-30,other,cs.CL;cs.LG,其他压缩与高效推理
+2608.29951,Spatial Matryoshka Training for Multi-Granularity Visual Document Retrieval,2026-08-30,other,cs.AI,其他压缩与高效推理
+2608.29958,RIDGE: Region-Informed Derivative-Guided Evidence Selection for Long Video Understanding,2026-08-30,other,cs.CV,其他压缩与高效推理
+2608.30034,Input-Adaptive Gating of a Dehazing Front-End for On-Device Perception in Smoke-Obscured Environments,2026-08-30,quantization,cs.CV,量化
+2608.30070,"Selection, Representation, and Execution in Sparse Fourier Neural Operators",2026-08-30,pruning,cs.LG,剪枝/稀疏化
+2608.30076,"Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects",2026-08-30,quantization,cs.CL,量化
+2608.30122,Aligning Multi-Trajectory Supervision with Policy Optimization for VLA Driving,2026-08-31,knowledge_distillation,cs.AI;cs.CV;cs.LG,知识蒸馏
+2608.30135,Verification-Aware Training for Speculative Decoding,2026-08-31,other,cs.CL,其他压缩与高效推理
+2608.30158,CPR for LLMs: Critical-Point Routing against Catastrophic Forgetting in Domain Adaptation,2026-08-31,other,cs.AI;cs.CL,其他压缩与高效推理
+2608.30163,Doc-REFRAG: Rethinking Multimodal Document Retrieval-Augmented Generation,2026-08-31,other,cs.CV,其他压缩与高效推理
+2608.30181,A.X K2 Technical Report,2026-08-31,quantization,cs.AI;cs.CL,量化
+2608.30218,Amortized Anchor Refinement for Deployable Continuous-Time 4D Gaussian Reconstruction,2026-08-31,pruning,cs.CV,剪枝/稀疏化
+2608.30252,Strong Drafts Need Compact Memories: Long-Context Speculative Decoding with Compressed KV Cache,2026-08-31,other,cs.LG,其他压缩与高效推理
+2608.30258,Stratified Consistency Distillation for Natural Language Formalization,2026-08-31,knowledge_distillation,cs.AI;cs.CL,知识蒸馏
+2608.30263,Centering before Pruning: Lightweight Geometry Correction for Diversity-Based Visual Token Pruning in LVLMs,2026-08-31,pruning,cs.AI;cs.CV,剪枝/稀疏化
+2608.30277,SimCRAFT: Distilling Remote Sensing Agents via Synthetic Trajectories and Contextual Retrieval-Augmented Fine-Tuning,2026-08-31,knowledge_distillation,cs.AI,知识蒸馏
+2608.30294,Dynamic Hub-and-Spoke Memory for Streaming Video Understanding,2026-08-31,other,cs.CV,其他压缩与高效推理
+2608.30295,CateKV: On Sequential Consistency for Long-Context LLM Inference Acceleration,2026-08-31,other,cs.AI;cs.LG,其他压缩与高效推理
+2608.30320,"On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",2026-08-31,other,cs.CL,其他压缩与高效推理
+2608.30384,RSLM: Training-Free Vector Quantization for Approximate Nearest Neighbor Search,2026-08-31,quantization,cs.LG,量化
+2608.30394,TopGQ: Fast GNN Post-Training Quantization Leveraging Topology Information,2026-08-31,quantization,cs.AI;cs.LG,量化
+2608.30427,Ceiling-Clipped Acceptance Histograms Indicate Stranded Speed-up in Block-Diffusion Speculative Decoding,2026-08-31,other,cs.CL;cs.LG,其他压缩与高效推理
+2608.30439,Event-Driven Language Models with Sparse Neural Activity for Neuromorphic Hardware,2026-08-31,quantization,cs.LG,量化
+2608.30564,Q-Strata: Hierarchical Bit Allocation for Mixed-Precision Quantization of Mixture-of-Experts LLMs,2026-08-31,quantization,cs.AI;cs.LG,量化
+2608.30567,TuringLLM: Efficiently Scaling Foundation Models Toward Physical AI,2026-08-31,other,cs.AI,其他压缩与高效推理
+2608.30695,Liquid Gated Attention,2026-08-31,other,cs.LG,其他压缩与高效推理
+2608.30741,Functional Degeneracy in Neural Networks: Measurement and Pruning,2026-08-31,pruning,cs.LG,剪枝/稀疏化
+2608.30760,PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents,2026-08-31,knowledge_distillation,cs.LG,知识蒸馏
+2608.30782,PixelIR: Fidelity-Perception Decoupling via Pixel-Space Image-Residual Flow Matching for Efficient One-Step Real-World Super-Resolution,2026-08-31,knowledge_distillation,cs.CV,知识蒸馏
+2608.30841,HSRM: Hidden-State Reward Models for Test-Time Verification,2026-08-31,other,cs.AI;cs.CL,其他压缩与高效推理
+2608.30870,VCAR: Training-Free 3DGS Segmentation via View Completeness and Axis-Aware Boundary Refinement,2026-08-31,pruning,cs.CV,剪枝/稀疏化
+2608.30908,Fine-Tuning Low-Bit Models with Gradient in Quantized Code Space,2026-08-31,quantization,cs.LG,量化
+2608.30927,Stride-k Subsampling: Train-Free Audio Token Reduction for Whisper,2026-08-31,other,cs.AI,其他压缩与高效推理
+2608.30963,A Universal Context-Reuse Layer for Cross-Model KV Sharing,2026-08-31,other,cs.AI;cs.LG,其他压缩与高效推理
+2608.30978,Sparse Competition during Training For the Emergence of Specialized Modules,2026-08-31,pruning,cs.LG,剪枝/稀疏化
+2608.30996,Faithfulness Is Not Free: Auditing Offline KV-Cache Quantization in Retrieval-Augmented Generation,2026-08-31,quantization,cs.CL,量化
+2608.31046,Does On-Policy Distillation Really Distill? From Noisy Teacher to Self-Improvement,2026-08-31,knowledge_distillation,cs.CL;cs.LG,知识蒸馏
+2608.31053,Identity-Conditioned Latent Consistency Distillation for Face Synthesis,2026-08-31,knowledge_distillation,cs.CV,知识蒸馏
+2608.31066,Every Token Leaves a Ripple in the Stream of Thought: Eliciting Model-Internal Token Saliency for Chain-of-Thought Compression,2026-08-31,other,cs.CL,其他压缩与高效推理
+2608.31069,A Model with No Head and Many Thoughts,2026-08-31,other,cs.CL;cs.LG,其他压缩与高效推理
+2608.31106,DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution,2026-08-31,knowledge_distillation,cs.CV,知识蒸馏
+2608.31108,Stress-Testing Efficient Responsible-AI Evaluation: When Compute Savings Change Benchmark Conclusions,2026-08-31,quantization,cs.LG,量化
+2608.31157,Sharp Approximation Rates for Neural Networks with Affine Latent Parameterizations,2026-08-31,other,cs.LG,其他压缩与高效推理
