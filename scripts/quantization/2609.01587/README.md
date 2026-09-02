@@ -2,7 +2,7 @@
 
 ## 实现范围
 
-在八层真实 Qwen q_proj 切片上比较“最损伤层升 W8”和“所有层 group-32 W4”，并显式报告预算差。
+在真实 Qwen 全部 28 层上比较 per-row RTN4、逐层升 W8 的因果干预与全局 group-128 RTN4。
 
 ## 运行
 
@@ -49,3 +49,16 @@ python3 scripts/quantization/2609.01587/demo.py --output-json /private/tmp/arxiv
 ## 证据边界
 
 全局方案预算比局部方案高 9.09%，因此仅是近预算机制验证，不能替代论文九模型因果干预。
+
+## 代码审查与验证（2026-09-03，取代上述八层切片结果）
+
+**算法一致性：部分一致。** 论文以全模型 per-row RTN4 为 floor、RTN8 为近无损 ceiling，对每个 Transformer 层做一次“其余层保持 4-bit、该层升 8-bit”的因果干预；预算分析把 +0.146 effective bpw 分配为全局 group-128 RTN4（4.156 bpw）或局部约 3.65% 层升 8-bit。初始实现只比较 8 个 q_proj 切片的权重 MSE，且预算高 9.09%，没有因果前向。
+
+本次对真实 Qwen3-0.6B 全部 196 个 Linear/440,401,920 权重建立 row-RTN4 floor 和 row-RTN8 ceiling，实际遍历 28 层逐层恢复并每次做完整前向；单 prompt logits-MSE 代理下最可恢复层为 27，top-1 恢复 27.15%，全局 group-128 恢复 35.62%，全局优于局部。row4/row8/local/global logits MSE 为 1.357425/0.010912/0.991841/0.877805，两种最终模型均生成成功。
+
+```bash
+python3 scripts/quantization/2609.01587/demo.py --self-test
+python3 scripts/quantization/2609.01587/demo.py --output-json /private/tmp/arxiv_repro_results_20260903/2609.01587.json
+```
+
+环境为 macOS 26.6.2 arm64 CPU（CUDA/MPS 均不可用）、Python 3.9.6、PyTorch 2.8.0、Transformers 4.57.6、safetensors 0.7.0，墙钟 7.71 秒。**真实 Qwen3-0.6B：已跑通（28 层整模因果 smoke）。** 代理指标不是论文 22 任务、每任务 200 样本的 CORE；GPTQ/AWQ、3 个 calibration seeds 与九模型统计未跑通。

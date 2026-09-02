@@ -2,7 +2,7 @@
 
 ## 实现范围
 
-真实 Qwen k_proj 生成 KV 代理，执行 rank-8+INT8 残差；真实投影权重执行中心化 INT4 delta。
+真实 Qwen 全 28 层执行分 head rank-2 BRQ-KV 四级 residual view，并对全部 MLP 权重执行 DAT q8→q4 工程迁移。
 
 ## 运行
 
@@ -60,3 +60,16 @@ python3 scripts/quantization/2609.01084/demo.py --output-json /private/tmp/arxiv
 ## 证据边界
 
 未复现 WIFiV-LPDDR、专用脉动阵列和 Jetson 性能模型。
+
+## 代码审查与验证（2026-09-03，取代上述初始切片结果）
+
+**算法一致性：部分一致。** 原论文针对 Fast-dLLM v2 块扩散：BRQ-KV 在每层/每 KV head 上保存 pre-RoPE rank-2 基座和 signed-INT8 residual master，根据 block query 将条目映射到 q8/q4/q2/q0；DAT-FFN 从 GPTQ q8 master 派生 q4/q2 view、拟合相邻低秩 correction，并按激活 drift 动态划分 replacement/delta/carry。初始代码误用 rank 8、统一 INT8 残差和普通中心化 INT4。
+
+本次修正 rank=2、q8 master 与四级 residual view，对真实 Qwen 全 28 层 K/V 输出执行分 head 重建，并对全部 84 个 MLP Linear（264,241,152 权重）执行 q8→q4 view；带 cache 前向和生成共触发 112 次 KV hook，各 tier 3,584 条目。logits MSE 10.411431、cosine 0.628009，生成 token 为“正”，负面迁移如实保留。
+
+```bash
+python3 scripts/quantization/2609.01084/demo.py --self-test
+python3 scripts/quantization/2609.01084/demo.py --output-json /private/tmp/arxiv_repro_results_20260903/2609.01084.json
+```
+
+环境为 macOS 26.6.2 arm64 CPU（CUDA/MPS 均不可用）、Python 3.9.6、PyTorch 2.8.0、Transformers 4.57.6、safetensors 0.7.0，墙钟 2.09 秒。**真实 Qwen3-0.6B：已跑通（AR 工程迁移）。** 这不等于论文 Fast-dLLM v2 块扩散路径；query-dependent map 复用、DAT recurrent carry、GPTQ/低秩 correction、WIFiV-LPDDR 与 Jetson 周期/能耗模型未跑通。

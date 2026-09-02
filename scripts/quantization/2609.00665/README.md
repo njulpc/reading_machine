@@ -2,7 +2,7 @@
 
 ## 实现范围
 
-在真实 Qwen q_proj 上比较 BF16、INT8、NF4 与 group-W4 的估算载荷、MSE 和余弦；迁移论文的多精度比较逻辑。
+在真实 Qwen 全模型上分别执行 INT8、NF4 与 group-W4，测量整模 logits 与生成；HSS 所需系统/安全指标不臆造。
 
 ## 运行
 
@@ -67,3 +67,16 @@ python3 scripts/quantization/2609.00665/demo.py --output-json /private/tmp/arxiv
 ## 证据边界
 
 未运行论文的 30 个完整模型配置、能耗计量与安全提示评测。
+
+## 代码审查与验证（2026-09-03，取代上述初始切片结果）
+
+**算法一致性：部分一致。** 本文是 30 个“模型+量化格式+后端”的可持续性评测，不提出新量化算子。论文比较 BF16、bitsandbytes INT8/NF4、GPTQ4 和 llama.cpp GGUF Q4_K_M，并以五项能力、延迟/吞吐/VRAM、每 query/token 能耗与五条有害提示 ASR 归一化计算 HSS；只比较单个 q_proj 的 MSE 不能复现该结论。
+
+本次把验证扩为三次真实整模加载，对全部 196 个 Transformer Linear/440,401,920 权重分别执行 per-row INT8、block-64 NF4 与 group-128 W4，随后实际前向和生成。INT8/NF4/W4 的 logits MSE 分别为 0.010912/0.283271/0.877805，cosine 为 0.999236/0.979732/0.936228，三条路径均生成成功、退出码 0。
+
+```bash
+python3 scripts/quantization/2609.00665/demo.py --self-test
+python3 scripts/quantization/2609.00665/demo.py --output-json /private/tmp/arxiv_repro_results_20260903/2609.00665.json
+```
+
+环境为 macOS 26.6.2 arm64 CPU（CUDA/MPS 均不可用）、Python 3.9.6、PyTorch 2.8.0、Transformers 4.57.6、safetensors 0.7.0；三模式总墙钟 4.41 秒。**真实 Qwen3-0.6B：已跑通（三种整模 fake-quant 数值路径）。** 未安装/运行 bitsandbytes、GPTQ 或 GGUF 原生后端，也没有 A100、能耗计量、五任务和安全 ASR，因此没有计算并伪报 HSS。

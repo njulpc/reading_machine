@@ -2,7 +2,7 @@
 
 ## 实现范围
 
-真实 Qwen q_proj 切片执行逐列三值赋值、显著列选择和列内 1:4 残差补偿。
+真实 Qwen 全部 Transformer Linear 执行 group-128 三值、Hessian 对角显著列与列内 1:4 残差；小 tile 另验证 GPTQ decay。
 
 ## 运行
 
@@ -52,3 +52,16 @@ python3 scripts/quantization/2609.00224/demo.py
 ## 证据边界
 
 未实现 GPTQ Hessian、误差衰减、论文 1.7 bit 精确存储布局或 LUT GPU 内核。
+
+## 代码审查与验证（2026-09-03，取代上述初始切片结果）
+
+**算法一致性：部分一致。** 原论文/作者代码使用 group-128 的带偏置三值基座、5% 显著输入列、显著列内沿输出行的 1:4 FP8 残差、逐列 rescale、GPTQ 逆 Hessian 误差传播与位置相关 decay；默认校准为 256 条、序列长 2048。初始实现把 1:4 分组方向写成了“同一行内跨显著列”、用 25% 列和纯权重误差选列，也没有偏置、逐列 rescale 或 decay。
+
+本次修复为：按真实校准激活的 Hessian 对角项和论文公式选择 5% 列；按输出行每四个元素只保留一个残差；加入 group-128 `alpha/beta` 三值拟合和两轮逐列 rescale；对真实校准张量的小 tile 实际执行公式 (6)–(9) 的逆 Hessian/decay；将数值表示应用到 Qwen 的全部 196 个 Transformer Linear（440,401,920 个权重）。整模 CPU 路径为对角 Hessian 工程近似，未冒充作者的完整稠密 GPTQ。
+
+```bash
+python3 scripts/quantization/2609.00224/demo.py --self-test
+python3 scripts/quantization/2609.00224/demo.py --output-json /private/tmp/arxiv_repro_results_20260903/2609.00224.json
+```
+
+环境为 macOS 26.6.2 arm64 CPU（CUDA/MPS 均不可用）、Python 3.9.6、PyTorch 2.8.0、Transformers 4.57.6、safetensors 0.7.0。两条命令均退出码 0；整模命令墙钟 5.63 秒。整模校准 1 条/16 token，平均显著列比例 0.050618、残差密度 0.012655；量化后 logits MSE 2.273539、cosine 0.821585，生成 1 token 成功且 logits 有限。**真实 Qwen3-0.6B：已跑通（整模数值路径）；论文 256×2048 校准、完整 GPTQ、紧凑 checkpoint 与 LUT CUDA 内核未跑通。**

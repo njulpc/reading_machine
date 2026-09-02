@@ -2,7 +2,7 @@
 
 ## 实现范围
 
-在真实 Qwen q_proj 子张量上依次执行 25% 结构化行剪枝、rank-16 教师残差恢复和 INT8，逐阶段测量输出损失。
+在结构兼容的 mock 驾驶 actor 上执行 width-256→64 整单元剪枝、均衡教师蒸馏、静态 W8A8 校准与前向。
 
 ## 运行
 
@@ -58,3 +58,16 @@ python3 scripts/quantization/2609.00718/demo.py --output-json /private/tmp/arxiv
 ## 证据边界
 
 Qwen 不是驾驶策略；未复现 Gym-Duckietown 闭环课程，只验证论文强调的阶段化损伤定位。
+
+## 代码审查与验证（2026-09-03，取代上述初始 Qwen 切片结果）
+
+**算法一致性：部分一致。** 论文对象是 MobileNetV3-small 感知加 width-256 MLP 驾驶 actor，不是 LLM。流程是按“入连接 L2 + 出连接 L2 + |bias|”整单元剪枝到 width 64，使用覆盖五个 curriculum 的 62,176 状态和归一化 Smooth-L1 做教师蒸馏，再以 per-channel symmetric weight/per-tensor affine activation 的 eager static INT8 做 PTQ。初始代码对 Qwen q_proj 做行剪枝和 rank-16 SVD，与论文不一致。
+
+本次改为结构兼容的 width-256→64 actor，实际执行整单元剪枝、五阶段均衡 mock 状态上的教师蒸馏、校准、W8A8 fake-quant 和量化后动作前向。参数从 71,170 降至 5,506（92.26%），Smooth-L1 从 0.003353 降至 0.000561，INT8 后为 0.000562，退出码 0。
+
+```bash
+python3 scripts/quantization/2609.00718/demo.py --self-test
+python3 scripts/quantization/2609.00718/demo.py --output-json /private/tmp/arxiv_repro_results_20260903/2609.00718.json
+```
+
+环境为 macOS 26.6.2 arm64 CPU、Python 3.9.6、PyTorch 2.8.0，墙钟 1.08 秒。**真实 Qwen3-0.6B：未跑通/不适用。** 论文模拟器、真实 62,176 状态、MobileNetV3 checkpoint 与 400 个闭环 episode 未在仓库提供；当前结果仅是明确标注的 seeded mock 算法路径。
