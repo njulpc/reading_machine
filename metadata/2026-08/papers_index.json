@@ -1,0 +1,851 @@
+{
+  "collection_date": "2026-09-02",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-08-31T00:00:00+08:00",
+    "end": "2026-09-02T23:59:59+08:00",
+    "dates": [
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02"
+    ],
+    "date_basis": "arXiv /abs v1 Submission history UTC calendar date as displayed"
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02"
+  ],
+  "historical_analyzed_ids_count": 397,
+  "metadata_ids_count": 400,
+  "metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "raw_relevant_by_date": {
+    "2026-08-31": 58,
+    "2026-09-01": 35,
+    "2026-09-02": 0
+  },
+  "excluded_duplicate_ids": [
+    {
+      "arxiv_id": "2608.30122",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30135",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30158",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30163",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30181",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30218",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30252",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30258",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30263",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30277",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30294",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30295",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30320",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30384",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30394",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30427",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30439",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30564",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30567",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30695",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30741",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30760",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30782",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30841",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30870",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30908",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30927",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30963",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30978",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.30996",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.31046",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.31053",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.31066",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.31069",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.31106",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.31108",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    },
+    {
+      "arxiv_id": "2608.31157",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-02"
+      ]
+    }
+  ],
+  "window_new_papers_count": 56,
+  "month": "2026-08",
+  "new_papers_count": 21,
+  "total_papers": 21,
+  "papers": [
+    {
+      "arxiv_id": "2608.30141",
+      "title": "Balancing Privacy, Utility, and Safety in LLM Alignment through Preference Optimization",
+      "authors": [
+        "Dishu Yang",
+        "Jingjing Liu",
+        "Jize Li"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T01:46:36Z",
+      "primary_category": "Cryptography and Security (cs.CR)",
+      "categories": "Cryptography and Security (cs.CR) ; Machine Learning (cs.LG)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30141",
+      "pdf_url": "https://arxiv.org/pdf/2608.30141",
+      "summary": "以 4-bit Gemma 作为独立验证组，研究隐私偏好数据混合对量化模型记忆、安全与效用的联动影响。 4-bit Gemma-2-2B 的隐私混合组 AUROC/AUPRC 为 0.596–0.629/0.541–0.575，基线为 0.804/0.790，但跨数据源不一致。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30226",
+      "title": "LaMoC: Loss-Aware Modular Compression for LLMs",
+      "authors": [
+        "Mohanad Odema",
+        "Jacob Song"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T04:20:31Z",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": "Artificial Intelligence (cs.AI) ; Computation and Language (cs.CL); Performance (cs.PF)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30226",
+      "pdf_url": "https://arxiv.org/pdf/2608.30226",
+      "summary": "LaMoC 将激活统计与经验 Fisher 融合，用梯度—误差对齐为联合模块压缩选择更接近下游损失的代理。 四个模型族八个模型上，4–8B 模型平均困惑度降 2.5%，任务准确率相对现有模块压缩提高 1%。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30310",
+      "title": "Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs",
+      "authors": [
+        "Yirui Liu",
+        "Ruoling Qi",
+        "Xuaner Wu",
+        "Penghang Liu",
+        "Jian Chen"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T06:27:07Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30310",
+      "pdf_url": "https://arxiv.org/pdf/2608.30310",
+      "summary": "Tail-Replay 把线性注意力状态视为有衰减的前缀压缩，仅重放命中前缀的短尾部以恢复任意 token 边界状态。 仅重放 5–10% 前缀可保留 92.8–99.9% 全预填质量；32K 前缀 TTFT 加速 9.1–14.3×。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30352",
+      "title": "Co-Annotator: Expert-Distilled ViT and VLM for Visual and Documentation Guidance in Age-Related Macular Degeneration",
+      "authors": [
+        "Ziheng \"Leo\" Li",
+        "Benjamin Freeman",
+        "Akshay Raman",
+        "Kavin Aravindhan Rajkumar",
+        "Xinxin Fang",
+        "Rishabh Srivastava",
+        "Steven Feiner",
+        "Kaveri A. Thakoor"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T07:09:05Z",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": "Artificial Intelligence (cs.AI) ; Human-Computer Interaction (cs.HC)",
+      "type": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.30352",
+      "pdf_url": "https://arxiv.org/pdf/2608.30352",
+      "summary": "Co-Annotator 把专家注视与口述分别蒸馏进 ViT 视觉引导和受本体约束的 VLM 文档引导。 两机构联合部署中，每分钟正确诊断提高 40%，评论编辑时间降低 67%，且未牺牲诊断准确率。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 7,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30386",
+      "title": "DASC: Decay-Aware State Compression for Hybrid Linear-Attention Serving",
+      "authors": [
+        "Yanqi Yu",
+        "Pingwei Sun",
+        "Jianchao Tan",
+        "Tao Zhang",
+        "Yuchen Xie",
+        "Xunliang Cai",
+        "Yao Liu"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T07:42:43Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30386",
+      "pdf_url": "https://arxiv.org/pdf/2608.30386",
+      "summary": "DASC 从模型权重估计注意力状态的保留时域，只保存长时域 head/channel 并用有界后缀刷新遗漏状态。 KDA 状态检查点压缩 2.63×；固定预算下平均 TTFT 降 42.6%，输入吞吐提高 68.4%。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30505",
+      "title": "Tensor Methods for Language Models: From Token Representation to Training, Adaptation, Inference, Compression, and Interpretability",
+      "authors": [
+        "Matvei Tarasov",
+        "Salman Ahmadi-Asl",
+        "Andre L. F. de Almeida",
+        "Andrzej Cichocki"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T09:38:37Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30505",
+      "pdf_url": "https://arxiv.org/pdf/2608.30505",
+      "summary": "该综述以七阶段生命周期和组件视角统一张量分解、张量网络在 LLM 表示、权重、缓存与激活压缩中的作用。 综述提出 ρ_gap 衡量理论内存下降与系统实测加速的差距，不把参数减少直接等同吞吐收益。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30563",
+      "title": "Modality Disentangled Learning for Incomplete Multimodal Emotion Recognition: A Primitive Memory Distillation Perspective",
+      "authors": [
+        "Jiaqi Zhang",
+        "Zheng Pang",
+        "Mengting Li",
+        "Yiqi Wang",
+        "Guangyuan Dong",
+        "Chao Xue",
+        "Yusen Wu",
+        "Zihao Li",
+        "Huy Phan",
+        "Sicheng Zhao",
+        "Björn W. Schuller",
+        "Jiachen Luo"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T10:38:47Z",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "type": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2608.30563",
+      "pdf_url": "https://arxiv.org/pdf/2608.30563",
+      "summary": "PriMD 将模态特有信息离散为语义原语记忆，缺失模态时由学生查询原语并对齐完整模态教师。 IEMOCAP、CMU-MOSI、CMU-MOSEI 多种缺失模态设置下达到或超过强基线，并提升稳定性。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 7,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30647",
+      "title": "What It Costs to Compose, Rebuild, and Correct Precomputed Memory",
+      "authors": [
+        "Asa Shepard"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T11:49:42Z",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": "Computation and Language (cs.CL) ; Machine Learning (cs.LG)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30647",
+      "pdf_url": "https://arxiv.org/pdf/2608.30647",
+      "summary": "比较保存 KV、训练式 KV 压缩的组合、重建和纠错成本，明确预计算记忆在何时失效。 Llama-3.1-8B 上显示分块组合、更新和旁路纠错都会带来可测成本，需按知识变化节奏重建记忆。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30785",
+      "title": "SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents",
+      "authors": [
+        "Xiaofan Bai",
+        "Chao Liu",
+        "Hongqiang Lin",
+        "Di Wu",
+        "Mingli Song",
+        "Xuan Jin",
+        "Xipeng Cao",
+        "Yuhong Li"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T13:41:16Z",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": "Artificial Intelligence (cs.AI)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30785",
+      "pdf_url": "https://arxiv.org/pdf/2608.30785",
+      "summary": "SkillZip Pro 跨文件压缩渐进加载的技能目录，同时保留路由、公共入口与按需资源边界。 工业内容审核技能中目录 token 降 38%、端到端每次运行 token 降 10.4% 且无质量损失；过激 71% 配置最高掉 26 分。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2608.30811",
+      "title": "TopoCompress: Long Context Compression via Graph-Wired Semantic Trajectories",
+      "authors": [
+        "Daniel Agyei Asante",
+        "Yang Li"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T13:58:59Z",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": "Computation and Language (cs.CL) ; Machine Learning (cs.LG)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2608.30811",
+      "pdf_url": "https://arxiv.org/pdf/2608.30811",
+      "summary": "TopoCompress 以稠密/词法相关度和语义加速度评分跨度，再在语义—顺序混合图上传播后选择连贯证据。 五个长上下文任务上，以强基线 1/4 的预算达到相当性能，压缩耗时比最快基线再小 1.41×。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00097",
+      "title": "Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding",
+      "authors": [
+        "Zhigeng Liu",
+        "Zhiyuan Ning",
+        "Ruixiao Li",
+        "Xiaoran Liu",
+        "Yuerong Song",
+        "Min Zhang",
+        "Ziwei He",
+        "Xipeng Qiu"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T15:13:20Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "type": "pruning",
+      "url": "https://arxiv.org/abs/2609.00097",
+      "pdf_url": "https://arxiv.org/pdf/2609.00097",
+      "summary": "FFD 把低比特内容扫描、top-delta 块选择和稀疏注意力计算融合进同一内核，避免外部元数据。 上下文最长 256K，内核最高加速 11.6×，端到端吞吐提高 2.37×并保持 RULER/LongBench 准确率。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00103",
+      "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy",
+      "authors": [
+        "Shmuel Berman",
+        "Jia Deng"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T17:05:17Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2609.00103",
+      "pdf_url": "https://arxiv.org/pdf/2609.00103",
+      "summary": "ECCBench 将记忆系统拆成效率、压缩和校准三轴，检验长时记忆是否在预算下真正保留可压缩结构。 实验证明预训练 VLM 能压缩文本记忆却不能同样压缩视频记忆，且两者校准均不足。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00224",
+      "title": "QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization",
+      "authors": [
+        "Yipin Guo",
+        "Arun M George",
+        "Jie Fu",
+        "Tareq Mahmoud",
+        "Sixue Xing",
+        "Siddharth Joshi"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T18:33:36Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "type": "quantization",
+      "url": "https://arxiv.org/abs/2609.00224",
+      "pdf_url": "https://arxiv.org/pdf/2609.00224",
+      "summary": "QTEA 采用三值主权重、显著列内 1:4 稀疏残差、逐列尺度细化与 GPTQ 误差衰减。 Qwen3-14B 达 1.7 bit/weight，准确率比强三值基线高 16.7%，查表内核逐 token 生成快 7.2×。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00251",
+      "title": "Hypotheses-Guided Self Distillation for Continual Personalization",
+      "authors": [
+        "EunJeong Hwang",
+        "Kushan Mitra",
+        "Dan Zhang",
+        "Hannah Kim",
+        "Estevam Hruschka"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T18:52:21Z",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": "Artificial Intelligence (cs.AI)",
+      "type": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2609.00251",
+      "pdf_url": "https://arxiv.org/pdf/2609.00251",
+      "summary": "HypReflect 维护可修订的偏好假设，并通过假设引导的自蒸馏把长期个性化状态内化到模型。 三类持续个性化设置均优于原始历史与增量更新基线，并对新用户、跨域和上下文预算变化保持稳定。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 7,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00291",
+      "title": "StreamScout: Learning When to Look Deeper for Streaming Video Understanding",
+      "authors": [
+        "Ce Zhang",
+        "Jing Bi",
+        "Jinxi He",
+        "Jianshu Zhang",
+        "Jingyang Lin",
+        "Yunzhong Xiao",
+        "Minghao Fu",
+        "Yaqi Xie",
+        "Zhentao Xie",
+        "Weicong Chen",
+        "Katia Sycara",
+        "Ming Zhou"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T19:35:25Z",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "type": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2609.00291",
+      "pdf_url": "https://arxiv.org/pdf/2609.00291",
+      "summary": "StreamScout 先保留轻量文本时间线，再按置信度逐级访问三种视觉视图，并蒸馏停止/升级边界。 OVO-Bench 上 Qwen3-VL-8B 提高 14.65 分、token 少 59%，平均回答时间 1.04 秒。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 7,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00355",
+      "title": "Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models",
+      "authors": [
+        "Jungseob Lee",
+        "Seongtae Hong",
+        "Dongyub Jude Lee",
+        "Chanjun Park",
+        "Jaehyung Seo",
+        "Sugyeong Eo",
+        "Heuiseok Lim"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T20:50:35Z",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": "Artificial Intelligence (cs.AI) ; Computation and Language (cs.CL); Computer Vision and Pattern Recognition (cs.CV)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2609.00355",
+      "pdf_url": "https://arxiv.org/pdf/2609.00355",
+      "summary": "GLANCE 用一次块扩散草稿读取已融合视觉—语言状态，再由目标模型一次验证宽候选树，保持无损输出。 同引擎同轮预算下最高比自回归快 2.93×，接受块长为同语料 EAGLE-3 的 2.7×。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00421",
+      "title": "VARA: A Voltage-Aware ReRAM-Based Accelerator for Energy-Efficient Computing",
+      "authors": [
+        "Peng Dang",
+        "Yintao He",
+        "Huawei Li"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T21:57:54Z",
+      "primary_category": "Hardware Architecture (cs.AR)",
+      "categories": "Hardware Architecture (cs.AR)",
+      "type": "pruning",
+      "url": "https://arxiv.org/abs/2609.00421",
+      "pdf_url": "https://arxiv.org/pdf/2609.00421",
+      "summary": "VARA 通过电压感知训练提高激活零值比例，并按共同为零相关性重排维度以触发 ReRAM crossbar 跳算。 平均系统能耗降低 60.12%，能效提高 2.68×，准确率仅边际下降。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00446",
+      "title": "CRAD: Class-wise Reliability-Aware Distillation for Decentralized Heterogeneous Federated Learning",
+      "authors": [
+        "Baraa Bilbeisi",
+        "Mengchen Fan",
+        "Baocheng Geng",
+        "Qing Tian"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T22:36:30Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Computer Vision and Pattern Recognition (cs.CV)",
+      "type": "knowledge_distillation",
+      "url": "https://arxiv.org/abs/2609.00446",
+      "pdf_url": "https://arxiv.org/pdf/2609.00446",
+      "summary": "CRAD 在去中心化异构联邦学习中按类别过滤不可靠教师，并以精度或逆方差加权软标签蒸馏。 CIFAR-10/100 与 PathMNIST 的异构架构、严重 non-IID 设置中，全局准确率持续优于对比方法。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 7,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00450",
+      "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+      "authors": [
+        "Chun-Ting Chen",
+        "Dongmin Han",
+        "Hangyeol Mun",
+        "Jake Hyun",
+        "Arnab Raha",
+        "Amit Agarwal",
+        "Mark Anders",
+        "Mohamed Abdelfattah",
+        "Jae-sun Seo"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T22:39:52Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI); Hardware Architecture (cs.AR)",
+      "type": "quantization",
+      "url": "https://arxiv.org/abs/2609.00450",
+      "pdf_url": "https://arxiv.org/pdf/2609.00450",
+      "summary": "HBQ 用大块提高硬件利用率，再以低开销 significand 二级尺度补偿 W/A/KV 的大块量化误差。 HBQ-E 硬件成本再降 17%；相同准确率下面积/能效提高 2.3×/4.6×，系统加速 1.5–3.0×。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 8,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00474",
+      "title": "Exploring Collaboration between a language and a non-language agent",
+      "authors": [
+        "Harini S I",
+        "Somesh Singh",
+        "Yaman K Singla",
+        "Rajiv Ratn Shah",
+        "David Doermann",
+        "Balaji Krishnamurthy"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T23:25:10Z",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2609.00474",
+      "pdf_url": "https://arxiv.org/pdf/2609.00474",
+      "summary": "将非语言代理的连续状态直接投影为动态 learned state tokens，避免把丰富状态压成稀疏文本摘要。 4B 到 14B 都存在 verbalization debt；14B LLAMIA 在六项棋类协作任务达到或超过专用/前沿模型。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    },
+    {
+      "arxiv_id": "2609.00489",
+      "title": "A hybrid quantum-classical neural network for learning to route",
+      "authors": [
+        "Marcus Rolf Peter Ritt",
+        "Alexsandro Santos da Rosa Júnior",
+        "Marcos Vinicius Reballo",
+        "Cesar Augusto do Amaral",
+        "Fernando Augusto Caletti de Barros"
+      ],
+      "submitted_date": "2026-08-31",
+      "v1_utc": "2026-08-31T23:36:36Z",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": "Machine Learning (cs.LG) ; Quantum Physics (quant-ph)",
+      "type": "other",
+      "url": "https://arxiv.org/abs/2609.00489",
+      "pdf_url": "https://arxiv.org/pdf/2609.00489",
+      "summary": "以小型量子神经网络替换注意力路由模型的参数密集前馈模块，检验模块级压缩的质量边界。 前馈模块替换使参数量减少 56.6%，中小规模路由实例接近经典神经基线，但大实例差距扩大。",
+      "scores": {
+        "accuracy_effect": 8,
+        "compression_ratio": 8,
+        "innovation": 7,
+        "reproducibility": 7,
+        "basis": "官方摘要与全文的任务质量/资源数字；无统一倍率时不作推断。"
+      }
+    }
+  ]
+}

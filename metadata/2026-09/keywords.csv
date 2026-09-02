@@ -1,0 +1,36 @@
+arxiv_id,title,submitted_date,type,primary_category,url,accuracy_effect,compression_ratio,innovation,reproducibility
+2609.00575,Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs,2026-09-01,pruning,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.00575,8,8,8,7
+2609.00588,Quit While You're Ahead: Quit for Efficient Candidate Generation in Machine Translation Reranking,2026-09-01,other,Computation and Language (cs.CL),https://arxiv.org/abs/2609.00588,8,8,7,7
+2609.00611,Panda Diplomacy: Foundation Model Pre-training across Particle Imaging Detectors for High Energy and Nuclear Physics,2026-09-01,knowledge_distillation,High Energy Physics - Experiment (hep-ex),https://arxiv.org/abs/2609.00611,8,7,8,7
+2609.00624,Trust Your Guide Only When Certain: Uncertainty-Aware Sparse Alignment at Inference Time,2026-09-01,pruning,Computation and Language (cs.CL),https://arxiv.org/abs/2609.00624,8,8,8,7
+2609.00665,Triple-Bottom-Line Sustainability of Language Models for Edge AI: A Comparison Between SLMs and Quantized LLMs,2026-09-01,quantization,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.00665,8,8,8,7
+2609.00667,From Saliency to Discriminability: Rank-Preserving Visual Token Pruning for VLM Rerankers,2026-09-01,pruning,Information Retrieval (cs.IR),https://arxiv.org/abs/2609.00667,8,8,8,7
+2609.00718,A Closed-Loop Evaluation of Capability Loss and Recovery in Compressed Driving Policies,2026-09-01,quantization,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.00718,8,8,8,7
+2609.00791,Instella-MoE Technical Report,2026-09-01,knowledge_distillation,Computation and Language (cs.CL),https://arxiv.org/abs/2609.00791,8,7,8,7
+2609.00796,SFAD: Speculative Factuality-Aware Decoding,2026-09-01,other,Computation and Language (cs.CL),https://arxiv.org/abs/2609.00796,8,8,7,7
+2609.00798,Advanced Pixel Diffusion Model with Guided Sparse Global Refinement,2026-09-01,pruning,Computer Vision and Pattern Recognition (cs.CV),https://arxiv.org/abs/2609.00798,8,8,8,7
+2609.00865,MemoryWalker: Stop Training Agents on Contexts They Never Saw,2026-09-01,knowledge_distillation,Machine Learning (cs.LG),https://arxiv.org/abs/2609.00865,8,7,8,7
+2609.00891,CacheBridge: Efficient Cross-Model KV Cache Transfer,2026-09-01,other,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.00891,8,8,7,7
+2609.00951,CERF: Communication-Efficient and Retraining-Free Collaborative Perception,2026-09-01,other,Computer Vision and Pattern Recognition (cs.CV),https://arxiv.org/abs/2609.00951,8,8,7,7
+2609.01004,SinkPruner: Sink-Free Visual Token Pruning for Multimodal Large Language Models,2026-09-01,pruning,Computer Vision and Pattern Recognition (cs.CV),https://arxiv.org/abs/2609.01004,8,8,8,7
+2609.01024,PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition,2026-09-01,pruning,Computation and Language (cs.CL),https://arxiv.org/abs/2609.01024,8,8,8,7
+2609.01084,Hardware Acceleration of Block-Diffusion LLM for Edge Devices,2026-09-01,quantization,Hardware Architecture (cs.AR),https://arxiv.org/abs/2609.01084,8,8,8,7
+2609.01091,Subliminal Learning as Trait-Direction Drift: A Mechanism and Targeted Control under SFT Distillation,2026-09-01,knowledge_distillation,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01091,8,7,8,7
+2609.01111,ClinTraceBench: Source-Verifiable Longitudinal Clinical Reasoning over EHR-Derived Dialogues,2026-09-01,other,Computation and Language (cs.CL),https://arxiv.org/abs/2609.01111,8,8,7,7
+2609.01158,Superposed Latent Autoencoder,2026-09-01,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01158,8,8,7,7
+2609.01200,Compressing AI Traffic: Standardized Neural Network Coding of Visual-Token Representations in Split Vision-Language Inference,2026-09-01,quantization,Computer Vision and Pattern Recognition (cs.CV),https://arxiv.org/abs/2609.01200,8,8,8,7
+2609.01212,Recent Developments in Transformer Inference Deployment on FPGA Platforms: A Survey,2026-09-01,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01212,8,8,7,7
+2609.01224,S$^2$Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models,2026-09-01,pruning,Computer Vision and Pattern Recognition (cs.CV),https://arxiv.org/abs/2609.01224,8,8,8,7
+2609.01232,Position Matters: Feature Inversion Attacks in ViT Split Inference with Token Reduction and Shuffling,2026-09-01,other,Cryptography and Security (cs.CR),https://arxiv.org/abs/2609.01232,8,8,7,7
+2609.01343,SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers,2026-09-01,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01343,8,8,7,7
+2609.01345,"Cheap Verifiers, Large Blind Spots: Measuring the Reliability Cost of Cost-Saving Cascades",2026-09-01,knowledge_distillation,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.01345,8,7,8,7
+2609.01374,Behaviorally Effective LoRA Writes Are Sparse and Structured,2026-09-01,pruning,Computation and Language (cs.CL),https://arxiv.org/abs/2609.01374,8,8,8,7
+2609.01406,Contribution-Aware Bandwidth Allocation for Multimodal Split Learning,2026-09-01,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01406,8,8,7,7
+2609.01428,TRIAGE: Three-level Routing and Intelligent Agent Guidance for Efficient Execution,2026-09-01,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01428,8,8,7,7
+2609.01430,Learning Sparse Decision Trees via Transformer Variational Auto-Encoders,2026-09-01,pruning,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01430,8,8,8,7
+2609.01507,LatentPress: Context Compression Beyond Text and Vision,2026-09-01,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01507,8,8,7,7
+2609.01532,Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall,2026-09-01,knowledge_distillation,Computation and Language (cs.CL),https://arxiv.org/abs/2609.01532,8,7,8,7
+2609.01550,A Mathematical Theory of Reusable Neural Bases for Network Compression,2026-09-01,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01550,8,8,7,7
+2609.01567,Selective Agent Guidance via Entropy: Learning Autonomous Policies from Imperfect VLM Teachers,2026-09-01,knowledge_distillation,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.01567,8,7,8,7
+2609.01575,Closing Cost-Quality Gap in Document VLMs: Difficulty-Aware Data Curation and Quality-Adjusted Deployment Economics,2026-09-01,other,Computation and Language (cs.CL),https://arxiv.org/abs/2609.01575,8,8,7,7
+2609.01587,The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally,2026-09-01,quantization,Machine Learning (cs.LG),https://arxiv.org/abs/2609.01587,8,8,8,7

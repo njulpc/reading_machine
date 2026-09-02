@@ -1,0 +1,22 @@
+arxiv_id,title,submitted_date,type,primary_category,url,accuracy_effect,compression_ratio,innovation,reproducibility
+2608.30141,"Balancing Privacy, Utility, and Safety in LLM Alignment through Preference Optimization",2026-08-31,other,Cryptography and Security (cs.CR),https://arxiv.org/abs/2608.30141,8,8,7,7
+2608.30226,LaMoC: Loss-Aware Modular Compression for LLMs,2026-08-31,other,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2608.30226,8,8,7,7
+2608.30310,Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs,2026-08-31,other,Machine Learning (cs.LG),https://arxiv.org/abs/2608.30310,8,8,7,7
+2608.30352,Co-Annotator: Expert-Distilled ViT and VLM for Visual and Documentation Guidance in Age-Related Macular Degeneration,2026-08-31,knowledge_distillation,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2608.30352,8,7,8,7
+2608.30386,DASC: Decay-Aware State Compression for Hybrid Linear-Attention Serving,2026-08-31,other,Machine Learning (cs.LG),https://arxiv.org/abs/2608.30386,8,8,7,7
+2608.30505,"Tensor Methods for Language Models: From Token Representation to Training, Adaptation, Inference, Compression, and Interpretability",2026-08-31,other,Machine Learning (cs.LG),https://arxiv.org/abs/2608.30505,8,8,7,7
+2608.30563,Modality Disentangled Learning for Incomplete Multimodal Emotion Recognition: A Primitive Memory Distillation Perspective,2026-08-31,knowledge_distillation,Computer Vision and Pattern Recognition (cs.CV),https://arxiv.org/abs/2608.30563,8,7,8,7
+2608.30647,"What It Costs to Compose, Rebuild, and Correct Precomputed Memory",2026-08-31,other,Computation and Language (cs.CL),https://arxiv.org/abs/2608.30647,8,8,7,7
+2608.30785,SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents,2026-08-31,other,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2608.30785,8,8,7,7
+2608.30811,TopoCompress: Long Context Compression via Graph-Wired Semantic Trajectories,2026-08-31,other,Computation and Language (cs.CL),https://arxiv.org/abs/2608.30811,8,8,7,7
+2609.00097,Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding,2026-08-31,pruning,Machine Learning (cs.LG),https://arxiv.org/abs/2609.00097,8,8,8,7
+2609.00103,Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy,2026-08-31,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.00103,8,8,7,7
+2609.00224,QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization,2026-08-31,quantization,Machine Learning (cs.LG),https://arxiv.org/abs/2609.00224,8,8,8,7
+2609.00251,Hypotheses-Guided Self Distillation for Continual Personalization,2026-08-31,knowledge_distillation,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.00251,8,7,8,7
+2609.00291,StreamScout: Learning When to Look Deeper for Streaming Video Understanding,2026-08-31,knowledge_distillation,Computer Vision and Pattern Recognition (cs.CV),https://arxiv.org/abs/2609.00291,8,7,8,7
+2609.00355,Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models,2026-08-31,other,Artificial Intelligence (cs.AI),https://arxiv.org/abs/2609.00355,8,8,7,7
+2609.00421,VARA: A Voltage-Aware ReRAM-Based Accelerator for Energy-Efficient Computing,2026-08-31,pruning,Hardware Architecture (cs.AR),https://arxiv.org/abs/2609.00421,8,8,8,7
+2609.00446,CRAD: Class-wise Reliability-Aware Distillation for Decentralized Heterogeneous Federated Learning,2026-08-31,knowledge_distillation,Machine Learning (cs.LG),https://arxiv.org/abs/2609.00446,8,7,8,7
+2609.00450,HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference,2026-08-31,quantization,Machine Learning (cs.LG),https://arxiv.org/abs/2609.00450,8,8,8,7
+2609.00474,Exploring Collaboration between a language and a non-language agent,2026-08-31,other,Computation and Language (cs.CL),https://arxiv.org/abs/2609.00474,8,8,7,7
+2609.00489,A hybrid quantum-classical neural network for learning to route,2026-08-31,other,Machine Learning (cs.LG),https://arxiv.org/abs/2609.00489,8,8,7,7
