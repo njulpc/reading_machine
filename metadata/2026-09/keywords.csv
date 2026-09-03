@@ -1,0 +1,32 @@
+arxiv_id,submitted_date,category,title,keywords
+2609.01683,2026-09-01,quantization,FORGE: Forward-Only Test-Time Adaptation for Integer-Only Vision Models on Microcontrollers,量化
+2609.01740,2026-09-01,other,ZipTok3D: High-Fidelity 3D Tokenization with Compact Token Prefixes,其他压缩与高效推理
+2609.01743,2026-09-01,quantization,SCULPT: Training Edge Vision Models for Post-Training Quantization Readiness,量化
+2609.01749,2026-09-01,other,Swin Meets EfficientNet: Lightweight Architectures for GAN-Based Face Forensics,其他压缩与高效推理
+2609.01768,2026-09-01,other,"Emergence of Fibrations, Compression, and Symmetry Breaking in Artificial Neural Networks",其他压缩与高效推理
+2609.01807,2026-09-01,knowledge_distillation,hLLM: Single Pass Decoding for Generative Reranking,知识蒸馏
+2609.01840,2026-09-01,knowledge_distillation,Cross-Model Distillation of a Human-Pose Foundation Model from Unannotated Infant Video for Markerless 3D Pose Estimation,知识蒸馏
+2609.01925,2026-09-01,pruning,CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing,剪枝/稀疏化
+2609.01947,2026-09-01,knowledge_distillation,On-Policy Distillation Meets Off-Policy GRPO: Training Compact Instruction-Following Rerankers,知识蒸馏
+2609.01952,2026-09-01,knowledge_distillation,Convergence Theory of Knowledge Distillation in Asynchronous P2P Gossip Learning Network,知识蒸馏
+2609.01962,2026-09-02,quantization,"Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",量化
+2609.02006,2026-09-02,knowledge_distillation,Train What You Deploy: Closing the MLP Reachability Gap in Low-Rank Clone Distillation,知识蒸馏
+2609.02029,2026-09-02,other,HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models,其他压缩与高效推理
+2609.02036,2026-09-02,other,SelfLift: Accelerating Few-Step Diffusion via Self-Recovering Resolution Transition,其他压缩与高效推理
+2609.02083,2026-09-02,pruning,XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression,剪枝/稀疏化
+2609.02107,2026-09-02,quantization,"A Unified Rate-Distortion Perspective on Vector, Product, and Scalar Quantization",量化
+2609.02160,2026-09-02,pruning,GeoSPRINT: Geometric Redundancy-Aware Step Pruning for Inference in Diffusion Trajectories,剪枝/稀疏化
+2609.02219,2026-09-02,quantization,Hardware-Accelerated Instance Segmentation for Resource-Constrained Space Robotics with Criticality Analysis,量化
+2609.02350,2026-09-02,other,LookStep: Efficient Vision-Language Navigation with Linguistic Foresight and Event Driven Memory,其他压缩与高效推理
+2609.02401,2026-09-02,knowledge_distillation,CA-OPD: Confidence-Aware On-Policy Distillation for Structured Visual Prediction,知识蒸馏
+2609.02451,2026-09-02,other,Scalable Kronecker-Fisher Approximation: Efficient Hessian Analysis for Billion-Parameter Language Models Compression,其他压缩与高效推理
+2609.02496,2026-09-02,pruning,Debias-SparseGPT: Bias-Aware Pruning for Large Language Models,剪枝/稀疏化
+2609.02548,2026-09-02,knowledge_distillation,Learn from Whoever Is Right: Answer-Verified Multi-Teacher Distillation for Multi-Domain LLMs,知识蒸馏
+2609.02652,2026-09-02,quantization,Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights,量化
+2609.02676,2026-09-02,knowledge_distillation,LoFi RADIO: A Distilled In-Domain Backbone Applied for Artifact-Severity Grading of Ultra-Low-Field Neonatal Brain MR,知识蒸馏
+2609.02684,2026-09-02,pruning,H3DNAS: Hardware-Aware ONNX-Native 3D Point Cloud Model Compression,剪枝/稀疏化
+2609.02731,2026-09-02,pruning,RVSD: Retrieval Vision Sparse Decoding for Mitigating Visual Hallucinations in Large Vision-Language Models,剪枝/稀疏化
+2609.02737,2026-09-02,pruning,Language Models Can Control Their Own Attention,剪枝/稀疏化
+2609.02760,2026-09-02,pruning,Measurement-Driven Sub-Network Selection for On-Premise Retrieval-Augmented Factory Agents,剪枝/稀疏化
+2609.02780,2026-09-02,other,ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding,其他压缩与高效推理
+2609.02846,2026-09-02,quantization,UE5M3 FP4 Block Scaling for Stable Language Model Pretraining,量化
