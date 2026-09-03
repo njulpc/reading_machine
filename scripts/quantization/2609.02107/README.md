@@ -1,63 +1,23 @@
 # 2609.02107 — 统一 rate-distortion 量化比较
 
-## 实现范围
+## 方法与实现范围
 
-在 1,024 个真实 Qwen embedding 8 维切片上，以同为 8 bit/vector 比较 SQ、PQ、VQ。
+论文比较离散视觉 tokenizer 的 VQ、PQ 与 SQ。公平条件是相同 latent 分布以及相同 `T` 和 composite code-space `K`，distortion 为期望平方欧氏误差；这不是 LLM 权重量化方法。
+
+本 demo 从同一 Qwen embedding 张量取 8 维向量，前 4,096 个训练码本、后 1,024 个独立评估；三种方法统一为 `K=256`、8 bit/vector：VQ `1×256`、PQ `2×16`、SQ `8×2`。
 
 ## 运行
 
 ```bash
+python3 scripts/quantization/2609.02107/demo.py --self-test
 python3 scripts/quantization/2609.02107/demo.py --output-json /tmp/2609.02107.json
 ```
 
-环境：macOS arm64 CPU、Python 3.9.6、PyTorch 2.8.0、Transformers 4.57.6；读取本地 Qwen3-0.6B checkpoint，不下载权重。
+## 代码审查与验证（2026-09-04）
 
-## 本次真实验证结果
+- **算法一致性：部分一致。** matched source、matched `T/K/rate`、VQ/PQ/SQ 结构与 squared-error distortion 一致；视觉 encoder/decoder、ImageNet/FFHQ/CelebA-HQ、STE 和重建指标未复现。
+- **修复：** 原实现让码本在同一批 1,024 向量上训练和评分，且 SQ 使用手工 abs-mean；现改为 4,096/1,024 train/test 分离，并对 SQ/PQ/VQ 都实际拟合码本；显式报告三类码本存储项数，避免只看 nominal rate。
+- **结果：** 退出码 0，1.26 s；test MSE 为 SQ `2.38566e-4`、PQ `2.18012e-4`、VQ `1.90419e-4`，在此受控切片上恢复 VQ < PQ < SQ 的 distortion 次序。
+- **真实 Qwen3-0.6B：未跑通模型量化（方法不适用）。** 只使用真实 checkpoint 的 embedding 数据做内在 rate-distortion 验证；没有修改模型、前向生成或保存量化模型。
 
-语法、导入、真实 checkpoint 加载和真实 Qwen 张量运行均 **PASS**。同 8 bit/vector 下 SQ/PQ/VQ MSE=0.000261143/0.000159213/7.65529e-05。
-
-```json
-{
-  "algorithm": "equal-8-bit rate-distortion comparison on real Qwen embedding vectors",
-  "vectors": 1024,
-  "dimension": 8,
-  "scalar_1bit_per_dim": {
-    "mse": 0.0002611425006762147,
-    "mae": 0.0127183236181736,
-    "cosine": 0.8408767056185644,
-    "relative_l2": 0.5412279963493347
-  },
-  "product_two_8bit_codes": {
-    "mse": 0.0001592132612131536,
-    "mae": 0.009909344837069511,
-    "cosine": 0.9063160443638452,
-    "relative_l2": 0.42260152101516724
-  },
-  "vector_single_8bit_code": {
-    "mse": 7.655288936803117e-05,
-    "mae": 0.006617601495236158,
-    "cosine": 0.9561013510426224,
-    "relative_l2": 0.2930367588996887
-  },
-  "rate_bits_per_vector": 8,
-  "note": "codebook storage amortization is excluded equally from this intrinsic distortion smoke test",
-  "paper_id": "2609.02107",
-  "model": "Qwen3-0.6B",
-  "checkpoint": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca/model.safetensors",
-  "environment": {
-    "python": "3.9.6",
-    "torch": "2.8.0",
-    "transformers": "4.57.6",
-    "platform": "macOS-26.6.2-arm64-arm-64bit",
-    "cuda": false,
-    "mps": false
-  },
-  "elapsed_seconds": 1.119618542,
-  "status": "PASS",
-  "scope": "real checkpoint and real model activations; CPU numerical reference"
-}
-```
-
-## 证据边界
-
-只验证固定码率下的内在失真；没有复现视觉 tokenizer 训练与码本存储摊销。
+环境：macOS 26.6.2 arm64 CPU，CUDA/MPS 不可用；Python 3.9.6、PyTorch 2.8.0、Transformers 4.57.6；本地完整 Qwen3-0.6B checkpoint。
