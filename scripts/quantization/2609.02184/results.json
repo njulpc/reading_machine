@@ -1,0 +1,29 @@
+{
+  "model": "Qwen3-0.6B",
+  "rows": 1024,
+  "residual_codebook": 256,
+  "scalar_bits": 12,
+  "autoencoder_only": {
+    "mse": 0.7930701971054077,
+    "relative_l2": 0.890556275844574,
+    "cosine": 0.4548839330673218
+  },
+  "autoencoder_residual": {
+    "mse": 0.3168783187866211,
+    "relative_l2": 0.5629268884658813,
+    "cosine": 0.8265063762664795
+  },
+  "scalar_12bit_error": {
+    "mse": 2.1004659345180698e-07,
+    "relative_l2": 0.0003038749273400754,
+    "cosine": 1.0000001192092896
+  },
+  "full_paper_reproduced": false,
+  "boundary": "Qwen rows and row statistics replace SH-AC/geometric conditions for component verification only. 8D latent, 8bit latent, mu=255 and 40 training steps are demo choices, not claimed paper defaults. No CDF deformation hash, scene rendering, archive Zstandard, or compressed Qwen checkpoint.",
+  "python": "3.9.6",
+  "torch": "2.8.0",
+  "transformers": "4.57.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "cuda": false,
+  "status": "executed"
+}

@@ -1,0 +1,26 @@
+{
+  "model": "Qwen3-0.6B",
+  "operator_shape": [
+    1,
+    16,
+    28,
+    28
+  ],
+  "output_error": {
+    "mse": 3.2577292586211115e-05,
+    "relative_l2": 0.12416517734527588,
+    "cosine": 0.9922662973403931
+  },
+  "row_sum_max_error": 2.384185791015625e-07,
+  "A": 1.5,
+  "B": 1.2,
+  "P_block": 32,
+  "full_paper_reproduced": false,
+  "boundary": "Real first-layer projections used as noncausal operator inputs before RoPE/QK normalization. V uses block-32 power-of-two MX reconstruction. No folded K64 scales, sampled guard, TMEM packing, backward or full-model substitution. Thus not a complete FP4 attention reproduction and no speedup claimed.",
+  "python": "3.9.6",
+  "torch": "2.8.0",
+  "transformers": "4.57.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "cuda": false,
+  "status": "executed"
+}

@@ -1,0 +1,38 @@
+arxiv_id,title,submitted_date,category,keywords,analysis_path
+2609.02184,CC-4DGS: Computational Deformation and Point-Cloud Compression for Storage-Efficient Dynamic Gaussian Splatting,2026-09-02,quantization,量化,papers/2026-09/quantization/2609.02184/tech_analysis.md
+2609.02471,Learning to Track from Privileged Target Appearances,2026-09-02,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.02471/tech_analysis.md
+2609.02735,Choosing a PEFT Variant for Per-Patient Dysarthric ASR: A Single-Speaker Case Study on Two ASR Bases,2026-09-02,quantization,量化,papers/2026-09/quantization/2609.02735/tech_analysis.md
+2609.02854,MuyBridge: Mobile Human Center-of-Mass Estimation from Monocular Video via Sparse Fusion,2026-09-03,quantization,量化,papers/2026-09/quantization/2609.02854/tech_analysis.md
+2609.02886,SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.02886/tech_analysis.md
+2609.02998,Verify Before You Distill: Prompt-Level Teacher Gating for On-Policy Distillation,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.02998/tech_analysis.md
+2609.03079,LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference,2026-09-03,pruning,剪枝,papers/2026-09/pruning/2609.03079/tech_analysis.md
+2609.03100,Distilling deep optical flow stereo methods to retrieve dense three-dimensional wind fields,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.03100/tech_analysis.md
+2609.03125,A Time-Encoded Analog Photonic Interposer for Energy-EfficientIntegration of Analog Vision Sensors and Analog Accelerators,2026-09-03,quantization,量化,papers/2026-09/quantization/2609.03125/tech_analysis.md
+2609.03158,Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization,2026-09-03,pruning,剪枝,papers/2026-09/pruning/2609.03158/tech_analysis.md
+2609.03216,ProgResViT: Progressive Resolution and Width for Adaptive Vision Transformers,2026-09-03,pruning,剪枝,papers/2026-09/pruning/2609.03216/tech_analysis.md
+2609.03235,SGD-KV: Summarization Guided KV Cache Compression,2026-09-03,other,其他模型压缩,papers/2026-09/other/2609.03235/tech_analysis.md
+2609.03355,ALRA: Adaptive Local Relational Alignment for Logit-Based Pre-training Distillation of Autoregressive Language Models,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.03355/tech_analysis.md
+2609.03378,When Depth Hurts: Reliability-Aware Geometry Distillation for Depth-Free RGB-D Salient Object Detection,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.03378/tech_analysis.md
+2609.03426,Lngram v2: Latent N-Gram Memory with Interpretable Discrete Representations,2026-09-03,other,其他模型压缩,papers/2026-09/other/2609.03426/tech_analysis.md
+2609.03430,Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning,2026-09-03,other,其他模型压缩,papers/2026-09/other/2609.03430/tech_analysis.md
+2609.03459,FlowTT: Exploiting Computation Flow Reuse in Irregular Tensor-Train Embedding,2026-09-03,other,其他模型压缩,papers/2026-09/other/2609.03459/tech_analysis.md
+2609.03494,GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving,2026-09-03,other,其他模型压缩,papers/2026-09/other/2609.03494/tech_analysis.md
+2609.03502,Building and Evaluating Fixed-Voice Thai TTS from Synthetic Speech,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.03502/tech_analysis.md
+2609.03515,What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation,2026-09-03,other,其他模型压缩,papers/2026-09/other/2609.03515/tech_analysis.md
+2609.03563,FlashRender: Few-Step Generative Rendering via Camera-Controlled Video MeanFlow,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.03563/tech_analysis.md
+2609.03604,On the Interaction Between Model Compression and Test-Time Adaptation,2026-09-03,pruning,剪枝,papers/2026-09/pruning/2609.03604/tech_analysis.md
+2609.03675,CoFiE: Coarse-to-Fine Evidence Selection for Efficient Streaming Video Understanding,2026-09-03,pruning,剪枝,papers/2026-09/pruning/2609.03675/tech_analysis.md
+2609.03702,Synthetic Semantic Supervision for Contrastive Code Representation Learning in Small Transformers: An Empirical Study,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.03702/tech_analysis.md
+2609.03796,LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes,2026-09-03,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.03796/tech_analysis.md
+2609.03820,"Select, Compress, Reinvest: A Controlled Study of Visual-Token Allocation in Long-Video MLLMs",2026-09-03,pruning,剪枝,papers/2026-09/pruning/2609.03820/tech_analysis.md
+2609.03949,VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch,2026-09-03,other,其他模型压缩,papers/2026-09/other/2609.03949/tech_analysis.md
+2609.04031,DSAQuant: Denoising-Stage-Aligned Quantization-Aware Training for Video Generation,2026-09-04,quantization,量化,papers/2026-09/quantization/2609.04031/tech_analysis.md
+2609.04071,TAP-Path: Task-Adaptive Structural and Token Pruning for Efficient and Trustworthy Pathology Foundation Models,2026-09-04,pruning,剪枝,papers/2026-09/pruning/2609.04071/tech_analysis.md
+2609.04083,CORE: Improving Compositional Reasoning in MLLM Embedding via Reranker Distillation,2026-09-04,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.04083/tech_analysis.md
+2609.04098,Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM,2026-09-04,quantization,量化,papers/2026-09/quantization/2609.04098/tech_analysis.md
+2609.04105,Hardware-Aware FP4 FlashAttention-4,2026-09-04,quantization,量化,papers/2026-09/quantization/2609.04105/tech_analysis.md
+2609.04108,Sequential Beats Joint: On the Interplay between On-Policy Distillation and RLVR,2026-09-04,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.04108/tech_analysis.md
+2609.04131,Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding,2026-09-04,other,其他模型压缩,papers/2026-09/other/2609.04131/tech_analysis.md
+2609.04172,Rethinking On-Policy Distillation of Large Language Models II: One Training Example,2026-09-04,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.04172/tech_analysis.md
+2609.04199,Compile by Training: Turning Natural-Language Specifications into Local Neural Functions,2026-09-04,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.04199/tech_analysis.md
+2609.04203,Temporal Self-Distillation: Learning Visual State Tracking in Videos Without Supervision,2026-09-04,knowledge_distillation,知识蒸馏,papers/2026-09/knowledge_distillation/2609.04203/tech_analysis.md

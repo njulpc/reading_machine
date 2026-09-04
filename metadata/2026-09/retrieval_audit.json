@@ -1,0 +1,521 @@
+{
+  "generated_at": "2026-09-05T01:29:27+08:00",
+  "pages": [
+    {
+      "category": "cs.LG",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000",
+      "declared": 272,
+      "actual": 272,
+      "groups": [
+        "Showing new listings for Friday, 4 September 2026",
+        "New submissions (showing 85 of 85 entries)",
+        "Cross submissions (showing 83 of 83 entries)",
+        "Replacement submissions (showing 104 of 104 entries)"
+      ],
+      "pager": "Total of 272 entries",
+      "sha256": "b0f7970f9fa0c2d5654f32e3c100c6fbde60ead26465dbc4282b769faad4f23c",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.LG",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000",
+      "declared": 985,
+      "actual": 985,
+      "groups": [
+        "Fri, 4 Sep 2026 (showing 168 of 168 entries )",
+        "Thu, 3 Sep 2026 (showing 159 of 159 entries )",
+        "Wed, 2 Sep 2026 (showing 202 of 202 entries )",
+        "Tue, 1 Sep 2026 (showing 336 of 336 entries )",
+        "Mon, 31 Aug 2026 (showing 120 of 120 entries )"
+      ],
+      "pager": "Total of 985 entries",
+      "sha256": "3eb1e59f1bd68c98597e7ff58c9dc52cd4333acff9f2da9631e083acf827e7a1",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000",
+      "declared": 183,
+      "actual": 183,
+      "groups": [
+        "Showing new listings for Friday, 4 September 2026",
+        "New submissions (showing 75 of 75 entries)",
+        "Cross submissions (showing 40 of 40 entries)",
+        "Replacement submissions (showing 68 of 68 entries)"
+      ],
+      "pager": "Total of 183 entries",
+      "sha256": "51e70d2a6d896d394e029fcbd04f5187a02e890b17779c75a8a1b3b5fbee4c0f",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000",
+      "declared": 781,
+      "actual": 781,
+      "groups": [
+        "Fri, 4 Sep 2026 (showing 115 of 115 entries )",
+        "Thu, 3 Sep 2026 (showing 101 of 101 entries )",
+        "Wed, 2 Sep 2026 (showing 185 of 185 entries )",
+        "Tue, 1 Sep 2026 (showing 298 of 298 entries )",
+        "Mon, 31 Aug 2026 (showing 82 of 82 entries )"
+      ],
+      "pager": "Total of 781 entries",
+      "sha256": "d92ac97cf997bbf1e3d1ab8b05adb669e32e8ad677e5f21be0463b8924a27ca5",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000",
+      "declared": 175,
+      "actual": 175,
+      "groups": [
+        "Showing new listings for Friday, 4 September 2026",
+        "New submissions (showing 102 of 102 entries)",
+        "Cross submissions (showing 10 of 10 entries)",
+        "Replacement submissions (showing 63 of 63 entries)"
+      ],
+      "pager": "Total of 175 entries",
+      "sha256": "76efbd3e403da94585c32afa89274e4cd1e14e2861e60ce6087977bc1123afeb",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000",
+      "declared": 809,
+      "actual": 809,
+      "groups": [
+        "Fri, 4 Sep 2026 (showing 112 of 112 entries )",
+        "Thu, 3 Sep 2026 (showing 136 of 136 entries )",
+        "Wed, 2 Sep 2026 (showing 152 of 152 entries )",
+        "Tue, 1 Sep 2026 (showing 316 of 316 entries )",
+        "Mon, 31 Aug 2026 (showing 93 of 93 entries )"
+      ],
+      "pager": "Total of 809 entries",
+      "sha256": "b2bd08c0a8ff6987c481d595c526ab3ed2962989f8158093d7233cbe6b7f52bf",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000",
+      "declared": 269,
+      "actual": 269,
+      "groups": [
+        "Showing new listings for Friday, 4 September 2026",
+        "New submissions (showing 69 of 69 entries)",
+        "Cross submissions (showing 96 of 96 entries)",
+        "Replacement submissions (showing 104 of 104 entries)"
+      ],
+      "pager": "Total of 269 entries",
+      "sha256": "3a210d34586a7dd0bfb82f3905397a436a2648b0a3436801f0b1e5fd46f32683",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000",
+      "declared": 1250,
+      "actual": 1250,
+      "groups": [
+        "Fri, 4 Sep 2026 (showing 165 of 165 entries )",
+        "Thu, 3 Sep 2026 (showing 162 of 162 entries )",
+        "Wed, 2 Sep 2026 (showing 309 of 309 entries )",
+        "Tue, 1 Sep 2026 (showing 424 of 424 entries )",
+        "Mon, 31 Aug 2026 (showing 190 of 190 entries )"
+      ],
+      "pager": "Total of 1250 entries",
+      "sha256": "59e5ac86d48daf4fcd9836ca5d271383e6efc6a733d20a50ad225b8c3f8cd360",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000",
+      "declared": 10,
+      "actual": 10,
+      "groups": [
+        "Showing new listings for Friday, 4 September 2026",
+        "New submissions (showing 4 of 4 entries)",
+        "Cross submissions (showing 5 of 5 entries)",
+        "Replacement submissions (showing 1 of 1 entries)"
+      ],
+      "pager": "Total of 10 entries",
+      "sha256": "d1e49b1a992fe591add92690818d72f696f28f04e16ada902caac27ff207d6b0",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000",
+      "declared": 46,
+      "actual": 46,
+      "groups": [
+        "Fri, 4 Sep 2026 (showing 9 of 9 entries )",
+        "Thu, 3 Sep 2026 (showing 10 of 10 entries )",
+        "Wed, 2 Sep 2026 (showing 12 of 12 entries )",
+        "Tue, 1 Sep 2026 (showing 10 of 10 entries )",
+        "Mon, 31 Aug 2026 (showing 5 of 5 entries )"
+      ],
+      "pager": "Total of 46 entries",
+      "sha256": "f7ff7e1d4e5051e7c4ef32c0840b52a757fbce8181e94bfe7e878fee541f6015",
+      "pagination": "show=2000; declared count equals actual; all groups within page"
+    }
+  ],
+  "unique_list_ids": 3087,
+  "abs_success": 3087,
+  "fetch_failed": [],
+  "parse_failed": [],
+  "window_v1_entries": 847,
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-09-02T00:00:00+08:00",
+    "end_exclusive": "2026-09-05T00:00:00+08:00",
+    "dates": [
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04"
+    ],
+    "membership": "official /abs v1 timestamp converted to Asia/Shanghai; not announcement date"
+  },
+  "fulltext_reviewed_candidate_count": 40,
+  "final_fulltext_count": 37,
+  "excluded_after_fulltext": [
+    {
+      "arxiv_id": "2609.01918",
+      "reason": "小模型策略替换及可行域投影；无模型压缩算法贡献"
+    },
+    {
+      "arxiv_id": "2609.02042",
+      "reason": "智能体程序技能与决策轮数压缩；不归入本次模型压缩"
+    },
+    {
+      "arxiv_id": "2609.02898",
+      "reason": "v1为2026-07-04T23:46:07Z，虽然九月公告但不在窗口"
+    }
+  ],
+  "positive_controls": {
+    "cs.LG": [
+      {
+        "id": "2609.00504",
+        "url": "https://arxiv.org/abs/2609.00504",
+        "v1_utc": "2026-09-01T00:07:45Z"
+      },
+      {
+        "id": "2609.00507",
+        "url": "https://arxiv.org/abs/2609.00507",
+        "v1_utc": "2026-09-01T00:17:13Z"
+      }
+    ],
+    "cs.CL": [
+      {
+        "id": "2609.00515",
+        "url": "https://arxiv.org/abs/2609.00515",
+        "v1_utc": "2026-09-01T00:30:22Z"
+      },
+      {
+        "id": "2609.00549",
+        "url": "https://arxiv.org/abs/2609.00549",
+        "v1_utc": "2026-09-01T01:33:57Z"
+      }
+    ],
+    "cs.CV": [
+      {
+        "id": "2609.00505",
+        "url": "https://arxiv.org/abs/2609.00505",
+        "v1_utc": "2026-09-01T00:13:44Z"
+      },
+      {
+        "id": "2609.00521",
+        "url": "https://arxiv.org/abs/2609.00521",
+        "v1_utc": "2026-09-01T00:40:06Z"
+      }
+    ],
+    "cs.AI": [
+      {
+        "id": "2609.00503",
+        "url": "https://arxiv.org/abs/2609.00503",
+        "v1_utc": "2026-09-01T00:07:24Z"
+      },
+      {
+        "id": "2609.00504",
+        "url": "https://arxiv.org/abs/2609.00504",
+        "v1_utc": "2026-09-01T00:07:45Z"
+      }
+    ],
+    "cs.AR": [
+      {
+        "id": "2609.00609",
+        "url": "https://arxiv.org/abs/2609.00609",
+        "v1_utc": "2026-09-01T02:49:34Z"
+      },
+      {
+        "id": "2609.00701",
+        "url": "https://arxiv.org/abs/2609.00701",
+        "v1_utc": "2026-09-01T04:22:25Z"
+      }
+    ]
+  },
+  "history_branch_audit": [
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-29",
+      "tree_entries": 60,
+      "analysis_count": 20,
+      "metadata_count": 20
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-30",
+      "tree_entries": 23,
+      "analysis_count": 8,
+      "metadata_count": 8
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-31",
+      "tree_entries": 23,
+      "analysis_count": 7,
+      "metadata_count": 5
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-01",
+      "tree_entries": 44,
+      "analysis_count": 29,
+      "metadata_count": 32
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-02",
+      "tree_entries": 16,
+      "analysis_count": 4,
+      "metadata_count": 4
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-03",
+      "tree_entries": 29,
+      "analysis_count": 12,
+      "metadata_count": 8
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-04",
+      "tree_entries": 36,
+      "analysis_count": 12,
+      "metadata_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-05",
+      "tree_entries": 35,
+      "analysis_count": 12,
+      "metadata_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-06",
+      "tree_entries": 66,
+      "analysis_count": 30,
+      "metadata_count": 30
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-07",
+      "tree_entries": 98,
+      "analysis_count": 50,
+      "metadata_count": 50
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-08",
+      "tree_entries": 118,
+      "analysis_count": 60,
+      "metadata_count": 10
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-10",
+      "tree_entries": 26,
+      "analysis_count": 9,
+      "metadata_count": 9
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-12",
+      "tree_entries": 26,
+      "analysis_count": 12,
+      "metadata_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-14",
+      "tree_entries": 32,
+      "analysis_count": 10,
+      "metadata_count": 10
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-15",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-16",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-17",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-18",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-19",
+      "tree_entries": 47,
+      "analysis_count": 22,
+      "metadata_count": 22
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-20",
+      "tree_entries": 20,
+      "analysis_count": 9,
+      "metadata_count": 9
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-21",
+      "tree_entries": 23,
+      "analysis_count": 12,
+      "metadata_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-22",
+      "tree_entries": 25,
+      "analysis_count": 14,
+      "metadata_count": 14
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-23",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-24",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-25",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-26",
+      "tree_entries": 36,
+      "analysis_count": 19,
+      "metadata_count": 19
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-27",
+      "tree_entries": 48,
+      "analysis_count": 27,
+      "metadata_count": 27
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-28",
+      "tree_entries": 49,
+      "analysis_count": 30,
+      "metadata_count": 30
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-29",
+      "tree_entries": 55,
+      "analysis_count": 38,
+      "metadata_count": 38
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-30",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-31",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-01",
+      "tree_entries": 9,
+      "analysis_count": 0,
+      "metadata_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-02",
+      "tree_entries": 94,
+      "analysis_count": 60,
+      "metadata_count": 60
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-03",
+      "tree_entries": 82,
+      "analysis_count": 56,
+      "metadata_count": 56
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-04",
+      "tree_entries": 55,
+      "analysis_count": 31,
+      "metadata_count": 31
+    }
+  ],
+  "metadata_only_ids_not_completed": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "dedup_intersection": [],
+  "fulltext_sha256": {
+    "2609.02998": "048400ce346c4394c4f10ce77d280607771bbc6aab4b014cc40e64204eff00d2",
+    "2609.03079": "298ec9f46eb257a1a26e30f1e17ade54cb30d9ed461651c9c754fde40223594c",
+    "2609.03100": "31e32f9a8f25981088335f3e8f4d7744bace47e856931f86e9a4f957cbd46e84",
+    "2609.03158": "cc6e397487daf81ec83a8091316924d193aacad548a0992956766ab3bc6a3846",
+    "2609.03355": "2b5742155db316f746d00a75b50759c7e3392a2f4db42d31b58c43938e8732fa",
+    "2609.03604": "d842858da3227923cb2c499dbba1cfb9f4bd8b0d5b40653867dd9f48ecb335b2",
+    "2609.03949": "657365d0f6fff93847758778775b2d9c89c8d3c36f1ac009f2a465d94b9ae08a",
+    "2609.04105": "2c12fa9ee6bcb71c4363e0dcf04dfc7142f394b80ca04bbcc7075ef40eb173f3",
+    "2609.04108": "a7ae7ec3a541b9a11962d137b8e0226debd28cd5c8c0d0500e4c2d7c5afe543f",
+    "2609.04199": "5fb540bbd8966de410afcae069c53b932593614415bfcd7cdcd4d0699f6323dd",
+    "2609.03235": "66599bc66251cbd5d585ec8b453476aee0d0ad6487220396d88311293814fae3",
+    "2609.03430": "7c23544a6c4f6979b233fed2866b203da13823c0e8aa5c87a58e562e239ed799",
+    "2609.03502": "de7585016193cbaa86bd5fc8e8e624820162bba8ed8ccff3a0635b0ce8318de0",
+    "2609.03820": "ca3d5bea6704a38ed9b605585943bcfe6a4c4c060d205534c027fa9bc37106c4",
+    "2609.04083": "a2fa9df342d73996c147104ff49da7ad869239f80241b4048b83e3a0f47d7bf4",
+    "2609.04172": "255c7feb826e5d6ca973dcbe891206ba8f64d85a479aae053dc87d7248f86040",
+    "2609.03216": "74e80048258d78b0d96fab50e97c0556f49619f074dbc429f20f6c896c0c5c11",
+    "2609.03378": "6cf6c9c65cf03a2d7894b4d67074781db65112dd5a798d639ae4c055fce72708",
+    "2609.03563": "bb3e568b393c5289eec3c7d00875fc6925764b9900541bcd9d970bd68801adb9",
+    "2609.03675": "448fdffd36f0f5e8f6c19d32fdbac1cb480fe5b8f78bc95e62deda268f2f7108",
+    "2609.03796": "693ba7c70ec8af0844894f72e542ca10e445b06764c4927b862f7b119665570b",
+    "2609.04031": "b4d7adccaa3749d0fa8da57eff4c5c52bf0c0419e5decfd3dec6e782fcac453a",
+    "2609.04071": "66ce1f034f2656360fdeb21724a3015d53ea3b5d413e0d4cc4aa03150ceefc80",
+    "2609.03494": "2a2dba734f55060d7f6d522a3ebf61cddddf65c050c5e5ead6bef2dda6053340",
+    "2609.03515": "35993aee483e340237b3f38cfb71e0385c6a2809c9c0295ce51aaae7bb1f3a0d",
+    "2609.04098": "3f5b9b55e18521bcdafe0016abec443d1f1355cf494b347ef059f8d1cc9b36da",
+    "2609.03459": "d4bae5407735856eba6938d0b99814d83c00aa6ed66c3baf4a5b06d6991f0a72",
+    "2609.03125": "3a6bc8667c2bbb64aabe6f2c6188de58e1bd67ca86a9529725f7afc3db257b61",
+    "2609.03702": "444ce9ad19bd5ece940bfe53692207bbde2de28dc8124af29ba35d17bc7890bd",
+    "2609.04131": "2e614693d0ed5e92e2ff57ef3cf5c440b72eb66badcda92a1ccdc921d06c1ccf",
+    "2609.04203": "ec8f9a46d30ffc23d1b75918bb87c6fe46bc6e0cf4ed4ff3193c672737e954da",
+    "2609.03426": "b74c728a98540daa4ba3e07e4340c64ce4c5a5e3f40db1ec91551ec1d42d1acd",
+    "2609.02184": "2eaadc5b96003d185dce98c7ffdf5145629ce30d30116d939e8d80fef8319a9a",
+    "2609.02735": "0cc0b060fbe29fe70fca575afe4b813d92f44a56135f5a3ca8177cdbd868a270",
+    "2609.02854": "6a6ebd1b82544587f11b379b17e1aee25ed2cb5663b2662c79ba21f6919c7294",
+    "2609.02886": "0ffb4602fb202b93e7a2be673c0312d682973b1225eb1499ee3f64957e984dbc",
+    "2609.02471": "3183fbe37ce4dbddfe3c18df162a6dab73c4060eba1e79f69ae0b26a3dceb47e"
+  }
+}

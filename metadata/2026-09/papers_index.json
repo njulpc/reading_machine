@@ -1,0 +1,1714 @@
+{
+  "run_date": "2026-09-05",
+  "report_date": "2026-09-04",
+  "generated_at": "2026-09-05T01:29:27+08:00",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-09-02T00:00:00+08:00",
+    "end_exclusive": "2026-09-05T00:00:00+08:00",
+    "dates": [
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04"
+    ],
+    "membership": "official /abs v1 timestamp converted to Asia/Shanghai; not announcement date"
+  },
+  "retrieval_method": "official arXiv HTML new/recent and abs; no arXiv API",
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04"
+  ],
+  "historical_branches_scanned": 35,
+  "historical_analyzed_ids_count": 484,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [
+    "2609.01507",
+    "2609.01532",
+    "2609.01550",
+    "2609.01567",
+    "2609.01575",
+    "2609.01587",
+    "2609.01740",
+    "2609.01743",
+    "2609.01749",
+    "2609.01768",
+    "2609.01807",
+    "2609.01840",
+    "2609.01925",
+    "2609.01947",
+    "2609.01952",
+    "2609.01962",
+    "2609.02006",
+    "2609.02029",
+    "2609.02036",
+    "2609.02083",
+    "2609.02107",
+    "2609.02160",
+    "2609.02219",
+    "2609.02350",
+    "2609.02401",
+    "2609.02451",
+    "2609.02496",
+    "2609.02548",
+    "2609.02652",
+    "2609.02676",
+    "2609.02684",
+    "2609.02731",
+    "2609.02737",
+    "2609.02760",
+    "2609.02780",
+    "2609.02846"
+  ],
+  "excluded_duplicate_sources": [
+    {
+      "arxiv_id": "2609.01507",
+      "title": "LatentPress: Context Compression Beyond Text and Vision",
+      "submitted_utc": "2026-09-01T16:38:15Z",
+      "submitted_local": "2026-09-02T00:38:15+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-03"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01532",
+      "title": "Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall",
+      "submitted_utc": "2026-09-01T17:00:30Z",
+      "submitted_local": "2026-09-02T01:00:30+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-03"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01550",
+      "title": "A Mathematical Theory of Reusable Neural Bases for Network Compression",
+      "submitted_utc": "2026-09-01T17:16:21Z",
+      "submitted_local": "2026-09-02T01:16:21+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-03"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01567",
+      "title": "Selective Agent Guidance via Entropy: Learning Autonomous Policies from Imperfect VLM Teachers",
+      "submitted_utc": "2026-09-01T17:33:41Z",
+      "submitted_local": "2026-09-02T01:33:41+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-03"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01575",
+      "title": "Closing Cost-Quality Gap in Document VLMs: Difficulty-Aware Data Curation and Quality-Adjusted Deployment Economics",
+      "submitted_utc": "2026-09-01T17:40:29Z",
+      "submitted_local": "2026-09-02T01:40:29+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-03"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01587",
+      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+      "submitted_utc": "2026-09-01T17:53:41Z",
+      "submitted_local": "2026-09-02T01:53:41+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-03"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01740",
+      "title": "ZipTok3D: High-Fidelity 3D Tokenization with Compact Token Prefixes",
+      "submitted_utc": "2026-09-01T18:07:49Z",
+      "submitted_local": "2026-09-02T02:07:49+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01743",
+      "title": "SCULPT: Training Edge Vision Models for Post-Training Quantization Readiness",
+      "submitted_utc": "2026-09-01T18:10:19Z",
+      "submitted_local": "2026-09-02T02:10:19+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01749",
+      "title": "Swin Meets EfficientNet: Lightweight Architectures for GAN-Based Face Forensics",
+      "submitted_utc": "2026-09-01T18:19:32Z",
+      "submitted_local": "2026-09-02T02:19:32+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01768",
+      "title": "Emergence of Fibrations, Compression, and Symmetry Breaking in Artificial Neural Networks",
+      "submitted_utc": "2026-09-01T18:39:03Z",
+      "submitted_local": "2026-09-02T02:39:03+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01807",
+      "title": "hLLM: Single Pass Decoding for Generative Reranking",
+      "submitted_utc": "2026-09-01T19:30:04Z",
+      "submitted_local": "2026-09-02T03:30:04+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01840",
+      "title": "Cross-Model Distillation of a Human-Pose Foundation Model from Unannotated Infant Video for Markerless 3D Pose Estimation",
+      "submitted_utc": "2026-09-01T20:17:00Z",
+      "submitted_local": "2026-09-02T04:17:00+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01925",
+      "title": "CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing",
+      "submitted_utc": "2026-09-01T22:49:46Z",
+      "submitted_local": "2026-09-02T06:49:46+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01947",
+      "title": "On-Policy Distillation Meets Off-Policy GRPO: Training Compact Instruction-Following Rerankers",
+      "submitted_utc": "2026-09-01T23:36:19Z",
+      "submitted_local": "2026-09-02T07:36:19+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01952",
+      "title": "Convergence Theory of Knowledge Distillation in Asynchronous P2P Gossip Learning Network",
+      "submitted_utc": "2026-09-01T23:52:01Z",
+      "submitted_local": "2026-09-02T07:52:01+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.01962",
+      "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
+      "submitted_utc": "2026-09-02T00:42:54Z",
+      "submitted_local": "2026-09-02T08:42:54+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02006",
+      "title": "Train What You Deploy: Closing the MLP Reachability Gap in Low-Rank Clone Distillation",
+      "submitted_utc": "2026-09-02T02:32:14Z",
+      "submitted_local": "2026-09-02T10:32:14+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02029",
+      "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+      "submitted_utc": "2026-09-02T02:59:11Z",
+      "submitted_local": "2026-09-02T10:59:11+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02036",
+      "title": "SelfLift: Accelerating Few-Step Diffusion via Self-Recovering Resolution Transition",
+      "submitted_utc": "2026-09-02T03:07:42Z",
+      "submitted_local": "2026-09-02T11:07:42+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02083",
+      "title": "XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression",
+      "submitted_utc": "2026-09-02T04:12:44Z",
+      "submitted_local": "2026-09-02T12:12:44+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02107",
+      "title": "A Unified Rate-Distortion Perspective on Vector, Product, and Scalar Quantization",
+      "submitted_utc": "2026-09-02T04:50:51Z",
+      "submitted_local": "2026-09-02T12:50:51+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02160",
+      "title": "GeoSPRINT: Geometric Redundancy-Aware Step Pruning for Inference in Diffusion Trajectories",
+      "submitted_utc": "2026-09-02T06:22:04Z",
+      "submitted_local": "2026-09-02T14:22:04+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02219",
+      "title": "Hardware-Accelerated Instance Segmentation for Resource-Constrained Space Robotics with Criticality Analysis",
+      "submitted_utc": "2026-09-02T07:33:27Z",
+      "submitted_local": "2026-09-02T15:33:27+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02350",
+      "title": "LookStep: Efficient Vision-Language Navigation with Linguistic Foresight and Event Driven Memory",
+      "submitted_utc": "2026-09-02T09:24:08Z",
+      "submitted_local": "2026-09-02T17:24:08+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02401",
+      "title": "CA-OPD: Confidence-Aware On-Policy Distillation for Structured Visual Prediction",
+      "submitted_utc": "2026-09-02T10:11:59Z",
+      "submitted_local": "2026-09-02T18:11:59+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02451",
+      "title": "Scalable Kronecker-Fisher Approximation: Efficient Hessian Analysis for Billion-Parameter Language Models Compression",
+      "submitted_utc": "2026-09-02T11:17:52Z",
+      "submitted_local": "2026-09-02T19:17:52+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02496",
+      "title": "Debias-SparseGPT: Bias-Aware Pruning for Large Language Models",
+      "submitted_utc": "2026-09-02T12:01:54Z",
+      "submitted_local": "2026-09-02T20:01:54+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02548",
+      "title": "Learn from Whoever Is Right: Answer-Verified Multi-Teacher Distillation for Multi-Domain LLMs",
+      "submitted_utc": "2026-09-02T13:00:45Z",
+      "submitted_local": "2026-09-02T21:00:45+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02652",
+      "title": "Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights",
+      "submitted_utc": "2026-09-02T14:26:06Z",
+      "submitted_local": "2026-09-02T22:26:06+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02676",
+      "title": "LoFi RADIO: A Distilled In-Domain Backbone Applied for Artifact-Severity Grading of Ultra-Low-Field Neonatal Brain MR",
+      "submitted_utc": "2026-09-02T14:47:38Z",
+      "submitted_local": "2026-09-02T22:47:38+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02684",
+      "title": "H3DNAS: Hardware-Aware ONNX-Native 3D Point Cloud Model Compression",
+      "submitted_utc": "2026-09-02T14:53:35Z",
+      "submitted_local": "2026-09-02T22:53:35+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02731",
+      "title": "RVSD: Retrieval Vision Sparse Decoding for Mitigating Visual Hallucinations in Large Vision-Language Models",
+      "submitted_utc": "2026-09-02T15:40:40Z",
+      "submitted_local": "2026-09-02T23:40:40+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02737",
+      "title": "Language Models Can Control Their Own Attention",
+      "submitted_utc": "2026-09-02T15:43:38Z",
+      "submitted_local": "2026-09-02T23:43:38+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02760",
+      "title": "Measurement-Driven Sub-Network Selection for On-Premise Retrieval-Augmented Factory Agents",
+      "submitted_utc": "2026-09-02T16:00:05Z",
+      "submitted_local": "2026-09-03T00:00:05+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02780",
+      "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+      "submitted_utc": "2026-09-02T16:14:48Z",
+      "submitted_local": "2026-09-03T00:14:48+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    },
+    {
+      "arxiv_id": "2609.02846",
+      "title": "UE5M3 FP4 Block Scaling for Stable Language Model Pretraining",
+      "submitted_utc": "2026-09-02T17:32:07Z",
+      "submitted_local": "2026-09-03T01:32:07+08:00",
+      "source_branches": [
+        "origin/feature/arxiv-daily-2026-09-04"
+      ]
+    }
+  ],
+  "daily_counts": [
+    {
+      "date": "2026-09-02",
+      "visible_entries": 425,
+      "related_before_history_dedup": 36,
+      "historical_duplicates": 33,
+      "new_papers": 3
+    },
+    {
+      "date": "2026-09-03",
+      "visible_entries": 359,
+      "related_before_history_dedup": 27,
+      "historical_duplicates": 3,
+      "new_papers": 24
+    },
+    {
+      "date": "2026-09-04",
+      "visible_entries": 63,
+      "related_before_history_dedup": 10,
+      "historical_duplicates": 0,
+      "new_papers": 10
+    }
+  ],
+  "window_related_papers_count": 73,
+  "new_papers_count": 37,
+  "total_papers": 37,
+  "papers": [
+    {
+      "arxiv_id": "2609.02184",
+      "title": "CC-4DGS: Computational Deformation and Point-Cloud Compression for Storage-Efficient Dynamic Gaussian Splatting",
+      "authors": [
+        "Kyungdae Park",
+        "Chae Eun Rhee"
+      ],
+      "submitted_utc": "2026-09-02T06:47:19Z",
+      "submitted_local": "2026-09-02T14:47:19+08:00",
+      "submitted_date": "2026-09-02",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "quantization",
+      "summary": "CC4DGS 联合压缩动态形变场和高斯属性，在相近渲染质量下降低动态场景存储。",
+      "analysis_path": "papers/2026-09/quantization/2609.02184/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.02184",
+      "html_url": "https://arxiv.org/html/2609.02184",
+      "pdf_url": "https://arxiv.org/pdf/2609.02184",
+      "scores": {
+        "accuracy": 9,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.02471",
+      "title": "Learning to Track from Privileged Target Appearances",
+      "authors": [
+        "Xin Chen",
+        "Jiao Xu",
+        "Dong Wang",
+        "Huchuan Lu",
+        "Kede Ma"
+      ],
+      "submitted_utc": "2026-09-02T11:43:43Z",
+      "submitted_local": "2026-09-02T19:43:43+08:00",
+      "submitted_date": "2026-09-02",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "PATT 让训练期拥有目标精确裁剪的跟踪教师指导正常观测的学生。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.02471/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.02471",
+      "html_url": "https://arxiv.org/html/2609.02471",
+      "pdf_url": "https://arxiv.org/pdf/2609.02471",
+      "scores": {
+        "accuracy": 9,
+        "compression": 6,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.02735",
+      "title": "Choosing a PEFT Variant for Per-Patient Dysarthric ASR: A Single-Speaker Case Study on Two ASR Bases",
+      "authors": [
+        "Bernard Muller",
+        "László Tóth",
+        "LaVonne Roberts"
+      ],
+      "submitted_utc": "2026-09-02T15:42:48Z",
+      "submitted_local": "2026-09-02T23:42:48+08:00",
+      "submitted_date": "2026-09-02",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": [
+        "cs.CL",
+        "cs.SD"
+      ],
+      "category": "quantization",
+      "summary": "低秩适配可改善个体构音障碍识别，但真实NF4 QLoRA在小规模实验中未表现出稳定内存优势。",
+      "analysis_path": "papers/2026-09/quantization/2609.02735/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.02735",
+      "html_url": "https://arxiv.org/html/2609.02735",
+      "pdf_url": "https://arxiv.org/pdf/2609.02735",
+      "scores": {
+        "accuracy": 6,
+        "compression": 5,
+        "innovation": 5,
+        "reproducibility": 4
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.02854",
+      "title": "MuyBridge: Mobile Human Center-of-Mass Estimation from Monocular Video via Sparse Fusion",
+      "authors": [
+        "Aidan Bradshaw",
+        "Marco Giordano",
+        "David Rode",
+        "Andreas Habersack",
+        "Elif Basokur",
+        "Annika Kruse",
+        "Markus Tilp",
+        "Michele Magno",
+        "Peter Wolf",
+        "Luca Benini",
+        "Christoph Leitner"
+      ],
+      "submitted_utc": "2026-09-02T17:38:36Z",
+      "submitted_local": "2026-09-03T01:38:36+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "quantization",
+      "summary": "MuyBridge 联合姿态裁剪、INT8量化和少步深度估计，实现手机端人体质心测量。",
+      "analysis_path": "papers/2026-09/quantization/2609.02854/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.02854",
+      "html_url": "https://arxiv.org/html/2609.02854",
+      "pdf_url": "https://arxiv.org/pdf/2609.02854",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.02886",
+      "title": "SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models",
+      "authors": [
+        "Junchao Huang",
+        "Guian Fang",
+        "Shengju Qian",
+        "Xianghao Kong",
+        "Zhuoran Zhao",
+        "Wei Huang",
+        "Yihua Du",
+        "Zixin Zhang",
+        "Justin Cui",
+        "Yuchao Gu",
+        "Yukang Chen",
+        "Xinting Hu",
+        "Tianyu He",
+        "Shaoshuai Shi",
+        "Zhuotao Tian",
+        "Xin Wang",
+        "Mike Zheng Shou",
+        "Li Jiang"
+      ],
+      "submitted_utc": "2026-09-02T17:59:41Z",
+      "submitted_local": "2026-09-03T01:59:41+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "SolarWM 以统一动作数据和分阶段蒸馏，把视频基础模型转为实时自回归世界模型。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.02886/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.02886",
+      "html_url": "https://arxiv.org/html/2609.02886",
+      "pdf_url": "https://arxiv.org/pdf/2609.02886",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.02998",
+      "title": "Verify Before You Distill: Prompt-Level Teacher Gating for On-Policy Distillation",
+      "authors": [
+        "Zhiwei Zhang",
+        "Zechen Sun",
+        "Fei Zhao",
+        "Kang Peng",
+        "Bin Liang",
+        "Huayu Deng",
+        "Yao Hu",
+        "Kam-Fai Wong",
+        "Mu Chuan"
+      ],
+      "submitted_utc": "2026-09-02T17:54:09Z",
+      "submitted_local": "2026-09-03T01:54:09+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "先验证教师在当前提示上的可靠性，再决定蒸馏还是强化学习。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.02998/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.02998",
+      "html_url": "https://arxiv.org/html/2609.02998",
+      "pdf_url": "https://arxiv.org/pdf/2609.02998",
+      "scores": {
+        "accuracy": 8,
+        "compression": 4,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03079",
+      "title": "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
+      "authors": [
+        "Renyuan Liu",
+        "Yuyang Leng",
+        "Kaiyan Liu",
+        "Yuzhou Zhong",
+        "Shaohan Hu",
+        "Chun-Fu",
+        "Chen",
+        "Peijun Zhao",
+        "Heechul Yun",
+        "Shuochao Yao"
+      ],
+      "submitted_utc": "2026-09-02T18:49:08Z",
+      "submitted_local": "2026-09-03T02:49:08+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": [
+        "cs.LG"
+      ],
+      "category": "pruning",
+      "summary": "LeanStream 用逐步修正的稀疏预测重叠权重读取与 GPU 计算。",
+      "analysis_path": "papers/2026-09/pruning/2609.03079/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03079",
+      "html_url": "https://arxiv.org/html/2609.03079",
+      "pdf_url": "https://arxiv.org/pdf/2609.03079",
+      "scores": {
+        "accuracy": 7,
+        "compression": 9,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03100",
+      "title": "Distilling deep optical flow stereo methods to retrieve dense three-dimensional wind fields",
+      "authors": [
+        "Thomas J. Vandal",
+        "Dong L. Wu",
+        "James L. Carr",
+        "Derek J. Posselt",
+        "Elise Penn",
+        "Tristan Ballard",
+        "August Posch",
+        "Kate Duffy"
+      ],
+      "submitted_utc": "2026-09-02T19:22:45Z",
+      "submitted_local": "2026-09-03T03:22:45+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": [
+        "cs.LG"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "把多卫星立体光流教师迁移到单卫星学生，扩大三维风场覆盖。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.03100/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03100",
+      "html_url": "https://arxiv.org/html/2609.03100",
+      "pdf_url": "https://arxiv.org/pdf/2609.03100",
+      "scores": {
+        "accuracy": 7,
+        "compression": 5,
+        "innovation": 7,
+        "reproducibility": 6
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03125",
+      "title": "A Time-Encoded Analog Photonic Interposer for Energy-EfficientIntegration of Analog Vision Sensors and Analog Accelerators",
+      "authors": [
+        "Subhradip Chakraborty",
+        "Zihan Yin",
+        "Xuming Chen",
+        "Chengwei Zhou",
+        "Gourav Datta",
+        "Akhilesh Jaiswal"
+      ],
+      "submitted_utc": "2026-09-02T20:01:11Z",
+      "submitted_local": "2026-09-03T04:01:11+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Hardware Architecture (cs.AR)",
+      "categories": [
+        "cs.AR"
+      ],
+      "category": "quantization",
+      "summary": "模拟光互连通过6位斜坡比较传递激活，减少模拟计算边界的数字转换。",
+      "analysis_path": "papers/2026-09/quantization/2609.03125/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03125",
+      "html_url": "https://arxiv.org/html/2609.03125",
+      "pdf_url": "https://arxiv.org/pdf/2609.03125",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 5
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03158",
+      "title": "Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization",
+      "authors": [
+        "Qingchan Zhu",
+        "Weihang You",
+        "Hanqi Jiang",
+        "Changdi Yang",
+        "Tianming Liu",
+        "Geng Yuan"
+      ],
+      "submitted_utc": "2026-09-02T20:51:02Z",
+      "submitted_local": "2026-09-03T04:51:02+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "category": "pruning",
+      "summary": "CoverPruner 将保留 token 选择改写为对全部视觉证据的代表性覆盖。",
+      "analysis_path": "papers/2026-09/pruning/2609.03158/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03158",
+      "html_url": "https://arxiv.org/html/2609.03158",
+      "pdf_url": "https://arxiv.org/pdf/2609.03158",
+      "scores": {
+        "accuracy": 9,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03216",
+      "title": "ProgResViT: Progressive Resolution and Width for Adaptive Vision Transformers",
+      "authors": [
+        "Ali Hojjat",
+        "Janek Haberer",
+        "Olaf Landsiedel"
+      ],
+      "submitted_utc": "2026-09-02T23:10:56Z",
+      "submitted_local": "2026-09-03T07:10:56+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "pruning",
+      "summary": "ProgResViT 按图像难度逐轮增加分辨率和子网络宽度。",
+      "analysis_path": "papers/2026-09/pruning/2609.03216/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03216",
+      "html_url": "https://arxiv.org/html/2609.03216",
+      "pdf_url": "https://arxiv.org/pdf/2609.03216",
+      "scores": {
+        "accuracy": 9,
+        "compression": 6,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03235",
+      "title": "SGD-KV: Summarization Guided KV Cache Compression",
+      "authors": [
+        "Zeyu Liu",
+        "Woomin Song",
+        "Xuandi Fu",
+        "Sai Muralidhar Jayanthi",
+        "Vivek Govindan",
+        "Aram Galstyan",
+        "Sravan Babu Bodapati",
+        "Srikanth Ronanki"
+      ],
+      "submitted_utc": "2026-09-03T00:31:11Z",
+      "submitted_local": "2026-09-03T08:31:11+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": [
+        "cs.CL"
+      ],
+      "category": "other",
+      "summary": "SGD-KV 用分块摘要诊断识别信息聚合头，再按头分配缓存。",
+      "analysis_path": "papers/2026-09/other/2609.03235/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03235",
+      "html_url": "https://arxiv.org/html/2609.03235",
+      "pdf_url": "https://arxiv.org/pdf/2609.03235",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03355",
+      "title": "ALRA: Adaptive Local Relational Alignment for Logit-Based Pre-training Distillation of Autoregressive Language Models",
+      "authors": [
+        "Quang Hoang Trung",
+        "Quang Huu Hieu",
+        "Nguyen Van Hoang Phuc",
+        "Vo Nguyen Le Duy"
+      ],
+      "submitted_utc": "2026-09-03T04:26:39Z",
+      "submitted_local": "2026-09-03T12:26:39+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Machine Learning (stat.ML)",
+      "categories": [
+        "stat.ML",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "ALRA 同时对齐局部概率质量和候选 token 的相对关系。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.03355/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03355",
+      "html_url": "https://arxiv.org/html/2609.03355",
+      "pdf_url": "https://arxiv.org/pdf/2609.03355",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03378",
+      "title": "When Depth Hurts: Reliability-Aware Geometry Distillation for Depth-Free RGB-D Salient Object Detection",
+      "authors": [
+        "Xuehao Wang",
+        "Jiaxin Hua",
+        "Runmei Li",
+        "Zhenyu Wu",
+        "Chenglizhao Chen",
+        "Ke Gu",
+        "Aimin Hao"
+      ],
+      "submitted_utc": "2026-09-03T05:29:10Z",
+      "submitted_local": "2026-09-03T13:29:10+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "把深度基础模型的几何知识蒸馏进小分支，实现RGB-only显著目标检测。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.03378/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03378",
+      "html_url": "https://arxiv.org/html/2609.03378",
+      "pdf_url": "https://arxiv.org/pdf/2609.03378",
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "innovation": 7,
+        "reproducibility": 6
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03426",
+      "title": "Lngram v2: Latent N-Gram Memory with Interpretable Discrete Representations",
+      "authors": [
+        "Yunao Zheng",
+        "Bin Wen",
+        "Xiaojie Wang"
+      ],
+      "submitted_utc": "2026-09-03T06:33:23Z",
+      "submitted_local": "2026-09-03T14:33:23+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": [
+        "cs.CL"
+      ],
+      "category": "other",
+      "summary": "Lngram v2 解耦离散记忆规模与骨干宽度，减少条件记忆扩展的参数和激活负担。",
+      "analysis_path": "papers/2026-09/other/2609.03426/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03426",
+      "html_url": "https://arxiv.org/html/2609.03426",
+      "pdf_url": "https://arxiv.org/pdf/2609.03426",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 9,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03430",
+      "title": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
+      "authors": [
+        "Heng Wang",
+        "Jielin Qiu",
+        "Wenting Zhao",
+        "Cheng Qian",
+        "Liangwei Yang",
+        "Jiawei Han",
+        "Heng Ji",
+        "Silvio Savarese",
+        "Shelby Heinecke",
+        "Huan Wang"
+      ],
+      "submitted_utc": "2026-09-03T06:38:38Z",
+      "submitted_local": "2026-09-03T14:38:38+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": [
+        "cs.CL"
+      ],
+      "category": "other",
+      "summary": "保护提示后按头随机淘汰推理缓存，可接近复杂打分器。",
+      "analysis_path": "papers/2026-09/other/2609.03430/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03430",
+      "html_url": "https://arxiv.org/html/2609.03430",
+      "pdf_url": "https://arxiv.org/pdf/2609.03430",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 9,
+        "reproducibility": 9
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03459",
+      "title": "FlowTT: Exploiting Computation Flow Reuse in Irregular Tensor-Train Embedding",
+      "authors": [
+        "Jongmin Seok",
+        "Chae Eun Rhee"
+      ],
+      "submitted_utc": "2026-09-03T07:17:33Z",
+      "submitted_local": "2026-09-03T15:17:33+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Distributed, Parallel, and Cluster Computing (cs.DC)",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "category": "other",
+      "summary": "FlowTT 面向张量列车嵌入表，用索引复用和融合执行降低查表开销。",
+      "analysis_path": "papers/2026-09/other/2609.03459/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03459",
+      "html_url": "https://arxiv.org/html/2609.03459",
+      "pdf_url": "https://arxiv.org/pdf/2609.03459",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03494",
+      "title": "GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving",
+      "authors": [
+        "Qiankun Ma",
+        "Yanjiang Zhou",
+        "Zinan Xiong",
+        "Haofei Wang",
+        "Zhen Song",
+        "Yang Xiang",
+        "Ziyao Zhang",
+        "Hairong Zheng"
+      ],
+      "submitted_utc": "2026-09-03T07:53:05Z",
+      "submitted_local": "2026-09-03T15:53:05+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": [
+        "cs.AI"
+      ],
+      "category": "other",
+      "summary": "GrowPage 根据实时注意力需求，在压缩已有KV与申请新页之间决策。",
+      "analysis_path": "papers/2026-09/other/2609.03494/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03494",
+      "html_url": "https://arxiv.org/html/2609.03494",
+      "pdf_url": "https://arxiv.org/pdf/2609.03494",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03502",
+      "title": "Building and Evaluating Fixed-Voice Thai TTS from Synthetic Speech",
+      "authors": [
+        "Kunat Pipatanakul",
+        "Potsawee Manakul",
+        "Warit Sirichotedumrong",
+        "Sittipong Sripaisarnmongkol",
+        "Pakorn Nathong",
+        "Phatrasek Jirabovonvisut"
+      ],
+      "submitted_utc": "2026-09-03T08:03:58Z",
+      "submitted_local": "2026-09-03T16:03:58+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "用大语音模型生成并筛选数据，训练82M固定声音泰语学生。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.03502/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03502",
+      "html_url": "https://arxiv.org/html/2609.03502",
+      "pdf_url": "https://arxiv.org/pdf/2609.03502",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 6,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "authors": [
+        "Bo Zeng",
+        "Yu Zhao",
+        "Yefeng Liu",
+        "Zhihong Lu",
+        "Xuanfan Ni",
+        "Xintong Wang"
+      ],
+      "submitted_utc": "2026-09-03T08:17:34Z",
+      "submitted_local": "2026-09-03T16:17:34+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": [
+        "cs.AI"
+      ],
+      "category": "other",
+      "summary": "InertiaKV 用注意力时间惯性降低KV排序更新开销。",
+      "analysis_path": "papers/2026-09/other/2609.03515/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03515",
+      "html_url": "https://arxiv.org/html/2609.03515",
+      "pdf_url": "https://arxiv.org/pdf/2609.03515",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03563",
+      "title": "FlashRender: Few-Step Generative Rendering via Camera-Controlled Video MeanFlow",
+      "authors": [
+        "Byeongjun Park",
+        "Byung-Hoon Kim",
+        "Hyungjin Chung"
+      ],
+      "submitted_utc": "2026-09-03T09:05:07Z",
+      "submitted_local": "2026-09-03T17:05:07+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "FlashRender 先稳定相机控制轨迹，再压缩视频生成采样步数。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.03563/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03563",
+      "html_url": "https://arxiv.org/html/2609.03563",
+      "pdf_url": "https://arxiv.org/pdf/2609.03563",
+      "scores": {
+        "accuracy": 8,
+        "compression": 9,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03604",
+      "title": "On the Interaction Between Model Compression and Test-Time Adaptation",
+      "authors": [
+        "Francesco Corti",
+        "Dong Wang",
+        "Young D. Kwon",
+        "Cecilia Mascolo",
+        "Olga Saukh"
+      ],
+      "submitted_utc": "2026-09-03T09:49:29Z",
+      "submitted_local": "2026-09-03T17:49:29+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "category": "pruning",
+      "summary": "压缩后监督适应仍可成功，并不意味着无标签测试时适应也能恢复。",
+      "analysis_path": "papers/2026-09/pruning/2609.03604/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03604",
+      "html_url": "https://arxiv.org/html/2609.03604",
+      "pdf_url": "https://arxiv.org/pdf/2609.03604",
+      "scores": {
+        "accuracy": 7,
+        "compression": 5,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03675",
+      "title": "CoFiE: Coarse-to-Fine Evidence Selection for Efficient Streaming Video Understanding",
+      "authors": [
+        "Jing Jiang",
+        "Yiran Ling",
+        "Ruonan Li",
+        "Dimitrios Stamoulis",
+        "Jie Liu"
+      ],
+      "submitted_utc": "2026-09-03T11:14:21Z",
+      "submitted_local": "2026-09-03T19:14:21+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "pruning",
+      "summary": "CoFiE 在视觉编码前过滤冗余帧，并在预填充时按查询进一步精简。",
+      "analysis_path": "papers/2026-09/pruning/2609.03675/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03675",
+      "html_url": "https://arxiv.org/html/2609.03675",
+      "pdf_url": "https://arxiv.org/pdf/2609.03675",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03702",
+      "title": "Synthetic Semantic Supervision for Contrastive Code Representation Learning in Small Transformers: An Empirical Study",
+      "authors": [
+        "Kenneth Paulsen",
+        "Florian Tambon",
+        "Mike Papadakis",
+        "Shin Yoo"
+      ],
+      "submitted_utc": "2026-09-03T11:41:09Z",
+      "submitted_local": "2026-09-03T19:41:09+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": [
+        "cs.AI"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "SyncDesc 将大模型合成的代码语义描述迁移进125M代码编码器。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.03702/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03702",
+      "html_url": "https://arxiv.org/html/2609.03702",
+      "pdf_url": "https://arxiv.org/pdf/2609.03702",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 7,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03796",
+      "title": "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes",
+      "authors": [
+        "Chuyan Chen",
+        "Haoxing Chen",
+        "Kun Chen",
+        "Zhenglin Cheng",
+        "Long Cui",
+        "Ruishan Fang",
+        "Zhangxuan Gu",
+        "Zhicheng Huang",
+        "Zhenzhong Lan",
+        "Yuanting Lei",
+        "Haoquan Li",
+        "Jianguo Li",
+        "Rongchuan Li",
+        "Sidu Li",
+        "Tao Lin",
+        "Deyuan Liu",
+        "Jiacheng Liu",
+        "Lin Liu",
+        "Yuxuan Lou",
+        "Zhisheng Lu",
+        "Yuxin Ma",
+        "Shuheng Shen",
+        "Peng Sun",
+        "Chaoyang Wang",
+        "Hongjun Wang",
+        "Xiaomei Wang",
+        "Yongxin Wang",
+        "Chengzhang Wu",
+        "Hongru Wu",
+        "Jun Xie"
+      ],
+      "submitted_utc": "2026-09-03T13:02:40Z",
+      "submitted_local": "2026-09-03T21:02:40+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "LLaDA-Image 使用原生掩码语言模型并以Turbo蒸馏获得2至4步生成。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.03796/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03796",
+      "html_url": "https://arxiv.org/html/2609.03796",
+      "pdf_url": "https://arxiv.org/pdf/2609.03796",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03820",
+      "title": "Select, Compress, Reinvest: A Controlled Study of Visual-Token Allocation in Long-Video MLLMs",
+      "authors": [
+        "Prakhar Khatri"
+      ],
+      "submitted_utc": "2026-09-03T13:20:48Z",
+      "submitted_local": "2026-09-03T21:20:48+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "category": "pruning",
+      "summary": "在固定评测框架中把选帧、空间压缩和预算再分配拆开研究。",
+      "analysis_path": "papers/2026-09/pruning/2609.03820/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03820",
+      "html_url": "https://arxiv.org/html/2609.03820",
+      "pdf_url": "https://arxiv.org/pdf/2609.03820",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 7,
+        "reproducibility": 9
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.03949",
+      "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch",
+      "authors": [
+        "WenJie Fan"
+      ],
+      "submitted_utc": "2026-09-03T14:53:20Z",
+      "submitted_local": "2026-09-03T22:53:20+08:00",
+      "submitted_date": "2026-09-03",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "category": "other",
+      "summary": "VestigeKV 使用 NoPE-MLA 的解耦分支选择活跃缓存，保留可召回归档。",
+      "analysis_path": "papers/2026-09/other/2609.03949/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.03949",
+      "html_url": "https://arxiv.org/html/2609.03949",
+      "pdf_url": "https://arxiv.org/pdf/2609.03949",
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "innovation": 9,
+        "reproducibility": 6
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04031",
+      "title": "DSAQuant: Denoising-Stage-Aligned Quantization-Aware Training for Video Generation",
+      "authors": [
+        "Shuaiting Li",
+        "Zelin Gao",
+        "Haibin Shen",
+        "Yujun Shen",
+        "Haotong Qin",
+        "Yinghao Xu"
+      ],
+      "submitted_utc": "2026-09-03T16:09:25Z",
+      "submitted_local": "2026-09-04T00:09:25+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "quantization",
+      "summary": "DSA 按去噪阶段切换监督来源，并把低比特误差与CFG调度共同处理。",
+      "analysis_path": "papers/2026-09/quantization/2609.04031/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04031",
+      "html_url": "https://arxiv.org/html/2609.04031",
+      "pdf_url": "https://arxiv.org/pdf/2609.04031",
+      "scores": {
+        "accuracy": 8,
+        "compression": 9,
+        "innovation": 9,
+        "reproducibility": 5
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04071",
+      "title": "TAP-Path: Task-Adaptive Structural and Token Pruning for Efficient and Trustworthy Pathology Foundation Models",
+      "authors": [
+        "Mehedi Hasan",
+        "Ashfak Yeafi",
+        "Md Khairul Islam"
+      ],
+      "submitted_utc": "2026-09-03T16:43:36Z",
+      "submitted_local": "2026-09-04T00:43:36+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "category": "pruning",
+      "summary": "TAPPath 联合裁剪病理视觉编码器层数与token，得到更小且有外部验证的模型。",
+      "analysis_path": "papers/2026-09/pruning/2609.04071/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04071",
+      "html_url": "https://arxiv.org/html/2609.04071",
+      "pdf_url": "https://arxiv.org/pdf/2609.04071",
+      "scores": {
+        "accuracy": 9,
+        "compression": 7,
+        "innovation": 7,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04083",
+      "title": "CORE: Improving Compositional Reasoning in MLLM Embedding via Reranker Distillation",
+      "authors": [
+        "Tingyu Song",
+        "Mingxin Li",
+        "Yanzhao Zhang",
+        "Dingkun Long",
+        "Chu Liu",
+        "Pengjun Xie",
+        "Yilun Zhao",
+        "Shu Wu"
+      ],
+      "submitted_utc": "2026-09-03T16:50:29Z",
+      "submitted_local": "2026-09-04T00:50:29+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "CORE 将跨模态重排序器的组合关系判断迁移给可预计算的嵌入模型。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.04083/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04083",
+      "html_url": "https://arxiv.org/html/2609.04083",
+      "pdf_url": "https://arxiv.org/pdf/2609.04083",
+      "scores": {
+        "accuracy": 8,
+        "compression": 5,
+        "innovation": 7,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04098",
+      "title": "Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM",
+      "authors": [
+        "Sergii Kozyrev",
+        "Davyd Maiboroda"
+      ],
+      "submitted_utc": "2026-09-03T17:04:26Z",
+      "submitted_local": "2026-09-04T01:04:26+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": [
+        "cs.AI"
+      ],
+      "category": "quantization",
+      "summary": "Minima 给出混合GDN/注意力模型可部署的NVFP4校准及融合尺度协调方案。",
+      "analysis_path": "papers/2026-09/quantization/2609.04098/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04098",
+      "html_url": "https://arxiv.org/html/2609.04098",
+      "pdf_url": "https://arxiv.org/pdf/2609.04098",
+      "scores": {
+        "accuracy": 9,
+        "compression": 9,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04105",
+      "title": "Hardware-Aware FP4 FlashAttention-4",
+      "authors": [
+        "Robert Hu"
+      ],
+      "submitted_utc": "2026-09-03T17:12:35Z",
+      "submitted_local": "2026-09-04T01:12:35+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Machine Learning (cs.LG)",
+      "categories": [
+        "cs.LG"
+      ],
+      "category": "quantization",
+      "summary": "Direct-P 直接从分数产生 FP4 概率码，并用相同表示计算归一化分母。",
+      "analysis_path": "papers/2026-09/quantization/2609.04105/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04105",
+      "html_url": "https://arxiv.org/html/2609.04105",
+      "pdf_url": "https://arxiv.org/pdf/2609.04105",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 9,
+        "reproducibility": 5
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04108",
+      "title": "Sequential Beats Joint: On the Interplay between On-Policy Distillation and RLVR",
+      "authors": [
+        "Boyan Li",
+        "Bingsen Chen",
+        "Chenghao Yang",
+        "Ping Nie",
+        "Chen Zhao",
+        "Xi Ye"
+      ],
+      "submitted_utc": "2026-09-03T17:14:27Z",
+      "submitted_local": "2026-09-04T01:14:27+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "先 OPD 再 RLVR 比多种联合损失更好，教师扩展覆盖后由奖励强化正确模式。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.04108/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04108",
+      "html_url": "https://arxiv.org/html/2609.04108",
+      "pdf_url": "https://arxiv.org/pdf/2609.04108",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 7,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04131",
+      "title": "Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding",
+      "authors": [
+        "Hongyu Qu",
+        "Guangming Yao",
+        "Ling Xing",
+        "Xiaobin Hu",
+        "Rongxing Ding",
+        "Guibin Zhang",
+        "Fan Zhang",
+        "Yi Yuan",
+        "Xiangbo Shu",
+        "Shuicheng Yan"
+      ],
+      "submitted_utc": "2026-09-03T17:28:14Z",
+      "submitted_local": "2026-09-04T01:28:14+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "other",
+      "summary": "LatentStream 用查询无关的分层潜在记忆持续压缩视频，再按问题读取证据。",
+      "analysis_path": "papers/2026-09/other/2609.04131/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04131",
+      "html_url": "https://arxiv.org/html/2609.04131",
+      "pdf_url": "https://arxiv.org/pdf/2609.04131",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04172",
+      "title": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
+      "authors": [
+        "Zixuan Fu",
+        "Bingxiang He",
+        "Yuxin Zuo",
+        "Haohuan Huang",
+        "Jinqian Zhang",
+        "Ruhang Xiao",
+        "Cheng Qian",
+        "Qinyu Luo",
+        "Huan-ang Gao",
+        "Yudong Wang",
+        "Zhiyuan Liu",
+        "Ning Ding",
+        "Chaojun Xiao"
+      ],
+      "submitted_utc": "2026-09-03T17:54:38Z",
+      "submitted_local": "2026-09-04T01:54:38+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Artificial Intelligence (cs.AI)",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "单条查询也能支持持续OPD，训练效率瓶颈可能在吸收监督而非提示数量。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.04172/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04172",
+      "html_url": "https://arxiv.org/html/2609.04172",
+      "pdf_url": "https://arxiv.org/pdf/2609.04172",
+      "scores": {
+        "accuracy": 8,
+        "compression": 3,
+        "innovation": 9,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04199",
+      "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
+      "authors": [
+        "Yuntian Deng",
+        "Pengyu Nie",
+        "Stuart Shieber"
+      ],
+      "submitted_utc": "2026-09-03T17:59:49Z",
+      "submitted_local": "2026-09-04T01:59:49+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Computation and Language (cs.CL)",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "将自然语言规格编译成可复用的本地 Qwen3-0.6B 适配器。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.04199/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04199",
+      "html_url": "https://arxiv.org/html/2609.04199",
+      "pdf_url": "https://arxiv.org/pdf/2609.04199",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.04203",
+      "title": "Temporal Self-Distillation: Learning Visual State Tracking in Videos Without Supervision",
+      "authors": [
+        "Shravan Venkatraman",
+        "Wenshuai Zhao",
+        "Mohammad Hassan Vali",
+        "Arno Solin"
+      ],
+      "submitted_utc": "2026-09-03T17:59:55Z",
+      "submitted_local": "2026-09-04T01:59:55+08:00",
+      "submitted_date": "2026-09-04",
+      "primary_category": "Computer Vision and Pattern Recognition (cs.CV)",
+      "categories": [
+        "cs.CV"
+      ],
+      "category": "knowledge_distillation",
+      "summary": "S3T 用同一模型的密集时间视图监督稀疏视图，提高视频时间理解。",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.04203/tech_analysis.md",
+      "abs_url": "https://arxiv.org/abs/2609.04203",
+      "html_url": "https://arxiv.org/html/2609.04203",
+      "pdf_url": "https://arxiv.org/pdf/2609.04203",
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "fulltext_available": true,
+      "full_paper_reproduced": false
+    }
+  ]
+}
