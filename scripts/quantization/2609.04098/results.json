@@ -1,13 +1,18 @@
 {
   "model": "Qwen3-0.6B",
-  "checkpoint": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+  "checkpoint": "Qwen/Qwen3-0.6B",
   "parameters": 596049920,
   "linears": 196,
   "quantized_elements": 440401920,
   "heldout_logits": {
-    "mse": 0.5544835925102234,
-    "relative_l2": 0.2324734479188919,
-    "cosine": 0.9729049205780029
+    "mse": 0.5578979253768921,
+    "relative_l2": 0.2331867516040802,
+    "cosine": 0.974928617477417
+  },
+  "generation": {
+    "new_token_id": 100678,
+    "new_token_text": "为什么",
+    "use_cache": false
   },
   "calibration_texts": [
     "量化需要校准激活。",
@@ -16,12 +21,16 @@
     "The cache grows with sequence length."
   ],
   "quantization": "nvfp4",
+  "scale_harmonization": {
+    "groups": 56,
+    "worst_original_global_ratio": 5.13939393939394
+  },
   "storage": "FP32 dequantized reference; no physical memory reduction claimed",
   "full_paper_reproduced": false,
   "weight_block": 16,
   "activation_block": 16,
   "scale_format": "E4M3 plus FP32 global",
-  "harmonization_test": "PASS",
+  "harmonization_test": "PASS on real Qwen QKV and gate/up groups",
   "boundary": "No GDN in Qwen3-0.6B; no 27B/32K experiments or native FP4 GEMM. Static globals calibrated on four local texts, not paper 128x32K. FP8 KV calibration not integrated.",
   "python": "3.9.6",
   "torch": "2.8.0",

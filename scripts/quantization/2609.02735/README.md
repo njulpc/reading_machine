@@ -10,7 +10,7 @@
 
 本目录是基于真实Qwen3-0.6B权重的组件实现及小规模验证，**不是完整论文复现**。明确缺项：
 
-peft and bitsandbytes are absent; --native is provided but not executed. CPU test validates NF4 codebook on real Qwen weights only. Private ASR checkpoint/audio unavailable; no CER or adapter-memory claim.
+peft and bitsandbytes are absent; --native is provided but not executed. The CPU fallback covers all real Qwen3-0.6B backbone Linear weights with block-64 NF4 and a groupwise INT8 nested-scale proxy, then runs forward/generation; this is not native bitsandbytes QLoRA and does not train adapters. Private ASR checkpoint/audio unavailable; no CER or adapter-memory claim.
 
 所有低比特张量均以FP32反量化值计算，未输出压缩检查点；因此不声称显存、吞吐或部署速度收益。误差指标与论文任务指标不同，单条文本的logit误差不能代替困惑度或准确率。
 
@@ -39,15 +39,20 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 ```json
 {
   "model": "Qwen3-0.6B",
+  "linears": 196,
+  "quantized_elements": 440401920,
   "native_QLoRA": false,
   "NF4_block": 64,
-  "weight_error": {
-    "mse": 8.531654202670325e-06,
-    "relative_l2": 0.0931851863861084,
-    "cosine": 0.9956232309341431
+  "scale_block": 256,
+  "cpu_nested_scale_quantization_tested": true,
+  "heldout_logits": {
+    "mse": 0.625730574131012,
+    "relative_l2": 0.2469577193260193,
+    "cosine": 0.9725313782691956
   },
-  "double_quantization_tested": false,
-  "boundary": "peft and bitsandbytes are absent; --native is provided but not executed. CPU test validates NF4 codebook on real Qwen weights only. Private ASR checkpoint/audio unavailable; no CER or adapter-memory claim.",
+  "generation": {"new_token_id": 104949, "new_token_text": "模型", "use_cache": false},
+  "double_quantization_backend": "groupwise signed INT8 CPU proxy; not bitsandbytes",
+  "boundary": "Native QLoRA was not executed; CPU nested-scale quantization is an engineering proxy.",
   "full_paper_reproduced": false,
   "python": "3.9.6",
   "torch": "2.8.0",
@@ -62,4 +67,11 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 
 ## 原生QLoRA可选路径
 
-`python3 scripts/quantization/2609.02735/demo.py --native`启用bitsandbytes NF4双重量化与PEFT LoRA，使用本地四条文本做烟雾训练。该路径本次未执行：环境缺少`bitsandbytes`与`peft`，也没有论文的私有ASR检查点及语音。代码中的学习率1e-4是演示设置，不能替代论文缺失的系数；不报告CER复现或显存收益。
+`python3 scripts/quantization/2609.02735/demo.py --native`启用bitsandbytes NF4双重量化与PEFT LoRA，使用本地四条文本做烟雾训练。该路径本次未执行：环境缺少`bitsandbytes`与`peft`，也没有论文的私有ASR检查点及语音。代码中的学习率 1e-4 与论文一致，但四条文本不等于论文的 5 epoch、约 80 步语音训练；不报告 CER 复现或显存收益。
+
+## 代码审查与验证（2026-09-05）
+
+- 一致性结论：**部分一致**。官方 v1 使用 rank 16、alpha 32、真实 4-bit NF4、double quantization、AdamW 1e-4、5 epoch，并在私有单说话人 ASR 数据上评估 CER/WER；本目录只能复核数值量化与可选 QLoRA 接口。
+- 修复：默认路径由“仅量化第一层 q_proj、未测试二次量化”扩展为全部 196 个 backbone Linear（440,401,920 权重）的 block-64 NF4 和 scale-block-256 嵌套量化代理，并补量化后前向与生成。嵌套 scale 使用 signed INT8 工程代理，未冒充 bitsandbytes 原生格式。
+- 实测命令：`python3 scripts/quantization/2609.02735/demo.py --output-json /private/tmp/2609.02735.review.json`；退出码 0，墙钟 3.23 秒；held-out logits cosine 0.972531，单 token 生成为“模型”。
+- 真实 Qwen3-0.6B：**CPU 工程量化路径已跑通**；原生 bitsandbytes+PEFT QLoRA **未跑通**，原因是当前 macOS CPU 环境没有这两个依赖、无 CUDA，且论文 Qwen3-ASR-1.7B 检查点与患者语音均不公开。

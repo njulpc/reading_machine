@@ -15,7 +15,7 @@ def main():
  h=m.register_forward_pre_hook(collect)
  for text in CAL:logits(tok,model,text)
  h.remove();ref=logits(tok,model,EVAL)
- h=m.register_forward_pre_hook(lambda mod,args:(time_link(args[0],*bounds),)+args[1:]);out=logits(tok,model,EVAL);h.remove()
+ h=m.register_forward_pre_hook(lambda mod,args:(time_link(args[0],*bounds),)+args[1:]);out=logits(tok,model,EVAL);generation=generate_one(tok,model);h.remove()
  x=torch.linspace(bounds[0],bounds[1],1024);y=time_link(x,*bounds);assert (y-x).abs().max()<=(bounds[1]-bounds[0])/63+1e-5
- save({'model':'Qwen3-0.6B','bounds':bounds,'bits':6,'levels':64,'heldout_logits':metrics(ref,out),'full_paper_reproduced':False,'boundary':'One activation boundary is transported using a numerical ramp. No analog convolution, photodiodes, circuit noise, wavelength scheduling or energy-delay reproduction. Calibration bounds are a Qwen transfer, not physical voltages.'},a.output_json)
+ save({'model':'Qwen3-0.6B','bounds':bounds,'bits':6,'levels':64,'transported_boundaries':1,'heldout_logits':metrics(ref,out),'generation':generation,'full_paper_reproduced':False,'boundary':'One activation boundary is transported using a numerical ramp. No analog convolution, photodiodes, circuit noise, wavelength scheduling or energy-delay reproduction. Calibration bounds are a Qwen transfer, not physical voltages.'},a.output_json)
 if __name__=='__main__':main()

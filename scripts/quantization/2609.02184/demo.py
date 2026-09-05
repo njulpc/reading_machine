@@ -25,7 +25,8 @@ def main():
  for _ in range(40):
   z=enc(torch.cat([x,cond],1));pred=dec(torch.cat([z,cond],1));loss=F.mse_loss(pred,x);opt.zero_grad();loss.backward();opt.step()
  with torch.no_grad():
-  z=linear_quant(enc(torch.cat([x,cond],1)),8);pred=dec(torch.cat([z,cond],1));centers,idx=residual_vq(x-pred);out=pred+centers[idx]
+  z=linear_quant(enc(torch.cat([x,cond],1)),14);pred=dec(torch.cat([z,cond],1));centers,idx=residual_vq(x-pred);out=pred+centers[idx]
+  dynamic=x.mean(1).clamp(-1,1);dynamic_q=expand(linear_quant(compand(dynamic,255).unsqueeze(1),16).squeeze(1),255)
   test=torch.linspace(-1,1,64);torch.testing.assert_close(expand(compand(test,255),255),test,atol=1e-6,rtol=1e-5)
- save({'model':'Qwen3-0.6B','rows':len(x),'residual_codebook':256,'scalar_bits':12,'autoencoder_only':metrics(x,pred),'autoencoder_residual':metrics(x,out),'scalar_12bit_error':metrics(cond,linear_quant(cond,12)),'full_paper_reproduced':False,'boundary':'Qwen rows and row statistics replace SH-AC/geometric conditions for component verification only. 8D latent, 8bit latent, mu=255 and 40 training steps are demo choices, not claimed paper defaults. No CDF deformation hash, scene rendering, archive Zstandard, or compressed Qwen checkpoint.'},a.output_json)
+ save({'model':'Qwen3-0.6B','rows':len(x),'profile':'CCA-Default','latent_bits':14,'residual_codebook':256,'scalar_bits':12,'dynamic_bits':16,'autoencoder_only':metrics(x,pred),'autoencoder_residual':metrics(x,out),'scalar_12bit_error':metrics(cond,linear_quant(cond,12)),'dynamic_mulaw_16bit_error':metrics(dynamic,dynamic_q),'full_paper_reproduced':False,'boundary':'Qwen rows and row statistics replace SH-AC/geometric conditions for component verification only. The paper-default 14/12/16-bit CCA profile and 256-entry residual codebook are exercised, but the 8D latent, mu=255 and 40 training steps are explicit engineering choices. No CDF deformation hash, scene rendering, Zstandard archive, or compressed Qwen checkpoint.'},a.output_json)
 if __name__=='__main__':main()

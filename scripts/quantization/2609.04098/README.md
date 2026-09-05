@@ -44,10 +44,11 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
   "linears": 196,
   "quantized_elements": 440401920,
   "heldout_logits": {
-    "mse": 0.5544835925102234,
-    "relative_l2": 0.2324734479188919,
-    "cosine": 0.9729049205780029
+    "mse": 0.5578979253768921,
+    "relative_l2": 0.2331867516040802,
+    "cosine": 0.974928617477417
   },
+  "generation": {"new_token_id": 100678, "new_token_text": "为什么", "use_cache": false},
   "calibration_texts": [
     "量化需要校准激活。",
     "Compression balances quality and storage.",
@@ -55,12 +56,13 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
     "The cache grows with sequence length."
   ],
   "quantization": "nvfp4",
+  "scale_harmonization": {"groups": 56, "worst_original_global_ratio": 5.13939393939394},
   "storage": "FP32 dequantized reference; no physical memory reduction claimed",
   "full_paper_reproduced": false,
   "weight_block": 16,
   "activation_block": 16,
   "scale_format": "E4M3 plus FP32 global",
-  "harmonization_test": "PASS",
+  "harmonization_test": "PASS on real Qwen QKV and gate/up groups",
   "boundary": "No GDN in Qwen3-0.6B; no 27B/32K experiments or native FP4 GEMM. Static globals calibrated on four local texts, not paper 128x32K. FP8 KV calibration not integrated.",
   "python": "3.9.6",
   "torch": "2.8.0",
@@ -72,3 +74,10 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 ```
 
 完整机器可读结果见[results.json](results.json)，实际实现见[demo.py](demo.py)。
+
+## 代码审查与验证（2026-09-05）
+
+- 一致性结论：**部分一致**。NVFP4 的 16 元素块、E2M1 payload、E4M3 局部 scale、FP32 全局 scale 和融合组尺度协调与官方 v1 一致；但 Qwen3-0.6B 无 Gated DeltaNet，且本地校准只有 4 条短文本而非论文 128×32K。
+- 修复：原脚本只对两个标量声称 harmonization PASS；现对真实 Qwen 的 28 个 QKV 组和 28 个 gate/up 组统一全局尺度，实际处理 56 组，原始全局尺度最大比值 5.139394，并补量化后前向与生成。
+- 实测命令：`python3 scripts/quantization/2609.04098/demo.py --output-json /private/tmp/2609.04098.review.json`；退出码 0，墙钟 4.04 秒；196 个 Linear、440,401,920 权重，held-out logits cosine 0.974929，单 token 生成为“为什么”。
+- 真实 Qwen3-0.6B：**NVFP4 W4A4 工程路径已跑通**；论文的 Qwen3.8-27B、240 个 GDN Linear、94 个实际融合 scale set、FP8 KV 校准、32K 评测和 Blackwell 原生 GEMM 未跑通。

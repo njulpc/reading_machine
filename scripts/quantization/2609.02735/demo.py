@@ -20,7 +20,6 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--native',action='store_true');p.add_argument('--output-json');a=p.parse_args()
  if a.native:r=native()
  else:
-  tok,model=load();w=model.model.layers[0].self_attn.q_proj.weight.detach();q=nf4(w);assert torch.isfinite(q).all()
-  r={'model':'Qwen3-0.6B','native_QLoRA':False,'NF4_block':64,'weight_error':metrics(w,q),'double_quantization_tested':False,'boundary':'peft and bitsandbytes are absent; --native is provided but not executed. CPU test validates NF4 codebook on real Qwen weights only. Private ASR checkpoint/audio unavailable; no CER or adapter-memory claim.'}
+  r=run_full('nf4-double');r.update({'native_QLoRA':False,'NF4_block':64,'scale_block':256,'cpu_nested_scale_quantization_tested':True,'double_quantization_backend':'groupwise signed INT8 CPU proxy; not bitsandbytes','boundary':'peft and bitsandbytes are absent; --native is provided but not executed. A CPU engineering proxy applies block-64 NF4 and groupwise INT8 scale quantization to all real Qwen3-0.6B backbone Linear weights, then runs forward/generation; it is not the native bitsandbytes nested format and does not train adapters. Private ASR checkpoint/audio unavailable; no CER or adapter-memory claim.'})
  r['full_paper_reproduced']=False;save(r,a.output_json)
 if __name__=='__main__':main()

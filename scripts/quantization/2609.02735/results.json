@@ -1,15 +1,30 @@
 {
   "model": "Qwen3-0.6B",
+  "checkpoint": "Qwen/Qwen3-0.6B",
+  "parameters": 596049920,
+  "linears": 196,
+  "quantized_elements": 440401920,
+  "heldout_logits": {
+    "mse": 0.625730574131012,
+    "relative_l2": 0.2469577193260193,
+    "cosine": 0.9725313782691956
+  },
+  "generation": {
+    "new_token_id": 104949,
+    "new_token_text": "模型",
+    "use_cache": false
+  },
+  "calibration_texts": [],
+  "quantization": "nf4-double",
+  "scale_harmonization": null,
+  "storage": "FP32 dequantized reference; no physical memory reduction claimed",
+  "full_paper_reproduced": false,
   "native_QLoRA": false,
   "NF4_block": 64,
-  "weight_error": {
-    "mse": 8.531654202670325e-06,
-    "relative_l2": 0.0931851863861084,
-    "cosine": 0.9956232309341431
-  },
-  "double_quantization_tested": false,
-  "boundary": "peft and bitsandbytes are absent; --native is provided but not executed. CPU test validates NF4 codebook on real Qwen weights only. Private ASR checkpoint/audio unavailable; no CER or adapter-memory claim.",
-  "full_paper_reproduced": false,
+  "scale_block": 256,
+  "cpu_nested_scale_quantization_tested": true,
+  "double_quantization_backend": "groupwise signed INT8 CPU proxy; not bitsandbytes",
+  "boundary": "peft and bitsandbytes are absent; --native is provided but not executed. A CPU engineering proxy applies block-64 NF4 and groupwise INT8 scale quantization to all real Qwen3-0.6B backbone Linear weights, then runs forward/generation; it is not the native bitsandbytes nested format and does not train adapters. Private ASR checkpoint/audio unavailable; no CER or adapter-memory claim.",
   "python": "3.9.6",
   "torch": "2.8.0",
   "transformers": "4.57.6",

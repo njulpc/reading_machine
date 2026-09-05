@@ -66,3 +66,10 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 ```
 
 完整机器可读结果见[results.json](results.json)，实际实现见[demo.py](demo.py)。
+
+## 代码审查与验证（2026-09-05）
+
+- 一致性结论：**部分一致**。官方 v1 的 NVFP4 Q/K、MXFP4 P/V、N32 E8M0 amplitude、E2M1 affine map（A=1.50、B=1.20）及“用实际 P 码累加分母”均在算子路径体现；输出使用相同表示的分子和分母，row-sum 误差为 2.38e-7。
+- 差异边界：当前输入来自真实 Qwen 第一层 projection，但在 RoPE 和 QK normalization 前构造非因果算子；没有论文的相邻 K64 scale MSE folding、128-row sampled guard、`M+L≤126` 下溢修复、TMEM packing、反向或整模替换。未以简化算子冒充 FlashAttention-4 kernel。
+- 实测命令：`python3 scripts/quantization/2609.04105/demo.py --output-json /private/tmp/2609.04105.review.json`；退出码 0，墙钟 2.19 秒；形状 1×16×28×28，输出 cosine 0.992266。
+- 真实 Qwen3-0.6B：**完整量化未跑通**。真实 Q/K/V 张量上的 Direct-P CPU 参考算子已跑通；没有整模 attention 替换、生成、GB200/B300 内核、吞吐或训练验证。

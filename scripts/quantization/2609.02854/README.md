@@ -40,6 +40,7 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 {
   "model": "Qwen3-0.6B",
   "linears": 84,
+  "quantized_elements": 264241152,
   "weight_bits": 8,
   "activation_bits": 8,
   "weight_granularity": "per output channel symmetric",
@@ -49,6 +50,7 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
     "relative_l2": 0.2595379650592804,
     "cosine": 0.9657615423202515
   },
+  "generation": {"new_token_id": 104949, "new_token_text": "模型", "use_cache": false},
   "full_paper_reproduced": false,
   "boundary": "Qwen MLP PTQ component transfer only; attention and norms kept FP32 rather than paper FP16. No GroupFisher, pose retraining, UNet QAT, latent-consistency distillation, geometric fusion or Apple Neural Engine export. Vision datasets/models unavailable locally.",
   "python": "3.9.6",
@@ -61,3 +63,10 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 ```
 
 完整机器可读结果见[results.json](results.json)，实际实现见[demo.py](demo.py)。
+
+## 代码审查与验证（2026-09-05）
+
+- 一致性结论：**部分一致**。代码的 W8 为逐输出通道对称量化，A8 为四条校准文本得到的静态逐张量非对称量化，与论文的粒度相符；但论文对姿态网和 UNet 使用 QAT、对 VAE 使用 PTQ，并保留敏感算子为 FP16，当前 Qwen MLP 只是 PTQ 工程迁移。
+- 修复：补充实际量化权重数、校准文本记录、量化后无 cache 生成，并在生成后清理激活 hook。论文要求的 GroupFisher（3336→2389 通道）、视觉重训练、深度一致性蒸馏、几何融合和 Core ML/ANE 导出仍未伪造。
+- 实测命令：`python3 scripts/quantization/2609.02854/demo.py --output-json /private/tmp/2609.02854.review.json`；退出码 0，墙钟 2.77 秒；84 个 MLP Linear、264,241,152 权重，held-out logits cosine 0.965762，单 token 生成为“模型”。
+- 真实 Qwen3-0.6B：**MLP W8A8 路径已跑通**，覆盖校准、权重量化替换、激活量化、前向和生成；这不等于 MuyBridge 视觉流水线或全模型所有算子的量化。

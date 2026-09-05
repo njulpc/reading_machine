@@ -45,11 +45,13 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
   ],
   "bits": 6,
   "levels": 64,
+  "transported_boundaries": 1,
   "heldout_logits": {
     "mse": 0.0021741525270044804,
     "relative_l2": 0.01455691084265709,
     "cosine": 0.999901533126831
   },
+  "generation": {"new_token_id": 104949, "new_token_text": "模型", "use_cache": false},
   "full_paper_reproduced": false,
   "boundary": "One activation boundary is transported using a numerical ramp. No analog convolution, photodiodes, circuit noise, wavelength scheduling or energy-delay reproduction. Calibration bounds are a Qwen transfer, not physical voltages.",
   "python": "3.9.6",
@@ -62,3 +64,10 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 ```
 
 完整机器可读结果见[results.json](results.json)，实际实现见[demo.py](demo.py)。
+
+## 代码审查与验证（2026-09-05）
+
+- 一致性结论：**部分一致**。数值函数按 6-bit、64-cycle 单调斜坡和“首个超过输入的比较器边沿”建模，符合论文的 ATC/RX 基本传输语义；它没有生成数字码字，也不声称复现光电器件。
+- 修复：补充真实 Qwen 量化后生成与 transported-boundary 计数；保留单边界范围校准和最大误差不超过一个量化步长的断言。
+- 实测命令：`python3 scripts/quantization/2609.03125/demo.py --output-json /private/tmp/2609.03125.review.json`；退出码 0，墙钟 2.59 秒；held-out logits cosine 0.999902，单 token 生成为“模型”。
+- 真实 Qwen3-0.6B：**单激活边界路径已跑通，完整量化未跑通**。已完成校准、第二层 q_proj 输入的 6-bit 时间编码、整模前向和生成；未复现模拟卷积、14.41% 噪声模型、九波长调度、电路或 EDP。

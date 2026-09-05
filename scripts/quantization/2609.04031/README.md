@@ -48,15 +48,18 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
     "relative_l2": 1.9256565570831299,
     "cosine": 0.7040231227874756
   },
+  "generation": {"new_token_id": 220, "new_token_text": " ", "use_cache": false},
   "calibration_texts": [],
   "quantization": "symmetric W4A4",
   "storage": "FP32 dequantized reference; no physical memory reduction claimed",
   "full_paper_reproduced": false,
   "stage_equations": "5/6/11 endpoint and gradient tests PASS",
-  "alpha_demo": 3.0,
-  "tau_demo": 0.9,
-  "hyperparameter_provenance": "demo defaults; do not assert these are paper defaults",
-  "boundary": "Qwen is autoregressive, has no native denoising time, video target or CFG. Exact stage functions tested independently; full Qwen forward only validates W4A4. No DSA video training or VBench reproduction; paper needs 24-64 H20 GPUs and synthetic video data.",
+  "alpha": 5.0,
+  "scheduler_steps": 50,
+  "cfg_drop_steps": 9,
+  "tau": 0.82,
+  "hyperparameter_provenance": "paper-selected alpha=5 and final-nine-step CFG drop on the paper 50-step scheduler",
+  "boundary": "Qwen is autoregressive, has no native denoising time, video target or CFG. Exact stage functions tested independently; full Qwen forward/generation only validates symmetric W4A4. No DSA video training or VBench reproduction; paper needs 24-64 H20 GPUs and synthetic video data.",
   "python": "3.9.6",
   "torch": "2.8.0",
   "transformers": "4.57.6",
@@ -67,3 +70,10 @@ export QWEN_MODEL_PATH=/path/to/Qwen3-0.6B
 ```
 
 完整机器可读结果见[results.json](results.json)，实际实现见[demo.py](demo.py)。
+
+## 代码审查与验证（2026-09-05）
+
+- 一致性结论：**部分一致**。式（5）（6）的 KD/target 指数混合、式（11）的后期 CFG 关闭，以及静态逐通道 W4、动态逐 token A4 已按官方 v1 核对；Qwen 没有视频去噪时间、flow target 或 CFG，无法成为 DSAQuant 训练复现。
+- 修复：把无依据的 `alpha=3`、`tau=0.9` 改为论文消融选定的 `alpha=5`，并按 50-step scheduler 的最后 9 步计算 `tau=0.82`；补齐量化后生成。端点、边界和梯度均有断言。
+- 实测命令：`python3 scripts/quantization/2609.04031/demo.py --output-json /private/tmp/2609.04031.review.json`；退出码 0，墙钟 2.53 秒；196 个 Linear、440,401,920 权重完成 W4A4，held-out logits cosine 0.704023，单 token 生成成功但为空格，表明该直接迁移质量很差。
+- 真实 Qwen3-0.6B：**对称 W4A4 工程路径已跑通**，覆盖权重替换、动态激活量化、前向和生成；视频 QAT、CFG 推理、VBench 和 24–64 张 H20 训练未跑通。

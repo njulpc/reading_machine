@@ -19,6 +19,7 @@ def main():
   for n,m in mods:
    m.weight.copy_(sym(m.weight,8))
    handles.append(m.register_forward_pre_hook(lambda mod,args,key=n:(aq(args[0],*bounds[key]),)+args[1:]))
- out=logits(tok,model,EVAL);assert torch.isfinite(out).all()
- save({'model':'Qwen3-0.6B','linears':len(mods),'weight_bits':8,'activation_bits':8,'weight_granularity':'per output channel symmetric','activation_granularity':'static per tensor asymmetric','heldout_logits':metrics(ref,out),'full_paper_reproduced':False,'boundary':'Qwen MLP PTQ component transfer only; attention and norms kept FP32 rather than paper FP16. No GroupFisher, pose retraining, UNet QAT, latent-consistency distillation, geometric fusion or Apple Neural Engine export. Vision datasets/models unavailable locally.'},a.output_json)
+ out=logits(tok,model,EVAL);assert torch.isfinite(out).all();generation=generate_one(tok,model)
+ for h in handles:h.remove()
+ save({'model':'Qwen3-0.6B','linears':len(mods),'quantized_elements':sum(m.weight.numel() for _,m in mods),'weight_bits':8,'activation_bits':8,'weight_granularity':'per output channel symmetric','activation_granularity':'static per tensor asymmetric','calibration_texts':CAL,'heldout_logits':metrics(ref,out),'generation':generation,'full_paper_reproduced':False,'boundary':'Qwen MLP PTQ component transfer only; attention and norms kept FP32 rather than paper FP16. No GroupFisher, pose retraining, UNet QAT, latent-consistency distillation, geometric fusion or Apple Neural Engine export. Vision datasets/models unavailable locally.'},a.output_json)
 if __name__=='__main__':main()

@@ -1,14 +1,26 @@
 {
   "model": "Qwen3-0.6B",
   "linears": 84,
+  "quantized_elements": 264241152,
   "weight_bits": 8,
   "activation_bits": 8,
   "weight_granularity": "per output channel symmetric",
   "activation_granularity": "static per tensor asymmetric",
+  "calibration_texts": [
+    "量化需要校准激活。",
+    "Compression balances quality and storage.",
+    "不同层的数值范围并不相同。",
+    "The cache grows with sequence length."
+  ],
   "heldout_logits": {
     "mse": 0.6911038160324097,
     "relative_l2": 0.2595379650592804,
     "cosine": 0.9657615423202515
+  },
+  "generation": {
+    "new_token_id": 104949,
+    "new_token_text": "模型",
+    "use_cache": false
   },
   "full_paper_reproduced": false,
   "boundary": "Qwen MLP PTQ component transfer only; attention and norms kept FP32 rather than paper FP16. No GroupFisher, pose retraining, UNet QAT, latent-consistency distillation, geometric fusion or Apple Neural Engine export. Vision datasets/models unavailable locally.",
