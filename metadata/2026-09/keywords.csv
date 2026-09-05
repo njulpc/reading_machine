@@ -1,0 +1,2 @@
+arxiv_id,title,submitted_date,category,keywords
+2609.04010,Unlocking Lossless Speedups in LLMs via Discrete Diffusion,2026-09-03,knowledge_distillation,knowledge distillation; gated LoRA; total variation; speculative decoding; shared KV cache
