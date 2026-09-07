@@ -1,0 +1,620 @@
+{
+  "run_date": "2026-09-08",
+  "report_date": "2026-09-07",
+  "generated_at": "2026-09-08T01:26:43+08:00",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-09-05T00:00:00+08:00",
+    "end_exclusive": "2026-09-08T00:00:00+08:00",
+    "dates": [
+      "2026-09-05",
+      "2026-09-06",
+      "2026-09-07"
+    ],
+    "membership": "official /abs Submission history v1 converted from UTC"
+  },
+  "retrieval_method": "official HTML new/recent show=2000 plus official abs; no arXiv API",
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07"
+  ],
+  "dedup_source_branch_shas": {
+    "origin/feature/arxiv-daily-2026-07-29": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+    "origin/feature/arxiv-daily-2026-07-30": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+    "origin/feature/arxiv-daily-2026-07-31": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+    "origin/feature/arxiv-daily-2026-08-01": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+    "origin/feature/arxiv-daily-2026-08-02": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+    "origin/feature/arxiv-daily-2026-08-03": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+    "origin/feature/arxiv-daily-2026-08-04": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+    "origin/feature/arxiv-daily-2026-08-05": "333264be93bb365ee7d29436235e6b056427943e",
+    "origin/feature/arxiv-daily-2026-08-06": "67600577ca268cd88675d221f0e19fdb59673789",
+    "origin/feature/arxiv-daily-2026-08-07": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+    "origin/feature/arxiv-daily-2026-08-08": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+    "origin/feature/arxiv-daily-2026-08-10": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+    "origin/feature/arxiv-daily-2026-08-12": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+    "origin/feature/arxiv-daily-2026-08-14": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+    "origin/feature/arxiv-daily-2026-08-15": "e463baea815c06d95ffc36eec034113b28db7927",
+    "origin/feature/arxiv-daily-2026-08-16": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+    "origin/feature/arxiv-daily-2026-08-17": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+    "origin/feature/arxiv-daily-2026-08-18": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+    "origin/feature/arxiv-daily-2026-08-19": "3518b1fff91bab3cd78421810c0798177060063f",
+    "origin/feature/arxiv-daily-2026-08-20": "6413646a6fec8b54f937415084c2df3e99b358a1",
+    "origin/feature/arxiv-daily-2026-08-21": "dc8a46573315edb88419bb4eb181bea89d209de7",
+    "origin/feature/arxiv-daily-2026-08-22": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+    "origin/feature/arxiv-daily-2026-08-23": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+    "origin/feature/arxiv-daily-2026-08-24": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+    "origin/feature/arxiv-daily-2026-08-25": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+    "origin/feature/arxiv-daily-2026-08-26": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+    "origin/feature/arxiv-daily-2026-08-27": "f57ca87589c728a68851f21acdff1c333b402e35",
+    "origin/feature/arxiv-daily-2026-08-28": "daeb352421a9263136927bc71497c86ddb512c77",
+    "origin/feature/arxiv-daily-2026-08-29": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+    "origin/feature/arxiv-daily-2026-08-30": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+    "origin/feature/arxiv-daily-2026-08-31": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+    "origin/feature/arxiv-daily-2026-09-01": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+    "origin/feature/arxiv-daily-2026-09-02": "ab05a346a491f043142867c74593f45e669812d1",
+    "origin/feature/arxiv-daily-2026-09-03": "710202d696a1295b25e55f50d4fee966434549d4",
+    "origin/feature/arxiv-daily-2026-09-04": "623673ccf816fda6de51daf471f55c79b0a24801",
+    "origin/feature/arxiv-daily-2026-09-05": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+    "origin/feature/arxiv-daily-2026-09-06": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+    "origin/feature/arxiv-daily-2026-09-07": "4fa4065a723520e6413d4bed69790612999517cd"
+  },
+  "historical_branches_scanned": 38,
+  "historical_analyzed_ids_count": 522,
+  "historical_metadata_ids_count": 525,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [],
+  "excluded_duplicate_sources": [],
+  "window_related_papers_count": 5,
+  "historical_duplicates_count": 0,
+  "new_papers_count": 5,
+  "total_papers": 5,
+  "retrieved_unique_ids": 3118,
+  "abs_records_parsed": 3118,
+  "fetch_failed": [],
+  "parse_failed": [],
+  "list_coverage": [
+    {
+      "category": "cs.LG",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000",
+      "declared_total": 228,
+      "actual_entries": 228,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 79 of 79 entries)",
+        "Cross submissions (showing 58 of 58 entries)",
+        "Replacement submissions (showing 91 of 91 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        228
+      ],
+      "sha256": "4f5061a02d4eb05c49fed6fe349cee7b0a218bb1e8ec0aaa3429db4471dd33c8"
+    },
+    {
+      "category": "cs.LG",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000",
+      "declared_total": 1002,
+      "actual_entries": 1002,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 137 of 137 entries )",
+        "Fri, 4 Sep 2026 (showing 168 of 168 entries )",
+        "Thu, 3 Sep 2026 (showing 159 of 159 entries )",
+        "Wed, 2 Sep 2026 (showing 202 of 202 entries )",
+        "Tue, 1 Sep 2026 (showing 336 of 336 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        1002
+      ],
+      "sha256": "3715816c1ea239f36148f71c93290dff15e9d2f621b11917fcd6034cfd61a771"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000",
+      "declared_total": 151,
+      "actual_entries": 151,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 63 of 63 entries)",
+        "Cross submissions (showing 35 of 35 entries)",
+        "Replacement submissions (showing 53 of 53 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        151
+      ],
+      "sha256": "bc406960595d0dd3281dc6efe4cc2ee62cd0a4ca27943df4d897e7d4a2cc5c4c"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000",
+      "declared_total": 797,
+      "actual_entries": 797,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 98 of 98 entries )",
+        "Fri, 4 Sep 2026 (showing 115 of 115 entries )",
+        "Thu, 3 Sep 2026 (showing 101 of 101 entries )",
+        "Wed, 2 Sep 2026 (showing 185 of 185 entries )",
+        "Tue, 1 Sep 2026 (showing 298 of 298 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        797
+      ],
+      "sha256": "bc2355ebb5673038f7aa84de3ce42e8878c16d6d0cd3a002592200b55542eb5a"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000",
+      "declared_total": 174,
+      "actual_entries": 174,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 81 of 81 entries)",
+        "Cross submissions (showing 29 of 29 entries)",
+        "Replacement submissions (showing 64 of 64 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        174
+      ],
+      "sha256": "0f5da40b4c565a9476bed7f0faabd12455321345ab3cb001cff81aa86a93a569"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000",
+      "declared_total": 826,
+      "actual_entries": 826,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 110 of 110 entries )",
+        "Fri, 4 Sep 2026 (showing 112 of 112 entries )",
+        "Thu, 3 Sep 2026 (showing 136 of 136 entries )",
+        "Wed, 2 Sep 2026 (showing 152 of 152 entries )",
+        "Tue, 1 Sep 2026 (showing 316 of 316 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        826
+      ],
+      "sha256": "c5bef7d468d4e0351f58d59bc637c7836073a43ef80fc21ff926af785a6222eb"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000",
+      "declared_total": 298,
+      "actual_entries": 298,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 106 of 106 entries)",
+        "Cross submissions (showing 99 of 99 entries)",
+        "Replacement submissions (showing 93 of 93 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        298
+      ],
+      "sha256": "b71b7ad3ff1a12c6d55bf941d64b2922d20920f8f1871ee7cfe046a85788224d"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000",
+      "declared_total": 1265,
+      "actual_entries": 1265,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 205 of 205 entries )",
+        "Fri, 4 Sep 2026 (showing 165 of 165 entries )",
+        "Thu, 3 Sep 2026 (showing 162 of 162 entries )",
+        "Wed, 2 Sep 2026 (showing 309 of 309 entries )",
+        "Tue, 1 Sep 2026 (showing 424 of 424 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        1265
+      ],
+      "sha256": "c0714d46f55529d421d0f19a5d32b7eb09bf59ebac7fadfa395797cc4194ad5d"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000",
+      "declared_total": 19,
+      "actual_entries": 19,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 12 of 12 entries)",
+        "Cross submissions (showing 2 of 2 entries)",
+        "Replacement submissions (showing 5 of 5 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        19
+      ],
+      "sha256": "24cb896b699684838c5d5e0721dc0828873bbd082beb2aa6189aaf34d0a607e4"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000",
+      "declared_total": 55,
+      "actual_entries": 55,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 14 of 14 entries )",
+        "Fri, 4 Sep 2026 (showing 9 of 9 entries )",
+        "Thu, 3 Sep 2026 (showing 10 of 10 entries )",
+        "Wed, 2 Sep 2026 (showing 12 of 12 entries )",
+        "Tue, 1 Sep 2026 (showing 10 of 10 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        55
+      ],
+      "sha256": "a4213e4c48e485c79312456a95bbf4b595c4797be542d6376a91484d0feff109"
+    }
+  ],
+  "daily_counts": [
+    {
+      "date": "2026-09-05",
+      "visible_all_topics": 36,
+      "raw_related_count": 5,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 5
+    },
+    {
+      "date": "2026-09-06",
+      "visible_all_topics": 0,
+      "raw_related_count": 0,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 0
+    },
+    {
+      "date": "2026-09-07",
+      "visible_all_topics": 0,
+      "raw_related_count": 0,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 0
+    }
+  ],
+  "semantic_audit": {
+    "current_window_abstracts_reviewed": 36,
+    "current_window_fulltexts_reviewed": [
+      "2609.05309",
+      "2609.05320",
+      "2609.05334",
+      "2609.05351",
+      "2609.05363"
+    ],
+    "all_records_title_abstract_v1_parsed": 3118,
+    "cached_pre_window_abs_ids_count": 2108,
+    "cached_pre_window_abs_source_run": "2026-09-07",
+    "scope": "所有条目标题/摘要/v1均读取解析；窗口36篇逐篇语义审阅，窗口外按真实v1排除；未声称本次人工重新精读所有3118篇。",
+    "keyword_filter_is_recall_gate": false,
+    "window_exclusion_reasons": {
+      "2609.05314": "HVAC应用综述，不是压缩方法/模型内部计算削减。",
+      "2609.05318": "网络化学习的统计聚合速率理论，不是模型压缩。",
+      "2609.05323": "压缩多焦显微输入与I/O，不压缩模型。",
+      "2609.05324": "机器人数据集与评测，未压缩VLA。",
+      "2609.05327": "LLM生成量子电路变量排序启发式，压缩对象为电路，不是LLM。",
+      "2609.05328": "分类图的连续嵌入流生成，非模型低比特/剪枝。",
+      "2609.05333": "词形语境表示测量工具，低维可视化非压缩部署。",
+      "2609.05335": "漏洞历史规则与检测流水线，非模型压缩。",
+      "2609.05337": "双摆周期轨道的Hessian数值延拓，非模型剪枝。",
+      "2609.05339": "自然语言笔记/知识图谱的agent记忆迁移，非权重或KV缓存压缩。",
+      "2609.05346": "学生指真实大学生，非知识蒸馏。",
+      "2609.05364": "性能建模软件与设计文档，非压缩算法。",
+      "2609.05369": "任务图/程序记忆增强VLA，不削减模型表示。",
+      "2609.05370": "反编译可靠性评估，不是模型压缩。",
+      "2609.05374": "GUI+CLI环境和轨迹后训练，推理步数/输出token减少不等于模型内部压缩。",
+      "2609.05376": "视觉干扰鲁棒性、增强和注意力正则，非压缩。",
+      "2609.05381": "分子数值逐字检索/记忆审计，非模型压缩。",
+      "2609.05382": "镜面几何条件增强新视角生成，非稀疏化或缓存压缩。",
+      "2609.05385": "LLM解释必要性/充分性测量，非压缩。",
+      "2609.05388": "逻辑规则归纳与验证，非模型压缩。",
+      "2609.05395": "工具调用数据合成及GRPO；小模型接近大模型不构成教师蒸馏或模型压缩方法。",
+      "2609.05396": "无线信号GAN数据生成，非模型压缩。",
+      "2609.05397": "标定几何约束跨图注意力以提高深度一致性，未建立压缩目标/资源削减。",
+      "2609.05399": "可解释性立场与评估议程，非压缩。",
+      "2609.05400": "冻结7.18M模型加约1%LoRA，减少可训练参数而增加部署参数，未压缩原模型。",
+      "2609.05401": "视觉语言奖励模型释义鲁棒性基准，非压缩。",
+      "2609.05403": "联邦学习梯度个性化与隐私，非模型压缩。",
+      "2609.05404": "扩散模型交互艺术装置，非压缩。",
+      "2609.05405": "可穿戴健康推理基准，非压缩。",
+      "2609.05415": "拓扑感知运动生成，非模型压缩。",
+      "2609.05416": "多视图条件的3D对象生成，不是3DGS模型压缩。"
+    },
+    "keywords_reviewed": [
+      "quantization",
+      "quantize",
+      "quantise",
+      "low-bit",
+      "model compression",
+      "compress",
+      "pruning",
+      "sparsity",
+      "knowledge distillation",
+      "distill",
+      "teacher/student",
+      "KV cache compression",
+      "mixed precision",
+      "GPTQ",
+      "AWQ",
+      "low-rank",
+      "binary",
+      "ternary",
+      "FP4",
+      "INT4",
+      "FP8",
+      "INT8",
+      "token pruning",
+      "token merging",
+      "early exit",
+      "weight sharing"
+    ]
+  },
+  "papers": [
+    {
+      "arxiv_id": "2609.05309",
+      "title": "How Does mHC Use Its Residual Streams? Selective Routing and Near-Identity Mixing",
+      "authors": [
+        "Pengxiang Zhao",
+        "Xing Li",
+        "Xianzhi Yu",
+        "Wei Guo",
+        "Zhenhua Dong"
+      ],
+      "abstract": "Hyper-Connections and their manifold-constrained variant mHC widen a residual pathway from one stream to n, yet how trained models use this capacity remains unclear: how broadly blocks read and write, how strongly the residual pathway mixes streams, and whether the streams carry distinct representations. We examine these properties in the four-stream residual pathway of DeepSeek-V4-Flash using effective stream counts, cross-stream residual weights, and inter-stream cosine similarity. Read/write routing is concentrated but varies across depth: a typical attention or FFN site effectively uses about two streams, while the dominant stream changes across layers and the representations remain directionally distinct. Residual mixing is modest and occurs primarily in early layers; in layers 22-42, the pathway mostly carries each stream forward separately. Targeted interventions establish the functional significance of these patterns. Replacing the late mixers by identity increases C4 perplexity by only 1.9% and preserves the six-task average score, whereas replacing the early mixers increases perplexity by 41%. Fixing each early mixer to its C4 diagnostic mean increases perplexity by only 0.2% and reduces the average score by 0.25 percentage points, showing that its site-specific structure matters more than its token-wise variation on the evaluated metrics. Likewise, retaining the three largest routing weights per token at every site increases perplexity by at most 2.7% and changes the average score by at most 0.4 points. Thus, the studied model realizes only part of the flexibility afforded by four-stream mHC: individual blocks rarely require all four streams, and late residual mixing provides little measured benefit.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "primary_subject": "Machine Learning (cs.LG)",
+      "abs_url": "https://arxiv.org/abs/2609.05309",
+      "html_url": "https://arxiv.org/html/2609.05309v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05309",
+      "v1_utc": "2026-09-04T16:02:20Z",
+      "v1_local": "2026-09-05T00:02:20+08:00",
+      "submitted_date": "2026-09-05",
+      "category": "pruning",
+      "keywords": [
+        "mHC",
+        "routing sparsification",
+        "top-k",
+        "residual mixer"
+      ],
+      "summary": "四流路由四留三或将后半层混合器改单位阵仅带来较小质量变化，但没有整机压缩倍率。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 3,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "score_reasons": {
+        "accuracy": "读top-3均分−0.38点，后半混合器替换+0.04点；PPL仍有代价。",
+        "compression": "局部路由支持减少25%；无参数/显存/延迟实测倍率。",
+        "innovation": "保持尺度的路由干预结合深度分解。",
+        "reproducibility": "C4和六任务协议清楚，284B模型本次未运行。"
+      },
+      "analysis_path": "papers/2026-09/pruning/2609.05309/tech_analysis.md",
+      "fulltext_source": "https://arxiv.org/html/2609.05309v1",
+      "reproduction_path": null,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.05320",
+      "title": "Adaptive Gated Deepfake Detection for Low-Resolution and Resource-Constrained Environments",
+      "authors": [
+        "Vaishnavi Sen",
+        "Cody Laurie",
+        "Rashida Hasan"
+      ],
+      "abstract": "Deepfake detection models often rely on high-quality inputs, fixed inference paths, and computationally expensive architectures, limiting their use in low-resolution and resource-constrained settings. This paper proposes AdaGate-DF, an adaptive gated deepfake detection framework that uses image-quality cues to route samples through a dual multi-exit system so high-quality images can exit earlier and save compute. We evaluated AdaGate-DF against MaD-CoRN, DefakeHop++, and ShuffleNetV2 on two benchmark datasets (Celeb-DF and FaceForensics++) under multiple configurations to test image resolution dependence and training and inference efficiency. On Celeb-DF, AdaGate-DF achieves an AUC of 0.9370, outperforming MaD-CoRN and DefakeHop++ while maintaining a low inference latency. Resolution-based testing shows consistent improvement as input resolution increases, reaching an AUC of 0.9708 at 384 by 384. The FaceForensics++ results highlight that AdaGate-DF remains effective under class imbalance, following competitive results with evaluated models. Overall, AdaGate-DF demonstrated a practical balance between detection performance, uncertainty-aware prediction, and computational efficiency for variable-quality deepfake detection.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Machine Learning (cs.LG)",
+      "primary_subject": "Computer Vision and Pattern Recognition (cs.CV)",
+      "abs_url": "https://arxiv.org/abs/2609.05320",
+      "html_url": "https://arxiv.org/html/2609.05320v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05320",
+      "v1_utc": "2026-09-04T16:14:57Z",
+      "v1_local": "2026-09-05T00:14:57+08:00",
+      "submitted_date": "2026-09-05",
+      "category": "other",
+      "keywords": [
+        "early exit",
+        "adaptive inference",
+        "quality-aware routing"
+      ],
+      "summary": "质量门控动态选择双分支深度，Celeb-DF AUC 0.9370，但FF++仅0.5163。",
+      "scores": {
+        "accuracy": 4,
+        "compression": 3,
+        "innovation": 6,
+        "reproducibility": 6
+      },
+      "score_reasons": {
+        "accuracy": "Celeb-DF弱于full-only和ShuffleNet，FF++近随机。",
+        "compression": "有早退与0.14ms作者报告，缺少匹配full路径速度/体积倍率。",
+        "innovation": "质量规则监督与RGB/DCT多出口结合。",
+        "reproducibility": "代码入口和训练设置可用，阈值及计时仍需核验。"
+      },
+      "analysis_path": "papers/2026-09/other/2609.05320/tech_analysis.md",
+      "fulltext_source": "https://arxiv.org/pdf/2609.05320",
+      "reproduction_path": null,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.05334",
+      "title": "Lightweight Vision Transformer Compression for On-Device Plant Disease Detection in Resource-Constrained Agricultural Field Conditions",
+      "authors": [
+        "Mahadev Sunil Kumar",
+        "Bhavika Gondi",
+        "Desaisetty Venkata Satya Sai Swapnith",
+        "Gangireddy Rahul Jogi",
+        "Sudheesh Manalil",
+        "Arnab Raha",
+        "Amitava Mukherjee",
+        "Parthasarathy Seethapathy",
+        "G. Gopakumar"
+      ],
+      "abstract": "Chilli (Capsicum annuum) is one of India's most economically significant crops, yet its productivity is persistently threatened by diseases that are difficult to identify without expert intervention. While Vision Transformers (ViTs) have achieved high classification accuracy, their large computational footprint makes deployment on resource constrained devices challenging. Existing compression approaches typically address pruning, quantization, and knowledge distillation in isolation, leaving the potential benefits and interactions of their combined application insufficiently explored. We propose a unified Vision Transformer compression framework that combines Hessian-Balanced Adaptive Block Pruning (H-BAC), guided by second-order sensitivity estimation, with quantization and attention-based knowledge distillation. To systematically identify the most effective configuration within each compression family, each technique is first evaluated independently through controlled ablation studies, after which the best-performing components are integrated into a sequential deployment pipeline tailored to real-world agricultural constraints. On a chilli 3-class village-split dataset with a genuine cross-village, cross-device out-of-distribution test split, the resulting compressed models match or exceed the 95.13% FP32 baseline's accuracy, alongside 74-98% model size reduction, and the fully integrated compression pipeline achieves a 54.5x size reduction (327.42 MB to 6.01 MB) at 95.13 +/- 2.32% accuracy across four tested configurations. A direct comparison further reveals that, on this dataset, a directly-trained student of the same final size, without pruning or distillation, reaches comparable accuracy of 94.87%, at the same 6.01 MB INT8 size, indicating where H-BAC and knowledge distillation are, and are not yet shown to be, worth their computational cost.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Artificial Intelligence (cs.AI); Machine Learning (cs.LG)",
+      "primary_subject": "Computer Vision and Pattern Recognition (cs.CV)",
+      "abs_url": "https://arxiv.org/abs/2609.05334",
+      "html_url": "https://arxiv.org/html/2609.05334v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05334",
+      "v1_utc": "2026-09-04T16:40:06Z",
+      "v1_local": "2026-09-05T00:40:06+08:00",
+      "submitted_date": "2026-09-05",
+      "category": "quantization",
+      "keywords": [
+        "H-BAC",
+        "Hutchinson",
+        "INT8",
+        "PTQ",
+        "attention distillation"
+      ],
+      "summary": "文件327.42→6.01MB约54.5倍，但同尺寸直接训练94.87%与完整流水线均值95.13%接近。",
+      "scores": {
+        "accuracy": 6,
+        "compression": 8,
+        "innovation": 6,
+        "reproducibility": 5
+      },
+      "score_reasons": {
+        "accuracy": "跨村庄/相机OOD，但流水线波动大且表文存在冲突。",
+        "compression": "54.5倍为文件体积；量化CPU无显著加速。",
+        "innovation": "曲率预算与注意力KD/动态PTQ组合。",
+        "reproducibility": "Qwen真实运行通过；原视觉数据、精确配置和目标硬件复现未完成。"
+      },
+      "analysis_path": "papers/2026-09/quantization/2609.05334/tech_analysis.md",
+      "fulltext_source": "https://arxiv.org/html/2609.05334v1",
+      "reproduction_path": "scripts/quantization/2609.05334",
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.05351",
+      "title": "MEOX: Compact Multimodal Mixture-of-Experts for Earth Observation",
+      "authors": [
+        "Mohanad Albughdadi"
+      ],
+      "abstract": "Recent advances in Earth Observation representation learning accommodate heterogeneous sensors and missing observations, often through larger architectures. We present MEOX (Multimodal Earth Observation with eXperts), a multimodal masked autoencoder with a 2.939 million-parameter encoder and 3.115 million parameters in total. Sensor-specific adapters, explicit validity signals, and a shared sparse-expert block preserve modality-dependent processing before a learned patch-wise fusion. Four metadata tokens then accompany a single spatial sequence through fourteen further encoder blocks. Shared expert projections with private low-rank residuals constrain parameter growth, while rotary attention supports downstream spatial grids different from pretraining. The model is pretrained on 1.228 million MMEarth64 samples using modality-balanced masked reconstruction and structured sensor dropout. Frozen transfer is evaluated on six GEO-Bench tasks at both 64 and 224 pixels. The model reaches 64.42% mean intersection-over-union on cashew segmentation at 64 pixels and 90.56% average accuracy on EuroSAT at 224 pixels, exceeding the corresponding reported CSMoE results. BigEarthNet finetuning reaches 72.95% micro-average precision. Routing diagnostics distinguish expert participation, spatial dependence, modality association, and functional contribution. A held-out WorldCover probe measures a 0.64-percentage-point benefit from metadata, while retrieval separates same-sensor semantics from cross-sensor alignment. These results demonstrate sensor-flexible representation learning and strong task transfer using a compact parameter budget.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "primary_subject": "Computer Vision and Pattern Recognition (cs.CV)",
+      "abs_url": "https://arxiv.org/abs/2609.05351",
+      "html_url": "https://arxiv.org/html/2609.05351v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05351",
+      "v1_utc": "2026-09-04T16:59:36Z",
+      "v1_local": "2026-09-05T00:59:36+08:00",
+      "submitted_date": "2026-09-05",
+      "category": "other",
+      "keywords": [
+        "low-rank",
+        "weight sharing",
+        "sparse experts",
+        "token fusion"
+      ],
+      "summary": "共享专家投影加rank-8残差将编码器控制在2.939M参数，高分辨率时算量优势消失。",
+      "scores": {
+        "accuracy": 7,
+        "compression": 8,
+        "innovation": 7,
+        "reproducibility": 7
+      },
+      "score_reasons": {
+        "accuracy": "Cashew64.42 mIoU、EuroSAT90.56 AA，其他任务仍落后。",
+        "compression": "与CSMoE参数比约87，非同模型受控压缩；224像素51.477G。",
+        "innovation": "共享参数、低秩私有残差及有效性加权模态融合。",
+        "reproducibility": "开源实现/数据与协议清楚，预训练166.9h MIG，本次未重训。"
+      },
+      "analysis_path": "papers/2026-09/other/2609.05351/tech_analysis.md",
+      "fulltext_source": "https://arxiv.org/html/2609.05351v1",
+      "reproduction_path": null,
+      "full_paper_reproduced": false
+    },
+    {
+      "arxiv_id": "2609.05363",
+      "title": "Distill Globally, Adapt Locally: Reasoning Distillation and Product-Type Test-Time Training for Scalable Trade-Up Recommendation",
+      "authors": [
+        "Siliang Liu",
+        "Mohammad Ghasemi",
+        "Sapan Patel",
+        "Amin Banitalebi-Dehkordi"
+      ],
+      "abstract": "Trade-up recommendation identifies higher-quality alternatives that preserve a customer's purchase intent while offering upgraded benefits. Large language models (LLMs) can reason about such distinctions, but applying them directly to hundreds of millions of product pairs is operationally impractical. We introduce a two-level framework that distills LLM reasoning into an efficient non-generative student and adapts its decision boundary to product-type-specific trade-up criteria. At Level 1, a retrieval-augmented few-shot LLM teacher generates structured relation labels and natural-language rationales. These rationales supervise a compact embedding-pair classifier through alignment and contrastive objectives; at inference, the student uses only two precomputed 768-dimensional product embeddings, with no LLM calls or text generation. On a fixed human-annotated benchmark of 8,352 pairs, a 15.5M-parameter four-class reasoning-distilled student achieves AUC 0.924 (95% CI [0.918, 0.929]), compared with 0.912 for the four-class label-only student. At Level 2, product-type test-time training (PT-TTT) uses few-shot demonstrations to optimize lightweight category-specific adapters over the frozen student. PT-TTT improves AUC from 0.924 to 0.941 and average precision from 0.920 to 0.940. On a 100K-pair proxy catalog, the distilled student on a single eight-GPU machine is approximately 5,000x faster and 10,000x lower in estimated cost than direct LLM inference.",
+      "subjects": "Machine Learning (cs.LG)",
+      "primary_subject": "Machine Learning (cs.LG)",
+      "abs_url": "https://arxiv.org/abs/2609.05363",
+      "html_url": "https://arxiv.org/html/2609.05363v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05363",
+      "v1_utc": "2026-09-04T17:08:50Z",
+      "v1_local": "2026-09-05T01:08:50+08:00",
+      "submitted_date": "2026-09-05",
+      "category": "knowledge_distillation",
+      "keywords": [
+        "reasoning distillation",
+        "embedding student",
+        "LoRA",
+        "PT-TTT"
+      ],
+      "summary": "LLM理由蒸馏到非生成学生，AUC0.924；品类少样本适配后0.941，线上无需生成教师。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 7,
+        "reproducibility": 5
+      },
+      "score_reasons": {
+        "accuracy": "有bootstrap和同928条人工监督控制；品类内AUC也改善。",
+        "compression": "约5000倍速度、10000倍估计成本是特定服务比较，非权重倍率。",
+        "innovation": "四类理由监督与品类适配分工，含多个匹配控制。",
+        "reproducibility": "损失/LoRA配置清晰；黑盒教师与人工支持限制精确复现。"
+      },
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.05363/tech_analysis.md",
+      "fulltext_source": "https://arxiv.org/html/2609.05363v1",
+      "reproduction_path": null,
+      "full_paper_reproduced": false
+    }
+  ]
+}
