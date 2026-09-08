@@ -1,0 +1,423 @@
+{
+  "run_date": "2026-09-09",
+  "report_date": "2026-09-08",
+  "generated_at": "2026-09-09T01:12:56+08:00",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-09-06T00:00:00+08:00",
+    "end_exclusive": "2026-09-09T00:00:00+08:00",
+    "dates": [
+      "2026-09-06",
+      "2026-09-07",
+      "2026-09-08"
+    ],
+    "membership": "official abs Submission history v1 converted from UTC"
+  },
+  "retrieval_method": "official HTML new/recent show=2000 and fresh official abs; no arXiv API",
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08"
+  ],
+  "dedup_source_branch_shas": {
+    "origin/feature/arxiv-daily-2026-07-29": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+    "origin/feature/arxiv-daily-2026-07-30": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+    "origin/feature/arxiv-daily-2026-07-31": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+    "origin/feature/arxiv-daily-2026-08-01": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+    "origin/feature/arxiv-daily-2026-08-02": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+    "origin/feature/arxiv-daily-2026-08-03": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+    "origin/feature/arxiv-daily-2026-08-04": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+    "origin/feature/arxiv-daily-2026-08-05": "333264be93bb365ee7d29436235e6b056427943e",
+    "origin/feature/arxiv-daily-2026-08-06": "67600577ca268cd88675d221f0e19fdb59673789",
+    "origin/feature/arxiv-daily-2026-08-07": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+    "origin/feature/arxiv-daily-2026-08-08": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+    "origin/feature/arxiv-daily-2026-08-10": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+    "origin/feature/arxiv-daily-2026-08-12": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+    "origin/feature/arxiv-daily-2026-08-14": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+    "origin/feature/arxiv-daily-2026-08-15": "e463baea815c06d95ffc36eec034113b28db7927",
+    "origin/feature/arxiv-daily-2026-08-16": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+    "origin/feature/arxiv-daily-2026-08-17": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+    "origin/feature/arxiv-daily-2026-08-18": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+    "origin/feature/arxiv-daily-2026-08-19": "3518b1fff91bab3cd78421810c0798177060063f",
+    "origin/feature/arxiv-daily-2026-08-20": "6413646a6fec8b54f937415084c2df3e99b358a1",
+    "origin/feature/arxiv-daily-2026-08-21": "dc8a46573315edb88419bb4eb181bea89d209de7",
+    "origin/feature/arxiv-daily-2026-08-22": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+    "origin/feature/arxiv-daily-2026-08-23": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+    "origin/feature/arxiv-daily-2026-08-24": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+    "origin/feature/arxiv-daily-2026-08-25": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+    "origin/feature/arxiv-daily-2026-08-26": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+    "origin/feature/arxiv-daily-2026-08-27": "f57ca87589c728a68851f21acdff1c333b402e35",
+    "origin/feature/arxiv-daily-2026-08-28": "daeb352421a9263136927bc71497c86ddb512c77",
+    "origin/feature/arxiv-daily-2026-08-29": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+    "origin/feature/arxiv-daily-2026-08-30": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+    "origin/feature/arxiv-daily-2026-08-31": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+    "origin/feature/arxiv-daily-2026-09-01": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+    "origin/feature/arxiv-daily-2026-09-02": "ab05a346a491f043142867c74593f45e669812d1",
+    "origin/feature/arxiv-daily-2026-09-03": "710202d696a1295b25e55f50d4fee966434549d4",
+    "origin/feature/arxiv-daily-2026-09-04": "623673ccf816fda6de51daf471f55c79b0a24801",
+    "origin/feature/arxiv-daily-2026-09-05": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+    "origin/feature/arxiv-daily-2026-09-06": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+    "origin/feature/arxiv-daily-2026-09-07": "4fa4065a723520e6413d4bed69790612999517cd",
+    "origin/feature/arxiv-daily-2026-09-08": "3db8912129f5ebdfb2399a213f0688ac30cdf971"
+  },
+  "historical_branches_scanned": 39,
+  "historical_analyzed_ids_count": 527,
+  "historical_metadata_ids_count": 530,
+  "historical_metadata_only_ids": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [],
+  "excluded_duplicate_sources": {},
+  "window_related_papers_count": 0,
+  "historical_duplicates_count": 0,
+  "new_papers_count": 0,
+  "total_papers": 0,
+  "papers": [],
+  "retrieved_unique_ids": 3118,
+  "fresh_abs_records_parsed": 3118,
+  "fetch_failed": [],
+  "parse_failed": [],
+  "list_coverage": [
+    {
+      "category": "cs.LG",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000",
+      "declared_total": 228,
+      "actual_entries": 228,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 79 of 79 entries)",
+        "Cross submissions (showing 58 of 58 entries)",
+        "Replacement submissions (showing 91 of 91 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        228
+      ],
+      "sha256": "4f5061a02d4eb05c49fed6fe349cee7b0a218bb1e8ec0aaa3429db4471dd33c8"
+    },
+    {
+      "category": "cs.LG",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000",
+      "declared_total": 1002,
+      "actual_entries": 1002,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 137 of 137 entries )",
+        "Fri, 4 Sep 2026 (showing 168 of 168 entries )",
+        "Thu, 3 Sep 2026 (showing 159 of 159 entries )",
+        "Wed, 2 Sep 2026 (showing 202 of 202 entries )",
+        "Tue, 1 Sep 2026 (showing 336 of 336 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        1002
+      ],
+      "sha256": "a407f6959d2b181a5ccdbdd779fa071428d6c70f091f6cd91581de674a49cd77"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000",
+      "declared_total": 151,
+      "actual_entries": 151,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 63 of 63 entries)",
+        "Cross submissions (showing 35 of 35 entries)",
+        "Replacement submissions (showing 53 of 53 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        151
+      ],
+      "sha256": "bc406960595d0dd3281dc6efe4cc2ee62cd0a4ca27943df4d897e7d4a2cc5c4c"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000",
+      "declared_total": 797,
+      "actual_entries": 797,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 98 of 98 entries )",
+        "Fri, 4 Sep 2026 (showing 115 of 115 entries )",
+        "Thu, 3 Sep 2026 (showing 101 of 101 entries )",
+        "Wed, 2 Sep 2026 (showing 185 of 185 entries )",
+        "Tue, 1 Sep 2026 (showing 298 of 298 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        797
+      ],
+      "sha256": "10483f8c3d58140fccee196840be61a7883e17830d6fad5442caca8ed8847a64"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000",
+      "declared_total": 174,
+      "actual_entries": 174,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 81 of 81 entries)",
+        "Cross submissions (showing 29 of 29 entries)",
+        "Replacement submissions (showing 64 of 64 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        174
+      ],
+      "sha256": "0f5da40b4c565a9476bed7f0faabd12455321345ab3cb001cff81aa86a93a569"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000",
+      "declared_total": 826,
+      "actual_entries": 826,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 110 of 110 entries )",
+        "Fri, 4 Sep 2026 (showing 112 of 112 entries )",
+        "Thu, 3 Sep 2026 (showing 136 of 136 entries )",
+        "Wed, 2 Sep 2026 (showing 152 of 152 entries )",
+        "Tue, 1 Sep 2026 (showing 316 of 316 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        826
+      ],
+      "sha256": "c5bef7d468d4e0351f58d59bc637c7836073a43ef80fc21ff926af785a6222eb"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000",
+      "declared_total": 298,
+      "actual_entries": 298,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 106 of 106 entries)",
+        "Cross submissions (showing 99 of 99 entries)",
+        "Replacement submissions (showing 93 of 93 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        298
+      ],
+      "sha256": "b71b7ad3ff1a12c6d55bf941d64b2922d20920f8f1871ee7cfe046a85788224d"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000",
+      "declared_total": 1265,
+      "actual_entries": 1265,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 205 of 205 entries )",
+        "Fri, 4 Sep 2026 (showing 165 of 165 entries )",
+        "Thu, 3 Sep 2026 (showing 162 of 162 entries )",
+        "Wed, 2 Sep 2026 (showing 309 of 309 entries )",
+        "Tue, 1 Sep 2026 (showing 424 of 424 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        1265
+      ],
+      "sha256": "76cd4cb618ad19519565ce5f21a09f98e75f97acf66e0a9579465550a674b389"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000",
+      "declared_total": 19,
+      "actual_entries": 19,
+      "groups": [
+        "Showing new listings for Monday, 7 September 2026",
+        "New submissions (showing 12 of 12 entries)",
+        "Cross submissions (showing 2 of 2 entries)",
+        "Replacement submissions (showing 5 of 5 entries)"
+      ],
+      "covered_index_range": [
+        1,
+        19
+      ],
+      "sha256": "24cb896b699684838c5d5e0721dc0828873bbd082beb2aa6189aaf34d0a607e4"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000",
+      "declared_total": 55,
+      "actual_entries": 55,
+      "groups": [
+        "Mon, 7 Sep 2026 (showing 14 of 14 entries )",
+        "Fri, 4 Sep 2026 (showing 9 of 9 entries )",
+        "Thu, 3 Sep 2026 (showing 10 of 10 entries )",
+        "Wed, 2 Sep 2026 (showing 12 of 12 entries )",
+        "Tue, 1 Sep 2026 (showing 10 of 10 entries )"
+      ],
+      "covered_index_range": [
+        1,
+        55
+      ],
+      "sha256": "a4213e4c48e485c79312456a95bbf4b595c4797be542d6376a91484d0feff109"
+    }
+  ],
+  "daily_counts": [
+    {
+      "date": "2026-09-06",
+      "visible_all_topics": 0,
+      "raw_related_count": 0,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 0,
+      "status": "截至运行时 arXiv 官方网页未检出"
+    },
+    {
+      "date": "2026-09-07",
+      "visible_all_topics": 0,
+      "raw_related_count": 0,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 0,
+      "status": "截至运行时 arXiv 官方网页未检出"
+    },
+    {
+      "date": "2026-09-08",
+      "visible_all_topics": 0,
+      "raw_related_count": 0,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 0,
+      "status": "截至运行时 arXiv 官方网页未检出"
+    }
+  ],
+  "adjacent_date_control": {
+    "date": "2026-09-05",
+    "count": 36,
+    "examples": [
+      {
+        "arxiv_id": "2609.05309",
+        "title": "How Does mHC Use Its Residual Streams? Selective Routing and Near-Identity Mixing",
+        "abs_url": "https://arxiv.org/abs/2609.05309",
+        "v1_utc": "2026-09-04T16:02:20Z",
+        "v1_local": "2026-09-05T00:02:20+08:00"
+      },
+      {
+        "arxiv_id": "2609.05416",
+        "title": "WorldSculpt: Generating Compositional Worlds from Grounded Videos",
+        "abs_url": "https://arxiv.org/abs/2609.05416",
+        "v1_utc": "2026-09-04T17:59:35Z",
+        "v1_local": "2026-09-05T01:59:35+08:00"
+      }
+    ]
+  },
+  "semantic_audit": {
+    "keywords_as_recall_gate": false,
+    "keywords_reviewed": [
+      "quantization",
+      "quantize",
+      "quantise",
+      "low-bit",
+      "model compression",
+      "compress",
+      "pruning",
+      "sparsity",
+      "knowledge distillation",
+      "distill",
+      "teacher",
+      "student",
+      "KV cache compression",
+      "mixed precision",
+      "GPTQ",
+      "AWQ",
+      "low-rank",
+      "binary",
+      "ternary",
+      "FP4",
+      "INT4",
+      "FP8",
+      "INT8",
+      "token pruning",
+      "token merging",
+      "early exit",
+      "weight sharing"
+    ],
+    "scope": "全部3118条标题、摘要、分类、v1本次重新读取解析；按v1日期确定窗口为空，无需对窗口外旧稿重新独立精读。关键词仅复核，不作为召回门槛。",
+    "current_window_abstracts_reviewed": 0,
+    "changed_fields_since_prior_run": [
+      {
+        "id": "2609.01633",
+        "field": "abstract",
+        "old_sha256": "dda40a000286681c1240ee57009e65fb4bcf5ad788eb505c9b77c6660be3c251",
+        "new_sha256": "a1f55f8a2eb56996af72fc13da09e0a2a126a90ff76b66aea7b494cdf19d26db",
+        "v1_utc": "2026-08-21T16:16:30Z"
+      },
+      {
+        "id": "2609.02847",
+        "field": "abstract",
+        "old_sha256": "07d26fac58e23e7010e20587249a920b785fa5997d103f9c2b400c04a7f89aee",
+        "new_sha256": "3b7278a3454a8487db25d95e222135bab0a27c3ec148bed3fbdd78a09a9fd461",
+        "v1_utc": "2026-09-02T17:32:35Z"
+      },
+      {
+        "id": "2609.03966",
+        "field": "subjects",
+        "old_sha256": "38fe5a103fbdcf7e6dbd9669e3efaea4588bf48f8b686ae87b9ad0a5f0fc700b",
+        "new_sha256": "2232a463cac5b3e32739e971381e3deb9cd2de3a352a3c4c88b60f665f32ac3c",
+        "v1_utc": "2026-09-03T15:00:31Z"
+      },
+      {
+        "id": "2609.04013",
+        "field": "abstract",
+        "old_sha256": "3161f2fd5e78d9ad2d9c0453bf70004316dfd7dc143208ae8d90237b4c5a6fc8",
+        "new_sha256": "f058867b0411aaea6bbfa8f5cc4c078a26affb6cbe508b45beb01e13db570b04",
+        "v1_utc": "2026-09-03T15:53:20Z"
+      },
+      {
+        "id": "2609.04108",
+        "field": "abstract",
+        "old_sha256": "b89d5c37fe001bc0d535094fa89272f34974ee945eaa11cd4e0025c07eb73466",
+        "new_sha256": "94c25a132de22711e12120ac8956b44990059d02b960b5772b70c2fae2f0abf7",
+        "v1_utc": "2026-09-03T17:14:27Z"
+      }
+    ]
+  },
+  "scan_sha256": "305ee67122a649d0f5f39230573b24db8c4c63cbfc7f36cbb1746f53de4b3933"
+}
