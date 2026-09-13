@@ -1,0 +1,4 @@
+arxiv_id,title,submitted_date,category,keywords
+2609.11768,A Unified Per-Token Gating Family for On-Policy Distillation: FKL/RKL Mixing with Multi-Channel and Bias Coefficients,2026-09-11,knowledge_distillation,on-policy distillation;teacher/student;KL gating
+2609.11876,On the Regularization Landscape for the Linear Recommendation Models,2026-09-11,other,low-rank;model compression;EDLAE
+2609.11929,SenseNova-U1.5: Towards Native Unified Visual Intelligence,2026-09-11,knowledge_distillation,multi-expert distillation;velocity field;model consolidation
