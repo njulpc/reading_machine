@@ -1,0 +1,68 @@
+{
+  "self_test": {
+    "fp8_cast_and_zero": true,
+    "unquantized_online_matches_sdpa": true,
+    "causal_fp8_relative_l2": 0.03791699931025505,
+    "paired_train_relative_l2": 0.043967537581920624,
+    "paired_test_relative_l2": 0.05230926349759102,
+    "shared_query_scale_batch_invariance_max_abs": 1.1920928955078125e-07,
+    "per_head_qkv_payload_ratio_vs_fp16": 1.9710144927536233
+  },
+  "qwen": {
+    "model": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+    "model_layers": 28,
+    "parameters": 596049920,
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "device": "cpu",
+    "weights_dtype": "float32",
+    "fp8_native_gemm": false,
+    "qwen_causal_adaptation": true,
+    "paper_gate_train_rows_gt": 8192,
+    "force_small": false,
+    "attention_calls": {
+      "quantized": 0,
+      "gated_off": 84
+    },
+    "samples": [
+      {
+        "sample": 0,
+        "tokens": 70,
+        "baseline_ce": 2.3177759647369385,
+        "fp8_reference_ce": 2.3177759647369385,
+        "logits_relative_l2": 0.0,
+        "argmax_agreement": 1.0,
+        "baseline_seconds": 0.16593895799999991,
+        "reference_seconds": 0.17786112499999973
+      },
+      {
+        "sample": 1,
+        "tokens": 81,
+        "baseline_ce": 2.180147647857666,
+        "fp8_reference_ce": 2.180147647857666,
+        "logits_relative_l2": 0.0,
+        "argmax_agreement": 1.0,
+        "baseline_seconds": 0.17566270799999995,
+        "reference_seconds": 0.1750949580000003
+      },
+      {
+        "sample": 2,
+        "tokens": 91,
+        "baseline_ce": 1.7536015510559082,
+        "fp8_reference_ce": 1.7536015510559082,
+        "logits_relative_l2": 0.0,
+        "argmax_agreement": 1.0,
+        "baseline_seconds": 0.18049491600000023,
+        "reference_seconds": 0.18372066699999978
+      }
+    ],
+    "full_paper_reproduction": false,
+    "limitations": [
+      "No NVIDIA FP8 Triton kernel or GPU benchmark.",
+      "Qwen causal prefill has no tabular train/test partition; paired scale reuse validated separately.",
+      "Only three short fixed texts; not benchmark perplexity.",
+      "Weights and KV cache remain FP32; no model-file compression or acceleration claimed."
+    ]
+  }
+}

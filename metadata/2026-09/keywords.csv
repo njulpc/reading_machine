@@ -1,0 +1,5 @@
+arxiv_id,title,submitted_date,category,keywords
+2609.13024,Label-Guided Knowledge Distillation for 3D-CNNs in Action Recognition,2026-09-12,knowledge_distillation,knowledge distillation;teacher/student;feature distillation
+2609.13031,Attention Quantization for Tabular Foundation Models,2026-09-12,quantization,FP8;quantization;attention;dynamic per-head scaling
+2609.13060,CanvasAnneal: Curriculum Reinforcement Learning for Diffusion Language Models,2026-09-12,knowledge_distillation,knowledge distillation;teacher/student;rationale distillation;reinforcement learning
+2609.13141,SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking,2026-09-12,pruning,pruning;sparsity;attention sparsification;Top-K
