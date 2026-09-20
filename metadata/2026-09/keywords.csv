@@ -1,0 +1,8 @@
+arxiv_id,title,submitted_date,category,keywords
+2609.20623,PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions,2026-09-18,pruning,pruning
+2609.20734,On-Demand Attention: Language Models Know When to Recall,2026-09-18,pruning,KV cache
+2609.20744,Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation,2026-09-18,knowledge_distillation,distill;teacher
+2609.20756,OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher,2026-09-18,knowledge_distillation,teacher;student
+2609.20784,RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning,2026-09-18,knowledge_distillation,distill;teacher;student
+2609.20807,Score Centering Stabilizes Off-policy Reinforcement Learning,2026-09-18,quantization,quantization
+2609.20820,Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision,2026-09-18,knowledge_distillation,compress;distill

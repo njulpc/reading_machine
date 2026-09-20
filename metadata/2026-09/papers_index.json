@@ -1,0 +1,1346 @@
+{
+  "run_date": "2026-09-21",
+  "report_date": "2026-09-20",
+  "generated_at": "2026-09-21T01:18:57.665225+08:00",
+  "timezone": "Asia/Shanghai",
+  "query_window": {
+    "start": "2026-09-18T00:00:00+08:00",
+    "end": "2026-09-20T23:59:59+08:00",
+    "days": [
+      "2026-09-18",
+      "2026-09-19",
+      "2026-09-20"
+    ],
+    "date_source": "arXiv abs Submission history v1, UTC converted to Asia/Shanghai"
+  },
+  "total_papers": 7,
+  "new_papers_count": 7,
+  "window_related_count": 7,
+  "historical_duplicates_count": 0,
+  "daily_counts": [
+    {
+      "date": "2026-09-18",
+      "all_subjects_visible": 58,
+      "related": 7,
+      "historical_duplicates": 0,
+      "new": 7
+    },
+    {
+      "date": "2026-09-19",
+      "all_subjects_visible": 0,
+      "related": 0,
+      "historical_duplicates": 0,
+      "new": 0
+    },
+    {
+      "date": "2026-09-20",
+      "all_subjects_visible": 0,
+      "related": 0,
+      "historical_duplicates": 0,
+      "new": 0
+    }
+  ],
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08",
+    "origin/feature/arxiv-daily-2026-09-09",
+    "origin/feature/arxiv-daily-2026-09-14",
+    "origin/feature/arxiv-daily-2026-09-15"
+  ],
+  "dedup_source_branch_shas": {
+    "origin/feature/arxiv-daily-2026-07-29": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+    "origin/feature/arxiv-daily-2026-07-30": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+    "origin/feature/arxiv-daily-2026-07-31": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+    "origin/feature/arxiv-daily-2026-08-01": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+    "origin/feature/arxiv-daily-2026-08-02": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+    "origin/feature/arxiv-daily-2026-08-03": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+    "origin/feature/arxiv-daily-2026-08-04": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+    "origin/feature/arxiv-daily-2026-08-05": "333264be93bb365ee7d29436235e6b056427943e",
+    "origin/feature/arxiv-daily-2026-08-06": "67600577ca268cd88675d221f0e19fdb59673789",
+    "origin/feature/arxiv-daily-2026-08-07": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+    "origin/feature/arxiv-daily-2026-08-08": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+    "origin/feature/arxiv-daily-2026-08-10": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+    "origin/feature/arxiv-daily-2026-08-12": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+    "origin/feature/arxiv-daily-2026-08-14": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+    "origin/feature/arxiv-daily-2026-08-15": "e463baea815c06d95ffc36eec034113b28db7927",
+    "origin/feature/arxiv-daily-2026-08-16": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+    "origin/feature/arxiv-daily-2026-08-17": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+    "origin/feature/arxiv-daily-2026-08-18": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+    "origin/feature/arxiv-daily-2026-08-19": "3518b1fff91bab3cd78421810c0798177060063f",
+    "origin/feature/arxiv-daily-2026-08-20": "6413646a6fec8b54f937415084c2df3e99b358a1",
+    "origin/feature/arxiv-daily-2026-08-21": "dc8a46573315edb88419bb4eb181bea89d209de7",
+    "origin/feature/arxiv-daily-2026-08-22": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+    "origin/feature/arxiv-daily-2026-08-23": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+    "origin/feature/arxiv-daily-2026-08-24": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+    "origin/feature/arxiv-daily-2026-08-25": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+    "origin/feature/arxiv-daily-2026-08-26": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+    "origin/feature/arxiv-daily-2026-08-27": "f57ca87589c728a68851f21acdff1c333b402e35",
+    "origin/feature/arxiv-daily-2026-08-28": "daeb352421a9263136927bc71497c86ddb512c77",
+    "origin/feature/arxiv-daily-2026-08-29": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+    "origin/feature/arxiv-daily-2026-08-30": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+    "origin/feature/arxiv-daily-2026-08-31": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+    "origin/feature/arxiv-daily-2026-09-01": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+    "origin/feature/arxiv-daily-2026-09-02": "ab05a346a491f043142867c74593f45e669812d1",
+    "origin/feature/arxiv-daily-2026-09-03": "710202d696a1295b25e55f50d4fee966434549d4",
+    "origin/feature/arxiv-daily-2026-09-04": "623673ccf816fda6de51daf471f55c79b0a24801",
+    "origin/feature/arxiv-daily-2026-09-05": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+    "origin/feature/arxiv-daily-2026-09-06": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+    "origin/feature/arxiv-daily-2026-09-07": "4fa4065a723520e6413d4bed69790612999517cd",
+    "origin/feature/arxiv-daily-2026-09-08": "3db8912129f5ebdfb2399a213f0688ac30cdf971",
+    "origin/feature/arxiv-daily-2026-09-09": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8",
+    "origin/feature/arxiv-daily-2026-09-14": "5068f2a8c89b815b69665b35900fd0e8d3800a54",
+    "origin/feature/arxiv-daily-2026-09-15": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66"
+  },
+  "historical_branches_scanned": 42,
+  "historical_analyzed_ids_count": 534,
+  "historical_metadata_ids_count": 537,
+  "metadata_only_ids_not_completed": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [],
+  "new_paper_ids": [
+    "2609.20623",
+    "2609.20734",
+    "2609.20744",
+    "2609.20756",
+    "2609.20784",
+    "2609.20807",
+    "2609.20820"
+  ],
+  "historical_intersection": [],
+  "coverage": [
+    {
+      "category": "cs.LG",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000",
+      "declared": 304,
+      "actual": 304,
+      "groups": [
+        "Showing new listings for Friday, 18 September 2026",
+        "New submissions (showing 107 of 107 entries)",
+        "Cross submissions (showing 91 of 91 entries)",
+        "Replacement submissions (showing 106 of 106 entries)"
+      ],
+      "pager": "Total of 304 entries",
+      "verified_groups": [
+        {
+          "label": "Showing new listings for Friday, 18 September 2026",
+          "actual": 0
+        },
+        {
+          "label": "New submissions (showing 107 of 107 entries)",
+          "actual": 107
+        },
+        {
+          "label": "Cross submissions (showing 91 of 91 entries)",
+          "actual": 91
+        },
+        {
+          "label": "Replacement submissions (showing 106 of 106 entries)",
+          "actual": 106
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "747836d3074f09d21f36639bdd966c61b375ad5bbdac83e599eb37931b0602b2"
+    },
+    {
+      "category": "cs.LG",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000",
+      "declared": 1127,
+      "actual": 1127,
+      "groups": [
+        "Fri, 18 Sep 2026 (showing 198 of 198 entries )",
+        "Thu, 17 Sep 2026 (showing 219 of 219 entries )",
+        "Wed, 16 Sep 2026 (showing 186 of 186 entries )",
+        "Tue, 15 Sep 2026 (showing 366 of 366 entries )",
+        "Mon, 14 Sep 2026 (showing 158 of 158 entries )"
+      ],
+      "pager": "Total of 1127 entries",
+      "verified_groups": [
+        {
+          "label": "Fri, 18 Sep 2026 (showing 198 of 198 entries )",
+          "actual": 198
+        },
+        {
+          "label": "Thu, 17 Sep 2026 (showing 219 of 219 entries )",
+          "actual": 219
+        },
+        {
+          "label": "Wed, 16 Sep 2026 (showing 186 of 186 entries )",
+          "actual": 186
+        },
+        {
+          "label": "Tue, 15 Sep 2026 (showing 366 of 366 entries )",
+          "actual": 366
+        },
+        {
+          "label": "Mon, 14 Sep 2026 (showing 158 of 158 entries )",
+          "actual": 158
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "273e37b3310a330673d5b0bcbd3831e8abfdea60057536e8be5ac33b86cb745b"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000",
+      "declared": 164,
+      "actual": 164,
+      "groups": [
+        "Showing new listings for Friday, 18 September 2026",
+        "New submissions (showing 72 of 72 entries)",
+        "Cross submissions (showing 32 of 32 entries)",
+        "Replacement submissions (showing 60 of 60 entries)"
+      ],
+      "pager": "Total of 164 entries",
+      "verified_groups": [
+        {
+          "label": "Showing new listings for Friday, 18 September 2026",
+          "actual": 0
+        },
+        {
+          "label": "New submissions (showing 72 of 72 entries)",
+          "actual": 72
+        },
+        {
+          "label": "Cross submissions (showing 32 of 32 entries)",
+          "actual": 32
+        },
+        {
+          "label": "Replacement submissions (showing 60 of 60 entries)",
+          "actual": 60
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "c5be6b341dcf695b34607eac471724537dfcde43f9de235c59708be1b4bf4680"
+    },
+    {
+      "category": "cs.CL",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000",
+      "declared": 608,
+      "actual": 608,
+      "groups": [
+        "Fri, 18 Sep 2026 (showing 104 of 104 entries )",
+        "Thu, 17 Sep 2026 (showing 127 of 127 entries )",
+        "Wed, 16 Sep 2026 (showing 109 of 109 entries )",
+        "Tue, 15 Sep 2026 (showing 204 of 204 entries )",
+        "Mon, 14 Sep 2026 (showing 64 of 64 entries )"
+      ],
+      "pager": "Total of 608 entries",
+      "verified_groups": [
+        {
+          "label": "Fri, 18 Sep 2026 (showing 104 of 104 entries )",
+          "actual": 104
+        },
+        {
+          "label": "Thu, 17 Sep 2026 (showing 127 of 127 entries )",
+          "actual": 127
+        },
+        {
+          "label": "Wed, 16 Sep 2026 (showing 109 of 109 entries )",
+          "actual": 109
+        },
+        {
+          "label": "Tue, 15 Sep 2026 (showing 204 of 204 entries )",
+          "actual": 204
+        },
+        {
+          "label": "Mon, 14 Sep 2026 (showing 64 of 64 entries )",
+          "actual": 64
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "f0b691bcb0131109ff1a0351ca6ee01d9989cd8b08b5b3921f9d4195d8583e42"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000",
+      "declared": 177,
+      "actual": 177,
+      "groups": [
+        "Showing new listings for Friday, 18 September 2026",
+        "New submissions (showing 101 of 101 entries)",
+        "Cross submissions (showing 24 of 24 entries)",
+        "Replacement submissions (showing 52 of 52 entries)"
+      ],
+      "pager": "Total of 177 entries",
+      "verified_groups": [
+        {
+          "label": "Showing new listings for Friday, 18 September 2026",
+          "actual": 0
+        },
+        {
+          "label": "New submissions (showing 101 of 101 entries)",
+          "actual": 101
+        },
+        {
+          "label": "Cross submissions (showing 24 of 24 entries)",
+          "actual": 24
+        },
+        {
+          "label": "Replacement submissions (showing 52 of 52 entries)",
+          "actual": 52
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "f5b5cfe396e2c3c28a4c45e9e0970de123231e83961dd1e20d071f6c0818ac83"
+    },
+    {
+      "category": "cs.CV",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000",
+      "declared": 689,
+      "actual": 689,
+      "groups": [
+        "Fri, 18 Sep 2026 (showing 125 of 125 entries )",
+        "Thu, 17 Sep 2026 (showing 118 of 118 entries )",
+        "Wed, 16 Sep 2026 (showing 123 of 123 entries )",
+        "Tue, 15 Sep 2026 (showing 233 of 233 entries )",
+        "Mon, 14 Sep 2026 (showing 90 of 90 entries )"
+      ],
+      "pager": "Total of 689 entries",
+      "verified_groups": [
+        {
+          "label": "Fri, 18 Sep 2026 (showing 125 of 125 entries )",
+          "actual": 125
+        },
+        {
+          "label": "Thu, 17 Sep 2026 (showing 118 of 118 entries )",
+          "actual": 118
+        },
+        {
+          "label": "Wed, 16 Sep 2026 (showing 123 of 123 entries )",
+          "actual": 123
+        },
+        {
+          "label": "Tue, 15 Sep 2026 (showing 233 of 233 entries )",
+          "actual": 233
+        },
+        {
+          "label": "Mon, 14 Sep 2026 (showing 90 of 90 entries )",
+          "actual": 90
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "a6b447c1968630a7c5c4cab42a7a52b6ae11a3cecfb111e1f51e29e5cf19283c"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000",
+      "declared": 329,
+      "actual": 329,
+      "groups": [
+        "Showing new listings for Friday, 18 September 2026",
+        "New submissions (showing 89 of 89 entries)",
+        "Cross submissions (showing 126 of 126 entries)",
+        "Replacement submissions (showing 114 of 114 entries)"
+      ],
+      "pager": "Total of 329 entries",
+      "verified_groups": [
+        {
+          "label": "Showing new listings for Friday, 18 September 2026",
+          "actual": 0
+        },
+        {
+          "label": "New submissions (showing 89 of 89 entries)",
+          "actual": 89
+        },
+        {
+          "label": "Cross submissions (showing 126 of 126 entries)",
+          "actual": 126
+        },
+        {
+          "label": "Replacement submissions (showing 114 of 114 entries)",
+          "actual": 114
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "255c4c2c6ddb6370eeba047e73b240a85e4c6f93333aade793b18361f50ed47d"
+    },
+    {
+      "category": "cs.AI",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000",
+      "declared": 1189,
+      "actual": 1189,
+      "groups": [
+        "Fri, 18 Sep 2026 (showing 215 of 215 entries )",
+        "Thu, 17 Sep 2026 (showing 204 of 204 entries )",
+        "Wed, 16 Sep 2026 (showing 195 of 195 entries )",
+        "Tue, 15 Sep 2026 (showing 408 of 408 entries )",
+        "Mon, 14 Sep 2026 (showing 167 of 167 entries )"
+      ],
+      "pager": "Total of 1189 entries",
+      "verified_groups": [
+        {
+          "label": "Fri, 18 Sep 2026 (showing 215 of 215 entries )",
+          "actual": 215
+        },
+        {
+          "label": "Thu, 17 Sep 2026 (showing 204 of 204 entries )",
+          "actual": 204
+        },
+        {
+          "label": "Wed, 16 Sep 2026 (showing 195 of 195 entries )",
+          "actual": 195
+        },
+        {
+          "label": "Tue, 15 Sep 2026 (showing 408 of 408 entries )",
+          "actual": 408
+        },
+        {
+          "label": "Mon, 14 Sep 2026 (showing 167 of 167 entries )",
+          "actual": 167
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "08b18192b8d6a420ace49548b23b6eddde66f25219c0603a3517a08c48e2eedb"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "new",
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000",
+      "declared": 20,
+      "actual": 20,
+      "groups": [
+        "Showing new listings for Friday, 18 September 2026",
+        "New submissions (showing 9 of 9 entries)",
+        "Cross submissions (showing 4 of 4 entries)",
+        "Replacement submissions (showing 7 of 7 entries)"
+      ],
+      "pager": "Total of 20 entries",
+      "verified_groups": [
+        {
+          "label": "Showing new listings for Friday, 18 September 2026",
+          "actual": 0
+        },
+        {
+          "label": "New submissions (showing 9 of 9 entries)",
+          "actual": 9
+        },
+        {
+          "label": "Cross submissions (showing 4 of 4 entries)",
+          "actual": 4
+        },
+        {
+          "label": "Replacement submissions (showing 7 of 7 entries)",
+          "actual": 7
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "e6bbeeb379e83be951b461ed7dc2893523104f031f2ddd00bb2603ace9f549f7"
+    },
+    {
+      "category": "cs.AR",
+      "kind": "recent",
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000",
+      "declared": 73,
+      "actual": 73,
+      "groups": [
+        "Fri, 18 Sep 2026 (showing 13 of 13 entries )",
+        "Thu, 17 Sep 2026 (showing 16 of 16 entries )",
+        "Wed, 16 Sep 2026 (showing 15 of 15 entries )",
+        "Tue, 15 Sep 2026 (showing 24 of 24 entries )",
+        "Mon, 14 Sep 2026 (showing 5 of 5 entries )"
+      ],
+      "pager": "Total of 73 entries",
+      "verified_groups": [
+        {
+          "label": "Fri, 18 Sep 2026 (showing 13 of 13 entries )",
+          "actual": 13
+        },
+        {
+          "label": "Thu, 17 Sep 2026 (showing 16 of 16 entries )",
+          "actual": 16
+        },
+        {
+          "label": "Wed, 16 Sep 2026 (showing 15 of 15 entries )",
+          "actual": 15
+        },
+        {
+          "label": "Tue, 15 Sep 2026 (showing 24 of 24 entries )",
+          "actual": 24
+        },
+        {
+          "label": "Mon, 14 Sep 2026 (showing 5 of 5 entries )",
+          "actual": 5
+        }
+      ],
+      "show": 2000,
+      "skip": 0,
+      "complete": true,
+      "html_sha256": "aee73c2372946e9b5878bf5a0bfbac0067cc4b08098579585e51f444823b901c"
+    }
+  ],
+  "abs_audit": {
+    "unique_ids": 3016,
+    "fresh_downloads": 3016,
+    "fetch_failures": 0,
+    "parse_failures": 0,
+    "window_all_subjects_count": 58,
+    "adjacent_2026_09_17_count": 400,
+    "review_boundary": "All titles/abstracts retrieved and parsed. All 58 v1-window records semantically reviewed without keyword gating; outside-window records excluded by v1 date, not claimed independently close-read.",
+    "controls": [
+      {
+        "id": "2609.20614",
+        "v1_utc": "2026-09-17T15:59:45Z",
+        "local": "2026-09-17T23:59:45+08:00"
+      },
+      {
+        "id": "2609.20623",
+        "v1_utc": "2026-09-17T16:07:03Z",
+        "local": "2026-09-18T00:07:03+08:00"
+      }
+    ]
+  },
+  "keyword_review": {
+    "quantization": [
+      "2609.20807"
+    ],
+    "quantize": [],
+    "low-bit": [],
+    "model compression": [],
+    "compress": [
+      "2609.20673",
+      "2609.20820"
+    ],
+    "pruning": [
+      "2609.20623"
+    ],
+    "sparsity": [],
+    "knowledge distillation": [],
+    "distill": [
+      "2609.20744",
+      "2609.20784",
+      "2609.20820"
+    ],
+    "teacher": [
+      "2609.20744",
+      "2609.20756",
+      "2609.20784"
+    ],
+    "student": [
+      "2609.20756",
+      "2609.20784"
+    ],
+    "KV cache": [
+      "2609.20734"
+    ],
+    "mixed precision": [],
+    "GPTQ": [],
+    "AWQ": [],
+    "INT8": [],
+    "FP8": [],
+    "FP4": [],
+    "sparse": [
+      "2609.20630",
+      "2609.20669",
+      "2609.20673",
+      "2609.20693",
+      "2609.20794",
+      "2609.20817"
+    ],
+    "low-rank": [],
+    "bit-width": []
+  },
+  "semantic_review": [
+    {
+      "arxiv_id": "2609.20615",
+      "title": "INSPECT: Learning Robot View Selection from Assistant Use",
+      "submitted_v1_utc": "2026-09-17T16:00:17Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "机器人视角选择，不压缩模型",
+      "abs_url": "https://arxiv.org/abs/2609.20615"
+    },
+    {
+      "arxiv_id": "2609.20620",
+      "title": "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
+      "submitted_v1_utc": "2026-09-17T16:03:13Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "AUV诊断模拟与既有模型比较，非压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20620"
+    },
+    {
+      "arxiv_id": "2609.20623",
+      "title": "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+      "submitted_v1_utc": "2026-09-17T16:07:03Z",
+      "submitted_date": "2026-09-18",
+      "decision": "include",
+      "reason": "PhGS 以边缘/不透明度采样剪枝并循环修复，Flash3D 高斯存储减半时 PSNR 仅下降 0.06 dB，但完整重建吞吐下降。",
+      "abs_url": "https://arxiv.org/abs/2609.20623"
+    },
+    {
+      "arxiv_id": "2609.20625",
+      "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+      "submitted_v1_utc": "2026-09-17T16:09:57Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "agent记录重放测试",
+      "abs_url": "https://arxiv.org/abs/2609.20625"
+    },
+    {
+      "arxiv_id": "2609.20630",
+      "title": "UniPolicy: Unified Objective-Specific Policies for Generative Search Advertising",
+      "submitted_v1_utc": "2026-09-17T16:17:00Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "广告多目标策略对齐，稀疏MoE路由不构成压缩实验",
+      "abs_url": "https://arxiv.org/abs/2609.20630"
+    },
+    {
+      "arxiv_id": "2609.20633",
+      "title": "Refinement Is Inherently Editable: Training-Free Prompt-to-Prompt Image Editing with Generative Refinement Network",
+      "submitted_v1_utc": "2026-09-17T16:19:28Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "二进制图像码用于编辑，非低比特权重",
+      "abs_url": "https://arxiv.org/abs/2609.20633"
+    },
+    {
+      "arxiv_id": "2609.20634",
+      "title": "PAA: The Probabilistic Allen Algebra: A Generative and Complete Probabilistic Extension of Allen's Interval Relations",
+      "submitted_v1_utc": "2026-09-17T16:20:38Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "概率区间关系代数",
+      "abs_url": "https://arxiv.org/abs/2609.20634"
+    },
+    {
+      "arxiv_id": "2609.20638",
+      "title": "PROVIA: Procedure State Tracking for Online Mistake Detection in Egocentric Videos",
+      "submitted_v1_utc": "2026-09-17T16:22:25Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "过程状态检测",
+      "abs_url": "https://arxiv.org/abs/2609.20638"
+    },
+    {
+      "arxiv_id": "2609.20641",
+      "title": "Beyond PINNs: A Unified Gauss--Newton and Petrov--Galerkin Framework for Neural and Hybrid PDE Solvers",
+      "submitted_v1_utc": "2026-09-17T16:23:56Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "PDE数值求解框架",
+      "abs_url": "https://arxiv.org/abs/2609.20641"
+    },
+    {
+      "arxiv_id": "2609.20649",
+      "title": "DexTouch-WM: Learning Action-Conditioned Tactile World Models from Human Touch for Dexterous Robot Manipulation",
+      "submitted_v1_utc": "2026-09-17T16:28:34Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "人类触觉世界模型数据迁移，非教师压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20649"
+    },
+    {
+      "arxiv_id": "2609.20650",
+      "title": "Multi-center Medical Data Mining with FL-Net - A One-stop Shop for Federated Learning",
+      "submitted_v1_utc": "2026-09-17T16:28:45Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "联邦临床数据框架",
+      "abs_url": "https://arxiv.org/abs/2609.20650"
+    },
+    {
+      "arxiv_id": "2609.20658",
+      "title": "Ownership in AI-Assisted Everyday Tasks",
+      "submitted_v1_utc": "2026-09-17T16:38:35Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "AI作品归属问卷",
+      "abs_url": "https://arxiv.org/abs/2609.20658"
+    },
+    {
+      "arxiv_id": "2609.20659",
+      "title": "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+      "submitted_v1_utc": "2026-09-17T16:38:37Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "人工反馈VLA后训练",
+      "abs_url": "https://arxiv.org/abs/2609.20659"
+    },
+    {
+      "arxiv_id": "2609.20662",
+      "title": "Earth Surface Immune System for Rapid Monitoring of Unknown Anomalies",
+      "submitted_v1_utc": "2026-09-17T16:39:26Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "遥感异常检测与prompt选择",
+      "abs_url": "https://arxiv.org/abs/2609.20662"
+    },
+    {
+      "arxiv_id": "2609.20669",
+      "title": "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+      "submitted_v1_utc": "2026-09-17T16:44:13Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "新策略增加3.52%参数，非压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20669"
+    },
+    {
+      "arxiv_id": "2609.20673",
+      "title": "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
+      "submitted_v1_utc": "2026-09-17T16:48:05Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "使用既有稀疏VAE表征，研究重点是3D结构预测",
+      "abs_url": "https://arxiv.org/abs/2609.20673"
+    },
+    {
+      "arxiv_id": "2609.20676",
+      "title": "Epidemiological Causal Graph Identification: Challenges, Identifiability and Algorithms",
+      "submitted_v1_utc": "2026-09-17T16:48:45Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "因果方向可辨识性",
+      "abs_url": "https://arxiv.org/abs/2609.20676"
+    },
+    {
+      "arxiv_id": "2609.20677",
+      "title": "RISC-V and machine learning: a survey",
+      "submitted_v1_utc": "2026-09-17T16:49:06Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "通用RISC-V/ML生态综述，摘要未给新模型压缩方法或对照；HTML404，仅依摘要判断主题",
+      "abs_url": "https://arxiv.org/abs/2609.20677"
+    },
+    {
+      "arxiv_id": "2609.20680",
+      "title": "Towards Scaling Marine Perception with Synthetic Data",
+      "submitted_v1_utc": "2026-09-17T16:51:02Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "水下合成训练数据",
+      "abs_url": "https://arxiv.org/abs/2609.20680"
+    },
+    {
+      "arxiv_id": "2609.20684",
+      "title": "HerHealthEval: Evaluating Multilingual and Register-Sensitive Understanding of Women's Health Communication",
+      "submitted_v1_utc": "2026-09-17T16:53:47Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "QLoRA作医疗任务适配工具，核心是标签偏差，未研究量化压缩权衡",
+      "abs_url": "https://arxiv.org/abs/2609.20684"
+    },
+    {
+      "arxiv_id": "2609.20687",
+      "title": "The First-Order Oracle Complexity of Lipschitz Convex Optimization in Nondual Settings",
+      "submitted_v1_utc": "2026-09-17T16:55:54Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "凸优化oracle理论",
+      "abs_url": "https://arxiv.org/abs/2609.20687"
+    },
+    {
+      "arxiv_id": "2609.20693",
+      "title": "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
+      "submitted_v1_utc": "2026-09-17T16:58:52Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "稀疏可解释物理特征，非模型参数剪枝",
+      "abs_url": "https://arxiv.org/abs/2609.20693"
+    },
+    {
+      "arxiv_id": "2609.20700",
+      "title": "Should This Case Be Adapted? Prediction Fragmentation Controls Test-Time Adaptation",
+      "submitted_v1_utc": "2026-09-17T17:02:53Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "测试时适配路由，控制适配伤害而非压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20700"
+    },
+    {
+      "arxiv_id": "2609.20701",
+      "title": "Stable Movement for Nondual Lipschitz Convex Optimization: Efficiency and Nearly Optimal Oracle Rates",
+      "submitted_v1_utc": "2026-09-17T17:02:55Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "凸优化算法",
+      "abs_url": "https://arxiv.org/abs/2609.20701"
+    },
+    {
+      "arxiv_id": "2609.20712",
+      "title": "Summarization Bias: The Directional Collapse of Objective Projection into Told-Mode Labels in Large Language Models --- A Conceptual Framework and Registered Test Protocol",
+      "submitted_v1_utc": "2026-09-17T17:09:58Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "叙事摘要偏差框架",
+      "abs_url": "https://arxiv.org/abs/2609.20712"
+    },
+    {
+      "arxiv_id": "2609.20715",
+      "title": "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+      "submitted_v1_utc": "2026-09-17T17:11:29Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "环境观察token监督增强RL",
+      "abs_url": "https://arxiv.org/abs/2609.20715"
+    },
+    {
+      "arxiv_id": "2609.20722",
+      "title": "Deep Noir: Autonomous Steering Discovery via Architectural Chronometry in Transformer Models",
+      "submitted_v1_utc": "2026-09-17T17:16:31Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "激活steering及安全，不减少网络",
+      "abs_url": "https://arxiv.org/abs/2609.20722"
+    },
+    {
+      "arxiv_id": "2609.20732",
+      "title": "Q&A on Any Spreadsheet Requires Interpreting Its Grid Structure",
+      "submitted_v1_utc": "2026-09-17T17:22:43Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "表格RAG表示",
+      "abs_url": "https://arxiv.org/abs/2609.20732"
+    },
+    {
+      "arxiv_id": "2609.20734",
+      "title": "On-Demand Attention: Language Models Know When to Recall",
+      "submitted_v1_utc": "2026-09-17T17:24:48Z",
+      "submitted_date": "2026-09-18",
+      "decision": "include",
+      "reason": "ODA 用局部前向后的状态预测是否需要全局 attention，RULER16K 接近原精度；1.98倍加速来自独立受控长上下文配置。",
+      "abs_url": "https://arxiv.org/abs/2609.20734"
+    },
+    {
+      "arxiv_id": "2609.20744",
+      "title": "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+      "submitted_v1_utc": "2026-09-17T17:33:15Z",
+      "submitted_date": "2026-09-18",
+      "decision": "include",
+      "reason": "Video DeltaNet 结合局部注意力、逐帧线性记忆和8步蒸馏，在8张B200上完成6.70秒去噪；倍率必须区分GPU数与NFE。",
+      "abs_url": "https://arxiv.org/abs/2609.20744"
+    },
+    {
+      "arxiv_id": "2609.20747",
+      "title": "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+      "submitted_v1_utc": "2026-09-17T17:35:22Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "自动驾驶sim-to-real强化学习",
+      "abs_url": "https://arxiv.org/abs/2609.20747"
+    },
+    {
+      "arxiv_id": "2609.20751",
+      "title": "dQwen3.5: Hybrid-Attention Diffusion Language Models",
+      "submitted_v1_utc": "2026-09-17T17:39:46Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "既有混合AR架构改为DLM；并行解码是生成形式转换，未做模型压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20751"
+    },
+    {
+      "arxiv_id": "2609.20752",
+      "title": "Large Language Models as Falsifiers for Cyber-Physical Systems",
+      "submitted_v1_utc": "2026-09-17T17:40:04Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "CPS规格证伪",
+      "abs_url": "https://arxiv.org/abs/2609.20752"
+    },
+    {
+      "arxiv_id": "2609.20754",
+      "title": "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
+      "submitted_v1_utc": "2026-09-17T17:41:31Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "客服RAG检索",
+      "abs_url": "https://arxiv.org/abs/2609.20754"
+    },
+    {
+      "arxiv_id": "2609.20756",
+      "title": "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+      "submitted_v1_utc": "2026-09-17T17:41:51Z",
+      "submitted_date": "2026-09-18",
+      "decision": "include",
+      "reason": "OPTED 用特权RL教师标注视觉学生实际访问的状态，显著节省渲染交互；教师比学生小，不能称为参数压缩。",
+      "abs_url": "https://arxiv.org/abs/2609.20756"
+    },
+    {
+      "arxiv_id": "2609.20758",
+      "title": "Prediction-Powered Smoothing and Validation for Disaggregated AI Evaluation",
+      "submitted_v1_utc": "2026-09-17T17:42:29Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "评估统计估计",
+      "abs_url": "https://arxiv.org/abs/2609.20758"
+    },
+    {
+      "arxiv_id": "2609.20761",
+      "title": "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+      "submitted_v1_utc": "2026-09-17T17:43:51Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "从头训练小型WAM，未压缩或蒸馏既有模型（全文确认）",
+      "abs_url": "https://arxiv.org/abs/2609.20761"
+    },
+    {
+      "arxiv_id": "2609.20765",
+      "title": "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+      "submitted_v1_utc": "2026-09-17T17:44:22Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "无线信号分类校准",
+      "abs_url": "https://arxiv.org/abs/2609.20765"
+    },
+    {
+      "arxiv_id": "2609.20768",
+      "title": "Semantic Action Graph: A Shared Representation for Agent Grounding and Human Interpretation of Sports Highlights",
+      "submitted_v1_utc": "2026-09-17T17:46:03Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "体育视频语义图",
+      "abs_url": "https://arxiv.org/abs/2609.20768"
+    },
+    {
+      "arxiv_id": "2609.20769",
+      "title": "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
+      "submitted_v1_utc": "2026-09-17T17:46:07Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "后验采样器求解改进，无模型压缩或蒸馏",
+      "abs_url": "https://arxiv.org/abs/2609.20769"
+    },
+    {
+      "arxiv_id": "2609.20776",
+      "title": "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+      "submitted_v1_utc": "2026-09-17T17:48:07Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "动作执行horizon调节，不是网络压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20776"
+    },
+    {
+      "arxiv_id": "2609.20779",
+      "title": "Harm Laundering in GPT Models: Evidence That Gender Discrimination Is Transformed Rather Than Reduced Across Safety-Trained Generations",
+      "submitted_v1_utc": "2026-09-17T17:49:28Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "模型安全偏差评估",
+      "abs_url": "https://arxiv.org/abs/2609.20779"
+    },
+    {
+      "arxiv_id": "2609.20784",
+      "title": "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning",
+      "submitted_v1_utc": "2026-09-17T17:52:08Z",
+      "submitted_date": "2026-09-18",
+      "decision": "include",
+      "reason": "RetireOPD 在学生接近教师且对齐停滞时退出蒸馏，3B ALFWorld从GRPO的75.0%升至93.8%，但师生等规模。",
+      "abs_url": "https://arxiv.org/abs/2609.20784"
+    },
+    {
+      "arxiv_id": "2609.20794",
+      "title": "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+      "submitted_v1_utc": "2026-09-17T17:54:12Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "逆问题后验评估基准",
+      "abs_url": "https://arxiv.org/abs/2609.20794"
+    },
+    {
+      "arxiv_id": "2609.20800",
+      "title": "JEPA-Anything: Learning Predictive Models across Different Worlds",
+      "submitted_v1_utc": "2026-09-17T17:55:57Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "跨领域JEPA预测因子分解，不是压缩已有模型",
+      "abs_url": "https://arxiv.org/abs/2609.20800"
+    },
+    {
+      "arxiv_id": "2609.20804",
+      "title": "An Empirical Study of Harness Design for Coding Agents",
+      "submitted_v1_utc": "2026-09-17T17:58:07Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "编码agent外部上下文摘要/省略，不是模型/KV压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20804"
+    },
+    {
+      "arxiv_id": "2609.20807",
+      "title": "Score Centering Stabilizes Off-policy Reinforcement Learning",
+      "submitted_v1_utc": "2026-09-17T17:58:17Z",
+      "submitted_date": "2026-09-18",
+      "decision": "include",
+      "reason": "Score Centering 抵消量化采样器导致的梯度漂移；重度W8A8/KV4的30B实验训练准确率30%，高于TIS的12%。",
+      "abs_url": "https://arxiv.org/abs/2609.20807"
+    },
+    {
+      "arxiv_id": "2609.20808",
+      "title": "Unifying Models of Intergroup Hostility in Online Discourse",
+      "submitted_v1_utc": "2026-09-17T17:58:25Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "网络群体敌意分析",
+      "abs_url": "https://arxiv.org/abs/2609.20808"
+    },
+    {
+      "arxiv_id": "2609.20812",
+      "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+      "submitted_v1_utc": "2026-09-17T17:59:04Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "agent过度宣称评估",
+      "abs_url": "https://arxiv.org/abs/2609.20812"
+    },
+    {
+      "arxiv_id": "2609.20814",
+      "title": "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+      "submitted_v1_utc": "2026-09-17T17:59:24Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "PDE预训练数据效率",
+      "abs_url": "https://arxiv.org/abs/2609.20814"
+    },
+    {
+      "arxiv_id": "2609.20815",
+      "title": "ERCPMP-Gx: Endoscopic Image and Video Dataset for Morphological, Histopathological, and Genomic Characterization of Colorectal Polyposis",
+      "submitted_v1_utc": "2026-09-17T17:59:28Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "内镜数据集",
+      "abs_url": "https://arxiv.org/abs/2609.20815"
+    },
+    {
+      "arxiv_id": "2609.20816",
+      "title": "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+      "submitted_v1_utc": "2026-09-17T17:59:30Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "图像颜色可控训练",
+      "abs_url": "https://arxiv.org/abs/2609.20816"
+    },
+    {
+      "arxiv_id": "2609.20817",
+      "title": "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+      "submitted_v1_utc": "2026-09-17T17:59:40Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "3D关节模型预测",
+      "abs_url": "https://arxiv.org/abs/2609.20817"
+    },
+    {
+      "arxiv_id": "2609.20818",
+      "title": "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
+      "submitted_v1_utc": "2026-09-17T17:59:41Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "液体三维重建，不针对压缩",
+      "abs_url": "https://arxiv.org/abs/2609.20818"
+    },
+    {
+      "arxiv_id": "2609.20819",
+      "title": "Can 4D Foundation Models Remember?",
+      "submitted_v1_utc": "2026-09-17T17:59:50Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "4D模型视觉记忆评估",
+      "abs_url": "https://arxiv.org/abs/2609.20819"
+    },
+    {
+      "arxiv_id": "2609.20820",
+      "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision",
+      "submitted_v1_utc": "2026-09-17T17:59:53Z",
+      "submitted_date": "2026-09-18",
+      "decision": "include",
+      "reason": "Workspace Models 将训练期VLM显著性监督蒸馏成记忆编码器，平均成功率91.5%对66.8%，优化后规划延迟49.2ms。",
+      "abs_url": "https://arxiv.org/abs/2609.20820"
+    },
+    {
+      "arxiv_id": "2609.20821",
+      "title": "Embedding Models Measure in Peculiar Ways",
+      "submitted_v1_utc": "2026-09-17T17:59:54Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "embedding物理量语义评估",
+      "abs_url": "https://arxiv.org/abs/2609.20821"
+    },
+    {
+      "arxiv_id": "2609.20822",
+      "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+      "submitted_v1_utc": "2026-09-17T17:59:58Z",
+      "submitted_date": "2026-09-18",
+      "decision": "exclude",
+      "reason": "机器人障碍规划harness",
+      "abs_url": "https://arxiv.org/abs/2609.20822"
+    }
+  ],
+  "papers": [
+    {
+      "arxiv_id": "2609.20623",
+      "title": "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+      "authors": [
+        "Rinto Yagawa",
+        "Han Cheng",
+        "Dieter Schmalstieg",
+        "Hideo Saito",
+        "Shohei Mori"
+      ],
+      "abstract": "Recent single-view feed-forward 3D Gaussian Splatting (3DGS) generation predicts a fixed number of Gaussians per camera ray, introducing severe spatial redundancy. Most existing compaction strategies target multi-view setups to exploit cross-view consistency and are incompatible with single-image models. Instead of retraining the base feed-forward network to directly output compact representations, our insight is to keep the base models frozen and apply post-hoc pruning and recurrent refinement to the generated Gaussians. Consequently, we propose a backbone-agnostic compaction pipeline for single-view feed-forward 3DGS that couples an importance-score-based pruning mechanism with a trainable, lightweight recurrent refinement module, which iteratively updates the surviving primitives to restore image quality. Our results demonstrate seamless integration with existing baselines while preserving novel-view rendering fidelity and achieving high memory reduction. Furthermore, our method supports flexible inference-time keep ratios for application needs.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "primary_subject": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-09-17T16:07:03Z",
+      "abs_url": "https://arxiv.org/abs/2609.20623",
+      "html_url": "https://arxiv.org/html/2609.20623v1",
+      "submitted_date": "2026-09-18",
+      "category": "pruning",
+      "conclusion": "PhGS 以边缘/不透明度采样剪枝并循环修复，Flash3D 高斯存储减半时 PSNR 仅下降 0.06 dB，但完整重建吞吐下降。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "novelty": 7,
+        "reproducibility": 7
+      },
+      "analysis_path": "papers/2026-09/pruning/2609.20623/tech_analysis.md",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.20734",
+      "title": "On-Demand Attention: Language Models Know When to Recall",
+      "authors": [
+        "Haibo Feng",
+        "Ruiqi Liang",
+        "Hanyang Peng",
+        "Shiqi Yu"
+      ],
+      "abstract": "Reasoning and agentic workloads increasingly demand efficient long-context inference. Yet full-attention decoding reads the growing history at every step, regardless of its benefit to the next prediction. We show that a pretrained model's decoding states already contain information predictive of this benefit, before the global read. Building on this finding, we introduce On-Demand Attention (ODA), a local-first decoding method that uses a lightweight recall head to selectively invoke global attention as its predicted benefit changes during generation. ODA trains only the recall head, leaving pretrained weights unchanged and the complete historical KV cache available for future recall. We further implement GPU-side conditional execution in vLLM, translating reduced global reads into practical decoding speedups over full attention at long context lengths. Experiments across Qwen and Gemma models, including hybrid-attention backbones, show that selective recall recovers most of the performance lost under local attention while substantially reducing global reads. These findings support long-context inference in which pretrained models guide their own access to the information they retain.",
+      "subjects": "Computation and Language (cs.CL)",
+      "primary_subject": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-09-17T17:24:48Z",
+      "abs_url": "https://arxiv.org/abs/2609.20734",
+      "html_url": "https://arxiv.org/html/2609.20734v1",
+      "submitted_date": "2026-09-18",
+      "category": "pruning",
+      "conclusion": "ODA 用局部前向后的状态预测是否需要全局 attention，RULER16K 接近原精度；1.98倍加速来自独立受控长上下文配置。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 5,
+        "novelty": 8,
+        "reproducibility": 5
+      },
+      "analysis_path": "papers/2026-09/pruning/2609.20734/tech_analysis.md",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.20744",
+      "title": "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+      "authors": [
+        "Haocheng Xi",
+        "Yiming Xie",
+        "Hexu Zhao",
+        "Yiwen Zhang",
+        "Michael Liu",
+        "Thomas Creavin",
+        "Kurt Keutzer",
+        "Xiuyu Li",
+        "Zhaoyang Lv",
+        "Chenfeng Xu",
+        "Haiwen Feng"
+      ],
+      "abstract": "Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and has been widely adopted in recent large language models, but directly applying it to video models often fails to preserve the fine-grained interactions required for high-quality generation. We present Video DeltaNet (VDN), which combines local Softmax attention with bidirectional linear memory for long-range video context. Its linear branch introduces Video Delta Attention (VDA), which updates memory once per frame by jointly incorporating its spatial tokens. Separate output projections and learnable gates calibrate the two branches, while a staged teacher-alignment recipe progressively introduces the new pathway into pretrained models. We instantiate VDN on MiniMax H3, applying the hybrid to video-to-video interactions while retaining Softmax for interactions involving text or audio. With eight-step distillation and an optimized SGLang serving stack, VDN-H3 completes DiT denoising for a 14.3-second, 768p video in 6.70 seconds on eight NVIDIA B200 GPUs, corresponding to a 14.5x speedup over the 50-step dense H3 baseline on the same GPU count.",
+      "subjects": "Machine Learning (cs.LG)",
+      "primary_subject": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-09-17T17:33:15Z",
+      "abs_url": "https://arxiv.org/abs/2609.20744",
+      "html_url": "https://arxiv.org/html/2609.20744v1",
+      "submitted_date": "2026-09-18",
+      "category": "knowledge_distillation",
+      "conclusion": "Video DeltaNet 结合局部注意力、逐帧线性记忆和8步蒸馏，在8张B200上完成6.70秒去噪；倍率必须区分GPU数与NFE。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "novelty": 8,
+        "reproducibility": 6
+      },
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.20744/tech_analysis.md",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.20756",
+      "title": "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+      "authors": [
+        "Damiano Da Col",
+        "Maximilian Igl",
+        "Peter Karkus",
+        "Kashyap Chitta",
+        "Boris Ivanovic",
+        "Marco Pavone",
+        "Konrad Schindler",
+        "Christos Sakaridis"
+      ],
+      "abstract": "As scaling pre-training data alone yields diminishing returns, post-training is becoming increasingly important across physical AI domains such as autonomous driving. End-to-end driving policies are pre-trained in open loop with behavior cloning on human demonstrations. However, compounding errors during closed-loop deployment can take the vehicle outside the training data distribution, increasing the risk of safety-critical incidents. Closed-loop post-training can mitigate this risk but requires costly simulation for sensor-based policies. We propose OPTED (on-policy fine-tuning for end-to-end driving) which decouples reinforcement learning from the post-training of the end-to-end policy: a privileged teacher is trained using RL on vectorized inputs (HD-map and bounding boxes). This teacher then provides supervision to the pre-trained student during closed-loop post-training. We apply OPTED to two camera-based models, TransFuser and VaVAM, and fine-tune them in AlpaSim, using neural reconstructions (3DGS) of real driving logs. Driving scores increase by factors of 1.6$\\times$ and 9.5$\\times$, respectively. In controlled experiments OPTED matches closed-loop performance with approximately three orders of magnitude fewer simulator interactions than direct RL post-training, while staying closer to the human prior. Project page: this https URL",
+      "subjects": "Robotics (cs.RO) ; Computer Vision and Pattern Recognition (cs.CV); Machine Learning (cs.LG)",
+      "primary_subject": "Robotics (cs.RO)",
+      "v1_utc": "2026-09-17T17:41:51Z",
+      "abs_url": "https://arxiv.org/abs/2609.20756",
+      "html_url": "https://arxiv.org/html/2609.20756v1",
+      "submitted_date": "2026-09-18",
+      "category": "knowledge_distillation",
+      "conclusion": "OPTED 用特权RL教师标注视觉学生实际访问的状态，显著节省渲染交互；教师比学生小，不能称为参数压缩。",
+      "scores": {
+        "accuracy": 7,
+        "compression": 3,
+        "novelty": 7,
+        "reproducibility": 6
+      },
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.20756/tech_analysis.md",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.20784",
+      "title": "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Yan Yu",
+        "Zhengxi Lu",
+        "Yizhou Liu",
+        "Yichen Pan",
+        "Aozhe Wang",
+        "Qipeng Chen",
+        "Hua Yang",
+        "Wenqi Zhang",
+        "Weiming Lu",
+        "Qianglong Chen",
+        "Yongliang Shen"
+      ],
+      "abstract": "Multi-turn agents trained with reinforcement learning (RL) receive a single scalar reward per trajectory, which motivates self on-policy distillation (OPD) to supply dense token-level supervision from a self-teacher with privileged task skills, letting a skill-free student internalize them. This recipe, however, is undermined by two findings in agentic tasks: privileged information alone does not always make a teacher reliable, and the benefit of teacher supervision is stage-dependent. We therefore propose RetireOPD (Self-Retiring On-Policy Distillation), which first optimizes a decoupled, skill-conditioned teacher with environment rewards and then trains a skill-free student jointly with RL and OPD. Rather than following a predefined distillation schedule, RetireOPD adopts Adaptive Retirement: the student drops the teacher on its own once their discrepancy stops shrinking and it reaches a target fraction of the teacher's success rate, after which training proceeds with RL alone. Across Qwen2.5 models from 1.5B to 7B, RetireOPD improves ALFWorld success rate over RL baseline by 14.1% to 18.8% and WebShop accuracy by 11.8% to 19.0%, and surpasses its own skill-conditioned teacher in every setting.",
+      "subjects": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "primary_subject": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-09-17T17:52:08Z",
+      "abs_url": "https://arxiv.org/abs/2609.20784",
+      "html_url": "https://arxiv.org/html/2609.20784v1",
+      "submitted_date": "2026-09-18",
+      "category": "knowledge_distillation",
+      "conclusion": "RetireOPD 在学生接近教师且对齐停滞时退出蒸馏，3B ALFWorld从GRPO的75.0%升至93.8%，但师生等规模。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 3,
+        "novelty": 7,
+        "reproducibility": 7
+      },
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.20784/tech_analysis.md",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.20807",
+      "title": "Score Centering Stabilizes Off-policy Reinforcement Learning",
+      "authors": [
+        "Martin Marek",
+        "Max Ryabinin"
+      ],
+      "abstract": "Reinforcement learning (RL) of large language models is notoriously sensitive to small differences between training and inference engines, often referred to as the training-inference mismatch (TIM). However, completely eliminating TIM is impractical, as it would come at a major cost to rollout efficiency. In this paper, we show that the instability of RL under TIM is primarily caused by drift: a persistent bias between training and inference engines that accumulates with every training step. We derive an additive \"score centering\" correction term that stabilizes RL under TIM by canceling drift. When training models from 0.6B to 30B parameters, score centering alone matches or outperforms methods based on importance sampling under quantization, with the gap growing as the mismatch becomes more severe. Because the correction is additive, score centering also composes with importance sampling -- their composition outperforms pure importance-sampling baselines in our staleness experiments.",
+      "subjects": "Machine Learning (cs.LG)",
+      "primary_subject": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-09-17T17:58:17Z",
+      "abs_url": "https://arxiv.org/abs/2609.20807",
+      "html_url": "https://arxiv.org/html/2609.20807v1",
+      "submitted_date": "2026-09-18",
+      "category": "quantization",
+      "conclusion": "Score Centering 抵消量化采样器导致的梯度漂移；重度W8A8/KV4的30B实验训练准确率30%，高于TIS的12%。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 5,
+        "novelty": 8,
+        "reproducibility": 8
+      },
+      "analysis_path": "papers/2026-09/quantization/2609.20807/tech_analysis.md",
+      "reproduction_path": "scripts/quantization/2609.20807"
+    },
+    {
+      "arxiv_id": "2609.20820",
+      "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision",
+      "authors": [
+        "Nitish Dashora",
+        "Douglas Chen",
+        "Idan Shenfeld",
+        "John Marangola",
+        "Pulkit Agrawal",
+        "Max Simchowitz"
+      ],
+      "abstract": "Complex robotic manipulation tasks frequently require a long-term memory of past events and actions. As conditioning on full histories renders policies prone to spurious correlations and degrades performance, many approaches to policy memory involve compressing historical information through expensive VLM queries in-the-loop to process only task-salient information. In this paper, we propose an alternative approach in which computationally intensive VLM queries are made during train-time to learn a lightweight latent memory that can be efficiently queried at deployment time. Our representation, which we call the \\textbf{workspace token}, is trained by (1) using a VLM to identify current and historical information necessary for completing a task, then (2) distilling these into the workspace token using a set-reconstruction decoder loss. In both simulation and hardware, we show that the workspace token can be used as a drop-in replacement for observations during deployment, enabling policies to solve memory-intensive tasks without the need for VLM reasoning in-the-loop. Interestingly, we found that workspace tokens are not only more lightweight but also lead to better policy performance.",
+      "subjects": "Robotics (cs.RO) ; Artificial Intelligence (cs.AI)",
+      "primary_subject": "Robotics (cs.RO)",
+      "v1_utc": "2026-09-17T17:59:53Z",
+      "abs_url": "https://arxiv.org/abs/2609.20820",
+      "html_url": "https://arxiv.org/html/2609.20820v1",
+      "submitted_date": "2026-09-18",
+      "category": "knowledge_distillation",
+      "conclusion": "Workspace Models 将训练期VLM显著性监督蒸馏成记忆编码器，平均成功率91.5%对66.8%，优化后规划延迟49.2ms。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "novelty": 7,
+        "reproducibility": 6
+      },
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.20820/tech_analysis.md",
+      "reproduction_path": null
+    }
+  ],
+  "base_origin_main": "abfe8f2767d8bf881d586718ab4db33fc576be6a",
+  "cleaned_from_main": [
+    "reports/2026-07/quantization/arxiv_quantization_daily_report_20260728.md"
+  ]
+}

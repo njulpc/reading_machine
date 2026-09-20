@@ -1,0 +1,30 @@
+{
+  "self_test": {
+    "gradient_equivalence_max_error": {
+      "sc": 5.551115123125783e-17,
+      "tis": 6.591949208711867e-17,
+      "mis": 2.7755575615628914e-17,
+      "is": 2.7755575615628914e-17
+    },
+    "constant_reward_centered_gradient_max": 6.591949208711867e-17,
+    "uncorrected_drift_norm": 0.54109471125584,
+    "on_policy_correction_max": 0.0,
+    "quantization_bound_pass": true
+  },
+  "full_paper_reproduction": false,
+  "environment": {
+    "torch": "2.8.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "arguments": {
+    "model": "Qwen/Qwen3-0.6B",
+    "output": "/private/tmp/arxiv_20260921/tensor_results.json",
+    "self_test_only": true,
+    "threads": 4,
+    "rollouts": 4,
+    "new_tokens": 8,
+    "topk": 128,
+    "mode": "sc",
+    "seed": 17
+  }
+}

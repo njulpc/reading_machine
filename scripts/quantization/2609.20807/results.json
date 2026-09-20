@@ -1,0 +1,87 @@
+{
+  "self_test": {
+    "gradient_equivalence_max_error": {
+      "sc": 5.551115123125783e-17,
+      "tis": 6.591949208711867e-17,
+      "mis": 2.7755575615628914e-17,
+      "is": 2.7755575615628914e-17
+    },
+    "constant_reward_centered_gradient_max": 6.591949208711867e-17,
+    "uncorrected_drift_norm": 0.54109471125584,
+    "on_policy_correction_max": 0.0,
+    "quantization_bound_pass": true
+  },
+  "full_paper_reproduction": false,
+  "environment": {
+    "torch": "2.8.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "arguments": {
+    "model": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+    "output": "results.json",
+    "self_test_only": false,
+    "threads": 4,
+    "rollouts": 4,
+    "new_tokens": 8,
+    "topk": 128,
+    "mode": "sc",
+    "seed": 17
+  },
+  "prefill": {
+    "tokens": 10,
+    "logits_relative_l2": 0.22721588611602783,
+    "argmax_agreement": 0.800000011920929
+  },
+  "trainable_parameters": 596049920,
+  "linear_modules": 197,
+  "quantized_linear_calls": 6501,
+  "rollouts": [
+    {
+      "text": " 3 + 2\n\nbase ",
+      "reward": 0.15384615384615385,
+      "kv_writes": 224
+    },
+    {
+      "text": " ? and 5 + 6 =",
+      "reward": 0.14285714285714285,
+      "kv_writes": 224
+    },
+    {
+      "text": " 4, 4 + 3",
+      "reward": 0.3333333333333333,
+      "kv_writes": 224
+    },
+    {
+      "text": "  '_', 5 + 7 =",
+      "reward": 0.14285714285714285,
+      "kv_writes": 224
+    }
+  ],
+  "advantages": [
+    -0.03937728703022003,
+    -0.050366297364234924,
+    0.14010989665985107,
+    -0.050366297364234924
+  ],
+  "losses": [
+    -0.025666676461696625,
+    -0.014234731905162334,
+    0.040672071278095245,
+    -0.03674423694610596
+  ],
+  "mean_abs_centering_correction": [
+    0.34295791387557983,
+    0.1878780722618103,
+    0.2770991027355194,
+    0.08629892766475677
+  ],
+  "gradient_norm": 2.7033236549369515,
+  "last_down_projection_update_norm": 0.004222620278596878,
+  "elapsed_seconds": 13.14184284210205,
+  "limitations": [
+    "CPU FP32 dequantized GEMM and trainer, not paper BF16/JAX GPU kernels",
+    "KV cache stores dequantized values with per-token/head INT8 error, not packed cache",
+    "Toy digit-density reward; not Countdown or INTELLECT-2",
+    "Single SGD step; no long-run stability or speedup claim"
+  ]
+}
