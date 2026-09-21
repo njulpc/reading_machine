@@ -3,22 +3,28 @@
     "gradient_equivalence_max_error": {
       "sc": 5.551115123125783e-17,
       "tis": 6.591949208711867e-17,
-      "mis": 2.7755575615628914e-17,
-      "is": 2.7755575615628914e-17
+      "mis": 4.163336342344337e-17,
+      "is": 3.9378164398811504e-17
     },
     "constant_reward_centered_gradient_max": 6.591949208711867e-17,
     "uncorrected_drift_norm": 0.54109471125584,
     "on_policy_correction_max": 0.0,
-    "quantization_bound_pass": true
+    "quantization_bound_pass": true,
+    "mis_overflow_regression_pass": true,
+    "kv_quantization_bound_pass": true
   },
   "full_paper_reproduction": false,
   "environment": {
+    "python": "3.9.6",
     "torch": "2.8.0",
-    "platform": "macOS-26.6.2-arm64-arm-64bit"
+    "transformers": "4.57.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "device": "cpu",
+    "threads": 4
   },
   "arguments": {
     "model": "Qwen/Qwen3-0.6B",
-    "output": "/private/tmp/arxiv_20260921/tensor_results.json",
+    "output": "scripts/quantization/2609.20807/tensor_results.json",
     "self_test_only": true,
     "threads": 4,
     "rollouts": 4,

@@ -5,6 +5,7 @@ CPU numerical reference: packed INT8 weights; FP32 dequantized GEMM, no GPU spee
 import argparse, json, platform, time
 from pathlib import Path
 import torch
+import transformers
 from torch import nn
 from torch.nn import functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache
@@ -57,24 +58,26 @@ class KV8Cache(DynamicCache):
 def weight_fn(r,mode):
     if mode=='sc':return torch.ones_like(r)
     if mode=='tis':return r.clamp_max(2.)
-    if mode=='mis':return r*((r>=.5)&(r<=5.))
+    if mode=='mis':return torch.where((r>=.5)&(r<=5.),r,torch.zeros_like(r))
     if mode=='is':return r
     raise ValueError(mode)
 
 
-def sc_terms(logp, tokens, head_ids, head_logq, token_logq, mode='sc'):
+def sc_terms(logp, tokens, head_ids, head_logq, token_logq, mode='sc', eps=1e-6):
     """Eq.14: q_head*f(p/q) - rho*f(1/rho)*p_head, all detached."""
     hp=logp.gather(-1,head_ids)
     p=hp.detach().exp();q=head_logq.detach().exp()
-    rho=(1-q.sum(-1)).clamp_min(1e-9)/(1-p.sum(-1)).clamp_min(1e-9)
+    rho=(1-q.sum(-1)).clamp_min(eps)/(1-p.sum(-1)).clamp_min(eps)
     alpha=rho*weight_fn(1/rho,mode)
-    coefficients=(q*weight_fn(p/q.clamp_min(1e-30),mode)-alpha[...,None]*p).detach()
+    # Match Appendix A.3: log-space ratios avoid bias from flooring q.
+    coefficients=(q*weight_fn((hp.detach()-head_logq.detach()).exp(),mode)-alpha[...,None]*p).detach()
     correction=(coefficients*hp).sum(-1)
     chosen=logp.gather(-1,tokens[...,None]).squeeze(-1)
     w=weight_fn((chosen.detach()-token_logq.detach()).exp(),mode).detach()
     return w*chosen-correction,correction
 
 
+@torch.random.fork_rng(devices=[])
 def self_test():
     torch.manual_seed(17)
     x=torch.randn(5,31);q,s=quantize(x);z=torch.zeros(2,7)
@@ -99,15 +102,28 @@ def self_test():
     drift=(qhat[:,:,None]*scores).sum(1)
     centered=(qhat[:,:,None]*(scores-drift[:,None,:])).sum(1)
     assert centered.abs().max()<1e-12
-    return {'gradient_equivalence_max_error':errors,'constant_reward_centered_gradient_max':float(centered.abs().max()),'uncorrected_drift_norm':float(drift.norm()),'on_policy_correction_max':float(on.detach().abs().max()),'quantization_bound_pass':True}
+    # A finite log-ratio can overflow exp in FP32. MIS must mask it to zero.
+    assert weight_fn(torch.tensor([float('inf')]),'mis').item()==0
+    extreme=torch.tensor([[0.,-120.]],requires_grad=True)
+    terms,c=sc_terms(extreme.log_softmax(-1),torch.tensor([0]),torch.tensor([[0]]),torch.tensor([[-120.]]),torch.tensor([-120.]),'mis')
+    g=torch.autograd.grad(terms.sum(),extreme)[0]
+    assert torch.isfinite(terms).all() and torch.isfinite(c).all() and torch.isfinite(g).all()
+    # KV quantization is independent for each token/head and uses a scale floor.
+    kv=torch.randn(2,3,4,7);kv[0,0,0]=0
+    kv_scale=(kv.abs().amax(-1,keepdim=True)/127).clamp_min(1e-9)
+    assert torch.all((qdq(kv,kv=True)-kv).abs()<=kv_scale*.5001)
+    return {'gradient_equivalence_max_error':errors,'constant_reward_centered_gradient_max':float(centered.abs().max()),'uncorrected_drift_norm':float(drift.norm()),'on_policy_correction_max':float(on.detach().abs().max()),'quantization_bound_pass':True,'mis_overflow_regression_pass':True,'kv_quantization_bound_pass':True}
 
 
 def run(a):
+    for name in ('threads','rollouts','new_tokens','topk'):
+        if getattr(a,name)<=0:raise ValueError(name+' must be positive')
     torch.set_num_threads(a.threads);torch.manual_seed(a.seed)
-    result={'self_test':self_test(),'full_paper_reproduction':False,'environment':{'torch':torch.__version__,'platform':platform.platform()},'arguments':vars(a)}
+    result={'self_test':self_test(),'full_paper_reproduction':False,'environment':{'python':platform.python_version(),'torch':torch.__version__,'transformers':transformers.__version__,'platform':platform.platform(),'device':'cpu','threads':a.threads},'arguments':vars(a)}
     if a.self_test_only:return result
     tokenizer=AutoTokenizer.from_pretrained(a.model,local_files_only=True)
     model=AutoModelForCausalLM.from_pretrained(a.model,local_files_only=True,torch_dtype=torch.float32,attn_implementation='eager').eval()
+    if a.topk>model.config.vocab_size:raise ValueError('topk exceeds vocabulary size')
     layers=[]
     for name,m in list(model.named_modules()):
         if isinstance(m,nn.Linear):
@@ -153,6 +169,12 @@ def run(a):
     optimizer.step()
     changed=float((model.model.layers[-1].mlp.down_proj.base.weight.detach()-before).norm())
     for w in wrappers:w.sync() # state-dependent requantization after trainer sync
+    # Exercise the refreshed sampler, rather than stopping after buffer creation.
+    for w in wrappers:w.enabled=True
+    with torch.no_grad():
+        post=model(prompt,past_key_values=KV8Cache(model.config),use_cache=True).logits
+    assert torch.isfinite(post).all()
+    result['post_sync']={'finite_logits':True,'next_token_id':int(post[0,-1].argmax()),'quantized_modules':len(wrappers),'weight_export_supported':False}
     result.update({'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),'linear_modules':len(layers),'quantized_linear_calls':sum(w.calls for w in layers),'rollouts':[{'text':r['text'],'reward':r['reward'],'kv_writes':r['kv_writes']} for r in rollouts], 'advantages':advantages.tolist(),'losses':losses,'mean_abs_centering_correction':corrections,'gradient_norm':gradnorm,'last_down_projection_update_norm':changed,'elapsed_seconds':time.time()-start,'limitations':['CPU FP32 dequantized GEMM and trainer, not paper BF16/JAX GPU kernels','KV cache stores dequantized values with per-token/head INT8 error, not packed cache','Toy digit-density reward; not Countdown or INTELLECT-2','Single SGD step; no long-run stability or speedup claim']})
     return result
 

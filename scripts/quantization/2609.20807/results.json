@@ -3,22 +3,28 @@
     "gradient_equivalence_max_error": {
       "sc": 5.551115123125783e-17,
       "tis": 6.591949208711867e-17,
-      "mis": 2.7755575615628914e-17,
-      "is": 2.7755575615628914e-17
+      "mis": 4.163336342344337e-17,
+      "is": 3.9378164398811504e-17
     },
     "constant_reward_centered_gradient_max": 6.591949208711867e-17,
     "uncorrected_drift_norm": 0.54109471125584,
     "on_policy_correction_max": 0.0,
-    "quantization_bound_pass": true
+    "quantization_bound_pass": true,
+    "mis_overflow_regression_pass": true,
+    "kv_quantization_bound_pass": true
   },
   "full_paper_reproduction": false,
   "environment": {
+    "python": "3.9.6",
     "torch": "2.8.0",
-    "platform": "macOS-26.6.2-arm64-arm-64bit"
+    "transformers": "4.57.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "device": "cpu",
+    "threads": 4
   },
   "arguments": {
     "model": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
-    "output": "results.json",
+    "output": "scripts/quantization/2609.20807/results.json",
     "self_test_only": false,
     "threads": 4,
     "rollouts": 4,
@@ -32,52 +38,58 @@
     "logits_relative_l2": 0.22721588611602783,
     "argmax_agreement": 0.800000011920929
   },
+  "post_sync": {
+    "finite_logits": true,
+    "next_token_id": 220,
+    "quantized_modules": 198,
+    "weight_export_supported": false
+  },
   "trainable_parameters": 596049920,
   "linear_modules": 197,
-  "quantized_linear_calls": 6501,
+  "quantized_linear_calls": 6698,
   "rollouts": [
     {
-      "text": " 3 + 2\n\nbase ",
-      "reward": 0.15384615384615385,
+      "text": " ...? Also, A new event will",
+      "reward": 0.0,
       "kv_writes": 224
     },
     {
-      "text": " ? and 5 + 6 =",
-      "reward": 0.14285714285714285,
+      "text": " ? \n\nOK, let's see.",
+      "reward": 0.0,
       "kv_writes": 224
     },
     {
-      "text": " 4, 4 + 3",
-      "reward": 0.3333333333333333,
+      "text": " 3 ?\n\nOctober 5, ",
+      "reward": 0.11764705882352941,
       "kv_writes": 224
     },
     {
-      "text": "  '_', 5 + 7 =",
+      "text": " ? and 3 + 4 =",
       "reward": 0.14285714285714285,
       "kv_writes": 224
     }
   ],
   "advantages": [
-    -0.03937728703022003,
-    -0.050366297364234924,
-    0.14010989665985107,
-    -0.050366297364234924
+    -0.06512605398893356,
+    -0.06512605398893356,
+    0.052521005272865295,
+    0.07773109525442123
   ],
   "losses": [
-    -0.025666676461696625,
-    -0.014234731905162334,
-    0.040672071278095245,
-    -0.03674423694610596
+    -0.07071159034967422,
+    -0.023887015879154205,
+    0.04479782655835152,
+    0.018656937405467033
   ],
   "mean_abs_centering_correction": [
-    0.34295791387557983,
-    0.1878780722618103,
-    0.2770991027355194,
-    0.08629892766475677
+    0.1205805316567421,
+    0.2121475785970688,
+    0.4635431170463562,
+    0.13375242054462433
   ],
-  "gradient_norm": 2.7033236549369515,
-  "last_down_projection_update_norm": 0.004222620278596878,
-  "elapsed_seconds": 13.14184284210205,
+  "gradient_norm": 2.7646440972481354,
+  "last_down_projection_update_norm": 0.005068494938313961,
+  "elapsed_seconds": 12.16216492652893,
   "limitations": [
     "CPU FP32 dequantized GEMM and trainer, not paper BF16/JAX GPU kernels",
     "KV cache stores dequantized values with per-token/head INT8 error, not packed cache",
