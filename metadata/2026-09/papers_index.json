@@ -1,0 +1,1097 @@
+{
+  "run_date": "2026-09-22",
+  "report_date": "2026-09-21",
+  "generated_at": "2026-09-22T01:14:50.571504+08:00",
+  "timezone": "Asia/Shanghai",
+  "query_window": {
+    "start": "2026-09-19T00:00:00+08:00",
+    "end": "2026-09-21T23:59:59+08:00",
+    "days": [
+      "2026-09-19",
+      "2026-09-20",
+      "2026-09-21"
+    ],
+    "date_source": "official arXiv abs Submission history v1; UTC converted to Asia/Shanghai"
+  },
+  "papers": [
+    {
+      "id": "2609.22060",
+      "title": "Traffic Sign Recognition for Autonomous Driving Using Branched YOLOv2 and Geometric Features",
+      "abstract": "Traffic sign recognition (TSR) is an important perception task for autonomous driving and advanced driver-assistance systems, where a system must both localize traffic signs and determine their semantic classes efficiently. This work presents a TSR system based on YOLOv2 for simultaneous detection and classification. Two complementary modifications are studied. First, YOLOv2 is extended with intermediate prediction layers, forming a branched architecture that can terminate inference early for easy cases and reduce computation time. Both whole-image and cell-wise branching strategies are investigated. Second, geometric information is introduced to reduce classification errors between visually similar signs. An unsupervised Bayesian image-segmentation method produces binary representations that are compared with class-specific geometric templates inside YOLOv2 bounding boxes. This information is used either during inference or as an additional signal during training. A dedicated dataset is constructed by combining GTSDB and GTSRB samples using seamless cloning and controlled image transformations. Experiments cover ten traffic-sign classes, with 3,000 training and 300 test samples. The selected branched architecture reports 0.647 s runtime and 0.680 mAP, compared with 0.6607 s and 0.680 mAP for baseline YOLOv2. Geometric verification during inference increases mAP to 0.713, while the geometric-feature training variant achieves 0.697 mAP with a reported runtime of 0.6608 s.",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "submitted_utc": "2026-09-18T17:52:00+00:00",
+      "submitted_local": "2026-09-19T01:52:00+08:00",
+      "url": "https://arxiv.org/abs/2609.22060",
+      "history": "Submission history From: Arefeh Rezaei [ view email ] [v1] Fri, 18 Sep 2026 17:52:00 UTC (12,241 KB)",
+      "arxiv_id": "2609.22060",
+      "category": "other",
+      "analysis_path": "papers/2026-09/other/2609.22060/tech_analysis.md",
+      "fulltext_url": "https://arxiv.org/html/2609.22060v1",
+      "scores": {
+        "accuracy": 5,
+        "compression": 2,
+        "novelty": 3,
+        "reproducibility": 3
+      },
+      "summary": "早退保持mAP 0.680，耗时仅下降约2.07%（整图）或1.21%（逐单元）；无参数压缩证据。",
+      "reproduction": {
+        "status": "not_run",
+        "quantization": false,
+        "reason": "非量化论文；本机未准备论文完整数据、模型训练或交互环境，未生成占位复现。"
+      },
+      "authors": "Arefeh Rezaei",
+      "keywords": [
+        "early exit",
+        "conditional computation",
+        "YOLOv2"
+      ]
+    },
+    {
+      "id": "2609.22083",
+      "title": "MintAct: A Unified Visual Agent for Digital Environments",
+      "abstract": "We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities. To enable this, we develop a scalable environment and reinforcement learning (RL) infrastructure. On the environment side, we host hundreds of concurrent instances across heterogeneous per-domain backends, serving both trajectory data collection and online RL. To enable efficient and scalable RL training, an asynchronous framework keeps explicit control over the cross-domain training distribution and remains stable under noisy environment feedback and off-policy drift. Experimental results show that MintAct achieves state-of-the-art performance (48.9 on OSWorld-Verified) across a wide range of benchmarks at comparable model sizes.",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "submitted_utc": "2026-09-18T17:59:34+00:00",
+      "submitted_local": "2026-09-19T01:59:34+08:00",
+      "url": "https://arxiv.org/abs/2609.22083",
+      "history": "Submission history From: Mingfei Gao [ view email ] [v1] Fri, 18 Sep 2026 17:59:34 UTC (22,308 KB)",
+      "arxiv_id": "2609.22083",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.22083/tech_analysis.md",
+      "fulltext_url": "https://arxiv.org/html/2609.22083v1",
+      "scores": {
+        "accuracy": 8,
+        "compression": 5,
+        "novelty": 7,
+        "reproducibility": 5
+      },
+      "summary": "四域专家轨迹蒸馏为单模型，8B Weblica 57.5→72.8；桌面仍低于教师，最终RL收益单独核算。",
+      "reproduction": {
+        "status": "not_run",
+        "quantization": false,
+        "reason": "非量化论文；本机未准备论文完整数据、模型训练或交互环境，未生成占位复现。"
+      },
+      "authors": "Mingfei Gao , Rui Tian , Haiming Gang , Bohan Zhai , Le Zhang , Yuanzheng Gong , Di Feng , Ege Özsoy , Kaixin Ma , Vishwesh Kirthivasan , Oğuzhan Fatih Kar , Roman Bachmann , Anders Boesen Lindbo Larsen , Afshin Dehghan",
+      "keywords": [
+        "knowledge distillation",
+        "multi-teacher",
+        "rejection sampling",
+        "VLA"
+      ]
+    }
+  ],
+  "total_papers": 2,
+  "new_papers_count": 2,
+  "window_related_count": 2,
+  "historical_duplicates_count": 0,
+  "daily_counts": [
+    {
+      "date": "2026-09-19",
+      "all_subjects_visible": 34,
+      "raw_related_occurrences": 4,
+      "related_unique": 2,
+      "historical_duplicates": 0,
+      "new": 2
+    },
+    {
+      "date": "2026-09-20",
+      "all_subjects_visible": 0,
+      "raw_related_occurrences": 0,
+      "related_unique": 0,
+      "historical_duplicates": 0,
+      "new": 0
+    },
+    {
+      "date": "2026-09-21",
+      "all_subjects_visible": 0,
+      "raw_related_occurrences": 0,
+      "related_unique": 0,
+      "historical_duplicates": 0,
+      "new": 0
+    }
+  ],
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08",
+    "origin/feature/arxiv-daily-2026-09-09",
+    "origin/feature/arxiv-daily-2026-09-14",
+    "origin/feature/arxiv-daily-2026-09-15",
+    "origin/feature/arxiv-daily-2026-09-21"
+  ],
+  "dedup_branch_shas": {
+    "origin/feature/arxiv-daily-2026-07-29": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+    "origin/feature/arxiv-daily-2026-07-30": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+    "origin/feature/arxiv-daily-2026-07-31": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+    "origin/feature/arxiv-daily-2026-08-01": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+    "origin/feature/arxiv-daily-2026-08-02": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+    "origin/feature/arxiv-daily-2026-08-03": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+    "origin/feature/arxiv-daily-2026-08-04": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+    "origin/feature/arxiv-daily-2026-08-05": "333264be93bb365ee7d29436235e6b056427943e",
+    "origin/feature/arxiv-daily-2026-08-06": "67600577ca268cd88675d221f0e19fdb59673789",
+    "origin/feature/arxiv-daily-2026-08-07": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+    "origin/feature/arxiv-daily-2026-08-08": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+    "origin/feature/arxiv-daily-2026-08-10": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+    "origin/feature/arxiv-daily-2026-08-12": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+    "origin/feature/arxiv-daily-2026-08-14": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+    "origin/feature/arxiv-daily-2026-08-15": "e463baea815c06d95ffc36eec034113b28db7927",
+    "origin/feature/arxiv-daily-2026-08-16": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+    "origin/feature/arxiv-daily-2026-08-17": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+    "origin/feature/arxiv-daily-2026-08-18": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+    "origin/feature/arxiv-daily-2026-08-19": "3518b1fff91bab3cd78421810c0798177060063f",
+    "origin/feature/arxiv-daily-2026-08-20": "6413646a6fec8b54f937415084c2df3e99b358a1",
+    "origin/feature/arxiv-daily-2026-08-21": "dc8a46573315edb88419bb4eb181bea89d209de7",
+    "origin/feature/arxiv-daily-2026-08-22": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+    "origin/feature/arxiv-daily-2026-08-23": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+    "origin/feature/arxiv-daily-2026-08-24": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+    "origin/feature/arxiv-daily-2026-08-25": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+    "origin/feature/arxiv-daily-2026-08-26": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+    "origin/feature/arxiv-daily-2026-08-27": "f57ca87589c728a68851f21acdff1c333b402e35",
+    "origin/feature/arxiv-daily-2026-08-28": "daeb352421a9263136927bc71497c86ddb512c77",
+    "origin/feature/arxiv-daily-2026-08-29": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+    "origin/feature/arxiv-daily-2026-08-30": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+    "origin/feature/arxiv-daily-2026-08-31": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+    "origin/feature/arxiv-daily-2026-09-01": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+    "origin/feature/arxiv-daily-2026-09-02": "ab05a346a491f043142867c74593f45e669812d1",
+    "origin/feature/arxiv-daily-2026-09-03": "710202d696a1295b25e55f50d4fee966434549d4",
+    "origin/feature/arxiv-daily-2026-09-04": "623673ccf816fda6de51daf471f55c79b0a24801",
+    "origin/feature/arxiv-daily-2026-09-05": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+    "origin/feature/arxiv-daily-2026-09-06": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+    "origin/feature/arxiv-daily-2026-09-07": "4fa4065a723520e6413d4bed69790612999517cd",
+    "origin/feature/arxiv-daily-2026-09-08": "3db8912129f5ebdfb2399a213f0688ac30cdf971",
+    "origin/feature/arxiv-daily-2026-09-09": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8",
+    "origin/feature/arxiv-daily-2026-09-14": "5068f2a8c89b815b69665b35900fd0e8d3800a54",
+    "origin/feature/arxiv-daily-2026-09-15": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66",
+    "origin/feature/arxiv-daily-2026-09-21": "263f4647c46bdea7fd86ecdabca69c889ef96806"
+  },
+  "historical_branches_scanned": 43,
+  "historical_analyzed_ids_count": 541,
+  "metadata_ids_count": 544,
+  "metadata_only_ids_not_completed": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [],
+  "final_new_ids": [
+    "2609.22060",
+    "2609.22083"
+  ],
+  "historical_intersection": [],
+  "list_coverage": [
+    {
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000",
+      "total": 237,
+      "actual": 237,
+      "headings": [
+        "Showing new listings for Monday, 21 September 2026",
+        "New submissions (showing 83 of 83 entries)",
+        "Cross submissions (showing 66 of 66 entries)",
+        "Replacement submissions (showing 88 of 88 entries)"
+      ],
+      "groups": [
+        {
+          "heading": "New submissions (showing 83 of 83 entries)",
+          "declared": 83,
+          "actual": 83,
+          "first": 1,
+          "last": 83
+        },
+        {
+          "heading": "Cross submissions (showing 66 of 66 entries)",
+          "declared": 66,
+          "actual": 66,
+          "first": 84,
+          "last": 149
+        },
+        {
+          "heading": "Replacement submissions (showing 88 of 88 entries)",
+          "declared": 88,
+          "actual": 88,
+          "first": 150,
+          "last": 237
+        }
+      ],
+      "sha256": "e0ff20f9dcd9d40656ca2c034125ec5b88bd146ce5c6ff9613bd6bf396b0b967",
+      "range": [
+        1,
+        237
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000",
+      "total": 1118,
+      "actual": 1118,
+      "headings": [
+        "Mon, 21 Sep 2026 (showing 149 of 149 entries )",
+        "Fri, 18 Sep 2026 (showing 198 of 198 entries )",
+        "Thu, 17 Sep 2026 (showing 219 of 219 entries )",
+        "Wed, 16 Sep 2026 (showing 186 of 186 entries )",
+        "Tue, 15 Sep 2026 (showing 366 of 366 entries )"
+      ],
+      "groups": [
+        {
+          "heading": "Mon, 21 Sep 2026 (showing 149 of 149 entries )",
+          "declared": 149,
+          "actual": 149,
+          "first": 1,
+          "last": 149
+        },
+        {
+          "heading": "Fri, 18 Sep 2026 (showing 198 of 198 entries )",
+          "declared": 198,
+          "actual": 198,
+          "first": 150,
+          "last": 347
+        },
+        {
+          "heading": "Thu, 17 Sep 2026 (showing 219 of 219 entries )",
+          "declared": 219,
+          "actual": 219,
+          "first": 348,
+          "last": 566
+        },
+        {
+          "heading": "Wed, 16 Sep 2026 (showing 186 of 186 entries )",
+          "declared": 186,
+          "actual": 186,
+          "first": 567,
+          "last": 752
+        },
+        {
+          "heading": "Tue, 15 Sep 2026 (showing 366 of 366 entries )",
+          "declared": 366,
+          "actual": 366,
+          "first": 753,
+          "last": 1118
+        }
+      ],
+      "sha256": "a6402ec949f5486e33dbd11d1610e7433a4d7e3de541731fd26418d3d38d6be2",
+      "range": [
+        1,
+        1118
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000",
+      "total": 138,
+      "actual": 138,
+      "headings": [
+        "Showing new listings for Monday, 21 September 2026",
+        "New submissions (showing 65 of 65 entries)",
+        "Cross submissions (showing 22 of 22 entries)",
+        "Replacement submissions (showing 51 of 51 entries)"
+      ],
+      "groups": [
+        {
+          "heading": "New submissions (showing 65 of 65 entries)",
+          "declared": 65,
+          "actual": 65,
+          "first": 1,
+          "last": 65
+        },
+        {
+          "heading": "Cross submissions (showing 22 of 22 entries)",
+          "declared": 22,
+          "actual": 22,
+          "first": 66,
+          "last": 87
+        },
+        {
+          "heading": "Replacement submissions (showing 51 of 51 entries)",
+          "declared": 51,
+          "actual": 51,
+          "first": 88,
+          "last": 138
+        }
+      ],
+      "sha256": "2a9fce53235e54067adda96a5c5b16aaa7f8fdbfec404800bcb56f17ce2f326d",
+      "range": [
+        1,
+        138
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000",
+      "total": 631,
+      "actual": 631,
+      "headings": [
+        "Mon, 21 Sep 2026 (showing 87 of 87 entries )",
+        "Fri, 18 Sep 2026 (showing 104 of 104 entries )",
+        "Thu, 17 Sep 2026 (showing 127 of 127 entries )",
+        "Wed, 16 Sep 2026 (showing 109 of 109 entries )",
+        "Tue, 15 Sep 2026 (showing 204 of 204 entries )"
+      ],
+      "groups": [
+        {
+          "heading": "Mon, 21 Sep 2026 (showing 87 of 87 entries )",
+          "declared": 87,
+          "actual": 87,
+          "first": 1,
+          "last": 87
+        },
+        {
+          "heading": "Fri, 18 Sep 2026 (showing 104 of 104 entries )",
+          "declared": 104,
+          "actual": 104,
+          "first": 88,
+          "last": 191
+        },
+        {
+          "heading": "Thu, 17 Sep 2026 (showing 127 of 127 entries )",
+          "declared": 127,
+          "actual": 127,
+          "first": 192,
+          "last": 318
+        },
+        {
+          "heading": "Wed, 16 Sep 2026 (showing 109 of 109 entries )",
+          "declared": 109,
+          "actual": 109,
+          "first": 319,
+          "last": 427
+        },
+        {
+          "heading": "Tue, 15 Sep 2026 (showing 204 of 204 entries )",
+          "declared": 204,
+          "actual": 204,
+          "first": 428,
+          "last": 631
+        }
+      ],
+      "sha256": "cf3b12b265a7512fd544c1766434439b421805e0b4ca28563a6045572c53f945",
+      "range": [
+        1,
+        631
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000",
+      "total": 141,
+      "actual": 141,
+      "headings": [
+        "Showing new listings for Monday, 21 September 2026",
+        "New submissions (showing 74 of 74 entries)",
+        "Cross submissions (showing 24 of 24 entries)",
+        "Replacement submissions (showing 43 of 43 entries)"
+      ],
+      "groups": [
+        {
+          "heading": "New submissions (showing 74 of 74 entries)",
+          "declared": 74,
+          "actual": 74,
+          "first": 1,
+          "last": 74
+        },
+        {
+          "heading": "Cross submissions (showing 24 of 24 entries)",
+          "declared": 24,
+          "actual": 24,
+          "first": 75,
+          "last": 98
+        },
+        {
+          "heading": "Replacement submissions (showing 43 of 43 entries)",
+          "declared": 43,
+          "actual": 43,
+          "first": 99,
+          "last": 141
+        }
+      ],
+      "sha256": "34c5b332fe8314da3f9e7c3fdc346fc615a39620bf88eb5c8bba6b5388d88ead",
+      "range": [
+        1,
+        141
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000",
+      "total": 697,
+      "actual": 697,
+      "headings": [
+        "Mon, 21 Sep 2026 (showing 98 of 98 entries )",
+        "Fri, 18 Sep 2026 (showing 125 of 125 entries )",
+        "Thu, 17 Sep 2026 (showing 118 of 118 entries )",
+        "Wed, 16 Sep 2026 (showing 123 of 123 entries )",
+        "Tue, 15 Sep 2026 (showing 233 of 233 entries )"
+      ],
+      "groups": [
+        {
+          "heading": "Mon, 21 Sep 2026 (showing 98 of 98 entries )",
+          "declared": 98,
+          "actual": 98,
+          "first": 1,
+          "last": 98
+        },
+        {
+          "heading": "Fri, 18 Sep 2026 (showing 125 of 125 entries )",
+          "declared": 125,
+          "actual": 125,
+          "first": 99,
+          "last": 223
+        },
+        {
+          "heading": "Thu, 17 Sep 2026 (showing 118 of 118 entries )",
+          "declared": 118,
+          "actual": 118,
+          "first": 224,
+          "last": 341
+        },
+        {
+          "heading": "Wed, 16 Sep 2026 (showing 123 of 123 entries )",
+          "declared": 123,
+          "actual": 123,
+          "first": 342,
+          "last": 464
+        },
+        {
+          "heading": "Tue, 15 Sep 2026 (showing 233 of 233 entries )",
+          "declared": 233,
+          "actual": 233,
+          "first": 465,
+          "last": 697
+        }
+      ],
+      "sha256": "580598239e07af8dbdfedd342136a342958b712b2340afb7ca3975bb8ea7a898",
+      "range": [
+        1,
+        697
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000",
+      "total": 214,
+      "actual": 214,
+      "headings": [
+        "Showing new listings for Monday, 21 September 2026",
+        "New submissions (showing 49 of 49 entries)",
+        "Cross submissions (showing 76 of 76 entries)",
+        "Replacement submissions (showing 89 of 89 entries)"
+      ],
+      "groups": [
+        {
+          "heading": "New submissions (showing 49 of 49 entries)",
+          "declared": 49,
+          "actual": 49,
+          "first": 1,
+          "last": 49
+        },
+        {
+          "heading": "Cross submissions (showing 76 of 76 entries)",
+          "declared": 76,
+          "actual": 76,
+          "first": 50,
+          "last": 125
+        },
+        {
+          "heading": "Replacement submissions (showing 89 of 89 entries)",
+          "declared": 89,
+          "actual": 89,
+          "first": 126,
+          "last": 214
+        }
+      ],
+      "sha256": "c742e03062fbba360a544b9dc2ce846f5acacaa8a8836ec76a88991873025306",
+      "range": [
+        1,
+        214
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000",
+      "total": 1147,
+      "actual": 1147,
+      "headings": [
+        "Mon, 21 Sep 2026 (showing 125 of 125 entries )",
+        "Fri, 18 Sep 2026 (showing 215 of 215 entries )",
+        "Thu, 17 Sep 2026 (showing 204 of 204 entries )",
+        "Wed, 16 Sep 2026 (showing 195 of 195 entries )",
+        "Tue, 15 Sep 2026 (showing 408 of 408 entries )"
+      ],
+      "groups": [
+        {
+          "heading": "Mon, 21 Sep 2026 (showing 125 of 125 entries )",
+          "declared": 125,
+          "actual": 125,
+          "first": 1,
+          "last": 125
+        },
+        {
+          "heading": "Fri, 18 Sep 2026 (showing 215 of 215 entries )",
+          "declared": 215,
+          "actual": 215,
+          "first": 126,
+          "last": 340
+        },
+        {
+          "heading": "Thu, 17 Sep 2026 (showing 204 of 204 entries )",
+          "declared": 204,
+          "actual": 204,
+          "first": 341,
+          "last": 544
+        },
+        {
+          "heading": "Wed, 16 Sep 2026 (showing 195 of 195 entries )",
+          "declared": 195,
+          "actual": 195,
+          "first": 545,
+          "last": 739
+        },
+        {
+          "heading": "Tue, 15 Sep 2026 (showing 408 of 408 entries )",
+          "declared": 408,
+          "actual": 408,
+          "first": 740,
+          "last": 1147
+        }
+      ],
+      "sha256": "7e17cd90f407b9f1c9c6bd12e37e95195d17f46dc75d20b3644b9855713cd6c8",
+      "range": [
+        1,
+        1147
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000",
+      "total": 14,
+      "actual": 14,
+      "headings": [
+        "Showing new listings for Monday, 21 September 2026",
+        "New submissions (showing 4 of 4 entries)",
+        "Cross submissions (showing 2 of 2 entries)",
+        "Replacement submissions (showing 8 of 8 entries)"
+      ],
+      "groups": [
+        {
+          "heading": "New submissions (showing 4 of 4 entries)",
+          "declared": 4,
+          "actual": 4,
+          "first": 1,
+          "last": 4
+        },
+        {
+          "heading": "Cross submissions (showing 2 of 2 entries)",
+          "declared": 2,
+          "actual": 2,
+          "first": 5,
+          "last": 6
+        },
+        {
+          "heading": "Replacement submissions (showing 8 of 8 entries)",
+          "declared": 8,
+          "actual": 8,
+          "first": 7,
+          "last": 14
+        }
+      ],
+      "sha256": "334d52d017eee2ba0097b0502a4ada032a7f5a4acfa2eba2e8abf94a577a08cf",
+      "range": [
+        1,
+        14
+      ],
+      "pagination_complete": true
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000",
+      "total": 74,
+      "actual": 74,
+      "headings": [
+        "Mon, 21 Sep 2026 (showing 6 of 6 entries )",
+        "Fri, 18 Sep 2026 (showing 13 of 13 entries )",
+        "Thu, 17 Sep 2026 (showing 16 of 16 entries )",
+        "Wed, 16 Sep 2026 (showing 15 of 15 entries )",
+        "Tue, 15 Sep 2026 (showing 24 of 24 entries )"
+      ],
+      "groups": [
+        {
+          "heading": "Mon, 21 Sep 2026 (showing 6 of 6 entries )",
+          "declared": 6,
+          "actual": 6,
+          "first": 1,
+          "last": 6
+        },
+        {
+          "heading": "Fri, 18 Sep 2026 (showing 13 of 13 entries )",
+          "declared": 13,
+          "actual": 13,
+          "first": 7,
+          "last": 19
+        },
+        {
+          "heading": "Thu, 17 Sep 2026 (showing 16 of 16 entries )",
+          "declared": 16,
+          "actual": 16,
+          "first": 20,
+          "last": 35
+        },
+        {
+          "heading": "Wed, 16 Sep 2026 (showing 15 of 15 entries )",
+          "declared": 15,
+          "actual": 15,
+          "first": 36,
+          "last": 50
+        },
+        {
+          "heading": "Tue, 15 Sep 2026 (showing 24 of 24 entries )",
+          "declared": 24,
+          "actual": 24,
+          "first": 51,
+          "last": 74
+        }
+      ],
+      "sha256": "67bd7db1ec02176dc46f6a1dd2aba142c7868f7aa28125b2d4f837210b7f024d",
+      "range": [
+        1,
+        74
+      ],
+      "pagination_complete": true
+    }
+  ],
+  "retrieval_audit": {
+    "official_list_occurrences": 4411,
+    "unique_normalized_ids": 2971,
+    "abs_fetched_this_run": 2971,
+    "abs_parse_errors": 0,
+    "v1_local_window_records": 34,
+    "outside_window_positive_control_count": 350,
+    "positive_control_date": "2026-09-18",
+    "midnight_boundary": [
+      {
+        "id": "2609.21942",
+        "url": "https://arxiv.org/abs/2609.21942",
+        "submitted_utc": "2026-09-18T15:56:52+00:00",
+        "submitted_local": "2026-09-18T23:56:52+08:00"
+      },
+      {
+        "id": "2609.21944",
+        "url": "https://arxiv.org/abs/2609.21944",
+        "submitted_utc": "2026-09-18T16:00:29+00:00",
+        "submitted_local": "2026-09-19T00:00:29+08:00"
+      }
+    ],
+    "api_used": false,
+    "semantic_scope": "全部召回记录读取标题摘要分类和v1；先按官方v1排除窗口外旧稿。窗口内标题摘要逐篇语义审阅，另审阅窗口邻接最新75条；不声称人工独立精读2971篇窗口外旧稿。",
+    "keyword_review_terms": [
+      "quantization",
+      "quantize",
+      "low-bit",
+      "model compression",
+      "compress",
+      "pruning",
+      "sparsity",
+      "knowledge distillation",
+      "distill",
+      "teacher",
+      "student",
+      "KV cache compression",
+      "mixed precision",
+      "GPTQ",
+      "AWQ",
+      "early exit",
+      "conditional computation",
+      "expert consolidation"
+    ],
+    "keyword_filter_used": false
+  },
+  "window_semantic_review": [
+    {
+      "arxiv_id": "2609.21944",
+      "title": "Guiding Agents of Quantum Games to Equilibrium using Matrix Exponential Fixed-Point Iteration",
+      "submitted_local": "2026-09-19T00:00:29+08:00",
+      "categories": "Quantum Physics (quant-ph) ; Computer Science and Game Theory (cs.GT); Machine Learning (cs.LG); Multiagent Systems (cs.MA)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21944",
+      "decision": "excluded",
+      "reason": "量子博弈张量收缩与均衡求解，不是机器学习模型压缩。",
+      "title_abstract_sha256": "565a299339b0cbac541352f9310e32e09231299d2671e4fc689a34ff007a5b8b"
+    },
+    {
+      "arxiv_id": "2609.21945",
+      "title": "Learning to Move Cities: Deep Meta-Models and Reinforcement Policies for Calibration and Control in Urban Networks",
+      "submitted_local": "2026-09-19T00:03:11+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21945",
+      "decision": "excluded",
+      "reason": "城市交通仿真低维状态表示及控制，压缩对象是系统状态数据。",
+      "title_abstract_sha256": "ed6c7557116fc2cf1121ab352fac5de923ad73c82c406e061a144ec99e241caf"
+    },
+    {
+      "arxiv_id": "2609.21948",
+      "title": "GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments",
+      "submitted_local": "2026-09-19T00:05:03+08:00",
+      "categories": "Robotics (cs.RO) ; Computer Vision and Pattern Recognition (cs.CV)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21948",
+      "decision": "excluded",
+      "reason": "跨具身潜动作表征和VLA预训练，不是已有模型的量化/剪枝/蒸馏。",
+      "title_abstract_sha256": "c71ca3afd02cae9669adc6eba52d691d5df53e6c1f50059b037e9251bd9401aa"
+    },
+    {
+      "arxiv_id": "2609.21953",
+      "title": "RACER: Role-Aligned Competence Estimation for Human-AI Routing",
+      "submitted_local": "2026-09-19T00:11:05+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21953",
+      "decision": "excluded",
+      "reason": "人机任务分流与专家能力估计，不是多教师模型蒸馏或内部早退。",
+      "title_abstract_sha256": "ebf5fc8e3736a7b22927ec6b655f44a5f2900631a1b286bcbe0316b40ed7f592"
+    },
+    {
+      "arxiv_id": "2609.21960",
+      "title": "Schedule optimization for tau-leaping in masked discrete diffusion",
+      "submitted_local": "2026-09-19T00:18:26+08:00",
+      "categories": "Statistics Theory (math.ST) ; Machine Learning (cs.LG); Machine Learning (stat.ML)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21960",
+      "decision": "excluded",
+      "reason": "离散扩散tau-leaping调度的因子分解误差理论，无学生蒸馏或模型压缩。",
+      "title_abstract_sha256": "f4eef0cb52e99a3a110c9961f30e882c4d91c4d738f410334167d9f105f6a055"
+    },
+    {
+      "arxiv_id": "2609.21962",
+      "title": "Learning Cardiac Features: ECG Biometrics Across Time and~Exercise",
+      "submitted_local": "2026-09-19T00:22:31+08:00",
+      "categories": "Artificial Intelligence (cs.AI) ; Tissues and Organs (q-bio.TO)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21962",
+      "decision": "excluded",
+      "reason": "心电生物识别跨时间评测，不是模型压缩。",
+      "title_abstract_sha256": "8bbdf17dff8b07575c8171abe3e2f767fb7092873622830eb2bc2051abf38dd8"
+    },
+    {
+      "arxiv_id": "2609.21967",
+      "title": "NemotronLabs VoiceChat: An Open Full-duplex Speech-to-Speech Model with Tool Calling Capabilities",
+      "submitted_local": "2026-09-19T00:27:22+08:00",
+      "categories": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21967",
+      "decision": "excluded",
+      "reason": "官方全文核验：TTS采用既有RVQ音频编码及MoG输出头，RVQ压缩音频表示；权重BF16/FP32，作者明确未评测低精度/量化变体，无模型压缩主线。",
+      "title_abstract_sha256": "0f55d1308de83b3bc0284e83f7ab710fefe8ef59a6b6503eb60a6e502ee2b7bc"
+    },
+    {
+      "arxiv_id": "2609.21976",
+      "title": "Multiplicative Optimism for Constant Regret in Games",
+      "submitted_local": "2026-09-19T00:38:29+08:00",
+      "categories": "Computer Science and Game Theory (cs.GT) ; Machine Learning (cs.LG); Optimization and Control (math.OC)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21976",
+      "decision": "excluded",
+      "reason": "博弈遗憾界与学习规则，不是模型压缩。",
+      "title_abstract_sha256": "46abb3e1f22e92dccf069dc2bca0007ca5d9d291e6b1f2d8a2ea5af7fe923de9"
+    },
+    {
+      "arxiv_id": "2609.21989",
+      "title": "Time series generation with spectrally aligned latent flow matching",
+      "submitted_local": "2026-09-19T00:49:46+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21989",
+      "decision": "excluded",
+      "reason": "时间序列潜空间压缩后频谱对齐，压缩对象是信号数据，不是模型。",
+      "title_abstract_sha256": "6b25dbc3c44d6441d2c310b27ec2b1f8d8aa999b08fc7e00aba442be49c979c5"
+    },
+    {
+      "arxiv_id": "2609.21992",
+      "title": "Moral Entropy: Auditing Bias and Uncertainty in Moral Judgment",
+      "submitted_local": "2026-09-19T00:51:07+08:00",
+      "categories": "Computation and Language (cs.CL) ; Computers and Society (cs.CY); Machine Learning (stat.ML)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21992",
+      "decision": "excluded",
+      "reason": "道德标注不确定性贝叶斯建模，不是模型压缩。",
+      "title_abstract_sha256": "95f9d8c2dc582f7f2631bf4e016d31490ee5d85db5485151304a9112e5fc2656"
+    },
+    {
+      "arxiv_id": "2609.21995",
+      "title": "Assessment of Machine Learning-Based Critical Heat Flux Models in the CTF Subchannel Code for Square Rod Bundle Prediction",
+      "submitted_local": "2026-09-19T00:56:45+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21995",
+      "decision": "excluded",
+      "reason": "热工流体ML模型跨场景评测，不是模型压缩。",
+      "title_abstract_sha256": "062b6901a59809936b72fcda0d8bd80d1eacceac4d0278bd822dcdb0318020a2"
+    },
+    {
+      "arxiv_id": "2609.21996",
+      "title": "A Lie Detector Test for Language Models: Reading Knowledge a Model Won't Reveal",
+      "submitted_local": "2026-09-19T00:57:00+08:00",
+      "categories": "Artificial Intelligence (cs.AI)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21996",
+      "decision": "excluded",
+      "reason": "语言模型内部知识探针与遗忘验证，不是压缩。",
+      "title_abstract_sha256": "294fd36211fc2ff27e27c8bda65ea44aace225f60dcfbbfd8a016b89344bf732"
+    },
+    {
+      "arxiv_id": "2609.21997",
+      "title": "Bayesian Belief Layer for Controllable Opinion Dynamics in LLM Agents",
+      "submitted_local": "2026-09-19T00:57:14+08:00",
+      "categories": "Multiagent Systems (cs.MA) ; Artificial Intelligence (cs.AI)",
+      "official_abs_url": "https://arxiv.org/abs/2609.21997",
+      "decision": "excluded",
+      "reason": "代理意见动力学的外部信念层，不是模型压缩。",
+      "title_abstract_sha256": "ac40a309a658c986f6ac94fcc1433395febb706ce72c1aa8fda5a2c9a0d2b0b5"
+    },
+    {
+      "arxiv_id": "2609.22000",
+      "title": "RecreationWorld: Scalable and Verifiable Environments for Hybrid Computer-Use Agents",
+      "submitted_local": "2026-09-19T01:00:56+08:00",
+      "categories": "Computation and Language (cs.CL) ; Software Engineering (cs.SE)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22000",
+      "decision": "excluded",
+      "reason": "计算机使用代理训练环境与基准，轨迹训练不是以模型压缩为研究目标。",
+      "title_abstract_sha256": "010fe3a6d385f3b8121dfb62890d7f04457d74659f11a4e517d078db8335d388"
+    },
+    {
+      "arxiv_id": "2609.22005",
+      "title": "Abstention and Noise Filtering: Two Missing Primitives of Softmax Attention",
+      "submitted_local": "2026-09-19T01:03:58+08:00",
+      "categories": "Machine Learning (cs.LG) ; Computation and Language (cs.CL)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22005",
+      "decision": "excluded",
+      "reason": "官方全文核验：增加少量门控/汇点参数、无生成计算成本变化；噪声过滤不等同token剪枝或KV缓存压缩。",
+      "title_abstract_sha256": "4bca6420289b6d260899ee4724f8c6e2d00bae5b794275fadf47b7874bbeed5b"
+    },
+    {
+      "arxiv_id": "2609.22008",
+      "title": "DiaVLo: Diagnosing Behaviours of Vision-Language Models",
+      "submitted_local": "2026-09-19T01:06:44+08:00",
+      "categories": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22008",
+      "decision": "excluded",
+      "reason": "VLM行为诊断与概念因果评估，不是模型压缩。",
+      "title_abstract_sha256": "225ea7f068f8fd08e88c8afdc3237c8ff365f2497426f48573f008481c6219d3"
+    },
+    {
+      "arxiv_id": "2609.22012",
+      "title": "COMPLEX: A Closed-Form Certified Embedding of Multiparameter Persistence Modules",
+      "submitted_local": "2026-09-19T01:08:41+08:00",
+      "categories": "Machine Learning (cs.LG) ; Algebraic Topology (math.AT)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22012",
+      "decision": "excluded",
+      "reason": "拓扑持久性模块的有证嵌入，不是模型压缩。",
+      "title_abstract_sha256": "44e1d4ae0a30419f82650de166a482e1fe4cf09c51db7806e92d64b30c1dc8e1"
+    },
+    {
+      "arxiv_id": "2609.22038",
+      "title": "QuranicMMLU: A Cognitively-Aware Benchmark for Evaluating Generative AI Solutions on Quranic Linguistic Knowledge",
+      "submitted_local": "2026-09-19T01:30:27+08:00",
+      "categories": "Computation and Language (cs.CL)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22038",
+      "decision": "excluded",
+      "reason": "语言知识基准，不是模型压缩。",
+      "title_abstract_sha256": "e7bf2f87fd1888db9774662352ac136ee6c7e8e729af63c73c3e43ef9d4e6166"
+    },
+    {
+      "arxiv_id": "2609.22039",
+      "title": "Gricea: An Open Science Platform for Conversational AI Research",
+      "submitted_local": "2026-09-19T01:31:05+08:00",
+      "categories": "Human-Computer Interaction (cs.HC) ; Artificial Intelligence (cs.AI)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22039",
+      "decision": "excluded",
+      "reason": "对话AI研究复现实验平台，不是模型压缩。",
+      "title_abstract_sha256": "3b53891e27d5fbeef95151798bc757c52cd54cf6235a842c70ef844f74d9e9f3"
+    },
+    {
+      "arxiv_id": "2609.22040",
+      "title": "PRIME: Perception Feedback with Situational Memory Embeddings in VLA Models",
+      "submitted_local": "2026-09-19T01:31:34+08:00",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV) ; Robotics (cs.RO)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22040",
+      "decision": "excluded",
+      "reason": "VLA加入最多29.7M参数的反馈机制，提高感知，不是模型压缩。",
+      "title_abstract_sha256": "d028691be299005945c4be85e9d81c9d2f3c630b69588cb372bc781ab922f73f"
+    },
+    {
+      "arxiv_id": "2609.22041",
+      "title": "$λ$-Controlled GRPO: Turning Flow-Matching Ratio Instability into a Budgeted Resource",
+      "submitted_local": "2026-09-19T01:33:38+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22041",
+      "decision": "excluded",
+      "reason": "Flow-GRPO重要性比稳定化与梯度分配，不是量化或蒸馏。",
+      "title_abstract_sha256": "26cd201a7dd42ff8a4b1f354ba5ba2c44db851d7e35c319cb68b4852f6b1b1f9"
+    },
+    {
+      "arxiv_id": "2609.22043",
+      "title": "An Interpretable Memory Decision Controller for LLM Agents Based on Three-Signal Complementarity: Decoupling Confidence and Consistency",
+      "submitted_local": "2026-09-19T01:34:13+08:00",
+      "categories": "Computation and Language (cs.CL)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22043",
+      "decision": "excluded",
+      "reason": "外部RAG记忆可信度控制，零参数控制器不改变底层LLM大小。",
+      "title_abstract_sha256": "e6f2ecf8c583ac27c88442be8227ebc3eba6c5dc2ff9680b93a3dfe71b1e917c"
+    },
+    {
+      "arxiv_id": "2609.22048",
+      "title": "Available Guardrails: Certifying Selective Prediction across ML Systems",
+      "submitted_local": "2026-09-19T01:36:52+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22048",
+      "decision": "excluded",
+      "reason": "选择性预测安全认证和有限样本统计，不是模型压缩。",
+      "title_abstract_sha256": "79c5c33ec3e05b5c61f1339bed9a5dc4fe9ef75964b1b734bd08a4b21e14cf5b"
+    },
+    {
+      "arxiv_id": "2609.22053",
+      "title": "Particle Competition and Cooperation for Robust Graph Convolutional Network Learning Under Label Noise",
+      "submitted_local": "2026-09-19T01:46:08+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22053",
+      "decision": "excluded",
+      "reason": "GCN训练前图标签修正，移除的是噪声标签，不是网络参数。",
+      "title_abstract_sha256": "471c19e4da90da452cdd19e6ffb27463fb4f68ced2340470cf64112333ce2a5d"
+    },
+    {
+      "arxiv_id": "2609.22055",
+      "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
+      "submitted_local": "2026-09-19T01:46:28+08:00",
+      "categories": "Machine Learning (cs.LG) ; Robotics (cs.RO)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22055",
+      "decision": "excluded",
+      "reason": "世界模型持续学习评测，模块复用不构成压缩既有网络。",
+      "title_abstract_sha256": "59bebecc96ce9521030d5307f457058633cf5f3f2daffb0a90631c1fe8eea981"
+    },
+    {
+      "arxiv_id": "2609.22056",
+      "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
+      "submitted_local": "2026-09-19T01:48:15+08:00",
+      "categories": "Information Retrieval (cs.IR) ; Computation and Language (cs.CL); Machine Learning (cs.LG)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22056",
+      "decision": "excluded",
+      "reason": "检索置信度及弃答校准，不是模型压缩。",
+      "title_abstract_sha256": "445122ccaabfeb8d082a157d2690388d44e628520239c4dba0d226ffad032994"
+    },
+    {
+      "arxiv_id": "2609.22060",
+      "title": "Traffic Sign Recognition for Autonomous Driving Using Branched YOLOv2 and Geometric Features",
+      "submitted_local": "2026-09-19T01:52:00+08:00",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22060",
+      "decision": "included",
+      "reason": "纳入other：YOLOv2中间出口和条件深度执行，报告实际延迟对照；没有参数压缩证据。",
+      "title_abstract_sha256": "95116e02a2dbb20b605d818c5bf6f020be58c7420005aeb80eb4a7732caeb80e"
+    },
+    {
+      "arxiv_id": "2609.22064",
+      "title": "BrainWideBench: Benchmarking large-scale pretraining and across-animal transfer in multi-region neural recordings",
+      "submitted_local": "2026-09-19T01:54:32+08:00",
+      "categories": "Machine Learning (cs.LG) ; Neurons and Cognition (q-bio.NC)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22064",
+      "decision": "excluded",
+      "reason": "跨动物神经数据预训练基准，不是模型压缩。",
+      "title_abstract_sha256": "c235fc4ab04766b23305c002f876e09089277a7b0a204147651c4359132f418e"
+    },
+    {
+      "arxiv_id": "2609.22067",
+      "title": "Value-Sensitive Delegation in Everyday AI Agent Use: Evidence from OpenClaw",
+      "submitted_local": "2026-09-19T01:55:09+08:00",
+      "categories": "Human-Computer Interaction (cs.HC) ; Artificial Intelligence (cs.AI)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22067",
+      "decision": "excluded",
+      "reason": "代理委托的人机交互价值研究，不是模型压缩。",
+      "title_abstract_sha256": "ba13c3306b5c561e0447b6b120e458c4794e8e988a97d099333db6cc5748030f"
+    },
+    {
+      "arxiv_id": "2609.22068",
+      "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
+      "submitted_local": "2026-09-19T01:55:17+08:00",
+      "categories": "Artificial Intelligence (cs.AI)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22068",
+      "decision": "excluded",
+      "reason": "从代码构造RL环境并训练编码代理，不是模型蒸馏压缩。",
+      "title_abstract_sha256": "22487b4af5e7074ada7be0971fcdfb5d59a103c315b6c979b3c5493fcf6255be"
+    },
+    {
+      "arxiv_id": "2609.22069",
+      "title": "OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation",
+      "submitted_local": "2026-09-19T01:55:49+08:00",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22069",
+      "decision": "excluded",
+      "reason": "参考视频生成数据集和基准，不是模型压缩。",
+      "title_abstract_sha256": "c5a3cd725b360407e9ea45f9ed11282d73465baaac9708a1ed36151fe226dfb9"
+    },
+    {
+      "arxiv_id": "2609.22081",
+      "title": "Cross-sector generalization of accident-process role classification in occupational accident narratives",
+      "submitted_local": "2026-09-19T01:59:10+08:00",
+      "categories": "Computation and Language (cs.CL)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22081",
+      "decision": "excluded",
+      "reason": "职业事故文本分类跨行业迁移，不是模型压缩。",
+      "title_abstract_sha256": "92c16740500de4154b57ca77d0e6dd6fcdda0c03798ac0457736584d12947588"
+    },
+    {
+      "arxiv_id": "2609.22083",
+      "title": "MintAct: A Unified Visual Agent for Digital Environments",
+      "submitted_local": "2026-09-19T01:59:34+08:00",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22083",
+      "decision": "included",
+      "reason": "纳入knowledge_distillation：正文明确四域RL专家轨迹经成功筛选蒸馏到单模型，并报告RFT阶段消融。",
+      "title_abstract_sha256": "161b63655d1b0aae7881e1aea37940855f096c0d7dc8e8870058b00e0041a8c8"
+    },
+    {
+      "arxiv_id": "2609.22086",
+      "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+      "submitted_local": "2026-09-19T01:59:56+08:00",
+      "categories": "Artificial Intelligence (cs.AI) ; Computer Vision and Pattern Recognition (cs.CV)",
+      "official_abs_url": "https://arxiv.org/abs/2609.22086",
+      "decision": "excluded",
+      "reason": "冻结模型的外部自然语言程序记忆更新，无权重更新，非模型或KV缓存压缩。",
+      "title_abstract_sha256": "1224ce49750778240ecfa34899ada17cdf3acce41780be78294de23abcc7a454"
+    }
+  ],
+  "fulltext_review_urls": [
+    "https://arxiv.org/html/2609.22060v1",
+    "https://arxiv.org/html/2609.22083v1",
+    "https://arxiv.org/html/2609.22005v1",
+    "https://arxiv.org/html/2609.21967v1"
+  ],
+  "snapshot_cleanup": [
+    "Removed origin/main report reports/2026-07/quantization/arxiv_quantization_daily_report_20260728.md",
+    "No historical paper or quantization reproduction directories inherited"
+  ],
+  "reproduction_summary": {
+    "new_quantization_papers": 0,
+    "qwen3_0_6b_runs": 0,
+    "status": "not_applicable"
+  }
+}
