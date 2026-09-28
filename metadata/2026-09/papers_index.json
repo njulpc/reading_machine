@@ -1,0 +1,1086 @@
+{
+  "collection_date": "2026-09-28",
+  "run_date": "2026-09-29",
+  "generated_at": "2026-09-29T01:21:06.438043+08:00",
+  "timezone": "Asia/Shanghai",
+  "query_window": {
+    "start": "2026-09-26T00:00:00+08:00",
+    "end": "2026-09-28T23:59:59+08:00",
+    "dates": [
+      "2026-09-26",
+      "2026-09-27",
+      "2026-09-28"
+    ]
+  },
+  "scope": "权重/激活压缩、teacher-student能力或状态蒸馏、GNN消息图与注意力的稀疏计算；普通prompt压缩、PEFT或多模型调度不自动纳入。",
+  "dedup_source_branches": [
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-29",
+      "sha": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+      "analyzed_ids_count": 20
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-30",
+      "sha": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+      "analyzed_ids_count": 8
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-31",
+      "sha": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+      "analyzed_ids_count": 7
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-01",
+      "sha": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+      "analyzed_ids_count": 29
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-02",
+      "sha": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+      "analyzed_ids_count": 4
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-03",
+      "sha": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+      "analyzed_ids_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-04",
+      "sha": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+      "analyzed_ids_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-05",
+      "sha": "333264be93bb365ee7d29436235e6b056427943e",
+      "analyzed_ids_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-06",
+      "sha": "67600577ca268cd88675d221f0e19fdb59673789",
+      "analyzed_ids_count": 30
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-07",
+      "sha": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+      "analyzed_ids_count": 50
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-08",
+      "sha": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+      "analyzed_ids_count": 60
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-10",
+      "sha": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+      "analyzed_ids_count": 9
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-12",
+      "sha": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+      "analyzed_ids_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-14",
+      "sha": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+      "analyzed_ids_count": 10
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-15",
+      "sha": "e463baea815c06d95ffc36eec034113b28db7927",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-16",
+      "sha": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-17",
+      "sha": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-18",
+      "sha": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-19",
+      "sha": "3518b1fff91bab3cd78421810c0798177060063f",
+      "analyzed_ids_count": 22
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-20",
+      "sha": "6413646a6fec8b54f937415084c2df3e99b358a1",
+      "analyzed_ids_count": 9
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-21",
+      "sha": "dc8a46573315edb88419bb4eb181bea89d209de7",
+      "analyzed_ids_count": 12
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-22",
+      "sha": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+      "analyzed_ids_count": 14
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-23",
+      "sha": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-24",
+      "sha": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-25",
+      "sha": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-26",
+      "sha": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+      "analyzed_ids_count": 19
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-27",
+      "sha": "f57ca87589c728a68851f21acdff1c333b402e35",
+      "analyzed_ids_count": 27
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-28",
+      "sha": "daeb352421a9263136927bc71497c86ddb512c77",
+      "analyzed_ids_count": 30
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-29",
+      "sha": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+      "analyzed_ids_count": 38
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-30",
+      "sha": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-31",
+      "sha": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-01",
+      "sha": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-02",
+      "sha": "ab05a346a491f043142867c74593f45e669812d1",
+      "analyzed_ids_count": 60
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-03",
+      "sha": "710202d696a1295b25e55f50d4fee966434549d4",
+      "analyzed_ids_count": 56
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-04",
+      "sha": "623673ccf816fda6de51daf471f55c79b0a24801",
+      "analyzed_ids_count": 31
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-05",
+      "sha": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+      "analyzed_ids_count": 37
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-06",
+      "sha": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+      "analyzed_ids_count": 1
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-07",
+      "sha": "4fa4065a723520e6413d4bed69790612999517cd",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-08",
+      "sha": "3db8912129f5ebdfb2399a213f0688ac30cdf971",
+      "analyzed_ids_count": 5
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-09",
+      "sha": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8",
+      "analyzed_ids_count": 0
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-14",
+      "sha": "5068f2a8c89b815b69665b35900fd0e8d3800a54",
+      "analyzed_ids_count": 3
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-15",
+      "sha": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66",
+      "analyzed_ids_count": 4
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-21",
+      "sha": "263f4647c46bdea7fd86ecdabca69c889ef96806",
+      "analyzed_ids_count": 7
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-22",
+      "sha": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968",
+      "analyzed_ids_count": 2
+    }
+  ],
+  "historical_branches_scanned": 44,
+  "historical_analyzed_ids_count": 543,
+  "historical_metadata_papers_ids_count": 546,
+  "metadata_only_not_completed": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [],
+  "duplicate_source_branches": {},
+  "historical_duplicate_papers_count": 0,
+  "new_papers_count": 7,
+  "total_papers": 7,
+  "window_relevant_papers_count": 7,
+  "daily_counts": {
+    "2026-09-26": {
+      "all_topics": 58,
+      "raw_relevant": 7,
+      "historical_duplicates": 0,
+      "new": 7
+    },
+    "2026-09-27": {
+      "all_topics": 0,
+      "raw_relevant": 0,
+      "historical_duplicates": 0,
+      "new": 0,
+      "note": "截至运行时 arXiv 官方网页未检出"
+    },
+    "2026-09-28": {
+      "all_topics": 0,
+      "raw_relevant": 0,
+      "historical_duplicates": 0,
+      "new": 0,
+      "note": "截至运行时 arXiv 官方网页未检出"
+    }
+  },
+  "official_page_coverage": [
+    {
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000",
+      "total": 332,
+      "actual": 332,
+      "headers": [
+        "Showing new listings for Monday, 28 September 2026",
+        "New submissions (showing 123 of 123 entries)",
+        "Cross submissions (showing 79 of 79 entries)",
+        "Replacement submissions (showing 130 of 130 entries)"
+      ],
+      "retrieved_at": "2026-09-28T17:03:01.536548+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "541764db9834bf5453268a5d4aa77ea7c42f907f890930b2c86eafe6ce2b552f"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000",
+      "total": 1283,
+      "actual": 1283,
+      "headers": [
+        "Mon, 28 Sep 2026 (showing 202 of 202 entries )",
+        "Fri, 25 Sep 2026 (showing 230 of 230 entries )",
+        "Thu, 24 Sep 2026 (showing 209 of 209 entries )",
+        "Wed, 23 Sep 2026 (showing 216 of 216 entries )",
+        "Tue, 22 Sep 2026 (showing 426 of 426 entries )"
+      ],
+      "retrieved_at": "2026-09-28T17:03:06.887175+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "369198c4e4bb3f4c4387dc90f7f5c5e10f43ac3d968311b3658177c9e28dfbd1"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000",
+      "total": 132,
+      "actual": 132,
+      "headers": [
+        "Showing new listings for Monday, 28 September 2026",
+        "New submissions (showing 61 of 61 entries)",
+        "Cross submissions (showing 28 of 28 entries)",
+        "Replacement submissions (showing 43 of 43 entries)"
+      ],
+      "retrieved_at": "2026-09-28T17:03:01.191436+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "d32b9ebbb3878027cf3faef58e1ac958ad662c20bee249aef5b4c55bac925900"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000",
+      "total": 661,
+      "actual": 661,
+      "headers": [
+        "Mon, 28 Sep 2026 (showing 89 of 89 entries )",
+        "Fri, 25 Sep 2026 (showing 126 of 126 entries )",
+        "Thu, 24 Sep 2026 (showing 105 of 105 entries )",
+        "Wed, 23 Sep 2026 (showing 108 of 108 entries )",
+        "Tue, 22 Sep 2026 (showing 233 of 233 entries )"
+      ],
+      "retrieved_at": "2026-09-28T17:03:04.776595+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "db1cfac1c143687b392413c829c43d123ee304ad5c82312df1c61976f58e4b36"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000",
+      "total": 182,
+      "actual": 182,
+      "headers": [
+        "Showing new listings for Monday, 28 September 2026",
+        "New submissions (showing 87 of 87 entries)",
+        "Cross submissions (showing 27 of 27 entries)",
+        "Replacement submissions (showing 68 of 68 entries)"
+      ],
+      "retrieved_at": "2026-09-28T17:03:03.270867+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "cf63635eb67f13b064a2a7d39f60845c2e11112cb97ff6b9c6a2bf6d88b8e8e4"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000",
+      "total": 800,
+      "actual": 800,
+      "headers": [
+        "Mon, 28 Sep 2026 (showing 114 of 114 entries )",
+        "Fri, 25 Sep 2026 (showing 143 of 143 entries )",
+        "Thu, 24 Sep 2026 (showing 128 of 128 entries )",
+        "Wed, 23 Sep 2026 (showing 143 of 143 entries )",
+        "Tue, 22 Sep 2026 (showing 272 of 272 entries )"
+      ],
+      "retrieved_at": "2026-09-28T17:03:08.500454+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "56a63a9a24a835398dcdcd503e22e45d80a103ef8d5f906816c6847a158766c6"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000",
+      "total": 331,
+      "actual": 331,
+      "headers": [
+        "Showing new listings for Monday, 28 September 2026",
+        "New submissions (showing 88 of 88 entries)",
+        "Cross submissions (showing 113 of 113 entries)",
+        "Replacement submissions (showing 130 of 130 entries)"
+      ],
+      "retrieved_at": "2026-09-28T17:03:10.017814+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "5f8a9065aa8217013c5b139d37877083de2f9c9de88d7a3fcebfe4077fea05aa"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000",
+      "total": 1278,
+      "actual": 1278,
+      "headers": [
+        "Mon, 28 Sep 2026 (showing 201 of 201 entries )",
+        "Fri, 25 Sep 2026 (showing 260 of 260 entries )",
+        "Thu, 24 Sep 2026 (showing 193 of 193 entries )",
+        "Wed, 23 Sep 2026 (showing 240 of 240 entries )",
+        "Tue, 22 Sep 2026 (showing 384 of 384 entries )"
+      ],
+      "retrieved_at": "2026-09-28T17:03:09.690179+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "e7549701e4b93f104d54509d6c92b82d16ab3bd582965dd1e6d3789178dfd3b6"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000",
+      "total": 4,
+      "actual": 4,
+      "headers": [
+        "Showing new listings for Monday, 28 September 2026",
+        "New submissions (showing 1 of 1 entries)",
+        "Cross submissions (showing 3 of 3 entries)"
+      ],
+      "retrieved_at": "2026-09-28T17:03:09.596456+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "0d7720d961e4e58c2952bbbc189c7783f3dad5989813a792b8618e3cb25b94fb"
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000",
+      "total": 62,
+      "actual": 62,
+      "headers": [
+        "Mon, 28 Sep 2026 (showing 4 of 4 entries )",
+        "Fri, 25 Sep 2026 (showing 15 of 15 entries )",
+        "Thu, 24 Sep 2026 (showing 14 of 14 entries )",
+        "Wed, 23 Sep 2026 (showing 10 of 10 entries )",
+        "Tue, 22 Sep 2026 (showing 19 of 19 entries )"
+      ],
+      "retrieved_at": "2026-09-28T17:03:10.779995+00:00",
+      "show": 2000,
+      "skip": 0,
+      "sha256": "3738c408daa4c39d962b8241306d3e49c7474e709e0263f0e01053b283f79c1b"
+    }
+  ],
+  "list_occurrences": 5065,
+  "unique_list_ids": 3333,
+  "official_abs_parsed": 3333,
+  "official_abs_parse_errors": 0,
+  "abs_evidence": {
+    "freshly_fetched": 719,
+    "official_html_cache_reused": 2614,
+    "cache_run": "2026-09-28",
+    "note": "复用仅限官方abs原始HTML，重新解析不可变v1时间；所有58篇窗口论文均本次下载。未声称本次重新请求全部3333页。"
+  },
+  "adjacent_date_positive_controls": [
+    {
+      "id": "2609.31448",
+      "v1_utc": "2026-09-25T16:06:29+00:00",
+      "v1_local": "2026-09-26T00:06:29+08:00",
+      "url": "https://arxiv.org/abs/2609.31448"
+    },
+    {
+      "id": "2609.31435",
+      "v1_utc": "2026-09-25T15:57:02+00:00",
+      "v1_local": "2026-09-25T23:57:02+08:00",
+      "url": "https://arxiv.org/abs/2609.31435"
+    }
+  ],
+  "keyword_review": {
+    "quantization": {
+      "all_list_ids": 81,
+      "window_ids": 2
+    },
+    "quantize": {
+      "all_list_ids": 53,
+      "window_ids": 1
+    },
+    "low-bit": {
+      "all_list_ids": 16,
+      "window_ids": 0
+    },
+    "model compression": {
+      "all_list_ids": 4,
+      "window_ids": 0
+    },
+    "compress": {
+      "all_list_ids": 168,
+      "window_ids": 4
+    },
+    "pruning": {
+      "all_list_ids": 50,
+      "window_ids": 1
+    },
+    "sparsity": {
+      "all_list_ids": 40,
+      "window_ids": 0
+    },
+    "knowledge distillation": {
+      "all_list_ids": 17,
+      "window_ids": 0
+    },
+    "distill": {
+      "all_list_ids": 174,
+      "window_ids": 3
+    },
+    "teacher": {
+      "all_list_ids": 129,
+      "window_ids": 3
+    },
+    "student": {
+      "all_list_ids": 118,
+      "window_ids": 2
+    },
+    "KV cache": {
+      "all_list_ids": 27,
+      "window_ids": 1
+    },
+    "mixed precision": {
+      "all_list_ids": 0,
+      "window_ids": 0
+    },
+    "GPTQ": {
+      "all_list_ids": 9,
+      "window_ids": 1
+    },
+    "AWQ": {
+      "all_list_ids": 5,
+      "window_ids": 1
+    },
+    "QAT": {
+      "all_list_ids": 4,
+      "window_ids": 1
+    },
+    "PTQ": {
+      "all_list_ids": 16,
+      "window_ids": 2
+    },
+    "sparse": {
+      "all_list_ids": 225,
+      "window_ids": 7
+    },
+    "INT8": {
+      "all_list_ids": 19,
+      "window_ids": 1
+    },
+    "INT4": {
+      "all_list_ids": 9,
+      "window_ids": 0
+    },
+    "low-rank": {
+      "all_list_ids": 72,
+      "window_ids": 3
+    },
+    "weight encoding": {
+      "all_list_ids": 1,
+      "window_ids": 0
+    }
+  },
+  "semantic_review": {
+    "window_abstracts_reviewed": 58,
+    "official_fulltexts_reviewed": 10,
+    "date_excluded_records": 3275,
+    "note": "窗口内58篇均逐篇读标题/摘要；窗口外按官方v1先排除，未声称人工逐篇精读3275篇旧稿。"
+  },
+  "excluded_noncompression_window_papers": [
+    {
+      "arxiv_id": "2609.31620",
+      "title": "FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders",
+      "submitted_local": "2026-09-26T01:59:59+08:00",
+      "reason": "随机层融合正则改善生成/重构，没有压缩网络或蒸馏部署目标。",
+      "url": "https://arxiv.org/abs/2609.31620"
+    },
+    {
+      "arxiv_id": "2609.31619",
+      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+      "submitted_local": "2026-09-26T01:59:52+08:00",
+      "reason": "全文为置信度标签自监督，减少生成推理长度；50级quantize指标签离散化，非权重/激活量化、结构剪枝或teacher-student蒸馏。",
+      "url": "https://arxiv.org/abs/2609.31619"
+    },
+    {
+      "arxiv_id": "2609.31614",
+      "title": "Gap-free Differentially Private PCA for Gaussian Data",
+      "submitted_local": "2026-09-26T01:58:38+08:00",
+      "reason": "差分隐私PCA统计算法，非神经网络压缩。",
+      "url": "https://arxiv.org/abs/2609.31614"
+    },
+    {
+      "arxiv_id": "2609.31612",
+      "title": "First-Order Stationarity of Reverse Diffusions",
+      "submitted_local": "2026-09-26T01:57:43+08:00",
+      "reason": "扩散采样驻点理论，非少步蒸馏或模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31612"
+    },
+    {
+      "arxiv_id": "2609.31607",
+      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
+      "submitted_local": "2026-09-26T01:55:49+08:00",
+      "reason": "对生成结果后处理匹配属性分布，不压缩模型。",
+      "url": "https://arxiv.org/abs/2609.31607"
+    },
+    {
+      "arxiv_id": "2609.31600",
+      "title": "New LoRA Skills Should Read but Never Write",
+      "submitted_local": "2026-09-26T01:54:01+08:00",
+      "reason": "LoRA技能组合与干扰控制，折叠回同一基座，未压缩基座权重。",
+      "url": "https://arxiv.org/abs/2609.31600"
+    },
+    {
+      "arxiv_id": "2609.31595",
+      "title": "GraphWrit3R: End-to-End 3D Scene Graph Writing",
+      "submitted_local": "2026-09-26T01:52:39+08:00",
+      "reason": "点云/高斯到场景图的多模态生成架构，无压缩机制。",
+      "url": "https://arxiv.org/abs/2609.31595"
+    },
+    {
+      "arxiv_id": "2609.31589",
+      "title": "Common-Mode Collapse and Recovery in Direct Feedback Alignment",
+      "submitted_local": "2026-09-26T01:43:40+08:00",
+      "reason": "反馈对齐训练退化机制，非剪枝/量化。",
+      "url": "https://arxiv.org/abs/2609.31589"
+    },
+    {
+      "arxiv_id": "2609.31587",
+      "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
+      "submitted_local": "2026-09-26T01:42:22+08:00",
+      "reason": "代码文档压缩和提示优化，压缩对象不是模型。",
+      "url": "https://arxiv.org/abs/2609.31587"
+    },
+    {
+      "arxiv_id": "2609.31586",
+      "title": "Trust Guided Decision Transformer",
+      "submitted_local": "2026-09-26T01:42:19+08:00",
+      "reason": "依据状态预测误差选择可信历史后缀并多次评估，目标为控制可靠性，非压缩模型/KV。",
+      "url": "https://arxiv.org/abs/2609.31586"
+    },
+    {
+      "arxiv_id": "2609.31573",
+      "title": "How Far Can INRs Go? Cross-Domain Parameter-efficient INR-Based Semantic Segmentation for Brain MRI",
+      "submitted_local": "2026-09-26T01:35:07+08:00",
+      "reason": "全文是小参数INR新架构和跨域分割比较，未对已有网络做量化、剪枝或蒸馏；参数少不单独构成模型压缩证据。",
+      "url": "https://arxiv.org/abs/2609.31573"
+    },
+    {
+      "arxiv_id": "2609.31572",
+      "title": "OC-GS: Gaussian Splatting for Irregular Turntable Capture",
+      "submitted_local": "2026-09-26T01:35:05+08:00",
+      "reason": "高斯重建中相机角度校正，无表示压缩率机制。",
+      "url": "https://arxiv.org/abs/2609.31572"
+    },
+    {
+      "arxiv_id": "2609.31570",
+      "title": "Uncertainty and Explainability in Deep Rough Volatility: A Neural Information-Theoretic Posterior Approach",
+      "submitted_local": "2026-09-26T01:34:56+08:00",
+      "reason": "金融参数后验推断与不确定性解释，非压缩。",
+      "url": "https://arxiv.org/abs/2609.31570"
+    },
+    {
+      "arxiv_id": "2609.31569",
+      "title": "Adapting for AI: How elementary teachers adjust their practices for an AI-integrated curriculum",
+      "submitted_local": "2026-09-26T01:33:47+08:00",
+      "reason": "teacher/student指人类小学教师学生，非知识蒸馏。",
+      "url": "https://arxiv.org/abs/2609.31569"
+    },
+    {
+      "arxiv_id": "2609.31563",
+      "title": "Multi-agent Scaling Across Disjunctive and Compensatory Tasks",
+      "submitted_local": "2026-09-26T01:29:15+08:00",
+      "reason": "多智能体规模与任务结构评测，不压缩单模型。",
+      "url": "https://arxiv.org/abs/2609.31563"
+    },
+    {
+      "arxiv_id": "2609.31559",
+      "title": "Online Learning via Learned Latent Bayesian Tracking",
+      "submitted_local": "2026-09-26T01:27:14+08:00",
+      "reason": "低维隐空间用于在线贝叶斯适配后重建完整权重，未提出部署权重压缩。",
+      "url": "https://arxiv.org/abs/2609.31559"
+    },
+    {
+      "arxiv_id": "2609.31558",
+      "title": "Region-Level Black-Box Defense Against Stealthy Embedding-Space Backdoors in CLIP",
+      "submitted_local": "2026-09-26T01:26:02+08:00",
+      "reason": "CLIP图像局部净化防御，不压缩模型。",
+      "url": "https://arxiv.org/abs/2609.31558"
+    },
+    {
+      "arxiv_id": "2609.31553",
+      "title": "MexHat: A Dataset for Hate Speech Detection in Mexican Spanish Videos",
+      "submitted_local": "2026-09-26T01:23:36+08:00",
+      "reason": "仇恨检测数据集与基线，不涉及压缩。",
+      "url": "https://arxiv.org/abs/2609.31553"
+    },
+    {
+      "arxiv_id": "2609.31551",
+      "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+      "submitted_local": "2026-09-26T01:20:22+08:00",
+      "reason": "编码/预填充/解码GPU调度；pruning指配置搜索空间，不是权重或token剪枝。",
+      "url": "https://arxiv.org/abs/2609.31551"
+    },
+    {
+      "arxiv_id": "2609.31547",
+      "title": "Two Conformal Constructions for Adaptive Within-Document AI-Text Screening",
+      "submitted_local": "2026-09-26T01:18:39+08:00",
+      "reason": "文本检测共形统计与提前停止检验，不压缩LLM。",
+      "url": "https://arxiv.org/abs/2609.31547"
+    },
+    {
+      "arxiv_id": "2609.31546",
+      "title": "BeatGraph: Self-Supervised Heartbeat Graphs for Infant ECG Representations from the Home Environment",
+      "submitted_local": "2026-09-26T01:18:20+08:00",
+      "reason": "ECG自监督图表示预训练，不是教师蒸馏或网络压缩。",
+      "url": "https://arxiv.org/abs/2609.31546"
+    },
+    {
+      "arxiv_id": "2609.31544",
+      "title": "A Flow Matching Framework for Neural Representational Dissimilarity",
+      "submitted_local": "2026-09-26T01:15:43+08:00",
+      "reason": "神经响应分布距离估计，不压缩模型。",
+      "url": "https://arxiv.org/abs/2609.31544"
+    },
+    {
+      "arxiv_id": "2609.31540",
+      "title": "Can You Check That? The Checkability Boundary for Local LLM Network Automation",
+      "submitted_local": "2026-09-26T01:11:55+08:00",
+      "reason": "全文用7个现成SLM全部生成、聚合后转交大模型，无蒸馏或压缩网络，也无总计算/显存节约证明；降低云端请求比例不等于模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31540"
+    },
+    {
+      "arxiv_id": "2609.31539",
+      "title": "NEXT: Physics-Informed Neuro-Spectral Exponential Time Differencing Architectures",
+      "submitted_local": "2026-09-26T01:11:44+08:00",
+      "reason": "刚性PDE指数时间积分架构，非压缩。",
+      "url": "https://arxiv.org/abs/2609.31539"
+    },
+    {
+      "arxiv_id": "2609.31531",
+      "title": "HySTAR: Anchored Hypergraphs for Stable Credit Assignment in Cooperative Multi-Agent Reinforcement Learning",
+      "submitted_local": "2026-09-26T01:06:54+08:00",
+      "reason": "稀疏超图用于MARL归因结构稳定，不以模型计算/存储压缩为目标。",
+      "url": "https://arxiv.org/abs/2609.31531"
+    },
+    {
+      "arxiv_id": "2609.31518",
+      "title": "Retrainable physics-integrated neural differentiable modeling of sintering across material systems",
+      "submitted_local": "2026-09-26T00:56:17+08:00",
+      "reason": "物理神经微分建模烧结，无压缩机制。",
+      "url": "https://arxiv.org/abs/2609.31518"
+    },
+    {
+      "arxiv_id": "2609.31514",
+      "title": "Forensic Twins: Self-Supervised Residual Learning for AI-Generated Image Forensics",
+      "submitted_local": "2026-09-26T00:55:20+08:00",
+      "reason": "残差自监督预训练取代昂贵检测，未压缩既有网络；速度对比不足以证明模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31514"
+    },
+    {
+      "arxiv_id": "2609.31513",
+      "title": "Statistical Foundations for a Google Play User-Review Sentiment Index: Signal Fusion, Shrinkage, Distributional Validation, and Dynamic Smoothing",
+      "submitted_local": "2026-09-26T00:54:09+08:00",
+      "reason": "评论情感指数的统计收缩与平滑，非神经网络剪枝。",
+      "url": "https://arxiv.org/abs/2609.31513"
+    },
+    {
+      "arxiv_id": "2609.31511",
+      "title": "Muslim: A Deployed Arabic Voice AI Platform for Grounded Islamic Knowledge",
+      "submitted_local": "2026-09-26T00:51:22+08:00",
+      "reason": "语音产品与微调模型部署，无明确压缩算法或对应压缩实验。",
+      "url": "https://arxiv.org/abs/2609.31511"
+    },
+    {
+      "arxiv_id": "2609.31509",
+      "title": "ClearGS: Reliability-Aware Gaussian Splatting from Handheld Videos",
+      "submitted_local": "2026-09-26T00:50:46+08:00",
+      "reason": "帧可靠性加权及图像修复改善3DGS，不是高斯表示压缩。",
+      "url": "https://arxiv.org/abs/2609.31509"
+    },
+    {
+      "arxiv_id": "2609.31507",
+      "title": "SatNav: A Scalable Benchmark for Long-Horizon UAV Vision-Language Navigation from Satellite Imagery",
+      "submitted_local": "2026-09-26T00:48:44+08:00",
+      "reason": "UAV导航数据集和记忆模块比较，非模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31507"
+    },
+    {
+      "arxiv_id": "2609.31506",
+      "title": "Evaluating Cultural Awareness of LLMs for Haitian Creole",
+      "submitted_local": "2026-09-26T00:47:07+08:00",
+      "reason": "语言文化意识评测，不涉及压缩。",
+      "url": "https://arxiv.org/abs/2609.31506"
+    },
+    {
+      "arxiv_id": "2609.31505",
+      "title": "Prompt Minimization: Reducing Input Redundancy Without Sacrificing Output Fidelity",
+      "submitted_local": "2026-09-26T00:45:28+08:00",
+      "reason": "压缩输入prompt而非模型权重/激活/KV，排除。",
+      "url": "https://arxiv.org/abs/2609.31505"
+    },
+    {
+      "arxiv_id": "2609.31498",
+      "title": "Retail Product Search: A Practical Approach at Target",
+      "submitted_local": "2026-09-26T00:36:48+08:00",
+      "reason": "词法/向量混合搜索与融合工程，不是模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31498"
+    },
+    {
+      "arxiv_id": "2609.31491",
+      "title": "UQ-LOB: Uncertainty-Aware Limit Order Book Mid-Price Forecasting",
+      "submitted_local": "2026-09-26T00:33:23+08:00",
+      "reason": "额外不确定性模块与选择性预测，非压缩。",
+      "url": "https://arxiv.org/abs/2609.31491"
+    },
+    {
+      "arxiv_id": "2609.31483",
+      "title": "Scaling Density Functional Theory with Gaussian Splatting",
+      "submitted_local": "2026-09-26T00:26:40+08:00",
+      "reason": "压缩/优化量子DFT基函数而非神经网络模型。",
+      "url": "https://arxiv.org/abs/2609.31483"
+    },
+    {
+      "arxiv_id": "2609.31482",
+      "title": "\"AI is (not) the new...\": A Diagnostic Analogy Framework for Generative AI's Cultural Impacts",
+      "submitted_local": "2026-09-26T00:25:46+08:00",
+      "reason": "生成AI文化影响类比分析，不涉及压缩。",
+      "url": "https://arxiv.org/abs/2609.31482"
+    },
+    {
+      "arxiv_id": "2609.31473",
+      "title": "Game Arena: Strategic LLM Evaluation in Competitive Environments",
+      "submitted_local": "2026-09-26T00:20:55+08:00",
+      "reason": "游戏能力评测平台，不涉及压缩。",
+      "url": "https://arxiv.org/abs/2609.31473"
+    },
+    {
+      "arxiv_id": "2609.31470",
+      "title": "Beyond Empirical Support: Structured Outlier Generation via Sinkhorn Optimal Transport",
+      "submitted_local": "2026-09-26T00:18:02+08:00",
+      "reason": "生成异常数据做稳健性评估，不涉及模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31470"
+    },
+    {
+      "arxiv_id": "2609.31469",
+      "title": "LandscapeSHAP: Which Persistent Homology Class Gets the Credit?",
+      "submitted_local": "2026-09-26T00:17:42+08:00",
+      "reason": "拓扑特征Shapley归因，非模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31469"
+    },
+    {
+      "arxiv_id": "2609.31468",
+      "title": "PriceBench: A Diagnostic Benchmark for Price, Quality, and Brand Preferences in LLM Booking Agents",
+      "submitted_local": "2026-09-26T00:17:28+08:00",
+      "reason": "酒店预订代理偏好基准，无压缩算法。",
+      "url": "https://arxiv.org/abs/2609.31468"
+    },
+    {
+      "arxiv_id": "2609.31463",
+      "title": "Uncertainty-Aware Federated Learning for Infant Movement Analysis",
+      "submitted_local": "2026-09-26T00:13:48+08:00",
+      "reason": "联邦不确定性聚合，MC Dropout用于UQ而非部署剪枝。",
+      "url": "https://arxiv.org/abs/2609.31463"
+    },
+    {
+      "arxiv_id": "2609.31461",
+      "title": "KneePreM: Towards 3D Knee MRI Foundation Models via Large-Scale Unlabeled Pretraining and Label-Efficient Fine-Tuning",
+      "submitted_local": "2026-09-26T00:11:45+08:00",
+      "reason": "膝MRI预训练提高标签效率，不是模型容量压缩。",
+      "url": "https://arxiv.org/abs/2609.31461"
+    },
+    {
+      "arxiv_id": "2609.31460",
+      "title": "Segment-Level Agentic Topic Modeling for Improved Data Exploration and Resource Efficiency",
+      "submitted_local": "2026-09-26T00:11:42+08:00",
+      "reason": "主题生成/整理减少LLM调用，未压缩模型结构或蒸馏学生。",
+      "url": "https://arxiv.org/abs/2609.31460"
+    },
+    {
+      "arxiv_id": "2609.31458",
+      "title": "Nonparametric In-Context Learning under Growing Geometric Complexity: Minimax Optimality and Local Geometry-Adaptivity of Transformers",
+      "submitted_local": "2026-09-26T00:10:53+08:00",
+      "reason": "ICL非参数估计理论与局部几何，不是压缩算法。",
+      "url": "https://arxiv.org/abs/2609.31458"
+    },
+    {
+      "arxiv_id": "2609.31456",
+      "title": "Diagnosing the Sources of Compositional Failure in Vision-Language Models: A Controlled Analysis",
+      "submitted_local": "2026-09-26T00:09:42+08:00",
+      "reason": "VLM组合推理诊断，不涉及模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31456"
+    },
+    {
+      "arxiv_id": "2609.31454",
+      "title": "Different Corruptions, Different Signals: Uncertainty and Loss in Federated Data Quality",
+      "submitted_local": "2026-09-26T00:09:21+08:00",
+      "reason": "联邦数据质量信号评测，非压缩。",
+      "url": "https://arxiv.org/abs/2609.31454"
+    },
+    {
+      "arxiv_id": "2609.31452",
+      "title": "Vision-Based 6-DoF Grasp Pose Estimation for Robot Cloth Unfolding",
+      "submitted_local": "2026-09-26T00:08:16+08:00",
+      "reason": "布料抓取姿态预测新架构，不涉及模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31452"
+    },
+    {
+      "arxiv_id": "2609.31451",
+      "title": "TemplateCraft: Agentic Visual Template Generation",
+      "submitted_local": "2026-09-26T00:08:00+08:00",
+      "reason": "视觉模板多智能体生成，无权重更新或压缩。",
+      "url": "https://arxiv.org/abs/2609.31451"
+    },
+    {
+      "arxiv_id": "2609.31450",
+      "title": "From Reward Signal to Visual Utility: A Controlled Audit of Medical VLM Post-Training",
+      "submitted_local": "2026-09-26T00:06:54+08:00",
+      "reason": "VLM后训练视觉效用审计，LoRA用于适配而非部署压缩。",
+      "url": "https://arxiv.org/abs/2609.31450"
+    },
+    {
+      "arxiv_id": "2609.31448",
+      "title": "ViSTA: A Simple Bridge Extends Visual Alignment to Clinical Time-Series Understanding in Multimodal LLMs",
+      "submitted_local": "2026-09-26T00:06:29+08:00",
+      "reason": "紧凑适配器减少可训练参数，完整基座仍保留，非推理模型压缩。",
+      "url": "https://arxiv.org/abs/2609.31448"
+    }
+  ],
+  "papers": [
+    {
+      "arxiv_id": "2609.31560",
+      "title": "Generalization behavior of OPTQ and the role of regularization",
+      "submitted": "2026-09-25T17:27:18+00:00",
+      "submitted_local": "2026-09-26T01:27:18+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "category": "quantization",
+      "analysis_path": "papers/2026-09/quantization/2609.31560/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2609.31560",
+      "fulltext_url": "https://arxiv.org/html/2609.31560",
+      "scores": {
+        "accuracy": 7,
+        "compression": 5,
+        "innovation": 8,
+        "reproducibility": 8
+      },
+      "score_basis": [
+        "有理论泛化界与三种合成分布，但无LLM困惑度实验",
+        "只改善量化校准，不提出额外压缩倍率",
+        "把经验误差与总体误差分开并导出随m变化的正则",
+        "完整公式及作者代码链接，本次实跑Qwen局部验证"
+      ],
+      "conclusion": "用正则化经验二次型控制总体量化误差，提出 λ=β||X||F²/[m^(1/3)min(m,N)^(2/3)]；这不是一种新的低比特格式，也没有证明 β=1 在所有真实 LLM 上最优。",
+      "reproduction_path": "scripts/quantization/2609.31560"
+    },
+    {
+      "arxiv_id": "2609.31564",
+      "title": "Weight Pair Encoding: Inducing a Smaller Grammar in Neural Network Weights",
+      "submitted": "2026-09-25T17:29:43+00:00",
+      "submitted_local": "2026-09-26T01:29:43+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "category": "quantization",
+      "analysis_path": "papers/2026-09/quantization/2609.31564/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2609.31564",
+      "fulltext_url": "https://arxiv.org/html/2609.31564",
+      "scores": {
+        "accuracy": 7,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "score_basis": [
+        "ViT/CIFAR-10有精度与压缩权衡，跨任务尚未验证",
+        "MLP语法符号约0.43倍，非全模型字节倍率",
+        "把有损语法改写放入STE并共享层间模式",
+        "附录完整算法但部分实现约定不明，本次局部Qwen移植"
+      ],
+      "conclusion": "WeightPE把受全局L2预算约束的有损Re-Pair改写放入STE，使ViT的MLP权重语法比对应INT8 QAT基线更小；语法符号数减少不等于部署文件字节或推理延迟同倍下降。",
+      "reproduction_path": "scripts/quantization/2609.31564"
+    },
+    {
+      "arxiv_id": "2609.31568",
+      "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+      "submitted": "2026-09-25T17:33:41+00:00",
+      "submitted_local": "2026-09-26T01:33:41+08:00",
+      "categories": "Artificial Intelligence (cs.AI)",
+      "category": "pruning",
+      "analysis_path": "papers/2026-09/pruning/2609.31568/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2609.31568",
+      "fulltext_url": "https://arxiv.org/html/2609.31568",
+      "scores": {
+        "accuracy": 7,
+        "compression": 5,
+        "innovation": 7,
+        "reproducibility": 6
+      },
+      "score_basis": [
+        "有长上下文基准，但配置间精度不能拼接",
+        "减少检索调用和稀疏计算，不证明常驻KV压缩",
+        "固定anchor共享检索并保留簇内因果注意力",
+        "算法预算完整，H100/SGLang/FlashInfer环境未运行"
+      ],
+      "conclusion": "DeepEdu-v1/SCALE的SCR将相似连续query子块聚类，按簇执行一次top-k检索，减少重复选择开销；核心长上下文实验是BF16，不是一项新的AWQ/GPTQ量化算法。",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.31571",
+      "title": "Strategically Diverse Sampling for Self-Training",
+      "submitted": "2026-09-25T17:35:05+00:00",
+      "submitted_local": "2026-09-26T01:35:05+08:00",
+      "categories": "Computation and Language (cs.CL)",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.31571/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2609.31571",
+      "fulltext_url": "https://arxiv.org/html/2609.31571",
+      "scores": {
+        "accuracy": 8,
+        "compression": 4,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "score_basis": [
+        "跨代码与NCP及三seed，frontier子集不可替代总体",
+        "学生仍4B；235B/4B不是实测部署倍率",
+        "策略层多样性比IID样本数更关键",
+        "训练参数详尽，但大教师/数据生成/RL未本机运行"
+      ],
+      "conclusion": "GROOT与VS先生成不同解题策略，再生成正常推理轨迹；4B学生自身的策略多样性可优于235B教师的IID蒸馏，提示“更大教师”不必然给出更好的压缩训练数据。",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.31524",
+      "title": "Structured Reasoning Agentic Framework for Interpretable Critical View of Safety Assessment",
+      "submitted": "2026-09-25T17:01:56+00:00",
+      "submitted_local": "2026-09-26T01:01:56+08:00",
+      "categories": "Computer Vision and Pattern Recognition (cs.CV)",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.31524/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2609.31524",
+      "fulltext_url": "https://arxiv.org/html/2609.31524",
+      "scores": {
+        "accuracy": 8,
+        "compression": 2,
+        "innovation": 7,
+        "reproducibility": 5
+      },
+      "score_basis": [
+        "mAP与消融有提升，单数据集及小临床评分样本",
+        "32B学生未给教师规模/部署压缩实测",
+        "结构化观察+教师理由蒸馏连接证据与判断",
+        "参数公开，但教师生成语料及完整H200系统未复现"
+      ],
+      "conclusion": "ReasonCVS让Gemini-3-pro基于观察和正确标签生成理由，再以LoRA训练Qwen-3 32B，Endoscapes-CVS201达68.1% mAP；论文证明的是任务能力转移，而非已量化的模型压缩倍率。",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.31603",
+      "title": "User Model Extraction via Belief Self-Distillation",
+      "submitted": "2026-09-25T17:54:32+00:00",
+      "submitted_local": "2026-09-26T01:54:32+08:00",
+      "categories": "Machine Learning (cs.LG) ; Computation and Language (cs.CL)",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-09/knowledge_distillation/2609.31603/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2609.31603",
+      "fulltext_url": "https://arxiv.org/html/2609.31603",
+      "scores": {
+        "accuracy": 7,
+        "compression": 4,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "score_basis": [
+        "读出信息基本保留，干预存在跨属性泄漏",
+        "32倍仅4096维隐状态到128维向量，模型大小不变",
+        "把KL蒸馏与可写低秩状态联合训练",
+        "开源链接和rank/优化器设置齐全，未训练三模型"
+      ],
+      "conclusion": "BSD用128维瓶颈保留并可写回LLM的用户信念，32倍是隐状态维度压缩；教师和学生是同一个冻结模型的副本，不是将8B网络压成更小学生。",
+      "reproduction_path": null
+    },
+    {
+      "arxiv_id": "2609.31466",
+      "title": "Scaffold: Support Graph Theory Based Sparsification for Graph Neural Networks",
+      "submitted": "2026-09-25T16:17:09+00:00",
+      "submitted_local": "2026-09-26T00:17:09+08:00",
+      "categories": "Machine Learning (cs.LG)",
+      "category": "pruning",
+      "analysis_path": "papers/2026-09/pruning/2609.31466/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2609.31466",
+      "fulltext_url": "https://arxiv.org/html/2609.31466",
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "innovation": 8,
+        "reproducibility": 7
+      },
+      "score_basis": [
+        "19数据集及匹配边预算，但部分图差距明显",
+        "减少GNN消息边，不减少权重；SpMM端到端不总更快",
+        "联合路径伸长与拥塞的无监督稀疏支撑",
+        "开源/预算/复杂度充分，本次未跑H100图训练"
+      ],
+      "conclusion": "Scaffold用路径伸长与拥塞选择保留边，以减少消息传递成本；它压缩的是GNN计算支撑图，不是剪掉模型权重。",
+      "reproduction_path": null
+    }
+  ]
+}

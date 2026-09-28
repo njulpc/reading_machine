@@ -1,0 +1,172 @@
+{
+  "tests": {
+    "tail_solve_max_error": 0.0,
+    "augmented_error_identity": 0.0,
+    "stochastic_rounding_mean_error_50000": 0.004360000000000003,
+    "finite_range": "PASS"
+  },
+  "environment": {
+    "python": "3.9.6",
+    "torch": "2.8.0",
+    "device": "cpu",
+    "threads": 4
+  },
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "transformers": "4.57.6",
+  "weight_shape": [
+    32,
+    1024
+  ],
+  "calibration_tokens": 54,
+  "test_tokens": 21,
+  "calibration_texts": [
+    "Explain why calibration data matters for quantization.",
+    "A matrix maps a vector into another vector.",
+    "The library opens every morning.",
+    "Write a short function that adds two numbers.",
+    "A small model can learn from a teacher.",
+    "Today we compare rounding error on training and test inputs."
+  ],
+  "test_texts": [
+    "Describe a clear night with stars.",
+    "Why does the temperature change?",
+    "Translate a simple mathematical statement into words."
+  ],
+  "results": [
+    {
+      "lambda": 0.032723556157384044,
+      "overflow_before_clamp": 0,
+      "mode": "infinite_lattice",
+      "stochastic": false,
+      "max_code": 7.000000000000001,
+      "rule": "legacy_0.01",
+      "m": 16,
+      "train_relative_l2": 0.006966327892862944,
+      "test_relative_l2": 0.09718077646238976
+    },
+    {
+      "lambda": 0.032723556157384044,
+      "overflow_before_clamp": 1,
+      "mode": "infinite_lattice",
+      "stochastic": true,
+      "max_code": 8.0,
+      "rule": "legacy_0.01",
+      "m": 16,
+      "train_relative_l2": 0.00954652817656257,
+      "test_relative_l2": 0.12933879226451606
+    },
+    {
+      "lambda": 0.032723556157384044,
+      "overflow_before_clamp": 0,
+      "mode": "finite_signed_W4",
+      "stochastic": false,
+      "max_code": 7.000000000000001,
+      "rule": "legacy_0.01",
+      "m": 16,
+      "train_relative_l2": 0.006966327892862944,
+      "test_relative_l2": 0.09718077646238976
+    },
+    {
+      "lambda": 209.43075940725788,
+      "overflow_before_clamp": 0,
+      "mode": "infinite_lattice",
+      "stochastic": false,
+      "max_code": 7.000000000000001,
+      "rule": "eq35_beta1",
+      "m": 16,
+      "train_relative_l2": 0.08300228322070925,
+      "test_relative_l2": 0.10130283322971793
+    },
+    {
+      "lambda": 209.43075940725788,
+      "overflow_before_clamp": 0,
+      "mode": "infinite_lattice",
+      "stochastic": true,
+      "max_code": 7.000000000000001,
+      "rule": "eq35_beta1",
+      "m": 16,
+      "train_relative_l2": 0.10867620114582764,
+      "test_relative_l2": 0.12328777487526918
+    },
+    {
+      "lambda": 209.43075940725788,
+      "overflow_before_clamp": 0,
+      "mode": "finite_signed_W4",
+      "stochastic": false,
+      "max_code": 7.000000000000001,
+      "rule": "eq35_beta1",
+      "m": 16,
+      "train_relative_l2": 0.08300228322070925,
+      "test_relative_l2": 0.10130283322971793
+    },
+    {
+      "lambda": 0.113305498726921,
+      "overflow_before_clamp": 2,
+      "mode": "infinite_lattice",
+      "stochastic": false,
+      "max_code": 8.0,
+      "rule": "legacy_0.01",
+      "m": 54,
+      "train_relative_l2": 0.012889518767891002,
+      "test_relative_l2": 0.09104686911494003
+    },
+    {
+      "lambda": 0.113305498726921,
+      "overflow_before_clamp": 1,
+      "mode": "infinite_lattice",
+      "stochastic": true,
+      "max_code": 8.0,
+      "rule": "legacy_0.01",
+      "m": 54,
+      "train_relative_l2": 0.018472037418573024,
+      "test_relative_l2": 0.12365677298283821
+    },
+    {
+      "lambda": 0.113305498726921,
+      "overflow_before_clamp": 2,
+      "mode": "finite_signed_W4",
+      "stochastic": false,
+      "max_code": 7.000000000000001,
+      "rule": "legacy_0.01",
+      "m": 54,
+      "train_relative_l2": 0.012904288321150552,
+      "test_relative_l2": 0.09133070363939337
+    },
+    {
+      "lambda": 214.86079758586501,
+      "overflow_before_clamp": 0,
+      "mode": "infinite_lattice",
+      "stochastic": false,
+      "max_code": 7.000000000000001,
+      "rule": "eq35_beta1",
+      "m": 54,
+      "train_relative_l2": 0.0724444008724847,
+      "test_relative_l2": 0.0918231358942696
+    },
+    {
+      "lambda": 214.86079758586501,
+      "overflow_before_clamp": 0,
+      "mode": "infinite_lattice",
+      "stochastic": true,
+      "max_code": 7.000000000000001,
+      "rule": "eq35_beta1",
+      "m": 54,
+      "train_relative_l2": 0.09870297036976841,
+      "test_relative_l2": 0.11647690167256983
+    },
+    {
+      "lambda": 214.86079758586501,
+      "overflow_before_clamp": 0,
+      "mode": "finite_signed_W4",
+      "stochastic": false,
+      "max_code": 7.000000000000001,
+      "rule": "eq35_beta1",
+      "m": 54,
+      "train_relative_l2": 0.0724444008724847,
+      "test_relative_l2": 0.0918231358942696
+    }
+  ],
+  "elapsed_seconds": 5.0998921394348145,
+  "scope": "Real Qwen layer subset; no whole-model W4 checkpoint, perplexity, native INT4 kernel, or speedup claim."
+}

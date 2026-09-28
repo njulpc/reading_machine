@@ -1,0 +1,334 @@
+{
+  "tests": {
+    "paper_worked_rewrite": "PASS",
+    "lossless_merge_decode": "PASS",
+    "row_boundaries": "PASS",
+    "STE_identity_gradient": "PASS"
+  },
+  "environment": {
+    "python": "3.9.6",
+    "torch": "2.8.0",
+    "numpy": "2.0.2",
+    "device": "cpu",
+    "threads": 4
+  },
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "transformers": "4.57.6",
+  "weight_shape": [
+    8,
+    1024
+  ],
+  "modules": [
+    "layer0.mlp.gate_proj",
+    "layer0.mlp.up_proj"
+  ],
+  "rows_per_module": 4,
+  "calibration_tokens": 35,
+  "test_tokens": 14,
+  "calibration_texts": [
+    "Explain the difference between a model and its weights.",
+    "A compact representation can preserve useful patterns.",
+    "The child reads a story about the moon.",
+    "Multiply a matrix by a vector."
+  ],
+  "test_texts": [
+    "Describe a cold winter morning.",
+    "How do birds find their way home?"
+  ],
+  "tau_frac": 0.15,
+  "tau_interpretation": "tau_frac * L2 norm of original int8 codes; explicit transplant assumption",
+  "leaders": 32,
+  "refresh_interval": 10,
+  "training_objective": "layer output MSE, not CIFAR classification",
+  "optimizer": "AdamW lr=1e-5 weight_decay=.1 grad_clip=1, 11 local updates; no 500-step warmup in this small test",
+  "training": [
+    {
+      "step": 0,
+      "weightpe_loss": 0.006468228995800018,
+      "qat_loss": 2.2307936887955293e-05
+    },
+    {
+      "step": 1,
+      "weightpe_loss": 0.006361964158713818,
+      "qat_loss": 1.70453276950866e-05
+    },
+    {
+      "step": 2,
+      "weightpe_loss": 0.006257188972085714,
+      "qat_loss": 1.230399630003376e-05
+    },
+    {
+      "step": 3,
+      "weightpe_loss": 0.006153928581625223,
+      "qat_loss": 1.1035523129976355e-05
+    },
+    {
+      "step": 4,
+      "weightpe_loss": 0.006052203010767698,
+      "qat_loss": 9.574419891578145e-06
+    },
+    {
+      "step": 5,
+      "weightpe_loss": 0.005952010862529278,
+      "qat_loss": 9.009936547954567e-06
+    },
+    {
+      "step": 6,
+      "weightpe_loss": 0.005853378679603338,
+      "qat_loss": 8.24035578261828e-06
+    },
+    {
+      "step": 7,
+      "weightpe_loss": 0.0057562896981835365,
+      "qat_loss": 7.102759809640702e-06
+    },
+    {
+      "step": 8,
+      "weightpe_loss": 0.005660759750753641,
+      "qat_loss": 5.978547505947063e-06
+    },
+    {
+      "step": 9,
+      "weightpe_loss": 0.005566780921071768,
+      "qat_loss": 5.564177172345808e-06
+    },
+    {
+      "step": 10,
+      "weightpe_loss": 0.005364648066461086,
+      "qat_loss": 5.199311544856755e-06
+    }
+  ],
+  "refreshes": [
+    {
+      "step": 0,
+      "symbols": 5482,
+      "rules": 779,
+      "residual_length": 3924,
+      "distortion": 197942.0,
+      "budget": 197966.43,
+      "stop_reason": "no_change",
+      "trace": [
+        {
+          "round": 0,
+          "rewrites": 2313,
+          "new_rules": 201,
+          "size": 6064,
+          "distortion": 166517.0
+        },
+        {
+          "round": 1,
+          "rewrites": 757,
+          "new_rules": 417,
+          "size": 5543,
+          "distortion": 197920.0
+        },
+        {
+          "round": 2,
+          "rewrites": 63,
+          "new_rules": 87,
+          "size": 5518,
+          "distortion": 197950.0
+        },
+        {
+          "round": 3,
+          "rewrites": 42,
+          "new_rules": 31,
+          "size": 5509,
+          "distortion": 197961.0
+        },
+        {
+          "round": 4,
+          "rewrites": 30,
+          "new_rules": 17,
+          "size": 5499,
+          "distortion": 197932.0
+        },
+        {
+          "round": 5,
+          "rewrites": 16,
+          "new_rules": 9,
+          "size": 5495,
+          "distortion": 197953.0
+        },
+        {
+          "round": 6,
+          "rewrites": 18,
+          "new_rules": 9,
+          "size": 5490,
+          "distortion": 197957.0
+        },
+        {
+          "round": 7,
+          "rewrites": 10,
+          "new_rules": 2,
+          "size": 5486,
+          "distortion": 197957.0
+        },
+        {
+          "round": 8,
+          "rewrites": 3,
+          "new_rules": 3,
+          "size": 5486,
+          "distortion": 197960.0
+        },
+        {
+          "round": 9,
+          "rewrites": 7,
+          "new_rules": 3,
+          "size": 5482,
+          "distortion": 197942.0
+        },
+        {
+          "round": 10,
+          "rewrites": 0,
+          "new_rules": 0,
+          "size": 5482,
+          "distortion": 197942.0
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "symbols": 6030,
+      "rules": 803,
+      "residual_length": 4424,
+      "distortion": 197965.0,
+      "budget": 197965.12499999997,
+      "stop_reason": "two_stalls",
+      "trace": [
+        {
+          "round": 0,
+          "rewrites": 2268,
+          "new_rules": 223,
+          "size": 6117,
+          "distortion": 197086.0
+        },
+        {
+          "round": 1,
+          "rewrites": 188,
+          "new_rules": 505,
+          "size": 6062,
+          "distortion": 197952.0
+        },
+        {
+          "round": 2,
+          "rewrites": 65,
+          "new_rules": 44,
+          "size": 6042,
+          "distortion": 197962.0
+        },
+        {
+          "round": 3,
+          "rewrites": 45,
+          "new_rules": 24,
+          "size": 6030,
+          "distortion": 197960.0
+        },
+        {
+          "round": 4,
+          "rewrites": 5,
+          "new_rules": 6,
+          "size": 6030,
+          "distortion": 197964.0
+        },
+        {
+          "round": 5,
+          "rewrites": 1,
+          "new_rules": 1,
+          "size": 6030,
+          "distortion": 197965.0
+        }
+      ]
+    }
+  ],
+  "final": {
+    "symbols": 5978,
+    "rules": 808,
+    "residual_length": 4362,
+    "distortion": 197983.0,
+    "budget": 197991.02249999996,
+    "stop_reason": "two_stalls",
+    "trace": [
+      {
+        "round": 0,
+        "rewrites": 2305,
+        "new_rules": 216,
+        "size": 6080,
+        "distortion": 196810.0
+      },
+      {
+        "round": 1,
+        "rewrites": 231,
+        "new_rules": 517,
+        "size": 6002,
+        "distortion": 197984.0
+      },
+      {
+        "round": 2,
+        "rewrites": 25,
+        "new_rules": 37,
+        "size": 5990,
+        "distortion": 197966.0
+      },
+      {
+        "round": 3,
+        "rewrites": 33,
+        "new_rules": 18,
+        "size": 5984,
+        "distortion": 197949.0
+      },
+      {
+        "round": 4,
+        "rewrites": 27,
+        "new_rules": 15,
+        "size": 5978,
+        "distortion": 197960.0
+      },
+      {
+        "round": 5,
+        "rewrites": 3,
+        "new_rules": 3,
+        "size": 5978,
+        "distortion": 197982.0
+      },
+      {
+        "round": 6,
+        "rewrites": 2,
+        "new_rules": 2,
+        "size": 5978,
+        "distortion": 197983.0
+      }
+    ]
+  },
+  "baseline_grammar": {
+    "symbols": 8477,
+    "rules": 1199,
+    "residual_length": 6079,
+    "distortion": 0.0,
+    "budget": 0.0,
+    "stop_reason": "two_stalls",
+    "trace": [
+      {
+        "round": 0,
+        "rewrites": 0,
+        "new_rules": 1178,
+        "size": 8477,
+        "distortion": 0.0
+      },
+      {
+        "round": 1,
+        "rewrites": 0,
+        "new_rules": 21,
+        "size": 8477,
+        "distortion": 0.0
+      }
+    ]
+  },
+  "grammar_symbol_ratio": 0.7052023121387283,
+  "test_relative_l2_weightpe": 0.10605207085609436,
+  "test_relative_l2_qat": 0.0050406563095748425,
+  "weight_change_l2": 0.009610663168132305,
+  "elapsed_seconds": 1.9354758262634277,
+  "scope": "Real Qwen sliced MLP weights, complete input width. CPU grammar and local STE training, not full-model compression, packed bytes, task accuracy or accelerated kernel."
+}
