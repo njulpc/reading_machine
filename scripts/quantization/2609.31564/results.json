@@ -1,5 +1,7 @@
 {
   "tests": {
+    "immutable_original": "PASS",
+    "ragged_row_boundaries": "PASS",
     "paper_worked_rewrite": "PASS",
     "lossless_merge_decode": "PASS",
     "row_boundaries": "PASS",
@@ -329,6 +331,341 @@
   "test_relative_l2_weightpe": 0.10605207085609436,
   "test_relative_l2_qat": 0.0050406563095748425,
   "weight_change_l2": 0.009610663168132305,
-  "elapsed_seconds": 1.9354758262634277,
-  "scope": "Real Qwen sliced MLP weights, complete input width. CPU grammar and local STE training, not full-model compression, packed bytes, task accuracy or accelerated kernel."
+  "elapsed_seconds": 1.892117977142334,
+  "scope": "Real Qwen sliced MLP weights, complete input width. CPU grammar and local STE training, not full-model compression, packed bytes, task accuracy or accelerated kernel.",
+  "review": {
+    "date": "2026-09-29",
+    "algorithm_consistency": "部分一致",
+    "source": "https://arxiv.org/html/2609.31564v1",
+    "environment": {
+      "python": "3.9.6",
+      "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "physical_memory_gib": 16,
+      "cpu_count": 10,
+      "torch_threads": 4,
+      "cuda": false,
+      "mps": false,
+      "packages": {
+        "torch": "2.8.0",
+        "transformers": "4.57.6",
+        "numpy": "2.0.2",
+        "huggingface-hub": "0.36.2",
+        "safetensors": "0.7.0"
+      }
+    },
+    "commands": {
+      "2609.31564_compile": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "py_compile",
+          "scripts/quantization/2609.31564/demo.py"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 0.04002883400000101
+      },
+      "2609.31564_tensor": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31564/demo.py",
+          "--self-test",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31564_tensor.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 0.570294917
+      },
+      "2609.31564_real_local": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31564/demo.py",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31564_real_local.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 3.4766984580000013
+      },
+      "2609.31564_mock": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31564/demo.py",
+          "--mock",
+          "--export",
+          "/private/tmp/quant_review_20260929/2609.31564_mock_export",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31564_mock.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 1.890159875000002
+      },
+      "2609.31564_real_full": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31564/demo.py",
+          "--full-model",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31564_real_full.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 1,
+        "wall_seconds": 1.1111472920000018
+      }
+    },
+    "additional_checks": {
+      "blocked_optq_max_difference": 0.0,
+      "ragged_grammar_15_runs": "PASS",
+      "grammar_occurrences_peak_bytes": 2238621,
+      "grammar_codes": 8192,
+      "peak_bytes_per_code": 273.2691650390625,
+      "invalid_cli": [
+        {
+          "id": "2609.31560",
+          "flag": "--rows",
+          "value": "0",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--leaders",
+          "value": "0",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--steps",
+          "value": "-1",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--tau-frac",
+          "value": "nan",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--tau-frac",
+          "value": "-0.1",
+          "exit": 2
+        }
+      ]
+    },
+    "mock_end_to_end": {
+      "mock": true,
+      "model": "random tiny Qwen3",
+      "quantized_modules": 14,
+      "quantized_parameters": 4608,
+      "shared_grammar_modules": [
+        "model.layers.0.mlp.gate_proj",
+        "model.layers.0.mlp.up_proj",
+        "model.layers.0.mlp.down_proj",
+        "model.layers.1.mlp.gate_proj",
+        "model.layers.1.mlp.up_proj",
+        "model.layers.1.mlp.down_proj"
+      ],
+      "attention_int8_modules": [
+        "model.layers.0.self_attn.q_proj",
+        "model.layers.0.self_attn.k_proj",
+        "model.layers.0.self_attn.v_proj",
+        "model.layers.0.self_attn.o_proj",
+        "model.layers.1.self_attn.q_proj",
+        "model.layers.1.self_attn.k_proj",
+        "model.layers.1.self_attn.v_proj",
+        "model.layers.1.self_attn.o_proj"
+      ],
+      "steps": 11,
+      "refreshes": [
+        {
+          "step": 0,
+          "symbols": 2153,
+          "rules": 196,
+          "residual_length": 1761,
+          "distortion": 249404.0,
+          "budget": 249418.41749999998,
+          "stop_reason": "no_change",
+          "trace": [
+            {
+              "round": 0,
+              "rewrites": 921,
+              "new_rules": 54,
+              "size": 2225,
+              "distortion": 249302.0
+            },
+            {
+              "round": 1,
+              "rewrites": 114,
+              "new_rules": 110,
+              "size": 2160,
+              "distortion": 249375.0
+            },
+            {
+              "round": 2,
+              "rewrites": 31,
+              "new_rules": 23,
+              "size": 2152,
+              "distortion": 249407.0
+            },
+            {
+              "round": 3,
+              "rewrites": 7,
+              "new_rules": 9,
+              "size": 2153,
+              "distortion": 249404.0
+            },
+            {
+              "round": 4,
+              "rewrites": 0,
+              "new_rules": 0,
+              "size": 2153,
+              "distortion": 249404.0
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "symbols": 2068,
+          "rules": 193,
+          "residual_length": 1682,
+          "distortion": 249239.0,
+          "budget": 249248.295,
+          "stop_reason": "no_change",
+          "trace": [
+            {
+              "round": 0,
+              "rewrites": 1006,
+              "new_rules": 42,
+              "size": 2136,
+              "distortion": 249146.0
+            },
+            {
+              "round": 1,
+              "rewrites": 97,
+              "new_rules": 121,
+              "size": 2072,
+              "distortion": 249209.0
+            },
+            {
+              "round": 2,
+              "rewrites": 26,
+              "new_rules": 25,
+              "size": 2068,
+              "distortion": 249191.0
+            },
+            {
+              "round": 3,
+              "rewrites": 5,
+              "new_rules": 5,
+              "size": 2068,
+              "distortion": 249239.0
+            },
+            {
+              "round": 4,
+              "rewrites": 0,
+              "new_rules": 0,
+              "size": 2068,
+              "distortion": 249239.0
+            }
+          ]
+        }
+      ],
+      "final": {
+        "symbols": 2070,
+        "rules": 189,
+        "residual_length": 1692,
+        "distortion": 249261.0,
+        "budget": 249266.87999999998,
+        "stop_reason": "no_change",
+        "trace": [
+          {
+            "round": 0,
+            "rewrites": 1006,
+            "new_rules": 42,
+            "size": 2133,
+            "distortion": 249258.0
+          },
+          {
+            "round": 1,
+            "rewrites": 93,
+            "new_rules": 121,
+            "size": 2073,
+            "distortion": 249248.0
+          },
+          {
+            "round": 2,
+            "rewrites": 24,
+            "new_rules": 22,
+            "size": 2070,
+            "distortion": 249225.0
+          },
+          {
+            "round": 3,
+            "rewrites": 4,
+            "new_rules": 4,
+            "size": 2070,
+            "distortion": 249261.0
+          },
+          {
+            "round": 4,
+            "rewrites": 0,
+            "new_rules": 0,
+            "size": 2070,
+            "distortion": 249261.0
+          }
+        ]
+      },
+      "losses": [
+        4.456975091216009e-07,
+        3.5701845035873703e-07,
+        4.101750619156519e-07,
+        2.885444132516568e-07,
+        2.6569961164568667e-07,
+        3.210309955647972e-07,
+        2.349373744436889e-07,
+        2.2077057337810402e-07,
+        2.6937709662888665e-07,
+        2.2223281348487944e-07,
+        3.1318404580815695e-07
+      ],
+      "gradient_norms": [
+        0.00040504985372535884,
+        0.0002756512549240142,
+        0.000270844524493441,
+        0.0002168808423448354,
+        0.00018624241056386381,
+        0.00023349277034867555,
+        0.00018585094949230552,
+        0.00013903601211495697,
+        0.00022761966101825237,
+        0.00021883720182813704,
+        0.0002773639571387321
+      ],
+      "training_objective": "logit MSE distillation smoke test, not original ViT/CIFAR training",
+      "tau_interpretation": "tau_frac * original code L2; explicit engineering assumption",
+      "finite_logits": true,
+      "logits_relative_l2": 0.007633039262145758,
+      "generated_token_ids": [
+        45,
+        45
+      ],
+      "generated_text": null,
+      "forward_scope": "All decoder Linear weights replaced; embedding, norms and tied lm_head retained in FP32",
+      "export": "FP32 dequantized HF checkpoint, not packed low-bit storage",
+      "reload_max_logit_error": 0.0,
+      "elapsed_seconds": 1.2592944160000001
+    },
+    "real_qwen_status": "未跑通整模；真实局部 demo 通过，真实整模因内存估算退出1",
+    "resource_limit": {
+      "mlp_codes": 264241152,
+      "estimated_minimum_python_grammar_gib": 39.375,
+      "configured_budget_gib": 8,
+      "physical_memory_gib": 16,
+      "observed_bytes_per_code_on_8192": 273.2691650390625,
+      "reason": "shared grammar cannot be split without changing paper method; CPU Python objects dominate memory"
+    }
+  }
 }

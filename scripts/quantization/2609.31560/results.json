@@ -167,6 +167,2276 @@
       "test_relative_l2": 0.0918231358942696
     }
   ],
-  "elapsed_seconds": 5.0998921394348145,
-  "scope": "Real Qwen layer subset; no whole-model W4 checkpoint, perplexity, native INT4 kernel, or speedup claim."
+  "elapsed_seconds": 5.044555902481079,
+  "scope": "Real Qwen layer subset; no whole-model W4 checkpoint, perplexity, native INT4 kernel, or speedup claim.",
+  "review": {
+    "date": "2026-09-29",
+    "algorithm_consistency": "部分一致",
+    "source": "https://arxiv.org/html/2609.31560v1",
+    "environment": {
+      "python": "3.9.6",
+      "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "physical_memory_gib": 16,
+      "cpu_count": 10,
+      "torch_threads": 4,
+      "cuda": false,
+      "mps": false,
+      "packages": {
+        "torch": "2.8.0",
+        "transformers": "4.57.6",
+        "numpy": "2.0.2",
+        "huggingface-hub": "0.36.2",
+        "safetensors": "0.7.0"
+      }
+    },
+    "commands": {
+      "2609.31560_compile": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "py_compile",
+          "scripts/quantization/2609.31560/demo.py"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 0.07715629199999999
+      },
+      "2609.31560_tensor": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31560/demo.py",
+          "--self-test",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31560_tensor.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 1.8768044160000001
+      },
+      "2609.31560_real_local": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31560/demo.py",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31560_real_local.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 8.54174925
+      },
+      "2609.31560_mock": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31560/demo.py",
+          "--mock",
+          "--export",
+          "/private/tmp/quant_review_20260929/2609.31560_mock_export",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31560_mock.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 1.7160573330000002
+      },
+      "2609.31560_real_full": {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/quantization/2609.31560/demo.py",
+          "--full-model",
+          "--export",
+          "/private/tmp/quant_review_20260929/2609.31560_real_export",
+          "--output",
+          "/private/tmp/quant_review_20260929/2609.31560_real_full.json"
+        ],
+        "cwd": "/private/tmp/reading_machine_arxiv_20260929",
+        "returncode": 0,
+        "wall_seconds": 77.61633008400001
+      }
+    },
+    "additional_checks": {
+      "blocked_optq_max_difference": 0.0,
+      "ragged_grammar_15_runs": "PASS",
+      "grammar_occurrences_peak_bytes": 2238621,
+      "grammar_codes": 8192,
+      "peak_bytes_per_code": 273.2691650390625,
+      "invalid_cli": [
+        {
+          "id": "2609.31560",
+          "flag": "--rows",
+          "value": "0",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--leaders",
+          "value": "0",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--steps",
+          "value": "-1",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--tau-frac",
+          "value": "nan",
+          "exit": 2
+        },
+        {
+          "id": "2609.31564",
+          "flag": "--tau-frac",
+          "value": "-0.1",
+          "exit": 2
+        }
+      ]
+    },
+    "mock_end_to_end": {
+      "mock": true,
+      "model": "random tiny Qwen3",
+      "revision": null,
+      "quantized_modules": 14,
+      "quantized_parameters": 4608,
+      "method": "Eq35 beta1, full input width per output row, deterministic finite W4 extension, FP32 activations",
+      "calibration": "Pre-quantization model activations; no act-order, grouping, outlier or mixed-precision policy",
+      "modules": [
+        {
+          "module": "model.layers.0.self_attn.q_proj",
+          "weights": 256,
+          "calibration_tokens": 24,
+          "lambda": 20.902391756352916,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.0
+        },
+        {
+          "module": "model.layers.0.self_attn.k_proj",
+          "weights": 128,
+          "calibration_tokens": 24,
+          "lambda": 20.902391756352916,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.0
+        },
+        {
+          "module": "model.layers.0.self_attn.v_proj",
+          "weights": 128,
+          "calibration_tokens": 24,
+          "lambda": 20.902391756352916,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.0
+        },
+        {
+          "module": "model.layers.0.self_attn.o_proj",
+          "weights": 256,
+          "calibration_tokens": 24,
+          "lambda": 0.06989484413416618,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.mlp.gate_proj",
+          "weights": 512,
+          "calibration_tokens": 24,
+          "lambda": 20.90461985137074,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.mlp.up_proj",
+          "weights": 512,
+          "calibration_tokens": 24,
+          "lambda": 20.90461985137074,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.mlp.down_proj",
+          "weights": 512,
+          "calibration_tokens": 24,
+          "lambda": 0.00028245382182482494,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.0
+        },
+        {
+          "module": "model.layers.1.self_attn.q_proj",
+          "weights": 256,
+          "calibration_tokens": 24,
+          "lambda": 20.904460466698502,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.self_attn.k_proj",
+          "weights": 128,
+          "calibration_tokens": 24,
+          "lambda": 20.904460466698502,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.self_attn.v_proj",
+          "weights": 128,
+          "calibration_tokens": 24,
+          "lambda": 20.904460466698502,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.0
+        },
+        {
+          "module": "model.layers.1.self_attn.o_proj",
+          "weights": 256,
+          "calibration_tokens": 24,
+          "lambda": 0.05293137551496144,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.0
+        },
+        {
+          "module": "model.layers.1.mlp.gate_proj",
+          "weights": 512,
+          "calibration_tokens": 24,
+          "lambda": 20.905756184646155,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.mlp.up_proj",
+          "weights": 512,
+          "calibration_tokens": 24,
+          "lambda": 20.905756184646155,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.0
+        },
+        {
+          "module": "model.layers.1.mlp.down_proj",
+          "weights": 512,
+          "calibration_tokens": 24,
+          "lambda": 0.0003701132968393882,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        }
+      ],
+      "finite_logits": true,
+      "logits_relative_l2": 0.04181995987892151,
+      "generated_token_ids": [
+        45,
+        45
+      ],
+      "generated_text": null,
+      "forward_scope": "All decoder Linear weights replaced; embedding, norms and tied lm_head retained in FP32",
+      "export": "FP32 dequantized HF checkpoint, not packed low-bit storage",
+      "reload_max_logit_error": 0.0,
+      "elapsed_seconds": 1.097151167
+    },
+    "real_end_to_end": {
+      "mock": false,
+      "model": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "quantized_modules": 196,
+      "quantized_parameters": 440401920,
+      "method": "Eq35 beta1, full input width per output row, deterministic finite W4 extension, FP32 activations",
+      "calibration": "Pre-quantization model activations; no act-order, grouping, outlier or mixed-precision policy",
+      "modules": [
+        {
+          "module": "model.layers.0.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 43.233341506729005,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 43.233341506729005,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 43.233341506729005,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 31.838467194992948,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 214.86079758586501,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 214.86079758586501,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.0.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 26.576725531539065,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 17.71483408741572,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 17.71483408741572,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 17.71483408741572,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 12.358802283073977,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1551.9398387491663,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1551.9398387491663,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.1.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 66.28098752261329,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.2.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 46.286666242994826,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.2.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 46.286666242994826,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.2.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 46.286666242994826,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.2.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 36.69829206129299,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.2.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1265.4678844335958,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.2.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1265.4678844335958,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.2.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3115244.5232501156,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.3.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 254.50096263271493,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.3.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 254.50096263271493,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.3.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 254.50096263271493,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.3.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 14.392457406069383,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.3.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1181.7145624112761,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.3.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1181.7145624112761,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.3.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 85.99709091911701,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.4.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 277.42697220769196,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.4.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 277.42697220769196,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.4.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 277.42697220769196,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.4.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 25.024621423126842,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.4.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 926.7119870461811,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.4.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 926.7119870461811,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.4.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 105.69985698533009,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.5.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 463.9669936116745,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.5.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 463.9669936116745,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.5.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 463.9669936116745,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.5.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 42.793392405793675,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.5.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 649.2465790332815,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.5.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 649.2465790332815,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.5.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 97.05797781633827,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.6.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 279.75031284568615,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.6.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 279.75031284568615,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.6.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 279.75031284568615,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.6.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 43.21138021361974,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.6.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 793.1806142121172,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.6.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 793.1806142121172,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.6.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 118.49401162631092,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.7.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 590.0932997095847,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.7.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 590.0932997095847,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.7.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 590.0932997095847,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.7.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 64.36910319296298,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.7.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 907.0590439761243,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.7.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 907.0590439761243,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.7.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 154.59339955779586,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.8.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 617.011686031985,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.8.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 617.011686031985,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.8.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 617.011686031985,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.8.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 59.68713806929546,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.8.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 885.7970719837522,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.8.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 885.7970719837522,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.8.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 154.56579520277748,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.9.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 1324.8743174309511,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.9.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 1324.8743174309511,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.9.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 1324.8743174309511,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.9.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 133.88232580899066,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.9.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1011.9337909741572,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.9.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1011.9337909741572,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.9.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 220.03504421888937,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.10.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 1242.4876707169599,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.10.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 1242.4876707169599,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.10.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 1242.4876707169599,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.10.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 126.89414252265006,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.10.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1041.4995349149694,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.10.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1041.4995349149694,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.10.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 378.5439892666106,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.11.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 2253.8575333449153,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.11.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 2253.8575333449153,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.11.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 2253.8575333449153,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.11.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 292.34330488635004,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.11.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 834.2934970518038,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.11.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 834.2934970518038,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.11.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 271.77433551279915,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.12.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 1849.1478595665735,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.12.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 1849.1478595665735,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.12.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 1849.1478595665735,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.12.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 125.65441442254742,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.12.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 787.954477656781,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.12.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 787.954477656781,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.12.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 239.78801298606209,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.13.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 2413.7897777946464,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.13.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 2413.7897777946464,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.13.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 2413.7897777946464,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.13.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 275.0455273766217,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.13.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 914.8346861094589,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.13.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 914.8346861094589,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.13.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 269.9437913344697,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.14.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 3115.8015732328527,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.14.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 3115.8015732328527,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.14.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 3115.8015732328527,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.14.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 303.97870529010754,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.14.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 977.3174918861639,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.14.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 977.3174918861639,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.14.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 329.43885302650585,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.15.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 5967.620626473742,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.15.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 5967.620626473742,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.15.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 5967.620626473742,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.15.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 332.9333797301515,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.15.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1256.9376708620396,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.15.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1256.9376708620396,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.15.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 523.8080711716416,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.16.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 7285.202816878561,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.16.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 7285.202816878561,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.16.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 7285.202816878561,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.16.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 366.1558591805537,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.16.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1440.9952028918256,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.16.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1440.9952028918256,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.16.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1176.0960337679294,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.17.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 19643.58790335865,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.17.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 19643.58790335865,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.17.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 19643.58790335865,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.17.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 983.7566992809482,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.17.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 2237.480737126734,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.17.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 2237.480737126734,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.17.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1648.4123209110892,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.18.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 21328.521618058778,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.18.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 21328.521618058778,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.18.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 21328.521618058778,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.18.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 728.6459310865738,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.18.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 2631.1716834761883,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.18.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 2631.1716834761883,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.18.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 1930.5677127991005,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.19.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 33363.54407654527,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.19.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 33363.54407654527,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.19.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 33363.54407654527,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.19.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 1117.7847920638776,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.19.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 2802.570711245846,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.19.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 2802.570711245846,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.19.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3777.346671549324,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.20.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 40439.880320200355,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.20.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 40439.880320200355,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.20.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 40439.880320200355,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.20.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 872.2993233642486,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.20.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3140.8112868123194,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.20.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3140.8112868123194,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.20.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3858.988471916594,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.21.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 58187.69320032542,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.21.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 58187.69320032542,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.21.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 58187.69320032542,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.21.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 896.500867404026,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.21.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3198.0949054873645,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.21.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3198.0949054873645,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.21.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 5843.261968231084,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.22.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 70958.28483540802,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.22.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 70958.28483540802,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.22.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 70958.28483540802,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.22.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 1621.1469102858637,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.22.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3186.124536729095,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.22.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3186.124536729095,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.22.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 5580.5193633836325,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.23.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 82325.11740189437,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.23.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 82325.11740189437,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.23.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 82325.11740189437,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.23.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 1466.5311978745317,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.23.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3303.4096241056236,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.23.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3303.4096241056236,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.23.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 4567.832809334662,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.24.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 123604.78277921872,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.24.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 123604.78277921872,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.24.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 123604.78277921872,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.24.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 2438.1008822637336,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.24.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3105.139729593051,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.24.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3105.139729593051,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.24.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 5647.957626073993,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.25.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 156278.22308932667,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.25.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 156278.22308932667,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.25.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 156278.22308932667,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.25.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 2756.998116835245,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.25.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3295.476702394173,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.25.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 3295.476702394173,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.25.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 6283.225121202575,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.26.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 171447.797951259,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.26.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 171447.797951259,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.26.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 171447.797951259,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.26.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 8673.839087049742,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.26.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 4875.113766743421,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.26.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 4875.113766743421,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.26.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 67075.54879130867,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.27.self_attn.q_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 105744.02550281827,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.27.self_attn.k_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 105744.02550281827,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.27.self_attn.v_proj",
+          "weights": 1048576,
+          "calibration_tokens": 54,
+          "lambda": 105744.02550281827,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.27.self_attn.o_proj",
+          "weights": 2097152,
+          "calibration_tokens": 54,
+          "lambda": 3662.270957496837,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.27.mlp.gate_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 38171.94387849786,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.27.mlp.up_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 38171.94387849786,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        },
+        {
+          "module": "model.layers.27.mlp.down_proj",
+          "weights": 3145728,
+          "calibration_tokens": 54,
+          "lambda": 976093.8626018956,
+          "overflow_before_clamp": 0,
+          "mode": "finite_signed_W4",
+          "stochastic": false,
+          "max_code": 7.000000000000001
+        }
+      ],
+      "finite_logits": true,
+      "logits_relative_l2": 0.47689390182495117,
+      "generated_token_ids": [
+        576,
+        3729
+      ],
+      "generated_text": " The night",
+      "forward_scope": "All decoder Linear weights replaced; embedding, norms and tied lm_head retained in FP32",
+      "export": "FP32 dequantized HF checkpoint, not packed low-bit storage",
+      "reload_max_logit_error": 0.0,
+      "elapsed_seconds": 76.923100833
+    },
+    "real_qwen_status": "已跑通：全部 decoder Linear 有限 W4 数值参考，FP32 反量化推理与保存；非原生 INT4"
+  }
 }
