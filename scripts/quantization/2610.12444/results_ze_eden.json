@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "nibble_roundtrip": true,
+    "zero_blocks": true,
+    "dyn4_min": 0.0032500000000000003,
+    "update_sr_expectation_relative_error": 1.8896712219907658e-16,
+    "first_update_equal_fp32": true,
+    "bytes_per_parameter": 1.0625,
+    "nf4_sr_expectation": true
+  },
+  "qwen": {
+    "model": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+    "mode": "ze_eden",
+    "parameter": "model.layers.0.self_attn.q_proj.weight",
+    "shape": [
+      2048,
+      1024
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "loss": 5.065597057342529,
+        "gradient_norm_before_clip": 19.70271873474121
+      },
+      {
+        "step": 2,
+        "loss": 6.0560503005981445,
+        "gradient_norm_before_clip": 7.669187068939209
+      },
+      {
+        "step": 3,
+        "loss": 3.1708362102508545,
+        "gradient_norm_before_clip": 1.9007045030593872
+      }
+    ],
+    "state_bytes": 2228224,
+    "fp32_state_bytes": 16777216,
+    "weight_max_delta": 4.1591498302295804e-05,
+    "seconds": 29.463458582999998,
+    "torch": "2.8.0",
+    "python": "3.9.6",
+    "scope": "CPU BF16 full forward, one Qwen q_proj FP32 master parameter; short artificial text. Not full SFT.",
+    "lm_head_switch_exercised_in_qwen_run": false
+  }
+}

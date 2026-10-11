@@ -1,0 +1,13 @@
+arxiv_id,submitted_date,category,keywords
+2610.12214,2026-10-09,knowledge_distillation,self-distillation;masked future;backbone calls
+2610.12266,2026-10-09,other,vector tokenization;sequence compression;MLLM
+2610.12274,2026-10-09,knowledge_distillation,teacher trajectories;SFT;compact SQL agents
+2610.12282,2026-10-09,other,sparse readout;spatial memory;bounded attention
+2610.12304,2026-10-09,pruning,pruning;sparsity;small-world allocation
+2610.12307,2026-10-09,other,token compression;adaptive patching;diffusion
+2610.12327,2026-10-09,pruning,pruning;autoregressive calibration;SpMV
+2610.12338,2026-10-09,other,KV cache compression;CCA;cross-layer merging
+2610.12374,2026-10-09,knowledge_distillation,few-step distillation;DMD;streaming cache
+2610.12427,2026-10-09,other,context compression;temporal sampling;streaming VLM
+2610.12444,2026-10-09,quantization,4-bit quantization;AdamW;ZIP-SR;ZE-EDEN
+2610.12448,2026-10-09,other,weight sharing;recurrent ViT;feature distillation

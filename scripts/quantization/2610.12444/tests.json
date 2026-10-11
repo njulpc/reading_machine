@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "nibble_roundtrip": true,
+    "zero_blocks": true,
+    "dyn4_min": 0.0032500000000000003,
+    "update_sr_expectation_relative_error": 1.8896712219907658e-16,
+    "first_update_equal_fp32": true,
+    "bytes_per_parameter": 1.0625,
+    "nf4_sr_expectation": true
+  }
+}

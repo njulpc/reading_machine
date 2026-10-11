@@ -1,0 +1,593 @@
+{
+  "run_date": "2026-10-12",
+  "report_date": "2026-10-11",
+  "generated_at": "2026-10-12T01:12:39.642012+08:00",
+  "timezone": "Asia/Shanghai",
+  "query_window": {
+    "start": "2026-10-09T00:00:00+08:00",
+    "end": "2026-10-11T23:59:59+08:00",
+    "basis": "official abs Submission history v1, converted from UTC"
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08",
+    "origin/feature/arxiv-daily-2026-09-09",
+    "origin/feature/arxiv-daily-2026-09-14",
+    "origin/feature/arxiv-daily-2026-09-15",
+    "origin/feature/arxiv-daily-2026-09-21",
+    "origin/feature/arxiv-daily-2026-09-22",
+    "origin/feature/arxiv-daily-2026-09-29"
+  ],
+  "historical_analyzed_ids_count": 550,
+  "historical_branch_count": 45,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 12,
+  "total_papers": 12,
+  "window_relevant_total": 12,
+  "daily_related_counts": {
+    "2026-10-09": 12,
+    "2026-10-10": 0,
+    "2026-10-11": 0
+  },
+  "daily_related_counts_note": "截至运行时 arXiv 官方网页未检出10/10及10/11相关记录；公告延迟由后续三日回查覆盖。",
+  "all_topic_window_counts": {
+    "2026-10-09": 110,
+    "2026-10-10": 0,
+    "2026-10-11": 0
+  },
+  "publication_ready": true,
+  "papers": [
+    {
+      "id": "2610.12214",
+      "title": "DiffuPlex: Accelerating Full-Duplex Spoken Dialog Models via Rolling Masked Diffusion",
+      "abstract": "Recent full-duplex spoken dialog models enable simultaneous listening and speaking, but fine-grained models still advance their backbone autoregressively at every interaction frame. We introduce DiffuPlex, a rolling masked diffusion framework that reduces this sequential computation by predicting multiple future user and assistant frames in a single backbone wake. DiffuPlex consumes only a confident prefix of each predicted future while interaction continues at the original frame rate. As user speech arrives, it checks the corresponding user predictions and, when the interaction diverges, preserves already played assistant content while revising only the unplayed future. We consider two inference policies over the same predictor: DiffuPlex-LISTEN consumes multiple future frames when they predict assistant silence, whereas DiffuPlex-SPEAK can also consume predicted assistant speech. Across full-duplex interaction and spoken-language evaluations, DiffuPlex substantially reduces sequential backbone computation while largely preserving interaction behavior and general capability. DiffuPlex-LISTEN and DiffuPlex-SPEAK achieve $1.46\\times$ and $1.59\\times$ deployment-path wall-clock speedups and $1.61\\times$ and $1.80\\times$ Core LM speedups, with all measured backbone invocations completing within the 80ms interaction interval. Human evaluation shows that LISTEN preserves speech naturalness and conversational quality, while SPEAK retains conversational quality with some degradation in speech naturalness.",
+      "subjects": "Sound (cs.SD) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-08T16:01:37+00:00",
+      "v1_local": "2026-10-09T00:01:37+08:00",
+      "url": "https://arxiv.org/abs/2610.12214",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.12214/tech_analysis.md",
+      "summary": "DiffuPlex 通过一次预测多帧、只播放可信前缀并随用户输入修订未来，把 backbone 调用摊薄到多个交互帧。",
+      "scores": {
+        "accuracy": 7,
+        "compression": 5,
+        "novelty": 8,
+        "reproducibility": 6
+      },
+      "score_reasons": [
+        "保留交互能力但SPEAK自然度下降",
+        "部署路径1.46–1.59倍，非权重压缩",
+        "预测、可信前缀与在线修订配合",
+        "细节充分，但本地未跑语音栈"
+      ],
+      "read_sections": "§3、§5.2、附录A、D.3",
+      "authors": [
+        "Heeseung Kim"
+      ],
+      "arxiv_id": "2610.12214",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T16:01:37+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "self-distillation",
+        "masked future",
+        "backbone calls"
+      ]
+    },
+    {
+      "id": "2610.12266",
+      "title": "DVD: Dynamic Vector Decoding for Efficient MLLM-based Perception",
+      "abstract": "Multimodal large language models have made remarkable progress in bridging vision and language, facilitating various perception tasks essential for human-machine interaction, robotics, and autonomous driving. However, existing MLLM-based perception methods predominantly rely on text-based coordinate representation, which suffers from excessive token overhead, or fixed-range quantization, which suffers from range and precision constraints, especially for 3D domains with unbounded spatial range and high localization accuracy requirements. To address these challenges, we propose a dynamic vector decoding method named DVD, which unifies the representation of 2D and 3D perception tasks. Specifically, we first transform diverse perceptual representation (i.e., 2D bounding boxes, 2D masks, and 3D bounding boxes) into 1D vector sequences, which are then mapped to compact discrete tokens in the high-dimensional space. Then, a lightweight de-tokenizer enables seamless integration with MLLMs by decoding output tokens back to original 2D and 3D perceptual representations. Extensive experiments on 2D and 3D perception benchmarks including RefCOCO series, SUN-RGBD, KITTI, Hypersim, nuScenes demonstrate that DVD achieves superior performance in 2D and 3D tasks and reduces significantly the token overhead and inference latency. DVD provides an efficient and general framework for integrating perception capabilities into MLLMs, overcoming the inherent limitations of existing methods.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-08T16:32:28+00:00",
+      "v1_local": "2026-10-09T00:32:28+08:00",
+      "url": "https://arxiv.org/abs/2610.12266",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.12266/tech_analysis.md",
+      "summary": "DVD 把2D/3D几何向量编码为少量离散token，以轻量解码器缩短MLLM生成序列。",
+      "scores": {
+        "accuracy": 7,
+        "compression": 7,
+        "novelty": 7,
+        "reproducibility": 6
+      },
+      "score_reasons": [
+        "较固定坐标token好，但3D低于文本",
+        "报告特定3D场景8.3倍延迟收益",
+        "跨任务几何token与Chamfer约束",
+        "设置明确，训练成本高且未本地复现"
+      ],
+      "read_sections": "§3、§4.2、§4.4、附录F",
+      "authors": [
+        "Jinghua Hou",
+        "Zhe Liu",
+        "Hengshuang Zhao"
+      ],
+      "arxiv_id": "2610.12266",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T16:32:28+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "vector tokenization",
+        "sequence compression",
+        "MLLM"
+      ]
+    },
+    {
+      "id": "2610.12274",
+      "title": "HarnessSQL: Harness-Native Training for SQL Agents in Realistic Database Environments",
+      "abstract": "Text-to-SQL models are commonly trained to map questions directly to static queries, whereas real-world database agents operate through stateful, multi-turn interaction with live databases -- inspecting schemas, executing probe queries, diagnosing errors, and revising hypotheses. This creates a critical train-deploy mismatch, as the execution harness that mediates this interaction is introduced only at inference time. To bridge this gap, we propose HarnessSQL, a harness-native post-training framework that preserves the full interaction structure throughout both supervised fine-tuning and reinforcement learning. HarnessSQL builds isolated, executable database environments paired with hidden execution oracles, rolls out teachers directly inside the target SQL harness, and retains only verified trajectories for full-sequence SFT, followed by execution-reward RL. Across Spider 2.0-SQLite, HarnessSQL dramatically boosts the execution accuracy of compact models, raising Qwen3-8B from 15.5% to 45.2% and Qwen3-14B from 22.2% to 54.8%, while transferring effectively to out-of-distribution interactive benchmarks such as BIRD-Interact and LiveSQLBench. Our findings demonstrate that training database agents directly within their execution harness is essential for mastering complex, long-horizon database workflows.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-08T16:36:39+00:00",
+      "v1_local": "2026-10-09T00:36:39+08:00",
+      "url": "https://arxiv.org/abs/2610.12274",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.12274/tech_analysis.md",
+      "summary": "HarnessSQL 在部署数据库工具环境中生成并验证教师轨迹，再对学生做全轨迹SFT和执行奖励RL。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 3,
+        "novelty": 7,
+        "reproducibility": 6
+      },
+      "score_reasons": [
+        "三个交互基准改善明显",
+        "8B对32B只是规模对照，无严格压缩倍率",
+        "将执行harness纳入完整蒸馏链",
+        "数据规模协议清晰，未本地重训"
+      ],
+      "read_sections": "§3.3、§4、§5.1、§7",
+      "authors": [
+        "Haolin Yang",
+        "Jipeng Zhang",
+        "Jian Xie",
+        "Shuaishuai Gong",
+        "Sirui Han",
+        "Yike Guo"
+      ],
+      "arxiv_id": "2610.12274",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T16:36:39+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "teacher trajectories",
+        "SFT",
+        "compact SQL agents"
+      ]
+    },
+    {
+      "id": "2610.12282",
+      "title": "Slot3R: Set-Associative Spatial Memory for Streaming 3D Reconstruction",
+      "abstract": "Streaming 3D reconstruction must preserve evidence from each frame while processing an expanding scene online. Spatial memory is a natural fit because it organizes history by reconstructed 3D location. Yet Point3R uses spatial proximity both to associate a new observation with an existing memory entry and to decide whether to fuse it, conflating co-location with state identity. Because pointers summarize image patches, nearby pointers may encode distinct surfaces, viewpoints, or visibility conditions; averaging them can destroy complementary evidence before later frames disambiguate it. We argue that location should determine address, not whether observations must merge. Slot3R realizes this principle as a training-free, set-associative retrofit that lets multiple states coexist at a shared address while keeping the pretrained Point3R backbone frozen. A bounded sparse readout further decouples persistent storage from per-frame decoder access. At 300-500 sampled frames, Slot3R reduces Point3R's point-cloud accuracy error (Acc) by 57.1%-63.1% on 7Scenes and 64.0%-72.0% on NeuralRGBD, lowers Sim(3)-aligned absolute trajectory error (ATE) on all three pose benchmarks, and remains competitive on video-depth estimation. It completes all evaluated settings from 600 to 1000 sampled frames at about 19 FPS under the same protocol, whereas Point3R and InfiniteVGGT run out of memory at 800 frames and beyond.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-08T16:39:39+00:00",
+      "v1_local": "2026-10-09T00:39:39+08:00",
+      "url": "https://arxiv.org/abs/2610.12282",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.12282/tech_analysis.md",
+      "summary": "Slot3R 将空间地址和特征状态区分，保留多槽状态并限制每帧读出的记忆token数。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 4,
+        "novelty": 7,
+        "reproducibility": 6
+      },
+      "score_reasons": [
+        "长流重建质量及OOM边界改善",
+        "只限640读出，无统一存储倍率",
+        "多槽地址与稀疏读出解耦",
+        "有压力测试和预算消融，未实跑"
+      ],
+      "read_sections": "§3.2–3.4、附录A.2、A.5",
+      "authors": [
+        "Xiyuan Zhang",
+        "Yanming Yang",
+        "Kaiyuan Xu",
+        "Ruibo Li",
+        "Chi Zhang"
+      ],
+      "arxiv_id": "2610.12282",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T16:39:39+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "sparse readout",
+        "spatial memory",
+        "bounded attention"
+      ]
+    },
+    {
+      "id": "2610.12304",
+      "title": "Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance",
+      "abstract": "Understanding large language model (LLM) reasoning requires looking beyond behavioral performance to examine how reasoning ability is reflected in internal organization. Inspired by neuroscience findings linking higher intelligence to stronger small-world organization in functional brain networks, we investigate small-world connectivity as a structural signature of LLM reasoning. We construct functional graphs from attention-head activation similarities and find that a higher small-world index (SWI), capturing local clustering and short global paths, consistently correlates with better fluid reasoning performance across models and training checkpoints. Since local clustering is central to small-world organization, we further examine how heads important for model performance connect within and across communities. We find that these heads tend to have a larger share of connection weight within their own communities (high core scores) and a more concentrated weight distribution across communities (low bridge scores). These observations motivate the hypothesis that high core and low bridge scores serve as structural indicators of head importance for reasoning capability. We validate this hypothesis through pruning, introducing Small-World Allocation (SWA), a hierarchical sparsity allocation method guided by these scores. Across six LLMs, SWA better preserves small-world organization and model performance than competing allocation strategies, reducing WikiText perplexity by up to 20%. Together, these findings identify small-world functional connectivity as a measurable signature of LLM reasoning performance, offering a structural perspective that complements behavioral evaluation.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-08T16:53:45+00:00",
+      "v1_local": "2026-10-09T00:53:45+08:00",
+      "url": "https://arxiv.org/abs/2610.12304",
+      "category": "pruning",
+      "analysis_path": "papers/2026-10/pruning/2610.12304/tech_analysis.md",
+      "summary": "SWA 根据小世界社区内连接与跨社区分散程度，分层分配SparseGPT/Wanda的剪枝预算。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "novelty": 7,
+        "reproducibility": 7
+      },
+      "score_reasons": [
+        "固定剪枝器三seed改善PPL",
+        "50/70%稀疏，未证实端到端倍率",
+        "把社区结构转为层和头预算",
+        "公式及消融明确，未本地复现"
+      ],
+      "read_sections": "§4.1–4.2、§5.1、§5.3–5.4、表3–4",
+      "authors": [
+        "Zheng Huang",
+        "Sansheng Cao",
+        "Enpei Zhang",
+        "Weikang Qiu",
+        "Elynn Chen",
+        "Xiang Zhang",
+        "Yaoqing Yang",
+        "Rex Ying",
+        "Dawei Zhou",
+        "Yujun Yan"
+      ],
+      "arxiv_id": "2610.12304",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T16:53:45+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "pruning",
+        "sparsity",
+        "small-world allocation"
+      ]
+    },
+    {
+      "id": "2610.12307",
+      "title": "BudgetPix: Compute-Adaptive Tokenization for Pixel-Space Image Diffusion",
+      "abstract": "Most image generation models rely on uniform tokenization, allocating the exact same computational budget to equally-sized image patches. This static paradigm cannot adapt to different resource constraints at inference time, and yields suboptimal quality-cost tradeoff by devoting the same effort to both plain backgrounds and intricate details. We propose BudgetPix, an adaptive tokenization framework that dynamically allocates compute based on visual complexity and spatial layout, enabling flexible computational budgeting at inference time. BudgetPix comprises three key components: (1) an adaptive encoder that maps a fixed-size image to a variable-length token sequence using an entropy-guided quadtree alongside a multi-scale patch embedder; (2) a scale-aware decoder reconstructs fixed-resolution images from multi-scale token sets; and (3) a flexible training and sampling schedule that enables pixel-space denoisers to operate across variable token counts. BudgetPix seamlessly integrates with existing pixel-space diffusion architectures, enabling a single checkpoint to be operated at a wide range of compute budgets. Evaluated on text-to-image generation, BudgetPix matches the fidelity of MiniT2I-L at $512^2$ and PixelDiT at $1024^2$ using just 25% of the original compute budget. In class-conditional generation using a MeanFlow backbone, BudgetPix requires merely 60% of the full compute budget to produce images with near-zero quality degradation, observing a marginal 0.8-point increase in FID. Comprehensive assessments by human and VLM judges confirm that BudgetPix establishes a significantly improved quality-efficiency tradeoff over prior budget-adaptive baselines. More details are available at our project page: this https URL",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-08T16:54:40+00:00",
+      "v1_local": "2026-10-09T00:54:40+08:00",
+      "url": "https://arxiv.org/abs/2610.12307",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.12307/tech_analysis.md",
+      "summary": "BudgetPix 根据图像局部熵选择大小不同的patch，用可变token预算减少扩散主干计算。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "novelty": 8,
+        "reproducibility": 6
+      },
+      "score_reasons": [
+        "多主干质量预算曲线，极端预算有代价",
+        "25%预算实速1.36–3.59倍依模型",
+        "熵四叉树配合可恢复多尺度token",
+        "细节与表格充分，微调成本高"
+      ],
+      "read_sections": "§3、§4.1、附录B.4",
+      "authors": [
+        "Ozgur Kara",
+        "Yujia Chen",
+        "Daniel Watson",
+        "David Forsyth",
+        "James Matthew Rehg",
+        "Wen-Sheng Chu",
+        "Du Tran"
+      ],
+      "arxiv_id": "2610.12307",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T16:54:40+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "token compression",
+        "adaptive patching",
+        "diffusion"
+      ]
+    },
+    {
+      "id": "2610.12327",
+      "title": "SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference",
+      "abstract": "The memory-bound nature of the decoding stage of large language model (LLM) inference incurs significant latency. Layer-wise training-free network pruning approaches guided by the Hessian have been a prominent solution to this problem, as pruning reduces the number of nonzero parameters read from memory during decoding. Nevertheless, typical methods in this line compute the Hessian using pre-collected natural sequences, whereas the model is fed self-generated tokens during decoding, creating a distribution shift between the two sequences. The Hessian calculated on the natural sequence is different from that calculated on the generated sequence. We observe that this discrepancy causes the activation distribution during generation to deviate from that used for pruning, further hurting the pruned model performance. Moreover, most existing LLM pruning methods that bring actual speedup primarily target the sparse matrix-matrix (SpMM) multiplication, providing limited support for the sparse matrix-vector (SpMV) operations, which dominate decoding. To solve these problems, we introduce SparseDecoding, a principled decoding-aware pruning framework tailored for accurate and efficient LLM decoding. Specifically, at the algorithmic axis, SparseDecoding constructs calibration matrices from layer-wise activations collected during the dense-model autoregressive generation, excluding prefill, thereby aligning the pruning objective with the decoding activations. At the system axis, we develop an optimized N:M sparse matrix-vector kernel with bitmask indexing and fixed-step traversal. Substantial empirical results on representative LLMs (Llama-3.1-8B, Llama-3.3-70B, Qwen3-14B / 32B) demonstrate that our method consistently outperforms standard fixed-text calibration on the long-form generation benchmarks while achieving up to 1.48x end-to-end wall-clock decoding speedup on A100 GPUs.",
+      "subjects": "Machine Learning (cs.LG) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-08T17:06:32+00:00",
+      "v1_local": "2026-10-09T01:06:32+08:00",
+      "url": "https://arxiv.org/abs/2610.12327",
+      "category": "pruning",
+      "analysis_path": "papers/2026-10/pruning/2610.12327/tech_analysis.md",
+      "summary": "SparseDecoding 用dense模型自身生成时的激活校准剪枝，并用bitmask稀疏内核把50%稀疏转成解码加速。",
+      "scores": {
+        "accuracy": 7,
+        "compression": 6,
+        "novelty": 8,
+        "reproducibility": 7
+      },
+      "score_reasons": [
+        "比C4显著提升但未恢复dense",
+        "50%稀疏带来1.34–1.48倍实速",
+        "解码激活校准与SpMV联合",
+        "公式、预算和速度协议齐全"
+      ],
+      "read_sections": "§3–5",
+      "authors": [
+        "Qitong Wang",
+        "Xinwei Niu",
+        "Mingluo Su",
+        "Shanwei Zhao",
+        "Shiai Zhu",
+        "Huan Wang"
+      ],
+      "arxiv_id": "2610.12327",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T17:06:32+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "pruning",
+        "autoregressive calibration",
+        "SpMV"
+      ]
+    },
+    {
+      "id": "2610.12338",
+      "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+      "abstract": "While caching key-value (KV) states accelerates Large Language Model (LLM) decoding, this cache can dominate memory usage at long context lengths. One solution is to compress this memory by exploiting inter-layer cache similarities. However, most existing techniques necessitate architectural changes to LLMs and incur substantial overhead. In this work, we propose a symmetry-aware value cache merging strategy that reduces cache memory while avoiding both harmful performance degradation and architectural overhead during decoding. Furthermore, we show that this approach can be exploited alongside existing cache compression techniques, composing with high-ratio quantization or key cache pruning to reach compression ratios that neither method reaches alone, with minimal additional cost. Ultimately, our findings reveal a major source of underutilized capacity in the value cache, offering a simple yet highly effective direction for scaling context windows under memory constraints.",
+      "subjects": "Computation and Language (cs.CL) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-08T17:14:28+00:00",
+      "v1_local": "2026-10-09T01:14:28+08:00",
+      "url": "https://arxiv.org/abs/2610.12338",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.12338/tech_analysis.md",
+      "summary": "VFold 先把邻层value头对齐并将变换折入权重，再共享平均缓存，在25%总KV节省下保留大部分长上下文能力。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 5,
+        "novelty": 8,
+        "reproducibility": 7
+      },
+      "score_reasons": [
+        "25%KV节省下保留至少98.3%相对任务分",
+        "独立总KV仅约1.33倍，组合另计",
+        "对称性对齐与attention后合并",
+        "校准、保护窗口和效能协议明确"
+      ],
+      "read_sections": "§4–7；表2–5",
+      "authors": [
+        "Neha Verma",
+        "Sungwon Kim",
+        "Kenton Murray",
+        "Kevin Duh"
+      ],
+      "arxiv_id": "2610.12338",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T17:14:28+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "KV cache compression",
+        "CCA",
+        "cross-layer merging"
+      ]
+    },
+    {
+      "id": "2610.12374",
+      "title": "AgentGarten: Code Worlds for Evolving Agents",
+      "abstract": "Interactive virtual worlds allow agents to learn through exploration and interaction. What agents can learn is bounded by the environments they practice in, which must be faithful, with consistent state, rules, and dynamics, and realistic, with observations that follow the real-world visual distributions. Achieving both across diverse worlds remains a bottleneck. We introduce AgentGarten, a framework that couples simulators and game engines with a shared neural renderer to build real-time interactive environments. Its simulation backends maintain persistent world state and execute program-defined interaction rules, while the renderer generates visual observations from structured conditions exported through a common interface. To build the neural renderer, we adapt a pretrained video model to geometry conditions, distill it with our proposed Adversarial Forcing, and optimize inference for real-time interaction. Adversarial Forcing makes history prefilling differentiable through exact replay, so that losses on later predictions update how the renderer encodes prior observations, and adds real-data adversarial supervision to improve its visual quality. In AgentGarten, agents perceive the world through visual observations, interact with it in real time, and improve by distilling each round of experience into playbooks that subsequent agents inherit and refine. Our empirical study demonstrates a substantial gain in learning efficiency, with agents learning from just 4 rounds compared with millions for a conventional reinforcement learning counterpart. As new worlds can be written as code and rendered through the same interface, environments can scale in both number and difficulty alongside their agents, a step toward agents that keep evolving through interactive experience.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-08T17:32:00+00:00",
+      "v1_local": "2026-10-09T01:32:00+08:00",
+      "url": "https://arxiv.org/abs/2610.12374",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.12374/tech_analysis.md",
+      "summary": "AgentGarten 的Adversarial Forcing通过精确重放恢复历史编码梯度，结合DMD与真实视频对抗监督训练四步实时渲染器。",
+      "scores": {
+        "accuracy": 6,
+        "compression": 6,
+        "novelty": 8,
+        "reproducibility": 6
+      },
+      "score_reasons": [
+        "定性长流改善，缺完整量化质量表",
+        "四步36.5FPS但无统一教师倍率",
+        "保留历史梯度与执行一致重放",
+        "公式和运行分解充分，需H100视频训练"
+      ],
+      "read_sections": "§3.4–3.5、§4、附录A.4",
+      "authors": [
+        "Jiawei Chi",
+        "Shangchen Miao",
+        "Zhiyuan Shi",
+        "Kailu Wu",
+        "Hanyang Wang",
+        "Weiliang Chen",
+        "Qiyu Dai",
+        "Jinshan Ren",
+        "Jun Gao",
+        "Mingsheng Long",
+        "Yueqi Duan",
+        "Jiangran Lyu",
+        "Jialong Wu",
+        "Fangfu Liu"
+      ],
+      "arxiv_id": "2610.12374",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T17:32:00+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "few-step distillation",
+        "DMD",
+        "streaming cache"
+      ]
+    },
+    {
+      "id": "2610.12427",
+      "title": "FastBench: Can Streaming VLMs Perceive High-Dynamic Real-World Streams?",
+      "abstract": "Streaming Video Large Language Models (VLMs) enable continuous video understanding, yet existing benchmarks focus on low-dynamic scenarios. Under bounded context budgets, models must balance temporal history, spatial resolution, and temporal granularity; sparse sampling at 1--2 FPS misses fast events. We introduce FastBench to evaluate high-dynamic perception in real-world video streams. Its trajectory-grounded pipeline combines QA generation from high-FPS clips, filtering of questions answerable at 2 FPS, answer verification using SAM3 and CoTracker3 trajectories, and three rounds of human inspection. FastBench contains 306 QA pairs across eight domains, six capabilities, and forward, instant, and backward temporal scopes, with human-annotated evidence intervals. We also present ProactiveFrame, a training-free baseline that adjusts incoming frame rates through text tokens. A dual-tier sliding window retains recent high-FPS observations while downsampling older ones into sparse history. Experiments reveal substantial limitations: the strongest model, Gemini-3.5-Flash, scores only 50.7%. Denser sampling improves Qwen3-VL-8B from 32.9% at 2 FPS to 44.6% at 24 FPS, but gains saturate as history is compressed. ProactiveFrame outperforms sparse uniform sampling by 5.4 and 1.5 percentage points, yet remains well below oracle-guided focusing, showing that current VLMs struggle to determine from the stream alone when finer temporal perception is needed. FastBench provides a testbed for high-dynamic streaming video understanding. Code and data: this https URL .",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-08T17:55:20+00:00",
+      "v1_local": "2026-10-09T01:55:20+08:00",
+      "url": "https://arxiv.org/abs/2610.12427",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.12427/tech_analysis.md",
+      "summary": "FastBench 表明高帧率能改善短时感知却挤掉历史，ProactiveFrame用双层窗口动态保留高密度近帧与低密度旧帧。",
+      "scores": {
+        "accuracy": 6,
+        "compression": 3,
+        "novelty": 6,
+        "reproducibility": 7
+      },
+      "score_reasons": [
+        "较2FPS提升但不及更密集采样",
+        "有界输入预算，无实测字节倍率",
+        "把动态事件与历史压缩冲突显式评测",
+        "基线容易实现，评测需要视频及judge"
+      ],
+      "read_sections": "§3.3、§4",
+      "authors": [
+        "Yuxuan Hu",
+        "Weikang Shi",
+        "Yang Bo",
+        "Xudong Lu",
+        "Xintong Guo",
+        "Shuhan Li",
+        "Yuyang He",
+        "Huankang Guan",
+        "Peiwen Sun",
+        "Yunqiao Yang",
+        "Wenbo Li",
+        "Rui Liu",
+        "Hongsheng Li"
+      ],
+      "arxiv_id": "2610.12427",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T17:55:20+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "context compression",
+        "temporal sampling",
+        "streaming VLM"
+      ]
+    },
+    {
+      "id": "2610.12444",
+      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+      "abstract": "Quantizing AdamW's optimizer states reduces persistent storage, but quantization errors propagate through the moment recurrences and perturb subsequent adaptive updates. We redesign 4-bit optimizer-state quantization for AdamW from the perspective of \\emph{rounding space}: the coordinate in which a quantizer chooses between adjacent reconstruction levels. For the second moment, a local analysis of the quantization cell adjacent to zero shows that small mean state error need not imply small mean preconditioner error at the next step. A one-dimensional quadratic construction further shows qualitatively different optimization dynamics under state-space and preconditioner-space rounding. These results motivate Zero-Inclusive Preconditioner-space Stochastic Rounding (\\textbf{ZIP-SR}), which retains zero in the second-moment codebook and computes stochastic-rounding probabilities in preconditioner space. As a complementary route, Zero-Excluding EDEN calibration (\\textbf{ZE-EDEN}) uses a zero-excluding second-moment codebook and rescales the quantized second-moment block to mitigate the preconditioner distortion caused by the positive quantization floor. Both configurations use 4-bit NormalFloat (NF4) for the first moment, with targeted stochastic rounding of the LM-head first moment during the final 10\\% of training. Across GPT- and Llama-style pretraining experiments ranging from \\textbf{130M} to \\textbf{2.7B} parameters, both methods reduce TorchAO 4-bit AdamW's mean validation-loss gap to 32-bit AdamW at every evaluated model size, with the largest reported gap reduction reaching \\textbf{70\\%}. In full-parameter supervised fine-tuning, both recipes achieve lower validation loss than TorchAO while remaining close to 32-bit AdamW on downstream tasks.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-08T17:58:09+00:00",
+      "v1_local": "2026-10-09T01:58:09+08:00",
+      "url": "https://arxiv.org/abs/2610.12444",
+      "category": "quantization",
+      "analysis_path": "papers/2026-10/quantization/2610.12444/tech_analysis.md",
+      "summary": "ZIP-SR在预条件器坐标舍入，ZE-EDEN校准正值下限，改善4bit AdamW的误差传播。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "novelty": 8,
+        "reproducibility": 8
+      },
+      "score_reasons": [
+        "多规模配对seed降低loss差",
+        "packed双moment7.53倍",
+        "将舍入空间与非线性更新联系",
+        "已重新跑Qwen局部验证，完整训练未复现"
+      ],
+      "read_sections": "§3–5、附录B.1",
+      "authors": [
+        "Hanyang Li",
+        "Shao Tang",
+        "Daniel Thomas Braithwaite",
+        "Gregory Dexter",
+        "Leonardo Neves",
+        "Aman Gupta",
+        "Hiroto Udagawa",
+        "Abhishek Shivanna",
+        "Daniel Silva",
+        "Rohan Ramanath"
+      ],
+      "arxiv_id": "2610.12444",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T17:58:09+00:00",
+      "reproduction_path": "scripts/quantization/2610.12444",
+      "keywords": [
+        "4-bit quantization",
+        "AdamW",
+        "ZIP-SR",
+        "ZE-EDEN"
+      ]
+    },
+    {
+      "id": "2610.12448",
+      "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+      "abstract": "In this work, we show that a single Transformer block, applied recurrently, can match the accuracy of a full-depth vision encoder at comparable inference FLOPs without intermediate feature distillation. reViT restores depth-specific transformations by representing the FFN at each recurrent depth as a convex combination of a small shared expert bank. A continuous normalized-depth coordinate programs this mixture, defining a resampleable trajectory through FFN parameter space. We evaluate this design in two regimes: supervised ImageNet-1k training and distillation from a DINOv2 teacher. Across both regimes, controlled adaptations identify weight-space merging as the strongest tested MoE family at a matching one-FFN budget, ahead of the token-dispatch and output-mixture alternatives. Trained from scratch, reViT-B/16 attains DeiT III accuracy with about 70\\% fewer stored parameters. An 8-experts model distilled using only the teacher's output features retains nearly all of its DINOv2 teacher's linear-probe accuracy and transfers across classification, segmentation, and depth prediction. Elastic-depth training allows one checkpoint (trained model) to operate at multiple tested depths by resampling the same normalized coordinate interval. For fixed-depth deployment, the recurrent block can be materialized as a conventional dense graph, removing online routing and merging without changing the one-FFN-per-depth compute but expanding deployment storage.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-08T17:58:36+00:00",
+      "v1_local": "2026-10-09T01:58:36+08:00",
+      "url": "https://arxiv.org/abs/2610.12448",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.12448/tech_analysis.md",
+      "summary": "reViT 用一个共享attention块和随深度变化的FFN专家权重混合，在相近FLOPs下大幅减少存储参数。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "novelty": 8,
+        "reproducibility": 7
+      },
+      "score_reasons": [
+        "B模型略优，L及蒸馏有小幅损失",
+        "B约3.67倍、L约7.44倍存储减少",
+        "深度连续程序控制权重空间专家混合",
+        "公开公式及延迟表，未本地训练"
+      ],
+      "read_sections": "§3、§4.2、附录A.5",
+      "authors": [
+        "Adrian Bulat",
+        "Yassine Ouali",
+        "Georgios Tzimiropoulos"
+      ],
+      "arxiv_id": "2610.12448",
+      "submitted_date": "2026-10-09",
+      "submitted_at_utc": "2026-10-08T17:58:36+00:00",
+      "reproduction_path": null,
+      "keywords": [
+        "weight sharing",
+        "recurrent ViT",
+        "feature distillation"
+      ]
+    }
+  ]
+}

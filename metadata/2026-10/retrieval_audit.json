@@ -1,0 +1,378 @@
+{
+  "generated_at": "2026-10-12T01:12:39.642012+08:00",
+  "list_coverage": [
+    {
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000&skip=0",
+      "total": 230,
+      "actual": 230,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "New submissions (showing 88 of 88 entries)",
+          "actual": 88
+        },
+        {
+          "heading": "Cross submissions (showing 56 of 56 entries)",
+          "actual": 56
+        },
+        {
+          "heading": "Replacement submissions (showing 86 of 86 entries)",
+          "actual": 86
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0",
+      "total": 1929,
+      "actual": 1929,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "Fri, 9 Oct 2026 (showing 324 of 324 entries )",
+          "actual": 324
+        },
+        {
+          "heading": "Thu, 8 Oct 2026 (showing 353 of 353 entries )",
+          "actual": 353
+        },
+        {
+          "heading": "Wed, 7 Oct 2026 (showing 355 of 355 entries )",
+          "actual": 355
+        },
+        {
+          "heading": "Tue, 6 Oct 2026 (showing 600 of 600 entries )",
+          "actual": 600
+        },
+        {
+          "heading": "Mon, 5 Oct 2026 (showing 297 of 297 entries )",
+          "actual": 297
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "total": 472,
+      "actual": 472,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "New submissions (showing 178 of 178 entries)",
+          "actual": 178
+        },
+        {
+          "heading": "Cross submissions (showing 146 of 146 entries)",
+          "actual": 146
+        },
+        {
+          "heading": "Replacement submissions (showing 148 of 148 entries)",
+          "actual": 148
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000&skip=0",
+      "total": 765,
+      "actual": 765,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "Fri, 9 Oct 2026 (showing 144 of 144 entries )",
+          "actual": 144
+        },
+        {
+          "heading": "Thu, 8 Oct 2026 (showing 118 of 118 entries )",
+          "actual": 118
+        },
+        {
+          "heading": "Wed, 7 Oct 2026 (showing 147 of 147 entries )",
+          "actual": 147
+        },
+        {
+          "heading": "Tue, 6 Oct 2026 (showing 243 of 243 entries )",
+          "actual": 243
+        },
+        {
+          "heading": "Mon, 5 Oct 2026 (showing 113 of 113 entries )",
+          "actual": 113
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "total": 302,
+      "actual": 302,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "New submissions (showing 169 of 169 entries)",
+          "actual": 169
+        },
+        {
+          "heading": "Cross submissions (showing 38 of 38 entries)",
+          "actual": 38
+        },
+        {
+          "heading": "Replacement submissions (showing 95 of 95 entries)",
+          "actual": 95
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0",
+      "total": 970,
+      "actual": 970,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "Fri, 9 Oct 2026 (showing 207 of 207 entries )",
+          "actual": 207
+        },
+        {
+          "heading": "Thu, 8 Oct 2026 (showing 186 of 186 entries )",
+          "actual": 186
+        },
+        {
+          "heading": "Wed, 7 Oct 2026 (showing 164 of 164 entries )",
+          "actual": 164
+        },
+        {
+          "heading": "Tue, 6 Oct 2026 (showing 285 of 285 entries )",
+          "actual": 285
+        },
+        {
+          "heading": "Mon, 5 Oct 2026 (showing 128 of 128 entries )",
+          "actual": 128
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "total": 472,
+      "actual": 472,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "New submissions (showing 125 of 125 entries)",
+          "actual": 125
+        },
+        {
+          "heading": "Cross submissions (showing 177 of 177 entries)",
+          "actual": 177
+        },
+        {
+          "heading": "Replacement submissions (showing 170 of 170 entries)",
+          "actual": 170
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000&skip=0",
+      "total": 14,
+      "actual": 14,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "New submissions (showing 8 of 8 entries)",
+          "actual": 8
+        },
+        {
+          "heading": "Cross submissions (showing 1 of 1 entries)",
+          "actual": 1
+        },
+        {
+          "heading": "Replacement submissions (showing 5 of 5 entries)",
+          "actual": 5
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000&skip=0",
+      "total": 74,
+      "actual": 74,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "Fri, 9 Oct 2026 (showing 9 of 9 entries )",
+          "actual": 9
+        },
+        {
+          "heading": "Thu, 8 Oct 2026 (showing 8 of 8 entries )",
+          "actual": 8
+        },
+        {
+          "heading": "Wed, 7 Oct 2026 (showing 26 of 26 entries )",
+          "actual": 26
+        },
+        {
+          "heading": "Tue, 6 Oct 2026 (showing 14 of 14 entries )",
+          "actual": 14
+        },
+        {
+          "heading": "Mon, 5 Oct 2026 (showing 17 of 17 entries )",
+          "actual": 17
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0",
+      "total": 1754,
+      "actual": 1754,
+      "skip": 0,
+      "show": 2000,
+      "groups": [
+        {
+          "heading": "Fri, 9 Oct 2026 (showing 302 of 302 entries )",
+          "actual": 302
+        },
+        {
+          "heading": "Thu, 8 Oct 2026 (showing 282 of 282 entries )",
+          "actual": 282
+        },
+        {
+          "heading": "Wed, 7 Oct 2026 (showing 350 of 350 entries )",
+          "actual": 350
+        },
+        {
+          "heading": "Tue, 6 Oct 2026 (showing 554 of 554 entries )",
+          "actual": 554
+        },
+        {
+          "heading": "Mon, 5 Oct 2026 (showing 266 of 266 entries )",
+          "actual": 266
+        }
+      ]
+    }
+  ],
+  "list_occurrences": 6982,
+  "unique_scanned_ids": 4403,
+  "abs_parsed": 4403,
+  "abs_errors": 0,
+  "abs_cache_reused": 4403,
+  "cache_provenance_file": "/Users/lipengcheng/.codex/automations/arxiv/runs/2026-10-12/cache_provenance.json",
+  "window_abs_refreshed": 110,
+  "window_abs_unchanged": 110,
+  "abstract_review_count": 110,
+  "out_of_window_handling": "其余4293条通过官方abs v1日期先排除，已解析标题摘要，但不声称本轮逐篇全文或语义精读；窗口110条标题摘要全部逐篇语义复核。",
+  "boundary_control": {
+    "outside": {
+      "id": "2610.12207",
+      "title": "SciTBERT: A family of chronologically consistent language models for scientific and technological language processing",
+      "abstract": "Pre-trained transformer models are increasingly being used to study scientific and technological progress. Encoders tuned to paper or patent text outperform general-purpose models on downstream classification, regression, and proximity tasks within science and technology. However, the applicability of these models for studying time-dependent or archival properties of science, technology, and their interface is limited due to lookahead and domain biases inherent to these pre-trained models. These limitations arise from training on corpora with unconstrained chronological and text source distributions. We introduce SciTBERT: a family of chronologically consistent BERT-derived language models trained on text from scientific papers, patents, and high-quality educational web text with training data cutoff dates spanning each year between 2013 and 2025. We also post-train these models in a chronologically-consistent manner using paper and patent citations, creating SciTBERT-CI model family. We find that these models generally outperform predecessor domain-specific encoder models even when training data is limited by early year restrictions in the corpus. To further investigate the extent to which this class of models can learn representations that bridge science and technology, we introduce the PatRepEval benchmark, a suite of patent-related text embedding tasks at the science-technology interface. Performance in a variety of classification, regression, and retrieval tasks spanning papers and patents highlights the importance of aligning encoder model representations with the domain distributions of their downstream tasks, and chronologically consistent encoders can match or exceed models trained without temporal constraints.",
+      "subjects": "Computation and Language (cs.CL) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-08T15:57:45+00:00",
+      "v1_local": "2026-10-08T23:57:45+08:00",
+      "url": "https://arxiv.org/abs/2610.12207"
+    },
+    "first_inside": {
+      "id": "2610.12211",
+      "title": "Verification with Transfer: Exact Information Frontiers and Their Price in Calls",
+      "abstract": "A verifier that accepts or rejects whole answers reveals little: under a flat prior over $k$-bit answers, zero error needs $2^k-1$ verifications. The usual remedy is to solve related source tasks, either all first, as a curriculum does, or interleaved with verification. We price this remedy in information and in calls. With an exact verifier, the least causal information that any interleaving of source calls and $n$ verifications needs to succeed with probability $s$ is a list rate-distortion function, attained by one observation before any verification. It lower-bounds the expected number of binary source calls, which designed sources meet within $1+\\log_25$ calls for unique answers and within a logarithmic term in general, where no additive constant suffices. With an exact verifier and fixed sources, moving every call before the first verification preserves all hard caps on calls, although interleaving can save unboundedly many expected calls; under a noisy verifier, source-first protocols can lose unbounded factors in information and in error. For linear banks over $\\mathbb{F}_2$, optimal accuracy has a closed form, and after a polynomial-time reduction the budget profile is computable in time $2^{O(h^2)}\\operatorname{poly}(J,k+h)$ for $J$ sources and nuisance dimension $h$. In these banks, for zero error under a hard cap, the calls beyond the rounded-up information price are exactly those spent on nuisance. Every numbered result apart from two clauses about the planner is machine-checked in Lean 4, assuming two published results. Used as a ruler, the frontier shows a small transformer using all delivered bits at latent dimension $5$ and none at $11$ within fixed training budgets; in a test with predictions recorded before training, low XOR degree of the target bits did not suffice for their use.",
+      "subjects": "Machine Learning (cs.LG) ; Cryptography and Security (cs.CR); Information Theory (cs.IT); Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-08T16:00:23+00:00",
+      "v1_local": "2026-10-09T00:00:23+08:00",
+      "url": "https://arxiv.org/abs/2610.12211"
+    }
+  },
+  "raw_related_occurrences": {
+    "2026-10-09": 34,
+    "2026-10-10": 0,
+    "2026-10-11": 0
+  },
+  "deduplicated_related_counts": {
+    "2026-10-09": 12,
+    "2026-10-10": 0,
+    "2026-10-11": 0
+  },
+  "included_ids": [
+    "2610.12214",
+    "2610.12266",
+    "2610.12274",
+    "2610.12282",
+    "2610.12304",
+    "2610.12307",
+    "2610.12327",
+    "2610.12338",
+    "2610.12374",
+    "2610.12427",
+    "2610.12444",
+    "2610.12448"
+  ],
+  "excluded_borderline": {
+    "2610.12355": "GPD在同一VLM上做RGB/3D特权条件自蒸馏，控制组参数规模不变，未研究小容量学生、推理步数或状态压缩；读取§3.3、§4.1–4.2。",
+    "2610.12367": "SGUID压的是训练用skill bank，不是模型参数或部署状态；§8明确不评价技能作为推理补丁，不能把11倍技能数减少写成模型压缩。读取§3、§8。",
+    "2610.12465": "SGS主体是reset采样，附录C.3蒸馏将点云教师迁移到双ResNet18 RGB学生，未建立更小模型或部署计算压缩对照。读取附录C.3、§5。",
+    "2610.12469": "同一图像编辑器的验证式自训练，未减少模型、采样步数或状态；读取§6–7。",
+    "2610.12337": "在2D恢复网络上增加跨切片动力学及蒸馏正则，以医学恢复为目标；Bi-CfC与Bi-GRU的成本对照不是对原模型的压缩。读取摘要、§6。",
+    "2610.12390": "离线生成结构化特征程序，训练目标是下游预测特征搜索，不是对既有模型压缩/教师策略蒸馏；读取摘要、§6。",
+    "2610.12369": "代码政策代替神经政策的范式及代码搜索，不是压缩训练好的神经模型或状态；读取摘要、§6。",
+    "2610.12376": "语言学词表与分词结构优化，未提出神经参数/状态压缩或执行成本实测；fertility改善不直接计模型压缩。读取摘要、§7。"
+  },
+  "keyword_review": {
+    "quantization": [
+      "2610.12444",
+      "2610.12338",
+      "2610.12266"
+    ],
+    "quantize": [
+      "2610.12444"
+    ],
+    "low-bit": [],
+    "model compression": [],
+    "compress": [
+      "2610.12427",
+      "2610.12376",
+      "2610.12338",
+      "2610.12336",
+      "2610.12250"
+    ],
+    "pruning": [
+      "2610.12338",
+      "2610.12327",
+      "2610.12304"
+    ],
+    "sparsity": [
+      "2610.12336",
+      "2610.12304"
+    ],
+    "knowledge distillation": [],
+    "distill": [
+      "2610.12469",
+      "2610.12465",
+      "2610.12448",
+      "2610.12403",
+      "2610.12374",
+      "2610.12367",
+      "2610.12355",
+      "2610.12337"
+    ],
+    "teacher": [
+      "2610.12448",
+      "2610.12421",
+      "2610.12367",
+      "2610.12355",
+      "2610.12274"
+    ],
+    "student": [
+      "2610.12363"
+    ],
+    "KV cache compression": [],
+    "mixed precision": [],
+    "GPTQ": [],
+    "AWQ": []
+  },
+  "historical_metadata_only_not_complete": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "main_sha": "abfe8f2767d8bf881d586718ab4db33fc576be6a"
+}
