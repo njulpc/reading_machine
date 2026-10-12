@@ -1,0 +1,320 @@
+{
+  "run_date": "2026-10-13",
+  "checked_at": "2026-10-13T01:12:00.299120+08:00",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-10-10T00:00:00+08:00",
+    "end": "2026-10-12T23:59:59+08:00",
+    "dates": [
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12"
+    ],
+    "date_basis": "arXiv abs Submission history v1 converted from UTC"
+  },
+  "report_date": "2026-10-12",
+  "dedup_source_branches": [
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-29",
+      "sha": "37139ece193fa4d66212a2f2951ed88a8d83b76a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-30",
+      "sha": "8fe81f3241431f5f6af227ce768402d6f91f97ca"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-31",
+      "sha": "25e3d35f37713e9b407a24c6f7b045dd26208f92"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-01",
+      "sha": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-02",
+      "sha": "f397bf7f726f7b7b8286a035d43da5c12236d336"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-03",
+      "sha": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-04",
+      "sha": "f798a00e0569952212d0e6451f00ba6ea28de99a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-05",
+      "sha": "333264be93bb365ee7d29436235e6b056427943e"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-06",
+      "sha": "67600577ca268cd88675d221f0e19fdb59673789"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-07",
+      "sha": "87a4eb0f56e25253b22b8c7e9a288af8a467386a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-08",
+      "sha": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-10",
+      "sha": "652ee043ff7fad81734a95010b9b49b6dca1ec11"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-12",
+      "sha": "5dea9ebeff4db72522e85962764ae51a4978a4e6"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-14",
+      "sha": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-15",
+      "sha": "e463baea815c06d95ffc36eec034113b28db7927"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-16",
+      "sha": "940ef56b2ebd4bd22ce5636302234aaa63691e2d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-17",
+      "sha": "1320530c9060d6acfd6a6814ebe65415b62c760d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-18",
+      "sha": "2190e4aef62423032c78b7594a0e208c6d128c0d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-19",
+      "sha": "3518b1fff91bab3cd78421810c0798177060063f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-20",
+      "sha": "6413646a6fec8b54f937415084c2df3e99b358a1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-21",
+      "sha": "dc8a46573315edb88419bb4eb181bea89d209de7"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-22",
+      "sha": "0dd4154cce8306873ec37767b6ab27e00b07735f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-23",
+      "sha": "e1a83986b75aec3a0289a50082ac44a6b359a130"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-24",
+      "sha": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-25",
+      "sha": "508ce04ebcda0238aceb1d32991db50aac8904e0"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-26",
+      "sha": "4a627bc35cb9075ac416e12165c9418f79e1bbee"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-27",
+      "sha": "f57ca87589c728a68851f21acdff1c333b402e35"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-28",
+      "sha": "daeb352421a9263136927bc71497c86ddb512c77"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-29",
+      "sha": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-30",
+      "sha": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-31",
+      "sha": "d21ad3ba2970c7664ffd084b568f61b1dbde8866"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-01",
+      "sha": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-02",
+      "sha": "ab05a346a491f043142867c74593f45e669812d1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-03",
+      "sha": "710202d696a1295b25e55f50d4fee966434549d4"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-04",
+      "sha": "623673ccf816fda6de51daf471f55c79b0a24801"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-05",
+      "sha": "1ab9858c9e986133aafa40226b1c5af0a760c175"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-06",
+      "sha": "05108f7ef5b13b0fcc118d633a53c99d31d55166"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-07",
+      "sha": "4fa4065a723520e6413d4bed69790612999517cd"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-08",
+      "sha": "3db8912129f5ebdfb2399a213f0688ac30cdf971"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-09",
+      "sha": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-14",
+      "sha": "5068f2a8c89b815b69665b35900fd0e8d3800a54"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-15",
+      "sha": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-21",
+      "sha": "263f4647c46bdea7fd86ecdabca69c889ef96806"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-22",
+      "sha": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-29",
+      "sha": "2874106cd594d482ab71a00c8b6ef5fdf3622cbb"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-12",
+      "sha": "252ce3d0f428984f276bb380dea030f165e9e9d3"
+    }
+  ],
+  "historical_analyzed_ids_count": 562,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 5,
+  "window_relevant_count": 5,
+  "historical_duplicates_count": 0,
+  "daily_relevant_unique_counts": {
+    "2026-10-10": 5,
+    "2026-10-11": 0,
+    "2026-10-12": 0
+  },
+  "total_papers": 5,
+  "papers": [
+    {
+      "id": "2610.13806",
+      "title": "FORTE: A Production Framework for Feature Evaluation and Deprecation in Industrial Recommender Systems",
+      "abstract": "Production recommender systems have feature-lifecycle asymmetry: adding new features must produce gains on some metric, while feature removal must not regress any metric. In practice, feature deprecation is hard to prioritize as a feature can fail to be removed if it interacts with other features, its importance changes daily, it cannot be evaluated before production models change or data drift occurs, it is in contention for A/B test space with other launches, it causes regressions in an online A/B test, or it is consumed by multiple models that need to coordinate its deprecation. We present FORTE, a model-agnostic production framework for discovering, validating, and removing features. Its efficient perturbation implementation allows daily feature evaluation. To account for interactions, it evaluates candidate feature sets constructed from all the low-rank features through grouped ablation and its offline results are sufficiently predictive of online A/B tests to allow deprecations to proceed to online testing with confidence. Lineage tracing identifies all downstream consumer models to realize the full savings of removing a feature from the training set. We validate FORTE over 2 large-scale recommender systems and find that it identifies deprecable feature sets which do not cause online regressions, while the impact on efficiency depends on model characteristics. On a search-relevance model, FORTE resulted in 3 nested candidate sets of 32, 48, and 59 features. Online guardrails rejected the largest treatment. The 48-feature set was selected for deprecation, removing 43.3% of the model's features. On a large ranking model, FORTE identified 8 candidates for removal. Retraining and A/B testing confirmed no regression. Its launch reduced the trainable parameters by 29.9%, improved serving throughput by 19.8-25.5%, and reduced annual training costs by hundreds of thousands of dollars.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-09T16:18:39+00:00",
+      "v1_local": "2026-10-10T00:18:39+08:00",
+      "url": "https://arxiv.org/abs/2610.13806",
+      "arxiv_id": "2610.13806",
+      "category": "pruning",
+      "submitted_date": "2026-10-10",
+      "scores": {
+        "accuracy": 8,
+        "compression": 5,
+        "novelty": 7,
+        "reproducibility": 5
+      },
+      "score_rationale": "精度8：两个生产模型经在线验证无显著主指标退化，但59特征方案触发护栏。压缩5：最大参数减少29.9%，约1.43倍，而非43.3%特征删除等价整模压缩。创新7：重点在时序筛选、成本筛选与特征血缘形成闭环。复现5：流程较清楚，但工业数据、模型与在线流量不可直接复得。",
+      "conclusion": "FORTE 通过持续特征评估、联合消融和在线验证，删除低贡献输入及关联参数；Pin Ranker 参数减少29.9%，吞吐提高19.8–25.5%。",
+      "evidence_sections": "§3–4、§7–8（含表1–2）"
+    },
+    {
+      "id": "2610.13856",
+      "title": "Event-based Action Recognition by Pre-Training on Multi-Frame Representations",
+      "abstract": "Action recognition is a crucial task in domains like robotics, patient monitoring, or surveillance. Recently, event-based action recognition has attracted much attention due to the event camera's ability to capture fast motions and its improved privacy over conventional vision cameras. While frame-based event representations work well for short event sequences, their discriminative ability declines sharply with longer and more complex event sequences. In this work, we introduce a multi-frame representation that greatly improves recognition performance over its single-frame counterpart. We adopt a masked auto-encoding framework to pre-train a Vision Transformer using a sparsity-aware masking algorithm and token selection mechanism to improve downstream performance and control computational complexity. We also introduce multiple mask tokens for the decoder with a position-aware attention mechanism, leading to further improved performance. Our proposed method shows impressive performance for challenging long-duration and complex event sequences, yielding state-of-the-art performance on THU-EACT-50 CHL and DailyDVS-200.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-09T17:05:40+00:00",
+      "v1_local": "2026-10-10T01:05:40+08:00",
+      "url": "https://arxiv.org/abs/2610.13856",
+      "arxiv_id": "2610.13856",
+      "category": "pruning",
+      "submitted_date": "2026-10-10",
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "novelty": 6,
+        "reproducibility": 7
+      },
+      "score_rationale": "精度8：一半token下跨数据迁移只降0.2个百分点，但DailyDVS同配置下降1.4点。压缩6：明确2倍token削减，无端到端时延或权重字节证明。创新6：活动量选择、稀疏感知MAE和多mask组合，单个机制较直接。复现7：数据、模型和训练参数较完整，但1500轮预训练成本较高，本轮未运行。",
+      "conclusion": "基于事件活动量筛除token，在8帧设置将token从1568减至784；跨数据预训练后的THU准确率78.7%→78.5%。",
+      "evidence_sections": "§3–5（含表1–4与实现设置）"
+    },
+    {
+      "id": "2610.13858",
+      "title": "LapMerge: Differentiable Exact-Budget Token Merging in Linear Time",
+      "abstract": "Modern vision and language models process ever longer token sequences, and reducing them is the main lever on downstream cost. Token compression, however, faces a fundamental trade-off: selecting tokens discards information, while existing merging methods preserve it only through pairwise token-to-token matching or $MN$ token-to-output interactions. We introduce LapMerge, a differentiable merging operator that resolves this trade-off for ordered sequences: a learned mass distribution partitions the sequence into exactly $N$ equal-mass segments under a Laplace-kernel density, and prefix/suffix scans aggregate each segment, so both the forward and the backward pass run in $\\mathcal{O}(M+N)$ time. This combination - an exact output budget, end-to-end differentiability, and linear cost - is precisely what previous reducers trade off against one another. The budget can be changed without changing operator parameters, and the learned mass doubles as a token-level map of where the budget is allocated. Across vision and vision-language tasks, LapMerge matches or improves on strong token reducers while being up to two orders of magnitude faster at large sequence lengths; it is particularly effective when token order reflects spatial or temporal locality, and works both as a drop-in reduction module and as a trainable architectural component.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-09T17:07:17+00:00",
+      "v1_local": "2026-10-10T01:07:17+08:00",
+      "url": "https://arxiv.org/abs/2610.13858",
+      "arxiv_id": "2610.13858",
+      "category": "other",
+      "submitted_date": "2026-10-10",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "novelty": 9,
+        "reproducibility": 8
+      },
+      "score_rationale": "精度8：POPE 10%预算较VisionSelector+1.58点，病理学第二名；30%预算增益区间跨零。压缩8：10%token预算即10倍序列压缩，未证明10倍整模显存压缩。创新9：精确预算、可微边界与线性扫描的统一。复现8：正文、附录与补充包说明充分，准确率使用native PyTorch；本轮未执行。",
+      "conclusion": "LapMerge 用Laplace核等质量分段及前后缀扫描实现可微、精确预算token合并；10%视觉token下POPE F1为81.31。",
+      "evidence_sections": "§3–5（含定理1、表1–3、计时与复现声明）"
+    },
+    {
+      "id": "2610.13881",
+      "title": "Prediction Is Not a Sufficient Memory State",
+      "abstract": "A memory that reproduces every current prediction may still have forgotten how to learn from the next observation. We characterize this distinction for exact cumulative learning and attention. For smooth convex residual losses with unrestricted real features and labels, a continuous recurrent state of fixed dimension exists exactly when the loss is polynomial. With ordinary, unweighted observations, degree $D$ requires precisely $r=\\binom{d+D}{D}-1$ coordinates; even among histories with one fixed current predictor, exactly $r-d$ coordinates can remain necessary for continuation. Nonpolynomial losses have unbounded requirements on such equal-prediction histories. Bounded scalar logistic examples retain this obstruction after fixing any finite derivative jet. For ridge regression, the hidden evidence is the design matrix: the exact state costs $dp+d(d+1)/2$, versus $dp$ for the predictor. On a well-conditioned zero-prediction family, optimal $B$-bit compression has average one-update error of order $d^{-1}2^{-2B/s_d}$, $s_d=d(d+1)/2$, even with arbitrary randomized codes. Kernel attention gives a second exact closure classification. The results identify what future updates reveal, rather than proposing a new regression algorithm or asserting trained-model gains.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-09T17:27:06+00:00",
+      "v1_local": "2026-10-10T01:27:06+08:00",
+      "url": "https://arxiv.org/abs/2610.13881",
+      "arxiv_id": "2610.13881",
+      "category": "other",
+      "submitted_date": "2026-10-10",
+      "scores": {
+        "accuracy": 3,
+        "compression": 3,
+        "novelty": 8,
+        "reproducibility": 7
+      },
+      "score_rationale": "精度3：无神经模型任务精度实验，不是负面效果。压缩3：给出状态与有限比特下界，未提供可部署压缩倍率。创新8：原生单次延续辨识与精确隐藏状态维数相连接。复现7：定理假设和确定性验证脚本说明完整，但本轮未下载运行补充脚本，亦未逐行证明审计。",
+      "conclusion": "该理论证明只保留当前预测不足以支持未来更新；softmax前缀的精确连续记忆需要N(d+p)个坐标，不能解释为实用KV压缩不可行。",
+      "evidence_sections": "§1–9及附录N；其余证明附录未逐行验证"
+    },
+    {
+      "id": "2610.13944",
+      "title": "InstantFusion: A Shared Latent Interface for Heterogeneous Image Generators",
+      "abstract": "Diffusion/flow models have emerged as the de facto paradigms for image generation, giving rise to a diverse family of modern generators with increasingly heterogeneous architectures and representations. Despite their remarkable generation capabilities, the cross-model alignment of latent representations and the consistency of their underlying denoising dynamics remain underexplored. In this work, we uncover an intriguing cross-model compatibility: independently trained generators exhibit similar latent spatial organization, while directly handing off intermediate states between unaligned models can still preserve coarse visual content. Motivated by these observations, we propose InstantFusion, a lightweight shared latent interface that connects the denoising trajectories of heterogeneous image generators. Specifically, to enable flexible cross-model state translation, model-specific Latent AutoEncoders (LAEs) are introduced to project intermediate states from different generators into a shared latent space and decode them into the latent space of a target generator. This shared space is constrained by two complementary objectives: aligning intermediate states derived from the same image at matched noise levels and synchronizing their corresponding local denoising velocities. Once trained, InstantFusion allows denoising to seamlessly transition across frozen generators without requiring a dedicated mapping for every model pair. The versatility of InstantFusion is demonstrated across acceleration, multi-preference composition, cross-architecture on-policy distillation, and cross-model composition, achieving competitive performance across these diverse settings.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-09T17:59:04+00:00",
+      "v1_local": "2026-10-10T01:59:04+08:00",
+      "url": "https://arxiv.org/abs/2610.13944",
+      "arxiv_id": "2610.13944",
+      "category": "knowledge_distillation",
+      "submitted_date": "2026-10-10",
+      "scores": {
+        "accuracy": 6,
+        "compression": 5,
+        "novelty": 8,
+        "reproducibility": 5
+      },
+      "score_rationale": "精度6：SD3蒸馏平均HPSv2+0.19且低于教师；不同混合指标涨跌并存。压缩5：混合推理可快约4.31–7.40倍但不减少总模型存储，不能视作权重压缩倍率。创新8：共享潜接口同时匹配状态与动力学，支持跨架构OPD。复现5：训练参数明确，但切换公式符号/方向不一致且跨架构监督实现细节仍需核实。",
+      "conclusion": "InstantFusion 对齐异构生成器潜状态及动态，支持Qwen-Image→SD3蒸馏；HPSv2仅提升0.19，混合加速存在质量与显存代价。",
+      "evidence_sections": "§3–5、附录B（含表1–10相关实验与配置）"
+    }
+  ]
+}
