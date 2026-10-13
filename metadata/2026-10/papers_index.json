@@ -1,0 +1,219 @@
+{
+  "run_date": "2026-10-14",
+  "checked_at": "2026-10-14T01:08:26.988918+08:00",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-10-11T00:00:00+08:00",
+    "end": "2026-10-13T23:59:59+08:00",
+    "dates": [
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13"
+    ],
+    "date_basis": "arXiv /abs Submission history v1, UTC converted to Asia/Shanghai"
+  },
+  "report_date": "2026-10-13",
+  "dedup_source_branches": [
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-29",
+      "sha": "37139ece193fa4d66212a2f2951ed88a8d83b76a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-30",
+      "sha": "8fe81f3241431f5f6af227ce768402d6f91f97ca"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-31",
+      "sha": "25e3d35f37713e9b407a24c6f7b045dd26208f92"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-01",
+      "sha": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-02",
+      "sha": "f397bf7f726f7b7b8286a035d43da5c12236d336"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-03",
+      "sha": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-04",
+      "sha": "f798a00e0569952212d0e6451f00ba6ea28de99a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-05",
+      "sha": "333264be93bb365ee7d29436235e6b056427943e"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-06",
+      "sha": "67600577ca268cd88675d221f0e19fdb59673789"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-07",
+      "sha": "87a4eb0f56e25253b22b8c7e9a288af8a467386a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-08",
+      "sha": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-10",
+      "sha": "652ee043ff7fad81734a95010b9b49b6dca1ec11"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-12",
+      "sha": "5dea9ebeff4db72522e85962764ae51a4978a4e6"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-14",
+      "sha": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-15",
+      "sha": "e463baea815c06d95ffc36eec034113b28db7927"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-16",
+      "sha": "940ef56b2ebd4bd22ce5636302234aaa63691e2d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-17",
+      "sha": "1320530c9060d6acfd6a6814ebe65415b62c760d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-18",
+      "sha": "2190e4aef62423032c78b7594a0e208c6d128c0d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-19",
+      "sha": "3518b1fff91bab3cd78421810c0798177060063f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-20",
+      "sha": "6413646a6fec8b54f937415084c2df3e99b358a1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-21",
+      "sha": "dc8a46573315edb88419bb4eb181bea89d209de7"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-22",
+      "sha": "0dd4154cce8306873ec37767b6ab27e00b07735f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-23",
+      "sha": "e1a83986b75aec3a0289a50082ac44a6b359a130"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-24",
+      "sha": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-25",
+      "sha": "508ce04ebcda0238aceb1d32991db50aac8904e0"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-26",
+      "sha": "4a627bc35cb9075ac416e12165c9418f79e1bbee"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-27",
+      "sha": "f57ca87589c728a68851f21acdff1c333b402e35"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-28",
+      "sha": "daeb352421a9263136927bc71497c86ddb512c77"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-29",
+      "sha": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-30",
+      "sha": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-31",
+      "sha": "d21ad3ba2970c7664ffd084b568f61b1dbde8866"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-01",
+      "sha": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-02",
+      "sha": "ab05a346a491f043142867c74593f45e669812d1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-03",
+      "sha": "710202d696a1295b25e55f50d4fee966434549d4"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-04",
+      "sha": "623673ccf816fda6de51daf471f55c79b0a24801"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-05",
+      "sha": "1ab9858c9e986133aafa40226b1c5af0a760c175"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-06",
+      "sha": "05108f7ef5b13b0fcc118d633a53c99d31d55166"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-07",
+      "sha": "4fa4065a723520e6413d4bed69790612999517cd"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-08",
+      "sha": "3db8912129f5ebdfb2399a213f0688ac30cdf971"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-09",
+      "sha": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-14",
+      "sha": "5068f2a8c89b815b69665b35900fd0e8d3800a54"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-15",
+      "sha": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-21",
+      "sha": "263f4647c46bdea7fd86ecdabca69c889ef96806"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-22",
+      "sha": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-29",
+      "sha": "2874106cd594d482ab71a00c8b6ef5fdf3622cbb"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-12",
+      "sha": "252ce3d0f428984f276bb380dea030f165e9e9d3"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-13",
+      "sha": "52bf4827692c57ccabbd1dd61a6e4641b683379f"
+    }
+  ],
+  "historical_analyzed_ids_count": 567,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 0,
+  "window_relevant_count": 0,
+  "historical_duplicates_count": 0,
+  "daily_relevant_unique_counts": {
+    "2026-10-11": 0,
+    "2026-10-12": 0,
+    "2026-10-13": 0
+  },
+  "zero_result_meaning": "截至运行时 arXiv 官方网页未检出；不是最终投稿量为零",
+  "total_papers": 0,
+  "papers": []
+}
