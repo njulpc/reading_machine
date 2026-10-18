@@ -1,0 +1,10 @@
+{
+  "tests": {
+    "equations_8_9_known_vector": true,
+    "saturation": true,
+    "power_two_minmax": true,
+    "zero_tensor": true,
+    "signed_ablation": true,
+    "quantized_linear_known_answer": true
+  }
+}

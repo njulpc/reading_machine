@@ -1,0 +1,930 @@
+[
+  {
+    "id": "2610.22122",
+    "title": "Beyond Fixed Acquisition Functions: Temporal Difference Active Learning for Perturbation Discovery",
+    "v1_local": "2026-10-16T00:00:11+08:00",
+    "decision": "exclude",
+    "reason": "主动学习选择实验，未压缩神经网络、激活或推理状态。",
+    "abstract_sha256": "2d25d387fa5894046323c5a03cf4e07e1ced9a5cb8532d6afe37a71229b7b039"
+  },
+  {
+    "id": "2610.22124",
+    "title": "PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents",
+    "v1_local": "2026-10-16T00:01:38+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "8ad79cbdaceccf5065c70b3d2481b2fb537ee7a1d8f4df4287de72dc8b407a41"
+  },
+  {
+    "id": "2610.22126",
+    "title": "Causal Integrated Gradients: Scalable Feature Attribution Along Causal Paths",
+    "v1_local": "2026-10-16T00:02:18+08:00",
+    "decision": "exclude",
+    "reason": "特征归因/个性化或表示分析，未提出可验证的模型压缩方案。",
+    "abstract_sha256": "91f6166b4621884ec13f1e13415b241ad504a7c417d38ad0dec2bbd3c11167f7"
+  },
+  {
+    "id": "2610.22127",
+    "title": "Explaining the Roles of Experts in Mixture-of-Experts LLMs for Personalization",
+    "v1_local": "2026-10-16T00:02:46+08:00",
+    "decision": "exclude",
+    "reason": "特征归因/个性化或表示分析，未提出可验证的模型压缩方案。",
+    "abstract_sha256": "85195d7ec8b481ab762016278be129ad3686a40a24b42ca73a4b186a09c69363"
+  },
+  {
+    "id": "2610.22130",
+    "title": "DropKV: Decoupling Residual-Output Perturbation for Near-Optimal KV-Cache Eviction",
+    "v1_local": "2026-10-16T00:05:17+08:00",
+    "decision": "include",
+    "reason": "DropKV 用单 token 淘汰造成的输出扰动构造可融合评分，5% KV 预算下保留更好的长上下文能力。",
+    "abstract_sha256": "1b535ced82f8fa55a396b6f16760ab37e6e6bac250f5390f2267071d7b36ca2c"
+  },
+  {
+    "id": "2610.22131",
+    "title": "Intern-Decision: Efficient Multimodal Decision Making with Autoregressive Masked Language Modeling",
+    "v1_local": "2026-10-16T00:05:48+08:00",
+    "decision": "exclude",
+    "reason": "决策输出接口避免逐字生成；未压缩模型、缓存或蒸馏教师，不因模型较小即纳入。",
+    "abstract_sha256": "af06d73ec001109458f9a157d02741ef2f240bcfdf81323ce3116e07882f8e00"
+  },
+  {
+    "id": "2610.22137",
+    "title": "CART: Compatible Routing for Multimodal Continual Instruction Tuning",
+    "v1_local": "2026-10-16T00:11:22+08:00",
+    "decision": "include",
+    "reason": "CART 联合路由视觉 projector 与语言 LoRA，并按输入分布合并专家以限制持续学习模型增长。",
+    "abstract_sha256": "716f4e1d651d37144f39802b02b0aca7522be2ca21b379dc23d25cb453c703f1"
+  },
+  {
+    "id": "2610.22138",
+    "title": "Believed but Not Said: Measuring Hidden Belief Collapse in Multi-Agent LLM Discussions",
+    "v1_local": "2026-10-16T00:12:07+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "22e4e45bcf8c67c14c93fc22c384913382e033ec0782fe08defee4cbefe59d6f"
+  },
+  {
+    "id": "2610.22139",
+    "title": "Are You Sure Your LLM Is Sure? Repairing and Auditing Confidence",
+    "v1_local": "2026-10-16T00:12:29+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "16a67adc2d2971e15b700a61674b9e16b1d2826f0814005b33164da039333533"
+  },
+  {
+    "id": "2610.22143",
+    "title": "FALCON: FPGA-Accelerated Latency-Certifiable Occupancy Networks for Camera-Based Autonomous Driving",
+    "v1_local": "2026-10-16T00:14:24+08:00",
+    "decision": "include",
+    "reason": "FALCON 以受限 INT8 校准、INT16 几何路径和固定工作量 FPGA 算子部署占据网络；Qwen 转移实验证明非负裁剪不能直接套用。",
+    "abstract_sha256": "31866c5326e6306439e5d720753a19a5fd942e95dc8058f650f882f13d791408"
+  },
+  {
+    "id": "2610.22150",
+    "title": "RAG-RST: Retrieved Exemplars as In-Context Discourse Schema for RST Parsing",
+    "v1_local": "2026-10-16T00:18:06+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "51d475b9da47053f09be5556f4309858139dc4380f23caa77b04c8b90f39cca3"
+  },
+  {
+    "id": "2610.22152",
+    "title": "Specification Gaming and a Constrained Reinforcement Learning Mitigation in a Cleaning Gridworld",
+    "v1_local": "2026-10-16T00:19:16+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "1b72360bcb93a6409d250d51b9f3a163c83b6b579f2957e78a268dcac5b479f4"
+  },
+  {
+    "id": "2610.22155",
+    "title": "Realtime-Bench: Can Frontier Models Solve Real-time Interactive Problems?",
+    "v1_local": "2026-10-16T00:20:47+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "9d69348482f5568eab8c1e5c768018b3199282f7b88ab5eb321f95c1a2dd9ceb"
+  },
+  {
+    "id": "2610.22157",
+    "title": "The importance of tensor handling and implementation of physics-informed DeepONets",
+    "v1_local": "2026-10-16T00:22:05+08:00",
+    "decision": "exclude",
+    "reason": "数学等价的DeepONet张量组织去冗余，属于执行实现优化，未压缩模型表示或蒸馏。",
+    "abstract_sha256": "713c633e2984ae88608665d9cbf71e14db4ffb7a287b48e82d5ea17c260c3e2a"
+  },
+  {
+    "id": "2610.22158",
+    "title": "PremiseSQL: Evaluating Premise Critique and Abstention in Text-to-SQL Systems",
+    "v1_local": "2026-10-16T00:23:17+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "a79d063343a4cd4390f54727221d197a371a0fd03d61c38f0b03f6e3ee82eb29"
+  },
+  {
+    "id": "2610.22160",
+    "title": "EMO: A Closed-Loop Test-Time Computation Framework via Alternating Context Optimization and Logits Steering",
+    "v1_local": "2026-10-16T00:23:55+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "139c9de0fbc5d3226918555577cabd4b6cb02247dba31d97b1f777eb3a8ba448"
+  },
+  {
+    "id": "2610.22163",
+    "title": "Multi-sourced AI Tutor for Non-Native English Speaker Students",
+    "v1_local": "2026-10-16T00:26:00+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "07778e0b6ebb21f1cd613c70294f51f99b99ff475fc24e13a095b45dd9bb772c"
+  },
+  {
+    "id": "2610.22167",
+    "title": "CLUE: Uncovering Social Context for Pragmatic Understanding",
+    "v1_local": "2026-10-16T00:28:19+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "320d73db9916bcd305ccfbda3a2bbdeed03e32fd61b3fc1f505a31d5e3f71045"
+  },
+  {
+    "id": "2610.22169",
+    "title": "Lexical Reference Frames: Interpreting LM Residual Streams in Native Semantics",
+    "v1_local": "2026-10-16T00:29:27+08:00",
+    "decision": "exclude",
+    "reason": "LexFrame主要是解释工具；早退比例为基于置信度的潜在估计，读出仍经过剩余层，未建立压缩算法的净开销证据。",
+    "abstract_sha256": "744974917777e949a8f6ee0eb6aa7e7c382870851c0da1d625eadfd75d258dea"
+  },
+  {
+    "id": "2610.22174",
+    "title": "Mosaic: Multi-Session Agentic Reinforcement Learning",
+    "v1_local": "2026-10-16T00:32:44+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "084a444f4929781d8688131ee921b3e8c1fd3fed9d4ce5edf20423ff45632dba"
+  },
+  {
+    "id": "2610.22177",
+    "title": "Motion- and Gravity-Aware Feedforward 3D Reconstruction",
+    "v1_local": "2026-10-16T00:34:04+08:00",
+    "decision": "exclude",
+    "reason": "运动/重力特权训练提升几何理解，未给模型压缩或教师到紧凑学生机制。",
+    "abstract_sha256": "6fe87e57e925101b0e4f2abab9e131b45b53cc932e3040ee331b08f1e1fd2771"
+  },
+  {
+    "id": "2610.22178",
+    "title": "REKI: Registering Knowledge in VLAs",
+    "v1_local": "2026-10-16T00:34:06+08:00",
+    "decision": "include",
+    "reason": "REKI 把过去视觉上下文压入动作专家的少量 register KV，使 VLA 保留历史而只增加很小推理成本。",
+    "abstract_sha256": "cde962c398a95a877185b6e784b1372a972d97f9091ae4991a78e0a3cb49e98e"
+  },
+  {
+    "id": "2610.22179",
+    "title": "LCT: Losslessly Compressed Tensors with GPU friendly execution for Training",
+    "v1_local": "2026-10-16T00:34:35+08:00",
+    "decision": "include",
+    "reason": "LCT 无损编码 BF16 指数并支持GPU训练期反复编码，在Qwen3-4B上最多节约23.8%峰值显存。",
+    "abstract_sha256": "301aa8f8391212b32ffcc25681f31bf4e0d3ef410a054b987265fafec3de0a74"
+  },
+  {
+    "id": "2610.22182",
+    "title": "LAMP: Layerwise Adaptive Mixing of Predictors for Training-Free Few-Shot Vision-Language Adaptation",
+    "v1_local": "2026-10-16T00:35:40+08:00",
+    "decision": "exclude",
+    "reason": "LAMP混合中间层预测器进行few-shot适配，没有压缩模型或内部状态。",
+    "abstract_sha256": "d66031d9ee15164fa54cc04c14ded7939991f9a10b38b08e89fe88c66818317f"
+  },
+  {
+    "id": "2610.22184",
+    "title": "Whole-Body Dexterity",
+    "v1_local": "2026-10-16T00:40:48+08:00",
+    "decision": "include",
+    "reason": "Whole-Body Dexterity 将逐物体强化学习专家蒸馏成不依赖特权物体状态的统一部署控制器。",
+    "abstract_sha256": "d4ae322b40547297f8a359be25c5a129a79a12a4b990ab47c243f5b6f7a339e8"
+  },
+  {
+    "id": "2610.22186",
+    "title": "EVA-Cap: Optimizing Audiovisual Video Captioning via Event-Centric Alignment",
+    "v1_local": "2026-10-16T00:42:11+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "d7be4fc9c0925b6d399802f227409ebd9742f6a60f8c05f84826e029639804af"
+  },
+  {
+    "id": "2610.22187",
+    "title": "Change the Number, Change the Answer: Assessing Rating Scale Sensitivity in LLM-Based Text Scoring",
+    "v1_local": "2026-10-16T00:42:15+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "4c2367018174006c1d74a8159700cf637965699d22897abd5be6811f67b2ae6c"
+  },
+  {
+    "id": "2610.22191",
+    "title": "Attention over noisy examples: generalization and memorization in the exponential Hopfield network",
+    "v1_local": "2026-10-16T00:43:55+08:00",
+    "decision": "exclude",
+    "reason": "注意力/优化/策略估计理论，未提出压缩模型或内部状态的算法。",
+    "abstract_sha256": "253ea5a015d28c3b0392179b34d99801e625e9f3737f16e823875620870ed16b"
+  },
+  {
+    "id": "2610.22192",
+    "title": "Terminal-RSI: Recursive Self-Improving Terminal Agents via Recursive Self-Rewrite and Policy-Refine",
+    "v1_local": "2026-10-16T00:43:56+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "e2c052e92da78d011a114bb855b6e39c708d9ccd4cdb0a2f2a7764ba8b94f8b7"
+  },
+  {
+    "id": "2610.22194",
+    "title": "AutoSFT: An Agentic System for Automated Data Research in Supervised Fine-Tuning",
+    "v1_local": "2026-10-16T00:44:34+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "126d60b3f32033ff1808f4edbedc6028982a0eab6021d2a08fb6f234b08d575a"
+  },
+  {
+    "id": "2610.22195",
+    "title": "HTN-Orchestrate: A Hierarchical Task Network Framework for Multi-Agent Orchestration",
+    "v1_local": "2026-10-16T00:45:59+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "a05c8186cd6eea16b46303aa6fe4a73792402ff313132bd99fec243074dff5da"
+  },
+  {
+    "id": "2610.22196",
+    "title": "Hy-Memory-30B-A3B: Attributed Reinforcement Learning for Long-Term Memory Writing",
+    "v1_local": "2026-10-16T00:46:47+08:00",
+    "decision": "include",
+    "reason": "Hy-Memory 将旗舰教师的写入协议蒸馏到30B-A3B学生，再用逐chunk强化学习提升跨框架记忆质量。",
+    "abstract_sha256": "2878cf23121daa9fe7a98e314f7fb3f3c89029805c142fde178f851fdaa3decc"
+  },
+  {
+    "id": "2610.22200",
+    "title": "OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use",
+    "v1_local": "2026-10-16T00:51:35+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "beab15a2bf8a6aca19d219dbe0a047e8c6d6bd84a580df33633b5d366c175a0e"
+  },
+  {
+    "id": "2610.22201",
+    "title": "Decentralized LLM Workflows via Sequential Auctions",
+    "v1_local": "2026-10-16T00:52:16+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "f89c810d28e1e235f328024d0129269d0308595b4b1bffa923df35578ca24347"
+  },
+  {
+    "id": "2610.22209",
+    "title": "Beyond Downstream QA: Rethinking How We Evaluate Agent Memory",
+    "v1_local": "2026-10-16T00:58:12+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "a11351e13b004fe042d543110fe7cd46a3f66d476f5f6643f65b5166e36a7441"
+  },
+  {
+    "id": "2610.22210",
+    "title": "TRACE: Topology-Aware Reconnection via Prediction-Adaptive Connectivity Enforcement for Thin-Structure Segmentation",
+    "v1_local": "2026-10-16T00:58:50+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "8f043403615886db95689b1c66c0b3e7df4c52298990a23319c963d51802cd16"
+  },
+  {
+    "id": "2610.22213",
+    "title": "Generalization Guarantees of Randomized Block Coordinate Descent for Nonconvex Learning",
+    "v1_local": "2026-10-16T01:00:07+08:00",
+    "decision": "exclude",
+    "reason": "注意力/优化/策略估计理论，未提出压缩模型或内部状态的算法。",
+    "abstract_sha256": "0555168128290c977d81a8778efa052f4c3fd52228bdfad070086181beffa4e3"
+  },
+  {
+    "id": "2610.22214",
+    "title": "GNN-Guided Local Refinement for Efficient Layout Decomposition with DSA-MP",
+    "v1_local": "2026-10-16T01:00:17+08:00",
+    "decision": "exclude",
+    "reason": "EDA/硬件移植/量子电路优化；研究对象或主要贡献不是神经模型压缩算法。",
+    "abstract_sha256": "9e0bc76263f71a9e74449872e1318fabd115b45804c2e3b52897de9de08bf14c"
+  },
+  {
+    "id": "2610.22215",
+    "title": "FutureLift: Lifting Trajectory Proposals into Bidirectional Future Graphs for Motion Forecasting",
+    "v1_local": "2026-10-16T01:00:40+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "1d364d1ab05d38731176972c6bd47f33557b7836305443769d8e8da14b2fa19a"
+  },
+  {
+    "id": "2610.22217",
+    "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models",
+    "v1_local": "2026-10-16T01:01:41+08:00",
+    "decision": "include",
+    "reason": "SCOPED 将四类视觉专家的程序化技能蒸馏进一个VLM，8B学生的八基准均分从67.30升至73.13。",
+    "abstract_sha256": "4ee3d9311eb3f451d9615494c424093dafc382aa0dae2a22b791cb8a4493051e"
+  },
+  {
+    "id": "2610.22221",
+    "title": "How Much Physics Can Vision Learn from Audio? Probing and Distilling Damping Structure",
+    "v1_local": "2026-10-16T01:03:14+08:00",
+    "decision": "exclude",
+    "reason": "音频到视觉的物理知识迁移：冻结CLIP加MLP提高可读出性，未减少模型或部署计算；不把所有distill自动计作压缩。",
+    "abstract_sha256": "0c46ef4537b09b367f518295237a6964d1c4264419ebc1f7dae750159690cacd"
+  },
+  {
+    "id": "2610.22230",
+    "title": "Architecting for Hardware Diversity: Meta's End-to-End Co-Design for High-Performance AI Training on AMD GPUs",
+    "v1_local": "2026-10-16T01:09:08+08:00",
+    "decision": "exclude",
+    "reason": "EDA/硬件移植/量子电路优化；研究对象或主要贡献不是神经模型压缩算法。",
+    "abstract_sha256": "71df4398ab06c92af7e425f756655e73a02191b36238ae843df0c6816fb13ef8"
+  },
+  {
+    "id": "2610.22232",
+    "title": "WaveLLM: Wavelet-Domain LLM Entropy Modeling for Lossless Image Compression",
+    "v1_local": "2026-10-16T01:12:45+08:00",
+    "decision": "exclude",
+    "reason": "WaveLLM压缩图像数据，LoRA是既有适配组件，压缩对象不是模型。",
+    "abstract_sha256": "3091dc976e03495e05715965046b91418ce2c125c330c6555b3744ff658ad6b1"
+  },
+  {
+    "id": "2610.22234",
+    "title": "OS-Helix: Unifying GUI Interaction and Code Execution in Native Computer-Using Agents",
+    "v1_local": "2026-10-16T01:14:02+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "ac4cb3958425540d249bc76c8b33d63b0e8b5a0693d5e1e366c28ef8c8428934"
+  },
+  {
+    "id": "2610.22236",
+    "title": "Training-Free On-Policy Distillation",
+    "v1_local": "2026-10-16T01:15:01+08:00",
+    "decision": "include",
+    "reason": "TF-OPD 用教师自身生成轨迹的二阶矩求解逐层最小二乘，将数学与代码专家合为一个7B模型。",
+    "abstract_sha256": "277553339e015a9330754813a319960d86ae22c02bcae320563e0c371676300c"
+  },
+  {
+    "id": "2610.22238",
+    "title": "Query-Efficient Rejection Sampling for Parallel Masked Diffusion",
+    "v1_local": "2026-10-16T01:15:52+08:00",
+    "decision": "exclude",
+    "reason": "并行masked diffusion拒绝采样的查询估计，未压缩模型状态，也非少步教师蒸馏。",
+    "abstract_sha256": "06ed5d113b6d4f31dd9f1a7f1ef8a64cbbd7f68655c0bfaff68d75799acdecd7"
+  },
+  {
+    "id": "2610.22240",
+    "title": "MMSearch-OPD: Easy Made Hard, Hard Made Learnable for Long-Horizon Multimodal Search Agents",
+    "v1_local": "2026-10-16T01:16:18+08:00",
+    "decision": "include",
+    "reason": "MMSearch-OPD 用27B教师对9B学生的失败搜索轨迹提供选择性token指导，联合RL后七基准均分60.2。",
+    "abstract_sha256": "b141e8fe6d10286162099fb552935d09364bc64f2b8ace9c833d1444c88e3374"
+  },
+  {
+    "id": "2610.22242",
+    "title": "SurvICL: a Foundation Model for in-context Survival Analysis",
+    "v1_local": "2026-10-16T01:16:56+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "c18ed9c163fa595f18caca516802b702540d039940036fc59cc6fdaf17335398"
+  },
+  {
+    "id": "2610.22243",
+    "title": "Shortcut Sensitivity in Agent-Safety Evaluations",
+    "v1_local": "2026-10-16T01:18:05+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "6d1a9c7c47310871d4f222e961ece55b14f78b84d8f4409d9ad4fe06cc68d1d4"
+  },
+  {
+    "id": "2610.22244",
+    "title": "Language Is a Security Surface for Agent Guards",
+    "v1_local": "2026-10-16T01:19:40+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "665c28af3cae44c3855f94b6b89b5fdcb390f17492eaabde2537e7d5a53f998f"
+  },
+  {
+    "id": "2610.22245",
+    "title": "Disagreement-Guided Weak-to-Strong Routing",
+    "v1_local": "2026-10-16T01:19:57+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "55297dee5f84faeb8ef6d8cd98dcb52aa920634883e6bca00c0963370f18a269"
+  },
+  {
+    "id": "2610.22249",
+    "title": "Not X, but When: Diagnosing a Mandarin LLM Writing Tic through Contextual Appropriateness",
+    "v1_local": "2026-10-16T01:22:11+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "dcfd524a03305ebef1b6077e9fcda501fe7b54f78617aad19d22f9bb74507e20"
+  },
+  {
+    "id": "2610.22252",
+    "title": "Explore Once, Evaluate Many: Multiple Policy Evaluation for Stochastic Linear Bandits",
+    "v1_local": "2026-10-16T01:22:59+08:00",
+    "decision": "exclude",
+    "reason": "注意力/优化/策略估计理论，未提出压缩模型或内部状态的算法。",
+    "abstract_sha256": "860f7cec2b55a05962f3f27c4d07a2e984d43321f66b53947fae410b9f76febc"
+  },
+  {
+    "id": "2610.22256",
+    "title": "BitSparse: Compact Activation Storage for ReLU Feed-Forward Networks",
+    "v1_local": "2026-10-16T01:24:51+08:00",
+    "decision": "include",
+    "reason": "BitSparse 用位图和紧凑非零值无损保存ReLU激活，避免checkpointing重算并在高稀疏度下节省训练显存。",
+    "abstract_sha256": "e47f0c010577f9877731b7923b53732e4dd91e84bac60c223b0b47bd07b67103"
+  },
+  {
+    "id": "2610.22258",
+    "title": "Denoising Textures is a Different Ballgame Altogether!",
+    "v1_local": "2026-10-16T01:27:07+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "2b0d39b8ad76d9804a4978ecfca2e1b80e9967be1ab9f8be722ae3c5057e83f6"
+  },
+  {
+    "id": "2610.22259",
+    "title": "FPG-Seg: Annotation-free Retinal Vessel Topology Segmentation",
+    "v1_local": "2026-10-16T01:27:11+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "28622e4cc7250f73e6aa36850a42ee66cf3eb858301d04297ed1a629a32fca03"
+  },
+  {
+    "id": "2610.22262",
+    "title": "Topology-Inspired Fine-Tuning for Wind-Field Super-Resolution",
+    "v1_local": "2026-10-16T01:28:39+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "ff3e5fbb02530b647128c91f32c5e8f40ec583520b59133ba0e43f77de2f328b"
+  },
+  {
+    "id": "2610.22263",
+    "title": "Baselines and Score Centering in Policy Gradient Estimation",
+    "v1_local": "2026-10-16T01:28:50+08:00",
+    "decision": "exclude",
+    "reason": "注意力/优化/策略估计理论，未提出压缩模型或内部状态的算法。",
+    "abstract_sha256": "01ce78d830c0a3381582cc7bd3a3d6ea2a6107e47cafece4fa8d9e3e03f16f39"
+  },
+  {
+    "id": "2610.22264",
+    "title": "SCOPE: Semantic Bounded Credit Optimization for Prompt Engineering in Text-to-image Generation",
+    "v1_local": "2026-10-16T01:30:28+08:00",
+    "decision": "exclude",
+    "reason": "提示词/噪声采样/图像一致性优化，未提出模型压缩机制。",
+    "abstract_sha256": "4b48d69748b1a5d6b0bc24b1ca84d313caa46ae0afadd8d422788297a0987a6b"
+  },
+  {
+    "id": "2610.22267",
+    "title": "Beyond Pairwise Repulsion: Collective Diversity via Determinant Maximization in Diffusion Sampling",
+    "v1_local": "2026-10-16T01:32:25+08:00",
+    "decision": "exclude",
+    "reason": "提示词/噪声采样/图像一致性优化，未提出模型压缩机制。",
+    "abstract_sha256": "0b52c56a581d8cfd7bcc53960c134565c406a015e2708e85bcfd97534985cace"
+  },
+  {
+    "id": "2610.22269",
+    "title": "X-RIC: An Agentic RAN-Intelligent Controller Benchmark for Enhancing Reinforcement Learning",
+    "v1_local": "2026-10-16T01:34:17+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "874e81cb547fe2f7a4210f4f0b9ed6cfc702625f0a2a3381aeeb97cb2d316a97"
+  },
+  {
+    "id": "2610.22270",
+    "title": "Unsupervised Clustering of Public Transport Vehicles Using Deep Morphological Features and Color Histograms",
+    "v1_local": "2026-10-16T01:34:47+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "3882b506ff812b8e2b342c324e4267072d7d3f2e402a780b16c7024d22484e2c"
+  },
+  {
+    "id": "2610.22273",
+    "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+    "v1_local": "2026-10-16T01:35:17+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "427c96c07c021c750b1e220c62e5434ecad0c69a4ee847eeb505e51d923cb97f"
+  },
+  {
+    "id": "2610.22276",
+    "title": "MJev-Spatial: System One Spatial Intelligence via Native Attention Matching",
+    "v1_local": "2026-10-16T01:37:50+08:00",
+    "decision": "exclude",
+    "reason": "决策输出接口避免逐字生成；未压缩模型、缓存或蒸馏教师，不因模型较小即纳入。",
+    "abstract_sha256": "042a725cc418d9d36efd457c8db5ada1dcb4222ad216cc17910c1ee7f9b8e820"
+  },
+  {
+    "id": "2610.22280",
+    "title": "LEASH: Uncertainty-Aware Weak-to-Strong Escalation and Oversight for Computer-Use Agents",
+    "v1_local": "2026-10-16T01:40:12+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "6a249a56a61ebb14b456500f9b245efe7b72997af5d5f515e5cc7707fe68b018"
+  },
+  {
+    "id": "2610.22282",
+    "title": "Routing Policy Optimization for Online Diffusion Reinforcement Learning",
+    "v1_local": "2026-10-16T01:40:30+08:00",
+    "decision": "exclude",
+    "reason": "RPO仅训练时稀疏路由以探索，推理恢复dense；收益来自RL估计，不把它误报为部署剪枝。",
+    "abstract_sha256": "a6b8b24e5061c825a3a8b637e0cf7c248b466a254e50a7591a50d3a7ea5cadcc"
+  },
+  {
+    "id": "2610.22285",
+    "title": "Asking Smarter Questions: Targeted Active Preference Learning for Underspecified Rewards",
+    "v1_local": "2026-10-16T01:41:46+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "e673dacc2dc4acadd1ce067b8773e4a7c8a5a320eea1271612cd75d8f3429ae9"
+  },
+  {
+    "id": "2610.22287",
+    "title": "Learning Rational Strategies for Temporal Objectives in Multi-Agent Systems",
+    "v1_local": "2026-10-16T01:42:52+08:00",
+    "decision": "exclude",
+    "reason": "注意力/优化/策略估计理论，未提出压缩模型或内部状态的算法。",
+    "abstract_sha256": "054afd569a18fa6cb707220d017acf90d54d5365a821e2c5d10f6dae66e446a8"
+  },
+  {
+    "id": "2610.22289",
+    "title": "Improving Environment-Agnostic Coding Agents: The Role of Scaffolding",
+    "v1_local": "2026-10-16T01:43:16+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "4d571fd98cfcbdd25d0666d4725699e013c168e3e1e31f7c4a1056eeb7799bc7"
+  },
+  {
+    "id": "2610.22290",
+    "title": "EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search",
+    "v1_local": "2026-10-16T01:43:31+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "b75cb1cf8b7a2f9255dc78c947ce8fc607fdc50ca4a4c4e07fa0c4032c1459dc"
+  },
+  {
+    "id": "2610.22292",
+    "title": "CAT-alyzing Honesty: Continuous Adversarial Training for Transferable LLM Honesty",
+    "v1_local": "2026-10-16T01:43:47+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "1c2e739260c5ccff9c2d8d570c445653cd228631f7c6608ff80f207ecf94e7fb"
+  },
+  {
+    "id": "2610.22293",
+    "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
+    "v1_local": "2026-10-16T01:44:43+08:00",
+    "decision": "exclude",
+    "reason": "SST限制可更新子空间保护已有知识，未减少部署权重/激活精度，非低秩模型压缩。",
+    "abstract_sha256": "0950e82a6a8a0e400180c6ffbc1268270e790a1d2b903e1b35d918a854f5b6f4"
+  },
+  {
+    "id": "2610.22294",
+    "title": "Multi-Target Few-Shot Prompting with Diffusion Language Models",
+    "v1_local": "2026-10-16T01:44:46+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "c0c09cf1683ee4ba22411105d630e117ee853cc464e4789476cfca2672f66c02"
+  },
+  {
+    "id": "2610.22295",
+    "title": "Grounded Human-Attributed Description and Activity Recognition in Videos",
+    "v1_local": "2026-10-16T01:44:55+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "fc7518da6571180007a776387ac3c78f1ca81ae9558e575943744929d9a17b12"
+  },
+  {
+    "id": "2610.22296",
+    "title": "Backward Compatibility in Zero-Bit Neural Audio Watermarking",
+    "v1_local": "2026-10-16T01:45:27+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "228df8d7e13d7595ec277c70f3f1b6a02621bfe32cff122d75b9ee7691a53b1e"
+  },
+  {
+    "id": "2610.22297",
+    "title": "Private Retrieval Augmented Generation via Random Projection",
+    "v1_local": "2026-10-16T01:45:51+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "c41f2eb1d93ae2ab64a2147f391c5906de167582381403f6a13331fc672b775f"
+  },
+  {
+    "id": "2610.22298",
+    "title": "AI Consilium: a Benchmark of LLM Clinical Multidisciplinary Second Opinions",
+    "v1_local": "2026-10-16T01:46:37+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "32b6c9d5f6d560764e466ea83163df021fc7c0db57501ae86773fa96e80d024c"
+  },
+  {
+    "id": "2610.22300",
+    "title": "Knowledge That Is Linear Before Fine-Tuning Generalizes After It",
+    "v1_local": "2026-10-16T01:47:52+08:00",
+    "decision": "exclude",
+    "reason": "特征归因/个性化或表示分析，未提出可验证的模型压缩方案。",
+    "abstract_sha256": "fd693c75e3a31b44294cea6fabffca1b2ac053c5e8bae45d22d7b80635bf2533"
+  },
+  {
+    "id": "2610.22306",
+    "title": "ARC-SORT: Adaptive, Robust, Compensated Multi-Object Tracking with Interacting Multiple Models",
+    "v1_local": "2026-10-16T01:49:09+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "5ec412b77b98fed7c59f51940955234e04219dc7ca2c187ca3856b7f59280496"
+  },
+  {
+    "id": "2610.22311",
+    "title": "Velox: Spatial Memory Makes World Models Efficient",
+    "v1_local": "2026-10-16T01:50:20+08:00",
+    "decision": "include",
+    "reason": "Velox 以几何视锥重叠调节历史注意力块路由，使48块世界生成的注意力4.36×、去噪2.43×加速。",
+    "abstract_sha256": "b890b01853011f0bc4ee960cabd25e064bf6fffcbcddc65be9784efd2b51e579"
+  },
+  {
+    "id": "2610.22312",
+    "title": "Grid-Bench: Can LLMs Predict How Discrete Worlds Change?",
+    "v1_local": "2026-10-16T01:50:57+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "d39828b5c74052826bc4fcae16d8e6ad37a280cd83d5d4835ecefee48cd0b62f"
+  },
+  {
+    "id": "2610.22314",
+    "title": "MindEval2: Clinically Grounded Patients and Rubrics for Evaluating Language Models in Mental Health Support",
+    "v1_local": "2026-10-16T01:51:01+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "4d367b8a2d04b4039c2dd5941a0e90702aa27ab9a6e078d193a36874f7c3513f"
+  },
+  {
+    "id": "2610.22316",
+    "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
+    "v1_local": "2026-10-16T01:51:17+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "231d63b59251e64e459e29c8fa5fea6cd9874b53e132c22f0702aa2d180b1f7d"
+  },
+  {
+    "id": "2610.22319",
+    "title": "A team of Gemini 4 Argon agents beats Minecraft",
+    "v1_local": "2026-10-16T01:51:32+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "6a03a9b21c0a1eea2a8692494ba48cd414778b7191934ec5b660c3a9369aa236"
+  },
+  {
+    "id": "2610.22320",
+    "title": "Not Just a Subject: Capturing Adaptive Scene-Specific Variance for Visual Storytelling",
+    "v1_local": "2026-10-16T01:51:49+08:00",
+    "decision": "exclude",
+    "reason": "提示词/噪声采样/图像一致性优化，未提出模型压缩机制。",
+    "abstract_sha256": "1773f059e22649c130d923076c94e74a05d564a8ef3b157a642b66c64584c08d"
+  },
+  {
+    "id": "2610.22321",
+    "title": "AVC-Reward: Event-Centric Audio-Video Consistency Evaluation",
+    "v1_local": "2026-10-16T01:51:56+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "2886b1839bbae410ae873125872a8db14e3865075683c6f8031cfbd5eda78da7"
+  },
+  {
+    "id": "2610.22322",
+    "title": "Learning Self-Orchestration in Decentralized Agent Swarms",
+    "v1_local": "2026-10-16T01:51:57+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "01c6637fec39746cfc08fe953986c58229aee993ee979ad7d9db6bdc28cd6dfc"
+  },
+  {
+    "id": "2610.22324",
+    "title": "Training Reasoning Models to Generate Diverse Scientific Ideas",
+    "v1_local": "2026-10-16T01:52:12+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "82e57bedd195fef1dbcaf04bf02800dc63b0245dad3c5cd5ced6f3ed8f6f5b4b"
+  },
+  {
+    "id": "2610.22325",
+    "title": "Dense4D: Pixel-Level 4D Human Correspondence",
+    "v1_local": "2026-10-16T01:52:14+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "d98373c6dd2770605b2ea9796e1900a0e78b661d63f331435560be5bf6b34701"
+  },
+  {
+    "id": "2610.22327",
+    "title": "Twice Upon a Time: Complementary Representations for Time-Series Reasoning",
+    "v1_local": "2026-10-16T01:52:18+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "1fb3a9a315f05cb471d5ed4294294d01d893cc31ce0e95f8eb7cc20767389170"
+  },
+  {
+    "id": "2610.22328",
+    "title": "ACEdit: Stable Multi-Turn Image Editing via Asymmetric Conditioning",
+    "v1_local": "2026-10-16T01:52:24+08:00",
+    "decision": "exclude",
+    "reason": "ACEdit对已有4步FLUX学生做质量稳定性蒸馏，步数/参数相对已有学生不下降；纳入边界复核但不计本轮压缩成果。",
+    "abstract_sha256": "1576727929634da5028c60506d3b1bf2237694e96fdb1080ef6a069808eead93"
+  },
+  {
+    "id": "2610.22330",
+    "title": "Designing Transformers for Continuous Diffusion Language Models",
+    "v1_local": "2026-10-16T01:52:31+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "d1279c4672e9c1030b5e0618294fb0ade624f1a66d89f27eee4454f320f95b69"
+  },
+  {
+    "id": "2610.22331",
+    "title": "KnowGPO: Knowledge-Grouped Policy Optimization for Search Agents",
+    "v1_local": "2026-10-16T01:52:33+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "e51729988d520917728b024dfcf1ff0b824a5cadb1c669763e27b9db06de4f83"
+  },
+  {
+    "id": "2610.22333",
+    "title": "Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?",
+    "v1_local": "2026-10-16T01:53:33+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "f6658ac593f6b7d73d7a989cdbe50e3647f8ce19eef5a004019843064c5edd3b"
+  },
+  {
+    "id": "2610.22336",
+    "title": "Robust Reinforcement Learning for Dynamic Treatment Regimes under Model and Measurement Uncertainty",
+    "v1_local": "2026-10-16T01:54:13+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "03315b672fbc445b87943e77dfe15b139e4ad2da5fc6dc0c5206d9897cf1332b"
+  },
+  {
+    "id": "2610.22339",
+    "title": "Lean Graph Search for Formal Theorem Proving",
+    "v1_local": "2026-10-16T01:55:21+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "ddd62ff88376d2806b07c0896b60bc4999df85e10a3c54838dde95a3d8e96259"
+  },
+  {
+    "id": "2610.22340",
+    "title": "Dexterity from Supervised Play",
+    "v1_local": "2026-10-16T01:55:50+08:00",
+    "decision": "include",
+    "reason": "DSP 可将世界模型中的MPC搜索蒸馏为闭环目标条件策略，把在线候选评估成本转为离线训练。",
+    "abstract_sha256": "b1181ca7a3c1fadb751ef8dbe33b5ae8cc9da9226b99801d83b55021a2eabc66"
+  },
+  {
+    "id": "2610.22341",
+    "title": "3DCodeVerse: Exploring 3D Worlds as Code",
+    "v1_local": "2026-10-16T01:56:07+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "9f6f81524ef05fab373ef3f5ac502a41405659fe260a1f7705905ff82519affc"
+  },
+  {
+    "id": "2610.22343",
+    "title": "GeoState: Learning View-Decoupled Geometry States for 3D World Modeling",
+    "v1_local": "2026-10-16T01:56:18+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "58b5b535b8e39bb15a5f877762f0e3f5442544b5cdeecb7a668f1eebb757f6e3"
+  },
+  {
+    "id": "2610.22344",
+    "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+    "v1_local": "2026-10-16T01:56:32+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "7f44b60c16cae6ebee5b0fcc4cc2f025bf1a08d36be8313f5b61dddc65c6a594"
+  },
+  {
+    "id": "2610.22347",
+    "title": "Speculative Forcing for Efficient Autoregressive Video Generation",
+    "v1_local": "2026-10-16T01:57:01+08:00",
+    "decision": "include",
+    "reason": "Speculative Forcing 按token收敛程度停止去噪，在保留上下文KV的同时削减视频生成计算。",
+    "abstract_sha256": "1c8735117cd47ce36aeee745609ad4c03c98e8f8dbc39ed3e786b06c09ba8d92"
+  },
+  {
+    "id": "2610.22350",
+    "title": "FDE-Gym: The Last Mile of AI Delivery",
+    "v1_local": "2026-10-16T01:57:23+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "18ae3ab49f1baa3a320a8a6c2ea1ba769d5deee6d4e0ab567cd9011dd2965d8b"
+  },
+  {
+    "id": "2610.22352",
+    "title": "SUPRA-TEX: 3D Generation with Super-Aligned Texture",
+    "v1_local": "2026-10-16T01:58:02+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "1d54d4bb5e8060bbb49101cb096370aaadc7236f6047b323767f974d99a67e0e"
+  },
+  {
+    "id": "2610.22353",
+    "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts",
+    "v1_local": "2026-10-16T01:58:02+08:00",
+    "decision": "exclude",
+    "reason": "MirrorMoE仍执行同样6 routed+2 shared专家；低权重功能抑制及ρ退火是训练探索设计，不是实际删除专家。",
+    "abstract_sha256": "68b0a2008a337d6ed50fe8a5f8eafde4cdfc120e860fb73016bb2e1178e3562e"
+  },
+  {
+    "id": "2610.22355",
+    "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
+    "v1_local": "2026-10-16T01:58:04+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "3898bb4227108b8d09ed5cd6244e87a147945594d20055388e4aa6212d3768a3"
+  },
+  {
+    "id": "2610.22356",
+    "title": "DK-VLM: Geometry as Position for Spatial Reasoning in Vision-Language Models",
+    "v1_local": "2026-10-16T01:58:15+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "caf779a0a53643782bd5b28f9579e809eea6fa0ba78adc34498cd28533e39e98"
+  },
+  {
+    "id": "2610.22358",
+    "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
+    "v1_local": "2026-10-16T01:58:45+08:00",
+    "decision": "include",
+    "reason": "PathFM 将轨迹flow蒸馏成1–2次网络评估，并共享历史计算，126M模型可在L4上51.6ms生成32条预测路径。",
+    "abstract_sha256": "95e28182a22580388984ee5ee27ce1b45da34e378e88e6a980a36a01043d5341"
+  },
+  {
+    "id": "2610.22360",
+    "title": "Grounding Generative Verification in 3D Content",
+    "v1_local": "2026-10-16T01:59:01+08:00",
+    "decision": "exclude",
+    "reason": "3DVerifier验证生成内容是否满足条件，未提出模型压缩方法。",
+    "abstract_sha256": "ae99a9a48e644fa8876a3c5389fa2b7545a5d7e608b3bea1558585abea6eafcd"
+  },
+  {
+    "id": "2610.22362",
+    "title": "CoDA: Co-Evolution of Data Engines and Action Policies",
+    "v1_local": "2026-10-16T01:59:02+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "3b1e6cfc0aaeb64aad3961a87839170d042c7f9aea4a6cf02544d35556a20803"
+  },
+  {
+    "id": "2610.22363",
+    "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
+    "v1_local": "2026-10-16T01:59:07+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "d8807e4f959bbfc2282101a3d2d79b5dc10399adb4823fee8b6f30eb1b8f3f52"
+  },
+  {
+    "id": "2610.22364",
+    "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+    "v1_local": "2026-10-16T01:59:11+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "81d080fda0653b1d62017a542f578040993e2744ab972a9a5df32596cf6f6456"
+  },
+  {
+    "id": "2610.22367",
+    "title": "Discovering state-of-the-art quantum circuits with large language models",
+    "v1_local": "2026-10-16T01:59:20+08:00",
+    "decision": "exclude",
+    "reason": "EDA/硬件移植/量子电路优化；研究对象或主要贡献不是神经模型压缩算法。",
+    "abstract_sha256": "a4f659a00261a63f7fc87d866f3bb74a9397984315091ecf5be79a4c3cb75d1f"
+  },
+  {
+    "id": "2610.22369",
+    "title": "SoftCache: Adaptive Step Size Caching for Diffusion Transformers",
+    "v1_local": "2026-10-16T01:59:34+08:00",
+    "decision": "include",
+    "reason": "SoftCache 将缓存余量转为可变步长并外推残差，在高加速区更好保持扩散基线输出。",
+    "abstract_sha256": "df39c56cb20073eafbe58aa8d0d27bb60f254f1605c89c739d363c98fb20b513"
+  },
+  {
+    "id": "2610.22370",
+    "title": "Which Tokens to Merge? Diffusion Dynamics for Efficient Image Generation",
+    "v1_local": "2026-10-16T01:59:35+08:00",
+    "decision": "include",
+    "reason": "DaTMe 用去噪动态和局部结构共同决定token合并，改善高合并率下的图像保真，但实测加速较温和。",
+    "abstract_sha256": "d93e4962107fcaac1b5ff29f3d2f6d3b098105ec931a11baf568f555f9aa27d2"
+  },
+  {
+    "id": "2610.22371",
+    "title": "Gen4P: Video Generators are 4D Perceivers",
+    "v1_local": "2026-10-16T01:59:48+08:00",
+    "decision": "exclude",
+    "reason": "任务模型、感知表示或训练目标改进，摘要未给量化、剪枝、压缩缓存或降成本蒸馏贡献。",
+    "abstract_sha256": "0d1c7c461af1b6bdf9386d4062661ca0cd066f54d293c0674d4c2854e4b7a6af"
+  },
+  {
+    "id": "2610.22372",
+    "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
+    "v1_local": "2026-10-16T01:59:59+08:00",
+    "decision": "exclude",
+    "reason": "agent/评测/任务训练、外部记忆或路由策略；未改变模型压缩表示，不把更少交互/文本摘要/数据筛选视作模型压缩。",
+    "abstract_sha256": "936ef42c52619f5f9dd6e1cfc1adc223371e84cddfee1b23de88fdabe9fa9a1b"
+  }
+]

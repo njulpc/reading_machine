@@ -1,0 +1,122 @@
+{
+  "tests": {
+    "equations_8_9_known_vector": true,
+    "saturation": true,
+    "power_two_minmax": true,
+    "zero_tensor": true,
+    "signed_ablation": true,
+    "quantized_linear_known_answer": true
+  },
+  "experiment": {
+    "model": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+    "module": "model.layers.0.mlp.down_proj",
+    "calibration_texts": [
+      "A compiler translates a program into instructions. Static tensor shapes make memory requirements predictable. ",
+      "The library contains books about astronomy, music, history and mathematics. A reader compares several sources. ",
+      "A neural network transforms an input using learned weights. Calibration measures the activation range before quantization. ",
+      "A train travels between two cities. Passengers check departure times and choose a route. "
+    ],
+    "evaluation_texts": [
+      "The gardener planted seeds in spring. Rain and sunshine helped the plants grow. In summer the garden was full of flowers. ",
+      "To compute the mean of a sequence, add its elements and divide the sum by the number of elements. "
+    ],
+    "sequence_length": 128,
+    "cap": 32.0,
+    "stats": {
+      "unclipped": {
+        "lo": -4.53125,
+        "hi": 4.4375
+      },
+      "paper_relu": {
+        "lo": 0.0,
+        "hi": 4.4375
+      },
+      "signed": {
+        "lo": -4.53125,
+        "hi": 4.4375
+      }
+    },
+    "raw_stats": {
+      "negative": 780351,
+      "above_cap": 0,
+      "elements": 1572864
+    },
+    "results": {
+      "unclipped": {
+        "activation_k": -4,
+        "weight_k": -8,
+        "evaluation": [
+          {
+            "loss": 0.6897473931312561,
+            "baseline_loss": 0.7026922702789307,
+            "kl_baseline_to_quant": 0.002776967827230692,
+            "top1_agreement": 0.9765625
+          },
+          {
+            "loss": 0.5046526789665222,
+            "baseline_loss": 0.5077748894691467,
+            "kl_baseline_to_quant": 0.001102652633562684,
+            "top1_agreement": 0.9765625
+          }
+        ],
+        "stored_weight_bytes": 3145728,
+        "baseline_bf16_weight_bytes": 6291456
+      },
+      "paper_relu": {
+        "activation_k": -4,
+        "weight_k": -8,
+        "evaluation": [
+          {
+            "loss": 0.7688074707984924,
+            "baseline_loss": 0.7026922702789307,
+            "kl_baseline_to_quant": 0.033269599080085754,
+            "top1_agreement": 0.9453125
+          },
+          {
+            "loss": 0.4828077256679535,
+            "baseline_loss": 0.5077748894691467,
+            "kl_baseline_to_quant": 0.02053256705403328,
+            "top1_agreement": 0.921875
+          }
+        ],
+        "stored_weight_bytes": 3145728,
+        "baseline_bf16_weight_bytes": 6291456
+      },
+      "signed": {
+        "activation_k": -4,
+        "weight_k": -8,
+        "evaluation": [
+          {
+            "loss": 0.6897473931312561,
+            "baseline_loss": 0.7026922702789307,
+            "kl_baseline_to_quant": 0.002776967827230692,
+            "top1_agreement": 0.9765625
+          },
+          {
+            "loss": 0.5046526789665222,
+            "baseline_loss": 0.5077748894691467,
+            "kl_baseline_to_quant": 0.001102652633562684,
+            "top1_agreement": 0.9765625
+          }
+        ],
+        "stored_weight_bytes": 3145728,
+        "baseline_bf16_weight_bytes": 6291456
+      }
+    },
+    "seconds": 18.785052667,
+    "environment": {
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "python": "3.9.6",
+      "device": "CPU",
+      "dtype": "BF16"
+    },
+    "limitations": [
+      "One layer only; artificial text, not benchmark perplexity.",
+      "Qwen has signed SiLU-gated inputs, unlike FALCON nonnegative BEV activations.",
+      "paper_relu executes exact Eq.8 clipping; signed is an explicitly modified transfer ablation.",
+      "INT8 weight storage with floating dequantized matmul, no integer accelerator or WCET validation.",
+      "Fixed C=32 transferred from paper; calibration dataset and conservative scale rule are local choices."
+    ]
+  }
+}

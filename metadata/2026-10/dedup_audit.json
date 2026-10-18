@@ -1,0 +1,444 @@
+{
+  "run_date": "2026-10-19",
+  "run_time": "2026-10-19T01:21:17.035309+08:00",
+  "report_date": "2026-10-18",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-10-16T00:00:00+08:00",
+    "end": "2026-10-18T23:59:59+08:00",
+    "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18"
+    ]
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08",
+    "origin/feature/arxiv-daily-2026-09-09",
+    "origin/feature/arxiv-daily-2026-09-14",
+    "origin/feature/arxiv-daily-2026-09-15",
+    "origin/feature/arxiv-daily-2026-09-21",
+    "origin/feature/arxiv-daily-2026-09-22",
+    "origin/feature/arxiv-daily-2026-09-29",
+    "origin/feature/arxiv-daily-2026-10-12",
+    "origin/feature/arxiv-daily-2026-10-13",
+    "origin/feature/arxiv-daily-2026-10-14"
+  ],
+  "dedup_source_branch_shas": {
+    "feature/arxiv-daily-2026-07-29": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+    "feature/arxiv-daily-2026-07-30": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+    "feature/arxiv-daily-2026-07-31": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+    "feature/arxiv-daily-2026-08-01": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+    "feature/arxiv-daily-2026-08-02": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+    "feature/arxiv-daily-2026-08-03": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+    "feature/arxiv-daily-2026-08-04": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+    "feature/arxiv-daily-2026-08-05": "333264be93bb365ee7d29436235e6b056427943e",
+    "feature/arxiv-daily-2026-08-06": "67600577ca268cd88675d221f0e19fdb59673789",
+    "feature/arxiv-daily-2026-08-07": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+    "feature/arxiv-daily-2026-08-08": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+    "feature/arxiv-daily-2026-08-10": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+    "feature/arxiv-daily-2026-08-12": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+    "feature/arxiv-daily-2026-08-14": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+    "feature/arxiv-daily-2026-08-15": "e463baea815c06d95ffc36eec034113b28db7927",
+    "feature/arxiv-daily-2026-08-16": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+    "feature/arxiv-daily-2026-08-17": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+    "feature/arxiv-daily-2026-08-18": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+    "feature/arxiv-daily-2026-08-19": "3518b1fff91bab3cd78421810c0798177060063f",
+    "feature/arxiv-daily-2026-08-20": "6413646a6fec8b54f937415084c2df3e99b358a1",
+    "feature/arxiv-daily-2026-08-21": "dc8a46573315edb88419bb4eb181bea89d209de7",
+    "feature/arxiv-daily-2026-08-22": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+    "feature/arxiv-daily-2026-08-23": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+    "feature/arxiv-daily-2026-08-24": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+    "feature/arxiv-daily-2026-08-25": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+    "feature/arxiv-daily-2026-08-26": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+    "feature/arxiv-daily-2026-08-27": "f57ca87589c728a68851f21acdff1c333b402e35",
+    "feature/arxiv-daily-2026-08-28": "daeb352421a9263136927bc71497c86ddb512c77",
+    "feature/arxiv-daily-2026-08-29": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+    "feature/arxiv-daily-2026-08-30": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+    "feature/arxiv-daily-2026-08-31": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+    "feature/arxiv-daily-2026-09-01": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+    "feature/arxiv-daily-2026-09-02": "ab05a346a491f043142867c74593f45e669812d1",
+    "feature/arxiv-daily-2026-09-03": "710202d696a1295b25e55f50d4fee966434549d4",
+    "feature/arxiv-daily-2026-09-04": "623673ccf816fda6de51daf471f55c79b0a24801",
+    "feature/arxiv-daily-2026-09-05": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+    "feature/arxiv-daily-2026-09-06": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+    "feature/arxiv-daily-2026-09-07": "4fa4065a723520e6413d4bed69790612999517cd",
+    "feature/arxiv-daily-2026-09-08": "3db8912129f5ebdfb2399a213f0688ac30cdf971",
+    "feature/arxiv-daily-2026-09-09": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8",
+    "feature/arxiv-daily-2026-09-14": "5068f2a8c89b815b69665b35900fd0e8d3800a54",
+    "feature/arxiv-daily-2026-09-15": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66",
+    "feature/arxiv-daily-2026-09-21": "263f4647c46bdea7fd86ecdabca69c889ef96806",
+    "feature/arxiv-daily-2026-09-22": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968",
+    "feature/arxiv-daily-2026-09-29": "2874106cd594d482ab71a00c8b6ef5fdf3622cbb",
+    "feature/arxiv-daily-2026-10-12": "252ce3d0f428984f276bb380dea030f165e9e9d3",
+    "feature/arxiv-daily-2026-10-13": "52bf4827692c57ccabbd1dd61a6e4641b683379f",
+    "feature/arxiv-daily-2026-10-14": "71c9c681c89725a10453f8fdee59633fcebb1bec"
+  },
+  "historical_branches_count": 48,
+  "historical_analyzed_ids_count": 567,
+  "metadata_only_not_completed": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 17,
+  "window_related_unique_count": 17,
+  "daily_related_counts": {
+    "2026-10-16": 17,
+    "2026-10-17": 0,
+    "2026-10-18": 0
+  },
+  "daily_new_counts": {
+    "2026-10-16": 17,
+    "2026-10-17": 0,
+    "2026-10-18": 0
+  },
+  "related_list_occurrences": 44,
+  "new_ids": [
+    "2610.22130",
+    "2610.22137",
+    "2610.22143",
+    "2610.22178",
+    "2610.22179",
+    "2610.22184",
+    "2610.22196",
+    "2610.22217",
+    "2610.22236",
+    "2610.22240",
+    "2610.22256",
+    "2610.22311",
+    "2610.22340",
+    "2610.22347",
+    "2610.22358",
+    "2610.22369",
+    "2610.22370"
+  ],
+  "list_occurrences": 7614,
+  "all_unique_ids": 4883,
+  "window_all_topics_count": 116,
+  "semantic_fulltext_candidates_count": 21,
+  "historical_intersection": [],
+  "official_list_coverage": [
+    {
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "cat": "cs.LG",
+      "kind": "new",
+      "skip": 0,
+      "total": 467,
+      "actual": 467,
+      "groups": [
+        "Showing new listings for Friday, 16 October 2026",
+        "New submissions (showing 166 of 166 entries)",
+        "Cross submissions (showing 140 of 140 entries)",
+        "Replacement submissions (showing 161 of 161 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0",
+      "cat": "cs.LG",
+      "kind": "recent",
+      "skip": 0,
+      "total": 2059,
+      "actual": 2000,
+      "groups": [
+        "Fri, 16 Oct 2026 (showing 306 of 306 entries )",
+        "Thu, 15 Oct 2026 (showing 305 of 305 entries )",
+        "Wed, 14 Oct 2026 (showing 862 of 862 entries )",
+        "Mon, 12 Oct 2026 (showing 262 of 262 entries )",
+        "Fri, 9 Oct 2026 (showing first 265 of 324 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000&skip=2000",
+      "cat": "cs.LG",
+      "kind": "recent",
+      "skip": 2000,
+      "total": 2059,
+      "actual": 59,
+      "groups": [
+        "Fri, 9 Oct 2026 (continued, showing last 59 of 324 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000&skip=0",
+      "cat": "cs.CL",
+      "kind": "new",
+      "skip": 0,
+      "total": 267,
+      "actual": 267,
+      "groups": [
+        "Showing new listings for Friday, 16 October 2026",
+        "New submissions (showing 105 of 105 entries)",
+        "Cross submissions (showing 72 of 72 entries)",
+        "Replacement submissions (showing 90 of 90 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000&skip=0",
+      "cat": "cs.CL",
+      "kind": "recent",
+      "skip": 0,
+      "total": 1004,
+      "actual": 1004,
+      "groups": [
+        "Fri, 16 Oct 2026 (showing 177 of 177 entries )",
+        "Thu, 15 Oct 2026 (showing 182 of 182 entries )",
+        "Wed, 14 Oct 2026 (showing 385 of 385 entries )",
+        "Mon, 12 Oct 2026 (showing 116 of 116 entries )",
+        "Fri, 9 Oct 2026 (showing 144 of 144 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "cat": "cs.CV",
+      "kind": "new",
+      "skip": 0,
+      "total": 253,
+      "actual": 253,
+      "groups": [
+        "Showing new listings for Friday, 16 October 2026",
+        "New submissions (showing 135 of 135 entries)",
+        "Cross submissions (showing 30 of 30 entries)",
+        "Replacement submissions (showing 88 of 88 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0",
+      "cat": "cs.CV",
+      "kind": "recent",
+      "skip": 0,
+      "total": 1147,
+      "actual": 1147,
+      "groups": [
+        "Fri, 16 Oct 2026 (showing 165 of 165 entries )",
+        "Thu, 15 Oct 2026 (showing 143 of 143 entries )",
+        "Wed, 14 Oct 2026 (showing 479 of 479 entries )",
+        "Mon, 12 Oct 2026 (showing 153 of 153 entries )",
+        "Fri, 9 Oct 2026 (showing 207 of 207 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "cat": "cs.AI",
+      "kind": "new",
+      "skip": 0,
+      "total": 453,
+      "actual": 453,
+      "groups": [
+        "Showing new listings for Friday, 16 October 2026",
+        "New submissions (showing 132 of 132 entries)",
+        "Cross submissions (showing 154 of 154 entries)",
+        "Replacement submissions (showing 167 of 167 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0",
+      "cat": "cs.AI",
+      "kind": "recent",
+      "skip": 0,
+      "total": 1881,
+      "actual": 1881,
+      "groups": [
+        "Fri, 16 Oct 2026 (showing 286 of 286 entries )",
+        "Thu, 15 Oct 2026 (showing 280 of 280 entries )",
+        "Wed, 14 Oct 2026 (showing 852 of 852 entries )",
+        "Mon, 12 Oct 2026 (showing 161 of 161 entries )",
+        "Fri, 9 Oct 2026 (showing 302 of 302 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000&skip=0",
+      "cat": "cs.AR",
+      "kind": "new",
+      "skip": 0,
+      "total": 19,
+      "actual": 19,
+      "groups": [
+        "Showing new listings for Friday, 16 October 2026",
+        "New submissions (showing 6 of 6 entries)",
+        "Cross submissions (showing 6 of 6 entries)",
+        "Replacement submissions (showing 7 of 7 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000&skip=0",
+      "cat": "cs.AR",
+      "kind": "recent",
+      "skip": 0,
+      "total": 64,
+      "actual": 64,
+      "groups": [
+        "Fri, 16 Oct 2026 (showing 12 of 12 entries )",
+        "Thu, 15 Oct 2026 (showing 10 of 10 entries )",
+        "Wed, 14 Oct 2026 (showing 23 of 23 entries )",
+        "Mon, 12 Oct 2026 (showing 10 of 10 entries )",
+        "Fri, 9 Oct 2026 (showing 9 of 9 entries )"
+      ]
+    }
+  ],
+  "official_abs_parsed": 4883,
+  "abs_raw_cache_source": "Previous official HTML, re-parsed this run; all 116 in-window records and 2 boundary controls refreshed this run.",
+  "abs_fresh_count": 118,
+  "boundary_controls": [
+    {
+      "id": "2610.22110",
+      "title": "Unfragmenting Nawatl NMT: Single-Variant Specialization for Masewalkopa",
+      "abstract": "In minoritized (low-resource) language technologies, a common response to data sparsity is to aggregate text across multiple varieties and treat the combined data as a single corpus. However, mixed corpora of closely related indigenous variants can produce an artificial register that is accountable to no single speaker community, a structural failure we call variant fragmentation. This issue is acute for minoritized languages native to Mexico, such as Nawatl. Building on a 70,000-pair multi-variant foundation, we specialize an mT5-large checkpoint to Masewalkopa (nhn), the Nawatl variety spoken in Santa Ana Tlacotenco. We curate 2,665 parallel pairs, reserve all sentence-level data for evaluation, and incorporate 192 elder-transcribed target sentences via asymmetric backtranslation. A custom finite-state analyzer reduces unanalyzed surface forms from 82.0% to 19.9% and supplies functional syntax tags as plain-text prefixes, allowing the model to reuse existing subword embeddings rather than relying on frozen special tokens. The resulting LoRA-v9c-b model achieves 58.46 dev chrF++ and 58.20/57.90 directional test chrF++. Finally, CTranslate2 int8 quantization reduces CPU latency from 137.5 to 1.8-2.6 seconds per request, enabling cost-bounded Cloud Run deployment.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-15T15:51:41+00:00",
+      "v1_local": "2026-10-15T23:51:41+08:00",
+      "url": "https://arxiv.org/abs/2610.22110"
+    },
+    {
+      "id": "2610.22120",
+      "title": "Scene Reconstruction Using Ubiquitous Wireless Signals via Diffusion Posterior Inference Over physics-Grounded Representations",
+      "abstract": "Knowing the layout of the physical world matters for many applications, yet the sensors we rely on for it (e.g., cameras and LiDAR) can fail in darkness, in adverse weather, or behind walls. Wireless signals do not face these limitations: every link between a base station and a user is shaped by the buildings it passes, reflects from, or is blocked by, leaving information about the surrounding scene embedded in the wireless channel measured at the endpoints. However, mapping channel measurements to the environment is a severely ill-posed problem: a measurement records only the structures that interact with the transmitted electromagnetic waves along its propagation paths, and even these observations can often be explained by multiple plausible scenes. We therefore formulate wireless scene reconstruction as posterior inference and develop a hierarchical framework with two complementary stages to approach this problem. A wireless foundation model, pretrained to respect propagation physics, transforms each channel measurement into a representation of the scene structure that shaped the observation. A diffusion model then jointly integrates representations from multiple measurements to model and sample the posterior over building occupancy, with consensus over samples producing the final reconstruction. We demonstrate that the framework can accurately recover building footprints from wireless channel measurements alone and show that its performance depends critically on both design components: physics-grounded representations expose scene-relevant information, while joint posterior inference coherently integrates complementary observations.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-15T15:59:08+00:00",
+      "v1_local": "2026-10-15T23:59:08+08:00",
+      "url": "https://arxiv.org/abs/2610.22120"
+    },
+    {
+      "id": "2610.22122",
+      "title": "Beyond Fixed Acquisition Functions: Temporal Difference Active Learning for Perturbation Discovery",
+      "abstract": "Genetic and drug perturbation screens are important tools for elucidating disease mechanisms and validating therapeutic targets, but experimental costs limit the number of candidates that can be tested. Existing perturbation screening methods typically update the surrogate model with feedback while keeping the acquisition function fixed, limiting their ability to adapt selection to different response landscapes. Experimental feedback reveals current hits and informs subsequent selection by updating candidate predictions, providing a training signal for learning how to select experiments. We formulate budgeted perturbation discovery as a sequential decision problem and propose Temporal Difference Active Learning (TDAL), which learns an acquisition function online through temporal difference learning from a single screening trajectory, accounting for current hits and future discoveries. TDAL uses the Hellinger distance between hit probabilities for unmeasured candidates before and after an experiment to weight successor value, and reuses measured outcomes through leave-batch-out (LBO) to construct virtual transitions and alleviate training data scarcity. Across eight public screens spanning single, double, and triple perturbations under varied experimental configurations, TDAL achieves an average rank of 1.63 among eleven methods and ranks first on four tasks, demonstrating its adaptability across response landscapes.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-15T16:00:11+00:00",
+      "v1_local": "2026-10-16T00:00:11+08:00",
+      "url": "https://arxiv.org/abs/2610.22122"
+    },
+    {
+      "id": "2610.22372",
+      "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
+      "abstract": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating task completion from preference satisfaction. We introduce LIBERO-PeRM, a benchmark for preference learning in embodied agents. LIBERO-PeRM studies five questions: 1) how policies follow preferences in zero-shot settings; 2) how they learn single preferences from demonstrations; 3) how efficiently they acquire preferences as demonstrations increase; 4) how learned preferences generalize across layouts and tasks; and 5) how policies compose preferences and behave under conflicts. We propose a controlled formulation and taxonomy of observable preferences in simulation, covering motion, skill, and user-profile choices. This formulation is restricted to language-expressible preferences that can be instantiated in LIBERO without changing the task goal, evaluated automatically, and reused across tasks. Building on LIBERO, our procedural pipeline generates paired demonstrations with and without preferences. We create five task suites (312 tasks) with high-quality demonstrations, rich metadata, and preference-satisfaction metrics. Experiments show that current VLA policies struggle with zero-shot personalization, while SFT makes preferences learnable. Mixed training achieves better no-preference retention than sequential adaptation and improves performance with contextual prompts compared with preference-only training, but can weaken motion-preference learning; preference generalization, decomposition, and conflict handling remain difficult. The code, datasets, and demos can be found on the project website: this https URL .",
+      "subjects": "Robotics (cs.RO) ; Artificial Intelligence (cs.AI); Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-15T17:59:59+00:00",
+      "v1_local": "2026-10-16T01:59:59+08:00",
+      "url": "https://arxiv.org/abs/2610.22372"
+    }
+  ],
+  "source_urls_by_new_id": {
+    "2610.22340": [
+      "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0"
+    ],
+    "2610.22236": [
+      "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CL/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CL/recent?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "2610.22347": [
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+    ],
+    "2610.22143": [
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+    ],
+    "2610.22130": [
+      "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0"
+    ],
+    "2610.22196": [
+      "https://arxiv.org/list/cs.CL/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CL/recent?show=2000&skip=0"
+    ],
+    "2610.22369": [
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+    ],
+    "2610.22217": [
+      "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+    ],
+    "2610.22178": [
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "2610.22256": [
+      "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "2610.22370": [
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+    ],
+    "2610.22137": [
+      "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0"
+    ],
+    "2610.22184": [
+      "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "2610.22358": [
+      "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "2610.22179": [
+      "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "2610.22240": [
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+    ],
+    "2610.22311": [
+      "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+    ]
+  },
+  "fulltext_source": "Official HTML v1 saved on 2026-10-18 and read this run; no third-party recall substitute",
+  "main_sha": "abfe8f2767d8bf881d586718ab4db33fc576be6a",
+  "analysis_evidence_boundary": "All 4883 titles/abstracts/history parsed; 4767 out-of-window excluded by v1 date first, 116 in-window abstracts semantically read. No claim of human semantic close reading of all 4883 or proof audit of every appendix.",
+  "keyword_role": "Secondary review only; no keyword recall gate",
+  "zero_wording": "截至运行时 arXiv 官方网页未检出，不等于没有尚未公开投稿。"
+}
