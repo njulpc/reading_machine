@@ -1,0 +1,7 @@
+arxiv_id,title,submitted_date,category,keywords
+2610.23703,Blitz: Accelerating the Diffusion Modules of AlphaFold3 and Boltz-2,2026-10-17,knowledge_distillation,knowledge distillation;consistency;few-step diffusion
+2610.23735,LagNet: Lag-Structured Operators for Long-Term Time Series Forecasting,2026-10-17,other,parameter sharing;Toeplitz;structured operator
+2610.23787,DLite: History-free Speculative Decoding for Agentic AI,2026-10-17,other,KV cache;history-free drafting;distillation
+2610.23795,Persistent Planar Memory for Video World Models,2026-10-17,other,inference memory;plane primitives;state compression
+2610.23796,FuTransformer: FP8 prefill and INT4 decode for Llama-style inference on Hopper,2026-10-17,quantization,quantization;INT4;FP8;GPTQ;KV cache;Hadamard
+2610.23831,Beyond the Answer: Student-Conditioned Trace Construction for Reasoning Distillation,2026-10-17,knowledge_distillation,knowledge distillation;reasoning trace;student-conditioned

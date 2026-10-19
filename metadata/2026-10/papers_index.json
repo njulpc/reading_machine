@@ -1,0 +1,329 @@
+{
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-10-17T00:00:00+08:00",
+    "end_inclusive": "2026-10-19T23:59:59+08:00",
+    "report_date": "2026-10-19",
+    "run_date": "2026-10-20"
+  },
+  "dedup_source_branches": [
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-29",
+      "sha": "37139ece193fa4d66212a2f2951ed88a8d83b76a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-30",
+      "sha": "8fe81f3241431f5f6af227ce768402d6f91f97ca"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-31",
+      "sha": "25e3d35f37713e9b407a24c6f7b045dd26208f92"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-01",
+      "sha": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-02",
+      "sha": "f397bf7f726f7b7b8286a035d43da5c12236d336"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-03",
+      "sha": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-04",
+      "sha": "f798a00e0569952212d0e6451f00ba6ea28de99a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-05",
+      "sha": "333264be93bb365ee7d29436235e6b056427943e"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-06",
+      "sha": "67600577ca268cd88675d221f0e19fdb59673789"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-07",
+      "sha": "87a4eb0f56e25253b22b8c7e9a288af8a467386a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-08",
+      "sha": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-10",
+      "sha": "652ee043ff7fad81734a95010b9b49b6dca1ec11"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-12",
+      "sha": "5dea9ebeff4db72522e85962764ae51a4978a4e6"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-14",
+      "sha": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-15",
+      "sha": "e463baea815c06d95ffc36eec034113b28db7927"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-16",
+      "sha": "940ef56b2ebd4bd22ce5636302234aaa63691e2d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-17",
+      "sha": "1320530c9060d6acfd6a6814ebe65415b62c760d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-18",
+      "sha": "2190e4aef62423032c78b7594a0e208c6d128c0d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-19",
+      "sha": "3518b1fff91bab3cd78421810c0798177060063f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-20",
+      "sha": "6413646a6fec8b54f937415084c2df3e99b358a1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-21",
+      "sha": "dc8a46573315edb88419bb4eb181bea89d209de7"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-22",
+      "sha": "0dd4154cce8306873ec37767b6ab27e00b07735f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-23",
+      "sha": "e1a83986b75aec3a0289a50082ac44a6b359a130"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-24",
+      "sha": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-25",
+      "sha": "508ce04ebcda0238aceb1d32991db50aac8904e0"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-26",
+      "sha": "4a627bc35cb9075ac416e12165c9418f79e1bbee"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-27",
+      "sha": "f57ca87589c728a68851f21acdff1c333b402e35"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-28",
+      "sha": "daeb352421a9263136927bc71497c86ddb512c77"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-29",
+      "sha": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-30",
+      "sha": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-31",
+      "sha": "d21ad3ba2970c7664ffd084b568f61b1dbde8866"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-01",
+      "sha": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-02",
+      "sha": "ab05a346a491f043142867c74593f45e669812d1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-03",
+      "sha": "710202d696a1295b25e55f50d4fee966434549d4"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-04",
+      "sha": "623673ccf816fda6de51daf471f55c79b0a24801"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-05",
+      "sha": "1ab9858c9e986133aafa40226b1c5af0a760c175"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-06",
+      "sha": "05108f7ef5b13b0fcc118d633a53c99d31d55166"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-07",
+      "sha": "4fa4065a723520e6413d4bed69790612999517cd"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-08",
+      "sha": "3db8912129f5ebdfb2399a213f0688ac30cdf971"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-09",
+      "sha": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-14",
+      "sha": "5068f2a8c89b815b69665b35900fd0e8d3800a54"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-15",
+      "sha": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-21",
+      "sha": "263f4647c46bdea7fd86ecdabca69c889ef96806"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-22",
+      "sha": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-29",
+      "sha": "2874106cd594d482ab71a00c8b6ef5fdf3622cbb"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-12",
+      "sha": "252ce3d0f428984f276bb380dea030f165e9e9d3"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-13",
+      "sha": "52bf4827692c57ccabbd1dd61a6e4641b683379f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-14",
+      "sha": "71c9c681c89725a10453f8fdee59633fcebb1bec"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-19",
+      "sha": "883eb5828be85a82364fc08bcf40ea2295443902"
+    }
+  ],
+  "historical_analyzed_ids_count": 584,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 6,
+  "collection_date": "2026-10-20",
+  "total_papers": 6,
+  "papers": [
+    {
+      "arxiv_id": "2610.23703",
+      "title": "Blitz: Accelerating the Diffusion Modules of AlphaFold3 and Boltz-2",
+      "submitted": "2026-10-17",
+      "submitted_v1_utc": "2026-10-16T16:29:04+00:00",
+      "submitted_v1_local": "2026-10-17T00:29:04+08:00",
+      "subjects": "Machine Learning (cs.LG)",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.23703/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2610.23703",
+      "fulltext_url": "https://arxiv.org/html/2610.23703v1",
+      "summary": "几何噪声调度与多步一致性蒸馏把AF3的200次扩散评估降到8次，同时必须审查分子几何失效尾部。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 6
+      }
+    },
+    {
+      "arxiv_id": "2610.23735",
+      "title": "LagNet: Lag-Structured Operators for Long-Term Time Series Forecasting",
+      "submitted": "2026-10-17",
+      "submitted_v1_utc": "2026-10-16T16:44:53+00:00",
+      "submitted_v1_local": "2026-10-17T00:44:53+08:00",
+      "subjects": "Machine Learning (cs.LG)",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.23735/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2610.23735",
+      "fulltext_url": "https://arxiv.org/html/2610.23735v1",
+      "summary": "按相对时间滞后共享参数，DLinear替换实例约27倍参数缩减，但精度与收益依赖任务和被替换层占比。",
+      "scores": {
+        "accuracy": 7,
+        "compression": 8,
+        "innovation": 7,
+        "reproducibility": 8
+      }
+    },
+    {
+      "arxiv_id": "2610.23787",
+      "title": "DLite: History-free Speculative Decoding for Agentic AI",
+      "submitted": "2026-10-17",
+      "submitted_v1_utc": "2026-10-16T17:18:54+00:00",
+      "submitted_v1_local": "2026-10-17T01:18:54+08:00",
+      "subjects": "Computation and Language (cs.CL)",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.23787/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2610.23787",
+      "fulltext_url": "https://arxiv.org/html/2610.23787v1",
+      "summary": "通过目标模型隐藏状态和低秩序列头移除草稿历史KV，目标模型自身KV仍保留。",
+      "scores": {
+        "accuracy": 7,
+        "compression": 6,
+        "innovation": 8,
+        "reproducibility": 7
+      }
+    },
+    {
+      "arxiv_id": "2610.23795",
+      "title": "Persistent Planar Memory for Video World Models",
+      "submitted": "2026-10-17",
+      "submitted_v1_utc": "2026-10-16T17:21:54+00:00",
+      "submitted_v1_local": "2026-10-17T01:21:54+08:00",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.23795/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2610.23795",
+      "fulltext_url": "https://arxiv.org/html/2610.23795v1",
+      "summary": "以约10万平面基元维护约5MB持久场景记忆，减少的是视频模型的推理状态，不是5B骨干参数。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 6
+      }
+    },
+    {
+      "arxiv_id": "2610.23796",
+      "title": "FuTransformer: FP8 prefill and INT4 decode for Llama-style inference on Hopper",
+      "submitted": "2026-10-17",
+      "submitted_v1_utc": "2026-10-16T17:22:01+00:00",
+      "submitted_v1_local": "2026-10-17T01:22:01+08:00",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "category": "quantization",
+      "analysis_path": "papers/2026-10/quantization/2610.23796/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2610.23796",
+      "fulltext_url": "https://arxiv.org/html/2610.23796v1",
+      "summary": "FP8预填充与INT4解码按瓶颈分别优化，实际质量损失与双份KV存储限制了理想压缩收益。",
+      "scores": {
+        "accuracy": 6,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 7
+      }
+    },
+    {
+      "arxiv_id": "2610.23831",
+      "title": "Beyond the Answer: Student-Conditioned Trace Construction for Reasoning Distillation",
+      "submitted": "2026-10-17",
+      "submitted_v1_utc": "2026-10-16T17:52:58+00:00",
+      "submitted_v1_local": "2026-10-17T01:52:58+08:00",
+      "subjects": "Computation and Language (cs.CL) ; Machine Learning (cs.LG)",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.23831/tech_analysis.md",
+      "url": "https://arxiv.org/abs/2610.23831",
+      "fulltext_url": "https://arxiv.org/html/2610.23831v1",
+      "summary": "以学生可读性筛选教师改写轨迹，收益主要体现为跨任务迁移，不能把学生训练前后视作参数压缩。",
+      "scores": {
+        "accuracy": 8,
+        "compression": 5,
+        "innovation": 8,
+        "reproducibility": 8
+      }
+    }
+  ],
+  "generated_at": "2026-10-20T01:17:23.302192+08:00"
+}

@@ -1,0 +1,123 @@
+{
+  "tests": {
+    "all_nibble_values_roundtrip": true,
+    "hadamard_inverse": true,
+    "qk_dot_preserved": true,
+    "zero_cache_finite": true,
+    "gptq_static_group_packing": true,
+    "rms_gain_fold": true,
+    "delayed_fp8_saturation_and_zero": true,
+    "gptq_identity_hessian_equals_rtn": true
+  },
+  "environment": {
+    "python": "3.9.6",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "device": "cpu",
+    "threads": 4,
+    "model_path": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+  },
+  "calibration": {
+    "texts": [
+      "A scientific experiment compares a hypothesis against observations and reports uncertainty.",
+      "Computer systems move weights and activations between memory and processors during inference.",
+      "An ecosystem contains interacting organisms with different needs for energy and water.",
+      "A mathematical proof explains each logical step from assumptions to a stated conclusion."
+    ],
+    "tokens_each": 128,
+    "samples": 512,
+    "group_size": 128,
+    "damping": 0.05,
+    "act_order": false,
+    "solve_dtype": "float64"
+  },
+  "evaluation_texts": [
+    "A traveler walks through a quiet village and asks the local baker for directions to the river.",
+    "The software engineer measures the error and memory requirements before deploying a new model."
+  ],
+  "measurements": [
+    {
+      "text": "A traveler walks through a quiet village and asks the local baker for directions to the river.",
+      "mode": "baseline",
+      "token_nll": 0.6938262581825256,
+      "kl_base_to_variant": 0.0,
+      "top1_agreement": 1.0
+    },
+    {
+      "text": "A traveler walks through a quiet village and asks the local baker for directions to the river.",
+      "mode": "rtn",
+      "token_nll": 0.6919642686843872,
+      "kl_base_to_variant": 0.0005814229371026158,
+      "top1_agreement": 1.0
+    },
+    {
+      "text": "A traveler walks through a quiet village and asks the local baker for directions to the river.",
+      "mode": "gptq",
+      "token_nll": 0.6946241855621338,
+      "kl_base_to_variant": 0.0006136212032288313,
+      "top1_agreement": 1.0
+    },
+    {
+      "text": "A traveler walks through a quiet village and asks the local baker for directions to the river.",
+      "mode": "gptq_rotated_kv",
+      "token_nll": 0.7889980673789978,
+      "kl_base_to_variant": 0.08374623954296112,
+      "top1_agreement": 0.9609375
+    },
+    {
+      "text": "The software engineer measures the error and memory requirements before deploying a new model.",
+      "mode": "baseline",
+      "token_nll": 0.6518856287002563,
+      "kl_base_to_variant": 0.0,
+      "top1_agreement": 1.0
+    },
+    {
+      "text": "The software engineer measures the error and memory requirements before deploying a new model.",
+      "mode": "rtn",
+      "token_nll": 0.655038595199585,
+      "kl_base_to_variant": 0.0005497047095559537,
+      "top1_agreement": 1.0
+    },
+    {
+      "text": "The software engineer measures the error and memory requirements before deploying a new model.",
+      "mode": "gptq",
+      "token_nll": 0.6515706181526184,
+      "kl_base_to_variant": 0.00040623429231345654,
+      "top1_agreement": 1.0
+    },
+    {
+      "text": "The software engineer measures the error and memory requirements before deploying a new model.",
+      "mode": "gptq_rotated_kv",
+      "token_nll": 0.6993067264556885,
+      "kl_base_to_variant": 0.06820379197597504,
+      "top1_agreement": 0.9765625
+    }
+  ],
+  "cached_decode": [
+    {
+      "prefill_tokens": 64,
+      "decode_steps": 8,
+      "finite_logits": true,
+      "final_cache_length": 72
+    },
+    {
+      "prefill_tokens": 64,
+      "decode_steps": 8,
+      "finite_logits": true,
+      "final_cache_length": 72
+    }
+  ],
+  "weight_bytes": {
+    "original_bf16": 4194304,
+    "packed_int4": 1048576,
+    "fp32_scales": 65536
+  },
+  "cache_final_example": {
+    "packed_payload_bytes": 73728,
+    "scale_bytes": 4608,
+    "bf16_primary_bytes": 294912
+  },
+  "elapsed_seconds": 22.738666875,
+  "scope": "First-layer q_proj plus first-layer KV numerical reference. Full-sequence metrics use simulated decode precision, not native prefill; cache smoke test uses BF16 prefill; no fused CUDA, no MMA layout, no latency or whole-model compression claim. Cache mirror is regenerated for each reference attention call; BF16 primary is retained. FP8 delayed emission is tensor-tested only."
+}
