@@ -1,0 +1,392 @@
+{
+  "run_at": "2026-10-27T01:16:38.324055+08:00",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-10-24T00:00:00+08:00",
+    "end_exclusive": "2026-10-27T00:00:00+08:00",
+    "dates": [
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26"
+    ],
+    "report_date": "2026-10-26",
+    "assignment": "official abs Submission history v1 converted from UTC"
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08",
+    "origin/feature/arxiv-daily-2026-09-09",
+    "origin/feature/arxiv-daily-2026-09-14",
+    "origin/feature/arxiv-daily-2026-09-15",
+    "origin/feature/arxiv-daily-2026-09-21",
+    "origin/feature/arxiv-daily-2026-09-22",
+    "origin/feature/arxiv-daily-2026-09-29",
+    "origin/feature/arxiv-daily-2026-10-12",
+    "origin/feature/arxiv-daily-2026-10-13",
+    "origin/feature/arxiv-daily-2026-10-14",
+    "origin/feature/arxiv-daily-2026-10-19",
+    "origin/feature/arxiv-daily-2026-10-20"
+  ],
+  "dedup_source_shas": {
+    "origin/feature/arxiv-daily-2026-07-29": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+    "origin/feature/arxiv-daily-2026-07-30": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+    "origin/feature/arxiv-daily-2026-07-31": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+    "origin/feature/arxiv-daily-2026-08-01": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+    "origin/feature/arxiv-daily-2026-08-02": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+    "origin/feature/arxiv-daily-2026-08-03": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+    "origin/feature/arxiv-daily-2026-08-04": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+    "origin/feature/arxiv-daily-2026-08-05": "333264be93bb365ee7d29436235e6b056427943e",
+    "origin/feature/arxiv-daily-2026-08-06": "67600577ca268cd88675d221f0e19fdb59673789",
+    "origin/feature/arxiv-daily-2026-08-07": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+    "origin/feature/arxiv-daily-2026-08-08": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+    "origin/feature/arxiv-daily-2026-08-10": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+    "origin/feature/arxiv-daily-2026-08-12": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+    "origin/feature/arxiv-daily-2026-08-14": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+    "origin/feature/arxiv-daily-2026-08-15": "e463baea815c06d95ffc36eec034113b28db7927",
+    "origin/feature/arxiv-daily-2026-08-16": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+    "origin/feature/arxiv-daily-2026-08-17": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+    "origin/feature/arxiv-daily-2026-08-18": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+    "origin/feature/arxiv-daily-2026-08-19": "3518b1fff91bab3cd78421810c0798177060063f",
+    "origin/feature/arxiv-daily-2026-08-20": "6413646a6fec8b54f937415084c2df3e99b358a1",
+    "origin/feature/arxiv-daily-2026-08-21": "dc8a46573315edb88419bb4eb181bea89d209de7",
+    "origin/feature/arxiv-daily-2026-08-22": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+    "origin/feature/arxiv-daily-2026-08-23": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+    "origin/feature/arxiv-daily-2026-08-24": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+    "origin/feature/arxiv-daily-2026-08-25": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+    "origin/feature/arxiv-daily-2026-08-26": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+    "origin/feature/arxiv-daily-2026-08-27": "f57ca87589c728a68851f21acdff1c333b402e35",
+    "origin/feature/arxiv-daily-2026-08-28": "daeb352421a9263136927bc71497c86ddb512c77",
+    "origin/feature/arxiv-daily-2026-08-29": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+    "origin/feature/arxiv-daily-2026-08-30": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+    "origin/feature/arxiv-daily-2026-08-31": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+    "origin/feature/arxiv-daily-2026-09-01": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+    "origin/feature/arxiv-daily-2026-09-02": "ab05a346a491f043142867c74593f45e669812d1",
+    "origin/feature/arxiv-daily-2026-09-03": "710202d696a1295b25e55f50d4fee966434549d4",
+    "origin/feature/arxiv-daily-2026-09-04": "623673ccf816fda6de51daf471f55c79b0a24801",
+    "origin/feature/arxiv-daily-2026-09-05": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+    "origin/feature/arxiv-daily-2026-09-06": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+    "origin/feature/arxiv-daily-2026-09-07": "4fa4065a723520e6413d4bed69790612999517cd",
+    "origin/feature/arxiv-daily-2026-09-08": "3db8912129f5ebdfb2399a213f0688ac30cdf971",
+    "origin/feature/arxiv-daily-2026-09-09": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8",
+    "origin/feature/arxiv-daily-2026-09-14": "5068f2a8c89b815b69665b35900fd0e8d3800a54",
+    "origin/feature/arxiv-daily-2026-09-15": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66",
+    "origin/feature/arxiv-daily-2026-09-21": "263f4647c46bdea7fd86ecdabca69c889ef96806",
+    "origin/feature/arxiv-daily-2026-09-22": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968",
+    "origin/feature/arxiv-daily-2026-09-29": "2874106cd594d482ab71a00c8b6ef5fdf3622cbb",
+    "origin/feature/arxiv-daily-2026-10-12": "252ce3d0f428984f276bb380dea030f165e9e9d3",
+    "origin/feature/arxiv-daily-2026-10-13": "52bf4827692c57ccabbd1dd61a6e4641b683379f",
+    "origin/feature/arxiv-daily-2026-10-14": "71c9c681c89725a10453f8fdee59633fcebb1bec",
+    "origin/feature/arxiv-daily-2026-10-19": "883eb5828be85a82364fc08bcf40ea2295443902",
+    "origin/feature/arxiv-daily-2026-10-20": "5a0766dd8748557393073127bb2557ad7b5b54a7"
+  },
+  "historical_branch_count": 50,
+  "historical_analyzed_ids_count": 590,
+  "metadata_only_not_completed": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "excluded_duplicate_ids": [],
+  "new_ids": [
+    "2610.32859",
+    "2610.32878",
+    "2610.32933"
+  ],
+  "new_papers_count": 3,
+  "per_day": {
+    "2026-10-24": {
+      "all_topic_v1_papers": 49,
+      "raw_relevant_occurrences": 8,
+      "unique_relevant_count": 3,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 3
+    },
+    "2026-10-25": {
+      "all_topic_v1_papers": 0,
+      "raw_relevant_occurrences": 0,
+      "unique_relevant_count": 0,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 0
+    },
+    "2026-10-26": {
+      "all_topic_v1_papers": 0,
+      "raw_relevant_occurrences": 0,
+      "unique_relevant_count": 0,
+      "historical_duplicate_count": 0,
+      "new_papers_count": 0
+    }
+  },
+  "source_occurrences": 5631,
+  "all_topic_unique_ids": 3658,
+  "official_abs_success": 3658,
+  "official_abs_errors": 0,
+  "abs_fresh_count": 661,
+  "abs_cached_count": 2997,
+  "window_semantically_reviewed_count": 49,
+  "outside_window_excluded_by_v1": 3609,
+  "coverage": [
+    {
+      "url": "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+      "cat": "cs.LG",
+      "kind": "new",
+      "skip": 0,
+      "total": 321,
+      "actual": 321,
+      "groups": [
+        "Showing new listings for Monday, 26 October 2026",
+        "New submissions (showing 106 of 106 entries)",
+        "Cross submissions (showing 92 of 92 entries)",
+        "Replacement submissions (showing 123 of 123 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0",
+      "cat": "cs.LG",
+      "kind": "recent",
+      "skip": 0,
+      "total": 1403,
+      "actual": 1403,
+      "groups": [
+        "Mon, 26 Oct 2026 (showing 198 of 198 entries )",
+        "Fri, 23 Oct 2026 (showing 205 of 205 entries )",
+        "Thu, 22 Oct 2026 (showing 240 of 240 entries )",
+        "Wed, 21 Oct 2026 (showing 249 of 249 entries )",
+        "Tue, 20 Oct 2026 (showing 511 of 511 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/new?show=2000&skip=0",
+      "cat": "cs.CL",
+      "kind": "new",
+      "skip": 0,
+      "total": 169,
+      "actual": 169,
+      "groups": [
+        "Showing new listings for Monday, 26 October 2026",
+        "New submissions (showing 72 of 72 entries)",
+        "Cross submissions (showing 34 of 34 entries)",
+        "Replacement submissions (showing 63 of 63 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CL/recent?show=2000&skip=0",
+      "cat": "cs.CL",
+      "kind": "recent",
+      "skip": 0,
+      "total": 802,
+      "actual": 802,
+      "groups": [
+        "Mon, 26 Oct 2026 (showing 106 of 106 entries )",
+        "Fri, 23 Oct 2026 (showing 117 of 117 entries )",
+        "Thu, 22 Oct 2026 (showing 137 of 137 entries )",
+        "Wed, 21 Oct 2026 (showing 159 of 159 entries )",
+        "Tue, 20 Oct 2026 (showing 283 of 283 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+      "cat": "cs.CV",
+      "kind": "new",
+      "skip": 0,
+      "total": 205,
+      "actual": 205,
+      "groups": [
+        "Showing new listings for Monday, 26 October 2026",
+        "New submissions (showing 107 of 107 entries)",
+        "Cross submissions (showing 26 of 26 entries)",
+        "Replacement submissions (showing 72 of 72 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0",
+      "cat": "cs.CV",
+      "kind": "recent",
+      "skip": 0,
+      "total": 914,
+      "actual": 914,
+      "groups": [
+        "Mon, 26 Oct 2026 (showing 133 of 133 entries )",
+        "Fri, 23 Oct 2026 (showing 114 of 114 entries )",
+        "Thu, 22 Oct 2026 (showing 138 of 138 entries )",
+        "Wed, 21 Oct 2026 (showing 183 of 183 entries )",
+        "Tue, 20 Oct 2026 (showing 346 of 346 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+      "cat": "cs.AI",
+      "kind": "new",
+      "skip": 0,
+      "total": 321,
+      "actual": 321,
+      "groups": [
+        "Showing new listings for Monday, 26 October 2026",
+        "New submissions (showing 79 of 79 entries)",
+        "Cross submissions (showing 110 of 110 entries)",
+        "Replacement submissions (showing 132 of 132 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0",
+      "cat": "cs.AI",
+      "kind": "recent",
+      "skip": 0,
+      "total": 1436,
+      "actual": 1436,
+      "groups": [
+        "Mon, 26 Oct 2026 (showing 189 of 189 entries )",
+        "Fri, 23 Oct 2026 (showing 229 of 229 entries )",
+        "Thu, 22 Oct 2026 (showing 211 of 211 entries )",
+        "Wed, 21 Oct 2026 (showing 321 of 321 entries )",
+        "Tue, 20 Oct 2026 (showing 486 of 486 entries )"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/new?show=2000&skip=0",
+      "cat": "cs.AR",
+      "kind": "new",
+      "skip": 0,
+      "total": 9,
+      "actual": 9,
+      "groups": [
+        "Showing new listings for Monday, 26 October 2026",
+        "New submissions (showing 4 of 4 entries)",
+        "Cross submissions (showing 3 of 3 entries)",
+        "Replacement submissions (showing 2 of 2 entries)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/list/cs.AR/recent?show=2000&skip=0",
+      "cat": "cs.AR",
+      "kind": "recent",
+      "skip": 0,
+      "total": 51,
+      "actual": 51,
+      "groups": [
+        "Mon, 26 Oct 2026 (showing 7 of 7 entries )",
+        "Fri, 23 Oct 2026 (showing 6 of 6 entries )",
+        "Thu, 22 Oct 2026 (showing 9 of 9 entries )",
+        "Wed, 21 Oct 2026 (showing 11 of 11 entries )",
+        "Tue, 20 Oct 2026 (showing 18 of 18 entries )"
+      ]
+    }
+  ],
+  "scope": "Direct model compression: teacher-to-smaller-student, low-rank weight decomposition, block pruning. Related-only teacher quality enhancement/latent communication/adapter circuit discovery excluded with rationale.",
+  "base_sha": "abfe8f2767d8bf881d586718ab4db33fc576be6a",
+  "collection_date": "2026-10-26",
+  "total_papers": 3,
+  "papers": [
+    {
+      "id": "2610.32933",
+      "title": "Yalda-Embedding: Open Development of a Competitive Persian Retrieval Model",
+      "abstract": "Despite advances in multilingual text representations, effective dense retrieval for Persian remains constrained by the limited availability of language-specific training resources and compact embedding models. We present Yalda Embedding, a 595.8-million-parameter Persian retrieval model adapted from Qwen3-Embedding-0.6B using more than one million query-document pairs. On eight Persian retrieval tasks from FaMTEB, the model achieves the highest macro-average among the evaluated 0.6B models, scoring 0.5488 and outperforming Qwen3-Embedding-0.6B and F2LLM-v2-0.6B on every task. It also approaches Qwen3-Embedding-4B, winning on four tasks, tying on one, and trailing by 0.0075 in macro-average. An incremental ablation study examines contrastive batch size, optimization stabilization, and relational knowledge distillation from F2LLM-v2-8B. Under the one-epoch training setup, contrastive fine-tuning alone yields a modest mean improvement over initialization and regressions on two tasks. The final distilled configuration improves all eight tasks over the non-distilled model, raising the mean from 0.4813 to 0.5488 without increasing inference-time model size. These gains include hard-negative evaluation tasks despite training without explicitly mined or supplied hard negatives. We release model weights, training and evaluation code, the pairwise dataset, and its teacher-embedded counterpart, enabling inspection of data composition and training procedures, independent evaluation, and reuse without repeating expensive teacher inference.",
+      "subjects": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-23T17:30:40+00:00",
+      "v1_local": "2026-10-24T01:30:40+08:00",
+      "url": "https://arxiv.org/abs/2610.32933",
+      "category": "knowledge_distillation",
+      "authors": "Yalda Taheri , Mohammad Hassan Heydari , Armon Rasooli",
+      "submitted_date": "2026-10-24",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.32933/tech_analysis.md",
+      "fulltext_url": "https://arxiv.org/html/2610.32933v1",
+      "abstract_sha256": "7d7dfbdca684ad426f98a1e9b30b9c2bc89ec2c14d8482c9eaa75237e5d70a2b",
+      "reproduction_status": "not_run; non-quantization paper",
+      "list_occurrences": 4,
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 6,
+        "reproducibility": 8,
+        "basis": "八任务同规模领先、接近4B；名义8B/595.8M约13.43倍参数差；方法为成熟关系KD组合；论文声明开放数据代码权重，但未固定全部seed/评测版本，本次未运行。"
+      }
+    },
+    {
+      "id": "2610.32878",
+      "title": "Advancing SVD-based LLM Compression via Layer-Wise Error Model Search",
+      "abstract": "Low-rank SVD-based compression offers a powerful strategy to reduce the computational costs of LLMs. However, existing methods face two key limitations: (i) global rank allocation, where uncalibrated error proxies fail to capture complex error propagation, and (ii) decomposition quality, where Fisher-based estimators suffer from severe rank collapse. In this work, we address these limitations by introducing Layer-wise Error Modeling Search (LEMS) and KFAC-SVD. LEMS advances rank allocation by introducing a layer-wise error surrogate that integrates local and global layer importance alongside a propagation bias, enabling effective global rank allocation via an ILP formulation. KFAC-SVD improves decomposition quality by utilizing token-wise statistics, mitigating the rank deficiency observed in prior Fisher-based SVD approaches. Across Mistral, Qwen3, and Llama 3 model families, we show that LEMS consistently outperforms existing search strategies, delivering significant zero-shot accuracy gains of up to 4.8 p.p. that generalize to model sizes of 70B parameters, while KFAC-SVD achieves an average perplexity improvement of 15%. Project page and code: this https URL",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-23T16:46:00+00:00",
+      "v1_local": "2026-10-24T00:46:00+08:00",
+      "url": "https://arxiv.org/abs/2610.32878",
+      "category": "other",
+      "authors": "Moritz Thoma , Maximilian Groezinger , Maximilian Forstenhäusler , Emad Aghajanzadeh , Manoj Rohit Vemparala , Christos Anagnostopoulos , Pierpaolo Mori , Nael Fasfous , Alexander Frickenstein , Daniel Mueller-Gritschneder , Ulf Schlichtmann",
+      "submitted_date": "2026-10-24",
+      "analysis_path": "papers/2026-10/other/2610.32878/tech_analysis.md",
+      "fulltext_url": "https://arxiv.org/html/2610.32878v1",
+      "abstract_sha256": "104af9ec6cc7b4814671f48f7417a5e806dfb395c87baea69874b95ee4036f08",
+      "reproduction_status": "not_run; non-quantization paper",
+      "list_occurrences": 2,
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "innovation": 9,
+        "reproducibility": 7,
+        "basis": "多家族与70B扩展，温和压缩近基线、激进压缩仍掉点；线性层保留0.5–0.9而非整模实测内存；token KFAC与校准秩分配互补；细节充分但需H200/梯度统计/Gurobi，本次未运行。"
+      }
+    },
+    {
+      "id": "2610.32859",
+      "title": "Sustainability of TSFM Deployment and Pretraining: From Carbon Footprint Analysis to Mitigation via Pruning",
+      "abstract": "Time Series Foundation Models (TSFMs) offer strong zero-shot forecasting capabilities, but their high pretraining cost raises a practical sustainability question: does this upfront investment pay off over a full deployment lifecycle, compared to supervised standalone models that must be periodically retrained? We model the cumulative carbon cost of different approaches across a realistic industrial scenario: Chronos-2 amortizes its pretraining cost within months for large or frequently queried deployments, but a classical model remains cheaper indefinitely for small or rarely queried ones. For cases where reducing the TSFM's own cost matters, we show that removing a single encoder block (7.9% of parameters) via a gradient-free pruning criterion yields a consistent 6 to 9% reduction in FLOPs, CO2 emissions, and latency, at essentially no cost to zero-shot forecasting performance across a 25-task benchmark.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-23T16:32:29+00:00",
+      "v1_local": "2026-10-24T00:32:29+08:00",
+      "url": "https://arxiv.org/abs/2610.32859",
+      "category": "pruning",
+      "authors": "Cécile Luc , Nathanaël Lemonnier , Ievgen Redko",
+      "submitted_date": "2026-10-24",
+      "analysis_path": "papers/2026-10/pruning/2610.32859/tech_analysis.md",
+      "fulltext_url": "https://arxiv.org/html/2610.32859v1",
+      "abstract_sha256": "c5ababc00a82363b954f03581673304b4159df854be5434910c868c9346c088c",
+      "reproduction_status": "not_run; non-quantization paper",
+      "list_occurrences": 2,
+      "scores": {
+        "accuracy": 7,
+        "compression": 3,
+        "innovation": 6,
+        "reproducibility": 7,
+        "basis": "25任务WQL稍升但MASE skill降1.12pp；参数仅减7.9%，有延迟/碳实测；已知余弦块剪枝迁移到TSFM；校准与边界明确但单硬件、两任务未加载、无替代剪枝对照，本次未运行。"
+      }
+    }
+  ],
+  "quantization_papers_count": 0,
+  "reproduction_ids": [],
+  "read_evidence_dir": "/Users/lipengcheng/.codex/automations/arxiv/runs/2026-10-27"
+}

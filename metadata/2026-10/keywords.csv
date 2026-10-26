@@ -1,0 +1,4 @@
+arxiv_id,title,submitted_date,category,keywords
+2610.32933,Yalda-Embedding: Open Development of a Competitive Persian Retrieval Model,2026-10-24,knowledge_distillation,knowledge distillation; relational KL; Persian retrieval; small student
+2610.32878,Advancing SVD-based LLM Compression via Layer-Wise Error Model Search,2026-10-24,other,low-rank compression; KFAC-SVD; LEMS; rank allocation
+2610.32859,Sustainability of TSFM Deployment and Pretraining: From Carbon Footprint Analysis to Mitigation via Pruning,2026-10-24,pruning,structured pruning; block pruning; TSFM; carbon footprint
