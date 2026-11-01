@@ -1,0 +1,318 @@
+{
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-10-30T00:00:00+08:00",
+    "end": "2026-11-01T23:59:59+08:00",
+    "report_date": "2026-11-01"
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08",
+    "origin/feature/arxiv-daily-2026-09-09",
+    "origin/feature/arxiv-daily-2026-09-14",
+    "origin/feature/arxiv-daily-2026-09-15",
+    "origin/feature/arxiv-daily-2026-09-21",
+    "origin/feature/arxiv-daily-2026-09-22",
+    "origin/feature/arxiv-daily-2026-09-29",
+    "origin/feature/arxiv-daily-2026-10-12",
+    "origin/feature/arxiv-daily-2026-10-13",
+    "origin/feature/arxiv-daily-2026-10-14",
+    "origin/feature/arxiv-daily-2026-10-19",
+    "origin/feature/arxiv-daily-2026-10-20",
+    "origin/feature/arxiv-daily-2026-10-27"
+  ],
+  "historical_branches_count": 51,
+  "historical_analyzed_ids_count": 593,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 8,
+  "related_papers_count": 8,
+  "daily_related_counts": {
+    "2026-10-30": 8,
+    "2026-10-31": 0,
+    "2026-11-01": 0
+  },
+  "scope_note": "截至运行时公开官方网页；31日、1日未检出，非断言实际零投稿。3970个详情v1解析，97个窗口摘要人工语义复核；窗口外按v1排除，不声称人工精读全部3970摘要。",
+  "metadata_only_not_completed": [
+    "2607.27951",
+    "2607.28410",
+    "2607.28457"
+  ],
+  "collection_date": "2026-11-02",
+  "total_papers": 8,
+  "papers": [
+    {
+      "id": "2610.40647",
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "abstract": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Artificial Intelligence (cs.AI); Machine Learning (cs.LG); Neural and Evolutionary Computing (cs.NE)",
+      "v1_utc": "2026-10-29T17:59:21+00:00",
+      "v1_local": "2026-10-30T01:59:21+08:00",
+      "url": "https://arxiv.org/abs/2610.40647",
+      "arxiv_id": "2610.40647",
+      "submitted_date": "2026-10-30",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.40647/tech_analysis.md",
+      "summary": "SpecSlot 仅让低频槽参与全局注意力，在 ImageNet-512 以少38.2%的FLOPs接近 JiT-B/16 的FID。",
+      "ratings": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "rating_basis": {
+        "accuracy": "§4、表1–3：ImageNet训练120 epochs、有效batch512，主结果5个独立种子；以50段Heun采样，在H800 BF16上统计全网络FLOPs。ImageNet-512的SpecSlot-K4为135.64 GFLOPs、FID9.14、12.69 img/s；JiT-B/16为219.56、8.45、7.93，因此FLOPs少38.2%，FID差0.69，吞吐约1.60倍。算力匹配JiT-CM为141.21 GFLOPs、FID11.98，SpecSlot改善FID2.84。文生图DPG由61.15至62.21，但GenEval26.99低于JiT-B/8的29.78，不能声称各项质量全面领先。",
+        "compression": "ImageNet-512前向FLOPs少38.2%，对应约1.62倍计算比；非权重文件压缩。",
+        "innovation": "将总槽数写成 N=W×K：W个空间anchor，每个anchor扩展K个槽；槽拥有互不重叠的DCT径向频段。每个系数恰好预测一次，所有槽在每个流时间均计算，并非动态丢弃高频槽。；输入先经patch投影与零初始化的深度卷积混合，再扩展为槽。输出通过逆DCT、平方根Hann窗及50%重叠相加重建；另加零初始化空间修正头，仍直接在像素空间计算rectified-flow速度损失。；固定slot 0为低频carrier。GGLL调度重复3次：两层全局通信、两层anchor内局部通信。W=256、K=4、32个条件token时，全局长度由1056降至288，但投影和局部计算仍有开销。",
+        "reproducibility": "主对照经过统一重训，结论依赖120-epoch预算与各模型各自扫描的CFG。ImageNet-256相对算力匹配模型的FID差异落在五种子区间内；不能把全局二次项缩小比例当作端到端速度或文件压缩率。未来应测试更大分辨率、其他生成骨干，以及相同墙钟训练预算下的收益。"
+      },
+      "fulltext_url": "https://arxiv.org/html/2610.40647v1",
+      "reproduction_path": null,
+      "authors": "Jiongfan Yang , Weichen Fan , Haiwen Diao , Zhongang Cai , Ziwei Liu"
+    },
+    {
+      "id": "2610.40637",
+      "title": "world2vec: Mechanistic world models through latent dynamics learning",
+      "abstract": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward information directly from observations and actions. World2vec learns latent dynamics that faithfully reproduce the true system over long prediction horizons, with at least one order of magnitude fewer parameters than DreamerV3, TD-MPC2 and LeWM. This enables state of the art performance in controlling continuous environments from pixels and accurate system identification across a benchmark of 71 attractors, demonstrating how world models are amenable to scientific discovery.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-29T17:58:23+00:00",
+      "v1_local": "2026-10-30T01:58:23+08:00",
+      "url": "https://arxiv.org/abs/2610.40637",
+      "arxiv_id": "2610.40637",
+      "submitted_date": "2026-10-30",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.40637/tech_analysis.md",
+      "summary": "world2vec 用潜在动力学匹配构建263K参数模型，把紧凑性与长期轨迹一致性共同验证。",
+      "ratings": {
+        "accuracy": 7,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 5
+      },
+      "rating_basis": {
+        "accuracy": "官方HTML §3：Pendulum、Reacher、CartPole各收集200K个64×64随机策略RGB帧。视觉编码器2层、宽64、4头，动力学MLP为3层128单元。主模型263K参数，其中编码器221K、动力学42K；Adam学习率1e-3、余弦衰减、20K迭代。A100上一阶模型训练2–6分钟、20步约10分钟、40步约30分钟，闭环控制含模拟渲染约20–50ms/步。摘要另报告71个吸引子、参数比DreamerV3等少至少一个数量级；当前HTML表1数值及部分交叉引用不完整，本精读不补造逐环境奖励与71个系统的明细。",
+        "compression": "论文摘要为至少10倍参数差异；主控制模型263K，非相同检查点压缩率。",
+        "innovation": "用H=3个观测恢复部分可观测状态，编码到32维潜变量；MLP预测状态变化率，主实验通过显式Euler步推进。；多步目标匹配真实未来编码与递推轨迹，并用DCL负样本归一化或SIGReg防止常数编码塌缩。验证EQA使用512个负例，另以仿射对齐R²和LRC检验表示与轨迹一致性。；在潜在空间用CEM规划，最小化预测轨迹与目标观测编码的距离；可换用SINDy多项式库和L1系数约束探索可解释动力学。",
+        "reproducibility": "离线随机策略训练的world2vec与在线训练的DreamerV3、TD-MPC2并非完全相同数据协议；Reacher还存在控制频率和目标构造差异。263K属于新架构，不是将某个固定大模型压缩到263K。未来需要更复杂视觉环境和统一数据、频率及规划预算的对照；全文HTML缺失的表格值应以后续完整版本补核。"
+      },
+      "fulltext_url": "https://arxiv.org/html/2610.40637v1",
+      "reproduction_path": null,
+      "authors": "Tobias Schmidt , Rodrigo Gonzalez Laiz , Krisztián Szuppinger , Steffen Schneider"
+    },
+    {
+      "id": "2610.40618",
+      "title": "An ODE-based Sampler for Discrete Diffusion Models",
+      "abstract": "The marginals of a continuous diffusion model can be reproduced by a deterministic ordinary differential equation (ODE), known as the probability flow ODE, which provides a foundation for accelerated sampling and consistency distillation. In this paper we address the question whether an analogous formulation exists for discrete diffusion models and answer it affirmatively by introducing exponential residual flows (ERFs). Our framework augments the discrete state with a continuous residual variable for each token and position. These residuals evolve deterministically according to piecewise-defined ODEs whose vector fields depend on the current discrete state and the forward and backward rate matrices of the prescribed diffusion model. The discrete state changes whenever a residual reaches zero. We prove that this construction preserves the marginals of the original diffusion. We derive a practical discretization of our sampler and specialize it to masked and uniform diffusion. The deterministic trajectories of ERFs support consistency distillation and yield empirical improvements over previous approaches across a variety of benchmarks including code and text generation tasks.",
+      "subjects": "Machine Learning (cs.LG) ; Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-29T17:55:25+00:00",
+      "v1_local": "2026-10-30T01:55:25+08:00",
+      "url": "https://arxiv.org/abs/2610.40618",
+      "arxiv_id": "2610.40618",
+      "submitted_date": "2026-10-30",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.40618/tech_analysis.md",
+      "summary": "ERF通过连续指数残差建立离散扩散轨迹，ERC在uniform diffusion的2/4次模型调用下显著提高蒸馏质量。",
+      "ratings": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 9,
+        "reproducibility": 5
+      },
+      "rating_basis": {
+        "accuracy": "官方v1 PDF第9–11页、图3/4和表1/2：同一数据集与扩散家族共享教师检查点，学生从对应教师初始化；所有方法batch128，OWT100 GPU-hours、TinyGSM50 GPU-hours。δ扫描1/8、1/16、1/32、1/64，TinyGSM比较使用相同1024题。UDM ERC在2和4 NFE时约为最强竞争基线的两倍准确率，在32 NFE接近教师；MDM仅约匹配第二强基线。8 NFE的U-NetFlux相对ERF Uniform在TinyGSM为0.130对0.368秒/序列，在OWT为0.323对0.647，分别2.83/2.00倍，这两项是采样器对比，不是蒸馏压缩倍率。",
+        "compression": "通过一致性蒸馏减少采样NFE；未提供通用权重压缩倍率。",
+        "innovation": "每个token位置和候选状态附加非负指数残差。其ODE由前后向跳转率决定，残差到零触发状态变化；不在每次跳转后重新采样所有时钟，并证明边缘分布保持。；实用离散化在区间内冻结leave-one-out denoiser，但保留已知时间依赖；Uniform版本求过零时间用40次二分，U-NetFlux可显式求解并减少跳转。；ERC以确定性耦合轨迹构造一致性目标，并通过学习投影给学生输入Gumbel变量−log E。四轮训练联合刷新目标与教师；OWT用forward KL、TinyGSM用reverse KL。",
+        "reproducibility": "收益主要集中在uniform diffusion，不能推及所有离散扩散。温度、采样器和NFE共同影响质量，必须匹配比较；学生初始化自教师，并无参数量缩小的必然结论。本机未训练离散扩散模型。未来应在更大模型和更长上下文上同时衡量额外残差内存、NFE和墙钟速度。"
+      },
+      "fulltext_url": "https://arxiv.org/pdf/2610.40618v1",
+      "reproduction_path": null,
+      "authors": "Samson Gourevitch , Yazid Janati , Eric Moulines , Eric P. Xing , Alain Durmus , Giacomo Zanella"
+    },
+    {
+      "id": "2610.40614",
+      "title": "L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory",
+      "abstract": "Interactive world models generate visual content conditioned on user actions, yet maintaining spatial consistency over long-horizon exploration in real time remains challenging. Existing approaches rely on either temporal context or explicit 3D memory, both of which scale poorly because memory grows with the length of the generated stream. Moreover, explicit 3D memories condition latent video generators by re-encoding RGB renderings, which precludes real-time generation. In this paper, we introduce a Latent 3D Gaussian Memory (L3G) that combines the efficiency of feed-forward reconstruction with a compact, rapidly renderable scene representation. Building on this memory, we propose L3G-World, in which a memory updater and a video diffusion transformer (DiT) alternate autoregressively to generate spatially consistent worlds. The memory updater spawns Gaussians in newly observed regions and refines existing ones, so that the memory grows with scene extent rather than stream length. Each Gaussian further stores a VAE latent feature, allowing the memory to be rendered directly into the DiT's latent space without VAE re-encoding. Experiments show that L3G-World achieves state-of-the-art generation quality and long-horizon spatial consistency, with up to $38.6\\times$ fewer 3D primitives, $3.2\\times$ faster memory updates, and $359\\times$ faster memory rendering relative to the most efficient prior 3D-memory baseline for each metric, enabling real-time world generation at 9 FPS.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-29T17:54:42+00:00",
+      "v1_local": "2026-10-30T01:54:42+08:00",
+      "url": "https://arxiv.org/abs/2610.40614",
+      "arxiv_id": "2610.40614",
+      "submitted_date": "2026-10-30",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.40614/tech_analysis.md",
+      "summary": "L3G-World按场景新增信息更新高斯记忆并直接渲染VAE特征，显著降低持久状态和重复编码成本。",
+      "ratings": {
+        "accuracy": 8,
+        "compression": 9,
+        "innovation": 8,
+        "reproducibility": 5
+      },
+      "rating_basis": {
+        "accuracy": "§4、表2：DA3几何骨干、Cosmos-Predict2.5生成器，DL3DV/RealEstate10K训练，4张A100；评估效率在单张A100上。DL3DV中L3G-World为33K基元、11.88MiB，NeoVerse为8766K、501.57MiB，约266倍基元差和42倍记忆差；FID40.57对152.25。RealEstate10K对应25K、8.91MiB对10437K、597.21MiB。VAE条件渲染相对NeoVerse约349–359倍；这些是记忆组件指标。摘要9FPS属于包括少步生成器的实时系统，不能仅归因于记忆设计。",
+        "compression": "相对NeoVerse的记忆字节约42–67倍减少；不代表总模型显存同倍率下降。",
+        "innovation": "依据已有记忆渲染的不透明度与RGB误差标出缺失区域，只在这些位置从DA3特征经K-means初始化新高斯查询；可见旧高斯由另一条refinement流更新。；拼接新旧查询，经几何特征cross-attention、流内self-attention和全局交互；新条目加入记忆，旧条目做残差修正，未被选中的条目保留。；每个高斯还存VAE潜在特征，可直接渲染为DiT条件；与噪声潜变量按通道拼接，不新增整段记忆token。Fast变体沿用AnyFlow的flow-map与on-policy distribution matching。",
+        "reproducibility": "压缩比高度依赖对照：相对点云Lyra2.0与高斯NeoVerse的分母不同，基元数量也不等于字节数。Fast变体在部分一致性与FID指标退化，RealEstate10K的相机误差并非最好。未来应测试动态物体、超大场景和持续误差积累，同时报告总GPU常驻内存而非仅记忆数据。"
+      },
+      "fulltext_url": "https://arxiv.org/html/2610.40614v1",
+      "reproduction_path": null,
+      "authors": "Jinhyeok Choi , JoungBin Lee , Jongmin Lee , Minkyeong Jeon , Jiyoung Kim , Kaeun Han , Yoonjin Yoon , Seungryong Kim"
+    },
+    {
+      "id": "2610.40611",
+      "title": "When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder",
+      "abstract": "Proactive assistants offer short, memory-grounded hints during a conversation, deciding when to assist and what to suggest. Current systems split this between a gate and a larger generator; we evaluate both together on 28,058 decision points. Stage-wise generation scores are oracle-gate ceilings: behind a real gate, end-to-end exact match is 0.2619 against a ceiling of 0.2971, and end-to-end precision is 0.2387, leaving substantial headroom. A gate pays off through precision and compute, whose saving falls from 4.39x with an 8B generator to 1.38x with a 1B one. The memory profile drives hint quality: removing it costs 24.7 exact-match points (rescaled BERTScore 0.57 to 0.35), while retrieval and a larger generator add nothing on exact match. One 1B decoder can do both, gating from an intermediate layer and generating in the same pass. At its final checkpoint it matches or exceeds the two-model pipelines on automatic end-to-end measures with 1.31-1.76x less wall-clock time than the matched 1B pipeline; across three seeds, its deeper exit ties the separate gate. A human evaluation (1,144 ratings over 32 dialogues) supports the memory effect and rates the single model level with the matched 1B pipeline and below the 8B one. Graded metrics and LlamaPIE's native judge track human ratings more closely than exact match, which we report as a strict lower bound.",
+      "subjects": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI); Human-Computer Interaction (cs.HC)",
+      "v1_utc": "2026-10-29T17:54:07+00:00",
+      "v1_local": "2026-10-30T01:54:07+08:00",
+      "url": "https://arxiv.org/abs/2610.40611",
+      "arxiv_id": "2610.40611",
+      "submitted_date": "2026-10-30",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.40611/tech_analysis.md",
+      "summary": "单个1B模型共享提示门控与生成，在指定评估流程下比1B双模型流水线快1.31–1.76倍。",
+      "ratings": {
+        "accuracy": 7,
+        "compression": 6,
+        "innovation": 7,
+        "reproducibility": 5
+      },
+      "rating_basis": {
+        "accuracy": "§7–8表4/5：共28058个决策点。最终checkpoint为53772步，统一k=6/k=10的E2E EM为0.2929/0.2908、墙钟0.748/1.005小时；1B门控+1B生成为0.2619、1.318小时，故约1.76/1.31倍。k=10在21703步三种子门控F1为0.8022±0.0029，约匹配双模型0.8002；不能把最终单种子优势当多种子验证。人工评估1144个评分，统一模型约与匹配1B系统持平、低于8B系统。",
+        "compression": "共享常驻骨干；匹配1B流水线墙钟比1.31–1.76，非同精度权重压缩。",
+        "innovation": "统一模型共享一个解码trunk和一个LoRA适配器，在中间层读取门控决定，再按需继续生成。；比较第6层与第10层出口，并以验证集选阈值；端到端exact match和precision同时纳入触发漏检、误触发与内容质量，避免把oracle gate的生成成绩当部署成绩。；使用用户记忆profile为提示提供事实，比较去记忆、额外检索和更大生成器，以识别真正限制质量的输入因素。",
+        "reproducibility": "主语料的对话和触发标签为模型生成，人工评分主要来自一位评估者。统一与双模型训练预算不同，双模型prefix caching后成本没有实测，消费设备和ASR误差也未测。未来需自然对话、多评估者、相同训练预算和缓存协议下重测。"
+      },
+      "fulltext_url": "https://arxiv.org/html/2610.40611v1",
+      "reproduction_path": null,
+      "authors": "A. J. A. Jubayer Talukder , Mohammad Ariful Haque"
+    },
+    {
+      "id": "2610.40576",
+      "title": "PIVOT: Progressive Intervention via Online Teacher Correction",
+      "abstract": "Reinforcement learning from verifiable rewards (RLVR) is limited by sparse outcome-level feedback on hard reasoning tasks: when all rollouts in a group fail, rewards provide no learning signal. Stronger teachers can provide additional guidance, but this raises a central question: how can such signals be incorporated into RLVR to support successful rollouts while remaining learnable for the student? We distinguish two complementary mechanisms: trajectory-level intervention, which improves access to reward-bearing trajectories, and token-level supervision, which provides dense targets to guide student learning. Our controlled experiments show that either mechanism alone can remain insufficient, motivating their combination. We therefore introduce PIVOT, which inserts teacher-generated corrections into student rollouts and applies token-level KL supervision to these segments alongside the RLVR objective. Beyond their combination, we systematically analyze where to intervene and how to supervise, yielding a recipe for effective guidance. Across hard logic games and mathematical reasoning benchmarks, PIVOT consistently outperforms existing methods, nearly doubling mean avg@8 on logic games from 19.5% for the best-performing baseline to 35.6%.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-29T17:45:07+00:00",
+      "v1_local": "2026-10-30T01:45:07+08:00",
+      "url": "https://arxiv.org/abs/2610.40576",
+      "arxiv_id": "2610.40576",
+      "submitted_date": "2026-10-30",
+      "category": "knowledge_distillation",
+      "analysis_path": "papers/2026-10/knowledge_distillation/2610.40576/tech_analysis.md",
+      "summary": "PIVOT把教师纠正片段与token监督结合，将1.7B学生逻辑游戏平均avg@8由最佳基线19.5%提升至35.6%。",
+      "ratings": {
+        "accuracy": 8,
+        "compression": 6,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "rating_basis": {
+        "accuracy": "§4.1/4.5表2：逻辑游戏学生Qwen3-1.7B、教师Qwen3-4B-Thinking，响应上限8192、教师片段4096。数学学生Qwen3-4B与教师同参数级别，上限16384/8192。逻辑三任务Survo、Minesweeper、Kakurasu：reverse-KL PIVOT为72.90/25.44/8.38，最佳基线KDRL为41.68/13.88/2.93，均值19.5→35.6。数学Math-ID为23.05对POPE22.09；AIME等任务forward KL更优，不能认为reverse KL总是更好。",
+        "compression": "逻辑设置教师/学生参数比4/1.7≈2.35；数学设置约1，不能混算。",
+        "innovation": "构造学生前缀u、教师纠正v、学生续写w的混合轨迹。教师实际走出恢复路径，随后学生在该路径上继续探索。；联合GRPO、reference约束和仅作用于教师生成token的KL监督，区分轨迹可达性与token可学习性。；最终配方在512-token学生前缀后介入，每prompt六条纯学生和两条辅助rollout，教师KL的top-k支持为30；初始成功率极低时偏好reverse KL，同时报告forward KL。",
+        "reproducibility": "直接参数压缩只适用于4B→1.7B逻辑设置，数学4B→4B是能力迁移而非参数缩小。教师介入增加训练成本，蒸馏收益不等于免费获得大模型能力。未来应统一教师token预算，评估更小学生、不同领域及错误恢复是否保持泛化。"
+      },
+      "fulltext_url": "https://arxiv.org/html/2610.40576v1",
+      "reproduction_path": null,
+      "authors": "Zhihao Yang , Boyuan Zheng , Puhui Tan , Yukun Chen , Kuan Zhang , Longze Chen , Jiaming Li , Renke Shan , Lu Wang , Xianpei Han"
+    },
+    {
+      "id": "2610.40454",
+      "title": "Glance: The Generator Is Its Own Reranker",
+      "abstract": "Retrieval-augmented generation commonly serves separate models for reranking and answering, duplicating model residency and passage processing. We introduce Glance, which equips the generator with a lightweight decision adapter and pointer head to score candidate passages from a shared prefill. Short relevance probes branch from the cached context, producing one score per passage without separately prefilling each query-passage pair. A single resident 9B backbone supports generation, general decisions and reranking, with approximately 0.1 GiB of additional memory per decision skill. After 39 minutes of MS MARCO fine-tuning, Glance achieves nDCG@10 of 0.741 on SciFact and 0.345 on NFCorpus, compared with 0.721 and 0.326 for bge-reranker-v2-m3. On 300 HotpotQA questions, its selected context improves answer F1 by 0.045 over cross-encoder-selected context under the same base generator (paired bootstrap 95% CI [0.014, 0.076]). In a scaling study, reranking quality keeps rising up to 200 candidates (43k tokens) scored from one shared prefill, where it exceeds the cross-encoder by 0.058 nDCG@10, and a probe-only activated adapter lets generation continue from the original passage cache. These initial results demonstrate generator-based reranking with one resident backbone; evaluation currently covers two retrieval datasets, one QA dataset and one backbone family.",
+      "subjects": "Computation and Language (cs.CL) ; Information Retrieval (cs.IR)",
+      "v1_utc": "2026-10-29T17:01:22+00:00",
+      "v1_local": "2026-10-30T01:01:22+08:00",
+      "url": "https://arxiv.org/abs/2610.40454",
+      "arxiv_id": "2610.40454",
+      "submitted_date": "2026-10-30",
+      "category": "other",
+      "analysis_path": "papers/2026-10/other/2610.40454/tech_analysis.md",
+      "summary": "Glance用同一9B骨干完成RAG重排与回答，额外决策技能约0.1GiB，但缓存和端到端时延仍需单独核算。",
+      "ratings": {
+        "accuracy": 7,
+        "compression": 5,
+        "innovation": 7,
+        "reproducibility": 6
+      },
+      "rating_basis": {
+        "accuracy": "§3.6/4/5：4000条MS MARCO训练查询、500步、batch8、学习率LoRA5e-5/head1e-4，B200训练39分钟、峰值21GiB。SciFact/NFCorpus nDCG@10为0.741/0.345，对独立bge-reranker-v2-m3为0.721/0.326。300道HotpotQA上F1提高0.045，配对bootstrap95%CI为[0.014,0.076]。Activated单独100题实验续用缓存F1为0.750，重新prefill为0.754；答案延迟138对181ms。这与主实验训练、GPU、样本数均不同。",
+        "compression": "移除独立重排骨干的常驻开销；每技能约0.1GiB，无通用总内存压缩率。",
+        "innovation": "冻结9B混合注意力骨干，仅训练rank16 LoRA与256维pointer head；probe在决策位置与选项结束位置的隐藏状态间打分，不生成自然语言判断。；packed_all一次prefill所有候选，再并行处理约30-token的独立probe。全注意力分支复制KV，DeltaNet分支还需复制卷积窗口和递归状态。；主流程adapter作用于所有token，选中段落后关adapter重新prefill再回答；Activated变体只在probe启用adapter，因此能续用原始base缓存，但该缓存仍保留所有候选，并非KV裁剪。",
+        "reproducibility": "仅两个BEIR数据集、一个QA数据集及一个骨干族，独立cross-encoder单查询仍更快。内存随候选数与上下文长度增长，无法保证合并模型就减少总显存。部分GPU被共享，跨实验延迟不可直接相除。未来应测多查询批处理、长上下文总缓存、不同骨干和显著性。"
+      },
+      "fulltext_url": "https://arxiv.org/html/2610.40454v1",
+      "reproduction_path": null,
+      "authors": "Adilet Metinov , Chingiz Arziev"
+    },
+    {
+      "id": "2610.40345",
+      "title": "A Unified Hessian-Guided Framework for Post-Training Quantization",
+      "abstract": "Low-bit quantization enables efficient deployment of large language models by reducing memory footprint and computational cost. Achieving high accuracy at low precision requires selecting quantization ranges, linear transformations, and weight rounding decisions. Existing approaches typically optimize these components independently using local reconstruction objectives, which fail to account for the varying impact of quantization errors on downstream predictions. Direct optimization of task-level metrics would provide a more faithful objective, but is challenging due to the discontinuous nature of quantization operations and the high computational cost of evaluating their downstream effects. In this work, we derive a Hessian-guided approximation of the output change induced by joint weight and activation quantization. Based on a tractable Fisher approximation, we formulate a unified post-training quantization framework that enables the joint optimization of quantization ranges, linear transformations, and weight rounding under a common output-sensitivity objective. The resulting method remains practical for modern large language models and consistently outperforms state-of-the-art transformation and rounding methods across both channel-wise and block-wise quantization settings.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-29T16:06:01+00:00",
+      "v1_local": "2026-10-30T00:06:01+08:00",
+      "url": "https://arxiv.org/abs/2610.40345",
+      "arxiv_id": "2610.40345",
+      "submitted_date": "2026-10-30",
+      "category": "quantization",
+      "analysis_path": "papers/2026-10/quantization/2610.40345/tech_analysis.md",
+      "summary": "H_Z-PTQ统一变换、舍入与裁剪的输出敏感度目标，Qwen3-8B W4A4KV4的WikiText PPL为10.43，FP为9.73。",
+      "ratings": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 9,
+        "reproducibility": 6
+      },
+      "rating_basis": {
+        "accuracy": "§4表2/3与附录B：2048条×2048 tokens的DCLM-Edu校准，WikiText上下文2048，CSR为6个常识任务平均归一化准确率，3个校准种子。Qwen3-8B W4A4KV4：FP PPL9.73/CSR67.46；H_Z-PTQ10.43±0.03/65.56±0.46；FlatQuant+GPTQ10.60±0.03/65.26±0.11。g32权重单独量化为9.84±0.01/67.42±0.25，W4A4-g32为9.99±0.01/66.77±0.38。表4去掉梯度对齐变换后Qwen PPL变25.19，但更换Hessian近似并非每个指标都更差，因此不把消融写成无例外定律。",
+        "compression": "4bit载荷相对16bit理论4倍；实际格式与变换有额外开销，本机未生成压缩检查点。",
+        "innovation": "由模型输出分布采样标签，反向计算层输出梯度Gz；用(GzGzᵀ)⊗(GzᵀGz)/||Gz||²近似输出Fisher。估计输出特征曲率、权重输入曲率和token梯度能量，避免构造完整s×o维Hessian。；用矩阵几何均值 M=(ΣGw⁻¹ # ΣGx)^(1/2)平衡变换后梯度范数，再乘Hadamard压低异常值；以X→XT、W→T⁻¹W维持未量化函数不变。；按量化tile粒度分别block-LDL分解输入/输出曲率，以高Fisher块优先、从右下反对角线次序处理。每tile在500个range候选中最小化D_i加权误差，再通过L_iᵀΔW L_o把舍入误差反馈到未处理块。；通道级配置为每输出通道一个权重scale、每token一个激活scale，transform block128；γ在[0.5,1]的100个候选上以token能量和输入Fisher加权选择。g32配置用32维独立变换与32值共享scale，论文省略该配置的激活裁剪。",
+        "reproducibility": "Kronecker、分离误差和舍入噪声假设都是近似，校准需要反向传播。小数据曲率可能奇异；本文本机实验明确加1%阻尼。理论16→4bit的4倍只计数值载荷，scale、变换和未量化层会降低实际压缩比。未来应比较校准成本、分布偏移、融合低比特内核及整模型端到端误差。"
+      },
+      "fulltext_url": "https://arxiv.org/html/2610.40345v1",
+      "reproduction_path": "scripts/quantization/2610.40345",
+      "authors": "Mads Toftrup , Marco Federici , Boris van Breugel , Paul Whatmough , Markus Nagel"
+    }
+  ],
+  "daily_raw_relevant_occurrences": {
+    "2026-10-30": 24,
+    "2026-10-31": 0,
+    "2026-11-01": 0
+  }
+}

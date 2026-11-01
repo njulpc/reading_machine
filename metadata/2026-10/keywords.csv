@@ -1,0 +1,9 @@
+arxiv_id,title,submitted_date,category,keywords
+2610.40647,"Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",2026-10-30,other,按频域角色压缩全局注意力通信
+2610.40637,world2vec: Mechanistic world models through latent dynamics learning,2026-10-30,other,紧凑的机制一致动力学世界模型
+2610.40618,An ODE-based Sampler for Discrete Diffusion Models,2026-10-30,knowledge_distillation,离散扩散的确定性轨迹与少步一致性蒸馏
+2610.40614,L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory,2026-10-30,other,压缩世界模型的持久3D推理记忆
+2610.40611,When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder,2026-10-30,other,共享解码器与中间层门控
+2610.40576,PIVOT: Progressive Intervention via Online Teacher Correction,2026-10-30,knowledge_distillation,教师轨迹纠正与局部KL蒸馏
+2610.40454,Glance: The Generator Is Its Own Reranker,2026-10-30,other,生成器与重排器共享常驻权重
+2610.40345,A Unified Hessian-Guided Framework for Post-Training Quantization,2026-10-30,quantization,输出Fisher统一指导权重与激活PTQ
