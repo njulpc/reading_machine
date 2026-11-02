@@ -1,0 +1,1676 @@
+{
+  "run_time": "2026-11-03T01:20:10.792550+08:00",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-10-31T00:00:00+08:00",
+    "end_exclusive": "2026-11-03T00:00:00+08:00",
+    "dates": [
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02"
+    ],
+    "report_date": "2026-11-02",
+    "run_date": "2026-11-03"
+  },
+  "main_sha": "abfe8f2767d8bf881d586718ab4db33fc576be6a",
+  "dedup_source_branches": [
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-29",
+      "sha": "37139ece193fa4d66212a2f2951ed88a8d83b76a",
+      "real_analysis_count": 20,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-30",
+      "sha": "8fe81f3241431f5f6af227ce768402d6f91f97ca",
+      "real_analysis_count": 8,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-31",
+      "sha": "25e3d35f37713e9b407a24c6f7b045dd26208f92",
+      "real_analysis_count": 7,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-01",
+      "sha": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1",
+      "real_analysis_count": 29,
+      "metadata_only": [
+        "2607.27951",
+        "2607.28410",
+        "2607.28457"
+      ]
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-02",
+      "sha": "f397bf7f726f7b7b8286a035d43da5c12236d336",
+      "real_analysis_count": 4,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-03",
+      "sha": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5",
+      "real_analysis_count": 12,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-04",
+      "sha": "f798a00e0569952212d0e6451f00ba6ea28de99a",
+      "real_analysis_count": 12,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-05",
+      "sha": "333264be93bb365ee7d29436235e6b056427943e",
+      "real_analysis_count": 12,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-06",
+      "sha": "67600577ca268cd88675d221f0e19fdb59673789",
+      "real_analysis_count": 30,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-07",
+      "sha": "87a4eb0f56e25253b22b8c7e9a288af8a467386a",
+      "real_analysis_count": 50,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-08",
+      "sha": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff",
+      "real_analysis_count": 60,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-10",
+      "sha": "652ee043ff7fad81734a95010b9b49b6dca1ec11",
+      "real_analysis_count": 9,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-12",
+      "sha": "5dea9ebeff4db72522e85962764ae51a4978a4e6",
+      "real_analysis_count": 12,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-14",
+      "sha": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372",
+      "real_analysis_count": 10,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-15",
+      "sha": "e463baea815c06d95ffc36eec034113b28db7927",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-16",
+      "sha": "940ef56b2ebd4bd22ce5636302234aaa63691e2d",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-17",
+      "sha": "1320530c9060d6acfd6a6814ebe65415b62c760d",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-18",
+      "sha": "2190e4aef62423032c78b7594a0e208c6d128c0d",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-19",
+      "sha": "3518b1fff91bab3cd78421810c0798177060063f",
+      "real_analysis_count": 22,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-20",
+      "sha": "6413646a6fec8b54f937415084c2df3e99b358a1",
+      "real_analysis_count": 9,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-21",
+      "sha": "dc8a46573315edb88419bb4eb181bea89d209de7",
+      "real_analysis_count": 12,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-22",
+      "sha": "0dd4154cce8306873ec37767b6ab27e00b07735f",
+      "real_analysis_count": 14,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-23",
+      "sha": "e1a83986b75aec3a0289a50082ac44a6b359a130",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-24",
+      "sha": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-25",
+      "sha": "508ce04ebcda0238aceb1d32991db50aac8904e0",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-26",
+      "sha": "4a627bc35cb9075ac416e12165c9418f79e1bbee",
+      "real_analysis_count": 19,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-27",
+      "sha": "f57ca87589c728a68851f21acdff1c333b402e35",
+      "real_analysis_count": 27,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-28",
+      "sha": "daeb352421a9263136927bc71497c86ddb512c77",
+      "real_analysis_count": 30,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-29",
+      "sha": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060",
+      "real_analysis_count": 38,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-30",
+      "sha": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-31",
+      "sha": "d21ad3ba2970c7664ffd084b568f61b1dbde8866",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-01",
+      "sha": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-02",
+      "sha": "ab05a346a491f043142867c74593f45e669812d1",
+      "real_analysis_count": 60,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-03",
+      "sha": "710202d696a1295b25e55f50d4fee966434549d4",
+      "real_analysis_count": 56,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-04",
+      "sha": "623673ccf816fda6de51daf471f55c79b0a24801",
+      "real_analysis_count": 31,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-05",
+      "sha": "1ab9858c9e986133aafa40226b1c5af0a760c175",
+      "real_analysis_count": 37,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-06",
+      "sha": "05108f7ef5b13b0fcc118d633a53c99d31d55166",
+      "real_analysis_count": 1,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-07",
+      "sha": "4fa4065a723520e6413d4bed69790612999517cd",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-08",
+      "sha": "3db8912129f5ebdfb2399a213f0688ac30cdf971",
+      "real_analysis_count": 5,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-09",
+      "sha": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-14",
+      "sha": "5068f2a8c89b815b69665b35900fd0e8d3800a54",
+      "real_analysis_count": 3,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-15",
+      "sha": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66",
+      "real_analysis_count": 4,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-21",
+      "sha": "263f4647c46bdea7fd86ecdabca69c889ef96806",
+      "real_analysis_count": 7,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-22",
+      "sha": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968",
+      "real_analysis_count": 2,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-29",
+      "sha": "2874106cd594d482ab71a00c8b6ef5fdf3622cbb",
+      "real_analysis_count": 7,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-12",
+      "sha": "252ce3d0f428984f276bb380dea030f165e9e9d3",
+      "real_analysis_count": 12,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-13",
+      "sha": "52bf4827692c57ccabbd1dd61a6e4641b683379f",
+      "real_analysis_count": 5,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-14",
+      "sha": "71c9c681c89725a10453f8fdee59633fcebb1bec",
+      "real_analysis_count": 0,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-19",
+      "sha": "883eb5828be85a82364fc08bcf40ea2295443902",
+      "real_analysis_count": 17,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-20",
+      "sha": "5a0766dd8748557393073127bb2557ad7b5b54a7",
+      "real_analysis_count": 6,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-27",
+      "sha": "b8974213ae16f5787f9e4287835b1351fa632048",
+      "real_analysis_count": 3,
+      "metadata_only": []
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-11-02",
+      "sha": "6cd5cf9f0a49338bd3ec14733d247547db914688",
+      "real_analysis_count": 8,
+      "metadata_only": []
+    }
+  ],
+  "historical_analyzed_ids_count": 601,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 11,
+  "new_ids": [
+    "2610.41968",
+    "2610.41970",
+    "2610.42018",
+    "2610.42030",
+    "2610.42031",
+    "2610.42084",
+    "2610.42112",
+    "2610.42116",
+    "2610.42128",
+    "2610.42135",
+    "2610.42147"
+  ],
+  "historical_intersection": [],
+  "daily_related_counts": {
+    "2026-10-31": 11,
+    "2026-11-01": 0,
+    "2026-11-02": 0
+  },
+  "related_list_occurrences": 28,
+  "related_id_occurrences": {
+    "2610.42030": 4,
+    "2610.42135": 4,
+    "2610.42018": 2,
+    "2610.42084": 2,
+    "2610.42112": 4,
+    "2610.42128": 2,
+    "2610.42031": 2,
+    "2610.41968": 2,
+    "2610.41970": 2,
+    "2610.42116": 2,
+    "2610.42147": 2
+  },
+  "coverage": [
+    {
+      "cat": "cs.LG",
+      "kind": "new",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.LG/new?show=2000&skip=0",
+          "skip": 0,
+          "total": 337,
+          "actual": 337,
+          "groups": [
+            "Showing new listings for Monday, 2 November 2026",
+            "New submissions (showing 111 of 111 entries)",
+            "Cross submissions (showing 87 of 87 entries)",
+            "Replacement submissions (showing 139 of 139 entries)"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.LG",
+      "kind": "recent",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0",
+          "skip": 0,
+          "total": 1431,
+          "actual": 1431,
+          "groups": [
+            "Mon, 2 Nov 2026 (showing 198 of 198 entries )",
+            "Fri, 30 Oct 2026 (showing 372 of 372 entries )",
+            "Wed, 28 Oct 2026 (showing 237 of 237 entries )",
+            "Tue, 27 Oct 2026 (showing 426 of 426 entries )",
+            "Mon, 26 Oct 2026 (showing 198 of 198 entries )"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.CL",
+      "kind": "new",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.CL/new?show=2000&skip=0",
+          "skip": 0,
+          "total": 138,
+          "actual": 138,
+          "groups": [
+            "Showing new listings for Monday, 2 November 2026",
+            "New submissions (showing 46 of 46 entries)",
+            "Cross submissions (showing 40 of 40 entries)",
+            "Replacement submissions (showing 52 of 52 entries)"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.CL",
+      "kind": "recent",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.CL/recent?show=2000&skip=0",
+          "skip": 0,
+          "total": 707,
+          "actual": 707,
+          "groups": [
+            "Mon, 2 Nov 2026 (showing 86 of 86 entries )",
+            "Fri, 30 Oct 2026 (showing 175 of 175 entries )",
+            "Wed, 28 Oct 2026 (showing 108 of 108 entries )",
+            "Tue, 27 Oct 2026 (showing 232 of 232 entries )",
+            "Mon, 26 Oct 2026 (showing 106 of 106 entries )"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.CV",
+      "kind": "new",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.CV/new?show=2000&skip=0",
+          "skip": 0,
+          "total": 165,
+          "actual": 165,
+          "groups": [
+            "Showing new listings for Monday, 2 November 2026",
+            "New submissions (showing 76 of 76 entries)",
+            "Cross submissions (showing 26 of 26 entries)",
+            "Replacement submissions (showing 63 of 63 entries)"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.CV",
+      "kind": "recent",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0",
+          "skip": 0,
+          "total": 914,
+          "actual": 914,
+          "groups": [
+            "Mon, 2 Nov 2026 (showing 102 of 102 entries )",
+            "Fri, 30 Oct 2026 (showing 233 of 233 entries )",
+            "Wed, 28 Oct 2026 (showing 156 of 156 entries )",
+            "Tue, 27 Oct 2026 (showing 290 of 290 entries )",
+            "Mon, 26 Oct 2026 (showing 133 of 133 entries )"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.AI",
+      "kind": "new",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.AI/new?show=2000&skip=0",
+          "skip": 0,
+          "total": 297,
+          "actual": 297,
+          "groups": [
+            "Showing new listings for Monday, 2 November 2026",
+            "New submissions (showing 98 of 98 entries)",
+            "Cross submissions (showing 88 of 88 entries)",
+            "Replacement submissions (showing 111 of 111 entries)"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.AI",
+      "kind": "recent",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.AI/recent?show=2000&skip=0",
+          "skip": 0,
+          "total": 1454,
+          "actual": 1454,
+          "groups": [
+            "Mon, 2 Nov 2026 (showing 186 of 186 entries )",
+            "Fri, 30 Oct 2026 (showing 392 of 392 entries )",
+            "Wed, 28 Oct 2026 (showing 254 of 254 entries )",
+            "Tue, 27 Oct 2026 (showing 433 of 433 entries )",
+            "Mon, 26 Oct 2026 (showing 189 of 189 entries )"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.AR",
+      "kind": "new",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.AR/new?show=2000&skip=0",
+          "skip": 0,
+          "total": 5,
+          "actual": 5,
+          "groups": [
+            "Showing new listings for Monday, 2 November 2026",
+            "New submissions (showing 1 of 1 entries)",
+            "Cross submissions (showing 1 of 1 entries)",
+            "Replacement submissions (showing 3 of 3 entries)"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "cs.AR",
+      "kind": "recent",
+      "complete": true,
+      "pages": [
+        {
+          "url": "https://arxiv.org/list/cs.AR/recent?show=2000&skip=0",
+          "skip": 0,
+          "total": 68,
+          "actual": 68,
+          "groups": [
+            "Mon, 2 Nov 2026 (showing 2 of 2 entries )",
+            "Fri, 30 Oct 2026 (showing 26 of 26 entries )",
+            "Wed, 28 Oct 2026 (showing 10 of 10 entries )",
+            "Tue, 27 Oct 2026 (showing 23 of 23 entries )",
+            "Mon, 26 Oct 2026 (showing 7 of 7 entries )"
+          ]
+        }
+      ]
+    }
+  ],
+  "group_coverage": [
+    {
+      "file": "cs.AI_new_0.html",
+      "groups": [
+        {
+          "label": "New submissions (showing 98 of 98 entries)",
+          "expected": 98,
+          "actual": 98
+        },
+        {
+          "label": "Cross submissions (showing 88 of 88 entries)",
+          "expected": 88,
+          "actual": 88
+        },
+        {
+          "label": "Replacement submissions (showing 111 of 111 entries)",
+          "expected": 111,
+          "actual": 111
+        }
+      ]
+    },
+    {
+      "file": "cs.AI_recent_0.html",
+      "groups": [
+        {
+          "label": "Mon, 2 Nov 2026 (showing 186 of 186 entries )",
+          "expected": 186,
+          "actual": 186
+        },
+        {
+          "label": "Fri, 30 Oct 2026 (showing 392 of 392 entries )",
+          "expected": 392,
+          "actual": 392
+        },
+        {
+          "label": "Wed, 28 Oct 2026 (showing 254 of 254 entries )",
+          "expected": 254,
+          "actual": 254
+        },
+        {
+          "label": "Tue, 27 Oct 2026 (showing 433 of 433 entries )",
+          "expected": 433,
+          "actual": 433
+        },
+        {
+          "label": "Mon, 26 Oct 2026 (showing 189 of 189 entries )",
+          "expected": 189,
+          "actual": 189
+        }
+      ]
+    },
+    {
+      "file": "cs.AR_new_0.html",
+      "groups": [
+        {
+          "label": "New submissions (showing 1 of 1 entries)",
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "label": "Cross submissions (showing 1 of 1 entries)",
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "label": "Replacement submissions (showing 3 of 3 entries)",
+          "expected": 3,
+          "actual": 3
+        }
+      ]
+    },
+    {
+      "file": "cs.AR_recent_0.html",
+      "groups": [
+        {
+          "label": "Mon, 2 Nov 2026 (showing 2 of 2 entries )",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "label": "Fri, 30 Oct 2026 (showing 26 of 26 entries )",
+          "expected": 26,
+          "actual": 26
+        },
+        {
+          "label": "Wed, 28 Oct 2026 (showing 10 of 10 entries )",
+          "expected": 10,
+          "actual": 10
+        },
+        {
+          "label": "Tue, 27 Oct 2026 (showing 23 of 23 entries )",
+          "expected": 23,
+          "actual": 23
+        },
+        {
+          "label": "Mon, 26 Oct 2026 (showing 7 of 7 entries )",
+          "expected": 7,
+          "actual": 7
+        }
+      ]
+    },
+    {
+      "file": "cs.CL_new_0.html",
+      "groups": [
+        {
+          "label": "New submissions (showing 46 of 46 entries)",
+          "expected": 46,
+          "actual": 46
+        },
+        {
+          "label": "Cross submissions (showing 40 of 40 entries)",
+          "expected": 40,
+          "actual": 40
+        },
+        {
+          "label": "Replacement submissions (showing 52 of 52 entries)",
+          "expected": 52,
+          "actual": 52
+        }
+      ]
+    },
+    {
+      "file": "cs.CL_recent_0.html",
+      "groups": [
+        {
+          "label": "Mon, 2 Nov 2026 (showing 86 of 86 entries )",
+          "expected": 86,
+          "actual": 86
+        },
+        {
+          "label": "Fri, 30 Oct 2026 (showing 175 of 175 entries )",
+          "expected": 175,
+          "actual": 175
+        },
+        {
+          "label": "Wed, 28 Oct 2026 (showing 108 of 108 entries )",
+          "expected": 108,
+          "actual": 108
+        },
+        {
+          "label": "Tue, 27 Oct 2026 (showing 232 of 232 entries )",
+          "expected": 232,
+          "actual": 232
+        },
+        {
+          "label": "Mon, 26 Oct 2026 (showing 106 of 106 entries )",
+          "expected": 106,
+          "actual": 106
+        }
+      ]
+    },
+    {
+      "file": "cs.CV_new_0.html",
+      "groups": [
+        {
+          "label": "New submissions (showing 76 of 76 entries)",
+          "expected": 76,
+          "actual": 76
+        },
+        {
+          "label": "Cross submissions (showing 26 of 26 entries)",
+          "expected": 26,
+          "actual": 26
+        },
+        {
+          "label": "Replacement submissions (showing 63 of 63 entries)",
+          "expected": 63,
+          "actual": 63
+        }
+      ]
+    },
+    {
+      "file": "cs.CV_recent_0.html",
+      "groups": [
+        {
+          "label": "Mon, 2 Nov 2026 (showing 102 of 102 entries )",
+          "expected": 102,
+          "actual": 102
+        },
+        {
+          "label": "Fri, 30 Oct 2026 (showing 233 of 233 entries )",
+          "expected": 233,
+          "actual": 233
+        },
+        {
+          "label": "Wed, 28 Oct 2026 (showing 156 of 156 entries )",
+          "expected": 156,
+          "actual": 156
+        },
+        {
+          "label": "Tue, 27 Oct 2026 (showing 290 of 290 entries )",
+          "expected": 290,
+          "actual": 290
+        },
+        {
+          "label": "Mon, 26 Oct 2026 (showing 133 of 133 entries )",
+          "expected": 133,
+          "actual": 133
+        }
+      ]
+    },
+    {
+      "file": "cs.LG_new_0.html",
+      "groups": [
+        {
+          "label": "New submissions (showing 111 of 111 entries)",
+          "expected": 111,
+          "actual": 111
+        },
+        {
+          "label": "Cross submissions (showing 87 of 87 entries)",
+          "expected": 87,
+          "actual": 87
+        },
+        {
+          "label": "Replacement submissions (showing 139 of 139 entries)",
+          "expected": 139,
+          "actual": 139
+        }
+      ]
+    },
+    {
+      "file": "cs.LG_recent_0.html",
+      "groups": [
+        {
+          "label": "Mon, 2 Nov 2026 (showing 198 of 198 entries )",
+          "expected": 198,
+          "actual": 198
+        },
+        {
+          "label": "Fri, 30 Oct 2026 (showing 372 of 372 entries )",
+          "expected": 372,
+          "actual": 372
+        },
+        {
+          "label": "Wed, 28 Oct 2026 (showing 237 of 237 entries )",
+          "expected": 237,
+          "actual": 237
+        },
+        {
+          "label": "Tue, 27 Oct 2026 (showing 426 of 426 entries )",
+          "expected": 426,
+          "actual": 426
+        },
+        {
+          "label": "Mon, 26 Oct 2026 (showing 198 of 198 entries )",
+          "expected": 198,
+          "actual": 198
+        }
+      ]
+    }
+  ],
+  "official_abs_count": 3672,
+  "fresh_abs_count": 613,
+  "cached_official_abs_count": 3059,
+  "refreshed_window_and_control": 70,
+  "abs_errors": [],
+  "adjacent_control": {
+    "id": "2610.41939",
+    "title": "Observable-Specific Validity Tests for Scientific AI: Controlled Approximations and Intervention Response",
+    "abstract": "An approximation can reproduce an energy while missing its response, or satisfy an error tolerance without being certified by a given bound. We formulate observable-specific validity records for scientific artificial intelligence (AI) that link a reduction to its reference model, error measure, tolerance, parameter domain, and transformations or interventions. Explicit displacement and velocity certificates for a singularly perturbed oscillator recover distinct convergence orders and provide sufficient validity guarantees. Exact Hubbard dimer relations resolve the different coupling domains accepted by energy and response criteria. Across 16 repeated neural fits, imposing dimensional homogeneity reduces energy scale transfer error from 52.3% to 0.0768% and raises the median fraction jointly satisfying gap and response tolerances from zero to 100%. Paired transformations verify the protected scaling relation, while a coupling crossover identifies the additional information needed for response transfer. A causal model recovers a positive intervention response beneath a strong negative observational association. For two mechanisms observed with Gaussian noise whose responses first differ at order $x^k$, we derive an exact fixed control query requirement scaling as $x^{-2k}$ and verify its full success curve numerically. Together with a 256-task evaluation interface, these results provide independently checkable tests of controlled approximation, physical transfer, and mechanism discrimination in scientific AI.",
+    "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI); Digital Libraries (cs.DL)",
+    "v1_utc": "2026-10-30T15:57:51+00:00",
+    "v1_local": "2026-10-30T23:57:51+08:00",
+    "url": "https://arxiv.org/abs/2610.41939"
+  },
+  "window_earliest": {
+    "id": "2610.41946",
+    "title": "Sensorium: An Open-Source Multimodal Data Collection and Curation Library for Embodied Surgical AI",
+    "abstract": "Embodied surgical AI requires reliable multimodal data, yet surgical data collection remains costly, difficult to repeat, and strongly dependent on the hardware setup. We present Sensorium, an open-source Python library for recording, processing, annotating, and curating multimodal surgical data from configurable robot and sensor streams using the Robot Operating System (ROS) and ROS2 middleware. The library combines operator-facing data acquisition, configurable processing, semantic annotation, and episodic dataset generation. We evaluate Sensorium across 1516 recordings of phantom, ex vivo, and in vivo porcine experiments involving multiple surgical tasks and sensing configurations, and report preliminary usability feedback.",
+    "subjects": "Artificial Intelligence (cs.AI) ; Robotics (cs.RO)",
+    "v1_utc": "2026-10-30T16:04:23+00:00",
+    "v1_local": "2026-10-31T00:04:23+08:00",
+    "url": "https://arxiv.org/abs/2610.41946"
+  },
+  "window_latest": {
+    "id": "2610.42152",
+    "title": "GazeRIB: Systematic Evaluation of Multi-Reader Gaze-Guided Chest X-ray Learning",
+    "abstract": "Radiologists' visual attention can supervise medical image learning, but how reader panel composition affects its value remains untested. We evaluated GazeRIB (Gaze-guided Radiologist-Informed Blackout), which masks unviewed regions during training and uses unmasked images at inference. Eight experts repeatedly read the same 80 chest X-rays (CXRs). We compared individual readers with three-, five- and eight-reader panels across seven architectures and 10 seeds, evaluating 910 models on a separate 2,897-CXR cohort for four-class severity prediction. Every panel improved macro F1 over the no-gaze baseline by 5.33-7.47 percentage points (pp; Bonferroni-adjusted p < 0.007); no individual reader reached significance on this endpoint. Three readers captured 73-80% of the eight-reader gain in macro F1, the area under the receiver-operating-characteristic curve (ROC-AUC) and the area under the precision-recall curve (AU-PRC). On external validation without retraining, all four panels improved ROC-AUC on SIIM-FISABIO-RSNA by +1.93 to +4.24 pp (p <= 0.004); on MIMIC-Eye no panel differed significantly from baseline, whereas the single-reader average declined (-1.40 pp, p = 0.008). Reader composition therefore influenced performance, although transfer depended on the cohort.",
+    "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Human-Computer Interaction (cs.HC); Image and Video Processing (eess.IV); Signal Processing (eess.SP)",
+    "v1_utc": "2026-10-30T17:59:59+00:00",
+    "v1_local": "2026-10-31T01:59:59+08:00",
+    "url": "https://arxiv.org/abs/2610.42152"
+  },
+  "semantic_review": [
+    {
+      "id": "2610.42152",
+      "title": "GazeRIB: Systematic Evaluation of Multi-Reader Gaze-Guided Chest X-ray Learning",
+      "abstract": "Radiologists' visual attention can supervise medical image learning, but how reader panel composition affects its value remains untested. We evaluated GazeRIB (Gaze-guided Radiologist-Informed Blackout), which masks unviewed regions during training and uses unmasked images at inference. Eight experts repeatedly read the same 80 chest X-rays (CXRs). We compared individual readers with three-, five- and eight-reader panels across seven architectures and 10 seeds, evaluating 910 models on a separate 2,897-CXR cohort for four-class severity prediction. Every panel improved macro F1 over the no-gaze baseline by 5.33-7.47 percentage points (pp; Bonferroni-adjusted p < 0.007); no individual reader reached significance on this endpoint. Three readers captured 73-80% of the eight-reader gain in macro F1, the area under the receiver-operating-characteristic curve (ROC-AUC) and the area under the precision-recall curve (AU-PRC). On external validation without retraining, all four panels improved ROC-AUC on SIIM-FISABIO-RSNA by +1.93 to +4.24 pp (p <= 0.004); on MIMIC-Eye no panel differed significantly from baseline, whereas the single-reader average declined (-1.40 pp, p = 0.008). Reader composition therefore influenced performance, although transfer depended on the cohort.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Human-Computer Interaction (cs.HC); Image and Video Processing (eess.IV); Signal Processing (eess.SP)",
+      "v1_utc": "2026-10-30T17:59:59+00:00",
+      "v1_local": "2026-10-31T01:59:59+08:00",
+      "url": "https://arxiv.org/abs/2610.42152",
+      "included": false,
+      "reason": "眼动监督提升分类，未改变部署模型规模或推理路径。"
+    },
+    {
+      "id": "2610.42149",
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "abstract": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Computation and Language (cs.CL); Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:59:43+00:00",
+      "v1_local": "2026-10-31T01:59:43+08:00",
+      "url": "https://arxiv.org/abs/2610.42149",
+      "included": false,
+      "reason": "连续潜在推理提高生成与test-time scaling；全文未建立参数、KV或总算量压缩收益，不将latent替代token本身视为模型压缩。"
+    },
+    {
+      "id": "2610.42148",
+      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+      "abstract": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectively, suffering from severe prefix recomputation overheads or distorted output probabilities. To address this challenge, we propose Flide, an efficient and exact inference engine that decouples the logical tree structure of a decision request from its physical execution within a single flattened token stream. Through ForkAttention, Flide navigates request dependencies using GPU-resident indices across both standard attention and recurrent Gated DeltaNet layers, guaranteeing in exact arithmetic that every query branch evaluates identically to an isolated forward pass. By expressing branch topologies directly in GPU-resident metadata, Flide accommodates diverse request mixtures with a compact set of pre-recorded execution graphs while enabling expanding agent histories to resume from checkpoints saved in earlier passes. Extensive evaluations on public hybrid and decision models demonstrate that Flide answers queries up to 9.5 times faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance. By unifying physical execution throughput with mathematical exactness, Flide establishes a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T17:59:38+00:00",
+      "v1_local": "2026-10-31T01:59:38+08:00",
+      "url": "https://arxiv.org/abs/2610.42148",
+      "included": false,
+      "reason": "精确分叉与调度复用，保持原模型计算语义，属于执行引擎优化而非模型压缩。"
+    },
+    {
+      "id": "2610.42147",
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "abstract": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T17:59:34+00:00",
+      "v1_local": "2026-10-31T01:59:34+08:00",
+      "url": "https://arxiv.org/abs/2610.42147",
+      "included": true,
+      "reason": "LSA 用语义聚类和分层索引减少超长上下文注意力计算，但不压缩原始 KV 缓存。"
+    },
+    {
+      "id": "2610.42146",
+      "title": "Hierarchical World Models with Implicit Dynamics",
+      "abstract": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at this https URL",
+      "subjects": "Robotics (cs.RO) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T17:59:25+00:00",
+      "v1_local": "2026-10-31T01:59:25+08:00",
+      "url": "https://arxiv.org/abs/2610.42146",
+      "included": false,
+      "reason": "分层世界模型改善规划，不是压缩原模型。"
+    },
+    {
+      "id": "2610.42145",
+      "title": "SemEllipsoid: Semantic-aware Shape Abstraction with Ellipsoid",
+      "abstract": "Representing 3D shapes using a set of primitives - known as shape abstraction - is an actively studied problem in computer graphics with wide applications in shape understanding, analysis, and simulation due to the compactness and computational efficiency of the primitive-based representation. Prior work has primarily focused on geometry-aware shape abstraction, where the objective is to approximate the input shape with a minimal set of primitives while preserving geometric fidelity. However, these methods often overlook semantic consistency, inevitably leading to primitives that span across multiple semantic parts. Such inconsistency can cause undesirable artifacts in downstream tasks such as part-level shape editing or manipulation. In this paper, we introduce a new task - semantic-aware shape abstraction, where the goal is to produce abstractions that are both geometrically faithful and semantically consistent, ensuring that each primitive adheres strictly to a single semantic part without crossing semantic boundaries. We propose SemEllipsoid, a novel method to address this problem using ellipsoidal primitives. The core idea is to inject semantic constraints into the primitive optimization process leveraging the availability of semantic cues from large-scale foundation models. We design a fully differentiable projection-blending-evaluation scheme to measure semantic divergence against input semantic masks, and formulate an alternating optimization strategy to iteratively solve for optimal semantic assignment and primitive configurations. Our method is non-learning-based, requiring no data collection or network training, and generalizes well to shapes from arbitrary categories. It also supports different levels of abstraction according to user demand. Extensive experiments and evaluations validate the effectiveness of our approach across several 3D shape collections.",
+      "subjects": "Graphics (cs.GR) ; Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T17:59:14+00:00",
+      "v1_local": "2026-10-31T01:59:14+08:00",
+      "url": "https://arxiv.org/abs/2610.42145",
+      "included": false,
+      "reason": "椭球几何表示压缩，不是神经模型压缩。"
+    },
+    {
+      "id": "2610.42141",
+      "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+      "abstract": "Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet today these harnesses are built by hand and redesigned for each new robot or benchmark. We show that harness design can be automated, offering a strong alternative to finetuning on a novel setup. In RoboArchitect, a coding model observes a robot's rollouts, diagnoses failures, and iteratively revises the harness around the frozen policy. The harness evolves on a set of episodes for its optimization and is evaluated on held-out scenes and tasks. Without updating any model weights, RoboArchitect raises average success from 9.7% to 43.3% on unseen scenes (4.5x) and from 12.7% to 40.2% on unseen tasks (3.2x), across multiple benchmarks and policies. The gains are largest where the benchmark is far from the policy's training data: wrapping a general-purpose policy, the evolved harness yields a specialist that often outperforms even the finetuned version. Intuitive control strategies are automatically designed, such as lifting a jammed arm clear or reaching in horizontally when an obstacle blocks the way from above. The harness also evolves its own persistent memory, carrying learned experience, such as effective grasp depths, into later decisions. These results suggest that substantial headroom in robotic manipulation lies in the agent harness, and its design can be effectively automated and optimized without weight updates.",
+      "subjects": "Robotics (cs.RO) ; Artificial Intelligence (cs.AI); Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T17:58:48+00:00",
+      "v1_local": "2026-10-31T01:58:48+08:00",
+      "url": "https://arxiv.org/abs/2610.42141",
+      "included": false,
+      "reason": "自动优化外部机器人控制harness，模型冻结且未压缩。"
+    },
+    {
+      "id": "2610.42139",
+      "title": "Counting on Dummies: Privacy Amplification with Observable Counts and Truncated Batches",
+      "abstract": "In many practical deployments of Differentially Private Stochastic Gradient Descent (DP-SGD), the server processes data in batches. Randomly sampling these batches allows for better privacy bounds via privacy amplification results. Most sampling schemes with provable privacy amplification, including Poisson sampling and random allocation, result in variable batch sizes. The privacy guarantee of these schemes requires that the batch sizes are not revealed. In distributed settings, the server performing the aggregation or any party observing the communication traffic may learn these batch sizes. Furthermore, in both centralized and distributed settings, memory and computation constraints may require each batch to be of some maximum size $s$, necessitating truncation of the batch when it exceeds this limit. It is known that this truncation can result in a significant increase in privacy loss. In this work, we address both of these challenges via a simple mechanism that uses a random number of \\emph{dummy points} to privatize the batch size and maintain the privacy guarantee even under truncation. We demonstrate that our mechanism is easy to implement in a distributed setting, and provide a general analysis of this mechanism for both Poisson sampling and random allocation. Our analysis is designed to support efficient and relatively tight privacy accounting. It also effectively amplifies the privacy of the count releases by subsampling, making the expected number of dummy points asymptotically smaller than what is needed to directly privatize the (sensitivity-one) batch sizes with non-negative noise. For Poisson sampling with truncated batches, we demonstrate empirically that our mechanism achieves better privacy--efficiency tradeoffs than the direct accounting for truncation recently given by (Ganesh, 2025).",
+      "subjects": "Machine Learning (cs.LG) ; Cryptography and Security (cs.CR)",
+      "v1_utc": "2026-10-30T17:58:42+00:00",
+      "v1_local": "2026-10-31T01:58:42+08:00",
+      "url": "https://arxiv.org/abs/2610.42139",
+      "included": false,
+      "reason": "差分隐私采样与batch计数保护。"
+    },
+    {
+      "id": "2610.42136",
+      "title": "ReLift: Dense 3D Tracking as Lifted Trajectory Repair",
+      "abstract": "Dense 3D tracking from monocular video requires establishing point correspondences over time, estimating their depth, and inferring their trajectories during occlusion. Existing methods typically learn these tasks jointly, a demanding objective given the scarcity of 4D supervision. We show that strong pretrained 2D trackers and 3D geometry models provide an effective foundation: lifted trajectories, with occluded segments simply interpolated, already rival dedicated 3D trackers using the same geometry. However, lifted trajectories inherit correspondence and depth errors, and under occlusion, their depth comes from the occluder rather than the tracked point. We introduce ReLift, an efficient feed-forward framework that recasts dense 3D tracking as geometric trajectory repair and completion. At its core, a trajectory corrector alternates attention along and across trajectories to preserve reliable observations, repair corrupted positions, and complete missing motion. Using only geometric inputs allows us to train directly on 3D trajectories with simulated lifting errors, decoupling training from images and from any specific tracker or geometry model. Concentrating 4D supervision on trajectory refinement yields a reusable model that consistently improves lifted trajectories across trackers and geometry providers without retraining, so it benefits directly from future advances in either component. On WorldTrack, ReLift achieves state-of-the-art mean accuracy, improving on the strongest baselines by 2.1 APD on all points and 3.0 on dynamic points, with faster configurations remaining competitive with leading 3D trackers while running faster than 4RC. Visit our supplementry page for more examples and code.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T17:58:33+00:00",
+      "v1_local": "2026-10-31T01:58:33+08:00",
+      "url": "https://arxiv.org/abs/2610.42136",
+      "included": false,
+      "reason": "轨迹修复任务架构，没有模型压缩贡献。"
+    },
+    {
+      "id": "2610.42135",
+      "title": "A Better Critic Matters for Distribution Matching Distillation",
+      "abstract": "Distribution Matching Distillation (DMD) trains a few-step student using the difference between a teacher's score and an online critic's estimate of the student distribution's score. We investigate what the critic needs, in capacity and in information, to provide a reliable training signal. On the capacity side, controlled experiments across seven SiT model sizes on ImageNet show that increasing teacher size while keeping a small critic fixed can degrade student quality and cause training collapse. Scaling the critic alongside the teacher, a strategy we call joint scaling, prevents collapse in our experiments and allows the student to benefit from larger teachers. On the information side, rather than forcing the critic to model a step-agnostic mixture of student outputs, we introduce a step-aware critic (STAC) that conditions on the student's generation step to estimate step-specific scores. Together, joint scaling and STAC consistently improve few-step distillation across class-conditional ImageNet generation, text-to-image generation with SDXL and FLUX.2, and text-to-video generation with Wan2.1.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:58:26+00:00",
+      "v1_local": "2026-10-31T01:58:26+08:00",
+      "url": "https://arxiv.org/abs/2610.42135",
+      "included": true,
+      "reason": "DMD 蒸馏需要匹配教师规模的 critic，并让 critic 感知生成步，才能稳定获得高质量少步学生。"
+    },
+    {
+      "id": "2610.42133",
+      "title": "Instance-dependent sequential limits as an exact information ledger",
+      "abstract": "Instance-dependent limits for bandit regret, sequential tests, best-arm identification and Markov decision processes are proved by one chain. It runs from a divergence decomposition through data processing to a statistic, a testing step that turns a class guarantee into a requirement on the history, and optimization over alternatives and allocations. Only the first step is an identity. This work writes the chain as an exact ledger. By the chain rule, data processing loses exactly a conditional divergence, which vanishes for arms in natural exponential families at the per-arm counts and reward sums. A one-parameter family of martingale identities extends the decomposition to every tilt between two instances. The classical limits follow by relaxations with named defects. All defects but the asymptotic step's can be computed from an algorithm's own runs, the uniform quantification's only when the class guarantee is a number. On seven published sources, from movie ratings to engine replacement, the ledger locates the difference between standard algorithms and the classical limits. For identification among trained models and for Wald's test the largest term is usually the uniform quantification's.",
+      "subjects": "Machine Learning (cs.LG) ; Information Theory (cs.IT); Statistics Theory (math.ST); Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-30T17:57:44+00:00",
+      "v1_local": "2026-10-31T01:57:44+08:00",
+      "url": "https://arxiv.org/abs/2610.42133",
+      "included": false,
+      "reason": "信息论下界/遗憾账本。"
+    },
+    {
+      "id": "2610.42128",
+      "title": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
+      "abstract": "Decision models target structured tasks by directly predicting choices or scores, avoiding autoregressive decoding latency. However, transferring a generative LLM's ranking knowledge to a decision model remains challenging: the teacher expresses preferences through a ranked list of document ID sequences, while the student determines the ranking using scores from the first-token position. To bridge this gap, we introduce DecisionRank, a decision model trained through item-space on-policy distillation (OPD). Item-space OPD constructs the student's rollout by sorting its document scores into a ranked sequence. A generative teacher takes the resulting ranking list as inputs and provides conditional feedback to directly supervise those scores. Combined with offline ranking supervision, DecisionRank achieves state-of-the-art performance on both general and reasoning-intensive retrieval benchmarks such as TREC DL, BEIR, and BRIGHT. Across four benchmarks, item-space OPD consistently outperforms alternative training objectives. Even at 1.7B parameters, DecisionRank surpasses its 27B generative teacher on TREC DL19--23. At 8B, it outperforms its generative listwise counterpart while running $24.5\\times$ faster on TREC DL and $16.7\\times$ faster on BRIGHT.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T17:56:58+00:00",
+      "v1_local": "2026-10-31T01:56:58+08:00",
+      "url": "https://arxiv.org/abs/2610.42128",
+      "included": true,
+      "reason": "DecisionRank 把生成式排序教师蒸馏成首token打分学生，以一次前向替代自回归排序。"
+    },
+    {
+      "id": "2610.42126",
+      "title": "Physiological Trajectories and Observation Patterns in ICU Mortality Prediction: Transportability Under Changing Measurement Conditions",
+      "abstract": "Objective: To distinguish the transferable predictive value of physiological trajectories from that of observation patterns in ICU mortality prediction, and to assess whether measurement timing affects performance independently of observation quantity. Materials and Methods: In-hospital mortality was predicted at 48 hours using MIMIC-III, MIMIC-IV, and eICU. Nested representations progressively integrated latest-value snapshots (R1), longitudinal physiological summaries (R2), and measurement frequency and timing features (R3). Models fitted on 7,762 MetaVision patients were evaluated on 21,682 MIMIC-IV patients and 43,878 eICU patients across 204 hospitals. The effect of measurement timing was assessed while holding the number of retained observations constant. Results: Physiological trajectories improved external prediction in eICU (R2-R1 log-loss difference -0.00922, 95% CI -0.01148 to -0.00704). Observation-pattern features improved locally developed eICU models (R3-R2 -0.00257, 95% CI -0.00370 to -0.00146), but not clearly after transfer from MetaVision (-0.00012, 95% CI -0.00206 to +0.00208). R3 was favoured in 10 of 30 source bootstrap refits. At matched observation counts, retaining measurements spread throughout the window reduced log loss relative to random retention by 0.03280 for R3 versus 0.00703 for R2. Removing the final 12 hours increased log loss relative to count-matched random removal by 0.01947 for R3 versus 0.00822 for R2. Under reduced availability, the local R3 increment changed from beneficial to harmful. Discussion: Physiological trajectories transferred more consistently, while observation-pattern features were particularly sensitive to the timing and availability of measurements. Conclusion: Clinical prediction models should be evaluated not only in new patient populations but also under the measurement conditions that supply their inputs.",
+      "subjects": "Machine Learning (cs.LG) ; Quantitative Methods (q-bio.QM)",
+      "v1_utc": "2026-10-30T17:56:10+00:00",
+      "v1_local": "2026-10-31T01:56:10+08:00",
+      "url": "https://arxiv.org/abs/2610.42126",
+      "included": false,
+      "reason": "临床观测特征和时间可迁移性。"
+    },
+    {
+      "id": "2610.42118",
+      "title": "Gradient Descent on Two ReLU Neurons: Global Landscape and Bifurcation Dynamics",
+      "abstract": "Understanding how gradient descent learns features remains a central challenge in neural network theory. We study this question in a minimal multi-index setting that already exhibits rich multi-phase gradient dynamics: a well-specified two-neuron ReLU teacher-student model under isotropic Gaussian inputs, trained by population gradient flow from small initialization. We show that the dynamics are organized by two directions: the \"easy\" bisector direction, which carries the leading signal, and the \"hard\" splitting direction, which governs specialization. To characterize the loss structure and learning behavior, we analyze the population squared-loss landscape and show that every critical point with both student weights nonzero is either a global minimum or a saddle. We then track the gradient-flow trajectory, showing that student neurons first collapse toward a bisector saddle before escaping and specializing to teacher neurons. Our results provide both a landscape and dynamics account of the multi-phase symmetry-breaking behavior that arises in a simple multi-index model and under standard algorithmic and architectural choices.",
+      "subjects": "Machine Learning (cs.LG) ; Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-30T17:51:35+00:00",
+      "v1_local": "2026-10-31T01:51:35+08:00",
+      "url": "https://arxiv.org/abs/2610.42118",
+      "included": false,
+      "reason": "teacher/student为同规模理论学习模型，无压缩蒸馏。"
+    },
+    {
+      "id": "2610.42117",
+      "title": "Fast Privacy Loss Accounting for Random Allocation via Multiscale FFT",
+      "abstract": "In the random allocation sampling scheme each user's data is used in $k$ steps chosen randomly and uniformly from a sequence of $t$ steps. This scheme is known to improve on Poisson sampling in private optimization and in communication-efficient aggregation. The existing privacy loss distribution (PLD) accountant for this scheme runs in time quadratic in the inverse of the accuracy parameter $\\alpha$ (Feldman and Shenfeld, 2026). We give an algorithm, \\emph{multiscale FFT}, that represents likelihood ratios on a grid that is uniform within each dyadic interval and computes the exact rounding of every pairwise sum using FFTs within each interval. It keeps the guarantees of the accountant and improves the dependence of its running time on $\\alpha$ from $O(\\alpha^{-2})$ to $O(\\alpha^{-1}\\log(1/\\alpha))$. In addition, we demonstrate that rounding can be performed via the mean-preserving connect-the-dots projection of (Doroshenko et al., 2026). This reduces the errors that rounding introduces in the mean of the privacy loss and in the $\\chi^2$ divergence of the computed pair from the order of $\\alpha$ to $O(\\alpha^2/\\log(t))$. In our experiments, our algorithm achieves speedups of several orders of magnitude at high accuracy and gives improved privacy bounds for DP-SGD with PREAMBLE.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:51:03+00:00",
+      "v1_local": "2026-10-31T01:51:03+08:00",
+      "url": "https://arxiv.org/abs/2610.42117",
+      "included": false,
+      "reason": "隐私会计FFT数值加速，不是模型量化。"
+    },
+    {
+      "id": "2610.42116",
+      "title": "ACCT: Asymmetric Cross-LLM Context Transfer",
+      "abstract": "In real-world deployments, large language model (LLM) systems are increasingly evolving from single-model invocation toward heterogeneous deployments in which different models are dynamically invoked for inference. When the same context is reused across models, however, each newly selected target model typically has to process it again, repeatedly incurring substantial computational costs. Therefore, we propose ACCT (Asymmetric Cross-LLM Context Transfer), which targets KV cache transfer between models of different scales within the same model family. ACCT transforms the KV cache produced by a source model into sparse KV states that can be directly consumed by a target model, thereby enabling cross-model reuse of context computation and decoupling context computation from downstream inference. ACCT consists of three lightweight components: the Cartographer identifies query-relevant context tokens for each target layer and KV head; the Allocator determines how many context tokens each target layer and KV head retains under a shared total KV budget; and the Compiler transforms selected source KV into sparse target KV. The target model can therefore perform inference using the transferred KV without reprocessing the original context. We evaluate ACCT in two complementary settings comprising five general-capability benchmarks and six highly context-dependent tasks. Experiments show that ACCT matches or exceeds the target model's original inference performance even when reducing the KV cache size by 75%. At a context length of approximately 19K tokens, ACCT's KV conversion achieves a 6.5-21.2 times speedup over target context prefill. These results demonstrate the feasibility of transferring context computation across models under a limited KV budget.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T17:50:49+00:00",
+      "v1_local": "2026-10-31T01:50:49+08:00",
+      "url": "https://arxiv.org/abs/2610.42116",
+      "included": true,
+      "reason": "ACCT 将源模型上下文转换成目标模型稀疏 KV；四倍目标缓存缩减可行，但精度和总时延高度依赖迁移方向。"
+    },
+    {
+      "id": "2610.42112",
+      "title": "Subquadratic Attention with a Hierarchical Tree-Structured Indexer",
+      "abstract": "The quadratic scaling of attention is a fundamental bottleneck limiting the long-context capabilities of large language models (LLMs). A variety of approaches have attempted to circumvent this, but they either fail to match attention's expressiveness (e.g., sliding-window or linear attention variants with fixed-size state) or only achieve constant-factor speedups (e.g., sparse attention methods whose indexers themselves scale quadratically). In this paper, we derive an asymptotically subquadratic sparse attention method based on a hierarchical, tree-structured indexer, which we call Zyphra Hierarchical Attention (ZHA). ZHA constructs a tree of recursively compressed key summaries over the KV cache, which future queries traverse from the top down to retrieve a sparse subset of keys. Crucially, by iteratively growing the tree's depth, the total cost including routing and final attention grows sublinearly in sequence length, resulting in overall subquadratic (but superlinear) scaling for attention. We demonstrate that ZHA can be cheaply applied to existing pretrained models with only a short KL distillation training stage over a few billion tokens, and maintains performance on long-context retrieval and challenging reasoning, mathematical, and agentic coding evaluation tasks. Moreover, we show that our method is highly robust to tree geometry including very deep trees of up to 6 levels. Finally, we develop a detailed performance model and show that our approach scales subquadratically, dramatically outperforms competing methods beyond 1 million context, and ultimately has the potential to extend effective context windows to the hundreds of millions or billions of tokens.",
+      "subjects": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T17:48:37+00:00",
+      "v1_local": "2026-10-31T01:48:37+08:00",
+      "url": "https://arxiv.org/abs/2610.42112",
+      "included": true,
+      "reason": "ZHA 用可学习参考查询构造层级键摘要，以top-p路由稀疏访问KV；长距离性能预测尚待优化内核和实测。"
+    },
+    {
+      "id": "2610.42111",
+      "title": "SATFRONT: Detecting Atmospheric Fronts with Satellite Data using Machine Learning",
+      "abstract": "Atmospheric fronts are associated with much of the high-impact weather in the mid-latitudes, yet their identification and classification remain largely manual and subjective. Existing deep learning approaches rely primarily on gridded reanalysis or forecast data, limiting their applicability to satellite observations available for time-critical applications. We introduce SATFRONT, a machine learning framework for detecting cold, warm, and occluded fronts over Europe from geostationary satellite observations, with reanalysis data as an optional additional input. The model is trained on frontal analyses from five European national meteorological services and evaluated against UK Met Office analyses for 2024. Using satellite observations alone, SATFRONT achieves a Critical Success Index (CSI) of 0.428 at a 150 km tolerance, within the range of agreement between analyses from different meteorological services (0.277-0.501) and higher than that of an operational rule-based front detector that uses satellite data (0.133). Adding ERA5 reanalysis increases the CSI to 0.591. ERA5 substantially improves the placement of individual fronts, although its effect on their annual spatial distribution varies by front type. These results demonstrate that cold, warm, and occluded fronts can be detected directly from geostationary satellite observations, providing a basis for automated frontal analyses at the high temporal frequency required for time-critical applications.",
+      "subjects": "Atmospheric and Oceanic Physics (physics.ao-ph) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:48:20+00:00",
+      "v1_local": "2026-10-31T01:48:20+08:00",
+      "url": "https://arxiv.org/abs/2610.42111",
+      "included": false,
+      "reason": "天气锋面检测应用。"
+    },
+    {
+      "id": "2610.42109",
+      "title": "Regret-Optimal Wasserstein-Robust Linear Regression",
+      "abstract": "Distributionally robust optimization (DRO) minimizes worst-case risk under distributional uncertainty, but its decisions can be suboptimal in terms of their excess risk, or regret. We study this gap for multivariate least-squares regression, assuming that the observed source law and unknown target law differ by an adversarial 2-Wasserstein perturbation of size $\\varepsilon$. We first identify the asymptotic complexity of robust decision-making in the $\\varepsilon \\to 0$ limit, characterized by a problem-specific condition number $\\kappa$. Here, a wide spectrum of simple algorithms, including DRO, achieve the instance-optimal rate of $O(\\kappa \\varepsilon^2)$. For fixed $\\varepsilon > 0$, we prove that DRO still achieves the minimax rate if the problem has bounded residual effective rank. On the other hand, we identify significant failure modes where DRO is provably suboptimal by dimension-dependent factors. Fortunately, we prove that two alternative procedures, minimax regret optimization (MRO) and spectral-norm regularization (SNR), attain the minimax rate. We derive an exact convex reformulation of MRO and an accelerated proximal algorithm for SNR, along with high-probability finite-sample guarantees. We support these theoretical results with numerical experiments separating the performance of MRO and SNR from DRO.",
+      "subjects": "Machine Learning (stat.ML) ; Machine Learning (cs.LG); Optimization and Control (math.OC)",
+      "v1_utc": "2026-10-30T17:47:58+00:00",
+      "v1_local": "2026-10-31T01:47:58+08:00",
+      "url": "https://arxiv.org/abs/2610.42109",
+      "included": false,
+      "reason": "分布鲁棒回归理论。"
+    },
+    {
+      "id": "2610.42106",
+      "title": "Hard Constraint Projection in a Physics Informed Neural Network (Burgers)",
+      "abstract": "Physics informed machine learning provides a framework to study and simulate fluid dynamics, potentially at a fraction of the computational cost of traditional numerical methods, with the goal of improving the explainability, accuracy and robustness of purely data driven machine learning methods. In this work, we extend the hard constraint projection (HCP) method developed by Chen et al. [Journal of Computational Physics, 445, 110624, 2021] from a linear partial differential equation (PDE) to a nonlinear PDE: the 1D Burgers' equation. To strictly impose a discrete approximation of the governing equation, the Burgers' equation is first locally discretised (using a finite difference stencil) then decomposed into a constraint matrix and a prediction matrix. Using tools from linear algebra, the constraint matrix is used to construct a projection matrix. A physics informed neural network (PINN) [Raissi et al. Journal of Computational Physics, 378, 686, 2019] is used to predict the velocity, and a final unlearnable layer projects the velocity prediction to the hyperplane of exact solutions to a discretised form of the Burgers' equation. Our initial results indicate that the HCP-PINN initially trains similarly to an equivalent PINN, and as the PINN loss plateaus, the HCP-PINN loss continues to decline. When tested on a previously unseen uniform grid of points covering the domain, the HCP-PINN exhibits higher accuracy, converging to a data error approximately an order of magnitude lower than the comparable PINN. We also observe that the inclusion of the HCP layer results in better observance of the governing PDE. Our findings suggest that the HCP-PINN can be more robust to the selection of physics collocation points, and less dependent on collocation point quantity.",
+      "subjects": "Fluid Dynamics (physics.flu-dyn) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:47:01+00:00",
+      "v1_local": "2026-10-31T01:47:01+08:00",
+      "url": "https://arxiv.org/abs/2610.42106",
+      "included": false,
+      "reason": "PINN硬约束投影改善PDE精度。"
+    },
+    {
+      "id": "2610.42104",
+      "title": "Hyperbolic Inverse Reinforcement Learning",
+      "abstract": "Inverse reinforcement learning (IRL) seeks to infer the reward function underlying observed behavior, but its predictive accuracy and interpretability depend on how that reward is computed from the underlying features. While prior IRL reward functions have been implemented through a variety of techniques including linear weights, neural networks, or other function approximators, none make assumptions about the geometry of the underlying feature space. Inspired by geometric organization observed in neural circuits, we introduce Hyperbolic inverse reinforcement learning (Hyperbolic IRL), which parameterizes reward as a function of Hyperbolic distance between the feature vector and a learned parameter vector, as well as its Euclidean distance variant. We tested our methods against a range of linear and nonlinear IRL baselines under both deterministic and stochastic policies. Our Hyperbolic approach achieved comparable performance to state-of-the-art models on established benchmarks and excelled in the low data limit and across dense environments. Applied to human navigation among multiple exhibits in a museum room, Hyperbolic IRL reveals reward structure that depends not only on individual exhibit-distance features, but also on non-separable conjunctions between them. Together, these results demonstrate that a Hyperbolic reward parameterization can improve both the predictive accuracy and interpretability of IRL, providing a framework for studying how non-separable, conjunctive structure can begin to explain behavior.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:46:04+00:00",
+      "v1_local": "2026-10-31T01:46:04+08:00",
+      "url": "https://arxiv.org/abs/2610.42104",
+      "included": false,
+      "reason": "奖励函数的双曲几何参数化。"
+    },
+    {
+      "id": "2610.42100",
+      "title": "Towards Understanding the Impact of Plasticity Loss on Reinforcement Learning in Stochastic Environments",
+      "abstract": "Deep reinforcement learning (RL) is a powerful framework for sequential decision-making. Despite many high-profile successes in recent years, deep RL is known to be brittle. An emerging line of research attributes this brittleness to a loss of plasticity in neural networks. However, plasticity loss has so far been understudied in stochastic environments. We study this interplay systematically, training SAC agents on three DeepMind Control tasks augmented with controlled levels of observation and action noise. We find that plasticity-preserving methods increase learning robustness on the two harder tasks, with their advantage growing as observation noise increases, while combining resets with layer normalization underperforms resets alone at every observation noise level tested. Further, stochasticity can accelerate the loss of plasticity in harder environments, whereas in easier settings noise can act as a regularizer that sustains plasticity. Lastly, plasticity loss is most pronounced in the early stages of training. In the most challenging stochastic settings, TD instability rather than gradual plasticity loss becomes the dominant failure mode.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:43:04+00:00",
+      "v1_local": "2026-10-31T01:43:04+08:00",
+      "url": "https://arxiv.org/abs/2610.42100",
+      "included": false,
+      "reason": "RL可塑性保持与环境噪声。"
+    },
+    {
+      "id": "2610.42096",
+      "title": "CausalWAM: Learning the Causes of Actions in World Action Models",
+      "abstract": "World action models (WAMs) learn latent variables from observations and use these to both predict the evolution of the scene and to generate actions. The prediction has to be of the whole scene, whereas only a portion of the scene causes actions. WAMs fitted to demonstrations do not, in general, guarantee that they will generate actions solely from the latent causes of the demonstrated actions (the action-relevant latent variables), as the model could just as well learn to imitate in this way whilst entangling the action-relevant latent variables with the nuisance variables. We therefore separate out what causes action from what prediction depends on. We prove that under a sparsity constraint the latent variables used to generate actions are an invertible function of the action-relevant latent variables alone and the true structure is identified up to a permutation of the latent variables. This requires neither sufficient temporal dependence nor any assumptions on how the unobserved regimes evolve and holds even when the action-relevant latent variables are statistically dependent on the rest. We therefore propose CWAM (Causal WAM), which incorporates the constraint into a pretrained WAM by adding a sparse routing path to its action head, with the world modeling objective remaining unchanged. Experiments on both synthetic data and real-world robots validate the theory as well as showcase the improved efficiency in closed-loop success.",
+      "subjects": "Artificial Intelligence (cs.AI) ; Robotics (cs.RO); Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-30T17:40:00+00:00",
+      "v1_local": "2026-10-31T01:40:00+08:00",
+      "url": "https://arxiv.org/abs/2610.42096",
+      "included": false,
+      "reason": "稀疏路由用于因果可识别性；摘要未显示模型/缓存/计算压缩实证，按主目标排除。"
+    },
+    {
+      "id": "2610.42092",
+      "title": "Rethinking Asymmetry in Self-Supervised 3D Geometry Learning",
+      "abstract": "Self-supervised learning relies on asymmetry between what a model observes and what it must explain. Recent methods learn 3D geometry from unposed images by predicting cameras and scene structure, then rendering held-out views. To avoid trivial solutions, they impose this asymmetry in the input space, restricting how views interact through separate branches or masked attention. We revisit this design with geometric accuracy, rather than rendering quality, as the main objective. When a held-out view lies between context views, the context already constrains the geometry it observes. We therefore impose the asymmetry in the 3D representation space, excluding held-out views only from the reconstructed scene while a shared backbone uses all views for correspondence. This improves depth and pose estimation over input-space designs. We further exploit view density: sparse and dense observations depict the same scene but provide different amounts of correspondence. Aligning sparse-context features with dense-context features supplies a geometric training signal alongside rendering, without a pretrained geometric teacher. We additionally align features with a frozen vision foundation model, which brings further gains. None of these signals requires geometric annotation, and the resulting model improves geometry estimation over prior self-supervised methods. Controlled experiments isolate the contribution of each component, and self-supervised pretraining also improves subsequent supervised training.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T17:38:39+00:00",
+      "v1_local": "2026-10-31T01:38:39+08:00",
+      "url": "https://arxiv.org/abs/2610.42092",
+      "included": false,
+      "reason": "自监督几何与feature alignment，没有压缩教师或推理路径。"
+    },
+    {
+      "id": "2610.42085",
+      "title": "Cost-Aware Stopping for Freeze-Thaw Bayesian Optimization: When Does One-Step Lookahead Suffice?",
+      "abstract": "Freeze-thaw Bayesian optimization (BO) evaluates candidates in resumable increments but usually stops at a budget or convergence test. We maximize a budget-free utility, the best observed score minus a cost per increment, with a one-step lookahead: advance the candidate with the largest expected improvement (EI) under a fixed surrogate, and stop once no EI exceeds the cost. This rule, EI stopping, never falls below stopping immediately in expected utility, yet it can stop too early. We construct a certificate, a lower bound on the value of two-step lookahead, that proves such a stop premature, and repeating this correction never lowers expected utility under the surrogate. Under the surrogate, EI stops are premature on average at low costs and lose little at high costs. On three hyperparameter optimization benchmarks, a pre-registered test finds EI stopping noninferior to the correction in most high-cost settings, while the correction gains at low costs on two of the three; more information sharing in the surrogate raises EI stopping's utility. On the surrogates of two published methods, EI stopping trades lower scores for fewer training increments. EI stopping is a simple cost-aware reference whose utility depends on the surrogate.",
+      "subjects": "Machine Learning (cs.LG) ; Optimization and Control (math.OC); Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-30T17:36:06+00:00",
+      "v1_local": "2026-10-31T01:36:06+08:00",
+      "url": "https://arxiv.org/abs/2610.42085",
+      "included": false,
+      "reason": "贝叶斯优化提前停止，训练候选资源分配。"
+    },
+    {
+      "id": "2610.42084",
+      "title": "RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models",
+      "abstract": "Continuous diffusion language models show promising potential in text generation tasks, but are prone to problems such as text repetition, semantic drift, and generation quality degradation when the generation length exceeds the training length. To address these challenges, we propose RangeSWA, a training-free length extrapolation method. The method combines local sliding-window attention, remote block summaries, and dynamic content retrieval to preserve local details and support long-range context access. In addition, generation degradation caused by length extrapolation is mitigated through positional remapping, conditioning attention correction, and denoising-stage-adaptive window scheduling. We conducted experiments on multiple continuous diffusion language models, and the results show that RangeSWA can effectively reduce generative perplexity and text repetition rates in long-text generation.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T17:35:48+00:00",
+      "v1_local": "2026-10-31T01:35:48+08:00",
+      "url": "https://arxiv.org/abs/2610.42084",
+      "included": true,
+      "reason": "RangeSWA 通过局部窗口、远程摘要和动态检索改善扩散语言模型长度外推，8k实测加速约1.21×。"
+    },
+    {
+      "id": "2610.42082",
+      "title": "Think in 360°: Benchmarking and Bootstrapping Panoramic Video Reasoning",
+      "abstract": "A panoramic video captures all directions around the camera, but relevant evidence can appear in different directions and at different times. Understanding it requires models to connect observations across the viewing sphere and time. We introduce PanoVideoBench, the first manually annotated benchmark for comprehensive panoramic video understanding. Its 1,000 questions span five categories and 15 question types, with diagnostic annotations for target search and panoramic capabilities. Evaluation of 11 proprietary, open-source, and panoramic-specialized models identifies cross-view tracking and sphere-time evidence integration as their weakest capabilities. To strengthen these capabilities, we construct PanoVideoCoT, the first reasoning dataset grounded in real panoramic video, through sphere-time-grounded synthesis that converts verified panoramic observations and successful agentic explorations into 13,465 QA-CoT pairs. Starting from a general video MLLM, PanoVideoReasoner learns from this corpus through Panoramic CoT SFT and Evidence-Privileged On-Policy Self-Distillation, a panoramic instantiation of Vision-OPD's OPSD in which the teacher uses verified perspective views to guide student-generated trajectories. It reaches 55.7% on PanoVideoBench, improving the backbone by 12.5 points and the previous SOTA by 2.6. The gains concentrate on the same spatial, cross-view, and temporal capabilities exposed by the benchmark, showing that grounded sphere-time supervision can equip a general video MLLM with panoramic reasoning.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T17:35:02+00:00",
+      "v1_local": "2026-10-31T01:35:02+08:00",
+      "url": "https://arxiv.org/abs/2610.42082",
+      "included": false,
+      "reason": "privileged self-distillation改善全景推理，未提出压缩学生或推理成本降低。"
+    },
+    {
+      "id": "2610.42081",
+      "title": "Differentially Private Synthetic Data from Sliced Chebyshev Moments",
+      "abstract": "Research on practical differentially private (DP) synthetic data has largely focused on methods that approximately preserve low-dimensional marginals of a target distribution, and can thus only hope to preserve higher-dimensional, global structure as a lucky by-product. At the same time, existing methods that target global accuracy guarantees pay a price exponential in the data dimension, $d$. In this work, we address this ``curse of dimensionality'' by presenting a new DP synthetic data algorithm, SPLICE, that comes with a compelling global distributional guarantee, even in high-dimensions, and moreover, is practically state-of-the-art. Our algorithm is based on measuring noisy sliced Chebyshev polynomial moments of the target distribution and fitting a distribution to match, a twist on recent polynomial methods for 1-D synthetic data. We prove that, given a dataset of $n$ examples, SPLICE returns a private distribution with Sliced Wasserstein-1 distance $\\tilde{O}(1/\\sqrt{n})$ from the target, for constant privacy parameters. Notably, this bound is independent of the data dimension, $d$. Along the way, we prove a moment matching result of independent interest: for a distribution on the unit ball, matching the first $O(1/\\alpha)$ Chebyshev moments along $\\tilde{O}(d/\\alpha^2)$ random directions guarantees $\\alpha$ Sliced Wasserstein error. Finally, we provide a practical implementation of the algorithm that borrows tools from the tensor decomposition literature and achieves state-of-the-art performance compared to prior DP synthetic data methods on an extensive benchmark.",
+      "subjects": "Machine Learning (cs.LG) ; Computers and Society (cs.CY); Data Structures and Algorithms (cs.DS)",
+      "v1_utc": "2026-10-30T17:34:58+00:00",
+      "v1_local": "2026-10-31T01:34:58+08:00",
+      "url": "https://arxiv.org/abs/2610.42081",
+      "included": false,
+      "reason": "差分隐私合成数据与矩匹配。"
+    },
+    {
+      "id": "2610.42068",
+      "title": "RAMA: Retrieval-Augmented Multi-Agent Routing with Episodic Memory for LEO Satellite Networks",
+      "abstract": "Low-Earth orbit (LEO) satellite networks present a challenging routing environment due to rapidly changing topology, traffic, and link conditions. Existing deep reinforcement learning (DRL) routing methods typically rely on current observations and information encoded in network weights, limiting their ability to exploit successful past experiences. We propose RAMA, a retrieval-augmented multi-agent DRL framework with Approximate Information State (AIS), in which each satellite combines its local observation, recent routing history, neighboring state information, and retrieved entries from a per-satellite episodic memory. Retrieved experiences are integrated through a Transformer-based decision network trained with AIS-based auxiliary objectives. With weights frozen in a 140-satellite Kepler constellation, RAMA reduces mean end-to-end latency by 13.4% and 99th-percentile latency by 66.7% relative to the state-of-theart double deep Q-network (DDQN) routing method, mainly by avoiding long detours. Updated online, RAMA remains stable while DDQN degrades. On the 1,584-satellite Starlink shell 1, the reduction in mean latency grows to 93.2%, and updating RAMA online lowers its mean latency by a further 25.5%. These results demonstrate the effectiveness of retrieval-augmented memory for scalable decentralized routing in LEO satellite networks.",
+      "subjects": "Networking and Internet Architecture (cs.NI) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:26:50+00:00",
+      "v1_local": "2026-10-31T01:26:50+08:00",
+      "url": "https://arxiv.org/abs/2610.42068",
+      "included": false,
+      "reason": "网络路由策略与episodic memory，非模型压缩。"
+    },
+    {
+      "id": "2610.42066",
+      "title": "The Knowledge Layer Model (KLM): Evidence-Visible AI Output, Routing Diagnostics, and Negative Results",
+      "abstract": "AI answers require more than apparent correctness: reviewers need to inspect their recorded basis. We introduce the Knowledge Layer Model (KLM), an open, implementation-neutral specification for inference records with versioned epistemic assessments, evidence relations, and explicit unknowns. SEDIM, the knowledge and evidence architecture of Nage AI OS, is a reference implementation. We reference KLM v0.3 (repository tag v0.3.0). Empirical material consists of separate internal experiments, not end-to-end validation. A historical platform-domain routing benchmark reports 137/150 classifications across 15 classes (91.3%; nominal 95% Wilson interval 85.7-94.9%); the numerator is recovered from a rounded summary, and historical example membership is unverified. A native-model weight-path configuration yielded 0/15 successful answers in a corrected two-source test. A capacity-growth comparison could not establish a reliable effect because of a defective legacy scorer and missing original outputs. Lexical and scoped diagnostics each yielded AUC 0.008 for silent-versus-contradicted examples, below the registered minimum of 0.65. Legacy packing lost gold-containing text in 118/221 selected cases; repaired packing retained it in 221/221. These measure text presence, not answer quality. Python and TypeScript verifiers reportedly agreed on six checks per synthetic fixture; a separate production disclosure was not accepted. Restoration, re-derivation, human-rubric support, boundary isolation, and bounded-response evaluations remain proposed. Findings are internal and author-reported; historical observations are distinguished from later reproductions. Evidence visibility does not establish correctness, causal reliance, security, or regulatory compliance. Independent replication and a complete public audit package remain future work.",
+      "subjects": "Artificial Intelligence (cs.AI) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T17:26:18+00:00",
+      "v1_local": "2026-10-31T01:26:18+08:00",
+      "url": "https://arxiv.org/abs/2610.42066",
+      "included": false,
+      "reason": "AI证据记录规范；packing涉及输入证据，不是模型压缩。"
+    },
+    {
+      "id": "2610.42060",
+      "title": "PersonaChatBench: Evaluating Chat Assistants with Diverse Simulated Users",
+      "abstract": "Conversational assistants are expected to help people with diverse backgrounds, preferences, and communication styles. Yet evaluations centered on a single cooperative user provide limited insight into how reliably an assistant serves users with different personas. We introduce PersonaChatBench, a framework for evaluating task competence and responsiveness to diverse user needs. PersonaChatBench pairs the same underlying task with multiple simulated users, each guided by a private persona card that specifies distinct needs, preferences, and interaction behaviors. By holding the task fixed while varying the user, the framework examines how assistant performance changes across user conditions. We evaluate 20 language models across six domains, separately assessing native task outcomes, fulfillment of expressed persona needs, and simulator fidelity. Our results show that task performance and need fulfillment vary across personas and domains. Strong task performance does not necessarily translate into satisfying individual needs, and models' relative strengths in meeting those needs are not consistent across domains. PersonaChatBench makes these differences measurable, revealing gaps obscured by aggregate scores and helping identify which users an assistant serves well and where adaptation is needed. It provides a basis for evaluating consistency across users and guiding the development of assistants that better accommodate diverse needs in everyday applications.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T17:23:14+00:00",
+      "v1_local": "2026-10-31T01:23:14+08:00",
+      "url": "https://arxiv.org/abs/2610.42060",
+      "included": false,
+      "reason": "人格模拟评测基准。"
+    },
+    {
+      "id": "2610.42054",
+      "title": "CRoS: Causality Reward on Scrambled CoTs Improves Accuracy and Reasoning Faithfulness",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become the standard method for training language models to reason. However, RLVR typically relies solely on outcome correctness, which does not guarantee that the CoT causally contributes to the final answer. Without this connection, outcome rewards may fail to reinforce high-quality reasoning. Existing causality metrics assess CoT causality by perturbing the CoT, such as deleting reasoning steps or injecting errors, and measuring changes in the final answer. However, these perturbations inevitably alter information in each step. Consequently, high causality scores may reflect sensitivity to information changes introduced by perturbation rather than true causality. Such confounding effects further induce undesirable reasoning behaviors when these metrics are used as training rewards, including generating less informative CoTs and reducing exploration and self-correction. To address this problem, we propose CRoS (Causality Reward on Scrambled CoTs), a novel CoT causality metric that perturbs the order of reasoning steps without altering content, thereby preserving information within each step. On Reasoning Gym with Gemma-3-4B, CRoS outperforms existing causality and outcome rewards in out-of-domain accuracy, CoT quality, and CoT faithfulness. Specifically, CRoS achieves 46.8% accuracy on five unseen logic and games datasets, outperforming the strongest baseline (43.8%). It also achieves better CoT quality, consistently outperforming baselines in CoT-Pass@K from K=1 to 128, averaging 43.4% vs. 41.4%. For CoT faithfulness, CRoS achieves a hint acknowledgment score of 34.0% vs. 20.2%.",
+      "subjects": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T17:18:35+00:00",
+      "v1_local": "2026-10-31T01:18:35+08:00",
+      "url": "https://arxiv.org/abs/2610.42054",
+      "included": false,
+      "reason": "推理忠实性的RL奖励，非压缩。"
+    },
+    {
+      "id": "2610.42053",
+      "title": "REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control",
+      "abstract": "Foundation models are becoming remarkably reliable at high-level reasoning, yet they remain too slow and costly to serve as fine-grained controllers. Conversely, fast policies like VLAs and whole-body controllers offer more efficient reflexes, but struggle to generalize. While pairing a deliberative brain (foundation models) with a reactive cerebellum (fast policies) seems natural for embodied systems, two obstacles remain: methods are built and scored on incompatible stacks, and their asynchronous coordination is difficult. For example, an agent that calls the VLA in the agentic loop can stall the fast execution, while a VLA that calls the agent on errors tends to re-trigger fallbacks repeatedly or completely miss silent failures. To address this, we propose REA (Routed Embodied Agent), a unified runtime where a deliberative System 2, an embodied router System 1 and reactive System 0 policies cooperate under a single golden rule - no running policy waits on the brain. Instead of querying the brain at each failure, REA employs a route memory that stores each policy's measured success ahead of time, a boundary-triggered judge gate that consults the brain on policy execution, and a shared-budget escalation ladder for bounded recovery. Evaluated on 3,000 test episodes across 60 LIBERO-Pro tasks, REA reaches 95.9% success and beats the best single-agent baseline in its own policy pool (94.7%) while reducing control steps by 25% and control time by 17%. In a separate 100-episode RoboTwin 2.0 study, REA achieves 84% success with VLA policies and 86% with VLA+code, compared with 80% for the strongest single VLA baseline MEDex. These results demonstrate learned and programmatic policies operating within the same runtime. REA also transfers to BEHAVIOR-1K and a real Unitree G1 humanoid, achieving the highest observed success among the compared methods.",
+      "subjects": "Robotics (cs.RO) ; Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T17:18:13+00:00",
+      "v1_local": "2026-10-31T01:18:13+08:00",
+      "url": "https://arxiv.org/abs/2610.42053",
+      "included": false,
+      "reason": "异步机器人代理调度，控制时间降低来自编排而非模型压缩。"
+    },
+    {
+      "id": "2610.42048",
+      "title": "Exact Theory and Optimal Stepsizes for Stochastic Gradient Descent in Smooth Convex Minimization",
+      "abstract": "This work considers the design of stepsize schedules for stochastic gradient descent in smooth convex optimization. Throughout, we assume that gradient noise is conditionally zero-mean with bounded variance. Among problems with dimension $d\\geq N+1$, we provide an exact worst-case analysis of the expected suboptimality of stochastic gradient descent's final iterate. Our analysis applies to any (potentially nonconstant) schedule of $N$ stepsizes in $[0,1.5]^N$. Here, exact means that we provide a matching objective function and noise distributions where our guarantee is attained. Whenever the variance bound is at least $\\Omega(1/\\sqrt{N})$, our theory provides the minimax optimal stepsize schedule for stochastic gradient descent and proves its uniqueness. These optimal stepsizes monotonically decrease, ruling out any accelerations in expected final suboptimality from fixed fractal schedules observed in the deterministic case.",
+      "subjects": "Optimization and Control (math.OC) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:14:59+00:00",
+      "v1_local": "2026-10-31T01:14:59+08:00",
+      "url": "https://arxiv.org/abs/2610.42048",
+      "included": false,
+      "reason": "SGD步长复杂度理论。"
+    },
+    {
+      "id": "2610.42042",
+      "title": "A richness-sensitive Acoustic Biodiversity Index from species-level detections: classifier benchmarking, false-positive control and validation against standard soundscape indices in an African savanna and an urban zoo",
+      "abstract": "Acoustic indices are widely used as rapid proxies for biodiversity, but they summarise the distribution of sound energy rather than the species producing it and often track richness poorly. We revise and test an Acoustic Biodiversity Index (ABI) built from species-level detections. Its primary form, ABI_E, is Shannon diversity of detections normalised by the regional species pool expected at the site and season (H / ln S_ref); temporal stability T is reported as a separate component. We first benchmarked four classifiers on a strongly labelled tropical dataset (1,216 calls, 24 classes) with recording-grouped cross-validation. BirdNET embeddings + logistic regression performed best (macro-F1 0.750 +/- 0.029), and random frame-level splits inflated accuracy from 0.41 to 0.70. We then applied BirdNET v2.4 with a location and season filter to recordings from a riverine savanna in the Zambezi Valley, Zimbabwe, and from three habitats at Emirates Park Zoo and Resort, Abu Dhabi, United Arab Emirates. A stricter post-hoc location filter removed 517 high-confidence detections of 9 implausible species, all at the zoo. After diel-matched rarefaction to equal effort (6 h), the savanna site held 21 species (Hill number 1D = 9.83; ABI_E = 0.38) against 1.3-13 species (ABI_E = 0.03-0.21) at the zoo sites. Across 149 recorded hours, ABI_E correlated strongly with richness (Spearman rho = 0.93), whereas six standard indices did not (best: ACI, rho = 0.48). The stability term was lower at the savanna site (0.39) than at the zoo (0.65-0.67), showing that it penalises the natural diel cycle of bird activity. Species-level indices with explicit false-positive control, a declared regional reference pool and effort standardisation provide a more interpretable biodiversity indicator than energy-based acoustic indices.",
+      "subjects": "Machine Learning (cs.LG) ; Sound (cs.SD); Quantitative Methods (q-bio.QM)",
+      "v1_utc": "2026-10-30T17:05:52+00:00",
+      "v1_local": "2026-10-31T01:05:52+08:00",
+      "url": "https://arxiv.org/abs/2610.42042",
+      "included": false,
+      "reason": "声学生物多样性检测指标。"
+    },
+    {
+      "id": "2610.42040",
+      "title": "Near-Optimal Second-Order Convex Finite-Sum Optimization under Individual Smoothness",
+      "abstract": "We study the stochastic second-order oracle complexity of solving smooth convex finite-sum optimization with $n$ components. Very recently, Tsedenov \\& Kovalev (2026) showed that the minimax optimal complexity under averaged smoothness and convexity is $\\tilde{\\Theta}(n + n^{6/7} \\epsilon^{-2/7})$ by establishing nearly matching upper and lower bounds. In this paper, we show that individual smoothness and convexity provably enable further acceleration, where the lower complexity bound is $\\Omega(n+ n^{5/7} \\epsilon^{-2/7})$ under this stronger assumption. Then, by establishing a novel second-order self-bounding inequality, we design a new Taylor-corrected lazy Newton method, which can lead to a better complexity of $\\tilde{\\mathcal{O}}(n + n^{5/7} \\epsilon^{-2/7})$ by applying the optimal Monteiro-Svaiter acceleration, matching our lower bound up to only logarithmic factors.",
+      "subjects": "Optimization and Control (math.OC) ; Artificial Intelligence (cs.AI); Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-30T17:04:25+00:00",
+      "v1_local": "2026-10-31T01:04:25+08:00",
+      "url": "https://arxiv.org/abs/2610.42040",
+      "included": false,
+      "reason": "二阶有限和优化复杂度。"
+    },
+    {
+      "id": "2610.42039",
+      "title": "Same Question, Different Answers: Auditing Persona-Dependent Variation in Six LLMs on Smoking-Cessation Advice",
+      "abstract": "Hundreds of millions of people now ask large language model (LLM) chatbots for health advice, which raises a question that is simple to pose and hard to answer: does everyone get the same advice? We audit six widely deployed LLMs from four providers on smoking cessation, a domain with codified clini- cal guidance and substantial public-health stakes, by putting the same four cessation questions to twelve user personas that differ in life stage, self-described expertise, and smoking history, for a total of 2,880 responses. What the models say depends on who appears to be asking. Every model named FDA-approved prescription cessation medications less often to teen personas than to adult personas, by 32 to 67 percentage points, and in five of six models a persona presenting health- care expertise received fewer facts than a persona presenting none. We then evaluate one deployable intervention: a short system prompt specifying a factual floor, the set of core med- ical facts every user should receive when they are relevant, while leaving tone, vocabulary, and framing free to adapt. The prompt narrows persona differences in every model, but its effect on overall fact coverage varies in both magnitude and direction across models, so a prompt validated on one system cannot be assumed to transfer to another. Two cautions frame these results. Equal mention rates are not always the correct clinical target, because prescription cessation pharmacother- apy is not recommended for minors, so a defensible factual floor must be age-aware rather than uniform. And because our personas vary on several attributes at once, we report scenario- level differences rather than isolated effects of age or expertise. We release all 2,880 responses and the analysis code.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T17:03:35+00:00",
+      "v1_local": "2026-10-31T01:03:35+08:00",
+      "url": "https://arxiv.org/abs/2610.42039",
+      "included": false,
+      "reason": "医疗建议persona公平性审计。"
+    },
+    {
+      "id": "2610.42036",
+      "title": "Learning Clean Generative Processes from Noisy Measurements",
+      "abstract": "We study how to learn a generative model of clean images using only noisy observations. Diffusion processes and their generalizations to non-Gaussian noise require posterior predictions at every noise level. We first show that it is possible to learn these predictions from independent noisy views using Noise2Noise regression, but only at or above the noise level of the training data. To learn the predictions below that level, needed to generate clean images, we impose consistency: a prediction should equal its expectation after continuing the sampling process. We derive conditions under which consistency uniquely determines the continuation to the clean image distribution and verify them for Poisson, binomial, Gamma, and negative-binomial measurements. Experiments on CIFAR-10, photon-counting microscopy, and synthetic aperture radar show that the required posterior predictions can be learned from noisy views alone and that the consistency relation repairs the continuation beyond the noise level of the data, which severely deteriorates without consistency.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Artificial Intelligence (cs.AI); Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T17:01:25+00:00",
+      "v1_local": "2026-10-31T01:01:25+08:00",
+      "url": "https://arxiv.org/abs/2610.42036",
+      "included": false,
+      "reason": "从噪声观测学习生成模型；consistency用于识别干净分布，不是少步蒸馏。"
+    },
+    {
+      "id": "2610.42031",
+      "title": "Any Forcing: Any-Step Generality and One-Step Stability for Autoregressive Video Generation",
+      "abstract": "Autoregressive video generation enables efficient inference through streaming prediction. However, existing methods are typically restricted to fixed sampling steps, limiting the flexibility to balance generation quality and efficiency, while one-step generation suffers from degraded visual quality and error accumulation over long sequences, leading to content drift and generation collapse. To address these issues, we propose Any Forcing, a unified framework for achieving Any-Step Generality and One-Step Stability. Specifically, we introduce a unified adversarial discriminator that jointly performs real-distribution alignment, inter-step consistency alignment, and first-frame quality enhancement, enabling flexible sampling while preserving one-step generation quality. Furthermore, we propose a training-free adaptive long-term memory selection mechanism that selects historical states based on global semantic relevance and local value contribution, while remapping their temporal positions to preserve temporal relationships within the memory cache, thereby enabling stable one-step long-video generation. Experiments demonstrate that Any Forcing achieves high-quality and stable one-step autoregressive video generation, achieving 20.9 FPS and 24.7 FPS for short and long video generation on a single H100 GPU, respectively.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T16:56:42+00:00",
+      "v1_local": "2026-10-31T00:56:42+08:00",
+      "url": "https://arxiv.org/abs/2610.42031",
+      "included": true,
+      "reason": "Any Forcing 联合步间一致性、首帧增强和历史缓存选择，稳定少步自回归视频生成。"
+    },
+    {
+      "id": "2610.42030",
+      "title": "There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?",
+      "abstract": "Looping re-applies a block of layers so that each token passes through the block more than once. Adding a loop to a trained model is attractive because it leaves the parameter count, and hence the disk size, the memory footprint and the training cost unchanged. Unfortunately, every generated token pays for the loop. Re-applying m of N layers makes each token about (N+m)/N times as expensive. Loops that a model learns during large-scale pretraining justify this price, but whether loops added after pretraining justify this cost remains unclear. We compare a looped model with two simple baselines. We first compare it with the same model trained identically without the loop (equal parameters). Secondly, we compare it with the best unlooped use of the same inference floating-point operations (equal FLOPs). Across Qwen3 and Qwen3.5 models from 0.8B to 9B parameters, only the looped 0.8B model beats both baselines. At 4B and 9B, the looped model does not beat the first baseline, i.e. the same model trained without the loop. This is not because the benchmarks are too easy, since on the same benchmarks the unlooped 9B model still scores up to 13 points higher than the 4B model, showing that there is ample room for improvement. Introducing loops in an already pretrained model therefore only pays for small models with a fixed parameter budget.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:56:29+00:00",
+      "v1_local": "2026-10-31T00:56:29+08:00",
+      "url": "https://arxiv.org/abs/2610.42030",
+      "included": true,
+      "reason": "固定参数的层循环只在0.8B模型上通过等参数与等FLOPs双重检验，不能普遍视作有效压缩替代。"
+    },
+    {
+      "id": "2610.42029",
+      "title": "Empirical Evaluation of Quantum Kernel Methods for Classification: A Comparative Study with Classical Kernels",
+      "abstract": "Quantum kernel methods are the most concrete near-term proposal for quantum machine learning on classical data, yet published benchmarks disagree on whether they outperform tuned classical kernels, and the disagreement cannot be resolved from the literature because the comparisons are not protocol-controlled. We argue that the obstacle is one of measurement, not theory: the usual setup fixes the quantum feature map's data scaling while grid-searching the classical kernel's hyperparameters, recomputes nothing per fold, and reports cost in simulator time. We therefore treat the comparison itself as the object of study and impose three controls. The bandwidth is tuned on the same grid budget as the classical $\\gamma$, the kernel is recomputed inside every fold from fold-fitted preprocessing, and cost is counted in hardware circuit evaluations. On top of these we run a factorial design of 324 cells in which dimensionality, training size, class separability and data structure are explicit covariates, together with four standard datasets, a shots-versus-gate-noise ablation, and a cost sweep. The dominant effect we measure is not quantum: tuning the feature map's bandwidth is worth 0.120 accuracy on synthetic data and 0.339 on real data, exceeding every quantum-classical difference we observe. Tuned quantum kernels are then statistically indistinguishable from a tuned RBF on all four real datasets. The advantage on synthetic data is confined almost entirely to data generated by the feature map itself, and it shrinks with dimensionality (-0.0045 per qubit) while growing with sample size. Finite sampling costs an order of magnitude more accuracy than gate and readout noise, and a fidelity kernel needs $5\\times10^{7}$ circuits at n = 10,000. Protocol variance is thus sufficient to explain the field's contradictory conclusions.",
+      "subjects": "Quantum Physics (quant-ph) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:55:49+00:00",
+      "v1_local": "2026-10-31T00:55:49+08:00",
+      "url": "https://arxiv.org/abs/2610.42029",
+      "included": false,
+      "reason": "量子核对照实验，quantum不等于低比特量化。"
+    },
+    {
+      "id": "2610.42028",
+      "title": "CausalXRL: Explainable Reinforcement Learning through Causal Graph Reasoning",
+      "abstract": "Reinforcement learning is a powerful paradigm for training autonomous agents and has achieved impressive performance in complex environments. However, this success often comes at the cost of interpretability, diminishing trust and complicating efforts to debug and improve agent behavior. To address these challenges, we introduce CausalXRL, a novel framework for explainable reinforcement learning (XRL). A key feature of CausalXRL is its use of causal graph reasoning, which provides transparent, structured, multi-level explanations of agent decision-making. We validate CausalXRL through comprehensive case studies and a two-part evaluation: (1) a quantitative analysis of explanation fidelity and causal-structure learning efficiency in benchmark RL environments, and (2) a qualitative expert study assessing explainability in the real-time strategy (RTS) benchmark MicroRTS. The quantitative results show that CausalXRL can provide faithful explanations while efficiently learning causal structures, and the qualitative expert study suggests that participants found CausalXRL useful for inspecting high-level RTS strategies.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:55:46+00:00",
+      "v1_local": "2026-10-31T00:55:46+08:00",
+      "url": "https://arxiv.org/abs/2610.42028",
+      "included": false,
+      "reason": "因果图解释RL。"
+    },
+    {
+      "id": "2610.42027",
+      "title": "A Neural Network Approach towards Real-Time Knot Point Density Estimates for the Nonlinear Quadrotor",
+      "abstract": "Spline representations provide a compact way to approximate continuous trajectories using a finite number of parameters. When approximating trajectories generated by dynamical systems, the efficiency of a spline representation depends strongly on the placement of knot points. Uniform knot distributions often lead to inefficient representations, requiring either unnecessary control points or producing poor approximations in regions where the trajectory varies rapidly. In this work we propose a learning-based method for adaptive knot placement in B-spline approximations of trajectories generated by ordinary differential equations. A neural network learns a mapping from the initial condition of the system to quantities that characterize the local variation of the resulting trajectory. These estimates are used to construct nonuniform knot distributions that approximately equidistribute a local error indicator, reducing the number of control points needed to meet a prescribed accuracy.",
+      "subjects": "Systems and Control (eess.SY) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:55:38+00:00",
+      "v1_local": "2026-10-31T00:55:38+08:00",
+      "url": "https://arxiv.org/abs/2610.42027",
+      "included": false,
+      "reason": "轨迹样条控制点减少，压缩对象不是神经模型。"
+    },
+    {
+      "id": "2610.42026",
+      "title": "GhostPrefix: Synchronization-Free Universal Prefix Attacks for ASR Manipulation",
+      "abstract": "We present GhostPrefix, the first synchronization-free universal adversarial prefix attack against automatic speech recognition (ASR) systems. Unlike prior audio attacks, which are typically crafted per utterance, require synchronization with the victim waveform, or target narrow objectives, GhostPrefix learns a short, reusable audio segment prepended to arbitrary live speech to exert real-time control over ASR outputs without knowledge of the future utterance or temporal alignment. A key challenge is maintaining stable adversarial effects across unknown, evolving speech contexts. GhostPrefix combines token-level losses with a novel representation-level objective for stable, input-agnostic effects. GhostPrefix supports three attack modes: (i) prompted prefix attacks for semantic steering, (ii) targeted prefix attacks for transcript hijacking, and (iii) untargeted prefix attacks for transcription degradation. To remain perceptually inconspicuous, we regularize prefixes toward benign environmental-sound distributions and improve robustness against over-the-air distortions. We evaluate GhostPrefix across 13 open-source ASR models from four families. In digital settings, it achieves average attack success rates of 97.6% for prompted steering and 93.4% for targeted hijacking, while driving word error rate to 1.18 under untargeted attacks. Over the air, it achieves success rates of 91.5% and 89.5% for prompted and targeted modes, respectively. These manipulations propagate into downstream AI-assisted pipelines, including voice assistants and AI note-taking tools, causing systematic semantic misinterpretations. GhostPrefix exposes synchronization-free universal prefixes as a practical, under-explored threat to real-world ASR and downstream applications. Artifacts and demos are available at this https URL .",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:55:28+00:00",
+      "v1_local": "2026-10-31T00:55:28+08:00",
+      "url": "https://arxiv.org/abs/2610.42026",
+      "included": false,
+      "reason": "ASR对抗前缀安全攻击研究。"
+    },
+    {
+      "id": "2610.42024",
+      "title": "Know When the Equation Is Wrong: Structural Uncertainty for LLM-Guided Symbolic Regression under Extrapolation",
+      "abstract": "Large language models (LLMs) can help discover mathematical equations from data, but most LLM-guided symbolic regression methods focus on a single best equation without quantifying uncertainty over alternative functional forms. This is challenging because distinct equations can fit the observed data similarly while producing substantially different extrapolations. Our experiments on the LLM-SRBench dataset show that standard conformal intervals achieve nominal in-distribution coverage but frequently fail under extrapolation. To tackle this challenge, we introduce LLM-SR-UQ, a framework that retains competing equation structures and uses their disagreement to characterize uncertainty about the underlying functional form. We extend the standard fixed-width conformal approach to quantify structural intervals, which measure disagreement among candidate equations and identify where prediction intervals should widen. Extensive experiments show our framework substantially improves coverage attainment by incorporating structural disagreement while preserving in-distribution coverage. Our approach also shows good generalizability when it is applied to other symbolic-regression methods.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:54:16+00:00",
+      "v1_local": "2026-10-31T00:54:16+08:00",
+      "url": "https://arxiv.org/abs/2610.42024",
+      "included": false,
+      "reason": "符号回归外推不确定性。"
+    },
+    {
+      "id": "2610.42018",
+      "title": "Asynchronous Flow Map Language Models",
+      "abstract": "The order in which tokens are predicted in language modeling has a profound impact on the quality of generated sequences. Autoregressive and masked diffusion models iteratively fill in tokens and can exploit such orderings across generation steps, but how to leverage an ordering for one-step parallel language modeling is unclear. We introduce asynchronous flow map language models (aFMLMs), which incorporate prediction order into one-step modeling by learning the flow maps of asynchronous flows. These flows specify an ordering through a tokenwise time schedule that controls the relative denoising progress of tokens. We formulate a general class of asynchronous flows that admit both prescribed and learned, state-adaptive schedules, show that they define valid flow maps, and develop new methods for their flow map distillation. The resulting models can generate all tokens in a single forward pass by internalizing the ordering encoded in the flow into their hidden computations. On Sudoku solving and code generation for GSM8K math word problems, aFMLM establishes new state-of-the-art one-step performance.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T16:51:40+00:00",
+      "v1_local": "2026-10-31T00:51:40+08:00",
+      "url": "https://arxiv.org/abs/2610.42018",
+      "included": true,
+      "reason": "aFMLM 把异步token生成次序蒸馏进流映射，使单次前向并行生成保留部分顺序推理能力。"
+    },
+    {
+      "id": "2610.42013",
+      "title": "When Does Jacobian Fine-Tuning Stabilize Neural PDE Emulators?",
+      "abstract": "Neural emulators of chaotic PDEs are trained on one-step prediction but deployed autoregressively, where their errors compound. Jacobian-based regularisers aim to curb this growth, but in a chaotic system part of the growth is physical and cannot be trained away. We separate the two sources of this error with a first-order decomposition. We compare the emulator's error with a counterfactual that propagates the same one-step mistakes through the solver's Jacobian, giving an amplification ratio: the factor by which the model's own dynamics amplify its errors. We study 21 configurations across four PDEs, five architectures and two model sizes (8-10k and 33k parameters), with errors measured at one Lyapunov time. Jacobian fine-tuning reduced the error by more than 10% for 1 of 34 seeds whose amplification ratio was at most 1.25, and for all 20 seeds whose ratio was at least four; for the latter, the error fell by a factor of 8 (small models) and 55 (33k models) in geometric mean over seeds. The gain approximately equals the one-step accuracy cost of fine-tuning divided by the amplification ratio. Matching the solver's Jacobian along the model's own error direction (EDJM) outperformed random directions at the same cost on 28 of 35 seeds; input-noise injection performed comparably to EDJM.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:49:56+00:00",
+      "v1_local": "2026-10-31T00:49:56+08:00",
+      "url": "https://arxiv.org/abs/2610.42013",
+      "included": false,
+      "reason": "PDE emulator Jacobian稳定性微调，不是模型缩减。"
+    },
+    {
+      "id": "2610.42010",
+      "title": "TurnTurk-GPT: Text-Based Turn-Taking Prediction for Turkish",
+      "abstract": "This paper presents TurnTurk-GPT, a text-based turn-taking predictor for Turkish obtained by fine-tuning a Turkish GPT-2 model with the TurnGPT objective on synthetic and real dialogue, and evaluates it on real Turkish conversation against rule baselines, a zero-shot Turkish language model and a widely used multilingual end-of-turn detector. Evaluation uses word-level decision points on unpunctuated, lower-cased text approximating the output of streaming speech recognisers, recording-disjoint and speaker-disjoint folds, nested threshold selection and paired cluster bootstrap tests. TurnTurk-GPT outperforms the multilingual detector under both recording-disjoint and speaker-disjoint evaluation. It outperforms the zero-shot language model only when the test speakers occur in training; on unseen speakers the two are statistically indistinguishable. Removing the suffixes of the turn-final word reduces AP by up to 44%, against 2% for a sentence-internal word, locating the Turkish end-of-turn cue in verb-final morphology. Synthetic dialogue alone yields the weakest trained model, and when a speaker pauses the zero-shot and multilingual baselines remain close to chance. The model and the evaluation protocol are publicly released.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T16:48:32+00:00",
+      "v1_local": "2026-10-31T00:48:32+08:00",
+      "url": "https://arxiv.org/abs/2610.42010",
+      "included": false,
+      "reason": "土耳其语轮替预测任务微调。"
+    },
+    {
+      "id": "2610.42004",
+      "title": "TradeWar: A Benchmark for Execution-Grounded Trade Negotiation with Adaptive LLM Agents",
+      "abstract": "Multi-turn negotiation remains a challenging problem for large language model (LLM) agents. While LLMs can conduct natural-language dialogue, existing benchmarks predominantly assess only agreement rates, overlooking whether negotiated commitments actually create value once executed. To address this gap, we introduce TradeWar, a multi-country simulation benchmark that translates negotiation dialogues into concrete tariff and trade-share policies, enforces capacity and network constraints during settlement, and evaluates outcomes via an Economic Health Index (EHI). To solve this execution-grounded task, we propose TACTIC (Trade-aware Adaptive Consolidation and Theory-of-mind for International Commerce), an agent that iteratively refines its negotiation strategy across episodes-without updating base LLM weights-by leveraging prior experience, opponent behavior, and past settlement outcomes. Despite using zero-shot chain-of-thought (CoT) prompting, PromptLLM attains a 75% agreement rate but only 57.1 final EHI (*100), whereas TACTIC reaches 68.8. Across 20 sequential episodes and three seeds, TACTIC's final EHI improves from 58.2 to 73.2, compared with 65.2 for an ablation without cross-episode updates. Under technology-controls and energy-crisis shocks, TACTIC also exhibits smaller performance degradation than PromptLLM and MemoryLLM. These results indicate that CoT deliberation and interaction memory alone do not fully address delayed execution feedback, whereas settlement-grounded adaptation improves long-horizon negotiation in TradeWar.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:45:29+00:00",
+      "v1_local": "2026-10-31T00:45:29+08:00",
+      "url": "https://arxiv.org/abs/2610.42004",
+      "included": false,
+      "reason": "贸易谈判代理基准与外部记忆。"
+    },
+    {
+      "id": "2610.42002",
+      "title": "GeoFlip: Benchmarking Geometry-Sensitive Physics in Video Generation",
+      "abstract": "Video generation models synthesize realistic motion, but can they respond correctly to changes in initial geometry? We introduce GeoFlip, a video generation benchmark centered on physical outcome flips induced by geometry. With shared physical settings and textual prompts held fixed, GeoFlip applies controlled interventions to support extent, object placement, and mechanism configuration, constructing paired scenes with contrasting reference events, such as remaining stable versus falling or tipping. These pairs test whether models translate geometric differences in the first frame into correct physical evolution. The benchmark comprises 482 scene pairs and 964 reference videos across six physical categories, with reference outcomes established through procedural scene construction, physics simulation, and numerical validation and verification of physical events. We evaluate 16 models for image to video generation along three dimensions: event correctness, structural integrity, and similarity to reference videos. We examine evaluation consistency with independent vision language judges. On the 442 conditions shared by all models, the highest event correctness averaged across tasks is 27.98%, revealing substantial limitations in physical generation conditioned on geometry. Model strengths vary across physical mechanisms, and the three evaluation dimensions capture distinct capabilities. Typical failures include ignoring geometric changes, generating incorrect object motion, bending rigid objects, and introducing additional components. Rank correlations between judges reach 0.906 for event correctness and 0.929 for structural integrity. By combining controlled geometric interventions, verifiable physical references, and multidimensional evaluation, GeoFlip assesses progress from visual realism toward physical consistency conditioned on geometry.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T16:45:07+00:00",
+      "v1_local": "2026-10-31T00:45:07+08:00",
+      "url": "https://arxiv.org/abs/2610.42002",
+      "included": false,
+      "reason": "视频物理敏感性评测。"
+    },
+    {
+      "id": "2610.42001",
+      "title": "AutoAnalysis: An automated, self-updating meta-analysis of human-AI collaboration",
+      "abstract": "As generative artificial intelligence (AI) becomes more capable and widely used, understanding when and how humans should work with these systems is becoming increasingly important. However, the empirical evidence in this space offers conflicting recommendations, which leaves individuals and organizations without clear guidance on when to combine human and AI capabilities. Existing meta-analyses can help reconcile these findings, but they require substantial manual effort and cannot readily incorporate new evidence as it emerges. To address this challenge, we introduce AutoAnalysis: an automated, self-updating meta-analysis of when humans and AI work better together, and when they work better alone. AutoAnalysis' most recent run synthesizes 1,955 effect sizes from 420 papers. Across this body of work, we found that, on average, human-AI combinations performed significantly better than humans alone, but they performed significantly worse than the better of humans or AI alone. These findings highlight the important distinction between improving human performance and achieving human-AI synergy and underscore the need to evaluate collaboration against both human and AI performance alone. As new studies emerge, AutoAnalysis will integrate their findings into the meta-analysis, providing cumulative evidence about when humans and AI perform better together and how human-AI performance varies across AI agents, tasks, and processes.",
+      "subjects": "Human-Computer Interaction (cs.HC) ; Artificial Intelligence (cs.AI); Computers and Society (cs.CY); Digital Libraries (cs.DL)",
+      "v1_utc": "2026-10-30T16:44:49+00:00",
+      "v1_local": "2026-10-31T00:44:49+08:00",
+      "url": "https://arxiv.org/abs/2610.42001",
+      "included": false,
+      "reason": "人机协作自动元分析。"
+    },
+    {
+      "id": "2610.42000",
+      "title": "Less Loss, Fixed Weights: Logit Corrections for Forgetting",
+      "abstract": "When a language model is fine-tuned to follow instructions, or further pretrained on a new subject, it often gets worse at predicting standard web text. This is known as \"forgetting.\" We ask whether this loss can be undone by simple, fixed adjustments to the model's final token predictions. Across 14 pairs of base and derived models, from 1B to 7B parameters, we fitted a fixed bonus or penalty for each token (a vocabulary bias), alone or together with a temperature. On text held out from correction fitting, the largest top-4K bias recovery estimate is under 10%, with loss conditional on the retained vocabulary. Combining the bias with a temperature recovers up to 36%. Models further pretrained on math lose the most and recover almost nothing. Finally, in a controlled simulation where a model is damaged at random, with no planted bias or temperature change, the bias-plus-temperature fix still recovers 29%. Most of the real-model loss increase stays out of reach of our restricted fits.",
+      "subjects": "Machine Learning (cs.LG) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T16:44:30+00:00",
+      "v1_local": "2026-10-31T00:44:30+08:00",
+      "url": "https://arxiv.org/abs/2610.42000",
+      "included": false,
+      "reason": "固定logit偏置纠正遗忘，未压缩模型。"
+    },
+    {
+      "id": "2610.41998",
+      "title": "SecPO: Principled Adversarial Training for Prompt Injection Security",
+      "abstract": "Recognized as a top threat to AI agents, prompt injection allows instructions from untrusted data (email, documents, websites) to manipulate the agent's operation. The existing best-defended LLM, Meta-SecAlign, is trained with the DPO loss but still suffers from attack success rates (ASRs) approaching 100% under adaptive prompt injections. One reason is that DPO anchors the model around the undefended reference model, which is insecure. We show an idealized reference model---an injection-invariant, utility-preserving oracle---can nevertheless be approximated, as its output distribution in training is interestingly accessible. This new observation motivates a theoretically principled SecPO loss. Another Meta-SecAlign shortcoming is that it trains on weak simulated attacks. We implement an efficient adversarial training (AT) pipeline that synthesizes strong injected inputs (best@240), and train the model on them. Our AT reduces ASRs by 1.5-14.5$\\times$ across three SoTA adaptive attacks, compared with Meta-SecAlign; the SecPO loss reduces them by a further 2.4-4.6$\\times$ compared with using DPO loss. In agentic workflows, our SecPO + AT Qwen3.6-27B is much more secure than Meta-SecAlign: 8.8% vs. 78.8% AgentDojo ASR@800 under the AttackerMovesSecond attack. Moreover, our defended model shows no noticeable reduction in benign utility in nine benchmarks covering agentic tool calling, instruction following, science, and math. We release our $\\href{//github.com/Sizhe-Chen/SecPO}{\\text{code}}$, $\\href{//huggingface.co/datasets/Sizhe-Chen/Qwen3.6-27B-Instruct-SecPO-trainset}{\\text{training data}}$ (with optimized injections from AT), and $\\href{//huggingface.co/Sizhe-Chen/Qwen3.6-27B-Instruct-SecPO}{\\text{model}}$.",
+      "subjects": "Cryptography and Security (cs.CR) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:43:17+00:00",
+      "v1_local": "2026-10-31T00:43:17+08:00",
+      "url": "https://arxiv.org/abs/2610.41998",
+      "included": false,
+      "reason": "提示注入安全对抗训练。"
+    },
+    {
+      "id": "2610.41994",
+      "title": "DAMI: Dual-Axis Memory Initialization for Enhanced Long-Context Retrieval in Gated Linear Attention",
+      "abstract": "Linear attention scales linearly with sequence length, but its finite-state memory can limit long-context retrieval. In gated linear recurrences, memory retention depends on state decay, which is shaped jointly by gate parameters A_log and dt_bias and by input activations. In controlled Gated DeltaNet (GDN) experiments, both parameters remain highly correlated with their initial values after training, highlighting the importance of initialization. Therefore, we introduce Dual-Axis Memory Initialization (DAMI), which jointly configures these parameters before training. DAMI assigns geometric timescales across heads for varied retrieval distances and a low-high-low input-sensitivity profile across layers. A small activation sample calibrates the GDN-family implementation to match both behavioral targets without adding trainable parameters. Across GDN, KDA, GDN2, Mamba-2, and RWKV-7, DAMI improves average RULER-style retrieval accuracy by 5.29 to 16.71 percentage points over the corresponding random-initialization baselines. Performance on language modeling, commonsense reasoning, and 2K real-world retrieval remains broadly comparable to those baselines. Our code is available at this https URL .",
+      "subjects": "Artificial Intelligence (cs.AI) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-10-30T16:39:37+00:00",
+      "v1_local": "2026-10-31T00:39:37+08:00",
+      "url": "https://arxiv.org/abs/2610.41994",
+      "included": false,
+      "reason": "固定线性注意力架构的初始化改进；没有新压缩机制或规模削减。"
+    },
+    {
+      "id": "2610.41992",
+      "title": "MoETok: Sparse Expert Routing for 1D Visual Tokenizers",
+      "abstract": "Modern visual tokenizers aim to preserve fine-grained visual details while learning high-level semantic representations for downstream generation and understanding. Query-based 1D visual tokenizers encode images into flexible latent sequences, yet how individual learnable queries gather and encode image information remains poorly understood. We reveal that these queries spontaneously develop complementary roles under semantic supervision: a small set of Content queries captures high-level semantic information, while a larger set of Detail queries preserves fine-grained visual details for reconstruction. To adapt token processing to these heterogeneous roles, we introduce MoETok, a 1D visual tokenizer that routes tokens through sparsely activated experts. Jointly optimized with reconstruction and semantic objectives, the router learns role-specialized processing paths adapted to each token's representation. Across model scales and token budgets, MoETok consistently improves reconstruction, semantic representation, and autoregressive generation over dense tokenizers under matched supervision and active computation. On ImageNet, it combines strong reconstruction and semantic representation with state-of-the-art class-conditional generation within the 1D tokenizer family. We further validate MoETok at scale in a unified autoregressive model jointly trained for understanding and generation with a next-token cross-entropy objective. The resulting model combines competitive visual understanding with state-of-the-art generation among unified discrete models, matching or surpassing diffusion-based models such as BAGEL and Qwen-Image on benchmarks including DPG-Bench (87.61), GenEval2 (40.04 GM), and WISE (0.49).",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T16:37:55+00:00",
+      "v1_local": "2026-10-31T00:37:55+08:00",
+      "url": "https://arxiv.org/abs/2610.41992",
+      "included": false,
+      "reason": "MoE视觉tokenizer在匹配active FFN预算下增强质量；全文表2是等计算增加容量，不是压缩既有模型或证明更小部署成本。"
+    },
+    {
+      "id": "2610.41988",
+      "title": "ID2Pattern: Pretraining Generalizable Identity Behavior Patterns for Transaction Risk Foundation Models",
+      "abstract": "Large-scale behavioral pretraining offers a promising route to generalizable representations in online payment systems. However, high-cardinality identity fields such as card, device, and account IDs, though rich in behavioral signals, remain underexploited. Their continually growing vocabularies and limited semantic meaning make existing vocabulary-based and semantics-based encodings ill-suited. Their generalizable signal lies not in specific values, but in the identity behavior patterns they exhibit across a transaction sequence. Building on this insight, we propose ID2Pattern, a pretraining framework that brings these patterns into transaction foundation models. ID2Pattern first encodes identity fields with a Local Anonymous ID (LAID) tokenizer, which captures how each identity appears and recurs within the sequence, independent of its specific value. It then pretrains a multi-scale pattern codebook on unlabeled sequences, which abstracts LAID sequences into discrete behavior patterns for downstream prediction. Experiments on an industrial dataset with over 100M sequences and six public datasets show that ID2Pattern consistently outperforms strong baselines, improving industrial by 4.13% and public datasets by 8.83% on average. Notably, ID2Pattern remains equally effective even when all identity values are unseen during training, highlighting its potential to generalize to new users and markets.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:35:43+00:00",
+      "v1_local": "2026-10-31T00:35:43+08:00",
+      "url": "https://arxiv.org/abs/2610.41988",
+      "included": false,
+      "reason": "身份序列token/codebook表示，非权重/激活/模型压缩。"
+    },
+    {
+      "id": "2610.41987",
+      "title": "FoAViS: Analyzing Learned Fixation Strategies in a Foveated Active Vision System",
+      "abstract": "Human vision is foveated and active: resolution is highest at the fovea and falls off towards the periphery, and fixations are actively directed to locations of interest. Building a machine system that processes information in the same way lets us study gaze behavior in a controlled setting where the system's components and objectives are known. The emergence of gaze characteristics can therefore be examined systematically, which may in turn inform our understanding of biological vision. This requires a model that can sample like the fovea, handle various tasks from classification to dense prediction, and be trained concurrently with a fixation policy. In our study, we present such a system and study its capabilities and the fixation policies that emerge from it. Our system, FoAViS, samples visual input by adopting the established log-polar foveation and accumulates information in a 2D spatial memory. Due to its 2D structure, the same memory can be read out globally for classification or densely for semantic segmentation, without any architectural change. Fixations are drawn from a 2D map by a policy trained concurrently with the task. We find that learned fixation policies select more informative, task-specific locations than non-learned heuristics. These policies also shape the task representations in a beneficial way: for both classification and segmentation, models trained concurrently with a policy outperform models trained with random locations, even when the latter are provided with learned scanpaths. Moreover, these scanpaths exhibit similarities to human gaze behavior by capturing aspects of empirical scanpath characteristics. Our work marks an important step away from standard passive, single-pass architectures, towards biologically grounded models of vision. It opens a path for studying goal-directed gaze behavior and information representation in the visual system.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T16:34:59+00:00",
+      "v1_local": "2026-10-31T00:34:59+08:00",
+      "url": "https://arxiv.org/abs/2610.41987",
+      "included": false,
+      "reason": "主动视觉及眼动行为建模；没有模型压缩比较。"
+    },
+    {
+      "id": "2610.41983",
+      "title": "TwinPast: Benchmarking Historical Evidence Use in Streaming Video Understanding with Evidence Contrastive Video Pairs",
+      "abstract": "High accuracy on streaming video benchmarks does not establish whether a model uses visual history. Our review of OVO-Bench and StreamingBench finds that recent frames suffice for 32% of sampled historical questions, while models also answer many questions correctly from the question and options alone. We introduce TwinPast to test whether answers correctly follow changes in history, using 350 human-reviewed video pairs spanning five historical tasks. Each pair holds the recent video context, question, and ordered options fixed while changing critical historical evidence and the correct answer. Each video is evaluated independently, and PairAcc requires correct answers for both histories. We evaluate 34 model and input configurations. For Qwen3-VL-8B and DeepSeek-Flash, historical inputs improve performance on TwinPast, reversing the recent-frame advantage on existing benchmarks. The strongest evaluated streaming system reaches 49.14% PairAcc, compared with 66.57-91.43% for the evaluated general-purpose models. This gap persists across all five tasks. Case studies further show that models select states from the wrong time or contradict recorded event order despite retaining the relevant evidence. These findings highlight the need to connect historical memory and retrieval with reasoning that uses evidence according to the question's temporal references and event relations.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-10-30T16:31:23+00:00",
+      "v1_local": "2026-10-31T00:31:23+08:00",
+      "url": "https://arxiv.org/abs/2610.41983",
+      "included": false,
+      "reason": "流式视频历史利用评测。"
+    },
+    {
+      "id": "2610.41980",
+      "title": "New Lower Bounds for Private PAC Learning",
+      "abstract": "We study realizable PAC learning under approximate differential privacy, and give a framework for proving lower bounds on its sample complexity. We construct classes with identical VC and Littlestone dimensions but different private sample complexities at common privacy and accuracy parameters, showing that these dimensions do not determine the sample complexity, even for improper learners. To address this we introduce the Independent Class Packing (ICP) parameter, the largest total sample complexity of classes in $\\mathcal{G}$ that can be packed independently into a class $\\mathcal{H}$, and prove that every $(\\varepsilon, \\delta)$-DP, $(\\alpha, \\beta)$-PAC learner for $\\mathcal{H}$, possibly improper, uses $\\Omega\\left(\\mathrm{ICP}(\\mathcal{H}, \\mathcal{G})/(\\alpha\\varepsilon)\\right)$ examples. Using this framework we prove tight lower bounds for axis-aligned rectangles, union of intervals and linear subspaces and improved lower bounds for halfspaces and convex polygons. Finally we also show that for product classes, and more generally when the same classes pack into $\\mathcal{H}$ and cover its domain so that target labels can be used directly, ICP characterizes private PAC sample complexity up to logarithmic factors.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:28:25+00:00",
+      "v1_local": "2026-10-31T00:28:25+08:00",
+      "url": "https://arxiv.org/abs/2610.41980",
+      "included": false,
+      "reason": "隐私PAC学习下界。"
+    },
+    {
+      "id": "2610.41970",
+      "title": "When Does Test-Time Search Help World Action Models? An Empirical Audit of Candidate Selection and Simulator Integrity",
+      "abstract": "World-action models increasingly apply test-time scaling, spending extra inference computation on candidate selection and adaptive allocation to improve control. Such gains are credible only when candidates carry exploitable signal, nominal compute savings become real speedup, and evaluation stays reliable. We audit all three on Cosmos Policy and RoboCasa with a premise-first, pre-registered methodology. On clean data, a learned value selector is 1.66 pp worse than random; a hindsight oracle gains only 1.40 pp, with an episode-level interval spanning zero; and 82% of states show identical candidate outcomes, leaving little selection headroom. Token pruning cuts per-forward FLOPs by up to 47% but yields at most a measured 1.15$\\times$ end-to-end speedup on the deployed path (1.25$\\times$ on a decode-excluded path), short of a 1.5$\\times$ target, and our adaptive-allocation experiment is inconclusive under a power gate. We further identify and fix a silent rendering corruption whose rate rises sharply along compute-heavy planning paths while leaving the official direct-policy result unaffected, and release a detector, fix, and scripts. These findings show why test-time scaling should be audited as a chain of premises (decision signal, realized efficiency, evaluationintegrity) rather than by success rate alone. Conclusions are scoped to the tested configuration.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:21:07+00:00",
+      "v1_local": "2026-10-31T00:21:07+08:00",
+      "url": "https://arxiv.org/abs/2610.41970",
+      "included": true,
+      "reason": "Cosmos Policy 的token剪枝虽减少47.9%单前向FLOPs，部署整路径仅快1.152×，且该测量未验证剪枝动作质量。"
+    },
+    {
+      "id": "2610.41968",
+      "title": "Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity",
+      "abstract": "Weight pruning can reduce the storage and inference cost of large language models (LLMs), but preserving quality at high sparsity levels remains challenging. Existing methods face a quality-cost trade-off in this regime. One-shot pruning is cheap but degrades sharply as sparsity increases, even when followed by post-pruning recovery. A growing line of work instead optimizes the mask directly from the dense model under the end-to-end objective; among these methods, [Lee et al.,2026], the recent state of the art at extreme sparsity, reaches high quality but at the cost of model-sized optimizer state and auxiliary variables. To address this gap, we propose ETAPS, which prunes gradually and adapts sparsely: it tightens a global sparsity constraint in progressive stages while training a sparse delta with a small, fixed budget. Our key observation is that gradual weight removal keeps each pruning step small enough for sparse adaptation to compensate, allowing the adapted model to provide end-to-end gradients that guide the next pruning decision without model-sized optimizer state. Across six models from 125M to 13B parameters, ETAPS achieves lower perplexity than ELSA at every evaluated sparsity from 50% to 90%, with perplexity reductions of up to 42%. ETAPS is also far cheaper: at 90% sparsity, it prunes LLaMA2-7B on a single H200, where ELSA uses four, with $5.0\\times$ smaller total persistent state and 49% fewer GPU-hours. Together, our findings point to a promising direction for achieving high quality in demanding regimes such as extreme sparsity at substantially lower cost.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:17:43+00:00",
+      "v1_local": "2026-10-31T00:17:43+08:00",
+      "url": "https://arxiv.org/abs/2610.41968",
+      "included": true,
+      "reason": "ETAPS 用逐步单调剪枝和小预算稀疏增量恢复，在极高稀疏度下降低困惑度与优化状态成本。"
+    },
+    {
+      "id": "2610.41962",
+      "title": "When Is a Game a Markov Decision Process? Correspondences Between Game Theory and Reinforcement Learning",
+      "abstract": "Reinforcement learning and game theory describe the same object from two sides. Game theory says what a rational outcome of a strategic interaction is; reinforcement learning says how an agent could reach one through experience. The two literatures nevertheless keep separate vocabularies for identical structures, and the treatments that bridge them present the correspondence as analogy rather than theorem. This monograph supplies the theorems. A game is a Markov decision process in three distinct senses, and every table entry is labelled with the one that applies: a definitional identity, an exact reduction carried by a value- and solution-preserving map, or a structural analogy that fails under identifiable conditions. We take every standard class of game, from normal-form through repeated, stochastic, partially observable, extensive-form with imperfect information, Bayesian, graphical, Stackelberg, potential, coalitional, mean-field and evolutionary games, and identify for each the decision-theoretic model that reinforcement learning already studies under another name. The same treatment is applied to solution concepts: Nash equilibrium and the fixed point of the Bellman optimality operator, quantal response equilibrium and the soft Bellman operator, the Shapley value and credit assignment, Blackwell approachability and no-regret learning. We map each model class onto the training procedures sound for it and record the complexity of the associated solution problems. A final part collects the correspondences that do not hold: the non-stationarity that invalidates the independent-learner reduction, the impossibility results that forbid uncoupled convergence to Nash equilibrium, and the gap between the coarse correlated equilibria that no-regret self-play reaches and the correlated equilibria it is credited with.",
+      "subjects": "Computer Science and Game Theory (cs.GT) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:12:59+00:00",
+      "v1_local": "2026-10-31T00:12:59+08:00",
+      "url": "https://arxiv.org/abs/2610.41962",
+      "included": false,
+      "reason": "博弈论与MDP对应理论。"
+    },
+    {
+      "id": "2610.41961",
+      "title": "Robust Learning of Multi-Index Models under Logconcave Distributions via Weak Partial Learners",
+      "abstract": "We develop a new algorithmic framework for learning Boolean concept classes under logconcave distributions. Our framework applies to broad families of multi-index models and yields significantly faster robust learners than were previously known in these settings. It extends to partial classification and testable learning. Consequently, we obtain improved learners for several fundamental concept classes, including functions of halfspaces and multiclass linear classifiers, under logconcave marginals. Our starting point is a new boosting framework based on weak partial learners. Classical boosting approaches require often-intractable distribution-free weak learners or yield weak approximation guarantees. We show instead that weak learners for partial classification, where labels may be undefined on part of the domain, suffice for strong agnostic learning. The key challenge is that boosting requires a weak learner that succeeds under conditioned distributions that are not guaranteed to be logconcave. To address this, we develop a recursive moment-based partitioning procedure: given a logconcave distribution $X$ and a conditional version $X'$, we partition the space into polynomially many convex regions so that, on most regions, the low-degree moments of $X$ and $X'$ approximately agree. On each good region, a well-behaved multi-index model correlates with a low-degree polynomial, giving a weak hypothesis. Combining these hypotheses yields the required weak learner. A key ingredient of our approach is an efficient method for detecting moment discrepancy. Specifically, we show how to find a low-dimensional subspace that captures any non-trivial discrepancy between $X$ and $X'$, if one exists. Our approach combines spectral analysis of moment tensors with recent progress on isoperimetry for logconcave measures. This discrepancy-finding procedure may be of independent interest.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:12:37+00:00",
+      "v1_local": "2026-10-31T00:12:37+08:00",
+      "url": "https://arxiv.org/abs/2610.41961",
+      "included": false,
+      "reason": "鲁棒多指标模型学习理论。"
+    },
+    {
+      "id": "2610.41958",
+      "title": "WASABI: Wasserstein Sampling via Bridge Interpolants",
+      "abstract": "Sampling from Boltzmann distributions is a fundamental problem in physics, chemistry, and biology. We introduce WAsserstein SAmpling via Bridge Interpolants (WASABI), a method that trains a diffusion model to generate samples from a target Boltzmann distribution given access only to the energy function. WASABI minimizes the KL divergence between the distribution generated by its diffusion model and the Boltzmann target using Wasserstein gradient flows. This approach builds on a principle underlying classical sampling methods such as Langevin dynamics. However, applying Wasserstein gradient flows to diffusion models is challenging because the updates require the gradient of the model's own log density, which is generally intractable. We derive a practical training algorithm that avoids computing this gradient. Once trained, WASABI can generate new samples without further evaluations of the energy or its gradient. On alanine dipeptide, WASABI outperforms the best reported baselines using an estimated 3.3 times fewer energy evaluations. It also achieves competitive performance on interacting particle system benchmarks.",
+      "subjects": "Machine Learning (stat.ML) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:10:33+00:00",
+      "v1_local": "2026-10-31T00:10:33+08:00",
+      "url": "https://arxiv.org/abs/2610.41958",
+      "included": false,
+      "reason": "能量函数采样加速，未蒸馏/压缩既有模型。"
+    },
+    {
+      "id": "2610.41956",
+      "title": "Chronos-2: A foundation model for multivariate time series forecasting",
+      "abstract": "Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still need to be developed and trained separately for each domain-specific dataset. Time series foundation models (TSFMs) aim to remove this limitation and enable the application of the same model across domains through large-scale pretraining. However, most existing TSFMs treat each time series independently and therefore cannot model interactions among time series and external drivers. Here, we introduce Chronos-2, a foundation model for zero-shot forecasting that models the interactions between multivariate time series and heterogeneous covariates, which commonly arise in scientific applications. The model infers relationships among time series directly from historical context and generates probabilistic forecasts without task-specific treatment. Across various benchmarks, Chronos-2 achieves state-of-the-art accuracy on average by improving skill scores by 5.2 percentage points relative to the strongest baselines and increasing win rates by 10 percentage points. Chronos-2 is also computationally efficient, generating forecasts for 100 time series in under one second on a single mid-range GPU, 50x and 1000x faster end-to-end than the best task-specific point and probabilistic forecasters, respectively. In addition, we demonstrate its effectiveness in diverse scientific settings -- including infectious-disease forecasting, macroeconomic modeling, carbon-flux prediction, and runoff simulation -- where the model matches or surpasses specialized methods developed for each domain. These results show that a single pretrained model can capture structure shared across temporal systems.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI); Machine Learning (stat.ML)",
+      "v1_utc": "2026-10-30T16:08:23+00:00",
+      "v1_local": "2026-10-31T00:08:23+08:00",
+      "url": "https://arxiv.org/abs/2610.41956",
+      "included": false,
+      "reason": "新时间序列foundation model与任务模型对比；不是从教师压缩模型的方法。"
+    },
+    {
+      "id": "2610.41955",
+      "title": "Shock Loading Accesses Reaction Pathways beyond Accelerated Thermolysis",
+      "abstract": "Thermolysis and shock loading can produce similar major stable products in energetic materials, despite different chemical evolution and reaction pathways. Here, we develop EMFF-MACE, a reactive machine-learning potential for C/H/N/O energetic materials, enabling thermolysis simulations of 20 materials and shock simulations of 10 on a common potential energy surface. Comparisons at matched normalized reaction progress reveal divergent chemical states and local structural environments. Mean reaction-state similarity decreases from 94.0% at 20% progress to 25.9% at trajectory endpoints, while 47.1-92.6% of shock local environments lie outside corresponding material-specific thermolysis reference domains. Structural and reaction-network analyses reveal enhanced intermolecular reorganization and additional association and rearrangement branches under shock loading, despite partially shared early decomposition chemistry. These findings show that loading history influences the structural states and subsequent reaction pathways accessed during decomposition, rather than merely the rate of thermolysis.",
+      "subjects": "Materials Science (cond-mat.mtrl-sci) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:08:07+00:00",
+      "v1_local": "2026-10-31T00:08:07+08:00",
+      "url": "https://arxiv.org/abs/2610.41955",
+      "included": false,
+      "reason": "机器学习势能面用于化学冲击反应模拟。"
+    },
+    {
+      "id": "2610.41951",
+      "title": "Aligning MLLMs with the Latent Structure of Human Cognition via Behavior-Derived Semantic Dimensions",
+      "abstract": "Multimodal Large Language Models (MLLMs) have achieved impressive performance across a wide range of reasoning tasks, yet it remains unclear whether their internal representations and decision criteria align with the latent structure of human cognition. In this work, we propose a novel framework to align MLLMs with the multidimensional mental representations underlying human similarity judgements. We build on a previously established behavior-derived semantic embedding space, in which objects are represented along 66 interpretable dimensions derived from 4.70 million human Odd-One-Out (O1O) judgements. For each triplet, we infer the most salient decision dimension and convert it into a dimension-grounded linguistic rationale. This enables MLLMs to learn both the final choice and a justification consistent with the inferred behavioral criterion. Experimental results demonstrate that our approach improves model consistency with human similarity judgements while retaining competitive performance on standard multimodal benchmarks. Furthermore, using searchlight Representational Similarity Analysis (RSA) on an independent fMRI Natural Scenes Dataset (NSD), we observe increased representational alignment between model and human. Ultimately, our findings point to a data-driven route for incorporating human cognitive structure into MLLMs alignment. The code is available \\href{ this https URL }{here}.",
+      "subjects": "Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-10-30T16:06:08+00:00",
+      "v1_local": "2026-10-31T00:06:08+08:00",
+      "url": "https://arxiv.org/abs/2610.41951",
+      "included": false,
+      "reason": "认知表征对齐，没有部署压缩。"
+    },
+    {
+      "id": "2610.41949",
+      "title": "Optimizing Stochastic Policy Geometry for Few-Step Flow Reinforcement Learning",
+      "abstract": "Few-step flow models generate samples through a handful of large denoising transitions. Applying GRPO to such models requires introducing stochasticity into the denoising transitions, and when a single transition spans a wide range of noise levels, the choice of the resulting stochastic policy becomes a major factor in optimization. Recent constructions constrain the policy to preserve the target flow coefficients, but this constraint admits a family of policies and offers no criterion for choosing among them. We introduce Geo-FSRL (Geometry-Optimized Few-Step Reinforcement Learning), built on a selection principle: at a fixed conditioning state and timestep pair, choose the admissible policy that minimizes the conditional KL divergence induced by any given nonzero velocity-output update. Within a coefficient-preserving family of isotropic Gaussian transitions, this criterion reduces to minimizing a single scalar geometry factor that determines the conditional KL for every velocity-output update. The same factor governs velocity-space Fisher information and conditional transition log-likelihood-ratio variance. We derive the unique closed-form optimizer within this family, shared across all nonzero update magnitudes and directions, with transition coefficients determined by both the source and target noise levels. Because the minimized geometry factor still varies across timesteps, we further adopt gradient-scale matching from prior work and derive closed-form policy-gradient and KL weights that normalize explicit score scales and reference-KL curvature. Geo-FSRL trains on the original few-step schedule and retains the deterministic solver at inference. Our method achieves higher final reward scores than Flow-GRPO and Flow-CPS on both image generation and video generation models under the 4-step setting. Code is available at this https URL",
+      "subjects": "Artificial Intelligence (cs.AI) ; Machine Learning (cs.LG)",
+      "v1_utc": "2026-10-30T16:05:17+00:00",
+      "v1_local": "2026-10-31T00:05:17+08:00",
+      "url": "https://arxiv.org/abs/2610.41949",
+      "included": false,
+      "reason": "对已有4步flow模型做RL提升奖励，保留原采样器；未进一步压缩模型或采样路径。"
+    },
+    {
+      "id": "2610.41946",
+      "title": "Sensorium: An Open-Source Multimodal Data Collection and Curation Library for Embodied Surgical AI",
+      "abstract": "Embodied surgical AI requires reliable multimodal data, yet surgical data collection remains costly, difficult to repeat, and strongly dependent on the hardware setup. We present Sensorium, an open-source Python library for recording, processing, annotating, and curating multimodal surgical data from configurable robot and sensor streams using the Robot Operating System (ROS) and ROS2 middleware. The library combines operator-facing data acquisition, configurable processing, semantic annotation, and episodic dataset generation. We evaluate Sensorium across 1516 recordings of phantom, ex vivo, and in vivo porcine experiments involving multiple surgical tasks and sensing configurations, and report preliminary usability feedback.",
+      "subjects": "Artificial Intelligence (cs.AI) ; Robotics (cs.RO)",
+      "v1_utc": "2026-10-30T16:04:23+00:00",
+      "v1_local": "2026-10-31T00:04:23+08:00",
+      "url": "https://arxiv.org/abs/2610.41946",
+      "included": false,
+      "reason": "机器人外科数据采集工具。"
+    }
+  ],
+  "keywords": {
+    "quantization": [],
+    "quantize": [],
+    "low-bit": [],
+    "model compression": [],
+    "compress": [
+      "2610.42112"
+    ],
+    "pruning": [
+      "2610.41970",
+      "2610.41968"
+    ],
+    "sparsity": [
+      "2610.42096",
+      "2610.41968"
+    ],
+    "knowledge distillation": [],
+    "distill": [
+      "2610.42147",
+      "2610.42135",
+      "2610.42128",
+      "2610.42112",
+      "2610.42082",
+      "2610.42018"
+    ],
+    "teacher": [
+      "2610.42135",
+      "2610.42128",
+      "2610.42118",
+      "2610.42092",
+      "2610.42082"
+    ],
+    "student": [
+      "2610.42135",
+      "2610.42128",
+      "2610.42118",
+      "2610.42082"
+    ],
+    "KV cache compression": [],
+    "mixed precision": [],
+    "GPTQ": [],
+    "AWQ": [],
+    "low precision": [],
+    "sparse attention": [
+      "2610.42147",
+      "2610.42112"
+    ],
+    "weight sharing": [],
+    "few-step": [
+      "2610.42135",
+      "2610.41949"
+    ],
+    "one-step": [
+      "2610.42085",
+      "2610.42031",
+      "2610.42018",
+      "2610.42013"
+    ],
+    "token pruning": [
+      "2610.41970"
+    ]
+  },
+  "scope": "包括权重剪枝、注意力计算稀疏化、KV压缩、少步和参数蒸馏、参数共享评估；排除纯调度、数据表示压缩和没有部署压缩证据的自蒸馏。",
+  "limits": "3672条均解析官方标题摘要分类v1；人工逐篇语义复核的是69篇窗口摘要，3603条因v1在窗口外排除，不宣称全部全文精读。未使用arXiv API。"
+}

@@ -1,0 +1,12 @@
+arxiv_id,title,submitted_date_local,category,keywords
+2610.42147,Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention,2026-10-31,pruning,distill;sparse attention
+2610.42135,A Better Critic Matters for Distribution Matching Distillation,2026-10-31,knowledge_distillation,distill;teacher;student;few-step
+2610.42128,DecisionRank: On-Policy Distillation for Decision-Model Rerankers,2026-10-31,knowledge_distillation,distill;teacher;student
+2610.42116,ACCT: Asymmetric Cross-LLM Context Transfer,2026-10-31,other,
+2610.42112,Subquadratic Attention with a Hierarchical Tree-Structured Indexer,2026-10-31,pruning,compress;distill;sparse attention
+2610.42084,RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models,2026-10-31,other,
+2610.42031,Any Forcing: Any-Step Generality and One-Step Stability for Autoregressive Video Generation,2026-10-31,knowledge_distillation,one-step
+2610.42030,There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?,2026-10-31,other,
+2610.42018,Asynchronous Flow Map Language Models,2026-10-31,knowledge_distillation,distill;one-step
+2610.41970,When Does Test-Time Search Help World Action Models? An Empirical Audit of Candidate Selection and Simulator Integrity,2026-10-31,pruning,pruning;token pruning
+2610.41968,"Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity",2026-10-31,pruning,pruning;sparsity
