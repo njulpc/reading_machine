@@ -1,0 +1,17 @@
+/Users/lipengcheng/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+/private/tmp/reading_machine_arxiv_20261109/scripts/quantization/2611.08216/demo.py:152: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  logs.append({'step':step,'loss':float(loss),'forward_kl':float(parts[0]),
+{"step": 0, "loss": 0.033397749066352844, "forward_kl": 0.001640958827920258, "reverse_kl": 0.001569150248542428, "ce": 0.31812572479248047, "prompt_proxy_tau": [0.9263628125190735, 0.8564841151237488], "active_blocks_after_step": [0]}
+{"step": 1, "loss": 0.5705747604370117, "forward_kl": 0.17897582054138184, "reverse_kl": 0.6126870512962341, "ce": 0.5468182563781738, "prompt_proxy_tau": [1.6830190420150757, 1.6773450374603271], "active_blocks_after_step": [0]}
+{"step": 2, "loss": 0.28551673889160156, "forward_kl": 0.23327434062957764, "reverse_kl": 0.24763058125972748, "ce": 0.41090136766433716, "prompt_proxy_tau": [0.8458271622657776, 0.8202431797981262], "active_blocks_after_step": [0]}
+{"step": 3, "loss": 0.11133874952793121, "forward_kl": 0.07311282306909561, "reverse_kl": 0.06490904092788696, "ce": 0.44598811864852905, "prompt_proxy_tau": [1.0377286672592163, 0.9945704340934753], "active_blocks_after_step": [0, 1]}
+{"step": 4, "loss": 0.12760235369205475, "forward_kl": 0.13075536489486694, "reverse_kl": 0.09264562278985977, "ce": 0.2645152509212494, "prompt_proxy_tau": [1.037917971611023, 0.9942358136177063], "active_blocks_after_step": [0, 1]}
+{"step": 5, "loss": 0.05626867711544037, "forward_kl": 0.022140568122267723, "reverse_kl": 0.023087240755558014, "ce": 0.33392712473869324, "prompt_proxy_tau": [1.1400623321533203, 1.1029518842697144], "active_blocks_after_step": [0, 1]}
+{"step": 6, "loss": 0.07585000991821289, "forward_kl": 0.062168434262275696, "reverse_kl": 0.05205726996064186, "ce": 0.2153615951538086, "prompt_proxy_tau": [1.1357132196426392, 1.0787431001663208], "active_blocks_after_step": [0, 1]}
+{"step": 7, "loss": 0.05560886859893799, "forward_kl": 0.0265997052192688, "reverse_kl": 0.026803448796272278, "ce": 0.28850889205932617, "prompt_proxy_tau": [1.007842779159546, 0.9822766184806824], "active_blocks_after_step": [0, 1]}
+{"step": 8, "loss": 0.06479999423027039, "forward_kl": 0.041126493364572525, "reverse_kl": 0.03741351515054703, "ce": 0.2655782997608185, "prompt_proxy_tau": [1.151221752166748, 1.1153457164764404], "active_blocks_after_step": [0, 1]}
+{"step": 9, "loss": 0.039404336363077164, "forward_kl": 0.01442697737365961, "reverse_kl": 0.0130076352506876, "ce": 0.260799378156662, "prompt_proxy_tau": [1.039595365524292, 1.029437780380249], "active_blocks_after_step": [0, 1]}
+Saved results.json

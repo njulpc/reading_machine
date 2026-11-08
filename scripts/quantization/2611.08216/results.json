@@ -1,0 +1,202 @@
+{
+  "paper": "2611.08216",
+  "model": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+  "torch": "2.8.0",
+  "python": "3.9.6",
+  "device": "cpu",
+  "model_dtype": "bfloat16",
+  "trained_parameters_dtype": "float32",
+  "unit_checks": {
+    "assertions": 5,
+    "schedule_28_blocks": [
+      14,
+      21,
+      25,
+      28
+    ]
+  },
+  "seed": 23,
+  "steps": 10,
+  "train_blocks": 2,
+  "weight_bits": 4,
+  "activation_bits": 8,
+  "weight_lr": 1e-05,
+  "scale_lr": 0.0001,
+  "beta": 0.1,
+  "alpha": 0.7768235206604004,
+  "prompts": [
+    "Explain in one sentence why model quantization saves memory.",
+    "Explain why calibration data matters for numerical accuracy."
+  ],
+  "srl_responses": [
+    "Model quantization saves memory by reducing the number of weights and activations in a neural",
+    "Calibration data is crucial for numerical accuracy because it ensures that the model or algorithm"
+  ],
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "max_new_tokens": 16
+  },
+  "logs": [
+    {
+      "step": 0,
+      "loss": 0.033397749066352844,
+      "forward_kl": 0.001640958827920258,
+      "reverse_kl": 0.001569150248542428,
+      "ce": 0.31812572479248047,
+      "prompt_proxy_tau": [
+        0.9263628125190735,
+        0.8564841151237488
+      ],
+      "active_blocks_after_step": [
+        0
+      ]
+    },
+    {
+      "step": 1,
+      "loss": 0.5705747604370117,
+      "forward_kl": 0.17897582054138184,
+      "reverse_kl": 0.6126870512962341,
+      "ce": 0.5468182563781738,
+      "prompt_proxy_tau": [
+        1.6830190420150757,
+        1.6773450374603271
+      ],
+      "active_blocks_after_step": [
+        0
+      ]
+    },
+    {
+      "step": 2,
+      "loss": 0.28551673889160156,
+      "forward_kl": 0.23327434062957764,
+      "reverse_kl": 0.24763058125972748,
+      "ce": 0.41090136766433716,
+      "prompt_proxy_tau": [
+        0.8458271622657776,
+        0.8202431797981262
+      ],
+      "active_blocks_after_step": [
+        0
+      ]
+    },
+    {
+      "step": 3,
+      "loss": 0.11133874952793121,
+      "forward_kl": 0.07311282306909561,
+      "reverse_kl": 0.06490904092788696,
+      "ce": 0.44598811864852905,
+      "prompt_proxy_tau": [
+        1.0377286672592163,
+        0.9945704340934753
+      ],
+      "active_blocks_after_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "step": 4,
+      "loss": 0.12760235369205475,
+      "forward_kl": 0.13075536489486694,
+      "reverse_kl": 0.09264562278985977,
+      "ce": 0.2645152509212494,
+      "prompt_proxy_tau": [
+        1.037917971611023,
+        0.9942358136177063
+      ],
+      "active_blocks_after_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "step": 5,
+      "loss": 0.05626867711544037,
+      "forward_kl": 0.022140568122267723,
+      "reverse_kl": 0.023087240755558014,
+      "ce": 0.33392712473869324,
+      "prompt_proxy_tau": [
+        1.1400623321533203,
+        1.1029518842697144
+      ],
+      "active_blocks_after_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "step": 6,
+      "loss": 0.07585000991821289,
+      "forward_kl": 0.062168434262275696,
+      "reverse_kl": 0.05205726996064186,
+      "ce": 0.2153615951538086,
+      "prompt_proxy_tau": [
+        1.1357132196426392,
+        1.0787431001663208
+      ],
+      "active_blocks_after_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "step": 7,
+      "loss": 0.05560886859893799,
+      "forward_kl": 0.0265997052192688,
+      "reverse_kl": 0.026803448796272278,
+      "ce": 0.28850889205932617,
+      "prompt_proxy_tau": [
+        1.007842779159546,
+        0.9822766184806824
+      ],
+      "active_blocks_after_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "step": 8,
+      "loss": 0.06479999423027039,
+      "forward_kl": 0.041126493364572525,
+      "reverse_kl": 0.03741351515054703,
+      "ce": 0.2655782997608185,
+      "prompt_proxy_tau": [
+        1.151221752166748,
+        1.1153457164764404
+      ],
+      "active_blocks_after_step": [
+        0,
+        1
+      ]
+    },
+    {
+      "step": 9,
+      "loss": 0.039404336363077164,
+      "forward_kl": 0.01442697737365961,
+      "reverse_kl": 0.0130076352506876,
+      "ce": 0.260799378156662,
+      "prompt_proxy_tau": [
+        1.039595365524292,
+        1.029437780380249
+      ],
+      "active_blocks_after_step": [
+        0,
+        1
+      ]
+    }
+  ],
+  "final_training_examples": [
+    {
+      "forward_kl": 0.02159987762570381,
+      "ce": 0.275365948677063
+    },
+    {
+      "forward_kl": 0.015498549677431583,
+      "ce": 0.2540358006954193
+    }
+  ],
+  "elapsed_seconds": 280.3170349597931,
+  "limitations": "Text-only Qwen3 cannot supply vision gradients. Prompt-token proxy used explicitly; exact Eq.1 checked synthetically. Only first two blocks W4A8 QAT, other blocks BF16. Two handwritten prompts, ten steps, not LLaVA-680K/5 epochs. No multimodal recovery claim, held-out task accuracy, packed low-bit checkpoint or hardware speed claim. Learning rates and beta are local smoke-test choices; not asserted to be paper defaults."
+}

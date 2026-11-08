@@ -1,0 +1,10 @@
+arxiv_id,title,submitted_local,category,keywords
+2611.08453,Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO,2026-11-06T02:47:05+08:00,knowledge_distillation,on-policy distillation; teacher provenance; multi-teacher; compute accounting
+2611.08413,T3R: Training-Free Two-Stage Token Refinement Towards Efficient and Robust VLA Models,2026-11-06T02:17:29+08:00,pruning,visual token pruning; VLA; segmentation; attention bias
+2611.08376,Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout,2026-11-06T01:53:49+08:00,other,low-rank gates; linear attention; fixed-size state; memory compression
+2611.08363,StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference,2026-11-06T01:42:06+08:00,quantization,low-bit weights; KV quantization; precision refinement; memory hierarchy
+2611.08290,AutoCompress: Automated Hardware-Guided Model Compression,2026-11-06T00:53:48+08:00,pruning,structured pruning; hardware-guided; differentiable architecture search; distillation
+2611.08275,Aligning Policy Encoders with a Shape Teacher,2026-11-06T00:44:24+08:00,knowledge_distillation,cross-modal distillation; shape teacher; image policy; privileged information
+2611.08245,Value-oriented policy distillation for interpretable wind farm power control,2026-11-06T00:22:55+08:00,knowledge_distillation,policy distillation; EBM; value-weighted; interpretable control
+2611.08236,Beyond Quadratic Attention: Separable Gaussian Operators for ODE Vision Transformers,2026-11-06T00:17:48+08:00,other,attention replacement; separable Gaussian; parameter efficiency; Neural ODE
+2611.08216,ProQuant: Progressive Quantization-aware Training for Edge MLLMs,2026-11-06T00:04:31+08:00,quantization,W4A8; W4A4; QAT; self-relabeling; progressive block activation

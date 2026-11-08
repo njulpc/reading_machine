@@ -1,0 +1,577 @@
+{
+  "run_date": "2026-11-09",
+  "report_date": "2026-11-08",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-11-06T00:00:00+08:00",
+    "end": "2026-11-08T23:59:59+08:00"
+  },
+  "dedup_source_branches": [
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-29",
+      "sha": "37139ece193fa4d66212a2f2951ed88a8d83b76a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-30",
+      "sha": "8fe81f3241431f5f6af227ce768402d6f91f97ca"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-07-31",
+      "sha": "25e3d35f37713e9b407a24c6f7b045dd26208f92"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-01",
+      "sha": "29b36a60ead969c281bd57e4fb6efd9e0001f6b1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-02",
+      "sha": "f397bf7f726f7b7b8286a035d43da5c12236d336"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-03",
+      "sha": "69a31ee7e2fea63cf20be9c34ca847ad58ab4ea5"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-04",
+      "sha": "f798a00e0569952212d0e6451f00ba6ea28de99a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-05",
+      "sha": "333264be93bb365ee7d29436235e6b056427943e"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-06",
+      "sha": "67600577ca268cd88675d221f0e19fdb59673789"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-07",
+      "sha": "87a4eb0f56e25253b22b8c7e9a288af8a467386a"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-08",
+      "sha": "4f19f7ec424ae7c273a5ae9a01fdc4aa1fbc07ff"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-10",
+      "sha": "652ee043ff7fad81734a95010b9b49b6dca1ec11"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-12",
+      "sha": "5dea9ebeff4db72522e85962764ae51a4978a4e6"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-14",
+      "sha": "fe27109ab9b86bd7b9ac4a4393dde4a77bb3b372"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-15",
+      "sha": "e463baea815c06d95ffc36eec034113b28db7927"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-16",
+      "sha": "940ef56b2ebd4bd22ce5636302234aaa63691e2d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-17",
+      "sha": "1320530c9060d6acfd6a6814ebe65415b62c760d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-18",
+      "sha": "2190e4aef62423032c78b7594a0e208c6d128c0d"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-19",
+      "sha": "3518b1fff91bab3cd78421810c0798177060063f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-20",
+      "sha": "6413646a6fec8b54f937415084c2df3e99b358a1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-21",
+      "sha": "dc8a46573315edb88419bb4eb181bea89d209de7"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-22",
+      "sha": "0dd4154cce8306873ec37767b6ab27e00b07735f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-23",
+      "sha": "e1a83986b75aec3a0289a50082ac44a6b359a130"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-24",
+      "sha": "574caeb9b2e6e763f4a216b80bfa33b539f8c71b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-25",
+      "sha": "508ce04ebcda0238aceb1d32991db50aac8904e0"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-26",
+      "sha": "4a627bc35cb9075ac416e12165c9418f79e1bbee"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-27",
+      "sha": "f57ca87589c728a68851f21acdff1c333b402e35"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-28",
+      "sha": "daeb352421a9263136927bc71497c86ddb512c77"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-29",
+      "sha": "e73be2a46c726bdd0a42b13b8d3ec75b5dfd9060"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-30",
+      "sha": "0cff4d39f94bca3cfdf18e85e8f056850bad6bda"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-08-31",
+      "sha": "d21ad3ba2970c7664ffd084b568f61b1dbde8866"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-01",
+      "sha": "ebb94ff45394bcf77d90c41d5f4eec02dc948b0b"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-02",
+      "sha": "ab05a346a491f043142867c74593f45e669812d1"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-03",
+      "sha": "710202d696a1295b25e55f50d4fee966434549d4"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-04",
+      "sha": "623673ccf816fda6de51daf471f55c79b0a24801"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-05",
+      "sha": "1ab9858c9e986133aafa40226b1c5af0a760c175"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-06",
+      "sha": "05108f7ef5b13b0fcc118d633a53c99d31d55166"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-07",
+      "sha": "4fa4065a723520e6413d4bed69790612999517cd"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-08",
+      "sha": "3db8912129f5ebdfb2399a213f0688ac30cdf971"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-09",
+      "sha": "88c76b0c8b21a4a366dbba0de17d2c63327dcca8"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-14",
+      "sha": "5068f2a8c89b815b69665b35900fd0e8d3800a54"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-15",
+      "sha": "b580dd8c66660802f18e5c25bdff7f9ad0f85e66"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-21",
+      "sha": "263f4647c46bdea7fd86ecdabca69c889ef96806"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-22",
+      "sha": "7b0317385f6f8b9e6e79d2863a7e4d7a3a355968"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-09-29",
+      "sha": "2874106cd594d482ab71a00c8b6ef5fdf3622cbb"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-12",
+      "sha": "252ce3d0f428984f276bb380dea030f165e9e9d3"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-13",
+      "sha": "52bf4827692c57ccabbd1dd61a6e4641b683379f"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-14",
+      "sha": "71c9c681c89725a10453f8fdee59633fcebb1bec"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-19",
+      "sha": "883eb5828be85a82364fc08bcf40ea2295443902"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-20",
+      "sha": "5a0766dd8748557393073127bb2557ad7b5b54a7"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-10-27",
+      "sha": "b8974213ae16f5787f9e4287835b1351fa632048"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-11-02",
+      "sha": "6cd5cf9f0a49338bd3ec14733d247547db914688"
+    },
+    {
+      "ref": "origin/feature/arxiv-daily-2026-11-03",
+      "sha": "fe6ae1969095ca3d3e768bb4654a3c9f3152b5df"
+    }
+  ],
+  "historical_analyzed_ids_count": 612,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 9,
+  "total_papers": 9,
+  "related_counts_by_day": {
+    "2026-11-06": 9,
+    "2026-11-07": 0,
+    "2026-11-08": 0
+  },
+  "papers": [
+    {
+      "id": "2611.08453",
+      "title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
+      "abstract": "On-policy distillation (OPD) trains a student on its own rollouts under a frozen teacher's per-token supervision. Does this dense signal reduce the training FLOPs needed to reach a target accuracy compared with reinforcement learning? We systematically compare vanilla reverse-KL OPD with Group Relative Policy Optimization (GRPO) across task difficulty, student and teacher size, domain, and optimization choices, measuring held-out accuracy against training FLOPs. With an external post-trained teacher, OPD generally loses to GRPO in accuracy per training FLOP at matched settings, even when the teacher is further trained with GRPO, and often suffers response-length inflation. Yet a different teacher changes the picture: when the teacher is the student's own GRPO checkpoint, OPD recovers that checkpoint's accuracy on math with $50\\times$ fewer distillation FLOPs than GRPO needs to reach the same accuracy. Following the same teacher setting, we consistently observe this high efficiency with a larger student, on code, and in a second model family. On a single domain, however, the GRPO checkpoint is already the desired model, so distilling it adds to total compute. Across domains, separate GRPO checkpoints hold different capabilities, and no single checkpoint serves every domain. Multi-teacher OPD (DeepSeek-AI, 2026) consolidates per-domain GRPO experts into a single student that matches each expert's accuracy, with the distillation stage costing only 5.2% (on 2 domains) and 8.0% (on 4 domains) of the specialist training FLOPs. Counting specialist training and distillation together, this pipeline reaches joint GRPO's performance on the 2-domain mix with 42.0% fewer total FLOPs.",
+      "subjects": "Machine Learning (cs.LG) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-11-05T18:47:05+00:00",
+      "v1_local": "2026-11-06T02:47:05+08:00",
+      "url": "https://arxiv.org/abs/2611.08453",
+      "category": "knowledge_distillation",
+      "short_name": "OPD成本审计",
+      "summary": "外部强教师不必然提高每FLOP学习效率；同源专家蒸馏的价值在于多域能力合并，而非孤立计算50倍蒸馏阶段节省。",
+      "keywords": [
+        "on-policy distillation",
+        "teacher provenance",
+        "multi-teacher",
+        "compute accounting"
+      ],
+      "scores": {
+        "accuracy": 7,
+        "compression": 3,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "score_basis": "精度7：跨尺寸/领域有受控对照，但外部教师常输GRPO；压缩3：同源专家合并不提供单模型字节压缩率；创新8：拆分教师来源与完整训练账本；复现6：目标和FLOP公式清晰，但本次未跑多GPU训练。",
+      "analysis_path": "papers/2026-11/knowledge_distillation/2611.08453/tech_analysis.md",
+      "authors": [
+        "Zeyu Leo Liu",
+        "Yang Li",
+        "Bo Pang",
+        "Emre Can Acikgoz",
+        "Xuan-Phi Nguyen",
+        "Anurag Koul",
+        "Srijan Bansal",
+        "Erik Nijkamp",
+        "Shafiq Joty",
+        "Semih Yavuz"
+      ],
+      "arxiv_id": "2611.08453",
+      "submitted": "2026-11-06T02:47:05+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "not_run_non_quantization"
+    },
+    {
+      "id": "2611.08413",
+      "title": "T3R: Training-Free Two-Stage Token Refinement Towards Efficient and Robust VLA Models",
+      "abstract": "Vision-Language-Action (VLA) models enable end-to-end robot control, but inference is increasingly expensive. Each decision processes hundreds of visual tokens, often across multiple cameras, leading to substantial computation while allowing irrelevant background content to distract action prediction under distribution shift. We argue that these issues stem from two complementary forms of redundancy: many visual tokens are spatially irrelevant, while attention over the remaining tokens is often misallocated. Based on this observation, we propose T3R, a Training-Free Two-Stage Token Refinement framework. In the first stage, segmentation-guided token pruning removes irrelevant visual patches to reduce computation and eliminate distracting context. In the second stage, saliency-guided attention biasing reallocates attention toward action-critical visual regions and language instructions within the retained tokens. Together, pruning produces a cleaner candidate set, while attention biasing further emphasizes the most decision-relevant evidence, yielding a better accuracy-efficiency frontier than either stage alone. On LIBERO-Spatial, T3R removes 85% of scene-camera visual tokens while essentially matching the unpruned success rate, and improves success by up to 7 percentage points under out-of-distribution object-placement perturbations. The timing comparison attributes 7.8 ms per inference call to pruning and attention-bias application. As input resolution increases, LLM-forward profiling shows up to a 3.3x speedup over the unpruned baseline. Evaluations across LIBERO, SIMPLER, and RoboTwin with three VLA backbones show the strongest accuracy-efficiency benefits in multi-camera settings. These results demonstrate that training-free token refinement is a practical approach to efficient and robust VLA inference.",
+      "subjects": "Robotics (cs.RO) ; Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-11-05T18:17:29+00:00",
+      "v1_local": "2026-11-06T02:17:29+08:00",
+      "url": "https://arxiv.org/abs/2611.08413",
+      "category": "pruning",
+      "short_name": "T3R",
+      "summary": "T3R在解码前剪除场景相机冗余token，再用任务级显著性修复注意力；85%场景token减少只带来1.16倍实测VLA调用加速。",
+      "keywords": [
+        "visual token pruning",
+        "VLA",
+        "segmentation",
+        "attention bias"
+      ],
+      "scores": {
+        "accuracy": 7,
+        "compression": 7,
+        "innovation": 7,
+        "reproducibility": 6
+      },
+      "score_basis": "精度7：Spatial仅损失1个百分点但单相机退化；压缩7：85%仅一台相机token，非权重压缩；创新7：位置保持、分割与注意力修复协同；复现6：超参数完整，但模拟器、分割器和异步测时未本地复现。",
+      "analysis_path": "papers/2026-11/pruning/2611.08413/tech_analysis.md",
+      "authors": [
+        "Mohammed Hassan",
+        "Zhenyang Chen",
+        "Zheng Wang",
+        "Zhixin Zhu",
+        "Tianlong Chen",
+        "Yingyan",
+        "Chaojian Li"
+      ],
+      "arxiv_id": "2611.08413",
+      "submitted": "2026-11-06T02:17:29+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "not_run_non_quantization"
+    },
+    {
+      "id": "2611.08376",
+      "title": "Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout",
+      "abstract": "Linear attention compresses context into a fixed-size key-value state for linear-time training and constant-memory inference. Gated delta-rule models decay this state and erase its prediction for an incoming key before writing a new value; Gated DeltaNet-2 (GDN-2) generalizes this with channel-wise decay and decoupled, full-rank erase and write gates. However, we show that state updates are far less sensitive to erasure than to writes: key activation and unit normalization concentrate key energy onto a sparse subset of channels, whereas value writes scale all channels, so the erase gate can be parameterized at lower rank. Furthermore, slow-decaying state rows accumulate much larger norms than fast rows, dominating unweighted readout and forcing stronger write-time erasure to suppress interference. Guided by this analysis, we introduce Muir, which fuses all gates into a sensitivity-allocated low-rank projection, re-weights state rows with a matched-filter readout gate, and reinvests the saved parameters in a wider feed-forward network. Because standard chunkwise algorithms become numerically unstable at the large chunk sizes needed to saturate wide matrix units, we design a parallel update for stable, efficient training. Across 166M-1.34B parameters, Muir lowers perplexity by 1.8-2.0% over GDN-2 and 2.5-3.6% over Transformer, raises commonsense accuracy by up to 1.9 points, and improves extractive recall over GDN-2. At 1.34B, Muir outperforms both baselines on multi-hop and multi-needle recall, extrapolates 2,560x from its 4K training length to 10M-token streams without perplexity drift, and maintains near-100% passkey retrieval to 1M tokens with static readout. Muir achieves these gains while matching GDN-2 throughput, reaching its 100B-token validation loss 1.2x faster, and training 2.7x faster than Transformer at 32K.",
+      "subjects": "Machine Learning (cs.LG)",
+      "v1_utc": "2026-11-05T17:53:49+00:00",
+      "v1_local": "2026-11-06T01:53:49+08:00",
+      "url": "https://arxiv.org/abs/2611.08376",
+      "category": "other",
+      "short_name": "Muir",
+      "summary": "Muir按状态更新敏感度分配低秩门控，用匹配滤波读出改善固定容量记忆；节省参数用于加宽FFN，因此不宣称整模型参数缩小。",
+      "keywords": [
+        "low-rank gates",
+        "linear attention",
+        "fixed-size state",
+        "memory compression"
+      ],
+      "scores": {
+        "accuracy": 8,
+        "compression": 7,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "score_basis": "精度8：多尺度100B-token训练与检索对照；压缩7：状态随序列长度保持常数，但总参数匹配；创新8：门控敏感度、读出与稳定kernel联动；复现6：理论和rank可核验，本次未进行TPU训练。",
+      "analysis_path": "papers/2026-11/other/2611.08376/tech_analysis.md",
+      "authors": [
+        "Tushaar Gangavarapu",
+        "Gil Tabak",
+        "Clemens JS Schaefer"
+      ],
+      "arxiv_id": "2611.08376",
+      "submitted": "2026-11-06T01:53:49+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "not_run_non_quantization"
+    },
+    {
+      "id": "2611.08363",
+      "title": "StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference",
+      "abstract": "Quantization reduces the memory and bandwidth demands of large language model (LLM) inference but can degrade accuracy; offloading higher-precision data can instead stall generation. We introduce StrataFlux, a framework that challenges this tradeoff by recovering accuracy lost to low-bit weight and key-value (KV) cache quantization while retaining quantization's memory and speed advantages. StrataFlux co-designs refinement representation, selection, and delivery to make host RAM and solid-state drives useful sources of additional precision. Its selective precision streaming reduces transfer volume, overlaps delivery with computation, and reuses fetched precision across decoding steps so generation need not wait for every transfer. We evaluate 2-4-bit weights and 2-3-bit KV-cache on dedicated GPUs and unified-memory platforms. For 2-bit Llama-3.1-8B-Instruct weights, StrataFlux reduces WikiText-2 perplexity from 9.46 to 8.40 while maintaining 95.4% of the quantized base's throughput on RTX 5090. With 2-bit weights and KV, StrataFlux raises Qwen3-8B's AIME 2024/2025 accuracy from 11.0% to 47.1% at unchanged GPU memory use. At 128K context, Llama-3.1-8B-Instruct with 3-bit weights and 2-bit KV achieves comparable perplexity and speed to vLLM's 4-bit AWQ weights and 8-bit KV on RTX 5090, using approximately half the GPU memory. These results show that GPU-resident precision need not set the accuracy ceiling, nor offloading-tier latency dictate decoding speed.",
+      "subjects": "Machine Learning (cs.LG) ; Distributed, Parallel, and Cluster Computing (cs.DC)",
+      "v1_utc": "2026-11-05T17:42:06+00:00",
+      "v1_local": "2026-11-06T01:42:06+08:00",
+      "url": "https://arxiv.org/abs/2611.08363",
+      "category": "quantization",
+      "short_name": "StrataFlux",
+      "summary": "StrataFlux把低比特常驻底座与按需补充精度分离，拟合被选中通道以补偿遗漏误差；本机验证显示小校准集上的收益明显大于留出集。",
+      "keywords": [
+        "low-bit weights",
+        "KV quantization",
+        "precision refinement",
+        "memory hierarchy"
+      ],
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 9,
+        "reproducibility": 7
+      },
+      "score_basis": "精度8：多模型低比特恢复但仍低于BF16；压缩8：降低GPU常驻精度但依赖外部补偿存储；创新9：编码、选择与交付联合设计；复现7：真实Qwen投影和代数检查通过，系统级内核与吞吐未复现。",
+      "analysis_path": "papers/2026-11/quantization/2611.08363/tech_analysis.md",
+      "authors": [
+        "Jake Hyun",
+        "Ziyu Zhao",
+        "Jae-sun Seo",
+        "Mohamed S. Abdelfattah"
+      ],
+      "arxiv_id": "2611.08363",
+      "submitted": "2026-11-06T01:42:06+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "component_verified"
+    },
+    {
+      "id": "2611.08290",
+      "title": "AutoCompress: Automated Hardware-Guided Model Compression",
+      "abstract": "LLM pruning must preserve quality while meeting hardware- and workload-specific constraints on latency, throughput, and memory. Existing pruning workflows often target parameter counts, requiring practitioners to manually select model sizes that meet latency, throughput, and GPU memory limits. However, parameter count alone does not predict these metrics, which depend on the model architecture, workload, hardware, and serving engine. We introduce AutoCompress, a hardware-guided compression framework that directly incorporates such constraints into differentiable architecture search. AutoCompress jointly optimizes global and per-layer structure to produce heterogeneous architectures, guided by serving-engine cost models validated against end-to-end latency, throughput, and memory measurements. We evaluate AutoCompress on long-context local coding, batched datacenter serving, and latency-sensitive in-game interaction. Compared to the state-of-the-art Minitron pruning framework, AutoCompress improves average accuracy across eight benchmarks by 6.57, 2.35, and 0.57 percentage points on RTX 5070, RTX 5080, and H100, respectively. AutoCompress also compresses Nemotron 3.5 Super from 120B to 74B parameters for single-B200 BF16 serving at 128K context, retaining 95% of its mean benchmark score.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-11-05T16:53:48+00:00",
+      "v1_local": "2026-11-06T00:53:48+08:00",
+      "url": "https://arxiv.org/abs/2611.08290",
+      "category": "pruning",
+      "short_name": "AutoCompress",
+      "summary": "AutoCompress把目标硬件、工作负载与推理引擎成本纳入架构搜索，在相同部署预算下优于统一宽度剪枝。",
+      "keywords": [
+        "structured pruning",
+        "hardware-guided",
+        "differentiable architecture search",
+        "distillation"
+      ],
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 5
+      },
+      "score_basis": "精度8：三部署约束下受控比较；压缩8：120B→74B明确但服务配置依赖强；创新8：真实引擎成本约束与异构结构联合；复现5：搜索/恢复token量巨大且需要目标GPUprofiling，本次未运行。",
+      "analysis_path": "papers/2026-11/pruning/2611.08290/tech_analysis.md",
+      "authors": [
+        "Sheldon Liang",
+        "Ali Taghibakhshi",
+        "Saurav Muralidharan",
+        "Sharath Turuvekere Sreenivas",
+        "Ashwath Aithal",
+        "Pavlo Molchanov",
+        "Nima Tajbakhsh"
+      ],
+      "arxiv_id": "2611.08290",
+      "submitted": "2026-11-06T00:53:48+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "not_run_non_quantization"
+    },
+    {
+      "id": "2611.08275",
+      "title": "Aligning Policy Encoders with a Shape Teacher",
+      "abstract": "3D-aware representations can improve robotic manipulation by providing geometric information that is robust to changes in viewpoint, object position, and occlusion. However, using 3D inputs at deployment requires additional sensing and processing, making image-based policies more practical. We ask whether an image-based policy can acquire 3D shape information during training while retaining a purely image-based interface at deployment. We propose shape-teacher alignment, a training-time mechanism that uses a pretrained 3D shape representation as an alignment target for an image-based policy encoder. Specifically, we use Point-MAE features from individual objects as targets for corresponding image patches, transferring geometric structure to the policy without changing its deployment inputs or architecture. On LIBERO, shape-teacher alignment produces image representations that are more structured around object shape and corresponding parts, while substantially accelerating policy convergence and improving success rates. For pretrained policies, convergence is accelerated by 4.7x and 5.6x on the Object and Spatial suites, respectively, without requiring the shape teacher or depth input at deployment.",
+      "subjects": "Robotics (cs.RO) ; Artificial Intelligence (cs.AI); Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-11-05T16:44:24+00:00",
+      "v1_local": "2026-11-06T00:44:24+08:00",
+      "url": "https://arxiv.org/abs/2611.08275",
+      "category": "knowledge_distillation",
+      "short_name": "Shape-teacher alignment",
+      "summary": "把冻结Point-MAE的3D局部几何特征蒸馏到图像策略encoder，部署时无需3D教师或深度输入，但不缩小原图像策略。",
+      "keywords": [
+        "cross-modal distillation",
+        "shape teacher",
+        "image policy",
+        "privileged information"
+      ],
+      "scores": {
+        "accuracy": 7,
+        "compression": 2,
+        "innovation": 6,
+        "reproducibility": 6
+      },
+      "score_basis": "精度7：LIBERO收敛和成功率改善，DINOv2对照更强；压缩2：原策略结构未变，无参数/字节压缩率；创新6：几何覆盖权重对齐明确；复现6：公式/λ可核验，但本次未运行仿真训练。",
+      "analysis_path": "papers/2026-11/knowledge_distillation/2611.08275/tech_analysis.md",
+      "authors": [
+        "Madelon Bernardy",
+        "Mohammad Mahdi Derakhshani",
+        "David M Knigge",
+        "Riccardo Valperga",
+        "Artem Moskalev"
+      ],
+      "arxiv_id": "2611.08275",
+      "submitted": "2026-11-06T00:44:24+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "not_run_non_quantization"
+    },
+    {
+      "id": "2611.08245",
+      "title": "Value-oriented policy distillation for interpretable wind farm power control",
+      "abstract": "Wind farm power control can help the system maintain balance and avoid blackouts. In Europe, this can be achieved through implicit balancing, where a wind farm adjusts its power setpoint in anticipation of the imbalance price using information published by the Transmission System Operator. Thereby, the wind farm helps restore system balance while also reducing its own imbalance costs resulting from forecast errors. However, implicit balancing is a challenging problem since the settlement price is unknown in advance and can be impacted by the pursued control strategy. Reinforcement learning methods could help to solve this problem, but lack the interpretability needed to be deployed on real wind farms. Therefore, we propose a policy distillation framework using explainable boosting machines (EBMs), a variant of generalized additive models, to obtain a transparent control policy. To increase the value captured by the EBM model, we introduce a value-oriented perspective to policy distillation inspired by research in the field of energy forecasting. Furthermore, we suggest to include expert knowledge during model design, such that the control strategy is also justifiable to stakeholders. Using real data of the Belgian grid and an offshore wind farm, we find that our value-oriented and expert-based controller can reduce imbalance costs by 82%, while outperforming a price threshold controller as well as a policy distillation baseline using decision trees.",
+      "subjects": "Artificial Intelligence (cs.AI) ; Systems and Control (eess.SY)",
+      "v1_utc": "2026-11-05T16:22:55+00:00",
+      "v1_local": "2026-11-06T00:22:55+08:00",
+      "url": "https://arxiv.org/abs/2611.08245",
+      "category": "knowledge_distillation",
+      "short_name": "Value-oriented policy distillation",
+      "summary": "用决策价值加权把SAC控制策略蒸馏到透明EBM，降低不平衡费用约82%；目标是可解释控制，未证明参数或延时压缩。",
+      "keywords": [
+        "policy distillation",
+        "EBM",
+        "value-weighted",
+        "interpretable control"
+      ],
+      "scores": {
+        "accuracy": 7,
+        "compression": 2,
+        "innovation": 6,
+        "reproducibility": 5
+      },
+      "score_basis": "精度7：时间外测试有经济目标改善，但仍逊SAC教师；压缩2：无存储与延时比率；创新6：收益加权及专家约束结合；复现5：部分真实风场数据与运行环境本次不可复现。",
+      "analysis_path": "papers/2026-11/knowledge_distillation/2611.08245/tech_analysis.md",
+      "authors": [
+        "Max Bruninx",
+        "Timothy Verstraeten",
+        "Jan Decuyper",
+        "Ann Nowé",
+        "Jan Helsen"
+      ],
+      "arxiv_id": "2611.08245",
+      "submitted": "2026-11-06T00:22:55+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "not_run_non_quantization"
+    },
+    {
+      "id": "2611.08236",
+      "title": "Beyond Quadratic Attention: Separable Gaussian Operators for ODE Vision Transformers",
+      "abstract": "Self-attention carries a quadratic cost in token count, which limits how far Vision Transformers can scale with input resolution. We introduce SSoG, a separable sum-of-Gaussians spatial operator that replaces dense self-attention with a learned mixture of axis-factorized Gaussian kernels, reducing the per-layer cost from $\\mathcal{O}(N^2)$ to subquadratic in $N$. Unlike dot-product self-attention, whose Lipschitz constant is unbounded outside a compact input domain, SSoG with fixed kernels is globally Lipschitz continuous, which, via the Picard--Lindelöf theorem, guarantees that the continuous-depth variant has a unique solution on the whole integration interval, a global guarantee that dense-attention counterparts lack in general. On CIFAR-100 at $224\\times224$, in a matched discrete-Transformer setting and in the continuous setting, SSoG improves Top-1 accuracy by 2.2--4.1 points across three model widths while using 8.8--16.6\\% fewer parameters, with depth and training recipe held fixed. In a looped-Transformer setting, SSoG improves Top-1 accuracy by 5.4--8.1 points. We further probe inference-time scaling by evaluating on inputs up to $1024\\times1024$ at matched batch size: in the continuous-depth (Neural ODE) architecture, SSoG reaches up to 154\\% higher throughput and over 60\\% lower peak memory than dense attention, with the gap widening as resolution grows, consistent with the difference in asymptotic cost. In the discrete and looped settings, SSoG also achieves over 30\\% higher throughput than dense attention at this resolution. Together, these results establish SSoG as a practical, parameter-efficient, and theoretically grounded alternative to dense attention across discrete, weight-shared, and continuous-depth Transformer variants.",
+      "subjects": "Machine Learning (cs.LG) ; Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-11-05T16:17:48+00:00",
+      "v1_local": "2026-11-06T00:17:48+08:00",
+      "url": "https://arxiv.org/abs/2611.08236",
+      "category": "other",
+      "short_name": "SSoG",
+      "summary": "SSoG用可分离高斯空间算子替代dense attention以减少参数和计算；内存优势取决于基线是否使用融合kernel。",
+      "keywords": [
+        "attention replacement",
+        "separable Gaussian",
+        "parameter efficiency",
+        "Neural ODE"
+      ],
+      "scores": {
+        "accuracy": 7,
+        "compression": 5,
+        "innovation": 7,
+        "reproducibility": 6
+      },
+      "score_basis": "精度7：CIFAR改善、ImageNet looped略降；压缩5：参数少8.8–16.6%，非量化且内存对照依赖实现；创新7：算子结构与ODE全局适定性连接；复现6：公式明确，本次无训练/速度重跑。",
+      "analysis_path": "papers/2026-11/other/2611.08236/tech_analysis.md",
+      "authors": [
+        "Carlos Boned Riera",
+        "David Romero Sanchez",
+        "Oriol Ramos Terrades"
+      ],
+      "arxiv_id": "2611.08236",
+      "submitted": "2026-11-06T00:17:48+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "not_run_non_quantization"
+    },
+    {
+      "id": "2611.08216",
+      "title": "ProQuant: Progressive Quantization-aware Training for Edge MLLMs",
+      "abstract": "Multi-modal large language models (MLLMs) with impressive perception and understanding capabilities will enable a range of downstream applications. However, their substantial computational and memory requirements hinder the real-world implementation, particularly for resource-constrained edge devices. Quantization has emerged as an effective solution for deploying large models. While post-training quantization (PTQ) successfully retains the performance at moderate bit-width (e.g., W8A8), it suffers from severe performance degradation under low-bit quantization (e.g., W4A8), especially for small-scale models that are more suitable for edge deployment. In this paper, we propose ProQuant, a novel weight-activation quantization-aware training (QAT) framework tailored for low-bit MLLMs. First, to align the limited finetuning dataset distribution with the pretrained dataset distribution, we propose a self-relabeling (SRL) scheme to resample the responses of the open-source multimodal dataset. Second, we are the first to take a decoupled view of multi-modal (MM) understanding and language modeling abilities. We propose a progressive block activation (PBA) mechanism to prioritize the MM understanding recovery. We also introduce a vision-sensitive factor $\\vec{\\tau}$ that effectively identifies the MM-critical layers. Extensive experiments across various benchmarks, covering models with 2B-8B parameters, show that ProQuant significantly outperforms existing methods. For example, our W4A8 Qwen3-VL-2B-Instruct improves average accuracy by impressively 6.6% and achieves performance comparable to full precision counterparts with only approximately 1% performance drop. Code is available at this https URL .",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV) ; Computation and Language (cs.CL)",
+      "v1_utc": "2026-11-05T16:04:31+00:00",
+      "v1_local": "2026-11-06T00:04:31+08:00",
+      "url": "https://arxiv.org/abs/2611.08216",
+      "category": "quantization",
+      "short_name": "ProQuant",
+      "summary": "ProQuant先用模型自生成标签对齐数据分布，再优先量化视觉敏感层；W4A8 Qwen3-VL-2B均分72.54，距BF16为1.09个百分点。",
+      "keywords": [
+        "W4A8",
+        "W4A4",
+        "QAT",
+        "self-relabeling",
+        "progressive block activation"
+      ],
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "innovation": 8,
+        "reproducibility": 6
+      },
+      "score_basis": "精度8：跨小型MLLM和多个基准，W4A4仍明显落后BF16；压缩8：4bit权重理论有效载荷4倍但ViT等仍BF16；创新8：视觉敏感度驱动渐进QAT；复现6：真实Qwen文本组件训练通过，视觉机制受指定纯文本模型约束未验证。",
+      "analysis_path": "papers/2026-11/quantization/2611.08216/tech_analysis.md",
+      "authors": [
+        "Yufei Xue",
+        "Yushi Huang",
+        "Jiawei Shao",
+        "Pingcheng Dong",
+        "Yonghao Tan",
+        "Shiyao Li",
+        "Kwang-Ting Cheng",
+        "Jun Zhang"
+      ],
+      "arxiv_id": "2611.08216",
+      "submitted": "2026-11-06T00:04:31+08:00",
+      "analyzed_at": "2026-11-09T01:18:05.284164+08:00",
+      "reproduction_status": "component_verified"
+    }
+  ],
+  "generated_at": "2026-11-09T01:18:05.284164+08:00",
+  "snapshot_policy": "Only newly analyzed papers from this run; no accumulated historical paper records."
+}

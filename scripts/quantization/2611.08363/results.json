@@ -1,0 +1,54 @@
+{
+  "paper": "2611.08363",
+  "model": "/Users/lipengcheng/.cache/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+  "torch": "2.8.0",
+  "python": "3.9.6",
+  "device": "cpu",
+  "model_dtype": "bfloat16",
+  "arithmetic_dtype": "float64",
+  "unit_checks": {
+    "assertions": 6,
+    "fit_normal_equation_relative_error": 1.7173715073881695e-16,
+    "kv_correction_max_error": 2.5623947408348613e-12
+  },
+  "projection": "model.layers.0.self_attn.q_proj",
+  "weight_shape": [
+    2048,
+    1024
+  ],
+  "calibration_shape": [
+    128,
+    1024
+  ],
+  "heldout_shape": [
+    128,
+    1024
+  ],
+  "texts": [
+    "Quantization reduces model storage while calibration measures numerical errors. ",
+    "A cache keeps frequently used information close to the processor. ",
+    "A scientist compares a compressed model with its unmodified reference. ",
+    "Selected weight residuals can correct errors on important activation channels. "
+  ],
+  "tokens_per_text": 64,
+  "resident_bits": 3,
+  "refinement_bits": 4,
+  "chunk": 1024,
+  "k": 32,
+  "lambda": 0.02010618068743497,
+  "normal_equation_error": 9.663247834333106e-16,
+  "results": {
+    "calibration": {
+      "base_mse": 0.006055591317228501,
+      "raw_residual4_mse": 0.0037590355363026013,
+      "fitted4_mse": 0.0005535455652608594
+    },
+    "heldout": {
+      "base_mse": 0.006057010113604789,
+      "raw_residual4_mse": 0.0037296283142320232,
+      "fitted4_mse": 0.0037212126107034763
+    }
+  },
+  "elapsed_seconds": 4.365041017532349,
+  "limitations": "One real Qwen projection only. Handwritten text, not RedPajama. RTN base, not YAQA/AWQ. KV Eq.8 only small-tensor verified; no KVarN, packed storage, neuron bundles, cache, fetch lead/lag runtime, whole-model PPL, SSD or GPU throughput validation."
+}
