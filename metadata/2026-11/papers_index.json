@@ -1,0 +1,194 @@
+{
+  "run_date": "2026-11-24",
+  "query_window": {
+    "timezone": "Asia/Shanghai",
+    "start": "2026-11-21T00:00:00+08:00",
+    "end": "2026-11-23T23:59:59+08:00",
+    "daily_report_date": "2026-11-23"
+  },
+  "dedup_source_branches": [
+    "origin/feature/arxiv-daily-2026-07-29",
+    "origin/feature/arxiv-daily-2026-07-30",
+    "origin/feature/arxiv-daily-2026-07-31",
+    "origin/feature/arxiv-daily-2026-08-01",
+    "origin/feature/arxiv-daily-2026-08-02",
+    "origin/feature/arxiv-daily-2026-08-03",
+    "origin/feature/arxiv-daily-2026-08-04",
+    "origin/feature/arxiv-daily-2026-08-05",
+    "origin/feature/arxiv-daily-2026-08-06",
+    "origin/feature/arxiv-daily-2026-08-07",
+    "origin/feature/arxiv-daily-2026-08-08",
+    "origin/feature/arxiv-daily-2026-08-10",
+    "origin/feature/arxiv-daily-2026-08-12",
+    "origin/feature/arxiv-daily-2026-08-14",
+    "origin/feature/arxiv-daily-2026-08-15",
+    "origin/feature/arxiv-daily-2026-08-16",
+    "origin/feature/arxiv-daily-2026-08-17",
+    "origin/feature/arxiv-daily-2026-08-18",
+    "origin/feature/arxiv-daily-2026-08-19",
+    "origin/feature/arxiv-daily-2026-08-20",
+    "origin/feature/arxiv-daily-2026-08-21",
+    "origin/feature/arxiv-daily-2026-08-22",
+    "origin/feature/arxiv-daily-2026-08-23",
+    "origin/feature/arxiv-daily-2026-08-24",
+    "origin/feature/arxiv-daily-2026-08-25",
+    "origin/feature/arxiv-daily-2026-08-26",
+    "origin/feature/arxiv-daily-2026-08-27",
+    "origin/feature/arxiv-daily-2026-08-28",
+    "origin/feature/arxiv-daily-2026-08-29",
+    "origin/feature/arxiv-daily-2026-08-30",
+    "origin/feature/arxiv-daily-2026-08-31",
+    "origin/feature/arxiv-daily-2026-09-01",
+    "origin/feature/arxiv-daily-2026-09-02",
+    "origin/feature/arxiv-daily-2026-09-03",
+    "origin/feature/arxiv-daily-2026-09-04",
+    "origin/feature/arxiv-daily-2026-09-05",
+    "origin/feature/arxiv-daily-2026-09-06",
+    "origin/feature/arxiv-daily-2026-09-07",
+    "origin/feature/arxiv-daily-2026-09-08",
+    "origin/feature/arxiv-daily-2026-09-09",
+    "origin/feature/arxiv-daily-2026-09-14",
+    "origin/feature/arxiv-daily-2026-09-15",
+    "origin/feature/arxiv-daily-2026-09-21",
+    "origin/feature/arxiv-daily-2026-09-22",
+    "origin/feature/arxiv-daily-2026-09-29",
+    "origin/feature/arxiv-daily-2026-10-12",
+    "origin/feature/arxiv-daily-2026-10-13",
+    "origin/feature/arxiv-daily-2026-10-14",
+    "origin/feature/arxiv-daily-2026-10-19",
+    "origin/feature/arxiv-daily-2026-10-20",
+    "origin/feature/arxiv-daily-2026-10-27",
+    "origin/feature/arxiv-daily-2026-11-02",
+    "origin/feature/arxiv-daily-2026-11-03",
+    "origin/feature/arxiv-daily-2026-11-09"
+  ],
+  "historical_analyzed_ids_count": 621,
+  "excluded_duplicate_ids": [],
+  "new_papers_count": 5,
+  "total_papers": 5,
+  "daily_related_counts": {
+    "2026-11-21": 5,
+    "2026-11-22": 0,
+    "2026-11-23": 0
+  },
+  "papers": [
+    {
+      "id": "2611.27973",
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "abstract": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic computational complexity as the context expands. In contrast, linear-time architectures compress history into fixed-size states, but struggle to retain fine-grained details. We introduce MemOnce, a foundation architecture that learns scalable memory states for language models. MemOnce is based on two core designs: (a) Memory encoder-decoder: it caches only a small subset of final-layer hidden states as compact memory representations and dynamically decodes them back into KV caches for attention layers; (b) Memory sparse attention: for each continual input, MemOnce adaptively retrieves relevant memory representations, with the sparse indices computed only once across layers. Coupling these two designs enables efficient on-the-fly memory loading and KV cache decoding, drastically reducing the GPU memory footprint and achieving linear-time complexity. We conduct extensive experiments to show that MemOnce outperforms Transformers and other architectures across varying model sizes, context lengths, and training paradigms (pretraining and post-training adaptation). In particular, adapting Qwen3.5-4B with MemOnce reduces memory state cache by 1313$\\times$ and prefill latency by 6.9$\\times$ at 1M context, and improves throughput by 3.5$\\times$ and overall memory performance by +5.77%. Finally, MemOnce generalizes zero-shot to downstream representation tasks, achieving competitive results against specialized models.",
+      "subjects": "Computation and Language (cs.CL)",
+      "v1_utc": "2026-11-20T18:51:29+00:00",
+      "v1_local": "2026-11-21T02:51:29+08:00",
+      "url": "https://arxiv.org/abs/2611.27973",
+      "category": "other",
+      "keywords": [
+        "KV cache compression",
+        "cross-layer sharing"
+      ],
+      "scores": {
+        "accuracy": 8,
+        "compression": 9,
+        "novelty": 8,
+        "reproducibility": 6
+      },
+      "analysis_path": "papers/2026-11/other/2611.27973/tech_analysis.md",
+      "submitted_date": "2026-11-21",
+      "arxiv_id": "2611.27973"
+    },
+    {
+      "id": "2611.27962",
+      "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
+      "abstract": "Machine learning has largely kept separate the choice of architecture and the process of training. A classic Transformer, for instance, trains a fixed set of attention and MLP sublayers at every layer, in the same order, and optimizes the weights within. This uniformity is a convention rather than a principled design choice, and it is likely suboptimal: the best architecture for a given task may be smaller, more efficient, and far from uniform. We believe that, ideally, training itself should shape the model's topology. To this end, we introduce Model Carving, which learns both a Transformer's weights and its architecture in a single run. By applying learnable, scalar gates to each sublayer, we allow the training loss to remove the model's own components during training -- freeing a smaller heterogeneous network inside. We evaluate Model Carving by pre-training standard Transformers from 140M to 2.7B parameters and looped Transformers from 140M to 1.3B. At equal training compute, carved models reach a lower validation loss than dense models trained with up to 1.7 times more compute. Furthermore, carved models also outperform size-matched models produced by pruning or distillation, suggesting that the best way to obtain small models for edge devices is to carve them during training, not to compress a large one afterwards. This advantage both grows with scale and carries over to downstream tasks such as few-shot evaluation and generation. Because the removed sublayers no longer run, carved models also cost up to 34% fewer FLOPs per token and decode up to 1.6 times faster without cost in quality. Our results show that architecture, like weights, should be learned and not fixed in advance, and that inside every large transformer is a smaller, faster, stronger one waiting to be carved out.",
+      "subjects": "Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-11-20T18:41:39+00:00",
+      "v1_local": "2026-11-21T02:41:39+08:00",
+      "url": "https://arxiv.org/abs/2611.27962",
+      "category": "pruning",
+      "keywords": [
+        "structured pruning",
+        "learned topology"
+      ],
+      "scores": {
+        "accuracy": 8,
+        "compression": 6,
+        "novelty": 9,
+        "reproducibility": 6
+      },
+      "analysis_path": "papers/2026-11/pruning/2611.27962/tech_analysis.md",
+      "submitted_date": "2026-11-21",
+      "arxiv_id": "2611.27962"
+    },
+    {
+      "id": "2611.27911",
+      "title": "Functional Depth Is Learned: Isolating the Computation That Layers Produce Only Together",
+      "abstract": "Transformer performance scales with depth, but layer count merely counts the opportunities for sequential computation: layers could still behave as nearly independent refinements that barely depend on one another. We study how transformers develop functional depth during pretraining, introducing an exact inclusion-exclusion decomposition that isolates the connected component, i.e., the computation that appears only when a specified set of layers acts together under identity ablation. Tracking this quantity across public checkpoints of Pythia, OLMo, and Amber yields three findings. First, write-relative connected coordination strengthens from its initialization or earliest-checkpoint baseline as pretraining proceeds, across all measured interaction orders. Second, these connected components are behaviorally consequential under direct intervention: deleting them damages perplexity more than deleting a norm-matched random direction at the same site in all 35 measured model-order cells. Third, pairwise representation similarity is consistently negatively correlated with pairwise connected coordination across seven models, yet the two signals are not interchangeable: similarity- and coordination-based block-removal criteria often agree in Pythia but diverge on Amber. Together, these results suggest that architectural depth provides the opportunity for sequential computation, while pretraining progressively organizes cross-layer dependencies within that depth.",
+      "subjects": "Artificial Intelligence (cs.AI)",
+      "v1_utc": "2026-11-20T17:50:26+00:00",
+      "v1_local": "2026-11-21T01:50:26+08:00",
+      "url": "https://arxiv.org/abs/2611.27911",
+      "category": "pruning",
+      "keywords": [
+        "layer pruning",
+        "cross-layer coordination"
+      ],
+      "scores": {
+        "accuracy": 6,
+        "compression": 2,
+        "novelty": 8,
+        "reproducibility": 7
+      },
+      "analysis_path": "papers/2026-11/pruning/2611.27911/tech_analysis.md",
+      "submitted_date": "2026-11-21",
+      "arxiv_id": "2611.27911"
+    },
+    {
+      "id": "2611.27901",
+      "title": "QuantStream3D: Geometry-Aligned Low-Bit KV Cache Quantization for Streaming Visual Geometry Transformers",
+      "abstract": "Streaming visual geometry transformers retain historical key-value (KV) states as cross-view geometric memory, but growing caches constrain long-sequence inference. We systematically characterize KV quantization in streaming geometry and uncover two linked challenges: Nonuniform Geometric Sensitivity and Cache-Geometry Mismatch. Quantization sensitivity varies across precision choices and cache locations, while perturbed retrieval changes geometry-head inputs and propagates through subsequent predictions and KV writes. Guided by these findings, we propose QuantStream3D, to our knowledge the first dedicated KV quantization framework for streaming visual geometry transformers. Geometry-Guided Mixed-Precision KV Quantization protects sensitive cross-view evidence, while Geometry-Aligned Quantization-Aware Distillation jointly adapts transformer blocks and geometry heads on student-generated quantized history. Across five benchmarks and two backbones, QuantStream3D achieves near-lossless geometric accuracy in most settings with predominantly 2-bit KV caches, and many configurations surpass unquantized inference. Compared with LLM-oriented KV quantizers, it reduces TUM absolute trajectory error and NeuralRGBD completeness error by up to 57.4% and 69.7%, respectively. Integration with existing native cache-pruning methods further pushes compression while improving reconstruction quality on NeuralRGBD. Our optimized StreamVGGT backend achieves $5.05\\times$ physical KV compression and 23.1% lower latency at batch size one. Under a fixed memory budget on the same GPU, it supports $5.4\\times$ the maximum batch size and up to $1.67\\times$ the peak throughput of unquantized inference. Code and pretrained checkpoints will be made publicly available.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-11-20T17:38:48+00:00",
+      "v1_local": "2026-11-21T01:38:48+08:00",
+      "url": "https://arxiv.org/abs/2611.27901",
+      "category": "quantization",
+      "keywords": [
+        "KV cache compression",
+        "mixed precision",
+        "2-bit",
+        "QAD"
+      ],
+      "scores": {
+        "accuracy": 8,
+        "compression": 8,
+        "novelty": 8,
+        "reproducibility": 5
+      },
+      "analysis_path": "papers/2026-11/quantization/2611.27901/tech_analysis.md",
+      "submitted_date": "2026-11-21",
+      "arxiv_id": "2611.27901"
+    },
+    {
+      "id": "2611.27788",
+      "title": "When Does Looking Closer Pay Off? Simple Foveated ViTs for Fine-Grained Recognition",
+      "abstract": "Fine-grained recognition benefits from high resolution, but not every image region needs it. We study a foveated Vision Transformer (FoVT) that uses last-block class attention from a 224-pixel glance to select regions for refinement. Fine patches from the 448-pixel image replace the selected coarse cells, and the same backbone classifies the mixed-resolution input. We evaluate FoVT on five benchmarks with two seeds and 26 configurations per dataset. Attention beats random selection on all five benchmarks, by up to 2.45 percentage points overall and 4.18 points on the smallest objects. At equal transformer cost, Holm-corrected tests detect no FoVT deficit relative to a port of the official CF-ViT, but no dataset shows a corrected FoVT advantage in both seeds. FoVT requires no feature reuse, distillation loss, or selection schedule. Reusing coarse features shows no significant benefit and costs 1 to 3 points when the reuse module is trained at the head learning rate. Skipping refinement for the most confident 19 to 24 percent of images leaves accuracy unchanged to two decimal places. At the transformer cost of uniform 336-pixel inference, gated FoVT improves accuracy on four benchmarks, with the largest gains on NABirds and FGVC-Aircraft and no significant gain on Stanford Dogs. Foveation primarily saves computation: relative to a uniform 448-pixel model trained with the same auxiliary glance loss, ungated FoVT uses 44 percent fewer transformer operations, with no significant accuracy difference on four benchmarks and a 0.53-point deficit on FGVC-Aircraft. Wall-clock savings are smaller than the reduction in transformer operations.",
+      "subjects": "Computer Vision and Pattern Recognition (cs.CV)",
+      "v1_utc": "2026-11-20T16:20:23+00:00",
+      "v1_local": "2026-11-21T00:20:23+08:00",
+      "url": "https://arxiv.org/abs/2611.27788",
+      "category": "other",
+      "keywords": [
+        "token reduction",
+        "dynamic inference",
+        "early exit"
+      ],
+      "scores": {
+        "accuracy": 7,
+        "compression": 5,
+        "novelty": 6,
+        "reproducibility": 7
+      },
+      "analysis_path": "papers/2026-11/other/2611.27788/tech_analysis.md",
+      "submitted_date": "2026-11-21",
+      "arxiv_id": "2611.27788"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+arxiv_id,submitted_date,category,keywords
+2611.27973,2026-11-21,other,KV cache compression;cross-layer sharing
+2611.27962,2026-11-21,pruning,structured pruning;learned topology
+2611.27911,2026-11-21,pruning,layer pruning;cross-layer coordination
+2611.27901,2026-11-21,quantization,KV cache compression;mixed precision;2-bit;QAD
+2611.27788,2026-11-21,other,token reduction;dynamic inference;early exit

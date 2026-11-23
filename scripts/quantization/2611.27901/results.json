@@ -1,0 +1,21 @@
+{
+  "small_tensor_tests": {
+    "rotation_inner_product_max_error": 1.52587890625e-05,
+    "packing_scalar_reference_and_constant_groups": "passed"
+  },
+  "qwen": {
+    "model": "Qwen/Qwen3-0.6B",
+    "tokens": 256,
+    "chunk_tokens": 64,
+    "dtype": "float32",
+    "device": "cpu",
+    "native_chunk_vs_full_max_logit_error": 0.0,
+    "teacher_to_quantized_mean_kl": 0.4427199363708496,
+    "top1_agreement_after_first_chunk": 0.9114583134651184,
+    "native_cache_bytes": 58720256,
+    "packed_cache_bytes": 6520832,
+    "compression_vs_fp32": 9.00502512562814,
+    "compression_vs_hypothetical_fp16": 4.50251256281407,
+    "limits": "repeated synthetic text smoke test; no geometry QAD, no benchmark perplexity or fused GPU speedup claim"
+  }
+}
